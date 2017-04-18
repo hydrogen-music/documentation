@@ -175,32 +175,32 @@ Before submitting (or committing) your changes, please make sure that
 your documents validate (see Section 6 below).  Some guidelines:
 
 * Use double-quotes for all attributes.
-          Good:   <foo id="bar"/>
-          Bad:    <foo id='bar'/>
+          Good:   ```<foo id="bar"/>```
+          Bad:    ```<foo id='bar'/>```
           Reason:  po2xml chokes on them.
 
-* Please make good use of <xref> tags for internal links within
+* Please make good use of ```<xref>``` tags for internal links within
       the document.
 
-* Since we're using <xref>'s -- if you change an id=".."
+* Since we're using ```<xref>```'s -- if you change an id=".."
       attribute, make sure that you change all its references, too.
       If you create a broken link, the document won't validate.
 
 * Do not make reference to specific section numbers, figure
       numbers, or titles (e.g. "See section 2.1.3 The Menu Bar").
-      Instead, use <xref> tags so that this text will be generated for
+      Instead, use ```<xref>``` tags so that this text will be generated for
       you.
 
 * For italics, you do not need to set the role="italic" attribute,
       since that is the default.  To get boldface, you must use
       role="bold".
-          Example:  <emphasis role="bold">really</emphasis>
-          Bad:      <emphasis rold="italic">might</emphasis>
+          Example:  ```<emphasis role="bold">really</emphasis>```
+          Bad:      ```<emphasis rold="italic">might</emphasis>```
 
 * For web links, don't write the URL twice.  The processor will do
       that for you, and it makes it more readable.
-          Good:     <ulink url="http://www.google.com"/>
-          Bad:      <ulink url="http://www.google.com">http://www.google.com</ulink>
+          Good:     ```<ulink url="http://www.google.com"/>```
+          Bad:      ```<ulink url="http://www.google.com">http://www.google.com</ulink>```
 
 * Don't worry about typesetting in the DocBook documents.  That's
       what XSL and CSS stylesheets are for.  Get the content done, and
@@ -208,7 +208,7 @@ your documents validate (see Section 6 below).  Some guidelines:
       section indents or relative font sizes.
 
 * However, *do* worry about typesetting on pre-formatted tags like
-      <screen> and <code> and <literallayout>.  Extra spaces and
+      ```<screen>``` and ```<code>``` and ```<literallayout>```.  Extra spaces and
       indents in the source document *will* carry through all the way
       to the final document.
 
