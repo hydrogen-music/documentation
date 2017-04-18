@@ -65,20 +65,22 @@ distribution.
 
 [1] xml2po and po2xml are part of poxml, which is in the KDE SDK.
     http://www.kde.org/.  You must use the KDE4 version.
+    
 [2] xmlto is a convenient front-end to an XSLT processor.
     http://cyberelk.net/tim/software/xmlto/
+    
 [3] xmllint is part of libxml2 http://xmlsoft.org/
 
 # 3. Translators
 
 To translate documentation for Hydrogen you will need:
 
-    * To understand XML, and enough DocBook to be dangerous.
+* To understand XML, and enough DocBook to be dangerous.
 
-    * A PO-file editor.  (Note that a text editor works fine, but a
+* A PO-file editor.  (Note that a text editor works fine, but a
       translation assistant like KBabel is better.)
 
-    * To be able to read and understand English.
+* To be able to read and understand English.
 
 If you don't have all the tools listed in Section 2, that's OK.  Ask
 the Hydrogen Developer list and someone there can process files for
@@ -116,14 +118,14 @@ For more information on Validation, see Section 6.
 
 RULES AND GUIDELINES FOR TRANSLATING:
 
-    * No new content.  New content must be first added to the master
+* No new content.  New content must be first added to the master
       (English) manual, and then translated to all the other manuals.
 
-    * Maintain the DocBook XML structure as closely as possible.  Do
+* Maintain the DocBook XML structure as closely as possible.  Do
       not add sections, divide paragraphs, or alter the markup
       significantly.
 
-    * The English translation uses a little humor to try to keep the
+* The English translation uses a little humor to try to keep the
       reading interesting.  When this happens, the language and idioms
       being used are very cultural.  Please do *NOT* translate the
       words literally.  Instead, please translate the ideas to your
@@ -131,10 +133,10 @@ RULES AND GUIDELINES FOR TRANSLATING:
       when this is happening so that you don't miss the joke.  This
       should show up in the PO file.
 
-    * If your culture doesn't like American-style informal writing,
+* If your culture doesn't like American-style informal writing,
       please feel free to make a humor-less translation.
 
-    * Submit translations to the Hydrogen Developers list
+* Submit translations to the Hydrogen Developers list
       (hydrogen-devel@lists.sourceforge.net)
 
 # 4. Documentors
@@ -143,16 +145,16 @@ The master Hydrogen Manual and Tutorial are in English.  All new
 content and major revisions shall be done there first.  In order to
 work on the documentation, you will need:
 
-    * To know and understand XML and DocBook well.
+* To know and understand XML and DocBook well.
 
-    * To know and understand Hydrogen well enough to *ask*
+* To know and understand Hydrogen well enough to *ask*
       *questions*.
 
-    * An XML editor (note: any text editor will do).
+* An XML editor (note: any text editor will do).
 
-    * An XML validator (e.g. xmllint, xsltproc, Xalan)
+* An XML validator (e.g. xmllint, xsltproc, Xalan)
 
-    * A way to create PNG images.  (e.g. GIMP, PhotoShop)
+* A way to create PNG images.  (e.g. GIMP, PhotoShop)
 
 What you write is pretty much your own style.  Please *do* keep the
 text interesting to read by using wit and a more familiar
@@ -172,40 +174,40 @@ translator gets the joke:
 Before submitting (or committing) your changes, please make sure that
 your documents validate (see Section 6 below).  Some guidelines:
 
-    * Use double-quotes for all attributes.
+* Use double-quotes for all attributes.
           Good:   <foo id="bar"/>
           Bad:    <foo id='bar'/>
-      Reason:  po2xml chokes on them.
+          Reason:  po2xml chokes on them.
 
-    * Please make good use of <xref> tags for internal links within
+* Please make good use of <xref> tags for internal links within
       the document.
 
-    * Since we're using <xref>'s -- if you change an id=".."
+* Since we're using <xref>'s -- if you change an id=".."
       attribute, make sure that you change all its references, too.
       If you create a broken link, the document won't validate.
 
-    * Do not make reference to specific section numbers, figure
+* Do not make reference to specific section numbers, figure
       numbers, or titles (e.g. "See section 2.1.3 The Menu Bar").
       Instead, use <xref> tags so that this text will be generated for
       you.
 
-    * For italics, you do not need to set the role="italic" attribute,
+* For italics, you do not need to set the role="italic" attribute,
       since that is the default.  To get boldface, you must use
       role="bold".
           Example:  <emphasis role="bold">really</emphasis>
           Bad:      <emphasis rold="italic">might</emphasis>
 
-    * For web links, don't write the URL twice.  The processor will do
+* For web links, don't write the URL twice.  The processor will do
       that for you, and it makes it more readable.
           Good:     <ulink url="http://www.google.com"/>
           Bad:      <ulink url="http://www.google.com">http://www.google.com</ulink>
 
-    * Don't worry about typesetting in the DocBook documents.  That's
+* Don't worry about typesetting in the DocBook documents.  That's
       what XSL and CSS stylesheets are for.  Get the content done, and
       then worry about formatting.  Don't get distracted by stuff like
       section indents or relative font sizes.
 
-    * However, *do* worry about typesetting on pre-formatted tags like
+* However, *do* worry about typesetting on pre-formatted tags like
       <screen> and <code> and <literallayout>.  Extra spaces and
       indents in the source document *will* carry through all the way
       to the final document.
@@ -243,18 +245,19 @@ to SGML.  To read more about XML, check out the Wikipedia article:
 
 It's very much like HTML except that:
 
-    * The tags are case sensitive.  <IMG> and <img> are the same in
+* The tags are case sensitive.  ```<IMG>``` and ```<img>``` are the same in
       HTML, but in XML they are considered different.
 
-    * Closing tags are not optional.  In HTML you could start a
-      paragraph with a <P>, and then start a new one by putting
-      another <P>.  The closing tag </P> is implied.  In XML, you must
+* Closing tags are not optional.  In HTML you could start a
+      paragraph with a ```<P>```, and then start a new one by putting
+      another <P>.  The closing tag ```</P>``` is implied.  In XML, you must
       include the closing tag:
 
-          <p>"Knock, knock."</p>
+          <p> "Knock, knock."</p>
           <p>"Who's there?"</p>
+          
 
-    * Empty tags are like this:  <br/>.  (In HTML they didn't have the
+* Empty tags are like this:  <br/>.  (In HTML they didn't have the
       forward slash.)
 
 If a document follows all the rules of XML, it is called
@@ -314,53 +317,56 @@ document structure that are not specified in any DTD.  (This is at
 least true for the KDE3 version of poxml.)  Thus, in order to get our
 files to work with poxml, we have to add the following restrictions:
 
-  * <para> may not contain an <itemizedlist>
+* ```<para>``` may not contain an ```<itemizedlist>```
 
-  * The 'msgid' string inside the .po file may not contain an empty
+* The 'msgid' string inside the .po file may not contain an empty
     element.  So, if you have some text that includes
-    '<ulink url="http://www.foo.bar"/>', you will need to convert
-    it to '<ulink url="http://www.foo.bar">http://www.foo.bar</ulink>'
+    ```<ulink url="http://www.foo.bar"/>```, you will need to convert
+    it to ```<ulink url="http://www.foo.bar">http://www.foo.bar</ulink>```
 
-  * You must use double quotes (") for attributes, not single ('),
+* You must use double quotes (") for attributes, not single ('),
     even though BOTH are OK in XML.
 
-  * The manual may not have '>', it must always be '&gt;'.
+* The manual may not have '>', it must always be ```&gt;```.
 
-  * Avoid embedding a lot of structured markup inside a paragraph.
+* Avoid embedding a lot of structured markup inside a paragraph.
     For example:
-
+        ```
        <para>Install hydrogen like this:
          <screen>
            <prompt>$</prompt> <command>apt-get hydrogen</command>
          </screen>
        </para>
+       ```
 
     This makes things a little funky in the PO files.  Also, it
-    doesn't really make sense to embed a <screen> (like HTML <pre>)
-    inside of a <para>.  Instead, do it like this:
-
+    doesn't really make sense to embed a ```<screen>``` (like HTML ```<pre>```)
+    inside of a ```<para>```.  Instead, do it like this:
+    ```
        <para>Install hydrogen like this:</para>
-
        <screen>
          <prompt>$</prompt> <command>apt-get hydrogen</command>
        </screen>
+       ```
 
     However, if you *really* need to, go ahead and try it.  Just
     be sure to test that it will match the strings for translation.
 
-  * If you change indention... in tags... be careful how that
+* If you change indention... in tags... be careful how that
     affects the .po files.  For example, if you had:
 
         <foo><bar>bat</bar><baz>zap</baz></foo>
 
     But change it to:
 
+        
         <foo>
           <bar>bat</bar>
           <baz>zap</baz>
         </foo>
+        
 
     You will need to add spaces in the .po files like this:
 
-    Before: "<foo><bar>bat</bar><baz>zap</baz></foo>"
-    After:  "<foo> <bar>bat</bar> <baz>zap</baz> </foo>"
+    Before: ```<foo><bar>bat</bar><baz>zap</baz></foo>```
+    After:  ```<foo> <bar>bat</bar> <baz>zap</baz> </foo```
