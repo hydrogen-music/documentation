@@ -1,8 +1,4 @@
-------------------------------------------------------------------------------
-                       H Y D R O G E N          Drum machine
-------------------------------------------------------------------------------
-
-HYDROGEN DOCUMENTATION
+Hydrogen Documentation
 ======================
 
 Contents:
@@ -14,10 +10,9 @@ Contents:
 5. Developers
 6. XML and Validation
 7. Additional DocBook Authoring Restrictions
-8. README.DOCUMENTATION.txt Changelog
 
-1. Overview
------------
+# 1. Overview
+
 
 Hydrogen documentation is maintained in DocBook 4.0 (XML) and
 translated to HTML before release.  Different translations are managed
@@ -32,8 +27,7 @@ and Developers.  A section is devoted to each one, individually.
 This document assumes that you don't know much, and tries to give you
 pointers to the stuff you need to know.
 
-2. Tools, Supported Platforms, and Releases
--------------------------------------------
+# 2. Tools, Supported Platforms, and Releases
 
 The following tools are used to maintain and process the
 documentation.  Depending on what you're working on, you may not need
@@ -75,8 +69,7 @@ distribution.
     http://cyberelk.net/tim/software/xmlto/
 [3] xmllint is part of libxml2 http://xmlsoft.org/
 
-3. Translators
---------------
+# 3. Translators
 
 To translate documentation for Hydrogen you will need:
 
@@ -144,8 +137,7 @@ RULES AND GUIDELINES FOR TRANSLATING:
     * Submit translations to the Hydrogen Developers list
       (hydrogen-devel@lists.sourceforge.net)
 
-4. Documentors
---------------
+# 4. Documentors
 
 The master Hydrogen Manual and Tutorial are in English.  All new
 content and major revisions shall be done there first.  In order to
@@ -218,7 +210,7 @@ your documents validate (see Section 6 below).  Some guidelines:
       indents in the source document *will* carry through all the way
       to the final document.
 
-5. Developers
+# 5. Developers
 -------------
 
 Since we don't want to add xmlto, poxml, xmllint, and the DocBook
@@ -238,7 +230,7 @@ and Windows.  Nor or they even very portable across different Linux
 distributions.  However, the tools are fairly stable on Debian/Ubuntu
 -- which most of the current developers are using.
 
-6. XML and Validation
+# 6. XML and Validation
 ---------------------
 
 You've probably written HTML before, and found it pretty easy.  HTML
@@ -314,7 +306,7 @@ structure of DocBook, and are able to generate output based on that.
 However, if we feed them an invalid document, the tools may process
 the data -- but they probably won't process it *right*.
 
-7. Additional DocBook Authoring Restrictions
+# 7. Additional DocBook Authoring Restrictions
 -------------------------------------
 
 It has been found that poxml is assuming some things about the
@@ -372,17 +364,3 @@ files to work with poxml, we have to add the following restrictions:
 
     Before: "<foo><bar>bat</bar><baz>zap</baz></foo>"
     After:  "<foo> <bar>bat</bar> <baz>zap</baz> </foo>"
-
-
-8. README.DOCUMENTATION.txt Changelog
--------------------------------------
-
-2009-10-13 Gabriel M. Beddingfield <gabriel@teuton.org>
-	* Update poxml dependency to KDE4
-
-2009-09-02 Gabriel M. Beddingfield <gabriel@teuton.org>
-	* Add section 7 Additional DocBook Authoring Restrictions.
-	* Fixed a typo in TOC for Changelog.
-
-2009-04-09 Gabriel M. Beddingfield <gabriel@teuton.org>
-	* Create README.DOCUMENTATION.txt
