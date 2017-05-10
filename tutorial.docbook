@@ -9,24 +9,34 @@
                 <author>
                         <firstname>Antonio</firstname>
                         <surname>Piraino</surname>
+					</author>
+                <author>
+                        <firstname>Sebastian</firstname>
+                        <surname>Moors</surname>
                 </author>
 		</authorgroup>
 
-        <date>24/feb/2004</date>
+        <date>10/May/2017</date>
 
         <abstract>
-       		<para>Ok, you've just downloaded the latest version of Hydrogen and have it installed successfully. Now you want to test it while creating your favourite song, this might help you to learn it, writing down a few difficult parts in order to play them over and over again or to be sure that in future a quick glance at the songfile will bring up immediately to mind the song. Hydrogen can be used also as an advanced <quote>click</quote> machine that can help you practicing (in speed, precision and rudiments), maybe with a custom pattern designed by yourself. This short introduction will guide you creating a a complete song, we will work on "Georgy Porgy" of Toto which has a quite straight structure therefore is appropriate for a guide but this doenst mean the song is _actually_ easy to write down since the drummer (Jeff Porcaro) enriches the groove with his personal touch and fantasy; Hydrogen will not play better than the drummer who is working on the song, most of the task must be accomplished by the programmer's sensibility and experience.</para>
-        </abstract>
+			<para>You've just downloaded the latest version of Hydrogen and have it installed successfully. Hydrogen may come in handy for the these tasks:
+			<itemizedlist>
+				<listitem><para>It can be used as an advanced "click" machine helping you practicing (in speed, precision and rudiments) drums, maybe with a custom pattern you wrote.</para></listitem>
+				<listitem><para>You want to learn how to properly play a song: you can "write it down" inside Hydrogen (or just a few difficult parts of it). Doing the effort of finding, splitting and reproducing the different parts of the songs will improve your understanding of it. Also, using Hydrogen with your songs will ensure that in future a quick glance at the songfile you have created will bring the song up immediately to mind.</para></listitem>
+				<listitem><para>You can use Hydrogen with in combination with other software (Ardour, ...)</para></listitem>
+			</itemizedlist>
+			</para>
+		</abstract>
 
 </bookinfo>
 
 <chapter id="needed">
-        <title>Move on</title>
+        <title>Let's start</title>
 		<para>Before starting make sure you have a few things:</para>
 		
 		<itemizedlist>
 		<listitem><para>The song to study on: either an audio-cd or (better) an .ogg or .mp3 for optimal flexibility.</para></listitem>
-		<listitem><para>Optionally a rough layout of the song on paper: it may be useful to count bars and different parts of the song that eventually wii get into Hydrogen.</para></listitem>
+		<listitem><para>Optionally a rough layout of the song on paper: it may be useful to count bars and different parts of the song that eventually will get into Hydrogen.</para></listitem>
 		</itemizedlist>
 		
 		<para>The song we will work on has the following structure:</para>
