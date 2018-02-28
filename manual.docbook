@@ -2738,8 +2738,67 @@
 
      </section>
 
-    </section>
+ </section>
+	<section>
+		<title>OSC</title>
+		<para>Hydrogen is able to receive Open Sound Control (OSC) messages. With the help of OSC, you can control Hydrogen from a Hardware OSC controller, a smartphone, a tablet, or any PC. </para>
+		
+		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
+			incoming OSC messages.</para>
 
+		<section>
+			<title>Controlling Hydrogen via OSC</title>
+			<para>If you want to control Hydrogen via OSC, you may send messages to the following addresses:
+				<itemizedlist>
+					<listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/</para></listitem>
+					<listitem><para>/Hydrogen/PAN_ABSOLUTE/</para></listitem>
+					<listitem><para>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/</para></listitem>
+					<listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/</para></listitem>
+					<listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/</para></listitem>
+					<listitem><para>/Hydrogen/PLAY</para></listitem>
+					<listitem><para>/Hydrogen/PLAY_STOP_TOGGLE</para></listitem>
+					<listitem><para>/Hydrogen/PLAY_PAUSE_TOGGLE</para></listitem>
+					<listitem><para>/Hydrogen/STOP</para></listitem>
+					<listitem><para>/Hydrogen/PAUSE</para></listitem>
+					<listitem><para>/Hydrogen/RECORD_READY</para></listitem>
+					<listitem><para>/Hydrogen/RECORD_STROBE</para></listitem>
+					<listitem><para>/Hydrogen/RECORD_STROBE_TOGGLE</para></listitem>
+					<listitem><para>/Hydrogen/RECORD_EXIT</para></listitem>
+					<listitem><para>/Hydrogen/MUTE</para></listitem>
+					<listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
+					<listitem><para>/Hydrogen/UNMUTE</para></listitem>
+					<listitem><para>/Hydrogen/NEXT_BAR</para></listitem>
+					<listitem><para>/Hydrogen/PREVIOUS_BAR</para></listitem>
+					<listitem><para>/Hydrogen/BPM_INCR</para></listitem>
+					<listitem><para>/Hydrogen/BPM_DECR</para></listitem>
+					<listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
+					<listitem><para>/Hydrogen/MASTER_VOLUME_RELATIVE</para></listitem>
+					<listitem><para>/Hydrogen/STRIP_VOLUME_RELATIVE</para></listitem>
+					<listitem><para>/Hydrogen/SELECT_NEXT_PATTERN</para></listitem>
+					<listitem><para>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY</para></listitem>
+					<listitem><para>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN</para></listitem>
+					<listitem><para>/Hydrogen/BEATCOUNTER</para></listitem>
+					<listitem><para>/Hydrogen/TAP_TEMPO</para></listitem>
+					<listitem><para>/Hydrogen/PLAYLIST_SONG</para></listitem>
+					<listitem><para>/Hydrogen/PLAYLIST_NEXT_SONG</para></listitem>
+					<listitem><para>/Hydrogen/PLAYLIST_PREV_SONG</para></listitem>
+					<listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
+					<listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
+					<listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
+					<listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
+				</itemizedlist>
+			</para>
+		</section>
+		<section>
+			<title>Sending OSC feedback to other applications</title>
+			<para>
+				Hydrogen is able notify other applications via OSC if a parameter changes, for example if a fader has been moved. It does not matter at this point if the fader has been moved via the GUI, an incoming OSC message or via MIDI.
+				To enable/disable OSC feedback, a checkbox exists on the OSC tab of the Preferences dialog. If the checkbox is enabled, Hydrogen sends out OSC feedback messages to all OSC client which are known to Hydrogen. 
+				
+				Clients are registered automatically by Hydrogen upon the first message from the client has been received.
+			</para>	
+		</section>
+	</section>
   </chapter>
 
   <!--
