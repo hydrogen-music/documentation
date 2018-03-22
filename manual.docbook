@@ -949,9 +949,9 @@
        </para>
 
        <para>
-       In addidtion to changing the tempo when the song switches from intro > verse, 
+       In addition to changing the tempo when the song switches from intro > verse, 
        it is also very handy to have a clear indication of this tempo switch (or any other
-       event in the song).  For this purpose you can also ad Tags markers to the song.
+       event in the song).  For this purpose you can also add Tags markers to the song.
        These Tags are short text messages you can add to your song at any given 
        moment that will be displayed whenever the song playhead passes by that Tag.</para>
        
