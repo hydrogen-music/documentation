@@ -86,7 +86,7 @@ msgstr ""
 "url=\"http://www.hydrogen-music.org/?p=download\">http://www.hydrogen-music.org</ulink>. "
 "Dans la page 'Download', vous pouvez trouver plusieurs binaires "
 "(installateurs) pour Linux, Mac et Windows. (Notez que certaines versions ne "
-"sont pas disponible pour Windows et Mac)"
+"sont pas disponibles pour Windows et Mac)"
 
 #. Tag: para
 #: manual.docbook:58
