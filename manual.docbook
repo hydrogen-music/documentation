@@ -2738,15 +2738,28 @@
 
      </section>
 
- </section>
-	<section>
+   </section>
+	<section id="sect.osc">
 		<title>OSC</title>
-		<para>Hydrogen is able to receive Open Sound Control (OSC) messages. With the help of OSC, you can control Hydrogen from a Hardware OSC controller, a smartphone, a tablet, or any PC. </para>
+		<para>Open Sound Control (OSC) is a protocol for communication among
+        programs, computers, and hardware, like synthesizers or multimedia
+        devices, via networking protocols such as UDP or TCP. It can be thought
+        of as a replacement for the MIDI protocol with rich benefits, like
+        supporting symbolic and high-resolution numerical argument data,
+        providing an URL-style naming scheme in combination with a pattern
+        matching language, and allowing to bundle messages for a better handling
+        of timing and simultaneous processing.</para>
+
+        <para>Hydrogen is able to receive OSC messages. This allows you to
+        control it using various devices, like hardware OSC controllers,
+        smartphones, tablets, or any PC. For Linux-based systems you can test
+        these interactions using the command line program
+        <emphasis>oscsend</emphasis>.</para>
 		
 		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
 			incoming OSC messages.</para>
 
-		<section>
+		<section id="sect.osc.messages">
 			<title>Controlling Hydrogen via OSC</title>
 			<para>If you want to control Hydrogen via OSC, you may send messages to the following addresses:
 				<itemizedlist>
@@ -2787,16 +2800,43 @@
 					<listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
 					<listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
 				</itemizedlist>
+
+                For more information about the actions invoked, please see the
+                corresponding documentation in the source code.
 			</para>
 		</section>
-		<section>
+		<section id="sect.osc.feeback">
 			<title>Sending OSC feedback to other applications</title>
 			<para>
-				Hydrogen is able notify other applications via OSC if a parameter changes, for example if a fader has been moved. It does not matter at this point if the fader has been moved via the GUI, an incoming OSC message or via MIDI.
-				To enable/disable OSC feedback, a checkbox exists on the OSC tab of the Preferences dialog. If the checkbox is enabled, Hydrogen sends out OSC feedback messages to all OSC client which are known to Hydrogen. 
-				
-				Clients are registered automatically by Hydrogen upon the first message from the client has been received.
-			</para>	
+				Hydrogen is able notify other applications via OSC if a
+				parameter changes, for example if a fader has been moved. It
+				does not matter at this point if the fader has been moved via
+				the GUI, an incoming OSC message or via MIDI.
+            </para>
+            <para>
+				To enable/disable OSC feedback, a checkbox exists on the OSC tab
+				of the Preferences dialog. If the checkbox is enabled, Hydrogen
+				sends out OSC feedback messages to all OSC client, which are
+				known to Hydrogen.
+            </para>
+			<para>
+				Clients are registered automatically by Hydrogen upon the first
+				message received from the client.
+			</para>
+            <para>
+              The OSC messages send by Hydrogen will be associated with the
+              following paths
+              <itemizedlist>
+		        <listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
+		        <listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
+		        <listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
+		        <listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/[x]</para></listitem>
+		        <listitem><para>/Hydrogen/PAN_ABSOLUTE/[x]</para></listitem>
+		        <listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/[x]</para></listitem>
+		        <listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/[x]</para></listitem>
+              </itemizedlist>
+              The last part [x] of the URI specifies a particular instrument.
+            </para>
 		</section>
 	</section>
   </chapter>
