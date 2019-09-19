@@ -50,7 +50,7 @@ all (or any) of these.
 With the exception of xml2pot and po2xml, these tools are all very
 easy to install on Linux, being a part of the core toolchains for KDE,
 Gnome, Debian, etc.  However, these tools are not as easy to set up on
-non-Linux platforms.  Furthermore, it is undesireable to add these to
+non-Linux platforms.  Furthermore, it is undesirable to add these to
 the list of build dependencies for Hydrogen.
 
 The po2xml and xml2pot tools are part of the 'poxml' package.  This is
@@ -352,7 +352,7 @@ files to work with poxml, we have to add the following restrictions:
     However, if you *really* need to, go ahead and try it.  Just
     be sure to test that it will match the strings for translation.
 
-* If you change indention... in tags... be careful how that
+* If you change indentation... in tags... be careful how that
     affects the .po files.  For example, if you had:
 
         <foo><bar>bat</bar><baz>zap</baz></foo>
