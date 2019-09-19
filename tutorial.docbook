@@ -65,7 +65,7 @@
 		<listitem><para>Bridge -> B</para></listitem>
 		<listitem><para>Chorus -> C</para></listitem>
 		</itemizedlist>
-		<para>And to save up words on explainations we'll use two common TLA (Three Letters Acronym ^_^):</para>
+		<para>And to save up words on explanations we'll use two common TLA (Three Letters Acronym ^_^):</para>
 		<itemizedlist>
 		<listitem><para>LMB: left mouse button</para></listitem>
 		<listitem><para>RMB: right mouse button</para></listitem>
@@ -179,7 +179,7 @@
 		<title>Bridge and following</title>
 		<para>Now that we're done with the first verse you should have an idea of how the whole thing works: the first bridge is made of the same 8 bars (4+4) with a slight change at the end of the fourth, which forces us to create a 'custom' fourth bar while the others are easily added with our friendly little cross ('X').</para>
 		
-		<para>Let's take the latest pattern created as sample (<quote>A-B-C_8</quote>), let's copy and rename it to <quote>Bridge1_4</quote> (i.e. fourth bar of first bridge) and modify it as in Fig. 6. We have quickly completed the bridge! The Song Editor now should appear as follows in Fig. 7. Looking closely one should ask why the fifth bar of the bridge (17th bar of the whole song) isnt assigned to the pattern <quote>A-B-C_1</quote>; the answer is that the pattern has also a <quote>Crash</quote> which is not present in <quote>A-B-C_2+5+6</quote>.</para>
+		<para>Let's take the latest pattern created as sample (<quote>A-B-C_8</quote>), let's copy and rename it to <quote>Bridge1_4</quote> (i.e. fourth bar of first bridge) and modify it as in Fig. 6. We have quickly completed the bridge! The Song Editor now should appear as follows in Fig. 7. Looking closely one should ask why the fifth bar of the bridge (17th bar of the whole song) isn't assigned to the pattern <quote>A-B-C_1</quote>; the answer is that the pattern has also a <quote>Crash</quote> which is not present in <quote>A-B-C_2+5+6</quote>.</para>
 
 <screenshot>
 	<mediaobject>
@@ -247,7 +247,7 @@
 		<title>The second half of the song</title>
 		<para>After the riff we have half job done. We just have to write down two verses, one bridge, a chorus repeated 3 times and the same riff at the end.</para>
 		
-		<para>The second part of the song is slightly different from the previous one because we have a few hi-hat opening during the verses and every 4 bars there's a small fill almost everytime: it's easier to start from scratch a new set of pattern (i.e. <quote>A-B-C-*</quote>) in the Song Editor copying them with a suffix like '_hh' to show the presence of the <quote>Open HH</quote>. As noted in the introduction of this guide, Jeff Porcaro puts much of his skills playing the song and this makes the difference between a song played from a raw and "cold" transcription on paper (or on Hydrogen): therefore the following parts of the song will try to be faithful to the original piece, but another 'ear' could give another written layout of the same part: after all this doesnt matter so much since we are showing how a program works, not to play like Porcaro :)</para>
+		<para>The second part of the song is slightly different from the previous one because we have a few hi-hat opening during the verses and every 4 bars there's a small fill almost everytime: it's easier to start from scratch a new set of pattern (i.e. <quote>A-B-C-*</quote>) in the Song Editor copying them with a suffix like '_hh' to show the presence of the <quote>Open HH</quote>. As noted in the introduction of this guide, Jeff Porcaro puts much of his skills playing the song and this makes the difference between a song played from a raw and "cold" transcription on paper (or on Hydrogen): therefore the following parts of the song will try to be faithful to the original piece, but another 'ear' could give another written layout of the same part: after all this doesn't matter so much since we are showing how a program works, not to play like Porcaro :)</para>
 		
 		<para>In Fig. 10 here is how is the section in the Song Editor of the two verses and the bridge following the first riff; as you can see the first bars (48-50 according to the Song Editor's enumeration) are already written before while the others (51-71) are new. Moreover there a few pattern 'ad hoc' identified by <quote>A-B-C-3a_hh</quote> (Fig. 11 to see an example) and <quote>A-B-C-4a_hh</quote> since both have a few changes not present in any pattern written up to now.</para>
 		
