@@ -174,7 +174,7 @@
         the trouble of having to reopen the song you are working on every time you open 
         Hydrogen.  Auto loading the playlist can come in handy when you are using Hydrogen live.</para>
         <para>If you want to use Lash for session management you should enable 
-        it here so Hydrogen allows interaction with Lash.  If jou are using Jack Session for session management
+        it here so Hydrogen allows interaction with Lash.  If you are using Jack Session for session management
         you have to option to let Hydrogen automatically save the song file in the Jack Session Directory.</para>
         <para>The Beat Counter drift compensation and start offset allow you to compensate
          for system latency when you are using the Beat Counter function (see <xref linkend="sect.tap_tempo"/>)</para>
