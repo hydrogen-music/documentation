@@ -108,7 +108,7 @@
       </itemizedlist>
 
       <para>Please install them with your distribution's package manager. If
-      you're running a debian-based system, you can install the libraries
+      you're running a Debian-based system, you can install the libraries
       with:</para>
 
       <screen>
@@ -179,7 +179,7 @@
         <para>The Beat Counter drift compensation and start offset allow you to compensate
          for system latency when you are using the Beat Counter function (see <xref linkend="sect.tap_tempo"/>)</para>
         <para>The Max number of bars in a song can be set here (currently limited to 800) 
-        and if you want to use rubberband for sample time-streching (see <xref linkend="sect.layer_editing.section2"/>)
+        and if you want to use rubberband for sample time-stretching (see <xref linkend="sect.layer_editing.section2"/>)
         you need to enter the path where rubberband is installed on you system here.</para>
         <!-- THIJS : NEED TO AD LINK TO SAMPLE EDITOR -->
         
@@ -585,7 +585,7 @@
         </listitem>
         <listitem>
           <para><emphasis>About - </emphasis>The usual window with license
-          information, acknowledgements, etc.</para>
+          information, acknowledgments, etc.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -1191,7 +1191,7 @@
       <title>Pattern Editor</title>
 
       <para>The "Pattern Editor" 
-      allows you to create or modify the selected pattern by adding/removing notes and tunning 
+      allows you to create or modify the selected pattern by adding/removing notes and tuning 
       a number of per-note properties like velocity and pan.
       The Pattern Editor 
       can be used in 2 modes : 'Drum' mode or 'Piano' mode.  You can switch between these 
@@ -1366,7 +1366,7 @@
         <para>If you are using Hydrogen as a pure 'drum' you just want Hydrogen to 'hit' 
         the instrument wherever there's a 'dot' in the pattern. If you are using Hydrogen as an 'instrument', the 
         length of the note becomes very important. There are 2 ways to define the length of
-        a note : in 'Note Length' mode you can add a note by left-cliking, and you can 'stretch' that note by right-click-dragging it.
+        a note : in 'Note Length' mode you can add a note by left-clicking, and you can 'stretch' that note by right-click-dragging it.
         This will change the dot into a rectangle that represents the duration of that note.  In 'Note Off' mode you can also add a
         note by left-clicking, but a right-click will now add a blue dot that represents the end of that note. 
         <informalfigure id="fig.NoteOff_NoteLength">
@@ -2364,7 +2364,7 @@
         Hydrogen features: the Sample Editor.</para>
         <para>The Sample Editor allows you to tweak and manipulate your samples.
         This is a function that will really speed up the creation of a drumkit since
-        you can do the fine-tunning of the sample within Hydrogen. In pre-0.9.5 builds
+        you can do the fine-tuning of the sample within Hydrogen. In pre-0.9.5 builds
         the typical workflow would be to prepare your sample in an external sound editor,
         import the sample in Hydrogen, test it, go back to the audio editor, import again, 
         test ...  The sample editor allows you to do most of the sample manipulation 
@@ -2419,7 +2419,7 @@
         Editor's loop function: loop mode and loop number.  With the loop function you can
         repeat the part of your sample <emphasis>that is in between the Loop- and the 
         End-marker</emphasis>. The way it is looped is determined by the Loop mode 
-        (forward, revers or ping-pong) and the number of times it is looped is determined
+        (forward, reverse or ping-pong) and the number of times it is looped is determined
         by the Loop number.</para>
         <para>If you want to hear a preview of the tweaking you have done so far, you first need to
         press the 'Apply Changes' button (@ the bottom of section 3) and then the Play button to
@@ -2534,7 +2534,7 @@
 
         <para><emphasis role="bold">Things change with the sample
         rate.</emphasis> If you have a really nice setup with all your
-        parameters painstakenly tweaked... things <emphasis>will</emphasis>
+        parameters painstakingly tweaked... things <emphasis>will</emphasis>
         change if you change the sample rate of your audio card.  Many of
         Hydrogen's internal settings and parameters are based on how many
         samples go by, not on how many seconds go by.  The sorts of things
@@ -3239,7 +3239,7 @@
     <glossentry id="def.dc-offsety">
       <glossterm>DC-offsety</glossterm>
       <glossdef>
-        <para>DC offset, or DC coefficient is the mean value of the wavefor.m</para>
+        <para>DC offset, or DC coefficient is the mean value of the waveform.</para>
         <para>DC offset is usually undesirable. For example, in audio processing, a 
         sound that has DC offset will not be at its loudest possible volume when
         normalized (because the offset consumes headroom), and this problem can 
