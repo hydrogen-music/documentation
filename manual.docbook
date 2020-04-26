@@ -1006,6 +1006,49 @@
      </section>
 
 
+     <section id="sect.song_editor.playbackTrack">
+		 <title>Using a playback track</title>
+		 <para>This section describes how you can use a playback track to write drums for an existing track.
+				This useful when you want to write a drumtrack to an already existing instrumental track, for example a guitar track.
+		 </para>
+		 <para>
+			To add a playback track to your song, you need to enable the playback track view. This can be done by pressing the small "P" button in the next to the vertical scroll bar of the song editor.
+
+			 <informalfigure id="fig.enablePlaybackTrack">
+				 <mediaobject>
+					 <imageobject>
+						 <imagedata fileref="img/EnablePlaybackTrack.png" format="PNG" />
+					 </imageobject>
+				 </mediaobject>
+			 </informalfigure>
+
+			 An alternative way to enable the playback track view is to enable the option "Playback track" in the "View" menu.
+
+			 If the playback track view is enabled, a visualisation of the currently loaded track is display above the song editor.
+
+			 <informalfigure id="fig.playbackTrack">
+				 <mediaobject>
+					 <imageobject>
+						 <imagedata fileref="img/PlaybackTrack.png" format="PNG" />
+					 </imageobject>
+				 </mediaobject>
+			 </informalfigure>
+
+			Left to the visualisation, the controls for the playback are displayed:
+
+			 <itemizedlist mark="opencircle">
+				 <listitem>
+					 <para>Edit: Load a new playback track</para> 
+					 <para>Mute: Mute the current playback track</para> 
+					 <para>Fader: Adjust the volume of the playback track</para> 
+				 </listitem>
+			 </itemizedlist>
+
+			As an alternative to the use of the Edit Button, you can add a new playback track by drag'n'drop, just drag an audio file to the visualation area.
+			 When a playback track track is loaded, it will be played everytime Hydrogen is in "Play" mode and the song mode is activated. 
+		</para>
+	 </section>
+
      <section id="sect.song_editor.pattern_options">
      <title>Patterns options</title>
 
