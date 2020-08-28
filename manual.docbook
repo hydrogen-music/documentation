@@ -61,14 +61,14 @@
 
         A certain release can be fetched with:
 
-        <screen><prompt>$</prompt> <command>git checkout tags/0.9.6</command></screen>
+        <screen><prompt>$</prompt> <command>git checkout tags/1.0.0</command></screen>
       </para>
 
-      <para>Compiling Hydrogen depends on the following libraries:</para>
+      <para>Compiling Hydrogen depends on the following libraries (among others):</para>
 
       <itemizedlist mark="opencircle">
         <listitem>
-          <para>qt (&gt;= 4.3) at <ulink url="http://www.qt.io">http://www.qt.io</ulink></para>
+          <para>Qt 5 at <ulink url="http://www.qt.io">http://www.qt.io</ulink></para>
         </listitem>
         <listitem>
           <para>libsndfile at <ulink url="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</ulink></para>
@@ -112,9 +112,11 @@
       with:</para>
 
       <screen>
-        <prompt>$</prompt> <command>apt-get install libqt4-dev g++ libasound2-dev \
-        libjack-dev liblrdf0-dev libflac++-dev libtar-dev libsndfile1-dev \
-        liblash-dev libportaudio-dev libportmidi-dev libpulse-dev</command>
+        <prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools         \
+	qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
+	libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
+	libpulse-dev libcppunit-dev liblrdf-dev                 \
+	liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
       </screen>
 
     </section>
