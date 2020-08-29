@@ -2797,7 +2797,9 @@
         control it using various devices, like hardware OSC controllers,
         smartphones, tablets, or any PC. For Linux-based systems you can test
         these interactions using the command line program
-        <emphasis>oscsend</emphasis>.</para>
+        <emphasis>oscsend</emphasis> and Hydrogen's port number you can find in the OSC tab in the Preferences dialog. </para>
+
+        <para><emphasis>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</emphasis></para>
 		
 		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
 			incoming OSC messages.</para>
