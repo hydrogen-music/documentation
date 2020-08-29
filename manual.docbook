@@ -2842,6 +2842,11 @@
 					<listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
 					<listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
 					<listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
+                    <listitem><para>/Hydrogen/NEW_SONG s /full/path/to/new.h2song</para></listitem>
+                    <listitem><para>/Hydrogen/OPEN_SONG s /full/path/to/existing.h2song</para></listitem>
+                    <listitem><para>/Hydrogen/SAVE_SONG</para></listitem>
+                    <listitem><para>/Hydrogen/SAVE_SONG_AS s /full/path/to/copy.h2song</para></listitem>
+                    <listitem><para>/Hydrogen/QUIT</para></listitem>
 				</itemizedlist>
 
                 For more information about the actions invoked, please see the
