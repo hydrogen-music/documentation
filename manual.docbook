@@ -701,9 +701,7 @@
             <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
           </imageobject></inlinemediaobject></para>
 
-          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as 'master', else it will act as 'slave'
-          to another 'master' program (e.g. Ardour). Note that this applet is only
-          available if Jack Audio Driver is selected, <emphasis>NOT</emphasis> when the Audio driver is set to 'Auto'.</para>
+          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as Jack timebase 'master' by sending additional information, like the current speed, to other Jack clients. Else it will either act as 'slave' in the presence of another timebase master (e.g. Ardour) or as a stand-alone client in the absence of it. Please note that when acting as 'slave' Hydrogen will obey the tempo provided by the timebase master and instead of its own tempo markers.</para>
         </listitem>
         
        <listitem>
@@ -926,7 +924,7 @@
        (the BPM button is located just above the Song editors main controls).  Once this is done
        the horizontal bar next to the BPM button changes to a ruler with marks at every bar.
        Now simply left-click this ruler at the bar you want the tempo to change and a
-       window will pop up where you can enter the new tempo.
+       window will pop up where you can enter the new tempo. (Please note that the ruler will not be available while using the Jack transport in 'slave' mode.)
      
         <informalfigure id="fig.add_tempo_change">
          <mediaobject>
@@ -2799,7 +2797,9 @@
         control it using various devices, like hardware OSC controllers,
         smartphones, tablets, or any PC. For Linux-based systems you can test
         these interactions using the command line program
-        <emphasis>oscsend</emphasis>.</para>
+        <emphasis>oscsend</emphasis> and Hydrogen's port number you can find in the OSC tab in the Preferences dialog. </para>
+
+        <para><emphasis>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</emphasis></para>
 		
 		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
 			incoming OSC messages.</para>
@@ -2844,6 +2844,11 @@
 					<listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
 					<listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
 					<listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
+                    <listitem><para>/Hydrogen/NEW_SONG s /full/path/to/new.h2song</para></listitem>
+                    <listitem><para>/Hydrogen/OPEN_SONG s /full/path/to/existing.h2song</para></listitem>
+                    <listitem><para>/Hydrogen/SAVE_SONG</para></listitem>
+                    <listitem><para>/Hydrogen/SAVE_SONG_AS s /full/path/to/copy.h2song</para></listitem>
+                    <listitem><para>/Hydrogen/QUIT</para></listitem>
 				</itemizedlist>
 
                 For more information about the actions invoked, please see the
