@@ -871,7 +871,21 @@
           <para>Note that you can also just drag-and-drop a pattern up/down in the pattern list.</para>
         </listitem>
 
-
+        <listitem>
+          <para><inlinemediaobject><imageobject>
+            <imagedata fileref="img/btn_draw.png" format="PNG"/>
+            </imageobject></inlinemediaobject> Enable Draw Mode.  This mode allows
+            you to create a song by drawing blocks on the song canvas.</para>
+            <para>Clicking a square on the song canvas will add a pattern (the square 
+            will turn blue), clicking it again will remove that pattern from the song.
+          </para>
+          <para>
+            Using the arrow keys on the keyboard, and the Return key,
+            will also add and remove patterns from the song. The
+            keyboard input cursor is usually hidden unless you press
+            one of the arrow keys.
+          </para>
+        </listitem>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
@@ -882,17 +896,24 @@
 			it by pressing the Delete button.  You can <emphasis
              role="bold">move</emphasis> it by simply dragging your selection
             to another location, and you can also <emphasis role="bold">copy</emphasis>
-             you selection by Ctrl-dragging it to a new location.
+             your selection by Ctrl-dragging it to a new location.
           </para>
-        </listitem>
-
-        <listitem>
-          <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_draw.png" format="PNG"/>
-            </imageobject></inlinemediaobject> Enable Draw Mode.  This mode allows
-            you to create a song by drawing blocks on the song canvas.</para>
-            <para>Clicking a square on the song canvas will add a pattern (the square 
-            will turn blue), clicking it again will remove that pattern from the song.
+          <para>
+            Selections can be modified by Ctrl-clicking to select
+            additional blocks, or to remove selected blocks from the
+            selection.
+          </para>
+          <para>
+            The arrow keys on the keyboard can also be used, along
+            with the Return key, to <emphasis
+            role="bold">select</emphasis>, <emphasis
+            role="bold">move</emphasis> and <emphasis
+            role="bold">copy</emphasis> (Ctrl+Return) parts of the
+            song.
+          </para>
+          <para>
+            Pressing Escape will cancel an editing operation that's in
+            progress, or clear any selection.
           </para>
         </listitem>
 
@@ -1409,17 +1430,59 @@
         <para>If you are using Hydrogen as a pure 'drum' you just want Hydrogen to 'hit' 
         the instrument wherever there's a 'dot' in the pattern. If you are using Hydrogen as an 'instrument', the 
         length of the note becomes very important. There are 2 ways to define the length of
-        a note : in 'Note Length' mode you can add a note by left-clicking, and you can 'stretch' that note by right-click-dragging it.
-        This will change the dot into a rectangle that represents the duration of that note.  In 'Note Off' mode you can also add a
-        note by left-clicking, but a right-click will now add a blue dot that represents the end of that note. 
-        <informalfigure id="fig.NoteOff_NoteLength">
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/NoteOff_NoteLength.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-        </informalfigure>
-        (Figure above, from left>right : a 'normal' note, a note in 'note length' mode, a note in 'note off' mode) 
+        a note :
+      </para>
+        <itemizedlist>
+          <listitem>
+            <para>
+              you can add a note by left-clicking, and then can 'stretch' that note by right-click-dragging it.
+              This will change the dot into a rectangle that represents the
+              duration of that note.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Alternatively, you can add a stop-note by
+              Shift+left-clicking. This adds a blue dot which
+              represents the end of the note.
+            </para>
+          </listitem>
+        </itemizedlist>
+        <para>
+          <informalfigure id="fig.NoteOff_NoteLength">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/NoteOff_NoteLength.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
+          (Figure above, from left>right : a 'normal' note, a note in 'note length' mode, a note in 'note off' mode)
+        </para>
+
+        <para>
+          As in the Song Editor, the arrow keys can also be used to
+          move around the pattern, and notes can be placed or removed
+          with Return.
+        </para>
+
+        <para>
+          Notes can be selected by dragging over them with the mouse
+          (or Shift+arrow keys), and can be deleted with 'Delete', or moved
+          by dragging (or Return followed by arrow key movements) the
+          notes to a new location. This allows notes to be moved
+          between different instruments, or to adjust their timing.
+        </para>
+
+        <para>
+          Moving a selection of notes with Ctrl held down will copy
+          them to the new location rather than moving.
+        </para>
+
+        <para>
+          Selected notes can also be copied to the clipboard with
+          Ctrl+C, and pasted with Ctrl+V. When pasting, the relative
+          positions of the input cursor at the time of the Copy and
+          Paste operation will set the new position of pasted notes.
         </para>
 
         <para>So far we have only used the mouse to create a pattern, but you can also record your beats by clicking the Record button 
@@ -2948,13 +3011,12 @@
     <section id="sect.create_sequence">
       <title>A new sequence</title>
 
-      <para>Once patterns are created (<xref linkend="fig.insert_notes"/>), we
+      <para>Once patterns are created (<xref linkend="fig.insert_patterns"/>), we
       can copy/paste/delete them using the Select Mode (see <xref linkend="sect.song_editor.main_controls"/>).
       </para>
-      
 
-      <figure id="fig.insert_notes">
-        <title>Inserting Notes in a Pattern</title>
+      <figure id="fig.insert_patterns">
+        <title>Inserting Patterns in the Song sequence</title>
         <mediaobject>
           <imageobject>
             <imagedata fileref="img/SongEditor.png" format="PNG" />
