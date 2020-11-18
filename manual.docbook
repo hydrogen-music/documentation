@@ -202,16 +202,9 @@
 
         <para>From the "Audio System" tab (<xref
         linkend="fig.preferences.audio_tab"/>) it is possible to modify the
-        audio driver being used (OSS, Jack, ALSA, PortAudio, PulseAudio, CoreAudio) with its buffer and
+        audio driver being used (OSS, Jack, ALSA, PortAudio, PulseAudio, CoreAudio, Auto) with its buffer and
         sampling rate (unless you are using JACK, in this case the audio driver
         configuration should happen before starting the JACK server).</para>
-
-        <para>We can set some features of Hydrogen like "Create per-instrument outputs" 
-        this will create 1 output per instrument that you can connect to any other Jack enabled application.
-        This can be useful if you want to add effects to a single instrument with
-        jack-rack for example.  "Connect to Default Output Pair" connects the output to the
-        default ports: uncheck this if you want to connect the JACK output to other
-        ports without having to disconnect them first.</para>
 
         <para>Also keep an eye on the value of "Polyphony": depending on your
         CPU you may want to change the max simultaneous notes in order to
@@ -235,15 +228,62 @@
         <itemizedlist>
 
           <listitem>
-            <para><emphasis role="bold">jackd</emphasis>: The Jack driver is a
+            <para><emphasis role="bold">Auto</emphasis>: Hydrogen will try a
+            number of different drivers in a predetermined order, choose the
+            first working one, and display the result. This option is
+            recommended for beginners.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Jack</emphasis>: The Jack driver is a
             professional audio server which permits very low lag and exchanges
             with other audio software. <emphasis>We strongly recommend using
             this driver to have the best out of Hydrogen</emphasis>.  JACK
             server will start automatically if not already running.</para>
-          </listitem>
+            <para>Available options:</para>
+            <itemizedlist>
+              <listitem>
+                <para><emphasis role="bold">Connect to Default Output
+                Pair</emphasis>: Connects the main stereo output of the Mixer to
+                the default ports of your system
+                (<emphasis>system:playback_1</emphasis> and
+                <emphasis>system:playback_2</emphasis>) every time Hydrogen
+                starts up or the audio driver is restarted.</para>
+              </listitem>
+              <listitem>
+                <para><emphasis role="bold">Create per-instrument
+                outputs</emphasis>: In addition to the main stereo output
+                Hydrogen will register Jack output ports for every single
+                instrument. This can be useful if you want to add effects to a
+                single instrument with jack-rack for example.</para>
+              </listitem>
+              <listitem>
+                <para><emphasis role="bold">BBT sync method</emphasis>: If
+                Hydrogen uses Jack transport in the presence of an external Jack
+                Timebase master (TBM), it will use the provided measure and
+                tempo information instead of the local one of either the Song's
+                tempo (see <xref linkend="sect.main_toolbar"/>) or the markers
+                added to the Timeline (see <xref
+                linkend="sect.song_editor.tempo_and_markers"/>).  But due to
+                limitations in the current implementation, Hydrogen can not set
+                both measure and speed provided by Jack for arbitrary pattern
+                combinations. The user has two options. Either drop all measure
+                changes in the TBM and work with tempo changes only to support
+                arbitrary patterns (using option <emphasis>constant
+                measure</emphasis>) or to keep the length of each pattern
+                consistent with the corresponding measure in the TBM and to use
+                both tempo and measure provided by Jack (option
+                <emphasis>matching bars</emphasis>).</para>
 
+                <para>For this option to take effect the J. TRAMS button has to
+                be activated and the J. MASTER button deactivated (next to
+                having a Jack TBM application). See <xref
+                linkend="sect.main_toolbar"/>.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
           <listitem>
-            <para><emphasis role="bold">ALSA</emphasis>: the widely adopted
+            <para><emphasis role="bold">Alsa</emphasis>: The widely adopted
             Linux standard audio drivers</para>
           </listitem>
 
@@ -327,11 +367,11 @@
       <section id="sect.preferences.audio_engine_tab">
         <title>The Audio Engine tab (debug only)</title>
 
-        <para>The "Audio Engine" tab (<xref linkend="fig.preferences.audio_engine_tab"/>) 
-        is a window that shows various stats about
-        Hydrogen and the audio driver. In case JACK is used, buffer and sampling
-        rate should be set before starting Hydrogen (JACK automatically starts
-        when an application tries to connect).</para>
+        <para>The "Audio Engine" tab (<xref linkend="fig.preferences.audio_engine_tab"/>) is a window that shows
+        various stats about Hydrogen and the audio driver. In case JACK is used,
+        buffer and sampling rate should be set in the configuration of the JACK
+        server before starting Hydrogen (JACK automatically starts when an
+        application tries to connect).</para>
         <para>Note that the Audio Engine tab is only available if Hydrogen was compiled with 
         debug support.</para>
 
@@ -701,7 +741,7 @@
             <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
           </imageobject></inlinemediaobject></para>
 
-          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as Jack timebase 'master' by sending additional information, like the current speed, to other Jack clients. Else it will either act as 'slave' in the presence of another timebase master (e.g. Ardour) or as a stand-alone client in the absence of it. Please note that when acting as 'slave' Hydrogen will obey the tempo provided by the timebase master and instead of its own tempo markers.</para>
+          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as Jack timebase 'master' by sending additional information, like the current speed, to other Jack clients. Else it will either act as 'slave' in the presence of another timebase master (e.g. Ardour) or as a stand-alone client in the absence of it. Please note that when acting as 'slave' Hydrogen will obey the tempo provided by the timebase master and instead of its own tempo markers (see <xref linkend="sect.preferences.audio_tab"/>).</para>
         </listitem>
         
        <listitem>
@@ -2866,47 +2906,47 @@
 		
 		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
 			incoming OSC messages.</para>
-
-		    <section id="sect.osc.messages">
-			  <title>Controlling Hydrogen via OSC</title>
-			  <para>If you want to control Hydrogen via OSC, you may send messages to the following addresses:
-			  <itemizedlist>
-				<listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/</para></listitem>
-				<listitem><para>/Hydrogen/PAN_ABSOLUTE/</para></listitem>
-				<listitem><para>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/</para></listitem>
-				<listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/</para></listitem>
-				<listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/</para></listitem>
-				<listitem><para>/Hydrogen/PLAY</para></listitem>
-				<listitem><para>/Hydrogen/PLAY_STOP_TOGGLE</para></listitem>
-				<listitem><para>/Hydrogen/PLAY_PAUSE_TOGGLE</para></listitem>
-				<listitem><para>/Hydrogen/STOP</para></listitem>
-				<listitem><para>/Hydrogen/PAUSE</para></listitem>
-				<listitem><para>/Hydrogen/RECORD_READY</para></listitem>
-				<listitem><para>/Hydrogen/RECORD_STROBE</para></listitem>
-				<listitem><para>/Hydrogen/RECORD_STROBE_TOGGLE</para></listitem>
-				<listitem><para>/Hydrogen/RECORD_EXIT</para></listitem>
-				<listitem><para>/Hydrogen/MUTE</para></listitem>
-				<listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
-				<listitem><para>/Hydrogen/UNMUTE</para></listitem>
-				<listitem><para>/Hydrogen/NEXT_BAR</para></listitem>
-				<listitem><para>/Hydrogen/PREVIOUS_BAR</para></listitem>
-				<listitem><para>/Hydrogen/BPM_INCR</para></listitem>
-				<listitem><para>/Hydrogen/BPM_DECR</para></listitem>
-				<listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
-				<listitem><para>/Hydrogen/MASTER_VOLUME_RELATIVE</para></listitem>
-				<listitem><para>/Hydrogen/STRIP_VOLUME_RELATIVE</para></listitem>
-				<listitem><para>/Hydrogen/SELECT_NEXT_PATTERN</para></listitem>
-				<listitem><para>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY</para></listitem>
-				<listitem><para>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN</para></listitem>
-				<listitem><para>/Hydrogen/BEATCOUNTER</para></listitem>
-				<listitem><para>/Hydrogen/TAP_TEMPO</para></listitem>
-				<listitem><para>/Hydrogen/PLAYLIST_SONG</para></listitem>
-				<listitem><para>/Hydrogen/PLAYLIST_NEXT_SONG</para></listitem>
-				<listitem><para>/Hydrogen/PLAYLIST_PREV_SONG</para></listitem>
-				<listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
-				<listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
-				<listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
-				<listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
+              
+            <section id="sect.osc.messages">
+              <title>Controlling Hydrogen via OSC</title>
+              <para>If you want to control Hydrogen via OSC, you may send messages to the following addresses:
+              <itemizedlist>
+                <listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/</para></listitem>
+                <listitem><para>/Hydrogen/PAN_ABSOLUTE/</para></listitem>
+                <listitem><para>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/</para></listitem>
+                <listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/</para></listitem>
+                <listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/</para></listitem>
+                <listitem><para>/Hydrogen/PLAY</para></listitem>
+                <listitem><para>/Hydrogen/PLAY_STOP_TOGGLE</para></listitem>
+                <listitem><para>/Hydrogen/PLAY_PAUSE_TOGGLE</para></listitem>
+                <listitem><para>/Hydrogen/STOP</para></listitem>
+                <listitem><para>/Hydrogen/PAUSE</para></listitem>
+                <listitem><para>/Hydrogen/RECORD_READY</para></listitem>
+                <listitem><para>/Hydrogen/RECORD_STROBE</para></listitem>
+                <listitem><para>/Hydrogen/RECORD_STROBE_TOGGLE</para></listitem>
+                <listitem><para>/Hydrogen/RECORD_EXIT</para></listitem>
+                <listitem><para>/Hydrogen/MUTE</para></listitem>
+                <listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
+                <listitem><para>/Hydrogen/UNMUTE</para></listitem>
+                <listitem><para>/Hydrogen/NEXT_BAR</para></listitem>
+                <listitem><para>/Hydrogen/PREVIOUS_BAR</para></listitem>
+                <listitem><para>/Hydrogen/BPM_INCR</para></listitem>
+                <listitem><para>/Hydrogen/BPM_DECR</para></listitem>
+                <listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
+                <listitem><para>/Hydrogen/MASTER_VOLUME_RELATIVE</para></listitem>
+                <listitem><para>/Hydrogen/STRIP_VOLUME_RELATIVE</para></listitem>
+                <listitem><para>/Hydrogen/SELECT_NEXT_PATTERN</para></listitem>
+                <listitem><para>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY</para></listitem>
+                <listitem><para>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN</para></listitem>
+                <listitem><para>/Hydrogen/BEATCOUNTER</para></listitem>
+                <listitem><para>/Hydrogen/TAP_TEMPO</para></listitem>
+                <listitem><para>/Hydrogen/PLAYLIST_SONG</para></listitem>
+                <listitem><para>/Hydrogen/PLAYLIST_NEXT_SONG</para></listitem>
+                <listitem><para>/Hydrogen/PLAYLIST_PREV_SONG</para></listitem>
+                <listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
+                <listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
+                <listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
+                <listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
                 <listitem><para>/Hydrogen/NEW_SONG s /full/path/to/new.h2song</para></listitem>
                 <listitem><para>/Hydrogen/OPEN_SONG s /full/path/to/existing.h2song</para></listitem>
                 <listitem><para>/Hydrogen/SAVE_SONG</para></listitem>
@@ -2921,7 +2961,7 @@
                 <listitem><para>/Hydrogen/LOOP_MODE_ACTIVATION i 0</para></listitem>
                 <listitem><para>/Hydrogen/RELOCATE i 4</para></listitem>
               </itemizedlist>
-              
+
                 For more information about the actions invoked, please see the
                 corresponding documentation in the source code.
 			</para>
