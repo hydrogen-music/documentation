@@ -176,8 +176,7 @@
         the trouble of having to reopen the song you are working on every time you open 
         Hydrogen.  Auto loading the playlist can come in handy when you are using Hydrogen live.</para>
         <para>If you want to use Lash for session management you should enable 
-        it here so Hydrogen allows interaction with Lash.  If you are using Jack Session for session management
-        you have to option to let Hydrogen automatically save the song file in the Jack Session Directory.</para>
+        it here so Hydrogen allows interaction with Lash.</para>
         <para>The Beat Counter drift compensation and start offset allow you to compensate
          for system latency when you are using the Beat Counter function (see <xref linkend="sect.tap_tempo"/>)</para>
         <para>The Max number of bars in a song can be set here (currently limited to 800) 
@@ -321,8 +320,6 @@
         <para>The "Midi System" tab (<xref linkend="fig.preferences.midi_tab"/>)
         contains all MIDI settings. Here you can choose the MIDI driver (ALSA, PortMidi, 
         CoreMidi or JackMidi) input, and channel(s) that Hydrogen should respond to.  
-        <note><para>If you want to use Jack Session management you should select the 
-        JackMidi driver.  Jack Session management can only (re)store Jack midi connections.</para></note>
         You can also define midi bindings: link a midi note/message to an action. 
         To do this simply press the red 'REC' button left of the event-action binding line.  
         A popup will inform you that Hydrogen is waiting for your input.  Press/hit/turn 
