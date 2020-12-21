@@ -242,19 +242,22 @@
             <para>Available options:</para>
             <itemizedlist>
               <listitem>
-                <para><emphasis role="bold">Connect to Default Output
-                Pair</emphasis>: Connects the main stereo output of the Mixer to
-                the default ports of your system
-                (<emphasis>system:playback_1</emphasis> and
-                <emphasis>system:playback_2</emphasis>) every time Hydrogen
-                starts up or the audio driver is restarted.</para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="bold">Create per-instrument
-                outputs</emphasis>: In addition to the main stereo output
-                Hydrogen will register Jack output ports for every single
-                instrument. This can be useful if you want to add effects to a
-                single instrument with jack-rack for example.</para>
+                <para><emphasis role="bold">Track output</emphasis>: This
+                options determines which audio settings will be applied to the
+                audio of the per-instrument output ports.</para>
+
+                <para>Post-Fader:</para>
+                <itemizedlist>
+                  <listitem><para>note velocity</para></listitem>
+                  <listitem><para>note and instrument pan</para></listitem>
+                  <listitem><para>layer, instrument, and component gain</para></listitem>
+                  <listitem><para>instrument and main component volume</para></listitem>
+                </itemizedlist>
+                <para>Pre-Fader:</para>
+                <itemizedlist>
+                  <listitem><para>note velocity</para></listitem>
+                  <listitem><para>layer gain</para></listitem>
+                </itemizedlist>
               </listitem>
               <listitem>
                 <para><emphasis role="bold">BBT sync method</emphasis>: If
@@ -278,6 +281,21 @@
                 be activated and the J. MASTER button deactivated (next to
                 having a Jack TBM application). See <xref
                 linkend="sect.main_toolbar"/>.</para>
+              </listitem>
+              <listitem>
+                <para><emphasis role="bold">Connect to Default Output
+                Pair</emphasis>: Connects the main stereo output of the Mixer to
+                the default ports of your system
+                (<emphasis>system:playback_1</emphasis> and
+                <emphasis>system:playback_2</emphasis>) every time Hydrogen
+                starts up or the audio driver is restarted.</para>
+              </listitem>
+              <listitem>
+                <para><emphasis role="bold">Create per-instrument
+                outputs</emphasis>: In addition to the main stereo output
+                Hydrogen will register Jack output ports for every single
+                instrument. This can be useful if you want to add effects to a
+                single instrument with jack-rack for example.</para>
               </listitem>
             </itemizedlist>
           </listitem>
