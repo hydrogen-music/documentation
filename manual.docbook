@@ -2915,104 +2915,418 @@
         control it using various devices, like hardware OSC controllers,
         smartphones, tablets, or any PC. For Linux-based systems you can test
         these interactions using the command line program
-        <emphasis>oscsend</emphasis> and Hydrogen's port number you can find in the OSC tab in the Preferences dialog. </para>
+        <emphasis>oscsend</emphasis> and Hydrogen's port number you can find in the OSC tab in the Preferences dialog.</para>
 
         <para><emphasis>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</emphasis></para>
 		
 		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
-			incoming OSC messages.</para>
-              
-            <section id="sect.osc.messages">
-              <title>Controlling Hydrogen via OSC</title>
-              <para>If you want to control Hydrogen via OSC, you may send messages to the following addresses:
-              <itemizedlist>
-                <listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/</para></listitem>
-                <listitem><para>/Hydrogen/PAN_ABSOLUTE/</para></listitem>
-                <listitem><para>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/</para></listitem>
-                <listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/</para></listitem>
-                <listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/</para></listitem>
-                <listitem><para>/Hydrogen/PLAY</para></listitem>
-                <listitem><para>/Hydrogen/PLAY_STOP_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/PLAY_PAUSE_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/STOP</para></listitem>
-                <listitem><para>/Hydrogen/PAUSE</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_READY</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_STROBE</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_STROBE_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_EXIT</para></listitem>
-                <listitem><para>/Hydrogen/MUTE</para></listitem>
-                <listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/UNMUTE</para></listitem>
-                <listitem><para>/Hydrogen/NEXT_BAR</para></listitem>
-                <listitem><para>/Hydrogen/PREVIOUS_BAR</para></listitem>
-                <listitem><para>/Hydrogen/BPM_INCR</para></listitem>
-                <listitem><para>/Hydrogen/BPM_DECR</para></listitem>
-                <listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
-                <listitem><para>/Hydrogen/MASTER_VOLUME_RELATIVE</para></listitem>
-                <listitem><para>/Hydrogen/STRIP_VOLUME_RELATIVE</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_NEXT_PATTERN</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN</para></listitem>
-                <listitem><para>/Hydrogen/BEATCOUNTER</para></listitem>
-                <listitem><para>/Hydrogen/TAP_TEMPO</para></listitem>
-                <listitem><para>/Hydrogen/PLAYLIST_SONG</para></listitem>
-                <listitem><para>/Hydrogen/PLAYLIST_NEXT_SONG</para></listitem>
-                <listitem><para>/Hydrogen/PLAYLIST_PREV_SONG</para></listitem>
-                <listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
-                <listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
-                <listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
-                <listitem><para>/Hydrogen/NEW_SONG s /full/path/to/new.h2song</para></listitem>
-                <listitem><para>/Hydrogen/OPEN_SONG s /full/path/to/existing.h2song</para></listitem>
-                <listitem><para>/Hydrogen/SAVE_SONG</para></listitem>
-                <listitem><para>/Hydrogen/SAVE_SONG_AS s /full/path/to/copy.h2song</para></listitem>
-                <listitem><para>/Hydrogen/QUIT</para></listitem>
-                <listitem><para>/Hydrogen/TIMELINE_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/TIMELINE_ADD_MARKER if 1 120</para></listitem>
-                <listitem><para>/Hydrogen/TIMELINE_DELETE_MARKER i 1</para></listitem>
-                <listitem><para>/Hydrogen/JACK_TRANSPORT_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/JACK_TIMEBASE_MASTER_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/SONG_MODE_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/LOOP_MODE_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/RELOCATE i 4</para></listitem>
-              </itemizedlist>
+		incoming OSC messages.
+        </para>
+        
+        <section id="sect.osc.messages">
+          <title>OSC messages</title>
+          <para>The syntax for sending the commands is</para>
 
-                For more information about the actions invoked, please see the
-                corresponding documentation in the source code.
-			</para>
-		</section>
-		<section id="sect.osc.feeback">
-			<title>Sending OSC feedback to other applications</title>
-			<para>
-				Hydrogen is able notify other applications via OSC if a
-				parameter changes, for example if a fader has been moved. It
-				does not matter at this point if the fader has been moved via
-				the GUI, an incoming OSC message or via MIDI.
-            </para>
-            <para>
-				To enable/disable OSC feedback, a checkbox exists on the OSC tab
-				of the Preferences dialog. If the checkbox is enabled, Hydrogen
-				sends out OSC feedback messages to all OSC client, which are
-				known to Hydrogen.
-            </para>
-			<para>
-				Clients are registered automatically by Hydrogen upon the first
-				message received from the client.
-			</para>
-            <para>
-              The OSC messages send by Hydrogen will be associated with the
-              following paths
-              <itemizedlist>
-		        <listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
-		        <listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
-		        <listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
-		        <listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/[x]</para></listitem>
-		        <listitem><para>/Hydrogen/PAN_ABSOLUTE/[x]</para></listitem>
-		        <listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/[x]</para></listitem>
-		        <listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/[x]</para></listitem>
-              </itemizedlist>
-              The last part [x] of the URI specifies a particular instrument.
-            </para>
+          <para><emphasis>
+            oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE
+            COMMAND_ARGUMENT
+          </emphasis></para>
+
+          <para>with the supported types</para>
+          <itemizedlist>
+          <listitem><para><emphasis>i</emphasis> - int32</para></listitem>
+          <listitem><para><emphasis>f</emphasis> - float32</para></listitem>
+          <listitem><para><emphasis>s</emphasis> - OSC-string (ASCII)</para></listitem>
+          </itemizedlist>
+          <para>In case no argument is required the
+          <emphasis>type</emphasis> column is left empty.</para>
+          <table frame='all' id='sect.osc.messages.playback.table'>
+            <title>OSC playback messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/PLAY/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PLAY_STOP_TOGGLE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PLAY_PAUSE_TOGGLE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STOP/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PAUSE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/RECORD_READY/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/RECORD_STROBE_TOGGLE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/RECORD_STROBE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/RECORD_EXIT/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/RELOCATE/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.transport.table'>
+            <title>OSC transport messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/NEXT_BAR/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PREVIOUS_BAR/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SELECT_NEXT_PATTERN/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/RELOCATE/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.tempo.table'>
+            <title>OSC tempo and timeline messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/BPM_DECR/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/BPM_INCR/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/BEATCOUNTER/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/TAP_TEMPO/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/TIMELINE_ACTIVATION/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/TIMELINE_ADD_MARKER/</entry>
+                  <entry>if</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/TIMELINE_DELETE_MARKER/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.mixer.table'>
+            <title>OSC mixer messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/MUTE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/UNMUTE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/MUTE_TOGGLE/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/MASTER_VOLUME_ABSOLUTE/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/MASTER_VOLUME_RELATIVE/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STRIP_VOLUME_RELATIVE/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STRIP_VOLUME_ABSOLUTE/X/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PAN_ABSOLUTE/X/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PAN_RELATIVE/X/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/X/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STRIP_MUTE_TOGGLE/X/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STRIP_SOLO_TOGGLE/X/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <para>The last part [x] of the URI specifies a particular instrument.</para>
+
+          <table frame='all' id='sect.osc.messages.playlist.table'>
+            <title>OSC playlist messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/PLAYLIST_SONG/</entry>
+                  <entry>f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PLAYLIST_NEXT_SONG/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PLAYLIST_PREV_SONG/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          
+
+          <table frame='all' id='sect.osc.messages.general.table'>
+            <title>OSC general messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/UNDO_ACTION/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/REDO_ACTION/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/JACK_TRANSPORT_ACTIVATION/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/JACK_TIMEBASE_MASTER_ACTIVATION/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SONG_MODE_ACTIVATION/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/LOOP_MODE_ACTIVATION/</entry>
+                  <entry>i</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/TOGGLE_METRONOME/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SELECT_INSTRUMENT/</entry>
+                  <entry>"", f</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.session.table'>
+            <title>OSC session management messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/NEW_SONG/</entry>
+                  <entry>s</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/OPEN_SONG/</entry>
+                  <entry>s</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SAVE_SONG/</entry>
+                  <entry>""</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SAVE_SONG_AS/</entry>
+                  <entry>s</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/SAVE_PREFERENCES/</entry>
+                  <entry>""</entry>
+                  <entry>Start playback</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/QUIT/</entry>
+                  <entry>""</entry>
+                  <entry>Start playback</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
 		</section>
 	</section>
   </chapter>
