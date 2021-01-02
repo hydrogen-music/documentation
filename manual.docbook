@@ -1357,7 +1357,44 @@
          <para>From left to right : </para>
          <itemizedlist mark="opencircle">
 
-           <listitem><para><emphasis role="bold">SIZE</emphasis> : lets you choose the size of the pattern (the number of bars)</para></listitem>
+           <listitem>
+                <para><emphasis role="bold">SIZE</emphasis>:
+                    lets you choose the length of the pattern (in note values)
+                </para>
+                <para>
+                   It will open a dialog to enter the new size as text, in the standard music fractional notation:                  
+                </para>
+                <informalfigure id="fig.PatternSizeDialog">
+                     <mediaobject>
+                        <imageobject>
+                          <imagedata fileref="img/PatternSizeDialog.png" format="PNG" />
+                        </imageobject>
+                     </mediaobject>
+                </informalfigure>                
+                <para>
+                   Type '/' to separate numerator and denominator.
+                 </para>
+                 <para>
+                   If you enter just the numerator (e.g. "4"), the current denominator will be assumed.
+                </para>
+                 <para>
+                   You can enter a decimal numerator (e.g. "4.5/4") but since Hydrogen resolution is limited,
+                   some values are not supported and will be approximated.
+                </para>
+                <para>
+                   Hydrogen supports (only) the following denominators: 1, 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 192,
+                     because these are the factors of the maximum resolution (192 ticks per whole note).
+                   You can use unsupported denominators, but the size will be approximated almost all the times,
+                    hence a warning icon will appear:               
+                </para>
+                <informalfigure id="fig.DenominatorWarningIcon">
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/DenominatorWarningIcon.png" format="PNG" />
+                        </imageobject>
+                    </mediaobject>
+                 </informalfigure>
+           </listitem>
 
            <listitem>
             <para>
@@ -1365,7 +1402,7 @@
             </para>
             <para>
                 Remember this constraint concerning the grid: if you are working
-                with a resolution of 16 you can't go back to 8 and remove a 16th note. On
+                with a resolution of 16 you can't go back to 8 and remove an upbeat 16th note. On
                 the other hand if you are working with a resolution of 8 and you try to
                 insert a note in the middle of two bars (looking for a 16 bars precision),
                 notes will be placed in the previous or in the following 8th bar.  This
@@ -1381,6 +1418,8 @@
            When enabled the beats inserted 
             will automatically respect the grid resolution currently applied.</para></listitem>
 
+           <!--
+           MOVE THE REMARK TO OTHER PLACE SINCE THESE WIDGETS ARE DEPRECATED
            <listitem><para><emphasis role="bold">Drumset / Instrument</emphasis> : 
            when set to Drumset the keys on your midi keyboard will map to the instruments in your drumkit as
            described in the instrument mapping table below.  If you set it to Instrument the keys of your midi 
@@ -1391,8 +1430,8 @@
 
            <listitem><para><emphasis role="bold">Note Length / Note off</emphasis> : these are 2 different
             ways to define the duration of a note. See <xref linkend="sect.pattern_editor.sequence_area"/> for usage.</para></listitem>
-
-           <listitem><para><emphasis role="bold">Drum/Piano</emphasis> : switch Pattern Editor 
+-->
+           <listitem><para><emphasis role="bold">INPUT</emphasis> : switch Pattern Editor 
            between Drum and Piano mode. (see below)</para></listitem>
 
          </itemizedlist>
