@@ -2382,13 +2382,14 @@
         <section id="sect.instrument_editing.midi_out_settings">
           <title>Midi out settings</title>
 
-          <para>Hydrogen is capable of generating midi messages that you can use 
-          to trigger any external midi device or application.  To do this you simply need to 
-          configure the Midi out channel and Note for every instrument.  As you can see
-          this is a very flexible approach that enables you to trigger samples or sounds
-          from multiple devices and/or apps.  Finally you need to make sure the proper 
-          Midi routing/wiring is in place and you're set.
-          </para>
+          <para>Hydrogen is capable of generating midi messages that you can use
+          to trigger any external midi device or application.  To do this you
+          simply need to configure the Midi out channel and Note for every
+          instrument.  You need to have a sample loaded (an empty WAV file is
+          fine) and make sure the proper Midi routing/wiring is in place and
+          you're set.  As you can see this is a very flexible approach that
+          enables you to trigger samples or sounds from multiple devices and/or
+          apps.</para>
 
           <para>From now on every time a note is played for that instrument (in the Hydrogen sequencer) 
           a midi message will be sent to your external app/device and trigger a sound.  
