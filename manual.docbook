@@ -2264,19 +2264,31 @@
             member of (see <xref linkend="def.mutegroup"/>).</para>
           </listitem>
           <listitem>
+            <para><emphasis role="bold"><guibutton>Auto Stop-Note</guibutton></emphasis></para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold"><guibutton>Apply Velocity</guibutton></emphasis></para>
+          </listitem>
+          <listitem>
             <para><emphasis role="bold">Filter Parameters</emphasis>:
             <guibutton>Byp</guibutton>ass, <guibutton>Cutoff</guibutton>,
             <guibutton>Resonance</guibutton>.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold"><guibutton>Random
-            Pitch</guibutton></emphasis></para>
+            <para>
+                <emphasis role="bold">Pitch Shift Parameters</emphasis>:
+                <guibutton>Pitch</guibutton>,
+                <guibutton>Fine</guibutton>,
+                <guibutton>Random</guibutton>     
+          </para>
           </listitem>
           <listitem>
             <para><emphasis role="bold"><guibutton>Midi out Channel and Note</guibutton></emphasis></para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold"><guibutton>Auto Stop-Note</guibutton></emphasis></para>
+            <para><emphasis role="bold"><guibutton>Hi-Hat Pressure Group</guibutton></emphasis>:
+                Group and Range.
+            </para>
           </listitem>
         </itemizedlist>
 
@@ -2375,11 +2387,32 @@
           high-hat instruments, you can set all their mute group parameters to
           1.  To have a snare drum mute group, set their mute group parameters
           to 2.)</para>
-
         </section>
+        
+        <section id="sect.instrument_editing.auto_stop_note">
+          <title>Auto Stop-Note</title>
 
-        <section id="sect.instrument_editing.filter_and_random_pitch">
-          <title>Filter and Random Pitch</title>
+          <para>If this box is checked Hydrogen will immediately stop any playing sample that
+          belongs to this instrument whenever the instrument is re-triggered.</para>
+          <para>This option is particularly useful when you are using long samples like a 
+          crash or some existing audio that you have sampled (like a looped voice in a 
+          dance/electro song)  For the crash you will need to use the Auto Stop-Note when 
+          you are sequencing multiple notes in fast succession and want to make it sound realistic.  If you do 
+          not check this option the cymbal will start to sound like multiple cymbals 
+          instead of only one (since the sample of each individual hit will be played completely).
+          For the voice sample this option is useful if you are trying to get that 'stuttering' effect.
+
+          </para>
+        </section>
+        <section id="sect.instrument_editing.apply_velocity">
+          <title>Apply Velocity</title>
+          <para>This box enables/disables the note velocities (i.e. the dynamics).
+                If disabled, every note of the instruments is played at the maximum velocity.
+          </para>
+        </section>  
+
+        <section id="sect.instrument_editing.filter">
+          <title>Filter parameters</title>
 
           <para>The filter is a low-pass resonance filter.  If you don't wish to
           use is, click the <guibutton>BYP</guibutton>ass button so that it's
@@ -2407,15 +2440,22 @@
                  -gabriel
             -->
           </note>
-
-          <para>The random pitch parameter allows you to randomly vary the pitch
-          of the sample every time it is triggered.  The value is set between 0
-          and 1.0.  The pitch change is fairly small: &plusmn;2 half-steps
-          &times; value.  Using this sparingly can help your sequences to sound
-          more like a real drummer.</para>
-
         </section>
         
+        <section id="sect.instrument_editing.pitch_shift_parameters">
+          <title>Pitch Shift parameters</title>
+          <para> The first two knobs control the pitch shift offset.
+                 You can use it to change the tuning of the instrument.
+                "Pitch" is the Coarse control and has quantized steps of half-tones from -24 to +24.
+                "Fine" is the Fine control and has quantized steps of cents of half-tones from -0.50 to +0.50.
+          </para>
+          <para>The "random" parameter allows you to randomly vary the pitch
+              of the sample every time it is triggered.  The value is set between 0
+              and 1.0.  The pitch change is fairly small, almost always between &plusmn;1 half-steps
+              &times; value.  Using this sparingly can help your sequences to sound
+              more like a real drummer.
+          </para>
+        </section>   
         
 
         <section id="sect.instrument_editing.midi_out_settings">
@@ -2435,25 +2475,27 @@
           This way you can use Hydrogen as a pure sequencer for other apps, or combine the 
           internal Hydrogen sampler with multiple external apps/devices.</para>
 
-        </section>        
-        
-        <section id="sect.instrument_editing.auto_stop_note">
-          <title>Auto Stop-Note</title>
+        </section>
+        <section id="sect.instrument_editing.HH_pressure_group">
+          <title>Hi-Hat Pressure Group</title>
+            <para>The Hi-Hat is a particular instrument of the drumkit as its sound can be changed by pressing the foot pedal.
+            </para>
+            <para>For e-drummer owner, the hihat pressure group enables to group different hihat instruments
+                together, for example closed, half closed, fully open.
+            </para>
+            <para>Pressure Group: you can assign more instruments to the same group.
+                You can create many groups: for example one group for the different opening levels of a hihat when playing 
+                the top of it, another group when playing the edge.
+                 Another example: timpanis - create a group for each timpani and the pressure will change the note.
+            </para>
+            <para>Range: set the minimum and maximum pressure for each instrument.
+              Each instrument of a given group should seat in its own separate pressure range.
+               The range will decide at what pressure level the instrument will be played.
+                For example, if your closed hi-hat has range from 0 to 20,
+               when the hi-hat pedal is pressed between 0 and 20 the closed hi-hat is played.
+            </para>
 
-          <para>If this box is checked Hydrogen will immediately stop any playing sample that
-          belongs to this instrument whenever the instrument is re-triggered.</para>
-          <para>This option is particularly useful when you are using long samples like a 
-          crash or some existing audio that you have sampled (like a looped voice in a 
-          dance/electro song)  For the crash you will need to use the Auto Stop-Note when 
-          you are sequencing multiple notes in fast succession and want to make it sound realistic.  If you do 
-          not check this option the cymbal will start to sound like multiple cymbals 
-          instead of only one (since the sample of each individual hit will be played completely).
-          For the voice sample this option is useful if you are trying to get that 'stuttering' effect.
-
-          </para>
-
-        </section>        
-        
+        </section>      
         
       </section>
       
