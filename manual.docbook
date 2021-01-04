@@ -2529,7 +2529,11 @@
         difficult to get a set of samples that all sound at about the same
         volume.  By adjusting here, the samples that were recorded too quietly
         can be turned up to match your loud samples (that had to be turned
-        down).</para>
+        down).
+        <!--
+            TODO what is the difference between gain and volume here? 
+        -->
+        </para>
 
         <warning>
           <para>It is very easy to set the <guibutton>Gain</guibutton> too high,
@@ -2547,13 +2551,55 @@
           <para>The pitch is adjusted by playing the sample back faster or
           slower.  This is called the Doppler Effect.  So, if you have a
           1-second sample that you turn down -12 (1 octave), your sample will
-          only last for .5-seconds.  If you do not want this to happen you should
+          only last for 0.5-seconds.  If you do not want this to happen you should
           use rubberband instead (see <xref linkend="sect.layer_editing.section2"/>)</para>
         </note>
 
         <para>You can hear the sample in a layer by clicking the layer id (just 
         below the 'General' and 'Layers' buttons) and the 'Delete Layer' button 
         will delete the currently selected layer.</para>
+        <section id="sect.instrument_editing.new_instrument.sample_selection">
+          <title>Sample Selection</title>
+            <para>
+                Certain set of samples contain different sample versions of the same sound for the same note/velocity
+                in order to make it more natural - drummers for example never hit the drum set twice the same way.
+                This functionality is making Hydrogen compatible with this type of sample collection.
+            </para>
+            <informalfigure id="fig.sample_selection">
+             <mediaobject>
+               <imageobject>
+                <imagedata fileref="img/Instrument_Layers_sampleSelection.png" format="PNG" />
+               </imageobject>
+             </mediaobject>
+            </informalfigure>
+                    
+            <para>
+                To use this functionality, you need to first a few samples that share the same velocity range in Hydrogen.
+                The second step is to select how Hydrogen will chose the sample when a note within a certain velocity
+                is played.
+            </para> 
+            <itemizedlist>
+                <listitem>
+                   <para> <emphasis role="bold">First in Velocity</emphasis> &mdash;
+                       will select the first sample available in the velocity set.
+                       This is the way previous versions of Hydrogen were working.
+                    </para> 
+                </listitem>
+                <listitem>
+                   <para> <emphasis role="bold">Round Robin</emphasis> &mdash;
+                      will cycle through the different samples one after another as note in the same velocity range is played.
+                   </para> 
+                </listitem>
+                <listitem>
+                   <para> <emphasis role="bold">Random</emphasis> &mdash;
+                      will select a random sample inside the velocity range for each note played.
+                   </para> 
+                </listitem>
+            </itemizedlist>
+        </section>
+
+        
+        
 
       </section>
 
