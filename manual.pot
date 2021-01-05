@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-04 22:30+0000\n"
+"POT-Creation-Date: 2021-01-05 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -2253,7 +2253,7 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:1663 manual.docbook:3262
+#: manual.docbook:1663 manual.docbook:3273
 #, no-c-format
 msgid "The Mixer"
 msgstr ""
@@ -2733,7 +2733,7 @@ msgid "<term>Velocity</term>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2076 manual.docbook:3783
+#: manual.docbook:2076 manual.docbook:3794
 #, no-c-format
 msgid "How hard you hit a note."
 msgstr ""
@@ -3122,7 +3122,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2346 manual.docbook:2560
+#: manual.docbook:2346 manual.docbook:2571
 #, no-c-format
 msgid ""
 "It is very easy to set the <guibutton>Gain</guibutton> too high, causing "
@@ -3194,18 +3194,38 @@ msgstr ""
 #: manual.docbook:2388
 #, no-c-format
 msgid ""
-"This box enables/disables the note velocities (i.e. the dynamics). If "
-"disabled, every note of the instruments is played at the maximum velocity."
+"This lets the user decide if Hydrogen will apply the note velocity to the "
+"sample being played."
+msgstr ""
+
+#. Tag: para
+#: manual.docbook:2391
+#, no-c-format
+msgid ""
+"When activated, Hydrogen will apply the note velocity to the sample gain in "
+"addition to the layer gain, the instrument gain, the component gain or the "
+"instrument volume. If all the layer samples are normalized, this option "
+"should be used. By default this option will be selected as this is the way "
+"older version of Hydrogen used to work."
+msgstr ""
+
+#. Tag: para
+#: manual.docbook:2397
+#, no-c-format
+msgid ""
+"When not activated, the note velocity will only be used to select the sample "
+"to be played, but the sample gain will not be changed. This is useful for "
+"set of samples that already have their gain \"hard-coded\"."
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2394
+#: manual.docbook:2405
 #, no-c-format
 msgid "Filter parameters"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2396
+#: manual.docbook:2407
 #, no-c-format
 msgid ""
 "The filter is a low-pass resonance filter. If you don't wish to use is, "
@@ -3217,7 +3237,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2405
+#: manual.docbook:2416
 #, no-c-format
 msgid ""
 "The cutoff frequency of the filter varies with the sample rate of your audio "
@@ -3226,13 +3246,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2425
+#: manual.docbook:2436
 #, no-c-format
 msgid "Pitch Shift parameters"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2426
+#: manual.docbook:2437
 #, no-c-format
 msgid ""
 "The first two knobs control the pitch shift offset. You can use it to change "
@@ -3242,7 +3262,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2431
+#: manual.docbook:2442
 #, no-c-format
 msgid ""
 "The \"random\" parameter allows you to randomly vary the pitch of the sample "
@@ -3253,13 +3273,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2441
+#: manual.docbook:2452
 #, no-c-format
 msgid "Midi out settings"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2443
+#: manual.docbook:2454
 #, no-c-format
 msgid ""
 "Hydrogen is capable of generating midi messages that you can use to trigger "
@@ -3272,7 +3292,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2452
+#: manual.docbook:2463
 #, no-c-format
 msgid ""
 "From now on every time a note is played for that instrument (in the Hydrogen "
@@ -3283,13 +3303,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2459
+#: manual.docbook:2470
 #, no-c-format
 msgid "Hi-Hat Pressure Group"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2460
+#: manual.docbook:2471
 #, no-c-format
 msgid ""
 "The Hi-Hat is a particular instrument of the drumkit as its sound can be "
@@ -3297,7 +3317,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2462
+#: manual.docbook:2473
 #, no-c-format
 msgid ""
 "For e-drummer owner, the hihat pressure group enables to group different "
@@ -3305,7 +3325,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2465
+#: manual.docbook:2476
 #, no-c-format
 msgid ""
 "Pressure Group: you can assign more instruments to the same group. You can "
@@ -3316,7 +3336,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2470
+#: manual.docbook:2481
 #, no-c-format
 msgid ""
 "Range: set the minimum and maximum pressure for each instrument. Each "
@@ -3327,13 +3347,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2483
+#: manual.docbook:2494
 #, no-c-format
 msgid "Creating an Instrument and Layers"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2485
+#: manual.docbook:2496
 #, no-c-format
 msgid ""
 "For each instrument in a drum kit, you can load several samples and set "
@@ -3342,7 +3362,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2489
+#: manual.docbook:2500
 #, no-c-format
 msgid ""
 "To begin creating an instrument, select <menuchoice> <guimenu>Instruments</"
@@ -3351,7 +3371,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2496
+#: manual.docbook:2507
 #, no-c-format
 msgid ""
 "Now, you need two samples. Any .WAV or .FLAC file will do. Hydrogen provides "
@@ -3360,7 +3380,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2500
+#: manual.docbook:2511
 #, no-c-format
 msgid ""
 "In the instrument editor, click on <guibutton>Layers</guibutton>. You can "
@@ -3373,7 +3393,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2509
+#: manual.docbook:2520
 #, no-c-format
 msgid ""
 "After you load the sample, you'll see that there is now a <guilabel>1</"
@@ -3383,7 +3403,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2515
+#: manual.docbook:2526
 #, no-c-format
 msgid ""
 "After bringing in both samples, you'll probably notice that only the "
@@ -3396,13 +3416,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2524
+#: manual.docbook:2535
 #, no-c-format
 msgid "The Instrument editor Layers view"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2532
+#: manual.docbook:2543
 #, no-c-format
 msgid ""
 "The velocity setting for the layer is 0-velocity on the left, and full "
@@ -3411,7 +3431,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2537
+#: manual.docbook:2548
 #, no-c-format
 msgid ""
 "Now, in the pattern area, set up a simple pattern that plays this "
@@ -3422,7 +3442,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2544
+#: manual.docbook:2555
 #, no-c-format
 msgid ""
 "For each layer, you can set the <guibutton>Gain</guibutton> and the "
@@ -3431,7 +3451,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2548
+#: manual.docbook:2559
 #, no-c-format
 msgid ""
 "Use the <guibutton>Gain</guibutton> adjustment to control how loud the "
@@ -3442,7 +3462,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2566
+#: manual.docbook:2577
 #, no-c-format
 msgid ""
 "The pitch of the sample can be modified with the pitch controls. The "
@@ -3452,7 +3472,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2572
+#: manual.docbook:2583
 #, no-c-format
 msgid ""
 "The pitch is adjusted by playing the sample back faster or slower. This is "
@@ -3463,7 +3483,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2579
+#: manual.docbook:2590
 #, no-c-format
 msgid ""
 "You can hear the sample in a layer by clicking the layer id (just below the "
@@ -3472,13 +3492,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2583
+#: manual.docbook:2594
 #, no-c-format
 msgid "Sample Selection"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2584
+#: manual.docbook:2595
 #, no-c-format
 msgid ""
 "Certain set of samples contain different sample versions of the same sound "
@@ -3488,7 +3508,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2597
+#: manual.docbook:2608
 #, no-c-format
 msgid ""
 "To use this functionality, you need to first a few samples that share the "
@@ -3497,7 +3517,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2604
+#: manual.docbook:2615
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">First in Velocity</emphasis> &mdash; will select the "
@@ -3506,7 +3526,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2610
+#: manual.docbook:2621
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Round Robin</emphasis> &mdash; will cycle through "
@@ -3515,7 +3535,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2615
+#: manual.docbook:2626
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Random</emphasis> &mdash; will select a random "
@@ -3523,13 +3543,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2628
+#: manual.docbook:2639
 #, no-c-format
 msgid "Sample Editor"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2629
+#: manual.docbook:2640
 #, no-c-format
 msgid ""
 "So far we have created a multilayered Drumkit, set a number of instrument "
@@ -3539,7 +3559,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2633
+#: manual.docbook:2644
 #, no-c-format
 msgid ""
 "The Sample Editor allows you to tweak and manipulate your samples. This is a "
@@ -3553,7 +3573,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2643
+#: manual.docbook:2654
 #, no-c-format
 msgid ""
 "The changes you make to your samples in the Sample Editor are <emphasis role="
@@ -3564,26 +3584,26 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2652
+#: manual.docbook:2663
 #, no-c-format
 msgid "The Sample Editor"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2660
+#: manual.docbook:2671
 #, no-c-format
 msgid ""
 "The Sample Editor consists of 3 sections (as indicated in the figure above):"
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2663
+#: manual.docbook:2674
 #, no-c-format
 msgid "Sample Editor in/out points"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2664
+#: manual.docbook:2675
 #, no-c-format
 msgid ""
 "In this section you can set the start, stop and loop points for the sample "
@@ -3601,7 +3621,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2679
+#: manual.docbook:2690
 #, no-c-format
 msgid ""
 "Underneath these 2 windows you can find (from left>right) : the position of "
@@ -3615,7 +3635,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2686
+#: manual.docbook:2697
 #, no-c-format
 msgid ""
 "Apart from the marker positions there are 2 settings that apply to the "
@@ -3627,7 +3647,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2692
+#: manual.docbook:2703
 #, no-c-format
 msgid ""
 "If you want to hear a preview of the tweaking you have done so far, you "
@@ -3636,13 +3656,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2698
+#: manual.docbook:2709
 #, no-c-format
 msgid "Sample Editor rubberband"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2699
+#: manual.docbook:2710
 #, no-c-format
 msgid ""
 "This section of the Sample Editor allows you to control the Rubberband "
@@ -3651,7 +3671,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2702
+#: manual.docbook:2713
 #, no-c-format
 msgid ""
 "If you are using Ubuntu you can install rubberband from the Software Center "
@@ -3663,7 +3683,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2708
+#: manual.docbook:2719
 #, no-c-format
 msgid ""
 "If rubberband is installed correctly you will have access to the rubberband "
@@ -3672,13 +3692,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2721
+#: manual.docbook:2732
 #, no-c-format
 msgid "Back to the rubberband settings :"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2723
+#: manual.docbook:2734
 #, no-c-format
 msgid ""
 "Sample length to beat : when set to 'off', rubberband functionality is "
@@ -3687,7 +3707,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2727
+#: manual.docbook:2738
 #, no-c-format
 msgid ""
 "Pitch : this setting allows you to change the pitch of the sample, expressed "
@@ -3695,7 +3715,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2730
+#: manual.docbook:2741
 #, no-c-format
 msgid ""
 "Crispness : this setting does not affect tempo or pitch, but changes the way "
@@ -3703,7 +3723,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2735
+#: manual.docbook:2746
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Note</emphasis>: If you want Hydrogen to recalculate "
@@ -3712,13 +3732,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2742
+#: manual.docbook:2753
 #, no-c-format
 msgid "Sample Editor volume/pan"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2743
+#: manual.docbook:2754
 #, no-c-format
 msgid ""
 "In the bottom section of the Sample Editor you can see the end result of the "
@@ -3734,13 +3754,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2758
+#: manual.docbook:2769
 #, no-c-format
 msgid "Tips on Editing Instruments"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2760
+#: manual.docbook:2771
 #, no-c-format
 msgid ""
 "With all of the different parameters available to tweak, it can be difficult "
@@ -3749,7 +3769,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2764
+#: manual.docbook:2775
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Turn down the gain.</emphasis> Every gain knob (i.e. "
@@ -3761,7 +3781,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2772
+#: manual.docbook:2783
 #, no-c-format
 msgid ""
 "If things sound bad and distorted, start by turning down the gain setting on "
@@ -3771,7 +3791,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2777
+#: manual.docbook:2788
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Test samples at full velocity.</emphasis> Your "
@@ -3781,7 +3801,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2783
+#: manual.docbook:2794
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Try to use samples that are -6 dB max.</emphasis> "
@@ -3790,7 +3810,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2788
+#: manual.docbook:2799
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Remove all DC offsets from the sample.</emphasis> In "
@@ -3805,7 +3825,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2798
+#: manual.docbook:2809
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">The ADSR will not be longer than your sample.</"
@@ -3814,7 +3834,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2803
+#: manual.docbook:2814
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">Things change with the sample rate.</emphasis> If "
@@ -3827,13 +3847,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2818
+#: manual.docbook:2829
 #, no-c-format
 msgid "Midi"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2820
+#: manual.docbook:2831
 #, no-c-format
 msgid ""
 "In this section you can find more info about defining MIDI actions and how "
@@ -3843,19 +3863,19 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2826
+#: manual.docbook:2837
 #, no-c-format
 msgid "Lets take a look at the available options :"
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2837
+#: manual.docbook:2848
 #, no-c-format
 msgid "Midi Events"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2839
+#: manual.docbook:2850
 #, no-c-format
 msgid ""
 "An Event is an incoming Midi message, coming from a MIDI controller or an "
@@ -3863,7 +3883,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2841
+#: manual.docbook:2852
 #, no-c-format
 msgid ""
 "If you look at the Events list you will see that there are 3 types of Events "
@@ -3871,7 +3891,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2847
+#: manual.docbook:2858
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">NOTE</emphasis>: input coming from a regular black/"
@@ -3879,7 +3899,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2851
+#: manual.docbook:2862
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">CC</emphasis>: controller commands coming from "
@@ -3887,7 +3907,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2855
+#: manual.docbook:2866
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">MMC_x</emphasis>: <ulink url=\"http://en.wikipedia."
@@ -3896,7 +3916,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2863
+#: manual.docbook:2874
 #, no-c-format
 msgid ""
 "The Param. (parameter) value to the right of the Event is the identifier of "
@@ -3906,7 +3926,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2869
+#: manual.docbook:2880
 #, no-c-format
 msgid ""
 "You can also activate the Midi learn function by Shift-clicking most of the "
@@ -3915,7 +3935,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2873
+#: manual.docbook:2884
 #, no-c-format
 msgid ""
 "If you Shift-click on a gui element that does not support Midi automation a "
@@ -3923,13 +3943,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:2882
+#: manual.docbook:2893
 #, no-c-format
 msgid "Midi Actions"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2884
+#: manual.docbook:2895
 #, no-c-format
 msgid ""
 "Next is a list of the available Actions: an Action describes what Hydrogen "
@@ -3937,7 +3957,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2887
+#: manual.docbook:2898
 #, no-c-format
 msgid ""
 "** Some of the Midi Actions require that the Action Parameter is configured. "
@@ -3948,13 +3968,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2894
+#: manual.docbook:2905
 #, no-c-format
 msgid "<emphasis role=\"bold\">PLAY</emphasis> : start playback"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2898
+#: manual.docbook:2909
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">PLAY/STOP_TOGGLE</emphasis> : toggles between PLAY "
@@ -3963,7 +3983,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2904
+#: manual.docbook:2915
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">PLAY/PAUSE_TOGGLE</emphasis> : toggles between PLAY "
@@ -3972,7 +3992,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2909
+#: manual.docbook:2920
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">STOP</emphasis> : stops playback and returns to the "
@@ -3980,13 +4000,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2913
+#: manual.docbook:2924
 #, no-c-format
 msgid "<emphasis role=\"bold\">PAUSE</emphasis> : pauses the song"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2917
+#: manual.docbook:2928
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">MUTE</emphasis> : mutes the the Master output "
@@ -3994,7 +4014,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2921
+#: manual.docbook:2932
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">UNMUTE</emphasis> : unmutes the Master output "
@@ -4002,7 +4022,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2925
+#: manual.docbook:2936
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">MUTE_TOGGLE</emphasis> : toggles between MUTE and "
@@ -4010,7 +4030,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2929
+#: manual.docbook:2940
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">NEXT_BAR</emphasis> : jumps to the next bar in the "
@@ -4018,7 +4038,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2933
+#: manual.docbook:2944
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">PREVIOUS_BAR</emphasis> : jumps to the previous bar "
@@ -4026,7 +4046,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2937
+#: manual.docbook:2948
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">BPM_INCR</emphasis> : increments the tempo of the "
@@ -4034,7 +4054,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2941
+#: manual.docbook:2952
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">BPM_DECR</emphasis> : decrements the tempo of the "
@@ -4042,7 +4062,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2945
+#: manual.docbook:2956
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">BPM_CC_RELATIVE</emphasis> : changes the tempo "
@@ -4050,7 +4070,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2949
+#: manual.docbook:2960
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">MASTER_VOLUME_RELATIVE</emphasis> : changes the "
@@ -4059,7 +4079,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2954
+#: manual.docbook:2965
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">MASTER_VOLUME_ABSOLUTE</emphasis> : changes the "
@@ -4068,7 +4088,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2959
+#: manual.docbook:2970
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">STRIP_VOLUME_RELATIVE</emphasis> : see "
@@ -4077,7 +4097,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2964
+#: manual.docbook:2975
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">STRIP_VOLUME_ABSOLUTE</emphasis> : see "
@@ -4086,7 +4106,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2969
+#: manual.docbook:2980
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">EFFECTx_LEVEL_RELATIVE</emphasis> : changes the "
@@ -4095,7 +4115,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2974
+#: manual.docbook:2985
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">SELECT_NEXT_PATTERN</emphasis> : selects the pattern "
@@ -4103,7 +4123,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2978
+#: manual.docbook:2989
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : combines "
@@ -4111,7 +4131,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2982
+#: manual.docbook:2993
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">PAN_RELATIVE</emphasis> : changes the panorama "
@@ -4120,7 +4140,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2987
+#: manual.docbook:2998
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">PAN_ABSOLUTE</emphasis> : changes the panorama "
@@ -4128,19 +4148,19 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2991
+#: manual.docbook:3002
 #, no-c-format
 msgid "<emphasis role=\"bold\">BEATCOUNTER</emphasis> : sets the tempo (see"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2995
+#: manual.docbook:3006
 #, no-c-format
 msgid "<emphasis role=\"bold\">TAP_TEMPO</emphasis> : sets the tempo (see"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:2999
+#: manual.docbook:3010
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">SELECT_INSTRUMENT</emphasis> : selects one of the "
@@ -4148,13 +4168,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3011
+#: manual.docbook:3022
 #, no-c-format
 msgid "<title>OSC</title>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3012
+#: manual.docbook:3023
 #, no-c-format
 msgid ""
 "Open Sound Control (OSC) is a protocol for communication among programs, "
@@ -4168,7 +4188,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3021
+#: manual.docbook:3032
 #, no-c-format
 msgid ""
 "Hydrogen is able to receive OSC messages. This allows you to control it "
@@ -4179,13 +4199,13 @@ msgid ""
 msgstr ""
 
 #. Tag: emphasis
-#: manual.docbook:3027
+#: manual.docbook:3038
 #, no-c-format
 msgid "oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3029
+#: manual.docbook:3040
 #, no-c-format
 msgid ""
 "To enable OSC support in Hydrogen, open the Preferences dialog and switch to "
@@ -4194,13 +4214,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3033
+#: manual.docbook:3044
 #, no-c-format
 msgid "Controlling Hydrogen via OSC"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3034
+#: manual.docbook:3045
 #, no-c-format
 msgid ""
 "If you want to control Hydrogen via OSC, you may send messages to the "
@@ -4254,13 +4274,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3092
+#: manual.docbook:3103
 #, no-c-format
 msgid "Sending OSC feedback to other applications"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3093
+#: manual.docbook:3104
 #, no-c-format
 msgid ""
 "Hydrogen is able notify other applications via OSC if a parameter changes, "
@@ -4269,7 +4289,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3099
+#: manual.docbook:3110
 #, no-c-format
 msgid ""
 "To enable/disable OSC feedback, a checkbox exists on the OSC tab of the "
@@ -4278,7 +4298,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3105
+#: manual.docbook:3116
 #, no-c-format
 msgid ""
 "Clients are registered automatically by Hydrogen upon the first message "
@@ -4286,7 +4306,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3109
+#: manual.docbook:3120
 #, no-c-format
 msgid ""
 "The OSC messages send by Hydrogen will be associated with the following "
@@ -4301,19 +4321,19 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3134
+#: manual.docbook:3145
 #, no-c-format
 msgid "A new song"
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3136
+#: manual.docbook:3147
 #, no-c-format
 msgid "\"Song\" mode and \"Pattern\" mode"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3138
+#: manual.docbook:3149
 #, no-c-format
 msgid ""
 "This section is a quick-and-dirty walkthrough to Hydrogen. Refer to the "
@@ -4321,7 +4341,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3141
+#: manual.docbook:3152
 #, no-c-format
 msgid ""
 "Hydrogen has 2 main modes: \"Pattern\" mode and \"Song\" mode (refer to "
@@ -4335,13 +4355,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3151
+#: manual.docbook:3162
 #, no-c-format
 msgid "A new pattern"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3156
+#: manual.docbook:3167
 #, no-c-format
 msgid ""
 "We'll start from the empty song with an empty pattern created when Hydrogen "
@@ -4361,19 +4381,19 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3172
+#: manual.docbook:3183
 #, no-c-format
 msgid "The Pattern Editor"
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3182
+#: manual.docbook:3193
 #, no-c-format
 msgid "A new sequence"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3184
+#: manual.docbook:3195
 #, no-c-format
 msgid ""
 "Once patterns are created (<xref linkend=\"fig.insert_patterns\"/>), we can "
@@ -4382,19 +4402,19 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3189
+#: manual.docbook:3200
 #, no-c-format
 msgid "Inserting Patterns in the Song sequence"
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3200
+#: manual.docbook:3211
 #, no-c-format
 msgid "Adjust from the mixer"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3202
+#: manual.docbook:3213
 #, no-c-format
 msgid ""
 "Of course we can always use the mixer window, either when creating or "
@@ -4402,7 +4422,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3205
+#: manual.docbook:3216
 #, no-c-format
 msgid ""
 "The Mixer frame (<xref linkend=\"fig.mixer.2\"/>) is made of 32 independent "
@@ -4430,97 +4450,97 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3274
+#: manual.docbook:3285
 #, no-c-format
 msgid "Shortcut lists"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3278
+#: manual.docbook:3289
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + N]</emphasis> = New Project"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3283
+#: manual.docbook:3294
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Open File"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3288
+#: manual.docbook:3299
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + D]</emphasis> = Open Demo"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3293
+#: manual.docbook:3304
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + S]</emphasis> = Save File"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3298
+#: manual.docbook:3309
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + SHIFT + S]</emphasis> = Save File as"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3303
+#: manual.docbook:3314
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + P]</emphasis> = Export Pattern as"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3308
+#: manual.docbook:3319
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + M]</emphasis> = Export MIDI file"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3313
+#: manual.docbook:3324
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + E]</emphasis> = Export Song"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3318
+#: manual.docbook:3329
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + Q]</emphasis> = Quit Hydrogen"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3323
+#: manual.docbook:3334
 #, no-c-format
 msgid "<emphasis role=\"bold\">[ALT + D]</emphasis> = Show Director window"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3328
+#: manual.docbook:3339
 #, no-c-format
 msgid "<emphasis role=\"bold\">[ALT + M]</emphasis> = Show Mixer window"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3333
+#: manual.docbook:3344
 #, no-c-format
 msgid "<emphasis role=\"bold\">[ALT + I]</emphasis> = Show Instrument rack"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3338
+#: manual.docbook:3349
 #, no-c-format
 msgid "<emphasis role=\"bold\">[ALT + P]</emphasis> = Show Preferences window"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3343
+#: manual.docbook:3354
 #, no-c-format
 msgid "<emphasis role=\"bold\">[CTRL + ?]</emphasis> = Show manual"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3348
+#: manual.docbook:3359
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">[Backspace]</emphasis> = Restart song or pattern "
@@ -4528,31 +4548,31 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3354
+#: manual.docbook:3365
 #, no-c-format
 msgid "<emphasis role=\"bold\">[spacebar]</emphasis> = Play / Pause"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3359
+#: manual.docbook:3370
 #, no-c-format
 msgid "<emphasis role=\"bold\">[,]</emphasis> (comma key) = Beatcounter"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3364
+#: manual.docbook:3375
 #, no-c-format
 msgid "<emphasis role=\"bold\">[\\]</emphasis> (backslash) = Tap tempo"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3369
+#: manual.docbook:3380
 #, no-c-format
 msgid "<emphasis role=\"bold\">[+] and [-]</emphasis> = Tempo up / down"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3374
+#: manual.docbook:3385
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">[F9]</emphasis> = Jump back to previous bar in the "
@@ -4560,14 +4580,14 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3379
+#: manual.docbook:3390
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">[F10]</emphasis> = Jump to the next bar in the song"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3384
+#: manual.docbook:3395
 #, no-c-format
 msgid ""
 "<emphasis role=\"bold\">[F12]</emphasis> = Panic button (stops the song and "
@@ -4575,13 +4595,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: manual.docbook:3394
+#: manual.docbook:3405
 #, no-c-format
 msgid "Glossary"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3396
+#: manual.docbook:3407
 #, no-c-format
 msgid ""
 "This is a glossary of general terms encountered when using Hydrogen, "
@@ -4594,13 +4614,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3409
+#: manual.docbook:3420
 #, no-c-format
 msgid "ADSR"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3411
+#: manual.docbook:3422
 #, no-c-format
 msgid ""
 "A type of envelope generator that allows you to control the <link linkend="
@@ -4611,7 +4631,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3420
+#: manual.docbook:3431
 #, no-c-format
 msgid ""
 "In Hydrogen, the ADSR envelope generator only controls the volume "
@@ -4619,7 +4639,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3423
+#: manual.docbook:3434
 #, no-c-format
 msgid ""
 "Read more about this in the Wikipedia Article <ulink url=\"http://en."
@@ -4627,7 +4647,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3425
+#: manual.docbook:3436
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.envelopegenerator\"></glossseealso> "
@@ -4637,13 +4657,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3436
+#: manual.docbook:3447
 #, no-c-format
 msgid "<glossterm>Attack</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3438
+#: manual.docbook:3449
 #, no-c-format
 msgid ""
 "This is the first phase of an ADSR envelope, and is the amount of "
@@ -4652,26 +4672,26 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3447
+#: manual.docbook:3458
 #, no-c-format
 msgid "Attenuation"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3449
+#: manual.docbook:3460
 #, no-c-format
 msgid ""
 "In filters and mixers, this the amount that a signal is reduced (volume)."
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3459
+#: manual.docbook:3470
 #, no-c-format
 msgid "Band-Pass Filter"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3461
+#: manual.docbook:3472
 #, no-c-format
 msgid ""
 "A filter that preserves a certain band of frequencies, and attenuates "
@@ -4680,7 +4700,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3463
+#: manual.docbook:3474
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.filter\"></glossseealso> <glossseealso "
@@ -4689,13 +4709,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3474
+#: manual.docbook:3485
 #, no-c-format
 msgid "Clipping"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3476
+#: manual.docbook:3487
 #, no-c-format
 msgid ""
 "A phenomenon that happens to a signal when the signal is too large for "
@@ -4705,7 +4725,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3481
+#: manual.docbook:3492
 #, no-c-format
 msgid ""
 "An example of clipping is when you play music louder than your speaker can "
@@ -4713,13 +4733,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3487
+#: manual.docbook:3498
 #, no-c-format
 msgid "Cutoff Frequency"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3489
+#: manual.docbook:3500
 #, no-c-format
 msgid ""
 "On high-pass and low-pass filters, this is the frequency that divides "
@@ -4729,7 +4749,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3494
+#: manual.docbook:3505
 #, no-c-format
 msgid ""
 "For example, if you have a low-pass filter and you set the cutoff frequency "
@@ -4741,7 +4761,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3499
+#: manual.docbook:3510
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.filter\"></glossseealso> <glossseealso "
@@ -4751,13 +4771,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3511
+#: manual.docbook:3522
 #, no-c-format
 msgid "<glossterm>Decay</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3513
+#: manual.docbook:3524
 #, no-c-format
 msgid ""
 "After reaching full velocity from the attack, this is the amount of "
@@ -4766,19 +4786,19 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3522
+#: manual.docbook:3533
 #, no-c-format
 msgid "DC-offsety"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3524
+#: manual.docbook:3535
 #, no-c-format
 msgid "DC offset, or DC coefficient is the mean value of the waveform."
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3525
+#: manual.docbook:3536
 #, no-c-format
 msgid ""
 "DC offset is usually undesirable. For example, in audio processing, a sound "
@@ -4790,13 +4810,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3538
+#: manual.docbook:3549
 #, no-c-format
 msgid "Envelope Generator"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3540
+#: manual.docbook:3551
 #, no-c-format
 msgid ""
 "A way to control (change) a parameter over time as a response to triggering, "
@@ -4804,13 +4824,13 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3546
+#: manual.docbook:3557
 #, no-c-format
 msgid "Did your eyes just glaze over? Let's try again:"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3548
+#: manual.docbook:3559
 #, no-c-format
 msgid ""
 "Imagine that you're playing a note on the keyboard and you have your other "
@@ -4821,13 +4841,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3559
+#: manual.docbook:3570
 #, no-c-format
 msgid "Fader"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3561
+#: manual.docbook:3572
 #, no-c-format
 msgid ""
 "A slider control used to adjust the attenuation (volume) in a mixer. Faders "
@@ -4836,13 +4856,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3568
+#: manual.docbook:3579
 #, no-c-format
 msgid "Filter"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3570
+#: manual.docbook:3581
 #, no-c-format
 msgid ""
 "A device that changes a sound by attenuating specific frequencies. A tone "
@@ -4850,7 +4870,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3571
+#: manual.docbook:3582
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.bandpassfilter\"></glossseealso> <glossseealso "
@@ -4860,13 +4880,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3583
+#: manual.docbook:3594
 #, no-c-format
 msgid "<glossterm>Gain</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3585
+#: manual.docbook:3596
 #, no-c-format
 msgid ""
 "In an amplifier, this adjust how much (or how little) a signal is amplified "
@@ -4874,13 +4894,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3593
+#: manual.docbook:3604
 #, no-c-format
 msgid "High-Pass Filter"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3595
+#: manual.docbook:3606
 #, no-c-format
 msgid ""
 "A filter that attenuates (silences) low frequencies, but allows high "
@@ -4888,7 +4908,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3596 manual.docbook:3641
+#: manual.docbook:3607 manual.docbook:3652
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.filter\"></glossseealso> <glossseealso "
@@ -4896,13 +4916,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3606
+#: manual.docbook:3617
 #, no-c-format
 msgid "Instrument"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3608
+#: manual.docbook:3619
 #, no-c-format
 msgid ""
 "In Hydrogen, an instrument is a single noise-maker (like a bass drum kick, "
@@ -4910,13 +4930,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3619
+#: manual.docbook:3630
 #, no-c-format
 msgid "Layer"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3621
+#: manual.docbook:3632
 #, no-c-format
 msgid ""
 "In an instrument you can load several different samples (each one called a "
@@ -4925,7 +4945,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3626
+#: manual.docbook:3637
 #, no-c-format
 msgid ""
 "Suppose you have a sample of a floor tom being struck softly. If you simply "
@@ -4936,13 +4956,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3638
+#: manual.docbook:3649
 #, no-c-format
 msgid "Low-Pass Filter"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3640
+#: manual.docbook:3651
 #, no-c-format
 msgid ""
 "A filter that attenuates (silences) high frequencies, but allows low "
@@ -4950,26 +4970,26 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3651
+#: manual.docbook:3662
 #, no-c-format
 msgid "Mute"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3653
+#: manual.docbook:3664
 #, no-c-format
 msgid ""
 "To make no noise. A setting on an instrument that prevents any audio output."
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3659
+#: manual.docbook:3670
 #, no-c-format
 msgid "Mute Group"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3661
+#: manual.docbook:3672
 #, no-c-format
 msgid ""
 "A group of instruments (samples) that should mute (stop playing) immediately "
@@ -4977,7 +4997,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3664
+#: manual.docbook:3675
 #, no-c-format
 msgid ""
 "This is typically used in hi-hats, where there's a different instrument "
@@ -4990,13 +5010,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3680
+#: manual.docbook:3691
 #, no-c-format
 msgid "Octave"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3682
+#: manual.docbook:3693
 #, no-c-format
 msgid ""
 "A span of frequencies where the top-most frequency is exactly twice the "
@@ -5004,7 +5024,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3685
+#: manual.docbook:3696
 #, no-c-format
 msgid ""
 "For example, the range 20 Hz to 40 Hz is an octave. So is 120 Hz to 240 Hz, "
@@ -5014,13 +5034,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3699
+#: manual.docbook:3710
 #, no-c-format
 msgid "<glossterm>Release</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3701
+#: manual.docbook:3712
 #, no-c-format
 msgid ""
 "After the note is released, this is the amount of <emphasis>time</emphasis> "
@@ -5028,13 +5048,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3710
+#: manual.docbook:3721
 #, no-c-format
 msgid "Resonance"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3712
+#: manual.docbook:3723
 #, no-c-format
 msgid ""
 "When referring to a resonance filter, this is the parameter that determines "
@@ -5042,13 +5062,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3721
+#: manual.docbook:3732
 #, no-c-format
 msgid "Resonance Filter"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3723
+#: manual.docbook:3734
 #, no-c-format
 msgid ""
 "A filter that gives a large boost to a very narrow range of frequencies. "
@@ -5057,7 +5077,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3726
+#: manual.docbook:3737
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.filter\"></glossseealso> <glossseealso "
@@ -5066,13 +5086,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3735
+#: manual.docbook:3746
 #, no-c-format
 msgid "Roll-off"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3737
+#: manual.docbook:3748
 #, no-c-format
 msgid ""
 "This is the amount that frequencies are attenuated (suppressed) as the "
@@ -5080,7 +5100,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3740
+#: manual.docbook:3751
 #, no-c-format
 msgid ""
 "For example, in a low-pass filter the frequencies below the cutoff frequency "
@@ -5093,7 +5113,7 @@ msgid ""
 msgstr ""
 
 #. Tag: glossdef
-#: manual.docbook:3747
+#: manual.docbook:3758
 #, no-c-format
 msgid ""
 "<glossseealso otherterm=\"def.attenuation\"></glossseealso> <glossseealso "
@@ -5101,26 +5121,26 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3757
+#: manual.docbook:3768
 #, no-c-format
 msgid "<glossterm>Sample</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3759
+#: manual.docbook:3770
 #, no-c-format
 msgid ""
 "A short recording of a sound, typically between .1 and 3.0 seconds long."
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3765
+#: manual.docbook:3776
 #, no-c-format
 msgid "<glossterm>Sustain</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3767
+#: manual.docbook:3778
 #, no-c-format
 msgid ""
 "The <emphasis>level</emphasis> to hold the parameter after finishing the "
@@ -5128,13 +5148,13 @@ msgid ""
 msgstr ""
 
 #. Tag: glossterm
-#: manual.docbook:3781
+#: manual.docbook:3792
 #, no-c-format
 msgid "<glossterm>Velocity</glossterm>"
 msgstr ""
 
 #. Tag: para
-#: manual.docbook:3785
+#: manual.docbook:3796
 #, no-c-format
 msgid ""
 "MIDI devices are required to send this information along with the note. "

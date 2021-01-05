@@ -2406,8 +2406,19 @@
         </section>
         <section id="sect.instrument_editing.apply_velocity">
           <title>Apply Velocity</title>
-          <para>This box enables/disables the note velocities (i.e. the dynamics).
-                If disabled, every note of the instruments is played at the maximum velocity.
+          <para>
+             This lets the user decide if Hydrogen will apply the note velocity to the sample being played.
+          </para>
+          <para>
+             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the layer gain,
+              the instrument gain, the component gain or the instrument volume.
+              If all the layer samples are normalized, this option should be used.
+                By default this option will be selected as this is the way older version of Hydrogen used to work.
+          </para>
+          <para>
+              When not activated, the note velocity will only be used to select the sample to be played,
+              but the sample gain will not be changed.
+              This is useful for set of samples that already have their gain "hard-coded".
           </para>
         </section>  
 

@@ -881,8 +881,17 @@
           instead of only one (since the sample of each individual hit will be played completely).
           For the voice sample this option is useful if you are trying to get that 'stuttering' effect.
 
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="sect.instrument_editing.apply_velocity"></a>9.3.4. Apply Velocity</h4></div></div></div><p>This box enables/disables the note velocities (i.e. the dynamics).
-                If disabled, every note of the instruments is played at the maximum velocity.
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="sect.instrument_editing.apply_velocity"></a>9.3.4. Apply Velocity</h4></div></div></div><p>
+             This lets the user decide if Hydrogen will apply the note velocity to the sample being played.
+          </p><p>
+             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the layer gain,
+              the instrument gain, the component gain or the instrument volume.
+              If all the layer samples are normalized, this option should be used.
+                By default this option will be selected as this is the way older version of Hydrogen used to work.
+          </p><p>
+              When not activated, the note velocity will only be used to select the sample to be played,
+              but the sample gain will not be changed.
+              This is useful for set of samples that already have their gain "hard-coded".
           </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="sect.instrument_editing.filter"></a>9.3.5. Filter parameters</h4></div></div></div><p>The filter is a low-pass resonance filter.  If you don't wish to
           use is, click the <span class="guibutton">BYP</span>ass button so that it's
           red.  If it's not red, then the filter is active.  The cutoff
