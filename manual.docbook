@@ -1652,8 +1652,8 @@
       <para>Clicking on an instrument or adding/removing a note next to it 
       will select this instrument.  Once an instrument is selected the note properties 
       for this instrument will be shown in the form of vertical lines in the bottom window.  
-      The lines represent the value for the selected property of each note of the selected instrument.  
-      You can select another note-property from the note property drop-down list (located bottom-left).  
+      The lines represent the value for the selected property of each note of the selected instrument.
+      You can select a different note-property from the note property drop-down list (located bottom-left).
       There are 4 note properties available : 
       
       <itemizedlist mark="opencircle">
@@ -1668,7 +1668,7 @@
         
         <listitem>
           <para><emphasis role="bold">Pan</emphasis> : with this parameter you can define
-           the stereo image of the note (how loud it will be in the left/right output)</para>
+           the stereo image position of the note (how loud it will be in the left/right output)</para>
         </listitem>
         
         <listitem>
@@ -1692,13 +1692,58 @@
               </imageobject>
             </mediaobject>
           </informalfigure>
-          <para>The striped black and white area represents a piano keyboard and in the gray 
-          area you can choose the octave.  By placing a dot on the octave scale and a dot on the 
-          'keyboard' you can choose any note.</para>
+          <para>
+            The striped black and white area represents a piano keyboard and in the gray
+            area you can choose the octave.  By moving the dots on the
+            octave scale and the 'keyboard', you can choose any note
+            value.
+          </para>
+          <para>
+            (Note that the pattern editor in piano roll mode (see <xref
+            linkend="sect.pattern_editor.piano_mode" />) can also be used to
+            change the note value of existing notes)
+          </para>
         </listitem>
+        <listitem>
+          <para>
+          <emphasis role="bold">Probability</emphasis> : changing the
+          Probability property of a note provides a way for Hydrogen
+          to automatically create some variation in patterns. By
+          setting the probability to less than 1.0, a note may be
+          randomly skipped: a note with probability 1.0 will
+          <emphasis>always</emphasis> be played, a note with
+          probability of 0.0 will <emphasis>never</emphasis> be played.
+          </listitem>
       </itemizedlist>
       </para>
 
+      <para>
+        Clicking or dragging the value lines in the note properties editor will
+        set the property value. But often you'll want to set the properties of
+        several notes at once, so there are a few ways to do this.
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Drawing with the mouse:</emphasis></para>
+            <para>
+              Pressing the mouse button over the first note's property, you can
+              hold down the mouse button and drag over multiple notes. This is
+              great for quickly creating a crescendo from a filled set of notes.
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">
+              Selecting multiple notes:</emphasis>
+            </para>
+            <para>
+              The mouse or keyboard can be used to select multiple notes, which
+              can then be modified all together by dragging them together. This
+              can be useful for creating really consistent quiet grace notes.
+            </para>
+          </listitem>
+
+        </itemizedlist>
+      </para>
 
       </section>
 
