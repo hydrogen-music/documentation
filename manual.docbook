@@ -1706,14 +1706,16 @@
         </listitem>
         <listitem>
           <para>
-          <emphasis role="bold">Probability</emphasis> : changing the
-          Probability property of a note provides a way for Hydrogen
-          to automatically create some variation in patterns. By
-          setting the probability to less than 1.0, a note may be
-          randomly skipped: a note with probability 1.0 will
-          <emphasis>always</emphasis> be played, a note with
-          probability of 0.0 will <emphasis>never</emphasis> be played.
-          </listitem>
+            <emphasis role="bold">Probability</emphasis> : changing the
+            Probability property of a note provides a way for Hydrogen
+            to automatically create some variation in patterns. By
+            setting the probability to less than 1.0, a note may be
+            randomly skipped: a note with probability 1.0 will
+            <emphasis>always</emphasis> be played, a note with
+            probability of 0.0 will <emphasis>never</emphasis> be
+            played.
+          </para>
+        </listitem>
       </itemizedlist>
       </para>
 
