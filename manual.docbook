@@ -445,6 +445,70 @@
       </itemizedlist>
     </section>
 
+<!--   KEYBOARD AND MOUSE -->
+    <section id="sect.keyboard_and_mouse">
+      <title>Keyboard and Mouse</title>
+      <para>
+        The Hydrogen user interface is designed so that it can be
+        used entirely with the mouse, with the exception of text entry.
+      </para>
+      <para>
+        The keyboard can also be used for navigating and editing in
+        the pattern and song editors, using a combination of 
+        <itemizedlist>
+          <listitem>
+            <para>
+              <emphasis role="bold">Arrow keys</emphasis>: move the
+              keyboard input cursor's position, or adjust values under
+              the cursor.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Shift + Arrow keys</emphasis>:
+              can be used to make selections of notes or pattern
+              groups as if the mouse had been dragged over them.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Enter / Return</emphasis>: generally
+              performs the same action as a mouse click, but can also
+              start or end a move (or copy) of items in the same way
+              a mouse drag would.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Tab / Shift + Tab</emphasis>: move
+              between different areas of the main interface.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Delete / Backspace</emphasis>:
+              delete notes or patterns.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Escape</emphasis>:
+              cancels an ongoing selection, move or copy.
+            </para>
+          </listitem>
+        </itemizedlist>
+      </para>
+      <para>
+        Note that the keyboard input cursor is hidden
+        from view until one of the above keys is pressed. This keeps
+        the display clear and uncluttered when using the mouse.
+      </para>
+      <para>
+        Most other keys on the keyboard can be used to play
+        samples and enter notes in the same way a MIDI keyboard can be.
+      </para>
+    </section>
+
 <!--   UI OVERVIEW  -->
     <section id="sect.UIoverview">
       <title>The main User Interface : an overview</title>
