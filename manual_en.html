@@ -153,23 +153,45 @@
           pattern. It will be stored in
           <span class="emphasis"><em>$HOME/.hydrogen/data/patterns/drumkit_name</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Export MIDI file</em></span> - Export current song in
           MIDI format</p></li><li class="listitem"><p><span class="emphasis"><em>Export song</em></span> - Export current song in WAV
-          format (see <a class="xref" href="#sect.song_editor.export_song" title="5.5. Exporting your song">Section 5.5</a>)</p></li><li class="listitem"><p><span class="emphasis"><em>Quit</em></span> - Quit Hydrogen</p></li></ul></div><p><span class="bold"><strong>Undo</strong></span>: Undo/Redo functions.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Undo</em></span> - Lets you undo your last action</p></li><li class="listitem"><p><span class="emphasis"><em>Redo</em></span> - Lets you redo the last undone action</p></li><li class="listitem"><p><span class="emphasis"><em>Command History</em></span> - Gives you an overview of your previous
+          format (see <a class="xref" href="#sect.song_editor.export_song" title="5.5. Exporting your song">Section 5.5</a>)</p></li><li class="listitem"><p><span class="emphasis"><em>Export Lilypond file</em></span> - This is a first version of the LilyPond export.
+          It has the following limitations: Only GM-kit is supported, No triplets support</p></li><li class="listitem"><p><span class="emphasis"><em>Quit</em></span> - Quit Hydrogen</p></li></ul></div><p><span class="bold"><strong>Undo</strong></span>: Undo/Redo functions.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Undo</em></span> - Lets you undo your last action</p></li><li class="listitem"><p><span class="emphasis"><em>Redo</em></span> - Lets you redo the last undone action</p></li><li class="listitem"><p><span class="emphasis"><em>Undo History</em></span> - Gives you an overview of your previous
           actions</p></li></ul></div><p><span class="bold"><strong>Instruments</strong></span>: this menu offers
-      instruments and drumkit (sound libraries) functions.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Add instrument</em></span> - Add a new instrument to
-          your current drumkit</p></li><li class="listitem"><p><span class="emphasis"><em>Clear all</em></span> - Delete all instruments from the
-          current drumkit</p></li><li class="listitem"><p><span class="emphasis"><em>Save library</em></span> - Saves all instruments
-          settings (and their sound samples) in
-          <span class="emphasis"><em>$HOME/.hydrogen/data/library_name</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Export library</em></span> - Compress all instruments
-          samples and settings in a drumkit in
-          <span class="emphasis"><em>$HOME/.hydrogen/data/library_name</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Import library</em></span> - Imports another drumkit
-          from the local filesystem or download it from a remote location
-          through an XML feed. The XML file that should be provided is <span class="bold"><strong>NOT</strong></span> RSS compliant (see <a class="ulink" href="http://www.hydrogen-music.org/feeds/drumkit_list.php" target="_top">Hydrogen
-          website</a> for an example). To load another drumkit in your
-          current working session of Hydrogen, read <a class="xref" href="#sect.sound_library" title="8. Sound Library (Drumkit/Pattern/Song Manager)">Section 8</a>.</p></li></ul></div><p><span class="bold"><strong>Tools</strong></span>: opens the mixer, the director, the
-      playlist editor, the instrument rack and the general preferences
-      window.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Playlist editor</em></span> - A tool to manage
+      instruments functions.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Add instrument</em></span> - Add a new instrument to your current drumkit</p></li><li class="listitem"><p><span class="emphasis"><em>Clear all</em></span> - Delete all instruments from the current drumkit</p></li><li class="listitem"><p><span class="emphasis"><em>Add component</em></span>: - A component is a part of Hydrogen's instrument model.
+                Each instrument consists of one or more components, and each component consists of one or more layers.
+            </p><p>To make an example: A snare could have two components.
+                One component includes sounds from the top side of the snare drum, and the other component includes
+                the sounds from the bottom side of the snare drum (where the snare wires are fitted).
+                Each component can consist of several layers (snare drum hits with different velocities).
+                Now you can adjust the volume of the two components to build your ideal drum sound.
+                If you want more of the attack, you can put in more of the "top head" component.
+                If you want more of the snare wires, you put in more of the bottom component.
+            </p></li></ul></div><p><span class="bold"><strong>Drumkits</strong></span>: this menu offers drumkit (sound libraries) functions.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Save</em></span> - Saves all instruments settings (and their sound samples) in
+            <span class="emphasis"><em>$HOME/.hydrogen/data/library_name</em></span>
+          </p></li><li class="listitem"><p><span class="emphasis"><em>Export</em></span> - Compress all instruments samples and settings in a drumkit in
+            <span class="emphasis"><em>$HOME/.hydrogen/data/library_name</em></span>
+          </p></li><li class="listitem"><p><span class="emphasis"><em>Import</em></span> - Imports another drumkit from the local filesystem.
+              To load another drumkit in your
+              current working session of Hydrogen, read <a class="xref" href="#sect.sound_library" title="8. Sound Library (Drumkit/Pattern/Song Manager)">Section 8</a>.
+          </p></li><li class="listitem"><p><span class="emphasis"><em>Online import</em></span> - Imports another drumkit from a remote location
+              through an XML feed. The XML file that should be provided is <span class="bold"><strong>NOT</strong></span> RSS compliant (see <a class="ulink" href="http://www.hydrogen-music.org/feeds/drumkit_list.php" target="_top">Hydrogen
+              website</a> for an example). To load another drumkit in your
+              current working session of Hydrogen, read <a class="xref" href="#sect.sound_library" title="8. Sound Library (Drumkit/Pattern/Song Manager)">Section 8</a>.
+          </p></li></ul></div><p><span class="bold"><strong>View</strong></span>:Opens the director, the playlist editor, the instrument rack
+         and the general preferences window.
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Playlist editor</em></span> - A tool to manage
           playlists.</p></li><li class="listitem"><p><span class="emphasis"><em>Director</em></span> - Open the director window.</p></li><li class="listitem"><p><span class="emphasis"><em>Mixer</em></span> - Open the mixer window.</p></li><li class="listitem"><p><span class="emphasis"><em>Instrument rack</em></span> - Open the instrument rack
-          panel.</p></li><li class="listitem"><p><span class="emphasis"><em>Preferences</em></span> - Open the main preferences
+          panel.</p></li><li class="listitem"><p><span class="emphasis"><em>Automation path</em></span> - Open the automation path
+          panel.</p></li><li class="listitem"><p><span class="emphasis"><em>Timeline</em></span> - Open the time line
+          panel (auto hiding the playback track)</p></li><li class="listitem"><p><span class="emphasis"><em>Playback track</em></span> - Open the time line
+          panel (auto hiding the timeline)</p></li><li class="listitem"><p><span class="emphasis"><em>Full screen</em></span> - Maximises the window size to the whole screen area</p></li></ul></div><p><span class="bold"><strong>Options</strong></span>: selects the input mode and opens the general preferences
+      window.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Input mode</em></span> -
+               when set to <span class="emphasis"><em>Drumset</em></span> the keys on your midi keyboard will map to the instruments
+               in your drumkit. If you set it to <span class="emphasis"><em>Instrument</em></span> the keys of your midi 
+               keyboard will trigger the instrument that is currently selected.
+               The pitch of the instrument will follow the key you press on your keyboard.
+               This feature is mainly used for non-drum instruments.
+               An example: if you use a sample of a piano for one of your instruments, you will be able to 'play'
+                that piano instrument using your keyboard just like you are playing a piano synth.</p></li><li class="listitem"><p><span class="emphasis"><em>Preferences</em></span> - Open the main preferences
           window. Read <a class="xref" href="#sect.preferences" title="3. Preferences">Section 3</a> on how to configure
           Hydrogen.</p></li></ul></div><p><span class="bold"><strong>Debug</strong></span>: tools mainly for debugging
       and monitoring Hydrogen (only available when compiled with debug
@@ -178,7 +200,8 @@
           commands.</p></li><li class="listitem"><p><span class="emphasis"><em>Print Objects - </em></span>Print on stdout current
           objects map.</p></li></ul></div><p><span class="bold"><strong>Info</strong></span></p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>User manual - </em></span>Open a window with this
           manual :)</p></li><li class="listitem"><p><span class="emphasis"><em>About - </em></span>The usual window with license
-          information, acknowledgments, etc.</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="sect.main_toolbar"></a>4. The main toolbar</h2></div></div></div><p>Before analyzing the two main frames of Hydrogen, let's take a quick
+          information, acknowledgments, etc.</p></li><li class="listitem"><p><span class="emphasis"><em>Report bug - </em></span> Opens the Hydrogen issue page at github.com in Internet browser
+          You can open a new issue to communicate a bug here (first search if there exists already an issue about it)</p></li><li class="listitem"><p><span class="emphasis"><em>Donate - </em></span> Make a donation to developers/mantainers</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="sect.main_toolbar"></a>4. The main toolbar</h2></div></div></div><p>Before analyzing the two main frames of Hydrogen, let's take a quick
       look at the main toolbar and its components:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Pilot the song using the start, stop, pause, etc. buttons</p></li><li class="listitem"><p>Choose between "pattern" or "song" mode: in "pattern" mode only
           the currently selected pattern will play, while in "song" mode all
           patterns inserted will be played.</p></li><li class="listitem"><p>An advanced tap tempo function: choose note length and how many
