@@ -1678,26 +1678,28 @@
         </para>
 
         <para>
-          Notes can be selected by dragging over them with the mouse
-          (or Shift+arrow keys), and can be deleted with 'Delete', or moved
-          by dragging (or Return followed by arrow key movements) the
-          notes to a new location. This allows notes to be moved
-          between different instruments, or to adjust their timing.
+          Notes can be selected by dragging over them with the mouse (or <emphasis
+          role="bold">Shift+arrow keys</emphasis>), and can be deleted with 'Delete', or moved by
+          dragging (or Return followed by arrow key movements) the notes to a new location. This
+          allows notes to be moved between different instruments, or to adjust their
+          timing. Movement in the horizontal direction is constrained by the currently selected grid
+          resolution, however this can be overridden by holding down <emphasis
+          role="bold">Alt</emphasis> while moving notes.
         </para>
 
         <para>
-          Moving a selection of notes with Ctrl held down will copy
-          them to the new location rather than moving.
+          Moving a selection of notes with <emphasis role="bold">Ctrl</emphasis> held down will copy
+          them to the new location rather than moving, as in the Song Editor.
         </para>
 
         <para>
-          Selected notes can also be copied to the clipboard with
-          Ctrl+C, and pasted with Ctrl+V. When pasting, the relative
-          positions of the input cursor at the time of the Copy and
-          Paste operation will set the new position of pasted notes.
+          Selected notes can also be copied to the clipboard with <emphasis
+          role="bold">Ctrl+C</emphasis>, and pasted with <emphasis
+          role="bold">Ctrl+V</emphasis>. When pasting, the relative positions of the input cursor at
+          the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-        <para>So far we have only used the mouse to create a pattern, but you can also record your beats by clicking the Record button 
+        <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
          <inlinemediaobject>
           <imageobject>
            <imagedata fileref="img/Rec_button.png" format="PNG"/>
