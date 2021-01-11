@@ -534,6 +534,10 @@
           format (see <xref linkend="sect.song_editor.export_song"/>)</para>
         </listitem>
         <listitem>
+          <para><emphasis>Export Lilypond file</emphasis> - This is a first version of the LilyPond export.
+          It has the following limitations: Only GM-kit is supported, No triplets support</para>
+        </listitem>
+        <listitem>
           <para><emphasis>Quit</emphasis> - Quit Hydrogen</para>
         </listitem>
       </itemizedlist>
@@ -548,48 +552,70 @@
           <para><emphasis>Redo</emphasis> - Lets you redo the last undone action</para>
         </listitem>
         <listitem>
-          <para><emphasis>Command History</emphasis> - Gives you an overview of your previous
+          <para><emphasis>Undo History</emphasis> - Gives you an overview of your previous
           actions</para>
         </listitem>
         </itemizedlist>
 
       <para><emphasis role="bold">Instruments</emphasis>: this menu offers
-      instruments and drumkit (sound libraries) functions.</para>
+      instruments functions.</para>
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Add instrument</emphasis> - Add a new instrument to
-          your current drumkit</para>
+          <para><emphasis>Add instrument</emphasis> - Add a new instrument to your current drumkit</para>
         </listitem>
         <listitem>
-          <para><emphasis>Clear all</emphasis> - Delete all instruments from the
-          current drumkit</para>
+          <para><emphasis>Clear all</emphasis> - Delete all instruments from the current drumkit</para>
+        </listitem>
+        <listitem>       
+            <para><emphasis>Add component</emphasis>: - A component is a part of Hydrogen's instrument model.
+                Each instrument consists of one or more components, and each component consists of one or more layers.
+            </para>
+
+            <para>To make an example: A snare could have two components.
+                One component includes sounds from the top side of the snare drum, and the other component includes
+                the sounds from the bottom side of the snare drum (where the snare wires are fitted).
+                Each component can consist of several layers (snare drum hits with different velocities).
+                Now you can adjust the volume of the two components to build your ideal drum sound.
+                If you want more of the attack, you can put in more of the "top head" component.
+                If you want more of the snare wires, you put in more of the bottom component.
+            </para>
+        </listitem>
+      </itemizedlist>
+        
+      <para><emphasis role="bold">Drumkits</emphasis>: this menu offers drumkit (sound libraries) functions.</para>
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Save</emphasis> - Saves all instruments settings (and their sound samples) in
+            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>
+          </para>
         </listitem>
         <listitem>
-          <para><emphasis>Save library</emphasis> - Saves all instruments
-          settings (and their sound samples) in
-          <emphasis>$HOME/.hydrogen/data/library_name</emphasis></para>
+          <para><emphasis>Export</emphasis> - Compress all instruments samples and settings in a drumkit in
+            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>
+          </para>
         </listitem>
         <listitem>
-          <para><emphasis>Export library</emphasis> - Compress all instruments
-          samples and settings in a drumkit in
-          <emphasis>$HOME/.hydrogen/data/library_name</emphasis></para>
+          <para><emphasis>Import</emphasis> - Imports another drumkit from the local filesystem.
+              To load another drumkit in your
+              current working session of Hydrogen, read <xref
+              linkend="sect.sound_library"/>.
+          </para>
         </listitem>
         <listitem>
-          <para><emphasis>Import library</emphasis> - Imports another drumkit
-          from the local filesystem or download it from a remote location
-          through an XML feed. The XML file that should be provided is <emphasis
-          role="bold">NOT</emphasis> RSS compliant (see <ulink
-          url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
-          website</ulink> for an example). To load another drumkit in your
-          current working session of Hydrogen, read <xref
-          linkend="sect.sound_library"/>.</para>
+          <para><emphasis>Online import</emphasis> - Imports another drumkit from a remote location
+              through an XML feed. The XML file that should be provided is <emphasis
+              role="bold">NOT</emphasis> RSS compliant (see <ulink
+              url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
+              website</ulink> for an example). To load another drumkit in your
+              current working session of Hydrogen, read <xref linkend="sect.sound_library"/>.
+          </para>
         </listitem>
       </itemizedlist>
 
-      <para><emphasis role="bold">Tools</emphasis>: opens the mixer, the director, the
-      playlist editor, the instrument rack and the general preferences
-      window.</para>
+      <para><emphasis role="bold">View</emphasis>:Opens the director, the playlist editor, the instrument rack
+         and the general preferences window.
+      </para>
 
       <itemizedlist>
         <listitem>
@@ -607,11 +633,42 @@
           panel.</para>
         </listitem>
         <listitem>
+          <para><emphasis>Automation path</emphasis> - Open the automation path
+          panel.</para>
+        </listitem>
+        <listitem>
+          <para><emphasis>Timeline</emphasis> - Open the time line
+          panel (auto hiding the playback track)</para>
+        </listitem>
+        <listitem>
+          <para><emphasis>Playback track</emphasis> - Open the time line
+          panel (auto hiding the timeline)</para>
+        </listitem>
+        <listitem>
+          <para><emphasis>Full screen</emphasis> - Maximises the window size to the whole screen area</para>
+        </listitem>
+      </itemizedlist>
+      <para><emphasis role="bold">Options</emphasis>: selects the input mode and opens the general preferences
+      window.</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Input mode</emphasis> -
+               when set to <emphasis>Drumset</emphasis> the keys on your midi keyboard will map to the instruments
+               in your drumkit. If you set it to <emphasis>Instrument</emphasis> the keys of your midi 
+               keyboard will trigger the instrument that is currently selected.
+               The pitch of the instrument will follow the key you press on your keyboard.
+               This feature is mainly used for non-drum instruments.
+               An example: if you use a sample of a piano for one of your instruments, you will be able to 'play'
+                that piano instrument using your keyboard just like you are playing a piano synth.</para>
+       </listitem>
+  
+        <listitem>
           <para><emphasis>Preferences</emphasis> - Open the main preferences
           window. Read <xref linkend="sect.preferences"/> on how to configure
           Hydrogen.</para>
         </listitem>
-      </itemizedlist>
+       </itemizedlist>
 
       <para><emphasis role="bold">Debug</emphasis>: tools mainly for debugging
       and monitoring Hydrogen (only available when compiled with debug
@@ -643,6 +700,13 @@
         <listitem>
           <para><emphasis>About - </emphasis>The usual window with license
           information, acknowledgments, etc.</para>
+        </listitem>
+        <listitem>
+          <para><emphasis>Report bug - </emphasis> Opens the Hydrogen issue page at github.com in Internet browser
+          You can open a new issue to communicate a bug here (first search if there exists already an issue about it)</para>
+        </listitem>
+        <listitem>
+          <para><emphasis>Donate - </emphasis> Make a donation to developers/mantainers</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -1356,6 +1420,9 @@
         
          <para>From left to right : </para>
          <itemizedlist mark="opencircle">
+         
+          <!-- TODO DEPRECATED widget. MOVE TO OTHER CHAPTER?? <listitem><para><emphasis role="bold">Note Length / Note off</emphasis> : these are 2 different
+            ways to define the duration of a note. See <xref linkend="sect.pattern_editor.sequence_area"/> for usage.</para></listitem>  -->
 
            <listitem>
                 <para><emphasis role="bold">SIZE</emphasis>:
@@ -1418,19 +1485,6 @@
            When enabled the beats inserted 
             will automatically respect the grid resolution currently applied.</para></listitem>
 
-           <!--
-           MOVE THE REMARK TO OTHER PLACE SINCE THESE WIDGETS ARE DEPRECATED
-           <listitem><para><emphasis role="bold">Drumset / Instrument</emphasis> : 
-           when set to Drumset the keys on your midi keyboard will map to the instruments in your drumkit as
-           described in the instrument mapping table below.  If you set it to Instrument the keys of your midi 
-           keyboard will trigger the instrument that is currently selected.  The pitch of the instrument will follow 
-           the key you press on your keyboard.  This feature is mainly used for non-drum instruments.  An example : 
-           if you use a sample of a piano for one of your instruments, you will be able to 'play' that piano instrument 
-           using your keyboard just like you are playing a piano synth.</para></listitem>
-
-           <listitem><para><emphasis role="bold">Note Length / Note off</emphasis> : these are 2 different
-            ways to define the duration of a note. See <xref linkend="sect.pattern_editor.sequence_area"/> for usage.</para></listitem>
--->
            <listitem><para><emphasis role="bold">INPUT</emphasis> : switch Pattern Editor 
            between Drum and Piano mode. (see below)</para></listitem>
 
