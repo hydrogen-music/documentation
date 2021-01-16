@@ -445,6 +445,70 @@
       </itemizedlist>
     </section>
 
+<!--   KEYBOARD AND MOUSE -->
+    <section id="sect.keyboard_and_mouse">
+      <title>Keyboard and Mouse</title>
+      <para>
+        The Hydrogen user interface is designed so that it can be
+        used entirely with the mouse, with the exception of text entry.
+      </para>
+      <para>
+        The keyboard can also be used for navigating and editing in
+        the pattern and song editors, using a combination of 
+        <itemizedlist>
+          <listitem>
+            <para>
+              <emphasis role="bold">Arrow keys</emphasis>: move the
+              keyboard input cursor's position, or adjust values under
+              the cursor.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Shift + Arrow keys</emphasis>:
+              can be used to make selections of notes or pattern
+              groups as if the mouse had been dragged over them.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Enter / Return</emphasis>: generally
+              performs the same action as a mouse click, but can also
+              start or end a move (or copy) of items in the same way
+              a mouse drag would.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Tab / Shift + Tab</emphasis>: move
+              between different areas of the main interface.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Delete</emphasis>:
+              delete notes or patterns.
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              <emphasis role="bold">Escape</emphasis>:
+              cancels an ongoing selection, move or copy.
+            </para>
+          </listitem>
+        </itemizedlist>
+      </para>
+      <para>
+        Note that the keyboard input cursor is hidden
+        from view until one of the above keys is pressed. This keeps
+        the display clear and uncluttered when using the mouse.
+      </para>
+      <para>
+        Most other keys on the keyboard can be used to play
+        samples and enter notes in the same way a MIDI keyboard can be.
+      </para>
+    </section>
+
 <!--   UI OVERVIEW  -->
     <section id="sect.UIoverview">
       <title>The main User Interface : an overview</title>
@@ -1614,26 +1678,28 @@
         </para>
 
         <para>
-          Notes can be selected by dragging over them with the mouse
-          (or Shift+arrow keys), and can be deleted with 'Delete', or moved
-          by dragging (or Return followed by arrow key movements) the
-          notes to a new location. This allows notes to be moved
-          between different instruments, or to adjust their timing.
+          Notes can be selected by dragging over them with the mouse (or <emphasis
+          role="bold">Shift+arrow keys</emphasis>), and can be deleted with 'Delete', or moved by
+          dragging (or Return followed by arrow key movements) the notes to a new location. This
+          allows notes to be moved between different instruments, or to adjust their
+          timing. Movement in the horizontal direction is constrained by the currently selected grid
+          resolution, however this can be overridden by holding down <emphasis
+          role="bold">Alt</emphasis> while moving notes.
         </para>
 
         <para>
-          Moving a selection of notes with Ctrl held down will copy
-          them to the new location rather than moving.
+          Moving a selection of notes with <emphasis role="bold">Ctrl</emphasis> held down will copy
+          them to the new location rather than moving, as in the Song Editor.
         </para>
 
         <para>
-          Selected notes can also be copied to the clipboard with
-          Ctrl+C, and pasted with Ctrl+V. When pasting, the relative
-          positions of the input cursor at the time of the Copy and
-          Paste operation will set the new position of pasted notes.
+          Selected notes can also be copied to the clipboard with <emphasis
+          role="bold">Ctrl+C</emphasis>, and pasted with <emphasis
+          role="bold">Ctrl+V</emphasis>. When pasting, the relative positions of the input cursor at
+          the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-        <para>So far we have only used the mouse to create a pattern, but you can also record your beats by clicking the Record button 
+        <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
          <inlinemediaobject>
           <imageobject>
            <imagedata fileref="img/Rec_button.png" format="PNG"/>
@@ -1652,8 +1718,8 @@
       <para>Clicking on an instrument or adding/removing a note next to it 
       will select this instrument.  Once an instrument is selected the note properties 
       for this instrument will be shown in the form of vertical lines in the bottom window.  
-      The lines represent the value for the selected property of each note of the selected instrument.  
-      You can select another note-property from the note property drop-down list (located bottom-left).  
+      The lines represent the value for the selected property of each note of the selected instrument.
+      You can select a different note-property from the note property drop-down list (located bottom-left).
       There are 4 note properties available : 
       
       <itemizedlist mark="opencircle">
@@ -1668,7 +1734,7 @@
         
         <listitem>
           <para><emphasis role="bold">Pan</emphasis> : with this parameter you can define
-           the stereo image of the note (how loud it will be in the left/right output)</para>
+           the stereo image position of the note (how loud it will be in the left/right output)</para>
         </listitem>
         
         <listitem>
@@ -1692,13 +1758,60 @@
               </imageobject>
             </mediaobject>
           </informalfigure>
-          <para>The striped black and white area represents a piano keyboard and in the gray 
-          area you can choose the octave.  By placing a dot on the octave scale and a dot on the 
-          'keyboard' you can choose any note.</para>
+          <para>
+            The striped black and white area represents a piano keyboard and in the gray
+            area you can choose the octave.  By moving the dots on the
+            octave scale and the 'keyboard', you can choose any note
+            value.
+          </para>
+          <para>
+            (Note that the pattern editor in piano roll mode (see <xref
+            linkend="sect.pattern_editor.piano_mode" />) can also be used to
+            change the note value of existing notes)
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <emphasis role="bold">Probability</emphasis> : changing the
+            Probability property of a note provides a way for Hydrogen
+            to automatically create some variation in patterns. By
+            setting the probability to less than 1.0, a note may be
+            randomly skipped: a note with probability 1.0 will
+            <emphasis>always</emphasis> be played, a note with
+            probability of 0.0 will <emphasis>never</emphasis> be
+            played.
+          </para>
         </listitem>
       </itemizedlist>
       </para>
 
+      <para>
+        Clicking or dragging the value lines in the note properties editor will
+        set the property value. But often you'll want to set the properties of
+        several notes at once, so there are a few ways to do this.
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Drawing with the mouse:</emphasis></para>
+            <para>
+              Pressing the mouse button over the first note's property, you can
+              hold down the mouse button and drag over multiple notes. This is
+              great for quickly creating a crescendo from a filled set of notes.
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">
+              Selecting multiple notes:</emphasis>
+            </para>
+            <para>
+              The mouse or keyboard can be used to select multiple notes, which
+              can then be modified all together by dragging them together. This
+              can be useful for creating really consistent quiet grace notes.
+            </para>
+          </listitem>
+
+        </itemizedlist>
+      </para>
 
       </section>
 
