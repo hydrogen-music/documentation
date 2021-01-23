@@ -161,7 +161,7 @@
       
     </section>
 
-    <section id="sect.preferences">
+    <section id="sect.preferences" xreflabel="Preferences">
       <title>Preferences</title>
 
       <para>First of all you should make sure that the audio engine is
@@ -903,10 +903,10 @@
 
     <!--  TAP TEMPO -->
 
-      <section id="sect.tap_tempo">
+      <section id="sect.tap_tempo" xreflabel="Tap Tempo and BeatCounter">
         <title>Tap Tempo and BeatCounter</title>
 
-        <para>It is possible to change the tempo at any time using the tap-tempo and
+        <para>It is possible to change the tempo at any time using the Tap Tempo and
         BeatCounter features of Hydrogen.  You can do this while the song is playing or
         while the song is stopped.  To change the tempo, hit the
         <keycap>,</keycap> (comma) key in the tempo you want.
@@ -1179,36 +1179,36 @@
             <imageobject>
               <imagedata fileref="img/tag_bar.png" format="PNG" />
             </imageobject>
-           </mediaobject>
-          </informalfigure>
+          </mediaobject>
+         </informalfigure>
        </para>
+     </section>
 
+     <section id="sect.song_editor.director" xreflabel="Director">
+       <title>Director</title>
        <para>
-       Now all we need is a way to see the tags we have entered.  This can be done 
-       using the Director window.  Open the Director by pressing Alt-D, or Tools- Director : 
+         Now all we need is a way to see the tags we have entered.  This can be done
+         using the Director window.  Open the Director by pressing Alt-D, or Tools- Director :
 
-           <informalfigure id="fig.director">
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/screenshot-director.png" format="PNG" />
-              </imageobject>
-            </mediaobject>
-            </informalfigure>
-       
-       The Director is your best friend when you need a quick overview of what Hydrogen
-       is currently doing.  This comes in very handy when you are recording a song, or
+         <informalfigure id="fig.director">
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="img/screenshot-director.png" format="PNG" />
+             </imageobject>
+           </mediaobject>
+         </informalfigure>
+         
+         The Director is your best friend when you need a quick overview of what Hydrogen
+         is currently doing.  This comes in very handy when you are recording a song, or
        if you are using Hydrogen live on stage.</para>
        
        <para>
-       The Director shows you the song name, a visual metronome and of course the 
-       song Tags.  Just below the metronome you can see the latest tag, and below that 
-       the next upcoming tag.  This way you have a nice overview of what is going on, 
-       and what is about to happen in the song
-       
-     </para>
-
+         The Director shows you the song name, a visual metronome and of course the
+         song Tags.  Just below the metronome you can see the latest tag, and below that
+         the next upcoming tag.  This way you have a nice overview of what is going on,
+         and what is about to happen in the song.
+       </para>
      </section>
-
 
      <section id="sect.song_editor.playbackTrack">
 		 <title>Using a playback track</title>
@@ -1363,7 +1363,7 @@
      
      </section>
 
-     <section id="sect.song_editor.export_song">
+     <section id="sect.song_editor.export_song" xreflabel="Export Song">
      <title>Exporting your song</title>
 
       <para>Once your song is finished you can export it to an audio file.
@@ -1836,7 +1836,7 @@
 
 
 <!-- MIXER -->
-    <section id="sect.mixer">
+    <section id="sect.mixer" xreflabel="Mixer">
       <title>Mixer</title>
 
       <para>The Mixer window can be opened by pressing Alt+M, by clicking 
@@ -2071,7 +2071,7 @@
     
     </section>
 
-    <section id="sect.sound_library">
+    <section id="sect.sound_library" xreflabel="Instrument rack">
       <title>Sound Library (Drumkit/Pattern/Song Manager)</title>
 
       <para>First of all a little history on the Sound library and Drumkits. Hydrogen began as a 
@@ -3471,122 +3471,146 @@
   
   <chapter id="chap.shortcuts">
     <title>Shortcut lists</title>
-    
-      <itemizedlist mark="opencircle">
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + N]</emphasis> = New Project
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + O]</emphasis> = Open File
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + D]</emphasis> = Open Demo
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + S]</emphasis> = Save File
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + SHIFT + S]</emphasis> = Save File as
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + P]</emphasis> = Export Pattern as
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + M]</emphasis> = Export MIDI file
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + E]</emphasis> = Export Song
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + Q]</emphasis> = Quit Hydrogen
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[ALT + D]</emphasis> = Show Director window
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[ALT + M]</emphasis> = Show Mixer window
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[ALT + I]</emphasis> = Show Instrument rack
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[ALT + P]</emphasis> = Show Preferences window
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[CTRL + ?]</emphasis> = Show manual
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[Backspace]</emphasis> = Restart
-            song or pattern from the beginning
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[spacebar]</emphasis> = Play / Pause
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[,]</emphasis> (comma key) = Beatcounter
-          </para>
-        </listitem>
-       <listitem>
-          <para>
-            <emphasis role="bold">[\]</emphasis> (backslash) = Tap tempo
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[+] and [-]</emphasis> = Tempo up / down
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[F9]</emphasis> = Jump back to previous bar in the song
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[F10]</emphasis> = Jump to the next bar in the song
-          </para>
-        </listitem>
-        <listitem>
-          <para>
-            <emphasis role="bold">[F12]</emphasis> = Panic button  (stops the song and mutes all
-            playing sounds)
-          </para>
-        </listitem>
-      </itemizedlist>    
-    
+    <table frame='all' id='sect.shortcut.table'>
+      <title>Shortcut table</title>
+      <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+        <colspec colname='cShortcut'/>
+        <colspec colname='cDescription'/>
+        <thead>
+          <row>
+            <entry>shortcut</entry>
+            <entry>description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>[CTRL] + [N]</entry>
+            <entry>New Project</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [O]</entry>
+            <entry>Open File</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [D]</entry>
+            <entry>Open Demo</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [S]</entry>
+            <entry>Save Song</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [SHIFT] + [S]</entry>
+            <entry>Save Song as</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [P]</entry>
+            <entry>Export Pattern as</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [M]</entry>
+            <entry>Export MIDI file</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [E]</entry>
+            <entry>Export Song (see <xref linkend="sect.song_editor.export_song"/>)</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [L]</entry>
+            <entry>Export LilyPond file</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [Q]</entry>
+            <entry>Quit Hydrogen</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [Z]</entry>
+            <entry>Undo an action</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [SHIFT] + [Z]</entry>
+            <entry>Redo an action</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [D]</entry>
+            <entry>Show Director (see <xref linkend="sect.song_editor.director"/>)</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [M]</entry>
+            <entry>Show Mixer (see <xref linkend="sect.mixer"/>)</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [I]</entry>
+            <entry>Show Instrument rack (see <xref linkend="sect.sound_library"/>)</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [A]</entry>
+            <entry>Show Automation path</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [F]</entry>
+            <entry>Toggle fullscreen mode</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [ALT] + [I]</entry>
+            <entry>Set Input mode to Instrument</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [ALT] + [D]</entry>
+            <entry>Set Input mode to Drumkit</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [P]</entry>
+            <entry>Show Preferences (see <xref linkend="sect.preferences"/>)</entry>
+          </row>
+          <row>
+            <entry>[ALT] + [?]</entry>
+            <entry>Show Manual</entry>
+          </row>
+          <row>
+            <entry>[Backspace]</entry>
+            <entry>Restart song or pattern from the beginning</entry>
+          </row>
+          <row>
+            <entry>[Space]</entry>
+            <entry>Play / Pause</entry>
+          </row>
+          <row>
+            <entry>[CTRL] + [Space]</entry>
+            <entry>Play / Pause at the current cursor position</entry>
+          </row>
+          <row>
+            <entry>[,]</entry>
+            <entry>Use Beatcounter (see <xref linkend="sect.tap_tempo"/>)</entry>
+          </row>
+          <row>
+            <entry>[\]</entry>
+            <entry>Use Tap Tempo (see <xref linkend="sect.tap_tempo"/>)</entry>
+          </row>
+          <row>
+            <entry>[+]</entry>
+            <entry>Increase tempo by 0.1 BPM</entry>
+          </row>
+          <row>
+            <entry>[-]</entry>
+            <entry>Decrease tempo by 0.1 BPM</entry>
+          </row>
+          <row>
+            <entry>[F9]</entry>
+            <entry>Jump to previous bar in the song</entry>
+          </row>
+          <row>
+            <entry>[F10]</entry>
+            <entry>Jump to next bar in the song</entry>
+          </row>
+          <row>
+            <entry>[F12]</entry>
+            <entry>Panic button (stops the song and mutes all
+            playing sounds) </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>    
   </chapter>
   
   <glossary id="glossary">
