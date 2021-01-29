@@ -3596,6 +3596,14 @@
             <entry>Decrease tempo by 0.1 BPM</entry>
           </row>
           <row>
+            <entry>[F5]</entry>
+            <entry>Jump to previous song in playlist</entry>
+          </row>
+          <row>
+            <entry>[F6]</entry>
+            <entry>Jump to next song in playlist</entry>
+          </row>
+          <row>
             <entry>[F9]</entry>
             <entry>Jump to previous bar in the song</entry>
           </row>
