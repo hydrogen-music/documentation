@@ -2141,12 +2141,12 @@
         are usually stored in <filename
         role="directory">$HOME/.hydrogen/data/drumkits</filename>.  When you are
         creating a new drumkit, you can save it here by selecting
-        <menuchoice><guimenu>Instruments</guimenu><guimenuitem>Save
-        library</guimenuitem></menuchoice>.</para>
+        <menuchoice><guimenu>Drumkits</guimenu><guimenuitem>Save
+        </guimenuitem></menuchoice>.</para>
 
         <para>
         You can import existing drumkits from other users via <menuchoice>
-        <guimenu>Instruments</guimenu><guimenuitem>Import library</guimenuitem>
+        <guimenu>Drumkits</guimenu><guimenuitem>Import</guimenuitem>
         </menuchoice>.  The Import window will pop up with the Internet tab selected.
         By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
         and after pressing the 'Update list' button you will get a complete list of all
@@ -2366,8 +2366,8 @@
           <para>Once you have your drum kit working the way you want, select
 
           <menuchoice>
-            <guimenuitem>Instruments</guimenuitem>
-            <guimenuitem>"Save library"</guimenuitem>
+            <guimenu>Drumkits</guimenuitem>
+            <guimenuitem>"Save"</guimenuitem>
           </menuchoice>
 
           .  You will be prompted for the name of the kit to save.  If you wish to
@@ -2386,8 +2386,8 @@
           loaded into your Sound Library.  Then, select
 
           <menuchoice>
-            <guimenuitem>Instruments</guimenuitem>
-            <guimenuitem>"Export library"</guimenuitem>
+            <guimenu>Drumkits</guimenuitem>
+            <guimenuitem>"Export"</guimenuitem>
           </menuchoice>
 
           from the menu.  Select the drum kit that you wish to export, and give it
