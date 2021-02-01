@@ -2099,7 +2099,7 @@
          </informalfigure>
          <para>
 
-         click it to open the Mixer Settings window:
+         Click it to open the Mixer Settings window:
 
          <informalfigure id="mixerSettingsDialog">
          <mediaobject>
@@ -2108,35 +2108,37 @@
            </imageobject>
          </mediaobject>
          </informalfigure>
-          here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
+          Here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
           </para>
          <para>
              The Pan Law is the relationship between the pan knob and the apparent stereo position of sound.
-             Basically the right channel gain increases from 0 to the max level turning the pan knob
+             Basically the Right channel <emphasis>gain</emphasis> increases from 0 to the max level turning the pan knob
               from left to right.
              Left gain is symmetric.
          </para>
          <para>
-            Hydrogen offers one the most customizable and accurate Pan Law selection. </para>
+            Hydrogen features one the most customizable and accurate Pan Law set. </para>
             
           <para>
              You will find four categories: <emphasis>linear</emphasis>, <emphasis>polar</emphasis>,
              <emphasis>ratio</emphasis>, <emphasis>quadratic</emphasis>.
              Every category gives a different "scale" or "sensibility" to the pan knob:
-              the same knob position will make the sound more lateral or central depending on the category,
+              the same knob position will make the sound appear more lateral or central depending on the category,
               from the most lateral (<emphasis>linear</emphasis>) to the most central (<emphasis>quadratic</emphasis>).
          </para>
          
          <para>
-           For each category you will find four options:     
+           For each category you will find four options, that define a <emphasis>constraint</emphasis> between the
+            gains of the two channels:     
            <itemizedlist>
                 <listitem>
                   <para><emphasis role="bold">Balance Law (0dB)</emphasis>: 
                   when you move the pan knob from center to right, the right gain stays constant at max level
                    while the left gain decreases from max level to 0. </para>
-                    <para>It is ideal for balancing a DUAL-channel track. It has ZERO center compensation: the signal will
-                    sound usually <emphasis>louder</emphasis> when the pan knob is at <emphasis>center</emphasis>
-                     (you can adjust the volume manually with the mixer fader of course).
+                    <para>It is ideal for balancing a DUAL-channel track. It has ZERO center compensation: the sound 
+                    will be <emphasis>louder</emphasis> when the pan knob is at <emphasis>center</emphasis>,
+                    unless channels are out of phase, so you may have to re-adjust the volume manually with the
+                     mixer fader.
                   </para>
                 </listitem>
                 
@@ -2146,8 +2148,8 @@
                     of the pan knob. </para>
                     <para>Compared to the Balance Law, each channel gain is divided by the square root of 2
                     when pan knob is at center (-3.0103 dB center compensation).
-                    In a common room, this pan law may give the general perception of uniform volume for any pan knob 
-                    position (panning a MONO track).
+                    In a common room, this pan law <emphasis>may</emphasis> give the general perception of uniform
+                     volume for any pan knob position (panning a MONO track).
                   </para>
                 </listitem>
                 
@@ -2155,30 +2157,32 @@
                   <para> <emphasis role="bold">Constant Sum (-6dB)</emphasis>: the sum of left and right gains is constant
                    for any position of the pan knob. </para>
                      <para>Compared to the Balance Law, each channel gain is halved (-6.0206 dB) when pan knob is at center.
-                     This makes perfectly balanced mono exports. If you are in an ideal anechoic room
-                     (where there are no acoustic reflections) and you seat perfectly in the middle between the speakers,
-                     with constant sum the volume will be really constant for any pan position (panning a MONO track).
+                     This makes perfectly balanced mono exports.
+                     If you are in an ideal anechoic room (where there are no acoustic reflections)
+                     and you seat perfectly at the same distance from the speakers,
+                     with Constant Sum the volume will be really constant for any pan position, because of the linear
+                     <emphasis>super-position</emphasis> of sound waves (panning a MONO track).
                   </para>
                 </listitem>
 
                <listitem>
                   <para><emphasis role="bold">Constant k-Norm (Custom dB center compensation)</emphasis>:
                    you can experiment adjusting the center compensation to your taste! </para>
-                    <para>Note that some hi-end studio mixers - used in good sounding control rooms -
+                    <para>Note that some hi-end studio mixers - used in well tuned rooms -
                     have center compensation between -3dB and -6dB.
                   </para>
                 </listitem>
              </itemizedlist>
              </para>
 
-          <para>The four options should not change the <emphasis>stereo angle</emphasis>,
+          <para>The four constraint options should not change the perception of the <emphasis>stereo angle</emphasis>,
           but the <emphasis>volume</emphasis> only (depending on the pan knob).
          </para>
          <para>
+            The Pan Law is something you should choose <emphasis>before</emphasis> starting the mix and keep untouched.
             Hydrogen sets the <emphasis>ratio Balance Law</emphasis> by default because that was the old law used until
              version 1.0.
-            The Pan Law is something you should choose <emphasis>before</emphasis> starting the mix and keep untouched.
-            It is saved in the songfile but not in preferences, so it is not remembered when you create a new song.
+            The setting is saved in the songfile but not in preferences, so it is NOT remembered when you create a new song.
          </para>
        <note>
        <para>Unlike in advanced mixers, Hydrogen panning makes no distinction if a track is mono or dual-channel.
