@@ -2057,7 +2057,7 @@
         </listitem>
         
        <listitem>
-          <para>Swing : this knob will add a certain amount of swing to the song.</para>
+          <para>Swing : this knob will add a certain amount of 16th-note swing to the song.</para>
         </listitem>        
         
      </itemizedlist>
