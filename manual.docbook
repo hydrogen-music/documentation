@@ -1763,7 +1763,7 @@
         <listitem>
           <para>
           <emphasis role="bold">Lead/Lag</emphasis> : Lead and Lag allows a slight note
-          lead or lag in respect of the actual beat. The range is ca. 5 ticks which
+          lead or lag in respect of the actual beat. The range is ca. 5 ticks (ca. 1/10 of quarter notes) which
           equals around ca. 10 ms at a tempo of 120bpm.  Changing the lead/lag can make a huge
           difference to the way your pattern sounds and feels.  It's a groove thing ;-) 
           </para>
