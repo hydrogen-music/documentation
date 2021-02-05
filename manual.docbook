@@ -1747,7 +1747,7 @@
             </mediaobject>
           </informalfigure>
            
-	       the <emphasis>note Pan</emphasis> value moves the 
+	       This multi-pan model resembles a "matryoshka" in some way: the <emphasis>note Pan</emphasis> value moves the 
 	       <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at
 	        <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value.
 	        Some examples: 
@@ -2055,7 +2055,12 @@
 
         <listitem>
           <para>Timing : adds a certain randomness to the note timing (lead/lag).  
-          The higher you turn this knob, the more the timing will be randomized.</para>
+            The higher you turn this knob, the more the timing will be randomized.
+          </para>
+          <note><para>Notes are displaced in time (using Gaussian perturbation)
+            but the pattern durations or bpm do not change.</para>
+          </note>
+          
         </listitem>
         
        <listitem>
