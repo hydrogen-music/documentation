@@ -1733,14 +1733,37 @@
         </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Pan</emphasis> : with this parameter you can define
-           the stereo image position of the note (how loud it will be in the left/right output)</para>
+          <para><emphasis role="bold">Pan</emphasis> : with this parameter you can move
+           the stereo image position of the note (how loud it will be in the left/right output).</para>
+           <para>Note that the effect of <emphasis>note Pan</emphasis> depends on the <emphasis>instrument Pan</emphasis>
+            knob, which is set in the mixer.
+           Look to next figure to see how the <emphasis role="bold"><emphasis>Resultant Pan</emphasis></emphasis>
+           is determined (from version 1.1):
+           <informalfigure id="matryoshkaPanning">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/matrioskaPanH2.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
+           
+	       This multi-pan model resembles a "matryoshka" in some way: the <emphasis>note Pan</emphasis> value moves the 
+	       <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at
+	        <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value.
+	        Some examples: 
+		    if <emphasis>instrument Pan</emphasis> is central, <emphasis>note Pan</emphasis> moves the signal in the
+		     whole stereo range (really from Left to Right);
+		    if <emphasis>instrument Pan</emphasis> is sided, <emphasis>note Pan</emphasis> moves the signal in a
+		     progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>;
+		    if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect.
+           </para>
+           
         </listitem>
         
         <listitem>
           <para>
           <emphasis role="bold">Lead/Lag</emphasis> : Lead and Lag allows a slight note
-          lead or lag in respect of the actual beat. The range is ca. 5 ticks which
+          lead or lag in respect of the actual beat. The range is ca. 5 ticks (ca. 1/10 of quarter notes) which
           equals around ca. 10 ms at a tempo of 120bpm.  Changing the lead/lag can make a huge
           difference to the way your pattern sounds and feels.  It's a groove thing ;-) 
           </para>
@@ -2032,11 +2055,18 @@
 
         <listitem>
           <para>Timing : adds a certain randomness to the note timing (lead/lag).  
-          The higher you turn this knob, the more the timing will be randomized.</para>
+            The higher you turn this knob, the more the timing will be randomized.
+          </para>
+          <note><para>Notes are displaced in time (using Gaussian perturbation)
+            but the pattern durations or bpm do not change.</para>
+          </note>
+          
         </listitem>
         
        <listitem>
           <para>Swing : this knob will add a certain amount of swing to the song.</para>
+          <note> <para> Swing (a slight time delay) is applied to upbeat 16th-notes,
+          and not to 8th-notes as it happens in traditional Jazz.</para> </note>
         </listitem>        
         
      </itemizedlist>
@@ -2065,7 +2095,113 @@
        <para>The VU meter fall off speed can be configured in the preferences window (see <xref linkend="sect.preferences.appearance_tab"/>)</para>
        </note>
        
-       </para>
+      </para>
+  
+      <para>  In the upper part of Master section there is a small "cog" icon button:</para>
+
+        <informalfigure id="mixerSettingsButton">
+         <mediaobject>
+           <imageobject>
+             <imagedata fileref="img/mixerSettingsButton.png" format="PNG" />
+           </imageobject>
+         </mediaobject>
+         </informalfigure>
+         <para>
+
+         Click it to open the Mixer Settings window:
+
+         <informalfigure id="mixerSettingsDialog">
+         <mediaobject>
+           <imageobject>
+             <imagedata fileref="img/mixerSettingsDialog.png" format="PNG" />
+           </imageobject>
+         </mediaobject>
+         </informalfigure>
+          Here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
+          </para>
+         <para>
+             The Pan Law is the relationship between the pan knob and the separate gains of Left and Right outputs.
+             The aim is to control the horizontal angle the sound seems to arrive from.
+         </para>
+         <para>
+            Hydrogen features one the most customizable and accurate Pan Law set. </para>
+            
+          <para>
+             You will find four categories: <emphasis>linear</emphasis>, <emphasis>polar</emphasis>,
+             <emphasis>ratio</emphasis>, <emphasis>quadratic</emphasis>.
+             Every category gives a different "scale" or "sensibility" to the pan knob:
+              the same knob position will make the sound appear more lateral or central depending on the category,
+              from the most lateral (<emphasis>linear</emphasis>) to the most central (<emphasis>quadratic</emphasis>).
+         </para>
+         
+         <para>
+           Then for each category you will find four options, that define a <emphasis>constraint</emphasis> between the
+            gains of the two channels:     
+           <itemizedlist>
+                <listitem>
+                  <para><emphasis role="bold">Balance Law (0dB)</emphasis>: 
+                  when you turn the pan knob from center to right, the right gain stays constant at maximum level
+                   while the left gain decreases from the maximum level to 0 (and symmetrically turning from center to left). </para>
+                    <para>It is ideal for balancing a DUAL-channel track. It has ZERO center compensation: the sound 
+                    will be <emphasis>louder</emphasis> when the pan knob is at <emphasis>center</emphasis> -
+                    unless channels are out of phase - so you may have to readjust the volume manually with the
+                     mixer fader.
+                  </para>
+                </listitem>
+                
+                <listitem>
+                  <para> <emphasis role="bold">Constant Power (-3dB)</emphasis>: the total <emphasis>power</emphasis>
+                   (which is proportional to the <emphasis>square</emphasis> of the gain) is constant for any position
+                    of the pan knob. </para>
+                    <para>Compared to the Balance Law, each channel gain is divided by the square root of 2
+                    when the pan knob is at center (-3.0103 dB center compensation).
+                    In a common room, this constraint <emphasis>may</emphasis> give the general perception of uniform
+                     volume for any pan knob position (panning a MONO track).
+                  </para>
+                </listitem>
+                
+                <listitem>
+                  <para> <emphasis role="bold">Constant Sum (-6dB)</emphasis>: the sum of left and right gains is
+                   constant for any position of the pan knob. </para>
+                     <para>This constraint preserves the mix volumes in mono export.
+                     Compared to the Balance Law, each channel gain is halved (-6.0206 dB) when the pan knob
+                      is at center.
+                     If you are in an ideal anechoic room (where there are no acoustic reflections)
+                     and you seat perfectly at the same distance from the speakers,
+                     with this constraint the volume will be really constant for any pan position, because of the linear
+                     <emphasis>super-position</emphasis> of sound waves (panning a MONO track).
+                  </para>
+                </listitem>
+
+               <listitem>
+                  <para><emphasis role="bold">Constant k-Norm (Custom dB center compensation)</emphasis>:
+                   you can experiment adjusting the center compensation to your taste! </para>
+                    <para>Note that some hi-end studio mixers - to be used in well tuned rooms -
+                    have center compensation between -3dB and -6dB.
+                  </para>
+                </listitem>
+             </itemizedlist>
+             </para>
+
+          <para>The four constraints should not change the perception of the <emphasis>stereo angle</emphasis>,
+          but the <emphasis>volume</emphasis> only (depending on the pan knob).
+         </para>
+         <para>
+          The Pan Law is something you should choose <emphasis>before</emphasis> starting the mix and keep untouched.
+           Hydrogen sets the <emphasis>ratio Balance Law</emphasis> by default because it was the only available law
+            until version 1.0 (so old songs and drumkits will sound the same).
+          The setting is saved in the songfile but not in preferences, 
+          so it is NOT remembered when you create a new song.
+         </para>
+       <note>
+       <para>Unlike in advanced mixers, Hydrogen panning makes no distinction if a track is mono or dual-channel (stereo).
+       You cannot pan each channel of stereo tracks separately, nor use a balance law for them and another
+       pan law for mono tracks.
+        If the drumkit you are using is made of true stereo samples, you don't want a negative center compensation
+         probably, so you should select a Balance Law.</para>
+       </note>
+
+
     </section>
     
     
