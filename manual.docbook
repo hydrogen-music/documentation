@@ -2938,6 +2938,10 @@
           <listitem><para><emphasis>f</emphasis> - float32</para></listitem>
           <listitem><para><emphasis>s</emphasis> - OSC-string (ASCII)</para></listitem>
           </itemizedlist>
+          <para>Please
+                  not that this only affects instrument strips (those with pan
+                  and FX knobs). Strip volume control for instrument component
+                  strips is not implemented yet).</para>
           <para>In case no argument is required the
           <emphasis>type</emphasis> column is left empty.</para>
           <table frame='all' id='sect.osc.messages.playback.table'>
@@ -2950,59 +2954,71 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
               <tbody>
                 <row>
                   <entry>/Hydrogen/PLAY/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
-                </row>
-                <row>
-                  <entry>/Hydrogen/PLAY_STOP_TOGGLE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
-                </row>
-                <row>
-                  <entry>/Hydrogen/PLAY_PAUSE_TOGGLE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
-                </row>
-                <row>
-                  <entry>/Hydrogen/STOP/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Starts playback.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/PAUSE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Stops playback.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STOP/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Stops playback and moves the playhead to the beginning
+                  of the song.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PLAY_PAUSE_TOGGLE/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Works the same as <emphasis>PLAY</emphasis> if the
+                  playback has not started yet and same as.
+                  <emphasis>PAUSE</emphasis> otherwise</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/PLAY_STOP_TOGGLE/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Works the same as <emphasis>PLAY</emphasis> if the
+                  playback has not started yet and same as.
+                  <emphasis>STOP</emphasis> otherwise</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RECORD_READY/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles recording (same as pressing the record button
+                  in the main toolbar) if the playback has not started yet.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RECORD_STROBE_TOGGLE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles recording (same as pressing the record button
+                  in the main toolbar).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RECORD_STROBE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Activates recording.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RECORD_EXIT/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
-                </row>
-                <row>
-                  <entry>/Hydrogen/RELOCATE/</entry>
-                  <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Deactivates recording.</entry>
                 </row>
               </tbody>
             </tgroup>
@@ -3018,39 +3034,47 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
               <tbody>
                 <row>
                   <entry>/Hydrogen/NEXT_BAR/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Moves the playhead to the next pattern/bar.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/PREVIOUS_BAR/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Moves the playhead to the previous pattern/bar.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SELECT_NEXT_PATTERN/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
-                </row>
-                <row>
-                  <entry>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY/</entry>
-                  <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0,]</entry>
+                  <entry>If Hydrogen is in <emphasis>Pattern Mode</emphasis>,
+                  switch to pattern <emphasis>f</emphasis>. If Hydrogen is in
+                  <emphasis>Song Mode</emphasis>, the command will have no effect.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0,]</entry>
+                  <entry>Works as <emphasis>SELECT_NEXT_PATTERN</emphasis> and
+                  starts playback as well.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RELOCATE/</entry>
-                  <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>If Hydrogen is in <emphasis>Song Mode</emphasis>,
+                  locates the playhead to pattern number
+                  <emphasis>f</emphasis>. If Hydrogen is in <emphasis>Pattern
+                  Mode</emphasis>, locates the playhead to the beginning of the
+                  current pattern.</entry>
                 </row>
               </tbody>
             </tgroup>
@@ -3066,6 +3090,7 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
@@ -3073,37 +3098,58 @@
                 <row>
                   <entry>/Hydrogen/BPM_DECR/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Decreases the current tempo by
+                  <emphasis>f</emphasis>. Note that this command will have no
+                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/BPM_INCR/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Increases the current tempo by
+                  <emphasis>f</emphasis>. Note that this command will have no
+                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/BEATCOUNTER/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Calculates the average time passing between successive
+                  encounters of this commands and uses it to set the current
+                  tempo.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TAP_TEMPO/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Another command calculating the average time passing
+                  between successive encounters of this commands and uses it to
+                  set the current tempo.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TIMELINE_ACTIVATION/</entry>
-                  <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>f</entry>
+                  <entry>{0,1}</entry>
+                  <entry>Activates the Timeline if <emphasis>f</emphasis> is not
+                  zero and deactivates it otherwise.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TIMELINE_ADD_MARKER/</entry>
-                  <entry>if</entry>
-                  <entry>Start playback</entry>
+                  <entry>ff</entry>
+                  <entry>[0,] [10,400]</entry>
+                  <entry>Adds a Tempo Marker to the Timeline. The first argument
+                  specifies the pattern/bar to at the marker to and the second
+                  its tempo.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TIMELINE_DELETE_MARKER/</entry>
-                  <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>Deletes a Tempo Marker at pattern/bar
+                  <emphasis>f</emphasis> on the Timeline.</entry>
                 </row>
               </tbody>
             </tgroup>
@@ -3119,74 +3165,103 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
               <tbody>
                 <row>
                   <entry>/Hydrogen/MUTE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Mutes the <emphasis>Master</emphasis> output in the Mixer.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/UNMUTE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Unmutes the <emphasis>Master</emphasis> output in the Mixer.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/MUTE_TOGGLE/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles the muting of the <emphasis>Master</emphasis> output in the Mixer.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/MASTER_VOLUME_ABSOLUTE/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0.0,1.5]</entry>
+                  <entry>Sets the volume of the master fader.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/MASTER_VOLUME_RELATIVE/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
-                </row>
-                <row>
-                  <entry>/Hydrogen/STRIP_VOLUME_RELATIVE/</entry>
-                  <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>{-1;0;1}</entry>
+                  <entry>For a value of 0 it sets the volume of the master fader
+                  to 0. For a value of one 1 it increases its volume by 0.05
+                  and for all other values it decreases it by 0.05. (-1: -0.05 ,
+                  0: 0 , 1: +0.05)</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/STRIP_VOLUME_ABSOLUTE/X/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0.0,1.5]</entry>
+                  <entry>Sets the volume of instrument strip <emphasis>X</emphasis>.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/STRIP_VOLUME_RELATIVE/X/</entry>
+                  <entry>f</entry>
+                  <entry>{-1;0;1}</entry>
+                  <entry>For a value of 0 it sets the volume of the instrument
+                  strip <emphasis>X</emphasis> to 0. For a value of one 1 it
+                  increases its volume by 0.05 and for all other values it
+                  decreases it by 0.05. (-1: -0.05 , 0: 0 , 1: +0.05).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/PAN_ABSOLUTE/X/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0.0,1.0]</entry>
+                  <entry>Sets the pan of instrument strip <emphasis>X</emphasis>.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/PAN_RELATIVE/X/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>{-1;1}</entry>
+                  <entry>For a value of 1 it increase the pan of the instrument
+                  strip <emphasis>X</emphasis> by 0.05. For all other values it
+                  decreases it by 0.05. (-1: -0.05 , 1: +0.05)</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/X/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0,127]</entry>
+                  <entry>For a value of 0 it sets the filter cutoff of the
+                  instrument strip <emphasis>X</emphasis> to 0. For all other
+                  values it sets the cutoff to the provided number divided by
+                  127.0. Please note that this parameter is not displayed
+                  anywhere in the Mixer but in the Instrument Rack.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/STRIP_MUTE_TOGGLE/X/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Toggles muting of instrument strip
+                  <emphasis>X</emphasis>. Input argument will be
+                  ignored.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/STRIP_SOLO_TOGGLE/X/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Toggles soloing of instrument strip
+                  <emphasis>X</emphasis>. Input argument will be
+                  ignored.</entry>
                 </row>
               </tbody>
             </tgroup>
           </table>
-          <para>The last part [x] of the URI specifies a particular instrument.</para>
+          <para>The last part [X] of the URI specifies a particular instrument.</para>
 
           <table frame='all' id='sect.osc.messages.playlist.table'>
             <title>OSC playlist messages</title>
@@ -3198,6 +3273,7 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
@@ -3205,17 +3281,20 @@
                 <row>
                   <entry>/Hydrogen/PLAYLIST_SONG/</entry>
                   <entry>f</entry>
-                  <entry>Start playback</entry>
+                  <entry>[0,]</entry>
+                  <entry>Opens song <emphasis>f</emphasis> of the Playlist.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/PLAYLIST_NEXT_SONG/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Opens the next song in the Playlist.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/PLAYLIST_PREV_SONG/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Opens the previous song in the Playlist.</entry>
                 </row>
               </tbody>
             </tgroup>
@@ -3232,49 +3311,62 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
               <tbody>
                 <row>
                   <entry>/Hydrogen/UNDO_ACTION/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Undoes the previous action.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/REDO_ACTION/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Redoes the previous undone action.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/JACK_TRANSPORT_ACTIVATION/</entry>
                   <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated the JACK transport support for a value of 0
+                  and activates it for all others.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/JACK_TIMEBASE_MASTER_ACTIVATION/</entry>
                   <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated the JACK Timebase Master transport support
+                  for a value of 0 and activates it for all others.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SONG_MODE_ACTIVATION/</entry>
                   <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated Song Mode for a value of 0 and activates it
+                  for all others.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/LOOP_MODE_ACTIVATION/</entry>
                   <entry>i</entry>
-                  <entry>Start playback</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated Loop Mode for a value of 0 and activates it
+                  for all others.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TOGGLE_METRONOME/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles the metronome.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SELECT_INSTRUMENT/</entry>
-                  <entry>"", f</entry>
-                  <entry>Start playback</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>Selects a specific instrument.</entry>
                 </row>
               </tbody>
             </tgroup>
@@ -3290,6 +3382,7 @@
                 <row>
                   <entry>URL</entry>
                   <entry>type</entry>
+                  <entry>range</entry>
                   <entry>description</entry>
                 </row>
               </thead>
@@ -3297,32 +3390,40 @@
                 <row>
                   <entry>/Hydrogen/NEW_SONG/</entry>
                   <entry>s</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Creates an empty song which will be stored at the
+                  absolute path <emphasis>s</emphasis>.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/OPEN_SONG/</entry>
                   <entry>s</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Opens an existing song associated with the absolute
+                  path <emphasis>s</emphasis>.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SAVE_SONG/</entry>
                   <entry>""</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Saves the current song.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SAVE_SONG_AS/</entry>
                   <entry>s</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Saves the current song to the absolute path <emphasis>s</emphasis>.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/SAVE_PREFERENCES/</entry>
                   <entry>""</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Saves the preferences.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/QUIT/</entry>
                   <entry>""</entry>
-                  <entry>Start playback</entry>
+                  <entry></entry>
+                  <entry>Exits Hydrogen.</entry>
                 </row>
               </tbody>
             </tgroup>
