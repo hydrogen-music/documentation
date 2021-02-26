@@ -358,6 +358,77 @@
         </figure>
       </section>
 
+      <section id="sect.preferences.osc_tab">
+        <title>The OSC tab</title>
+
+        <para>The "OSC" tab (<xref linkend="fig.preferences.osc_tab"/>) let's
+        you modify all options associated with OSC (Open Sound Control) (see
+        section <xref linkend="sect.osc"/> for details).
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Enable OSC support</emphasis>: Allows
+            Hydrogen to receive OSC commands send by external programs.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Enable OSC feedback</emphasis>: Hydrogen
+            will broadcast OSC messages to all registered clients each time does
+            change. A client can register to receive OSC messages by sending
+            a message to Hydrogen previously. The <emphasis role="bold">state broadcast as feedback</emphasis> is
+            composed of the following OSC paths:
+            <itemizedlist>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis></para>
+              </listitem>
+            </itemizedlist>
+
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Incoming port</emphasis>: Specifies the
+            OSC port Hydrogen will be register to.</para>
+          </listitem>
+        </itemizedlist>
+        </para>
+        <note>
+          <para>If the chosen OSC port is already occupied, Hydrogen will pick
+          an alternative one on startup and displays it via a popup as well as
+          in the OSC tab of the Preferences.
+          </para>
+        </note>
+
+        <figure id="fig.preferences.osc_tab">
+          <title>The OSC Tab</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/PreferencesOSC.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </section>
+
+
+
       <section id="sect.preferences.appearance_tab">
         <title>The Appearance tab</title>
 
@@ -3226,78 +3297,94 @@
 
 
       <itemizedlist mark="opencircle">
-      <listitem><para>
-	      <emphasis role="bold">PLAY</emphasis> : start playback
+      <listitem id="sect.midi.actions.play" xreflabel="PLAY"><para>
+	      <emphasis role="bold">PLAY</emphasis> : starts playback
+	    </para></listitem>
+	    
+      <listitem id="sect.midi.actions.pause" xreflabel="PAUSE"><para>
+	      <emphasis role="bold">PAUSE</emphasis> : pauses playback
+	    </para></listitem>
+	    
+      <listitem id="sect.midi.actions.stop" xreflabel="STOP"><para>
+	    <emphasis role="bold">STOP</emphasis> : stops playback and moves the
+          playhead to the beginning of the song 
 	    </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : toggles between PLAY and STOP.  Execute this action will 
-        start playback, execute it again and playback will stop + the playhead will return
-        to the start of the song
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : toggles between PLAY and PAUSE.  (the playhead will not return
+	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : Works the same as
+          <xref linkend="sect.midi.actions.play"/> if the
+          playback has not started yet and same as. 
+          <xref linkend="sect.midi.actions.pause"/> otherwise. (The playhead will not return
 	      to the start of the song, but will stay at its current position)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">STOP</emphasis> : stops playback and returns to the start of the song
+        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <xref linkend="sect.midi.actions.play"/> if the
+                  playback has not started yet and same as.
+                  <xref linkend="sect.midi.actions.stop"/> otherwise.
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PAUSE</emphasis> : pauses the song
+        <emphasis role="bold">MUTE</emphasis> : mutes the Master output in the
+        Mixer (sequencer keeps running).
 	    </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">MUTE</emphasis> : mutes the the Master output (sequencer keeps running)
+	      <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output in the
+        Mixer (sequencer keeps running).
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output (sequencer keeps running)
+	    <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles the muting of the
+        Master output in the Mixer (sequencer keeps running)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles between MUTE and UNMUTE (sequencer keeps running)
+	      <emphasis role="bold">NEXT_BAR</emphasis> : moves the playhead to the next pattern/bar.
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">NEXT_BAR</emphasis> : jumps to the next bar in the song
+	      <emphasis role="bold">PREVIOUS_BAR</emphasis> : moves the playhead to the previous pattern/bar.
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PREVIOUS_BAR</emphasis> : jumps to the previous bar in the song
+	    <emphasis role="bold">BPM_INCR</emphasis> : increases the current tempo
+        by the supplied value. Note that this command will have no
+        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+        and <emphasis>Tempo Marker</emphasis> has been passed
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">BPM_INCR</emphasis> : increments the tempo of the song
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BPM_DECR</emphasis> : decrements the tempo of the song
+	      <emphasis role="bold">BPM_DECR</emphasis> : decreases the current tempo
+        by the supplied value. Note that this command will have no
+        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+        and <emphasis>Tempo Marker</emphasis> has been passed
 	    </para></listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">BPM_CC_RELATIVE</emphasis> : changes the tempo relative to the current tempo, using a controller
 	    </para></listitem>
 	    
-      <listitem><para>
+      <listitem id="sect.midi.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
 	      <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis> : changes the Master output volume, relative
-	      to the current setting (e.g. if you are using rotary encoders)
+	      to the current setting. For a value of 0 it sets the volume of
+          the master fader to 0. For a value of one 1 it increases its
+          volume by 0.05 and for all other values it decreases it by
+          0.05. (-1: -0.05 , 0: 0 , 1: +0.05)
 	    </para></listitem>
 	    
-      <listitem><para>
-	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : changes the Master output volume to the 
+      <listitem id="sect.midi.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
+	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : sets the volume of the master fader to the 
 	      absolute value of the midi control (use with midi fader or pot)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see MASTER_VOLUME_RELATIVE, but applies to
+	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="sect.midi.actions.master_volume_relative"/>, but applies to
 	      the channel strip defined in the Action Parameter **
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see MASTER_VOLUME_ABSOLUTE, but applies to
+	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="sect.midi.actions.master_volume_absolute"/>, but applies to
 	      the channel strip defined in the Action Parameter **
 	    </para></listitem>
 	    
@@ -3306,33 +3393,46 @@
          the value you enter in the Action Parameter determines the channel strip this action applies to **
       </para></listitem>
 	    
-      <listitem><para>
-        <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : selects the pattern that is defined in the Action Parameter **
+      <listitem id="sect.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
+        <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : if Hydrogen is in <emphasis>Pattern Mode</emphasis>,
+        switches to pattern that is defined in the Action Parameter **. If
+        Hydrogen is in <emphasis>Song Mode</emphasis>, the command will have no
+        effect
       </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : combines the SELECT_NEXT_PATTERN with PLAY
+        <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : works as
+        <xref linkend="sect.midi.actions.select_next_pattern"/> combined with
+        <xref linkend="sect.midi.actions.play"/>
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the panorama setting, relative to the current value;
-         the value you enter in the Action Parameter determines the channel strip this action applies to **
+	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the pan, relative to the current value. For a
+          value of 1 it increase the pan by 0.05. For all other values
+          it decreases it by 0.05. (-1: -0.05 , 1: +0.05);
+          the value you enter in the Action Parameter determines the channel
+          strip this action applies to **
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the panorama setting to the absolute value that the linked controller sends to Hydrogen
+	      <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the pan to the absolute value that the linked controller sends to Hydrogen
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">BEATCOUNTER</emphasis> : sets the tempo (see <xref linkend="sect.tap_tempo"/>
+	      <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
+          time passing between successive encounters of this commands and uses
+          it to set the current tempo. (see <xref linkend="sect.tap_tempo"/>)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">TAP_TEMPO</emphasis> : sets the tempo (see <xref linkend="sect.tap_tempo"/>
+	      <emphasis role="bold">TAP_TEMPO</emphasis> : another command
+          calculating the average time passing between successive encounters of
+          this commands and uses it to set the current tempo (see <xref
+          linkend="sect.tap_tempo"/>)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects one of the instruments in the drumkit
+	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects a specific instrument in the drumkit
 	    </para></listitem>
 	    
    
@@ -3342,7 +3442,7 @@
      </section>
 
    </section>
-	<section id="sect.osc">
+	<section id="sect.osc" xreflabel="OSC">
 		<title>OSC</title>
 		<para>Open Sound Control (OSC) is a protocol for communication among
         programs, computers, and hardware, like synthesizers or multimedia
@@ -3353,108 +3453,584 @@
         matching language, and allowing to bundle messages for a better handling
         of timing and simultaneous processing.</para>
 
-        <para>Hydrogen is able to receive OSC messages. This allows you to
-        control it using various devices, like hardware OSC controllers,
-        smartphones, tablets, or any PC. For Linux-based systems you can test
-        these interactions using the command line program
-        <emphasis>oscsend</emphasis> and Hydrogen's port number you can find in the OSC tab in the Preferences dialog. </para>
+        <para>Hydrogen is able to receive and send OSC messages. This allows you
+        to control it using various devices, like hardware OSC controllers,
+        smartphones, tablets, or any PC. For Linux-based systems you can use or
+        test these interactions using the command line program
+        <emphasis>oscsend</emphasis>.</para>
 
         <para><emphasis>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</emphasis></para>
 		
-		<para>To enable OSC support in Hydrogen, open the Preferences dialog and switch to the OSC tab. Make sure that the "Enable OSC support" checkbox is activated, otherwise Hydrogen will not listen for 
-			incoming OSC messages.</para>
-              
-            <section id="sect.osc.messages">
-              <title>Controlling Hydrogen via OSC</title>
-              <para>If you want to control Hydrogen via OSC, you may send messages to the following addresses:
-              <itemizedlist>
-                <listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/</para></listitem>
-                <listitem><para>/Hydrogen/PAN_ABSOLUTE/</para></listitem>
-                <listitem><para>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/</para></listitem>
-                <listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/</para></listitem>
-                <listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/</para></listitem>
-                <listitem><para>/Hydrogen/PLAY</para></listitem>
-                <listitem><para>/Hydrogen/PLAY_STOP_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/PLAY_PAUSE_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/STOP</para></listitem>
-                <listitem><para>/Hydrogen/PAUSE</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_READY</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_STROBE</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_STROBE_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/RECORD_EXIT</para></listitem>
-                <listitem><para>/Hydrogen/MUTE</para></listitem>
-                <listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
-                <listitem><para>/Hydrogen/UNMUTE</para></listitem>
-                <listitem><para>/Hydrogen/NEXT_BAR</para></listitem>
-                <listitem><para>/Hydrogen/PREVIOUS_BAR</para></listitem>
-                <listitem><para>/Hydrogen/BPM_INCR</para></listitem>
-                <listitem><para>/Hydrogen/BPM_DECR</para></listitem>
-                <listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
-                <listitem><para>/Hydrogen/MASTER_VOLUME_RELATIVE</para></listitem>
-                <listitem><para>/Hydrogen/STRIP_VOLUME_RELATIVE</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_NEXT_PATTERN</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_NEXT_PATTERN_PROMPTLY</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN</para></listitem>
-                <listitem><para>/Hydrogen/BEATCOUNTER</para></listitem>
-                <listitem><para>/Hydrogen/TAP_TEMPO</para></listitem>
-                <listitem><para>/Hydrogen/PLAYLIST_SONG</para></listitem>
-                <listitem><para>/Hydrogen/PLAYLIST_NEXT_SONG</para></listitem>
-                <listitem><para>/Hydrogen/PLAYLIST_PREV_SONG</para></listitem>
-                <listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
-                <listitem><para>/Hydrogen/SELECT_INSTRUMENT</para></listitem>
-                <listitem><para>/Hydrogen/UNDO_ACTION</para></listitem>
-                <listitem><para>/Hydrogen/REDO_ACTION</para></listitem>
-                <listitem><para>/Hydrogen/NEW_SONG s /full/path/to/new.h2song</para></listitem>
-                <listitem><para>/Hydrogen/OPEN_SONG s /full/path/to/existing.h2song</para></listitem>
-                <listitem><para>/Hydrogen/SAVE_SONG</para></listitem>
-                <listitem><para>/Hydrogen/SAVE_SONG_AS s /full/path/to/copy.h2song</para></listitem>
-                <listitem><para>/Hydrogen/QUIT</para></listitem>
-                <listitem><para>/Hydrogen/TIMELINE_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/TIMELINE_ADD_MARKER if 1 120</para></listitem>
-                <listitem><para>/Hydrogen/TIMELINE_DELETE_MARKER i 1</para></listitem>
-                <listitem><para>/Hydrogen/JACK_TRANSPORT_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/JACK_TIMEBASE_MASTER_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/SONG_MODE_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/LOOP_MODE_ACTIVATION i 0</para></listitem>
-                <listitem><para>/Hydrogen/RELOCATE i 4</para></listitem>
-              </itemizedlist>
+		<para>To enable OSC support in Hydrogen, open the Preferences dialog
+		(TODO link) and switch to the OSC tab. Make sure that the "Enable OSC
+		support" checkbox is activated, otherwise Hydrogen will not listen for
+		incoming OSC messages. Hydrogen's port number, which defaults to 9000,
+		can be found in there as well.
+        </para>
+        
+        <section id="sect.osc.messages">
+          <title>OSC messages</title>
+          <para>The syntax for sending the commands is</para>
 
-                For more information about the actions invoked, please see the
-                corresponding documentation in the source code.
-			</para>
-		</section>
-		<section id="sect.osc.feeback">
-			<title>Sending OSC feedback to other applications</title>
-			<para>
-				Hydrogen is able notify other applications via OSC if a
-				parameter changes, for example if a fader has been moved. It
-				does not matter at this point if the fader has been moved via
-				the GUI, an incoming OSC message or via MIDI.
-            </para>
-            <para>
-				To enable/disable OSC feedback, a checkbox exists on the OSC tab
-				of the Preferences dialog. If the checkbox is enabled, Hydrogen
-				sends out OSC feedback messages to all OSC client, which are
-				known to Hydrogen.
-            </para>
-			<para>
-				Clients are registered automatically by Hydrogen upon the first
-				message received from the client.
-			</para>
-            <para>
-              The OSC messages send by Hydrogen will be associated with the
-              following paths
-              <itemizedlist>
-		        <listitem><para>/Hydrogen/MASTER_VOLUME_ABSOLUTE</para></listitem>
-		        <listitem><para>/Hydrogen/TOGGLE_METRONOME</para></listitem>
-		        <listitem><para>/Hydrogen/MUTE_TOGGLE</para></listitem>
-		        <listitem><para>/Hydrogen/STRIP_VOLUME_ABSOLUTE/[x]</para></listitem>
-		        <listitem><para>/Hydrogen/PAN_ABSOLUTE/[x]</para></listitem>
-		        <listitem><para>/Hydrogen/STRIP_MUTE_TOGGLE/[x]</para></listitem>
-		        <listitem><para>/Hydrogen/STRIP_SOLO_TOGGLE/[x]</para></listitem>
-              </itemizedlist>
-              The last part [x] of the URI specifies a particular instrument.
-            </para>
+          <para><emphasis>
+            oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE
+            COMMAND_ARGUMENT
+          </emphasis></para>
+
+          <para>with the supported types</para>
+          <itemizedlist>
+          <listitem><para><emphasis role="bold">' '</emphasis> - no argument required</para></listitem>
+          <listitem><para><emphasis role="bold">i</emphasis> - int32</para></listitem>
+          <listitem><para><emphasis role="bold">f</emphasis> - float32</para></listitem>
+          <listitem><para><emphasis role="bold">s</emphasis> - OSC-string (ASCII)</para></listitem>
+     
+        </itemizedlist>
+        <para>Detailed description of the formats and conventions used in the
+        tables below</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">ff</emphasis> - Two types placed right after each
+            other indicated that the command requires two distinct
+            arguments.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">' ',[f]</emphasis> - Two types separated by a comma
+            indicate that two versions of the command are available. To support
+            <emphasis>TouchOSC</emphasis> all commands expecting no parameter
+            are available in an alternative version requiring a float too. In
+            the latter version the argument will be ignored and it is placed in
+            squared brackets <emphasis>[f]</emphasis> to indicate its
+            inferiority compared to the non-parametric version.</para> 
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">[0,]</emphasis> - Limitations in possible values of the input parameters are
+            indicated in the <emphasis>range</emphasis> column. For continuous
+            values squared brackets
+            <emphasis>[LOWER_LIMIT,UPPER_LIMIT]</emphasis> are used and a limit 
+            will be left empty when it is associated with a "natural" boundary,
+            like the total number of instrument or pattern.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">{-1;0;1}</emphasis> - Sets of discrete
+            values are shown in curly brackets and separated semicolon
+            <emphasis>{VALUE;...}</emphasis> and usually feature the most
+            convenient input options.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">1.0</emphasis> - Also in order to support
+            TouchOSC all numerical input has to be passed as type float while
+            most of these numbers will be rounded to integers internally. For
+            all true float inputs the <emphasis>range</emphasis> column uses a
+            floating point representation of the limits, like 1.0 instead of 1.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">X</emphasis> - All commands ending with a
+            <emphasis>/X/</emphasis> require this character to be replaced by an
+            integer and do affect only the corresponding instrument,
+            e.g. <emphasis>oscsend localhost 9000 /Hydrogen/PAN_ABSOLUTE/1/ f
+            0.3</emphasis>. The instrument number starts at 1 and is determined
+            by the order of the instrument in the mixer and pattern
+            editor.</para>
+          </listitem>
+        </itemizedlist>
+
+          <table frame='all' id='sect.osc.messages.playback.table'>
+            <title>OSC playback messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row id="sect.osc.command.play" xreflabel="/Hydrogen/PLAY/">
+                  <entry>/Hydrogen/<emphasis role="bold">PLAY</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Starts playback.</entry>
+                </row>
+                <row id="sect.osc.command.pause" xreflabel="/Hydrogen/PAUSE/">
+                  <entry>/Hydrogen/<emphasis role="bold">PAUSE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Stops playback.</entry>
+                </row>
+                <row id="sect.osc.command.stop" xreflabel="/Hydrogen/STOP/">
+                  <entry>/Hydrogen/<emphasis role="bold">STOP</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Stops playback and moves the playhead to the beginning
+                  of the song.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PLAY_PAUSE_TOGGLE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Works the same as <xref linkend="sect.osc.command.play"/> if the
+                  playback has not started yet and same as.
+                  <xref linkend="sect.osc.command.pause"/> otherwise. (The playhead will not
+                  return to the start of the song, but will stay at its current
+                  position).</entry> 
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PLAY_STOP_TOGGLE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Works the same as <xref linkend="sect.osc.command.play"/> if the
+                  playback has not started yet and same as.
+                  <xref linkend="sect.osc.command.stop"/> otherwise.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">RECORD_READY</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles recording (same as pressing the record button
+                  in the main toolbar) if the playback has not started yet.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">RECORD_STROBE_TOGGLE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles recording (same as pressing the record button
+                  in the main toolbar).</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">RECORD_STROBE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Activates recording.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">RECORD_EXIT</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Deactivates recording.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.transport.table'>
+            <title>OSC transport messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">NEXT_BAR</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Moves the playhead to the next pattern/bar.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PREVIOUS_BAR</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Moves the playhead to the previous pattern/bar.</entry>
+                </row>
+                <row id="sect.osc.command.select_next_pattern" xreflabel="/Hydrogen/SELECT_NEXT_PATTERN/">
+                  <entry>/Hydrogen/<emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>If Hydrogen is in <emphasis>Pattern Mode</emphasis>,
+                  switch to pattern <emphasis>f</emphasis>. If Hydrogen is in
+                  <emphasis>Song Mode</emphasis>, the command will have no effect.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>Works as <xref linkend="sect.osc.command.select_next_pattern"/>
+                  combined with <xref linkend="sect.osc.command.play"/>.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">RELOCATE</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>If Hydrogen is in <emphasis>Song Mode</emphasis>,
+                  locates the playhead to pattern number
+                  <emphasis>f</emphasis>. If Hydrogen is in <emphasis>Pattern
+                  Mode</emphasis>, locates the playhead to the beginning of the
+                  current pattern.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.tempo.table'>
+            <title>OSC tempo and timeline messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">BPM_DECR</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry></entry>
+                  <entry>Decreases the current tempo by
+                  <emphasis>f</emphasis>. Note that this command will have no
+                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">BPM_INCR</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry></entry>
+                  <entry>Increases the current tempo by
+                  <emphasis>f</emphasis>. Note that this command will have no
+                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">BEATCOUNTER</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Calculates the average time passing between successive
+                  encounters of this commands and uses it to set the current
+                  tempo (see <xref linkend="sect.tap_tempo"/>).</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">TAP_TEMPO</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Another command calculating the average time passing
+                  between successive encounters of this commands and uses it to
+                  set the current tempo (see <xref linkend="sect.tap_tempo"/>).</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ACTIVATION</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>{0,1}</entry>
+                  <entry>Activates the Timeline if <emphasis>f</emphasis> is not
+                  zero and deactivates it otherwise.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ADD_MARKER</emphasis>/</entry>
+                  <entry>ff</entry>
+                  <entry>[0,] [10,400]</entry>
+                  <entry>Adds a Tempo Marker to the Timeline. The first argument
+                  specifies the pattern/bar to at the marker to and the second
+                  its tempo.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_DELETE_MARKER</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>Deletes a Tempo Marker at pattern/bar
+                  <emphasis>f</emphasis> on the Timeline.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.mixer.table'>
+            <title>OSC mixer messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">MUTE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Mutes the <emphasis>Master</emphasis> output in the
+                  Mixer (sequencer keeps running).</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">UNMUTE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Unmutes the <emphasis>Master</emphasis> output in the
+                  Mixer (sequencer keeps running).</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles the muting of the <emphasis>Master</emphasis>
+                  output in the Mixer (sequencer keeps running).</entry>
+                </row>
+                <row id="sect.osc.command.master_volume_absolute" xreflabel="/Hydrogen/MASTER_VOLUME_ABSOLUTE/">
+                  <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0.0,1.5]</entry>
+                  <entry>Sets the volume of the master fader.</entry>
+                </row>
+                <row id="sect.osc.command.master_volume_relative" xreflabel="/Hydrogen/MASTER_VOLUME_RELATIVE/">
+                  <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>{-1;0;1}</entry>
+                  <entry>Changes the Master output volume, relative
+	              to the current setting. For a value of 0 it sets the volume of
+                  the master fader to 0. For a value of one 1 it increases its
+                  volume by 0.05 and for all other values it decreases it by
+                  0.05. (-1: -0.05 , 0: 0 , 1: +0.05)</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0.0,1.5]</entry>
+                  <entry>See <xref linkend="sect.osc.command.master_volume_absolute"/>, but
+                  applies to the channel strip provided in the OSC command path
+                  as <emphasis>X</emphasis>. Please not that this only affects
+                  instrument strips (those with pan and FX knobs). Strip volume
+                  control for instrument component strips is not implemented
+                  yet).</entry> 
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>{-1;0;1}</entry>
+                  <entry>See <xref linkend="sect.osc.command.master_volume_relative"/>, but
+                  applies to the channel strip provided in the OSC command path
+                  as <emphasis>X</emphasis>. Please not that this only affects
+                  instrument strips (those with pan and FX knobs). Strip volume
+                  control for instrument component strips is not implemented
+                  yet).</entry> 
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0.0,1.0]</entry>
+                  <entry>Sets the pan of instrument strip <emphasis>X</emphasis>.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PAN_RELATIVE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>{-1;1}</entry>
+                  <entry>Changes the pan of the instrument strip
+                  <emphasis>X</emphasis>, relative to the current value. For a
+                  value of 1 it increase the pan by 0.05. For all other values
+                  it decreases it by 0.05. (-1: -0.05 , 1: +0.05)</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,127]</entry>
+                  <entry>For a value of 0 it sets the filter cutoff of the
+                  instrument strip <emphasis>X</emphasis> to 0. For all other
+                  values it sets the cutoff to the provided number divided by
+                  127.0. Please note that this parameter is not displayed
+                  anywhere in the Mixer but in the Instrument Rack.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry></entry>
+                  <entry>Toggles muting of instrument strip
+                  <emphasis>X</emphasis>. Input argument will be
+                  ignored.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry></entry>
+                  <entry>Toggles soloing of instrument strip
+                  <emphasis>X</emphasis>. Input argument will be
+                  ignored.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.playlist.table'>
+            <title>OSC playlist messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_SONG</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>Opens song <emphasis>f</emphasis> of the Playlist.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Opens the next song in the Playlist.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_PREV_SONG</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Opens the previous song in the Playlist.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          
+
+          <table frame='all' id='sect.osc.messages.general.table'>
+            <title>OSC general messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">UNDO_ACTION</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Undoes the previous action.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">REDO_ACTION</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Redoes the previous undone action.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">JACK_TRANSPORT_ACTIVATION</emphasis>/</entry>
+                  <entry>i</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated the JACK transport support for a value of 0
+                  and activates it for all others.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/</entry>
+                  <entry>i</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated the JACK Timebase Master transport support
+                  for a value of 0 and activates it for all others.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">SONG_MODE_ACTIVATION</emphasis>/</entry>
+                  <entry>i</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated Song Mode for a value of 0 and activates it
+                  for all others.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">LOOP_MODE_ACTIVATION</emphasis>/</entry>
+                  <entry>i</entry>
+                  <entry>{0;1}</entry>
+                  <entry>Deactivated Loop Mode for a value of 0 and activates it
+                  for all others.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis>/</entry>
+                  <entry>' ',[f]</entry>
+                  <entry></entry>
+                  <entry>Toggles the metronome.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">SELECT_INSTRUMENT</emphasis>/</entry>
+                  <entry>f</entry>
+                  <entry>[0,]</entry>
+                  <entry>Selects a specific instrument in the drumkit.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+
+          <table frame='all' id='sect.osc.messages.session.table'>
+            <title>OSC session management messages</title>
+            <tgroup cols='3' align='left' colsep='1' rowsep='1'>
+              <colspec colname='cURL'/>
+              <colspec colname='cType'/>
+              <colspec colname='cDescription'/>
+              <thead>
+                <row>
+                  <entry>URL</entry>
+                  <entry>type</entry>
+                  <entry>range</entry>
+                  <entry>description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">NEW_SONG</emphasis>/</entry>
+                  <entry>s</entry>
+                  <entry></entry>
+                  <entry>Creates an empty song which will be stored at the
+                  absolute path <emphasis>s</emphasis>.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">OPEN_SONG</emphasis>/</entry>
+                  <entry>s</entry>
+                  <entry></entry>
+                  <entry>Opens an existing song associated with the absolute
+                  path <emphasis>s</emphasis>.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">SAVE_SONG</emphasis>/</entry>
+                  <entry>""</entry>
+                  <entry></entry>
+                  <entry>Saves the current song.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">SAVE_SONG_AS</emphasis>/</entry>
+                  <entry>s</entry>
+                  <entry></entry>
+                  <entry>Saves the current song to the absolute path <emphasis>s</emphasis>.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">SAVE_PREFERENCES</emphasis>/</entry>
+                  <entry>""</entry>
+                  <entry></entry>
+                  <entry>Saves the preferences.</entry>
+                </row>
+                <row>
+                  <entry>/Hydrogen/<emphasis role="bold">QUIT</emphasis>/</entry>
+                  <entry>""</entry>
+                  <entry></entry>
+                  <entry>Exits Hydrogen.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
 		</section>
 	</section>
   </chapter>
