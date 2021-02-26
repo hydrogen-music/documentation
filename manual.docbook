@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?> <!-- -*- mode:nxml; indent-tabs-mode:nil; fill-column:80; -*- -->
-  <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.0//EN"
-                      "http://www.oasis-open.org/docbook/xml/4.0/docbookx.dtd">
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- mode:nxml; indent-tabs-mode:nil; fill-column:80; -*- -->
+  <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.5//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 <book id="Hydrogen-manual" lang="en">
 
   <bookinfo>
