@@ -358,6 +358,77 @@
         </figure>
       </section>
 
+      <section id="sect.preferences.osc_tab">
+        <title>The OSC tab</title>
+
+        <para>The "OSC" tab (<xref linkend="fig.preferences.osc_tab"/>) let's
+        you modify all options associated with OSC (Open Sound Control) (see
+        section <xref linkend="sect.osc"/> for details).
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Enable OSC support</emphasis>: Allows
+            Hydrogen to receive OSC commands send by external programs.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Enable OSC feedback</emphasis>: Hydrogen
+            will broadcast OSC messages to all registered clients each time does
+            change. A client can register to receive OSC messages by sending
+            a message to Hydrogen previously. The <emphasis role="bold">state broadcast as feedback</emphasis> is
+            composed of the following OSC paths:
+            <itemizedlist>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis></para>
+              </listitem>
+              <listitem>
+                <para>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis></para>
+              </listitem>
+            </itemizedlist>
+
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Incoming port</emphasis>: Specifies the
+            OSC port Hydrogen will be register to.</para>
+          </listitem>
+        </itemizedlist>
+        </para>
+        <note>
+          <para>If the chosen OSC port is already occupied, Hydrogen will pick
+          an alternative one on startup and displays it via a popup as well as
+          in the OSC tab of the Preferences.
+          </para>
+        </note>
+
+        <figure id="fig.preferences.osc_tab">
+          <title>The OSC Tab</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/PreferencesOSC.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </section>
+
+
+
       <section id="sect.preferences.appearance_tab">
         <title>The Appearance tab</title>
 
@@ -2929,7 +3000,7 @@
      </section>
 
    </section>
-	<section id="sect.osc">
+	<section id="sect.osc" xreflabel="OSC">
 		<title>OSC</title>
 		<para>Open Sound Control (OSC) is a protocol for communication among
         programs, computers, and hardware, like synthesizers or multimedia
