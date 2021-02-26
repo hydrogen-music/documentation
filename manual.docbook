@@ -2785,54 +2785,66 @@
 
       <itemizedlist mark="opencircle">
       <listitem><para>
-	      <emphasis role="bold">PLAY</emphasis> : start playback
+	      <emphasis role="bold">PLAY</emphasis> : starts playback
 	    </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : toggles between PLAY and STOP.  Execute this action will 
-        start playback, execute it again and playback will stop + the playhead will return
-        to the start of the song
+	      <emphasis role="bold">PAUSE</emphasis> : pauses playback
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : toggles between PLAY and PAUSE.  (the playhead will not return
+	    <emphasis role="bold">STOP</emphasis> : stops playback and moves the
+          playhead to the beginning of the song 
+	    </para></listitem>
+	    
+      <listitem><para>
+	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : Works the same as <emphasis>PLAY</emphasis> if the
+          playback has not started yet and same as. 
+          <emphasis>PAUSE</emphasis> otherwise. (The playhead will not return
 	      to the start of the song, but will stay at its current position)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">STOP</emphasis> : stops playback and returns to the start of the song
+        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <emphasis>PLAY</emphasis> if the
+                  playback has not started yet and same as.
+                  <emphasis>STOP</emphasis> otherwise.
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PAUSE</emphasis> : pauses the song
+        <emphasis role="bold">MUTE</emphasis> : mutes the Master output in the
+        Mixer (sequencer keeps running).
 	    </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">MUTE</emphasis> : mutes the the Master output (sequencer keeps running)
+	      <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output in the
+        Mixer (sequencer keeps running).
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output (sequencer keeps running)
+	    <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles the muting of the
+        Master output in the Mixer (sequencer keeps running)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles between MUTE and UNMUTE (sequencer keeps running)
+	      <emphasis role="bold">NEXT_BAR</emphasis> : moves the playhead to the next pattern/bar.
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">NEXT_BAR</emphasis> : jumps to the next bar in the song
+	      <emphasis role="bold">PREVIOUS_BAR</emphasis> : moves the playhead to the previous pattern/bar.
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PREVIOUS_BAR</emphasis> : jumps to the previous bar in the song
+	    <emphasis role="bold">BPM_INCR</emphasis> : increases the current tempo
+        by the supplied value. Note that this command will have no
+        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+        and <emphasis>Tempo Marker</emphasis> has been passed
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">BPM_INCR</emphasis> : increments the tempo of the song
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BPM_DECR</emphasis> : decrements the tempo of the song
+	      <emphasis role="bold">BPM_DECR</emphasis> : decreases the current tempo
+        by the supplied value. Note that this command will have no
+        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+        and <emphasis>Tempo Marker</emphasis> has been passed
 	    </para></listitem>
 	    
       <listitem><para>
@@ -2841,11 +2853,14 @@
 	    
       <listitem><para>
 	      <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis> : changes the Master output volume, relative
-	      to the current setting (e.g. if you are using rotary encoders)
+	      to the current setting. For a value of 0 it sets the volume of
+          the master fader to 0. For a value of one 1 it increases its
+          volume by 0.05 and for all other values it decreases it by
+          0.05. (-1: -0.05 , 0: 0 , 1: +0.05)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : changes the Master output volume to the 
+	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : sets the volume of the master fader to the 
 	      absolute value of the midi control (use with midi fader or pot)
 	    </para></listitem>
 	    
@@ -2865,32 +2880,45 @@
       </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : selects the pattern that is defined in the Action Parameter **
+        <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : if Hydrogen is in <emphasis>Pattern Mode</emphasis>,
+        switches to pattern that is defined in the Action Parameter **. If
+        Hydrogen is in <emphasis>Song Mode</emphasis>, the command will have no
+        effect
       </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : combines the SELECT_NEXT_PATTERN with PLAY
+        <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : works as
+        <emphasis>SELECT_NEXT_PATTERN</emphasis> combined with
+        <emphasis>PLAY</emphasis>
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the panorama setting, relative to the current value;
-         the value you enter in the Action Parameter determines the channel strip this action applies to **
+	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the pan, relative to the current value. For a
+          value of 1 it increase the pan by 0.05. For all other values
+          it decreases it by 0.05. (-1: -0.05 , 1: +0.05);
+          the value you enter in the Action Parameter determines the channel
+          strip this action applies to **
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the panorama setting to the absolute value that the linked controller sends to Hydrogen
+	      <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the pan to the absolute value that the linked controller sends to Hydrogen
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">BEATCOUNTER</emphasis> : sets the tempo (see <xref linkend="sect.tap_tempo"/>
+	      <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
+          time passing between successive encounters of this commands and uses
+          it to set the current tempo. (see <xref linkend="sect.tap_tempo"/>)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">TAP_TEMPO</emphasis> : sets the tempo (see <xref linkend="sect.tap_tempo"/>
+	      <emphasis role="bold">TAP_TEMPO</emphasis> : another command
+          calculating the average time passing between successive encounters of
+          this commands and uses it to set the current tempo (see <xref
+          linkend="sect.tap_tempo"/>)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects one of the instruments in the drumkit
+	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects a specific instrument in the drumkit
 	    </para></listitem>
 	    
    
@@ -3032,7 +3060,9 @@
                   <entry></entry>
                   <entry>Works the same as <emphasis>PLAY</emphasis> if the
                   playback has not started yet and same as.
-                  <emphasis>PAUSE</emphasis> otherwise</entry>
+                  <emphasis>PAUSE</emphasis> otherwise. (The playhead will not
+                  return to the start of the song, but will stay at its current
+                  position).</entry> 
                 </row>
                 <row>
                   <entry>/Hydrogen/PLAY_STOP_TOGGLE/</entry>
@@ -3040,7 +3070,7 @@
                   <entry></entry>
                   <entry>Works the same as <emphasis>PLAY</emphasis> if the
                   playback has not started yet and same as.
-                  <emphasis>STOP</emphasis> otherwise</entry>
+                  <emphasis>STOP</emphasis> otherwise.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RECORD_READY/</entry>
@@ -3111,8 +3141,8 @@
                   <entry>/Hydrogen/SELECT_AND_PLAY_NEXT_PATTERN/</entry>
                   <entry>f</entry>
                   <entry>[0,]</entry>
-                  <entry>Works as <emphasis>SELECT_NEXT_PATTERN</emphasis> and
-                  starts playback as well.</entry>
+                  <entry>Works as <emphasis>SELECT_NEXT_PATTERN</emphasis>
+                  combined with <emphasis>PLAY</emphasis>.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/RELOCATE/</entry>
@@ -3167,7 +3197,7 @@
                   <entry></entry>
                   <entry>Calculates the average time passing between successive
                   encounters of this commands and uses it to set the current
-                  tempo.</entry>
+                  tempo (see <xref linkend="sect.tap_tempo"/>).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TAP_TEMPO/</entry>
@@ -3175,7 +3205,7 @@
                   <entry></entry>
                   <entry>Another command calculating the average time passing
                   between successive encounters of this commands and uses it to
-                  set the current tempo.</entry>
+                  set the current tempo (see <xref linkend="sect.tap_tempo"/>).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/TIMELINE_ACTIVATION/</entry>
@@ -3222,19 +3252,22 @@
                   <entry>/Hydrogen/MUTE/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
-                  <entry>Mutes the <emphasis>Master</emphasis> output in the Mixer.</entry>
+                  <entry>Mutes the <emphasis>Master</emphasis> output in the
+                  Mixer (sequencer keeps running).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/UNMUTE/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
-                  <entry>Unmutes the <emphasis>Master</emphasis> output in the Mixer.</entry>
+                  <entry>Unmutes the <emphasis>Master</emphasis> output in the
+                  Mixer (sequencer keeps running).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/MUTE_TOGGLE/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
-                  <entry>Toggles the muting of the <emphasis>Master</emphasis> output in the Mixer.</entry>
+                  <entry>Toggles the muting of the <emphasis>Master</emphasis>
+                  output in the Mixer (sequencer keeps running).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/MASTER_VOLUME_ABSOLUTE/</entry>
@@ -3246,17 +3279,19 @@
                   <entry>/Hydrogen/MASTER_VOLUME_RELATIVE/</entry>
                   <entry>f</entry>
                   <entry>{-1;0;1}</entry>
-                  <entry>For a value of 0 it sets the volume of the master fader
-                  to 0. For a value of one 1 it increases its volume by 0.05
-                  and for all other values it decreases it by 0.05. (-1: -0.05 ,
-                  0: 0 , 1: +0.05)</entry>
+                  <entry>Changes the Master output volume, relative
+	              to the current setting. For a value of 0 it sets the volume of
+                  the master fader to 0. For a value of one 1 it increases its
+                  volume by 0.05 and for all other values it decreases it by
+                  0.05. (-1: -0.05 , 0: 0 , 1: +0.05)</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/STRIP_VOLUME_ABSOLUTE/X/</entry>
                   <entry>f</entry>
                   <entry>[0.0,1.5]</entry>
-                  <entry>Sets the volume of instrument strip
-                  <emphasis>X</emphasis>. Please not that this only affects
+                  <entry>See <emphasis>MASTER_VOLUME_ABSOLUTE</emphasis>, but
+                  applies to the channel strip provided in the OSC command path
+                  as <emphasis>X</emphasis>. Please not that this only affects
                   instrument strips (those with pan and FX knobs). Strip volume
                   control for instrument component strips is not implemented
                   yet).</entry> 
@@ -3265,13 +3300,12 @@
                   <entry>/Hydrogen/STRIP_VOLUME_RELATIVE/X/</entry>
                   <entry>f</entry>
                   <entry>{-1;0;1}</entry>
-                  <entry>For a value of 0 it sets the volume of the instrument
-                  strip <emphasis>X</emphasis> to 0. For a value of one 1 it
-                  increases its volume by 0.05 and for all other values it
-                  decreases it by 0.05. (-1: -0.05 , 0: 0 , 1: +0.05). Please
-                  not that this only affects instrument strips (those with pan
-                  and FX knobs). Strip volume control for instrument component
-                  strips is not implemented yet).</entry>
+                  <entry>See <emphasis>MASTER_VOLUME_RELATIVE</emphasis>, but
+                  applies to the channel strip provided in the OSC command path
+                  as <emphasis>X</emphasis>. Please not that this only affects
+                  instrument strips (those with pan and FX knobs). Strip volume
+                  control for instrument component strips is not implemented
+                  yet).</entry> 
                 </row>
                 <row>
                   <entry>/Hydrogen/PAN_ABSOLUTE/X/</entry>
@@ -3283,9 +3317,10 @@
                   <entry>/Hydrogen/PAN_RELATIVE/X/</entry>
                   <entry>f</entry>
                   <entry>{-1;1}</entry>
-                  <entry>For a value of 1 it increase the pan of the instrument
-                  strip <emphasis>X</emphasis> by 0.05. For all other values it
-                  decreases it by 0.05. (-1: -0.05 , 1: +0.05)</entry>
+                  <entry>Changes the pan of the instrument strip
+                  <emphasis>X</emphasis>, relative to the current value. For a
+                  value of 1 it increase the pan by 0.05. For all other values
+                  it decreases it by 0.05. (-1: -0.05 , 1: +0.05)</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/FILTER_CUTOFF_LEVEL_ABSOLUTE/X/</entry>
@@ -3420,7 +3455,7 @@
                   <entry>/Hydrogen/SELECT_INSTRUMENT/</entry>
                   <entry>f</entry>
                   <entry>[0,]</entry>
-                  <entry>Selects a specific instrument.</entry>
+                  <entry>Selects a specific instrument in the drumkit.</entry>
                 </row>
               </tbody>
             </tgroup>
