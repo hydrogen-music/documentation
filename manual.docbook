@@ -41,10 +41,10 @@
       ###################
   -->
 
-  <chapter id="chap.introduction">
+  <part id="part.1">
     <title>Introduction</title>
 
-    <section id="sect.download">
+    <chapter id="chpt.download">
       <title>Download</title>
 
       <para>
@@ -54,7 +54,7 @@
       </para>
 
       <para>
-        If you want to compile Hydrogen yourself (see <xref linkend="sect.compilation"/>), you can download the latest source files directly from our
+        If you want to compile Hydrogen yourself (see <xref linkend="chpt.compilation"/>), you can download the latest source files directly from our
         git repository with:
 
         <screen><prompt>$</prompt> <command>git clone git://github.com/hydrogen-music/hydrogen.git</command></screen>
@@ -119,11 +119,11 @@
 	liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
       </screen>
 
-    </section>
+    </chapter>
 
 <!-- COMPILATION  -->
 
-    <section id="sect.compilation">
+    <chapter id="chpt.compilation">
       <title>Build</title>
 
       <para>Depending on the branch you are compiling you will need to use cmake. Check the INSTALL.txt and the README.txt files for more info (located in the top level dir once you downloaded the sources).</para>
@@ -159,16 +159,16 @@
            <prompt>$</prompt> <command>./build.sh m</command>
         </screen>              
       
-    </section>
+    </chapter>
 
-    <section id="sect.preferences" xreflabel="Preferences">
+    <chapter id="chpt.preferences" xreflabel="Preferences">
       <title>Preferences</title>
 
       <para>First of all you should make sure that the audio engine is
       configured properly.  The preferences dialog can be accessed via the tools
       menu (tools -&gt; preferences).</para>
 
-      <section id="sect.preferences.general_tab">
+      <sect1 id="chpt.preferences.general_tab">
         <title>The General tab</title>
         
         <para>On the "General" tab (<xref linkend="fig.preferences.general_tab"/>) you can 
@@ -194,9 +194,9 @@
         </figure>
         
 
-      </section>
+      </sect1>
 
-      <section id="sect.preferences.audio_tab">
+      <sect1 id="chpt.preferences.audio_tab">
         <title>The Audio System tab</title>
 
         <para>From the "Audio System" tab (<xref
@@ -264,9 +264,9 @@
                 Hydrogen uses Jack transport in the presence of an external Jack
                 Timebase master (TBM), it will use the provided measure and
                 tempo information instead of the local one of either the Song's
-                tempo (see <xref linkend="sect.main_toolbar"/>) or the markers
+                tempo (see <xref linkend="chpt.main_toolbar"/>) or the markers
                 added to the Timeline (see <xref
-                linkend="sect.song_editor.tempo_and_markers"/>).  But due to
+                linkend="chpt.song_editor.tempo_and_markers"/>).  But due to
                 limitations in the current implementation, Hydrogen can not set
                 both measure and speed provided by Jack for arbitrary pattern
                 combinations. The user has two options. Either drop all measure
@@ -280,7 +280,7 @@
                 <para>For this option to take effect the J. TRAMS button has to
                 be activated and the J. MASTER button deactivated (next to
                 having a Jack TBM application). See <xref
-                linkend="sect.main_toolbar"/>.</para>
+                linkend="chpt.main_toolbar"/>.</para>
               </listitem>
               <listitem>
                 <para><emphasis role="bold">Connect to Default Output
@@ -330,9 +330,9 @@
 
 
         </itemizedlist>
-      </section>
+      </sect1>
 
-      <section id="sect.preferences.midi_tab">
+      <sect1 id="chpt.preferences.midi_tab">
         <title>The Midi System tab</title>
 
         <para>The "Midi System" tab (<xref linkend="fig.preferences.midi_tab"/>)
@@ -346,7 +346,7 @@
         midi note value of the key you pressed.  Once this is done you can select an Action 
         from the action drop-down list.  Note that some actions (like SELECT_NEXT_PATTERN) 
         also require an Action Param that references the pattern you want to select with this midi action.</para>
-       <para>See <xref linkend="sect.midi"/> for more info on Midi actions.</para>
+       <para>See <xref linkend="chpt.midi"/> for more info on Midi actions.</para>
 
         <figure id="fig.preferences.midi_tab">
           <title>The MIDI System Tab</title>
@@ -356,14 +356,14 @@
             </imageobject>
           </mediaobject>
         </figure>
-      </section>
+      </sect1>
 
-      <section id="sect.preferences.osc_tab">
+      <sect1 id="chpt.preferences.osc_tab">
         <title>The OSC tab</title>
 
         <para>The "OSC" tab (<xref linkend="fig.preferences.osc_tab"/>) let's
         you modify all options associated with OSC (Open Sound Control) (see
-        section <xref linkend="sect.osc"/> for details).
+        section <xref linkend="chpt.osc"/> for details).
         <itemizedlist>
           <listitem>
             <para><emphasis role="bold">Enable OSC support</emphasis>: Allows
@@ -425,18 +425,18 @@
             </imageobject>
           </mediaobject>
         </figure>
-      </section>
+      </sect1>
 
 
 
-      <section id="sect.preferences.appearance_tab">
+      <sect1 id="chpt.preferences.appearance_tab">
         <title>The Appearance tab</title>
 
         <para>The "Appearance" tab (<xref
         linkend="fig.preferences.appearance_tab"/>) let's you modify Hydrogen look 
         and feel (font settings and interface style). On this tab you can also change the 
         VU meters fall-off speed and switch between Single pane and Tabbed interface
-        mode (see <xref linkend="sect.UIoverview"/>)
+        mode (see <xref linkend="chpt.UIoverview"/>)
         </para>
 
         <figure id="fig.preferences.appearance_tab">
@@ -447,10 +447,10 @@
             </imageobject>
           </mediaobject>
         </figure>
-      </section>
+      </sect1>
 
 
-      <section id="sect.preferences.audio_engine_tab">
+      <sect1 id="chpt.preferences.audio_engine_tab">
         <title>The Audio Engine tab (debug only)</title>
 
         <para>The "Audio Engine" tab (<xref linkend="fig.preferences.audio_engine_tab"/>) is a window that shows
@@ -469,12 +469,9 @@
             </imageobject>
           </mediaobject>
         </figure>
-      </section>
-
-
-    </section>
+      </sect1>
   </chapter>
-
+</part>
 
   <!--
       ####################
@@ -482,11 +479,11 @@
       ####################
   -->
 
-  <chapter id="chap.using_hydrogen">
+  <part id="part.using_hydrogen">
     <title>Using Hydrogen</title>
 
 <!-- FILETYPES -->
-    <section id="sect.file_types">
+    <chapter id="chpt.file_types">
       <title>Used Filetypes</title>
 
       <para>Before working with Hydrogen, please familiarize with these
@@ -514,10 +511,10 @@
           samples.</para>
         </listitem>
       </itemizedlist>
-    </section>
+    </chapter>
 
 <!--   KEYBOARD AND MOUSE -->
-    <section id="sect.keyboard_and_mouse">
+    <chapter id="chpt.keyboard_and_mouse">
       <title>Keyboard and Mouse</title>
       <para>
         The Hydrogen user interface is designed so that it can be
@@ -578,10 +575,10 @@
         Most other keys on the keyboard can be used to play
         samples and enter notes in the same way a MIDI keyboard can be.
       </para>
-    </section>
+    </chapter>
 
 <!--   UI OVERVIEW  -->
-    <section id="sect.UIoverview">
+    <chapter id="chpt.UIoverview">
       <title>The main User Interface : an overview</title>
 
       <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
@@ -612,12 +609,11 @@
           </imageobject>
         </mediaobject>
       </figure>
-
       
-    </section>
+    </chapter>
 
 <!--  MAIN MENU -->
-    <section id="sect.main_menu">
+    <chapter id="chpt.main_menu">
       <title>Main menu</title>
 
       <para><emphasis role="bold">Projects</emphasis>: this menu offers file
@@ -666,7 +662,7 @@
         </listitem>
         <listitem>
           <para><emphasis>Export song</emphasis> - Export current song in WAV
-          format (see <xref linkend="sect.song_editor.export_song"/>)</para>
+          format (see <xref linkend="chpt.song_editor.export_song"/>)</para>
         </listitem>
         <listitem>
           <para><emphasis>Export Lilypond file</emphasis> - This is a first version of the LilyPond export.
@@ -734,7 +730,7 @@
           <para><emphasis>Import</emphasis> - Imports another drumkit from the local filesystem.
               To load another drumkit in your
               current working session of Hydrogen, read <xref
-              linkend="sect.sound_library"/>.
+              linkend="chpt.sound_library"/>.
           </para>
         </listitem>
         <listitem>
@@ -743,7 +739,7 @@
               role="bold">NOT</emphasis> RSS compliant (see <ulink
               url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
               website</ulink> for an example). To load another drumkit in your
-              current working session of Hydrogen, read <xref linkend="sect.sound_library"/>.
+              current working session of Hydrogen, read <xref linkend="chpt.sound_library"/>.
           </para>
         </listitem>
       </itemizedlist>
@@ -800,7 +796,7 @@
   
         <listitem>
           <para><emphasis>Preferences</emphasis> - Open the main preferences
-          window. Read <xref linkend="sect.preferences"/> on how to configure
+          window. Read <xref linkend="chpt.preferences"/> on how to configure
           Hydrogen.</para>
         </listitem>
        </itemizedlist>
@@ -813,7 +809,7 @@
         <listitem>
           <para><emphasis>Show audio engine info - </emphasis>Open a monitor
           with various <link
-          linkend="sect.preferences.audio_engine_tab">stats</link></para>
+          linkend="chpt.preferences.audio_engine_tab">stats</link></para>
         </listitem>
         <listitem>
           <para><emphasis>debug action - </emphasis> Insert debug
@@ -844,11 +840,11 @@
           <para><emphasis>Donate - </emphasis> Make a donation to developers/mantainers</para>
         </listitem>
       </itemizedlist>
-    </section>
+    </chapter>
 
 
 <!--   MAIN TOOLBAR  -->
-    <section id="sect.main_toolbar">
+    <chapter id="chpt.main_toolbar">
       <title>The main toolbar</title>
 
       <para>Before analyzing the two main frames of Hydrogen, let's take a quick
@@ -908,9 +904,9 @@
 
           <para>Set Pattern/Song Mode. When Song mode is selected Hydrogen will play 
           the complete song. This is the sequence of patterns you have created in the Song 
-          Editor (see <xref linkend="sect.song_editor"/>). When Pattern mode is selected 
+          Editor (see <xref linkend="chpt.song_editor"/>). When Pattern mode is selected 
           Hydrogen will play the pattern that is currently selected, and thus displayed 
-          in the Pattern Editor (see <xref linkend="sect.pattern_editor"/>).</para>
+          in the Pattern Editor (see <xref linkend="chpt.pattern_editor"/>).</para>
         </listitem>
         
         <listitem>
@@ -955,7 +951,7 @@
             <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
           </imageobject></inlinemediaobject></para>
 
-          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as Jack timebase 'master' by sending additional information, like the current speed, to other Jack clients. Else it will either act as 'slave' in the presence of another timebase master (e.g. Ardour) or as a stand-alone client in the absence of it. Please note that when acting as 'slave' Hydrogen will obey the tempo provided by the timebase master and instead of its own tempo markers (see <xref linkend="sect.preferences.audio_tab"/>).</para>
+          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as Jack timebase 'master' by sending additional information, like the current speed, to other Jack clients. Else it will either act as 'slave' in the presence of another timebase master (e.g. Ardour) or as a stand-alone client in the absence of it. Please note that when acting as 'slave' Hydrogen will obey the tempo provided by the timebase master and instead of its own tempo markers (see <xref linkend="chpt.preferences.audio_tab"/>).</para>
         </listitem>
         
        <listitem>
@@ -973,8 +969,7 @@
 
 
     <!--  TAP TEMPO -->
-
-      <section id="sect.tap_tempo" xreflabel="Tap Tempo and BeatCounter">
+      <sect1 id="sect.tap_tempo" xreflabel="Tap Tempo and BeatCounter">
         <title>Tap Tempo and BeatCounter</title>
 
         <para>It is possible to change the tempo at any time using the Tap Tempo and
@@ -1041,7 +1036,7 @@
 
         <para>Some of the settings to adjust the BeatCounter's latency
         compensation, are located on the General tab of the Preferences Dialog 
-        (see <xref linkend="sect.preferences.general_tab"/>
+        (see <xref linkend="chpt.preferences.general_tab"/>
         ). Here you will find two spinboxes:</para>
 
         <itemizedlist>
@@ -1062,13 +1057,13 @@
         the speed of your hardware, audio devices, drivers, etc.  Using the
         BeatCounter effectively requires practice.</para>
 
-      </section>
+      </sect1>
 
-    </section>
+    </chapter>
 
 
 <!-- SONG EDITOR -->
-    <section id="sect.song_editor">
+    <chapter id="chpt.song_editor">
       <title>Song Editor</title>
 
       <para>The "Song Editor" (<xref linkend="fig.song_editor"/>) gives an
@@ -1089,7 +1084,7 @@
       </figure>
       </para>
 
-     <section id="sect.song_editor.main_controls">
+     <sect1 id="chpt.song_editor.main_controls">
       <title>Main controls</title>
       <para>
         <inlinemediaobject>
@@ -1179,15 +1174,15 @@
             <imagedata fileref="img/stacked_mode_V3.png" format="PNG"/>
             </imageobject></inlinemediaobject>
             or to "Stacked pattern mode".</para>
-            <para>For more info on this see the SELECT_NEXT_PATTERN midi action in <xref linkend="sect.midi"/>.
+            <para>For more info on this see the SELECT_NEXT_PATTERN midi action in <xref linkend="chpt.midi"/>.
           </para>
         </listitem>
       </itemizedlist>
 
-      </section>
+      </sect1>
       
       
-     <section id="sect.song_editor.tempo_and_markers">
+     <sect1 id="chpt.song_editor.tempo_and_markers">
      <title>Tempo markers and song Tags</title>
        <para>This section describes how you can define tempo changes and 
        how you can add tags to your song.</para>
@@ -1253,9 +1248,9 @@
           </mediaobject>
          </informalfigure>
        </para>
-     </section>
+     </sect1>
 
-     <section id="sect.song_editor.director" xreflabel="Director">
+     <sect1 id="chpt.song_editor.director" xreflabel="Director">
        <title>Director</title>
        <para>
          Now all we need is a way to see the tags we have entered.  This can be done
@@ -1279,9 +1274,9 @@
          the next upcoming tag.  This way you have a nice overview of what is going on,
          and what is about to happen in the song.
        </para>
-     </section>
+     </sect1>
 
-     <section id="sect.song_editor.playbackTrack">
+     <sect1 id="chpt.song_editor.playbackTrack">
 		 <title>Using a playback track</title>
 		 <para>This section describes how you can use a playback track to write drums for an existing track.
 				This useful when you want to write a drumtrack to an already existing instrumental track, for example a guitar track.
@@ -1322,9 +1317,9 @@
 			As an alternative to the use of the Edit Button, you can add a new playback track by drag'n'drop, just drag an audio file to the visualation area.
 			 When a playback track track is loaded, it will be played everytime Hydrogen is in "Play" mode and the song mode is activated. 
 		</para>
-	 </section>
+	 </sect1>
 
-     <section id="sect.song_editor.pattern_options">
+     <sect1 id="chpt.song_editor.pattern_options">
      <title>Patterns options</title>
 
       <para>Right-clicking the name of a pattern will show you a menu 
@@ -1432,9 +1427,9 @@
 
 
      
-     </section>
+     </sect1>
 
-     <section id="sect.song_editor.export_song" xreflabel="Export Song">
+     <sect1 id="chpt.song_editor.export_song" xreflabel="Export Song">
      <title>Exporting your song</title>
 
       <para>Once your song is finished you can export it to an audio file.
@@ -1487,7 +1482,7 @@
 
       <note>
        <para>
-       If you have tempo changes in your song (see <xref linkend="sect.song_editor.tempo_and_markers"/>) 
+       If you have tempo changes in your song (see <xref linkend="chpt.song_editor.tempo_and_markers"/>) 
        these tempo changes will not be exported.  This is a know limitation of the current versions 
        (including 0.9.6)
        </para>
@@ -1497,14 +1492,12 @@
        </para>
       </note>
 
-     </section>
-
-
-    </section>
+     </sect1>
+    </chapter>
     
 
 <!--  PATTERN EDITOR  -->
-    <section id="sect.pattern_editor">
+    <chapter id="chpt.pattern_editor">
     
       <title>Pattern Editor</title>
 
@@ -1539,7 +1532,7 @@
         </figure>
       </para>
       
-      <section id="sect.pattern_editor.controls"> 
+      <sect1 id="chpt.pattern_editor.controls"> 
        
         <title>Pattern Editor Controls</title>
         <para>The top part of the pattern editor contains a number of controls :</para>
@@ -1557,7 +1550,7 @@
          <itemizedlist mark="opencircle">
          
           <!-- TODO DEPRECATED widget. MOVE TO OTHER CHAPTER?? <listitem><para><emphasis role="bold">Note Length / Note off</emphasis> : these are 2 different
-            ways to define the duration of a note. See <xref linkend="sect.pattern_editor.sequence_area"/> for usage.</para></listitem>  -->
+            ways to define the duration of a note. See <xref linkend="chpt.pattern_editor.sequence_area"/> for usage.</para></listitem>  -->
 
            <listitem>
                 <para><emphasis role="bold">SIZE</emphasis>:
@@ -1625,9 +1618,9 @@
 
          </itemizedlist>
 
-      </section>
+      </sect1>
       
-      <section id="sect.pattern_editor.drumkit">
+      <sect1 id="chpt.pattern_editor.drumkit">
       <title>Pattern Editor Drumkit</title>
         <para>The section on the left shows you what drumkit is currently selected (GMkit by default) and below that you can see
         the instruments that are part of this kit.</para>
@@ -1701,9 +1694,9 @@
           </imageobject>
         </mediaobject>
       </informalfigure>
-      </section>
+      </sect1>
 
-      <section id="sect.pattern_editor.sequence_area">
+      <sect1 id="chpt.pattern_editor.sequence_area">
       <title>Pattern Editor Sequence area</title>
         <para>This is where it all happens, this is where you can make music :-)</para>
         <para>In this area you can see your selected pattern and add notes for any instrument. 
@@ -1776,15 +1769,15 @@
            <imagedata fileref="img/Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
-        (see <xref linkend="sect.main_menu"/>) and simply playing your pattern on your 
+        (see <xref linkend="chpt.main_menu"/>) and simply playing your pattern on your 
         MIDI drum or your pc keyboard (see instrument mapping above).  This is probably 
         a more musical way of creating a pattern, but it's up to you to decide what works best for you.
-        (Also see <xref linkend="chap.create_song"/> for a basic
+        (Also see <xref linkend="part.create_song"/> for a basic
         walk-through of how the pattern editor works) </para>
  
-      </section>
+      </sect1>
       
-      <section id="sect.pattern_editor.note_properties">
+      <sect1 id="chpt.pattern_editor.note_properties">
       <title>Pattern Editor Note Properties</title>
       <para>Clicking on an instrument or adding/removing a note next to it 
       will select this instrument.  Once an instrument is selected the note properties 
@@ -1860,7 +1853,7 @@
           </para>
           <para>
             (Note that the pattern editor in piano roll mode (see <xref
-            linkend="sect.pattern_editor.piano_mode" />) can also be used to
+            linkend="chpt.pattern_editor.piano_mode" />) can also be used to
             change the note value of existing notes)
           </para>
         </listitem>
@@ -1907,9 +1900,9 @@
         </itemizedlist>
       </para>
 
-      </section>
+      </sect1>
 
-      <section id="sect.pattern_editor.piano_mode">
+      <sect1 id="chpt.pattern_editor.piano_mode">
       <title>Pattern Editor Piano mode</title>
       <para>Drum mode (see <xref linkend="fig.PatternEditor_DrumMode"/>) focuses on using Hydrogen as a drum machine.
       If you are using Hydrogen as an instrument there is a big chance that the Piano mode is for you.
@@ -1924,13 +1917,13 @@
            </imageobject>
          </mediaobject>
         </figure>
-      </section>
+      </sect1>
      
-    </section>
+    </chapter>
 
 
 <!-- MIXER -->
-    <section id="sect.mixer" xreflabel="Mixer">
+    <chapter id="chpt.mixer" xreflabel="Mixer">
       <title>Mixer</title>
 
       <para>The Mixer window can be opened by pressing Alt+M, by clicking 
@@ -1951,7 +1944,7 @@
       </figure>
       </para>
 
-    <section id="sect.mixer.channel_strips">
+    <sect1 id="chpt.mixer.channel_strips">
       <title>Instrument channel strips</title>
        <para>From top to bottom : the 2 top elements on the strip are a 'play' button / 'trig' led combination.
             (
@@ -2007,9 +2000,9 @@
       are settings that are relative to the settings in the Mixer window !</para>
 
 
-    </section>
+    </sect1>
     
-    <section id="sect.fx_rack_LADSPA">
+    <sect1 id="sect.fx_rack_LADSPA">
       <title>FX rack and LADSPA plugins</title>
        <para>The FX rack has 4 bays where you can load a LADSPA effect plugin, but before
         you can load any plugins these must be installed (surprised ?  ;-)</para>
@@ -2108,9 +2101,9 @@
       <para>After you have selected the FX and tweaked it's parameters you can use the 
       FX return knob to increase/decrease how much of this FX will be returned to the master output.</para>
 
-    </section>
+    </sect1>
      
-    <section id="sect.master">
+    <sect1 id="sect.master">
       <title>Master section</title>
        <para>
        
@@ -2142,7 +2135,7 @@
         
      </itemizedlist>
       
-      Note that Hydrogen can also be switched to 'per instrument output' mode (see <xref linkend="sect.preferences.audio_tab"/>),
+      Note that Hydrogen can also be switched to 'per instrument output' mode (see <xref linkend="chpt.preferences.audio_tab"/>),
       and in this mode all channel strip outputs will be available in Jack (not just the Master output).  
       This allows you to route the individual instruments directly into any other Jack enabled application (eg Ardour) and gives you
       a lot more flexibility.</para>
@@ -2163,7 +2156,7 @@
        will enable/disable the VU meters.
        
        <note>
-       <para>The VU meter fall off speed can be configured in the preferences window (see <xref linkend="sect.preferences.appearance_tab"/>)</para>
+       <para>The VU meter fall off speed can be configured in the preferences window (see <xref linkend="chpt.preferences.appearance_tab"/>)</para>
        </note>
        
       </para>
@@ -2273,13 +2266,11 @@
        </note>
 
 
-    </section>
+    </sect1>
     
-    
-    </section>
-
-    <section id="sect.sound_library" xreflabel="Instrument rack">
-      <title>Sound Library (Drumkit/Pattern/Song Manager)</title>
+  </chapter>
+  <chapter id="chpt.sound_library" xreflabel="Instrument rack">
+    <title>Sound Library (Drumkit/Pattern/Song Manager)</title>
 
       <para>First of all a little history on the Sound library and Drumkits. Hydrogen began as a 
       dedicated drum machine but has evolved into a versatile sound synthesizer/sequencer 
@@ -2287,7 +2278,7 @@
       "Drumkit" terminology is slightly misleading. You can load any kind of sound into a
       "Drumkit" and manipulate that sound just like playing a regular synthesizer. This is 
       also the main reason why the Piano mode was added to the pattern editor 
-      (see <xref linkend="sect.pattern_editor.piano_mode"/>).</para>
+      (see <xref linkend="chpt.pattern_editor.piano_mode"/>).</para>
       <para>In this manual (and in other documentation) "Drumkit" and "Soundlibrary" 
       frequently mean the same thing, but not always. The diagram below shows the actual 
       relation between the Soundlibrary and Drumkits:
@@ -2319,7 +2310,7 @@
       </figure>
       </para>
 
-      <section id="sect.systemdrumkits">
+      <sect1 id="sect.systemdrumkits">
         <title>System Drumkits</title>
 
         <para>This lists the drumkits that were installed by your system
@@ -2339,9 +2330,9 @@
         button, click and drag the instrument into your current kit.  The
         instrument will be added to the drumkit that you currently have
         loaded.</para>
-      </section>
+      </sect1>
 
-      <section id="sect.userdrumkits">
+      <sect1 id="sect.userdrumkits">
         <title>(Adding) User Drumkits</title>
 
         <para>These are your own drum kits that you can manage yourself.  They
@@ -2407,17 +2398,17 @@
        </para>
 
 
-      </section>
-      <section id="sect.sl.songs">
+      </sect1>
+      <sect1 id="sect.sl.songs">
         <title>Songs in the Sound Library</title>
 
         <para>To save songs in the Sound Library, put them in your data
         directory underneath the <filename role="directory">songs</filename>
         folder (usually <filename role="directory">$HOME/.hydrogen/data/songs)</filename>.
         To remove them, remove the file from that folder.</para>
-      </section>      
+      </sect1>      
       
-      <section id="sect.sl.patterns">
+      <sect1 id="sect.sl.patterns">
         <title>Patterns in the Sound Library</title>
 
         <para>Before you save a pattern to the sound library, be
@@ -2433,10 +2424,10 @@
         "<guimenuitem>Save Pattern</guimenuitem>".  It will now appear in the Sound
         Library underneath "<guilabel>Patterns</guilabel>" and the category that
         you assigned to the pattern.</para>
-        </section>
-    </section>
+      </sect1>
+    </chapter>
 
-    <section id="sect.instrument_editing">
+    <chapter id="chpt.instrument_editing">
       <title>Drumkits and Instrument Editing</title>
 
 
@@ -2444,7 +2435,7 @@
       <!-- Need to add an explanation of what the instrument list
            and instrument editor are. -->
 
-      <section id="sect.instrument_editing.concepts">
+      <sect1 id="chpt.instrument_editing.concepts">
         <title>Concepts</title>
 
         <para>
@@ -2525,8 +2516,8 @@
           movies, and famous people speaking.  Be creative!
         </para>
 
-      </section>
-      <section id="sect.instrument_editing.new_kit">
+      </sect1>
+      <sect1 id="chpt.instrument_editing.new_kit">
        <title>Creating a New Drumkit</title>
        <para>In the next paragraphs we will show you how to create a complete drumkit.  
        Keeping in mind the 'Soundlibrary hierarchy' (see <xref linkend="fig.SoundlibraryHierarchy"/>)
@@ -2539,7 +2530,7 @@
        groups, a low-pass resonance filter, and pitch randomization.</para>
 
        <para>TIP : Instead of creating your own drumkit, you can also use or download
-       existing drumkits using the <xref linkend="sect.sound_library"/>.</para>
+       existing drumkits using the <xref linkend="chpt.sound_library"/>.</para>
 
         <para>Lets make a  brand new drum kit :</para>
         <itemizedlist>
@@ -2602,9 +2593,9 @@
           </listitem>
         </itemizedlist>
 
-      </section>
+      </sect1>
       
-      <section id="sect.instrument_editing.parameters">
+      <sect1 id="chpt.instrument_editing.parameters">
         <title>Instrument Parameters</title>
 
         <para>In the instrument editor, click on the
@@ -2667,10 +2658,10 @@
         </itemizedlist>
 
         <para>It's important that you understand <xref
-        linkend="sect.instrument_editing.concepts"/> in order to continue
+        linkend="chpt.instrument_editing.concepts"/> in order to continue
         on.</para>
 
-        <section id="sect.instrument_editing.envelope_parameters">
+        <sect2 id="chpt.instrument_editing.envelope_parameters">
           <title>Envelope Parameters</title>
 
           <para>When the instrument is triggered, its volume is run through an
@@ -2725,9 +2716,9 @@
           note while you are holding it.  It only holds the gain (volume)
           parameter during that time.</para>
 
-        </section>
+        </sect2>
 
-        <section id="sect.instrument_editing.gain_and_mute_group">
+        <sect2 id="chpt.instrument_editing.gain_and_mute_group">
           <title>Gain and Mute Group</title>
 
           <para>The gain sets the overall volume for the sample.  This gain is
@@ -2761,9 +2752,9 @@
           high-hat instruments, you can set all their mute group parameters to
           1.  To have a snare drum mute group, set their mute group parameters
           to 2.)</para>
-        </section>
+        </sect2>
         
-        <section id="sect.instrument_editing.auto_stop_note">
+        <sect2 id="chpt.instrument_editing.auto_stop_note">
           <title>Auto Stop-Note</title>
 
           <para>If this box is checked Hydrogen will immediately stop any playing sample that
@@ -2777,8 +2768,8 @@
           For the voice sample this option is useful if you are trying to get that 'stuttering' effect.
 
           </para>
-        </section>
-        <section id="sect.instrument_editing.apply_velocity">
+        </sect2>
+        <sect2 id="chpt.instrument_editing.apply_velocity">
           <title>Apply Velocity</title>
           <para>
              This lets the user decide if Hydrogen will apply the note velocity to the sample being played.
@@ -2794,9 +2785,9 @@
               but the sample gain will not be changed.
               This is useful for set of samples that already have their gain "hard-coded".
           </para>
-        </section>  
+        </sect2>  
 
-        <section id="sect.instrument_editing.filter">
+        <sect2 id="chpt.instrument_editing.filter">
           <title>Filter parameters</title>
 
           <para>The filter is a low-pass resonance filter.  If you don't wish to
@@ -2825,9 +2816,9 @@
                  -gabriel
             -->
           </note>
-        </section>
+        </sect2>
         
-        <section id="sect.instrument_editing.pitch_shift_parameters">
+        <sect2 id="chpt.instrument_editing.pitch_shift_parameters">
           <title>Pitch Shift parameters</title>
           <para> The first two knobs control the pitch shift offset.
                  You can use it to change the tuning of the instrument.
@@ -2840,10 +2831,10 @@
               &times; value.  Using this sparingly can help your sequences to sound
               more like a real drummer.
           </para>
-        </section>   
+        </sect2>   
         
 
-        <section id="sect.instrument_editing.midi_out_settings">
+        <sect2 id="chpt.instrument_editing.midi_out_settings">
           <title>Midi out settings</title>
 
           <para>Hydrogen is capable of generating midi messages that you can use
@@ -2860,8 +2851,8 @@
           This way you can use Hydrogen as a pure sequencer for other apps, or combine the 
           internal Hydrogen sampler with multiple external apps/devices.</para>
 
-        </section>
-        <section id="sect.instrument_editing.HH_pressure_group">
+        </sect2>
+        <sect2 id="chpt.instrument_editing.HH_pressure_group">
           <title>Hi-Hat Pressure Group</title>
             <para>The Hi-Hat is a particular instrument of the drumkit as its sound can be changed by pressing the foot pedal.
             </para>
@@ -2880,12 +2871,12 @@
                when the hi-hat pedal is pressed between 0 and 20 the closed hi-hat is played.
             </para>
 
-        </section>      
+        </sect2>      
         
-      </section>
+      </sect1>
       
       
-      <section id="sect.instrument_editing.new_instrument">
+      <sect1 id="chpt.instrument_editing.new_instrument">
         <title>Creating an Instrument and Layers</title>
 
         <para>For each instrument in a drum kit, you can load several samples
@@ -2945,7 +2936,7 @@
         get the different samples to sound.  Now set the pattern to loop and
         notice how your different samples are getting triggered.  (To learn
         about editing a pattern, see <xref
-        linkend="sect.pattern_editor"/>)</para>
+        linkend="chpt.pattern_editor"/>)</para>
 
         <para>For each layer, you can set the <guibutton>Gain</guibutton> and
         the <guibutton>Pitch</guibutton>.  The pitch also has a
@@ -2985,7 +2976,7 @@
         <para>You can hear the sample in a layer by clicking the layer id (just 
         below the 'General' and 'Layers' buttons) and the 'Delete Layer' button 
         will delete the currently selected layer.</para>
-        <section id="sect.instrument_editing.new_instrument.sample_selection">
+        <sect2 id="chpt.instrument_editing.new_instrument.sample_selection">
           <title>Sample Selection</title>
             <para>
                 Certain set of samples contain different sample versions of the same sound for the same note/velocity
@@ -3023,14 +3014,10 @@
                    </para> 
                 </listitem>
             </itemizedlist>
-        </section>
+        </sect2>
+      </sect1>
 
-        
-        
-
-      </section>
-
-      <section id="sect.layer_editing">
+      <sect1 id="sect.layer_editing">
         <title>Sample Editor</title>
         <para>So far we have created a multilayered Drumkit, set a number of 
         instrument parameters, played with velocity settings and so on.  Now it's 
@@ -3065,7 +3052,7 @@
         
         <para>The Sample Editor consists of 3 sections (as indicated in the figure above):</para>
        
-        <section id="sect.layer_editing.section1">
+        <sect2 id="sect.layer_editing.section1">
         <title>Sample Editor in/out points</title>
         <para>
         In this section you can set the start, stop and loop points for the sample by dragging the 
@@ -3098,9 +3085,9 @@
         <para>If you want to hear a preview of the tweaking you have done so far, you first need to
         press the 'Apply Changes' button (@ the bottom of section 3) and then the Play button to
         hear the result.</para>
-        </section>
+        </sect2>
         
-        <section id="sect.layer_editing.section2">
+        <sect2 id="sect.layer_editing.section2">
         <title>Sample Editor rubberband</title>
         <para>This section of the Sample Editor allows you to control the Rubberband settings.
         Rubberband is a tool that can change the tempo of a sample without changing 
@@ -3109,7 +3096,7 @@
         (rubberband-cli).  For other linux distros check your package manager.  For other platforms
         please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
         </ulink>.  After installing rubberband you should check if the path to the rubberband cli is 
-        configured correctly (see <xref linkend="sect.preferences.general_tab"/>).</para>
+        configured correctly (see <xref linkend="chpt.preferences.general_tab"/>).</para>
         
         <para>If rubberband is installed correctly you will have access to the rubberband 
         settings, and an extra button named 'RUB' will be available in the Main Toolbar,
@@ -3141,10 +3128,10 @@
         <para><emphasis role="bold">Note</emphasis>: If you want Hydrogen to recalculate the sample length on the fly (using rubberband)
         you must enable the 'RUB' button (see figure above).</para>
         
-        </section>
+        </sect2>
         
         
-        <section id="sect.layer_editing.section3">
+        <sect2 id="sect.layer_editing.section3">
         <title>Sample Editor volume/pan</title>
         <para>In the bottom section of the Sample Editor you can see the end result 
         of the tweaks you have made by pressing the Apply Changes button.  You can
@@ -3156,11 +3143,11 @@
         Left clicking in the bottom window will ad a node to an envelope and also 
         allows you to drag an existing node.  Right-clicking a node will delete it. 
         Don't forget to Apply Changes before you play your tweaked sample.</para>
-        </section>
+        </sect2>
         
-      </section>
+      </sect1>
       
-      <section id="sect.instrument_editing.tips">
+      <sect1 id="chpt.instrument_editing.tips">
         <title>Tips on Editing Instruments</title>
 
         <para>With all of the different parameters available to tweak, it can be
@@ -3215,18 +3202,16 @@
         that change are: anything time-base (like attack and release) and
         anything frequency based (like the cutoff frequency).</para>
 
-      </section>
-    </section>
+      </sect1>
+    </chapter>
 
-   
-    
-    <section id="sect.midi">
+    <chapter id="chpt.midi">
       <title>Midi</title>
       
       <para>In this section you can find more info about defining MIDI actions 
        and how they can be useful for you.  Before you can work with midi actions
        you should have your Midi devices, drivers and connections configured
-       correctly (see <xref linkend="sect.preferences.midi_tab"/>).
+       correctly (see <xref linkend="chpt.preferences.midi_tab"/>).
       </para>
 
       <para>Lets take a look at the available options :
@@ -3239,7 +3224,7 @@
         </informalfigure>                
       </para>
 
-      <section id="sect.midi.events">
+      <sect1 id="chpt.midi.events">
         <title>Midi Events</title>
 
         <para>An Event is an incoming Midi message, coming from a MIDI controller or 
@@ -3269,7 +3254,7 @@
        <para>
        The Param. (parameter) value to the right of the Event is the identifier of the note/button/controller
        that is linked to this Action.  This parameter can be entered manually, or automatically by 
-       using the Midi learn function (see <xref linkend="sect.preferences.midi_tab"/>).
+       using the Midi learn function (see <xref linkend="chpt.preferences.midi_tab"/>).
        </para>       
        
        <note><para>You can also activate the Midi learn function by Shift-clicking most of the gui elements.  
@@ -3281,10 +3266,10 @@
        </para></note>
        
         
-       </section>
+       </sect1>
        
 
-      <section id="sect.midi.actions">
+      <sect1 id="chpt.midi.actions">
         <title>Midi Actions</title>
 
         <para>Next is a list of the available Actions: an Action describes what Hydrogen should do 
@@ -3297,31 +3282,31 @@
 
 
       <itemizedlist mark="opencircle">
-      <listitem id="sect.midi.actions.play" xreflabel="PLAY"><para>
+      <listitem id="chpt.midi.actions.play" xreflabel="PLAY"><para>
 	      <emphasis role="bold">PLAY</emphasis> : starts playback
 	    </para></listitem>
 	    
-      <listitem id="sect.midi.actions.pause" xreflabel="PAUSE"><para>
+      <listitem id="chpt.midi.actions.pause" xreflabel="PAUSE"><para>
 	      <emphasis role="bold">PAUSE</emphasis> : pauses playback
 	    </para></listitem>
 	    
-      <listitem id="sect.midi.actions.stop" xreflabel="STOP"><para>
+      <listitem id="chpt.midi.actions.stop" xreflabel="STOP"><para>
 	    <emphasis role="bold">STOP</emphasis> : stops playback and moves the
           playhead to the beginning of the song 
 	    </para></listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : Works the same as
-          <xref linkend="sect.midi.actions.play"/> if the
+          <xref linkend="chpt.midi.actions.play"/> if the
           playback has not started yet and same as. 
-          <xref linkend="sect.midi.actions.pause"/> otherwise. (The playhead will not return
+          <xref linkend="chpt.midi.actions.pause"/> otherwise. (The playhead will not return
 	      to the start of the song, but will stay at its current position)
 	    </para></listitem>
 	    
       <listitem><para>
-        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <xref linkend="sect.midi.actions.play"/> if the
+        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <xref linkend="chpt.midi.actions.play"/> if the
                   playback has not started yet and same as.
-                  <xref linkend="sect.midi.actions.stop"/> otherwise.
+                  <xref linkend="chpt.midi.actions.stop"/> otherwise.
 	    </para></listitem>
 	    
       <listitem><para>
@@ -3365,7 +3350,7 @@
 	      <emphasis role="bold">BPM_CC_RELATIVE</emphasis> : changes the tempo relative to the current tempo, using a controller
 	    </para></listitem>
 	    
-      <listitem id="sect.midi.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
+      <listitem id="chpt.midi.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
 	      <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis> : changes the Master output volume, relative
 	      to the current setting. For a value of 0 it sets the volume of
           the master fader to 0. For a value of one 1 it increases its
@@ -3373,18 +3358,18 @@
           0.05. (-1: -0.05 , 0: 0 , 1: +0.05)
 	    </para></listitem>
 	    
-      <listitem id="sect.midi.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
+      <listitem id="chpt.midi.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
 	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : sets the volume of the master fader to the 
 	      absolute value of the midi control (use with midi fader or pot)
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="sect.midi.actions.master_volume_relative"/>, but applies to
+	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="chpt.midi.actions.master_volume_relative"/>, but applies to
 	      the channel strip defined in the Action Parameter **
 	    </para></listitem>
 	    
       <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="sect.midi.actions.master_volume_absolute"/>, but applies to
+	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="chpt.midi.actions.master_volume_absolute"/>, but applies to
 	      the channel strip defined in the Action Parameter **
 	    </para></listitem>
 	    
@@ -3393,7 +3378,7 @@
          the value you enter in the Action Parameter determines the channel strip this action applies to **
       </para></listitem>
 	    
-      <listitem id="sect.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
+      <listitem id="chpt.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
         <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : if Hydrogen is in <emphasis>Pattern Mode</emphasis>,
         switches to pattern that is defined in the Action Parameter **. If
         Hydrogen is in <emphasis>Song Mode</emphasis>, the command will have no
@@ -3402,8 +3387,8 @@
 	    
       <listitem><para>
         <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : works as
-        <xref linkend="sect.midi.actions.select_next_pattern"/> combined with
-        <xref linkend="sect.midi.actions.play"/>
+        <xref linkend="chpt.midi.actions.select_next_pattern"/> combined with
+        <xref linkend="chpt.midi.actions.play"/>
 	    </para></listitem>
 	    
       <listitem><para>
@@ -3439,10 +3424,11 @@
       </itemizedlist>
 
 
-     </section>
+     </sect1>
 
-   </section>
-	<section id="sect.osc" xreflabel="OSC">
+   </chapter>
+   
+	<chapter id="chpt.osc" xreflabel="OSC">
 		<title>OSC</title>
 		<para>Open Sound Control (OSC) is a protocol for communication among
         programs, computers, and hardware, like synthesizers or multimedia
@@ -3468,7 +3454,7 @@
 		can be found in there as well.
         </para>
         
-        <section id="sect.osc.messages">
+        <sect1 id="chpt.osc.messages">
           <title>OSC messages</title>
           <para>The syntax for sending the commands is</para>
 
@@ -3534,7 +3520,7 @@
           </listitem>
         </itemizedlist>
 
-          <table frame='all' id='sect.osc.messages.playback.table'>
+          <table frame='all' id='chpt.osc.messages.playback.table'>
             <title>OSC playback messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -3549,19 +3535,19 @@
                 </row>
               </thead>
               <tbody>
-                <row id="sect.osc.command.play" xreflabel="/Hydrogen/PLAY/">
+                <row id="chpt.osc.command.play" xreflabel="/Hydrogen/PLAY/">
                   <entry>/Hydrogen/<emphasis role="bold">PLAY</emphasis>/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
                   <entry>Starts playback.</entry>
                 </row>
-                <row id="sect.osc.command.pause" xreflabel="/Hydrogen/PAUSE/">
+                <row id="chpt.osc.command.pause" xreflabel="/Hydrogen/PAUSE/">
                   <entry>/Hydrogen/<emphasis role="bold">PAUSE</emphasis>/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
                   <entry>Stops playback.</entry>
                 </row>
-                <row id="sect.osc.command.stop" xreflabel="/Hydrogen/STOP/">
+                <row id="chpt.osc.command.stop" xreflabel="/Hydrogen/STOP/">
                   <entry>/Hydrogen/<emphasis role="bold">STOP</emphasis>/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
@@ -3572,19 +3558,19 @@
                   <entry>/Hydrogen/<emphasis role="bold">PLAY_PAUSE_TOGGLE</emphasis>/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
-                  <entry>Works the same as <xref linkend="sect.osc.command.play"/> if the
+                  <entry>Works the same as <xref linkend="chpt.osc.command.play"/> if the
                   playback has not started yet and same as.
-                  <xref linkend="sect.osc.command.pause"/> otherwise. (The playhead will not
+                  <xref linkend="chpt.osc.command.pause"/> otherwise. (The playhead will not
                   return to the start of the song, but will stay at its current
-                  position).</entry> 
+                  position).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/<emphasis role="bold">PLAY_STOP_TOGGLE</emphasis>/</entry>
                   <entry>' ',[f]</entry>
                   <entry></entry>
-                  <entry>Works the same as <xref linkend="sect.osc.command.play"/> if the
+                  <entry>Works the same as <xref linkend="chpt.osc.command.play"/> if the
                   playback has not started yet and same as.
-                  <xref linkend="sect.osc.command.stop"/> otherwise.</entry>
+                  <xref linkend="chpt.osc.command.stop"/> otherwise.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/<emphasis role="bold">RECORD_READY</emphasis>/</entry>
@@ -3616,7 +3602,7 @@
             </tgroup>
           </table>
 
-          <table frame='all' id='sect.osc.messages.transport.table'>
+          <table frame='all' id='chpt.osc.messages.transport.table'>
             <title>OSC transport messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -3643,7 +3629,7 @@
                   <entry></entry>
                   <entry>Moves the playhead to the previous pattern/bar.</entry>
                 </row>
-                <row id="sect.osc.command.select_next_pattern" xreflabel="/Hydrogen/SELECT_NEXT_PATTERN/">
+                <row id="chpt.osc.command.select_next_pattern" xreflabel="/Hydrogen/SELECT_NEXT_PATTERN/">
                   <entry>/Hydrogen/<emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>/</entry>
                   <entry>f</entry>
                   <entry>[0,]</entry>
@@ -3655,8 +3641,8 @@
                   <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis>/</entry>
                   <entry>f</entry>
                   <entry>[0,]</entry>
-                  <entry>Works as <xref linkend="sect.osc.command.select_next_pattern"/>
-                  combined with <xref linkend="sect.osc.command.play"/>.</entry>
+                  <entry>Works as <xref linkend="chpt.osc.command.select_next_pattern"/>
+                  combined with <xref linkend="chpt.osc.command.play"/>.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/<emphasis role="bold">RELOCATE</emphasis>/</entry>
@@ -3672,7 +3658,7 @@
             </tgroup>
           </table>
 
-          <table frame='all' id='sect.osc.messages.tempo.table'>
+          <table frame='all' id='chpt.osc.messages.tempo.table'>
             <title>OSC tempo and timeline messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -3747,7 +3733,7 @@
             </tgroup>
           </table>
 
-          <table frame='all' id='sect.osc.messages.mixer.table'>
+          <table frame='all' id='chpt.osc.messages.mixer.table'>
             <title>OSC mixer messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -3783,13 +3769,13 @@
                   <entry>Toggles the muting of the <emphasis>Master</emphasis>
                   output in the Mixer (sequencer keeps running).</entry>
                 </row>
-                <row id="sect.osc.command.master_volume_absolute" xreflabel="/Hydrogen/MASTER_VOLUME_ABSOLUTE/">
+                <row id="chpt.osc.command.master_volume_absolute" xreflabel="/Hydrogen/MASTER_VOLUME_ABSOLUTE/">
                   <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>/</entry>
                   <entry>f</entry>
                   <entry>[0.0,1.5]</entry>
                   <entry>Sets the volume of the master fader.</entry>
                 </row>
-                <row id="sect.osc.command.master_volume_relative" xreflabel="/Hydrogen/MASTER_VOLUME_RELATIVE/">
+                <row id="chpt.osc.command.master_volume_relative" xreflabel="/Hydrogen/MASTER_VOLUME_RELATIVE/">
                   <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis>/</entry>
                   <entry>f</entry>
                   <entry>{-1;0;1}</entry>
@@ -3803,23 +3789,23 @@
                   <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis>/</entry>
                   <entry>f</entry>
                   <entry>[0.0,1.5]</entry>
-                  <entry>See <xref linkend="sect.osc.command.master_volume_absolute"/>, but
+                  <entry>See <xref linkend="chpt.osc.command.master_volume_absolute"/>, but
                   applies to the channel strip provided in the OSC command path
                   as <emphasis>X</emphasis>. Please not that this only affects
                   instrument strips (those with pan and FX knobs). Strip volume
                   control for instrument component strips is not implemented
-                  yet).</entry> 
+                  yet).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis>/</entry>
                   <entry>f</entry>
                   <entry>{-1;0;1}</entry>
-                  <entry>See <xref linkend="sect.osc.command.master_volume_relative"/>, but
+                  <entry>See <xref linkend="chpt.osc.command.master_volume_relative"/>, but
                   applies to the channel strip provided in the OSC command path
                   as <emphasis>X</emphasis>. Please not that this only affects
                   instrument strips (those with pan and FX knobs). Strip volume
                   control for instrument component strips is not implemented
-                  yet).</entry> 
+                  yet).</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis>/</entry>
@@ -3866,7 +3852,7 @@
             </tgroup>
           </table>
 
-          <table frame='all' id='sect.osc.messages.playlist.table'>
+          <table frame='all' id='chpt.osc.messages.playlist.table'>
             <title>OSC playlist messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -3904,7 +3890,7 @@
           </table>
           
 
-          <table frame='all' id='sect.osc.messages.general.table'>
+          <table frame='all' id='chpt.osc.messages.general.table'>
             <title>OSC general messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -3975,7 +3961,7 @@
             </tgroup>
           </table>
 
-          <table frame='all' id='sect.osc.messages.session.table'>
+          <table frame='all' id='chpt.osc.messages.session.table'>
             <title>OSC session management messages</title>
             <tgroup cols='3' align='left' colsep='1' rowsep='1'>
               <colspec colname='cURL'/>
@@ -4031,34 +4017,32 @@
               </tbody>
             </tgroup>
           </table>
-		</section>
-	</section>
+	</sect1>
   </chapter>
-
+</part>
   <!--
       ##################
       # THIRD CHAPTER  #
       ##################
   -->
-
-  <chapter id="chap.create_song">
+  <part id="part.create_song">
     <title>A new song</title>
-    <section id="sect.song_vs_pattern">
+    <chapter id="chpt.song_vs_pattern">
       <title>"Song" mode and "Pattern" mode</title>
 
       <para>This section is a quick-and-dirty walkthrough to Hydrogen. Refer to the
       tutorial for a more detailed overview.</para>
 
       <para>Hydrogen has 2 main modes: "Pattern" mode and "Song" mode (refer to
-      <xref linkend="sect.main_toolbar"/> for the buttons that activate each mode). When
+      <xref linkend="chpt.main_toolbar"/> for the buttons that activate each mode). When
       "Pattern" mode is activated the current pattern is continuously repeated.
       This mode is very well suited to tweak your pattern until it's just right, since the 
       pattern you are working on is constantly repeated. This way you can immediately 
       hear the changes you have made. In "Song" mode the whole song is played.  
       This is useful when putting together the patterns to create the structure of the song.</para>
-    </section>
+    </chapter>
 
-    <section id="sect.create_pattern">
+    <chapter id="chpt.create_pattern">
       <title>A new pattern</title>
 
 
@@ -4087,13 +4071,13 @@
           </imageobject>
         </mediaobject>
       </figure>
-    </section>
+    </chapter>
 
-    <section id="sect.create_sequence">
+    <chapter id="chpt.create_sequence">
       <title>A new sequence</title>
 
       <para>Once patterns are created (<xref linkend="fig.insert_patterns"/>), we
-      can copy/paste/delete them using the Select Mode (see <xref linkend="sect.song_editor.main_controls"/>).
+      can copy/paste/delete them using the Select Mode (see <xref linkend="chpt.song_editor.main_controls"/>).
       </para>
 
       <figure id="fig.insert_patterns">
@@ -4105,9 +4089,8 @@
         </mediaobject>
       </figure>
 
-    </section>
-
-    <section id="sect.create_song.adjust_mixer">
+    </chapter>
+    <chapter id="chpt.create_song.adjust_mixer">
       <title>Adjust from the mixer</title>
 
       <para>Of course we can always use the mixer window, either when creating
@@ -4177,10 +4160,10 @@
           </imageobject>
         </mediaobject>
       </figure>
-    </section>
   </chapter>
-  
-  
+</part>
+<part id="appendix">
+  <title>Appendix</title>
   <chapter id="chap.shortcuts">
     <title>Shortcut lists</title>
     <table frame='all' id='sect.shortcut.table'>
@@ -4225,7 +4208,7 @@
           </row>
           <row>
             <entry>[CTRL] + [E]</entry>
-            <entry>Export Song (see <xref linkend="sect.song_editor.export_song"/>)</entry>
+            <entry>Export Song (see <xref linkend="chpt.song_editor.export_song"/>)</entry>
           </row>
           <row>
             <entry>[CTRL] + [L]</entry>
@@ -4245,15 +4228,15 @@
           </row>
           <row>
             <entry>[ALT] + [D]</entry>
-            <entry>Show Director (see <xref linkend="sect.song_editor.director"/>)</entry>
+            <entry>Show Director (see <xref linkend="chpt.song_editor.director"/>)</entry>
           </row>
           <row>
             <entry>[ALT] + [M]</entry>
-            <entry>Show Mixer (see <xref linkend="sect.mixer"/>)</entry>
+            <entry>Show Mixer (see <xref linkend="chpt.mixer"/>)</entry>
           </row>
           <row>
             <entry>[ALT] + [I]</entry>
-            <entry>Show Instrument rack (see <xref linkend="sect.sound_library"/>)</entry>
+            <entry>Show Instrument rack (see <xref linkend="chpt.sound_library"/>)</entry>
           </row>
           <row>
             <entry>[ALT] + [A]</entry>
@@ -4273,7 +4256,7 @@
           </row>
           <row>
             <entry>[ALT] + [P]</entry>
-            <entry>Show Preferences (see <xref linkend="sect.preferences"/>)</entry>
+            <entry>Show Preferences (see <xref linkend="chpt.preferences"/>)</entry>
           </row>
           <row>
             <entry>[ALT] + [?]</entry>
@@ -4741,4 +4724,5 @@
     <!--   Z   -->
 
   </glossary>
+</part>
 </book>
