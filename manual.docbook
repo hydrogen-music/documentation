@@ -50,8 +50,13 @@
       <para>
         You can download Hydrogen from 
         <ulink url="http://www.hydrogen-music.org/hcms/node/21">http://www.hydrogen-music.org</ulink>.  
-        On the 'Downloads' page you can find several binaries (installers) for Linux, Mac and Windows.  (note that some versions may not be available for Windows and Mac)
+        On the 'Downloads' page you can find several binaries (installers) for Linux, Mac and Windows.
       </para>
+      <note>
+        <para>Please note that some versions may not be available for Windows and
+        Mac
+        </para>
+      </note>
 
       <para>
         If you want to compile Hydrogen yourself (see <xref linkend="chpt.compilation"/>), you can download the latest source files directly from our
@@ -344,8 +349,14 @@
         the key/pad/knob on your midi keyboard (or controller) that you want to link to 
         this action.  The popup will close and the Event Param value will now show the 
         midi note value of the key you pressed.  Once this is done you can select an Action 
-        from the action drop-down list.  Note that some actions (like SELECT_NEXT_PATTERN) 
-        also require an Action Param that references the pattern you want to select with this midi action.</para>
+        from the action drop-down list.  </para>
+        <note>
+          <para>
+          Note that some actions (like SELECT_NEXT_PATTERN) 
+        also require an Action Param that references the pattern you want to
+        select with this midi action.
+          </para>
+        </note>
        <para>See <xref linkend="chpt.midi"/> for more info on Midi actions.</para>
 
         <figure id="fig.preferences.midi_tab">
@@ -458,8 +469,12 @@
         buffer and sampling rate should be set in the configuration of the JACK
         server before starting Hydrogen (JACK automatically starts when an
         application tries to connect).</para>
-        <para>Note that the Audio Engine tab is only available if Hydrogen was compiled with 
-        debug support.</para>
+        <note>
+          <para>
+            Note that the Audio Engine tab is only available if Hydrogen was compiled with 
+            debug support.
+          </para>
+        </note>
 
         <figure id="fig.preferences.audio_engine_tab">
           <title>The Audio Engine tab</title>
@@ -566,11 +581,13 @@
           </listitem>
         </itemizedlist>
       </para>
-      <para>
+      <note>
+        <para>
         Note that the keyboard input cursor is hidden
         from view until one of the above keys is pressed. This keeps
         the display clear and uncluttered when using the mouse.
-      </para>
+        </para>
+      </note>
       <para>
         Most other keys on the keyboard can be used to play
         samples and enter notes in the same way a MIDI keyboard can be.
@@ -951,7 +968,21 @@
             <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
           </imageobject></inlinemediaobject></para>
 
-          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER button is pressed Hydrogen will work as Jack timebase 'master' by sending additional information, like the current speed, to other Jack clients. Else it will either act as 'slave' in the presence of another timebase master (e.g. Ardour) or as a stand-alone client in the absence of it. Please note that when acting as 'slave' Hydrogen will obey the tempo provided by the timebase master and instead of its own tempo markers (see <xref linkend="chpt.preferences.audio_tab"/>).</para>
+          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER
+          button is pressed Hydrogen will work as Jack timebase 'master' by
+          sending additional information, like the current speed, to other Jack
+          clients. Else it will either act as 'slave' in the presence of another
+          timebase master (e.g. Ardour) or as a stand-alone client in the
+          absence of it.
+          </para>
+          <note>
+            <para>
+            Please note that when acting as 'slave' Hydrogen will obey the tempo
+            provided by the timebase master and instead of its own tempo markers
+            (see <xref linkend="chpt.preferences.audio_tab"/>).
+            </para>
+          </note>
+            
         </listitem>
         
        <listitem>
@@ -1027,12 +1058,18 @@
 
         <para>If you are using the JACK Transport, the BeatCounter continues to
         work.  If another program is the JACK Transport Master, Hydrogen will
-        respond to tempo change events from that application.  Note that in this
+        respond to tempo change events from that application.
+        </para>
+        <note>
+          <para>
+            Please note that in this
         situation, Hydrogen is supposed to be a <emphasis>slave</emphasis>, so
         some of the BeatCounter features will be disabled or will not work
         properly.  If Hydrogen is the JACK Transport Master, tempo changes from
         Hydrogen will be reflected in those programs (if they support
-        it).</para>
+        it).
+          </para>
+        </note>
 
         <para>Some of the settings to adjust the BeatCounter's latency
         compensation, are located on the General tab of the Preferences Dialog 
@@ -1051,11 +1088,15 @@
           auto-start is activated).</para></listitem>
         </itemizedlist>
 
-        <para>Note that these can be set to positive (+) or negative (-) values.
+        <note>
+          <para>
+            Note that these can be set to positive (+) or negative (-) values.
         In order to find useful values for these, you will need to take some
         time to play with it.  Also, you may want different values depending on
         the speed of your hardware, audio devices, drivers, etc.  Using the
-        BeatCounter effectively requires practice.</para>
+        BeatCounter effectively requires practice.
+          </para>
+        </note>
 
       </sect1>
 
@@ -1117,7 +1158,12 @@
             <imagedata fileref="img/btn_updown.png" format="PNG" />
             </imageobject></inlinemediaobject> Move currently selected pattern
             up or down.</para>
-          <para>Note that you can also just drag-and-drop a pattern up/down in the pattern list.</para>
+            <note>
+              <para>
+                Note that you can also just drag-and-drop a pattern up/down in
+                the pattern list.
+              </para>
+            </note>
         </listitem>
 
         <listitem>
@@ -1194,8 +1240,15 @@
        (the BPM button is located just above the Song editors main controls).  Once this is done
        the horizontal bar next to the BPM button changes to a ruler with marks at every bar.
        Now simply left-click this ruler at the bar you want the tempo to change and a
-       window will pop up where you can enter the new tempo. (Please note that the ruler will not be available while using the Jack transport in 'slave' mode.)
-     
+       window will pop up where you can enter the new tempo.
+       </para>
+       <note>
+         <para>
+         Please note that the ruler will not be available while using the Jack
+         transport in 'slave' mode.
+         </para>
+       </note>
+       <para>     
         <informalfigure id="fig.add_tempo_change">
          <mediaobject>
            <imageobject>
@@ -1215,7 +1268,6 @@
            </imageobject>
          </mediaobject>
          </informalfigure>
-
        </para>
 
        <para>
@@ -1346,7 +1398,11 @@
         <listitem>
           <para>Copy : will copy the selected pattern to a new pattern in your song.
           </para>
-          <para>Note that patterns with the same name are not allowed.</para>
+          <note>
+            <para>
+              Note that patterns with the same name are not allowed.
+            </para>
+          </note>
         </listitem>
         
         <listitem>
@@ -1378,8 +1434,13 @@
             </mediaobject>
             </informalfigure>
           </para>
-          <para>Note that you can choose one of the existing categories from the dropdown list,
-          but you can also enter a new category name in the Pattern Category box.</para>
+          <note>
+            <para>
+              Note that you can choose one of the existing categories from the dropdown list,
+          but you can also enter a new category name in the Pattern Category
+          box.
+            </para>
+          </note>
         </listitem>
         
         <listitem>
@@ -1788,17 +1849,22 @@
       
       <itemizedlist mark="opencircle">
         <listitem>
-          <para><emphasis role="bold">Velocity</emphasis> : how hard the note is played (the volume of the note)</para>
-          <para>
+          <para><emphasis role="bold">Velocity</emphasis> : how hard the note is
+          played (the volume of the note)</para>
+          <note>
+            <para>
           Note that the color of the note-dot and the vertical bar will change according to the velocity value you have defined. 
           A light shade of gray means a low velocity (low volume) and the higher you set the velocity the darker the color will be,
           turning red when you reach the point of clipping.
-          </para>
+            </para>
+          </note>
         </listitem>
         
         <listitem>
           <para><emphasis role="bold">Pan</emphasis> : with this parameter you can move
-           the stereo image position of the note (how loud it will be in the left/right output).</para>
+           the stereo image position of the note (how loud it will be in the
+          left/right output).</para>
+          <note>
            <para>Note that the effect of <emphasis>note Pan</emphasis> depends on the <emphasis>instrument Pan</emphasis>
             knob, which is set in the mixer.
            Look to next figure to see how the <emphasis role="bold"><emphasis>Resultant Pan</emphasis></emphasis>
@@ -1821,6 +1887,7 @@
 		     progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>;
 		    if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect.
            </para>
+          </note>
            
         </listitem>
         
@@ -1851,11 +1918,13 @@
             octave scale and the 'keyboard', you can choose any note
             value.
           </para>
+          <note>
           <para>
-            (Note that the pattern editor in piano roll mode (see <xref
+            Note that the pattern editor in piano roll mode (see <xref
             linkend="chpt.pattern_editor.piano_mode" />) can also be used to
-            change the note value of existing notes)
+            change the note value of existing notes
           </para>
+          </note>
         </listitem>
         <listitem>
           <para>
@@ -1976,8 +2045,13 @@
         </imageobject>
        </inlinemediaobject>       
 
-        buttons and the Pan(orama) knob. 
-       Note that the Mute and Solo states are also reflected in the Song editor.</para>
+       buttons and the Pan(orama) knob.
+       </para>
+       <note>
+         <para>
+           Note that the Mute and Solo states are also reflected in the Song editor.
+         </para>
+       </note>
 
       <para>
       Next are 4 pre-fader FX send knobs that determine how much of this instrument will be sent to
@@ -2012,9 +2086,12 @@
         <listitem>
           <para>SWH-Plugins available at <ulink
           url="http://plugin.org.uk">http://plugin.org.uk</ulink>. </para>
-          <para>(Note : if you want to compile these plugins
+          <note>
+            <para>If you want to compile these plugins
           you need the FFTW tarball from <ulink
-          url="http://www.fftw.org">http://www.fftw.org</ulink>)</para>
+          url="http://www.fftw.org">http://www.fftw.org</ulink>)
+            </para>
+          </note>
         </listitem>
 
         <listitem>
@@ -2134,11 +2211,15 @@
         </listitem>        
         
      </itemizedlist>
-      
+       </para>
+       <note>
+         <para>
       Note that Hydrogen can also be switched to 'per instrument output' mode (see <xref linkend="chpt.preferences.audio_tab"/>),
       and in this mode all channel strip outputs will be available in Jack (not just the Master output).  
       This allows you to route the individual instruments directly into any other Jack enabled application (eg Ardour) and gives you
-      a lot more flexibility.</para>
+      a lot more flexibility.
+         </para>
+       </note>
       
       <para>On the bottom-right of the Master section the 'FX' button 
         <inlinemediaobject>
@@ -2239,10 +2320,13 @@
 
                <listitem>
                   <para><emphasis role="bold">Constant k-Norm (Custom dB center compensation)</emphasis>:
-                   you can experiment adjusting the center compensation to your taste! </para>
+                   you can experiment adjusting the center compensation to your
+                  taste! </para>
+                  <note>
                     <para>Note that some hi-end studio mixers - to be used in well tuned rooms -
                     have center compensation between -3dB and -6dB.
-                  </para>
+                    </para>
+                  </note>
                 </listitem>
              </itemizedlist>
              </para>
@@ -2294,7 +2378,14 @@
       As you can see the Soundlibrary contains all Drumkits (System and User drumkits), 
       your saved Patterns and your saved Songs.  Each Drumkit is a collection of a number
       of instruments (snare, kick, sampled voice, bass sound ...) and in its turn an instrument can consist of multiple
-      layered samples.  Note that every block has a number of parameters (continue reading for more details).</para>
+      layered samples.
+      </para>
+      <note>
+        <para>
+        Note that every block has a number of parameters (continue reading for
+        more details).
+        </para>
+      </note>
       <para>This said. let's take a look at the Soundlibrary interface and see what it can do for you:</para>
       <para>The Sound Library saves you time in managing your drum kits,
       favourite patterns, and favourite songs.  When making new songs and new drum
@@ -2898,10 +2989,16 @@
         You can layer several samples into the instrument.  Which one is played
         depends on the velocity of the incoming note.  Click <guibutton>Load
         Layer</guibutton> and point the <guimenu>Audio File Browser</guimenu> to
-        your sample.  Note that the <guimenu>Audio File Browser</guimenu> will
+        your sample.
+        </para>
+        <note>
+          <para>
+            The <guimenu>Audio File Browser</guimenu> will
         allow you to preview the sample before you load it.  It will also allow
         you to load more than one sample at a time.  But for now, only load
-        one.</para>
+        one.
+          </para>
+        </note>
 
         <para>After you load the sample, you'll see that there is now a
         <guilabel>1</guilabel> at the top, and the topmost rectangle has turned
@@ -3334,17 +3431,29 @@
 	    
       <listitem><para>
 	    <emphasis role="bold">BPM_INCR</emphasis> : increases the current tempo
-        by the supplied value. Note that this command will have no
+        by the supplied value.
+      </para>
+      <note>
+        <para>
+          Note that this command will have no
         effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
         and <emphasis>Tempo Marker</emphasis> has been passed
-	    </para></listitem>
+	    </para>
+      </note>
+      </listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">BPM_DECR</emphasis> : decreases the current tempo
-        by the supplied value. Note that this command will have no
+          by the supplied value.
+        </para>
+        <note>
+          <para>
+            Note that this command will have no
         effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
         and <emphasis>Tempo Marker</emphasis> has been passed
-	    </para></listitem>
+	      </para>
+        </note>
+      </listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">BPM_CC_RELATIVE</emphasis> : changes the tempo relative to the current tempo, using a controller
