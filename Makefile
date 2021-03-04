@@ -43,6 +43,7 @@ ALL_POT_FILES = manual_en.pot tutorial_en.pot
 XMLTO_OPTS = --stringparam section.autolabel=1 \
 	--stringparam toc.max.depth=3 \
 	--stringparam xref.with.number.and.title=0 \
+	--stringparam section.label.includes.component.label=1 \
 	-m res/styling.xsd
 
 XML2POT = xml2pot
