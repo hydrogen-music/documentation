@@ -4,7 +4,7 @@
 <book id="Hydrogen-manual" lang="en">
 
   <bookinfo>
-    <title>Hydrogen Manual</title>
+    <title>Hydrogen v1.1 Manual</title>
     <authorgroup>
       <author>
         <firstname>Antonio</firstname>
@@ -22,15 +22,13 @@
         <firstname>Sebastian</firstname>
         <surname>Moors</surname>
       </author>
-
-
     </authorgroup>
 
-    <date>06/september/2016</date>
+    <subtitle>2021-03-04</subtitle>
 
     <abstract>
       <para>Hydrogen is a software synthesizer which can be used alone,
-      emulating a drum machine based on patterns, or via an external MIDI
+      emulating a drum machine based on patterns, or via an external <abbrev>MIDI</abbrev>
       keyboard/sequencer software. Hydrogen compiles on Linux, Mac OS X and Windows.</para>
     </abstract>
   </bookinfo>
@@ -83,12 +81,12 @@
         </listitem>
         <listitem>
           <para><abbrev>ALSA</abbrev> (&gt;= 1.x) at <ulink url="http://www.alsa-project.org">http://www.alsa-project.org</ulink>
-          (only if you wish to use ALSA as audio driver)</para>
+          (only if you wish to use <abbrev>ALSA</abbrev> as audio driver)</para>
         </listitem>
         <listitem>
           <para>Jack Audio Connection Kit (&gt;= 0.80) at 
           <ulink url="http://jackaudio.org/">http://jackaudio.org/</ulink>
-          (only if you wish to use Jack as audio driver)</para>
+          (only if you wish to use <abbrev>JACK</abbrev> as audio driver)</para>
         </listitem>
         <listitem>
           <para>PortAudio at <ulink url="http://www.portaudio.com">http://www.portaudio.com</ulink>
@@ -208,9 +206,9 @@
 
         <para>From the "Audio System" tab (<xref
         linkend="fig.preferences.audio_tab"/>) it is possible to modify the
-        audio driver being used (OSS, Jack, ALSA, PortAudio, PulseAudio, CoreAudio, Auto) with its buffer and
-        sampling rate (unless you are using JACK, in this case the audio driver
-        configuration should happen before starting the JACK server).</para>
+        audio driver being used (<abbrev>OSS</abbrev>, <abbrev>JACK</abbrev>, <abbrev>ALSA</abbrev>, PortAudio, PulseAudio, CoreAudio, Auto) with its buffer and
+        sampling rate (unless you are using <abbrev>JACK</abbrev>, in this case the audio driver
+        configuration should happen before starting the <abbrev>JACK</abbrev> server).</para>
 
         <para>Also keep an eye on the value of "Polyphony": depending on your
         CPU you may want to change the max simultaneous notes in order to
@@ -241,10 +239,10 @@
           </listitem>
 
           <listitem>
-            <para><emphasis role="bold">Jack</emphasis>: The Jack driver is a
+            <para><emphasis role="bold">JACK</emphasis>: The <abbrev>JACK</abbrev> driver is a
             professional audio server which permits very low lag and exchanges
             with other audio software. <emphasis>We strongly recommend using
-            this driver to have the best out of Hydrogen</emphasis>.  JACK
+            this driver to have the best out of Hydrogen</emphasis>.  <abbrev>JACK</abbrev>
             server will start automatically if not already running.</para>
             <para>Available options:</para>
             <itemizedlist>
@@ -268,25 +266,25 @@
               </listitem>
               <listitem>
                 <para><emphasis role="bold">BBT sync method</emphasis>: If
-                Hydrogen uses Jack transport in the presence of an external Jack
+                Hydrogen uses <abbrev>JACK</abbrev> transport in the presence of an external <abbrev>JACK</abbrev>
                 Timebase master (TBM), it will use the provided measure and
                 tempo information instead of the local one of either the Song's
                 tempo (see <xref linkend="chpt.main_toolbar"/>) or the markers
                 added to the Timeline (see <xref
                 linkend="chpt.song_editor.tempo_and_markers"/>).  But due to
                 limitations in the current implementation, Hydrogen can not set
-                both measure and speed provided by Jack for arbitrary pattern
+                both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
                 combinations. The user has two options. Either drop all measure
                 changes in the TBM and work with tempo changes only to support
                 arbitrary patterns (using option <emphasis>constant
                 measure</emphasis>) or to keep the length of each pattern
                 consistent with the corresponding measure in the TBM and to use
-                both tempo and measure provided by Jack (option
+                both tempo and measure provided by <abbrev>JACK</abbrev> (option
                 <emphasis>matching bars</emphasis>).</para>
 
                 <para>For this option to take effect the J. TRAMS button has to
                 be activated and the J. MASTER button deactivated (next to
-                having a Jack TBM application). See <xref
+                having a <abbrev>JACK</abbrev> TBM application). See <xref
                 linkend="chpt.main_toolbar"/>.</para>
               </listitem>
               <listitem>
@@ -300,20 +298,20 @@
               <listitem>
                 <para><emphasis role="bold">Create per-instrument
                 outputs</emphasis>: In addition to the main stereo output
-                Hydrogen will register Jack output ports for every single
+                Hydrogen will register <abbrev>JACK</abbrev> output ports for every single
                 instrument. This can be useful if you want to add effects to a
                 single instrument with jack-rack for example.</para>
               </listitem>
             </itemizedlist>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Alsa</emphasis>: The widely adopted
+            <para><emphasis role="bold">ALSA</emphasis>: The widely adopted
             Linux standard audio drivers</para>
           </listitem>
 
           <listitem>
             <para><emphasis role="bold">OSS</emphasis>: The Oss audio driver
-            uses /dev/dsp and it's based on the OSS interface which is supported
+            uses /dev/dsp and it's based on the <abbrev>OSS</abbrev> interface which is supported
             by the vast majority of sound cards available for Linux; this said,
             the use of this audio driver blocks /dev/dsp until Hydrogen is
             closed i.e. unusable by any other software. Use it as last
@@ -343,7 +341,7 @@
         <title>The Midi System tab</title>
 
         <para>The "Midi System" tab (<xref linkend="fig.preferences.midi_tab"/>)
-        contains all MIDI settings. Here you can choose the MIDI driver (ALSA, PortMidi, 
+        contains all <abbrev>MIDI</abbrev> settings. Here you can choose the <abbrev>MIDI</abbrev> driver (<abbrev>ALSA</abbrev>, PortMidi, 
         CoreMidi or JackMidi) input, and channel(s) that Hydrogen should respond to.  
         You can also define midi bindings: link a midi note/message to an action. 
         To do this simply press the red 'REC' button left of the event-action binding line.  
@@ -359,7 +357,7 @@
         select with this midi action.
           </para>
         </note>
-       <para>See <xref linkend="chpt.midi"/> for more info on Midi actions.</para>
+       <para>See <xref linkend="chpt.midi"/> for more info on <abbrev>MIDI</abbrev> actions.</para>
 
         <figure id="fig.preferences.midi_tab">
           <title>The MIDI System Tab</title>
@@ -374,20 +372,20 @@
       <sect1 id="chpt.preferences.osc_tab">
         <title>The OSC tab</title>
 
-        <para>The "OSC" tab (<xref linkend="fig.preferences.osc_tab"/>) let's
-        you modify all options associated with OSC (Open Sound Control) (see
+        <para>The <abbrev>OSC</abbrev> tab (<xref linkend="fig.preferences.osc_tab"/>) let's
+        you modify all options associated with <abbrev>OSC</abbrev> (Open Sound Control) (see
         section <xref linkend="chpt.osc"/> for details).
         <itemizedlist>
           <listitem>
             <para><emphasis role="bold">Enable OSC support</emphasis>: Allows
-            Hydrogen to receive OSC commands send by external programs.</para>
+            Hydrogen to receive <abbrev>OSC</abbrev> commands send by external programs.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Enable OSC feedback</emphasis>: Hydrogen
-            will broadcast OSC messages to all registered clients each time does
-            change. A client can register to receive OSC messages by sending
+            will broadcast <abbrev>OSC</abbrev> messages to all registered clients each time does
+            change. A client can register to receive <abbrev>OSC</abbrev> messages by sending
             a message to Hydrogen previously. The <emphasis role="bold">state broadcast as feedback</emphasis> is
-            composed of the following OSC paths:
+            composed of the following <abbrev>OSC</abbrev> paths:
             <itemizedlist>
               <listitem>
                 <para>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis></para>
@@ -419,14 +417,14 @@
           </listitem>
           <listitem>
             <para><emphasis role="bold">Incoming port</emphasis>: Specifies the
-            OSC port Hydrogen will be register to.</para>
+            <abbrev>OSC</abbrev> port Hydrogen will be register to.</para>
           </listitem>
         </itemizedlist>
         </para>
         <note>
-          <para>If the chosen OSC port is already occupied, Hydrogen will pick
+          <para>If the chosen <abbrev>OSC</abbrev> port is already occupied, Hydrogen will pick
           an alternative one on startup and displays it via a popup as well as
-          in the OSC tab of the Preferences.
+          in the <abbrev>OSC</abbrev> tab of the Preferences.
           </para>
         </note>
 
@@ -467,9 +465,9 @@
         <title>The Audio Engine tab (debug only)</title>
 
         <para>The "Audio Engine" tab (<xref linkend="fig.preferences.audio_engine_tab"/>) is a window that shows
-        various stats about Hydrogen and the audio driver. In case JACK is used,
-        buffer and sampling rate should be set in the configuration of the JACK
-        server before starting Hydrogen (JACK automatically starts when an
+        various stats about Hydrogen and the audio driver. In case <abbrev>JACK</abbrev> is used,
+        buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
+        server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
         application tries to connect).</para>
         <note>
           <para>
@@ -592,7 +590,7 @@
       </note>
       <para>
         Most other keys on the keyboard can be used to play
-        samples and enter notes in the same way a MIDI keyboard can be.
+        samples and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
       </para>
     </chapter>
 
@@ -677,7 +675,7 @@
         </listitem>
         <listitem>
           <para><emphasis>Export MIDI file</emphasis> - Export current song in
-          MIDI format</para>
+          <abbrev>MIDI</abbrev> format</para>
         </listitem>
         <listitem>
           <para><emphasis>Export song</emphasis> - Export current song in WAV
@@ -888,7 +886,7 @@
           <para>Manually set BPM</para>
         </listitem>
         <listitem>
-          <para>Manage JACK transport</para>
+          <para>Manage <abbrev>JACK</abbrev> transport</para>
         </listitem>
         <listitem>
           <para>Open the mixer and the instrument rack panels</para>
@@ -954,7 +952,7 @@
           <imagedata fileref="img/MidiIN_CPU.png" format="PNG"/>
           </imageobject></inlinemediaobject></para>
 
-            <para>Shows CPU load and MIDI events.  The CPU bargraph gives you an indication of the CPU load.  The MIDI led lights up every time Hydrogen receives a midi message.</para>
+            <para>Shows CPU load and <abbrev>MIDI</abbrev> events.  The CPU bargraph gives you an indication of the CPU load.  The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a midi message.</para>
         </listitem>
 <!--
         <listitem>
@@ -970,9 +968,9 @@
             <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
           </imageobject></inlinemediaobject></para>
 
-          <para>Click J. TRANS to enable Jack transport.  If the J. MASTER
-          button is pressed Hydrogen will work as Jack timebase 'master' by
-          sending additional information, like the current speed, to other Jack
+          <para>Click J. TRANS to enable <abbrev>JACK</abbrev> transport.  If the J. MASTER
+          button is pressed Hydrogen will work as <abbrev>JACK</abbrev> timebase 'master' by
+          sending additional information, like the current speed, to other <abbrev>JACK</abbrev>
           clients. Else it will either act as 'slave' in the presence of another
           timebase master (e.g. Ardour) or as a stand-alone client in the
           absence of it.
@@ -1058,8 +1056,8 @@
         Hydrogen is supposed to play, tap the comma key 1-2-3-4 with the
         beat... and you're in on the next beat (at the right tempo).</para>
 
-        <para>If you are using the JACK Transport, the BeatCounter continues to
-        work.  If another program is the JACK Transport Master, Hydrogen will
+        <para>If you are using the <abbrev>JACK</abbrev> Transport, the BeatCounter continues to
+        work.  If another program is the <abbrev>JACK</abbrev> Transport Master, Hydrogen will
         respond to tempo change events from that application.
         </para>
         <note>
@@ -1067,7 +1065,7 @@
             Please note that in this
         situation, Hydrogen is supposed to be a <emphasis>slave</emphasis>, so
         some of the BeatCounter features will be disabled or will not work
-        properly.  If Hydrogen is the JACK Transport Master, tempo changes from
+        properly.  If Hydrogen is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
         Hydrogen will be reflected in those programs (if they support
         it).
           </para>
@@ -1246,7 +1244,7 @@
        </para>
        <note>
          <para>
-         Please note that the ruler will not be available while using the Jack
+         Please note that the ruler will not be available while using the <abbrev>JACK</abbrev>
          transport in 'slave' mode.
          </para>
        </note>
@@ -1721,9 +1719,9 @@
         up/down in the list and dropping it on a new position within the drumkit.  Doing so 
         will not change anything to the sequence you have created for that instrument, nor will
         it change anything to the song or pattern you are working on.  It <emphasis role="bold">
-        will</emphasis> however, have an impact on the <emphasis role="bold">MIDI note 
+        will</emphasis> however, have an impact on the <emphasis role="bold"><abbrev>MIDI</abbrev> note 
         mapping</emphasis> : in the table below you can find the link between the instrument
-        position, the MIDI note and the qwerty keyboard keys.</para>
+        position, the <abbrev>MIDI</abbrev> note and the qwerty keyboard keys.</para>
 
       <para><emphasis role="bold">Important Notes</emphasis> :</para>
       <para>The name of the instrument depends on the
@@ -1734,7 +1732,7 @@
       sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
       <para>
       Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
-      is linked to a MIDI-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
+      is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
       </para>
 
 
@@ -1833,7 +1831,7 @@
           </imageobject>
          </inlinemediaobject>
         (see <xref linkend="chpt.main_menu"/>) and simply playing your pattern on your 
-        MIDI drum or your pc keyboard (see instrument mapping above).  This is probably 
+        <abbrev>MIDI</abbrev> drum or your pc keyboard (see instrument mapping above).  This is probably 
         a more musical way of creating a pattern, but it's up to you to decide what works best for you.
         (Also see <xref linkend="part.create_song"/> for a basic
         walk-through of how the pattern editor works) </para>
@@ -2217,8 +2215,8 @@
        <note>
          <para>
       Note that Hydrogen can also be switched to 'per instrument output' mode (see <xref linkend="chpt.preferences.audio_tab"/>),
-      and in this mode all channel strip outputs will be available in Jack (not just the Master output).  
-      This allows you to route the individual instruments directly into any other Jack enabled application (eg Ardour) and gives you
+      and in this mode all channel strip outputs will be available in <abbrev>JACK</abbrev> (not just the Master output).  
+      This allows you to route the individual instruments directly into any other <abbrev>JACK</abbrev> enabled application (eg Ardour) and gives you
       a lot more flexibility.
          </para>
        </note>
@@ -2595,7 +2593,7 @@
           Typical samples that are used in Hydrogen are: the sound of a single
           drum hit, the sound of a single cymbal hit, the sound of a single
           cowbell hit.  Whenever you put a note in the pattern (or play a note
-          using MIDI), Hydrogen will play whatever sound you have loaded.  So,
+          using <abbrev>MIDI</abbrev>), Hydrogen will play whatever sound you have loaded.  So,
           to put together a drum kit you need to gather short recordings of the
           bass drum, each tom, each cymbal, the high hat open, the high hat
           closed, the snare drum (snare on), the snare drum (snare off), rim
@@ -2741,7 +2739,7 @@
           </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold"><guibutton>Midi out Channel and Note</guibutton></emphasis></para>
+            <para><emphasis role="bold"><guibutton>MIDI out Channel and Note</guibutton></emphasis></para>
           </listitem>
           <listitem>
             <para><emphasis role="bold"><guibutton>Hi-Hat Pressure Group</guibutton></emphasis>:
@@ -2928,13 +2926,13 @@
         
 
         <sect2 id="chpt.instrument_editing.midi_out_settings">
-          <title>Midi out settings</title>
+          <title>MIDI out settings</title>
 
           <para>Hydrogen is capable of generating midi messages that you can use
           to trigger any external midi device or application.  To do this you
-          simply need to configure the Midi out channel and Note for every
+          simply need to configure the <abbrev>MIDI</abbrev> out channel and Note for every
           instrument.  You need to have a sample loaded (an empty WAV file is
-          fine) and make sure the proper Midi routing/wiring is in place and
+          fine) and make sure the proper <abbrev>MIDI</abbrev> routing/wiring is in place and
           you're set.  As you can see this is a very flexible approach that
           enables you to trigger samples or sounds from multiple devices and/or
           apps.</para>
@@ -3305,11 +3303,11 @@
     </chapter>
 
     <chapter id="chpt.midi">
-      <title>Midi</title>
+      <title>MIDI</title>
       
-      <para>In this section you can find more info about defining MIDI actions 
+      <para>In this section you can find more info about defining <abbrev>MIDI</abbrev> actions 
        and how they can be useful for you.  Before you can work with midi actions
-       you should have your Midi devices, drivers and connections configured
+       you should have your <abbrev>MIDI</abbrev> devices, drivers and connections configured
        correctly (see <xref linkend="chpt.preferences.midi_tab"/>).
       </para>
 
@@ -3324,12 +3322,12 @@
       </para>
 
       <sect1 id="chpt.midi.events">
-        <title>Midi Events</title>
+        <title>MIDI Events</title>
 
-        <para>An Event is an incoming Midi message, coming from a MIDI controller or 
+        <para>An Event is an incoming <abbrev>MIDI</abbrev> message, coming from a <abbrev>MIDI</abbrev> controller or 
         an external sequencer.</para>
         <para>If you look at the Events list you will see that there are 3 types of Events 
-        available (as described in the Midi standard): </para>
+        available (as described in the <abbrev>MIDI</abbrev> standard): </para>
 
         
         <itemizedlist mark="opencircle">
@@ -3353,14 +3351,14 @@
        <para>
        The Param. (parameter) value to the right of the Event is the identifier of the note/button/controller
        that is linked to this Action.  This parameter can be entered manually, or automatically by 
-       using the Midi learn function (see <xref linkend="chpt.preferences.midi_tab"/>).
+       using the <abbrev>MIDI</abbrev> learn function (see <xref linkend="chpt.preferences.midi_tab"/>).
        </para>       
        
-       <note><para>You can also activate the Midi learn function by Shift-clicking most of the gui elements.  
-       A 'Waiting for Midi input...' popup informs you that Hydrogen is now waiting for you to press
+       <note><para>You can also activate the <abbrev>MIDI</abbrev> learn function by Shift-clicking most of the gui elements.  
+       A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
        a key or turn/move a controller.
        </para>
-       <para>If you Shift-click on a gui element that does not support Midi automation a popup will
+       <para>If you Shift-click on a gui element that does not support <abbrev>MIDI</abbrev> automation a popup will
        inform you.
        </para></note>
        
@@ -3369,12 +3367,12 @@
        
 
       <sect1 id="chpt.midi.actions">
-        <title>Midi Actions</title>
+        <title>MIDI Actions</title>
 
         <para>Next is a list of the available Actions: an Action describes what Hydrogen should do 
-        when a specific Midi Event is detected.</para>
+        when a specific <abbrev>MIDI</abbrev> Event is detected.</para>
         
-        <note><para>** Some of the Midi Actions require that the Action Parameter is configured.  The
+        <note><para>** Some of the <abbrev>MIDI</abbrev> Actions require that the Action Parameter is configured.  The
         Parameter usually references a specific channel, instrument, FXsend...  Keep in mind that the 
         Parameter value is <emphasis>zero-based</emphasis>. So if you want to reference channel 1 you 
         have to enter '0' in the Parameter field (1 for channel 2, 2 for channel 3 ...)</para></note>
@@ -3541,17 +3539,17 @@
    
 	<chapter id="chpt.osc" xreflabel="OSC">
 		<title>OSC</title>
-		<para>Open Sound Control (OSC) is a protocol for communication among
+		<para>Open Sound Control (<abbrev>OSC</abbrev>) is a protocol for communication among
         programs, computers, and hardware, like synthesizers or multimedia
         devices, via networking protocols such as UDP or TCP. It can be thought
-        of as a replacement for the MIDI protocol with rich benefits, like
+        of as a replacement for the <abbrev>MIDI</abbrev> protocol with rich benefits, like
         supporting symbolic and high-resolution numerical argument data,
         providing an URL-style naming scheme in combination with a pattern
         matching language, and allowing to bundle messages for a better handling
         of timing and simultaneous processing.</para>
 
-        <para>Hydrogen is able to receive and send OSC messages. This allows you
-        to control it using various devices, like hardware OSC controllers,
+        <para>Hydrogen is able to receive and send <abbrev>OSC</abbrev> messages. This allows you
+        to control it using various devices, like hardware <abbrev>OSC</abbrev> controllers,
         smartphones, tablets, or any PC. For Linux-based systems you can use or
         test these interactions using the command line program
         <command>oscsend</command>.</para>
@@ -3560,10 +3558,10 @@
           <prompt>$</prompt> <command>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</command>
         </screen>
 		
-		<para>To enable OSC support in Hydrogen, open the Preferences dialog
-		(TODO link) and switch to the OSC tab. Make sure that the "Enable OSC
+		<para>To enable <abbrev>OSC</abbrev> support in Hydrogen, open the Preferences dialog
+		(TODO link) and switch to the <abbrev>OSC</abbrev> tab. Make sure that the "Enable <abbrev>OSC</abbrev>
 		support" checkbox is activated, otherwise Hydrogen will not listen for
-		incoming OSC messages. Hydrogen's port number, which defaults to 9000,
+		incoming <abbrev>OSC</abbrev> messages. Hydrogen's port number, which defaults to 9000,
 		can be found in there as well.
         </para>
         
@@ -3580,7 +3578,7 @@
           <listitem><para><emphasis role="bold">' '</emphasis> - no argument required</para></listitem>
           <listitem><para><emphasis role="bold">i</emphasis> - int32</para></listitem>
           <listitem><para><emphasis role="bold">f</emphasis> - float32</para></listitem>
-          <listitem><para><emphasis role="bold">s</emphasis> - OSC-string (ASCII)</para></listitem>
+          <listitem><para><emphasis role="bold">s</emphasis> - <abbrev>OSC</abbrev>-string (ASCII)</para></listitem>
      
         </itemizedlist>
         <para>Detailed description of the formats and conventions used in the
@@ -3902,7 +3900,7 @@
                   <entry>f</entry>
                   <entry>[0.0,1.5]</entry>
                   <entry>See <xref linkend="chpt.osc.command.master_volume_absolute"/>, but
-                  applies to the channel strip provided in the OSC command path
+                  applies to the channel strip provided in the <abbrev>OSC</abbrev> command path
                   as <emphasis>X</emphasis>. Please not that this only affects
                   instrument strips (those with pan and FX knobs). Strip volume
                   control for instrument component strips is not implemented
@@ -3913,7 +3911,7 @@
                   <entry>f</entry>
                   <entry>{-1;0;1}</entry>
                   <entry>See <xref linkend="chpt.osc.command.master_volume_relative"/>, but
-                  applies to the channel strip provided in the OSC command path
+                  applies to the channel strip provided in the <abbrev>OSC</abbrev> command path
                   as <emphasis>X</emphasis>. Please not that this only affects
                   instrument strips (those with pan and FX knobs). Strip volume
                   control for instrument component strips is not implemented
@@ -4033,14 +4031,14 @@
                   <entry>/Hydrogen/<emphasis role="bold">JACK_TRANSPORT_ACTIVATION</emphasis>/</entry>
                   <entry>i</entry>
                   <entry>{0;1}</entry>
-                  <entry>Deactivated the JACK transport support for a value of 0
+                  <entry>Deactivated the <abbrev>JACK</abbrev> transport support for a value of 0
                   and activates it for all others.</entry>
                 </row>
                 <row>
                   <entry>/Hydrogen/<emphasis role="bold">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/</entry>
                   <entry>i</entry>
                   <entry>{0;1}</entry>
-                  <entry>Deactivated the JACK Timebase Master transport support
+                  <entry>Deactivated the <abbrev>JACK</abbrev> Timebase Master transport support
                   for a value of 0 and activates it for all others.</entry>
                 </row>
                 <row>
@@ -4260,7 +4258,7 @@
         indicates the maximum volume reached from the instrument.   The peak must
         be in a range of 0.0 and 1.0 (in <xref linkend="fig.mixer.2"/> you can
         see a few volumes too loud).  Peaks outside that range will get distorted 
-        (especially with OSS audio driver). Keep an eye on each vu-meter and
+        (especially with <abbrev>OSS</abbrev> audio driver). Keep an eye on each vu-meter and
         if distortion appears, turn the volume down for that instrument.
       </para>
 
@@ -4820,7 +4818,7 @@
       <glossdef>
         <para>How hard you hit a note.</para>
 
-        <para>MIDI devices are required to send this information along with the
+        <para><abbrev>MIDI</abbrev> devices are required to send this information along with the
         note.  Synthesizers use this information to adjust several parameters on
         the sample (typically the volume).  In Hydrogen, it is only used to
         adjust how loud the sample is played back.</para>
