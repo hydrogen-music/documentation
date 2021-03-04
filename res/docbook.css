@@ -19,12 +19,12 @@
   --mono-family: "B612 Mono", monospace, var(--symbol-fonts);
 
   /* The default theme. */
-  --background-color: #fffff8;
+  --background-color: #ffffff; //#fffff8;
   --surface-color: #fffff8;
   --primary-color: #7f7f7f;
   --primary-variant-color: #5f5f5f;
   --secondary-color: #ffbc42;
-  --error-color: #ffafaf;
+  --error-color: #b0002044;
   --error-border-color: #b00020;
   --on-background-color: #000000;
   --on-surface-color: #000000;
@@ -75,9 +75,9 @@
   --revdeleted-before: "<del>";
   --revdeleted-after: "</del>";
 
-  --note-border-color: var(--primary-color);
+  --note-border-color: #6666ff;
   --note-border-style: 2pt solid var(--note-border-color);
-  --note-color: var(--surface-color);
+  --note-color: #6666ff22;
   --on-note-color: var(--on-surface-color);
 
   --tip-border-color: var(--primary-color);

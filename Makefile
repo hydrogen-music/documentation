@@ -44,6 +44,9 @@ XMLTO_OPTS = --stringparam section.autolabel=1 \
 	--stringparam toc.max.depth=3 \
 	--stringparam xref.with.number.and.title=0 \
 	--stringparam section.label.includes.component.label=1 \
+	--stringparam admon.graphics.extension=.svg \
+	--stringparam admon.graphics=1 \
+	--stringparam admon.graphics.path=img/admonitions/ \
 	-m res/styling.xsd
 
 XML2POT = xml2pot
