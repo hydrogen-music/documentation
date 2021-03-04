@@ -61,14 +61,17 @@
       <para>
         If you want to compile Hydrogen yourself (see <xref linkend="chpt.compilation"/>), you can download the latest source files directly from our
         git repository with:
-
-        <screen><prompt>$</prompt> <command>git clone git://github.com/hydrogen-music/hydrogen.git</command></screen>
-
-        A certain release can be fetched with:
-
-        <screen><prompt>$</prompt> <command>git checkout tags/1.0.0</command></screen>
       </para>
-
+      <screen>
+        <prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
+      </screen>
+      <para>
+        A certain release can be fetched with:
+      </para>
+      <screen>
+        <prompt>$</prompt><command> git checkout tags/1.0.0</command>
+      </screen>
+        
       <para>Compiling Hydrogen depends on the following libraries (among others):</para>
 
       <itemizedlist mark="opencircle">
@@ -79,7 +82,7 @@
           <para>libsndfile at <ulink url="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</ulink></para>
         </listitem>
         <listitem>
-          <para>ALSA (&gt;= 1.x) at <ulink url="http://www.alsa-project.org">http://www.alsa-project.org</ulink>
+          <para><abbrev>ALSA</abbrev> (&gt;= 1.x) at <ulink url="http://www.alsa-project.org">http://www.alsa-project.org</ulink>
           (only if you wish to use ALSA as audio driver)</para>
         </listitem>
         <listitem>
@@ -131,11 +134,11 @@
     <chapter id="chpt.compilation">
       <title>Build</title>
 
-      <para>Depending on the branch you are compiling you will need to use cmake. Check the INSTALL.txt and the README.txt files for more info (located in the top level dir once you downloaded the sources).</para>
+      <para>Depending on the branch you are compiling you will need to use cmake. Check the <filename>INSTALL.txt</filename> and the <filename>README.txt</filename> files for more info (located in the top level dir once you downloaded the sources).</para>
       
 
-        <para>Compiling with cmake can be done easily by using the build.sh script. Go to the directory where the git repository
-        was cloned and run the build.sh script without any arguments to display the help :</para>
+        <para>Compiling with cmake can be done easily by using the <command>build.sh</command> script. Go to the directory where the git repository
+        was cloned and run the <command>build.sh</command> script without any arguments to display the help :</para>
 
         <screen>
            <prompt>$</prompt> <command>./build.sh</command>
@@ -154,14 +157,13 @@
           <command>   x|exec   => execute hydrogen</command>
           <command>   t[ests]  => execute tests</command>
           <command>   p[kg]    => build source package</command>
-          <command>ex: ./build.sh r m pkg x</command>
         </screen>
 
-        <para>To build Hydrogen run the build script with the 'm' option :
+        <para>To build Hydrogen and execute the result, run the build script with the <parameter>m</parameter> option :
         </para>
       
         <screen>
-           <prompt>$</prompt> <command>./build.sh m</command>
+           <prompt>$</prompt> <command>./build.sh m x</command>
         </screen>              
       
     </chapter>
@@ -3552,9 +3554,11 @@
         to control it using various devices, like hardware OSC controllers,
         smartphones, tablets, or any PC. For Linux-based systems you can use or
         test these interactions using the command line program
-        <emphasis>oscsend</emphasis>.</para>
+        <command>oscsend</command>.</para>
 
-        <para><emphasis>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</emphasis></para>
+        <screen>
+          <prompt>$</prompt> <command>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</command>
+        </screen>
 		
 		<para>To enable OSC support in Hydrogen, open the Preferences dialog
 		(TODO link) and switch to the OSC tab. Make sure that the "Enable OSC
@@ -3567,10 +3571,9 @@
           <title>OSC messages</title>
           <para>The syntax for sending the commands is</para>
 
-          <para><emphasis>
-            oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE
-            COMMAND_ARGUMENT
-          </emphasis></para>
+          <screen>
+            <prompt>$</prompt> <command>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</command>
+          </screen>
 
           <para>with the supported types</para>
           <itemizedlist>
@@ -3622,8 +3625,8 @@
             <para><emphasis role="bold">X</emphasis> - All commands ending with a
             <emphasis>/X/</emphasis> require this character to be replaced by an
             integer and do affect only the corresponding instrument,
-            e.g. <emphasis>oscsend localhost 9000 /Hydrogen/PAN_ABSOLUTE/1/ f
-            0.3</emphasis>. The instrument number starts at 1 and is determined
+            e.g. <command>oscsend localhost 9000 /Hydrogen/PAN_ABSOLUTE/1/ f
+            0.3</command>. The instrument number starts at 1 and is determined
             by the order of the instrument in the mixer and pattern
             editor.</para>
           </listitem>
