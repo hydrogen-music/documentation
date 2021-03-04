@@ -1894,6 +1894,12 @@ ol.reveal {
   display: none;
 }
 
+abbr {
+  font-family: var(--mono-family);
+  font-size: 0.94em;
+  letter-spacing: 1px;
+}
+
 /* ============================================================ */
 
 @media screen and (max-width: 1199px) {
