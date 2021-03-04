@@ -478,18 +478,18 @@ h6 { font-weight: 400;
   line-height: 1;
 }
 
-header .authorgroup {
+.titlepage .authorgroup {
   margin-bottom: 2rem;
 }
 
 /* ============================================================ */
 
-.article > header {
+.titlepage {
   text-align: center;
   margin-bottom: 2em;
 }
 
-.article > header .abstract {
+.titlepage .abstract {
   text-align: left;
   margin-left: 5em;
   margin-right: 5em;
@@ -499,7 +499,7 @@ header .authorgroup {
   border-radius: 0.5em;
 }
 
-.book > header {
+.titlepage {
   margin-bottom: 2rem;
   margin-top: 1rem;
   padding-left: 1rem;
@@ -510,7 +510,7 @@ header .authorgroup {
   border-radius: 0.5em;
 }
 
-.book > header h1 {
+.titlepage h1 {
   margin-top: 0;
 }
 
@@ -694,7 +694,7 @@ th.char {
   height: 100%;
 }
 
-.admonition {
+.note, .warning, .info, .caution, .tip {
   border-radius: 0.5rem;
   min-height: 3rem;
   padding-top: 0;
@@ -705,11 +705,11 @@ th.char {
   width: 100%;
 }
 
-.admonition > div {
+.note > div, .warning > div, .info > div, .caution > div, .tip > div {
   display: table-row;
 }
 
-.admonition .icon {
+.note .icon, .warning .icon, .info .icon, .caution .icon, .tip .icon {
   display: table-cell;
   padding-top: 1.5rem;
   width: 4.5rem;
@@ -719,13 +719,9 @@ th.char {
   color: var(--note-border-color);
 }
 
-.admonition .body {
+.note .body, .warning .body, .info .body, .caution .body, .tip .body {
   display: table-cell;
   padding-right: 1rem;
-}
-
-.admonition header {
-  padding-top: 0.5rem;
 }
 
 .note {
@@ -878,17 +874,17 @@ pre.screen {
 
 /* Adapted from https://stackoverflow.com/questions/41306797/html-how-to-add-line-numbers-to-a-source-code-block */
 
-pre.verbatim span.line:nth-child(odd) {
+pre span.line:nth-child(odd) {
   background-color: var(--verbatim-odd-background-color);
 }
 
-pre.verbatim span.line:nth-child(even) {
+pre span.line:nth-child(even) {
   background-color: var(--verbatim-even-background-color);
 }
 
 /* Make the background of even lines the same as odd lines for
    "monochrome" listings. */
-pre.verbatim.monochrome span.line:nth-child(even) {
+pre.monochrome span.line:nth-child(even) {
   background-color: var(--verbatim-odd-background-color);
 }
 
@@ -902,7 +898,7 @@ pre.literallayout span.line:nth-child(even) {
   background-color: inherit;
 }
 
-pre.verbatim span.ln {
+pre span.ln {
   font-family: var(--mono-family);
   width: 0;
   padding-top: 4px;
@@ -910,18 +906,18 @@ pre.verbatim span.ln {
   text-align: right;
 }
 
-pre.verbatim {
+pre {
   display: table;
   table-layout: fixed;
   width: 100%; /* anything but auto, otherwise fixed layout not guaranteed */
   white-space: pre;
 }
 
-pre.verbatim span.line {
+pre span.line {
   display: table-row;
 }
 
-pre.verbatim span.ln {
+pre span.ln {
   display: table-cell;
 }
 
@@ -935,7 +931,7 @@ pre.numbered span.ln {
   padding-right: 0.5em;
 }
 
-pre.verbatim span.ld {
+pre span.ld {
   display: table-cell;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -946,7 +942,7 @@ pre.numbered span.ld {
   padding-left: 0.25em;
 }
 
-pre.verbatim span.line.highlight {
+pre span.line.highlight {
   background-color: var(--verbatim-line-highlight-background-color);
   color: var(--verbatim-line-highlight-color);
 }
@@ -1695,17 +1691,13 @@ nav.top div {
   padding-right: 4rem;
 }
 
-main,
-footer {
+body {
   width: 100%;
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-main {
   padding-top: 3rem;
 }
 
@@ -1721,12 +1713,12 @@ main {
   padding-top: 6em;
 }
 
-.book > .dedication > header,
-.article > .dedication > header,
-.book .chapter > header,
-.book .preface > header,
-.book .appendix > header,
-.book .part > header {
+.book > .dedication > .titlepage,
+.article > .dedication > .titlepage,
+.book .chapter > .titlepage,
+.book .preface > .titlepage,
+.book .appendix > .titlepage,
+.book .part > .titlepage {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 0.25rem solid var(--border-color);
@@ -1748,8 +1740,8 @@ main {
   padding-bottom: 2em;
 }
 
-.set header h1,
-.book header h1 {
+.set .titlepage h1,
+.book .titlepage h1 {
   text-align: center;
 }
 
