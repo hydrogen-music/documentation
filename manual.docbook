@@ -246,15 +246,6 @@
 <!--   UI OVERVIEW  -->
     <chapter id="chpt.UIoverview">
       <title>Overview</title>
-
-      <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
-      large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
-      sizes).
-      </para>
-      <para>
-      Below you can see the main UI split up in 5 parts : the Main Menu, Main 
-      Toolbar, Song Editor, Pattern Editor and the Instrument and Sound Library Editor.
-        These sections will be explained in detail further down in this manual.</para>
       
       <figure id="fig.UI_overview">
         <title>The Main UI in Single Pane mode</title>
@@ -266,6 +257,17 @@
         </mediaobject>
       </figure>
 
+      <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
+      large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
+      sizes).
+      </para>
+      <para>
+      Below you can see the main UI split up in 5 parts : the Main Menu, Main 
+      Toolbar, Song Editor, Pattern Editor and the Instrument and Sound Library Editor.
+        These sections will be explained in detail further down in this
+        manual.
+      </para>
+      
       <figure id="fig.tabbed_UI_overview">
         <title>The Main UI in Tabbed mode</title>
 
@@ -288,6 +290,15 @@
       <sect1 id="chpt.preferences.general_tab">
         <title>General</title>
         
+        <figure id="fig.preferences.general_tab">
+          <title>The General Tab</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/PreferencesGeneral_V3.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+        
         <para>On the "General" tab (<xref linkend="fig.preferences.general_tab"/>) you can 
         choose to automatically reopen the last used song and/or playlist.  This can save you 
         the trouble of having to reopen the song you are working on every time you open 
@@ -301,20 +312,20 @@
         you need to enter the path where rubberband is installed on you system here.</para>
         <!-- THIJS : NEED TO AD LINK TO SAMPLE EDITOR -->
         
-        <figure id="fig.preferences.general_tab">
-          <title>The General Tab</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/PreferencesGeneral_V3.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-        
 
       </sect1>
 
       <sect1 id="chpt.preferences.audio_tab">
         <title>Audio System</title>
+
+        <figure id="fig.preferences.audio_tab">
+          <title>The Audio System Tab</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/PreferencesAudioSystem_V3.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
 
         <para>From the "Audio System" tab (<xref
         linkend="fig.preferences.audio_tab"/>) it is possible to modify the
@@ -327,15 +338,6 @@
         prevent hydrogen from overrunning the audio driver.</para>
         <para>The "Interpolate resampling" parameter allows you to select your preferred
         interpolation method.</para>
-
-        <figure id="fig.preferences.audio_tab">
-          <title>The Audio System Tab</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/PreferencesAudioSystem_V3.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
 
         <para>
           The following drivers are available:
@@ -452,6 +454,15 @@
       <sect1 id="chpt.preferences.midi_tab">
         <title>MIDI System</title>
 
+        <figure id="fig.preferences.midi_tab">
+          <title>The MIDI System Tab</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/PreferencesMidiSystem_V2.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
         <para>The "MIDI System" tab (<xref linkend="fig.preferences.midi_tab"/>)
         contains all <abbrev>MIDI</abbrev> settings. Here you can choose the <abbrev>MIDI</abbrev> driver (<abbrev>ALSA</abbrev>, PortMidi, 
         CoreMidi or JackMidi) input, and channel(s) that Hydrogen should respond to.  
@@ -469,20 +480,21 @@
         select with this midi action.
           </para>
         </note>
-       <para>See <xref linkend="chpt.midi"/> for more info on <abbrev>MIDI</abbrev> actions.</para>
-
-        <figure id="fig.preferences.midi_tab">
-          <title>The MIDI System Tab</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/PreferencesMidiSystem_V2.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-      </sect1>
+       <para>See <xref linkend="chpt.midi"/> for more info on
+       <abbrev>MIDI</abbrev> actions.</para>
+     </sect1>
 
       <sect1 id="chpt.preferences.osc_tab">
         <title>OSC</title>
+
+        <figure id="fig.preferences.osc_tab">
+          <title>The OSC Tab</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/PreferencesOSC.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
 
         <para>The <abbrev>OSC</abbrev> tab (<xref linkend="fig.preferences.osc_tab"/>) let's
         you modify all options associated with <abbrev>OSC</abbrev> (Open Sound Control) (see
@@ -539,28 +551,10 @@
           in the <abbrev>OSC</abbrev> tab of the Preferences.
           </para>
         </note>
-
-        <figure id="fig.preferences.osc_tab">
-          <title>The OSC Tab</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/PreferencesOSC.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
       </sect1>
-
-
 
       <sect1 id="chpt.preferences.appearance_tab">
         <title>Appearance</title>
-
-        <para>The "Appearance" tab (<xref
-        linkend="fig.preferences.appearance_tab"/>) let's you modify Hydrogen look 
-        and feel (font settings and interface style). On this tab you can also change the 
-        VU meters fall-off speed and switch between Single pane and Tabbed interface
-        mode (see <xref linkend="chpt.UIoverview"/>)
-        </para>
 
         <figure id="fig.preferences.appearance_tab">
           <title>The Appearance Tab</title>
@@ -570,6 +564,13 @@
             </imageobject>
           </mediaobject>
         </figure>
+
+        <para>The "Appearance" tab (<xref
+        linkend="fig.preferences.appearance_tab"/>) let's you modify Hydrogen look 
+        and feel (font settings and interface style). On this tab you can also change the 
+        VU meters fall-off speed and switch between Single pane and Tabbed interface
+        mode (see <xref linkend="chpt.UIoverview"/>)
+        </para>
       </sect1>
 
     </chapter>
@@ -767,13 +768,6 @@
             <para><emphasis role="bold">Import</emphasis>: imports another drumkit from the local filesystem.
             </para>
             <para>
-              You can import existing drumkits from other users via <menuchoice>
-              <guimenu>Instruments</guimenu><guimenuitem>Import library</guimenuitem>
-              </menuchoice>.  The Import window will pop up with the Internet tab selected.
-              By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
-              and after pressing the 'Update list' button you will get a complete list of all
-              drumkits that are available for download.  In the status column you can see
-              if a kit is installed or not.
 
               <figure id="fig.import_drumkit">
                 <title>Import Drumkit</title>
@@ -783,6 +777,14 @@
                   </imageobject>
                 </mediaobject>
               </figure>
+              
+              You can import existing drumkits from other users via <menuchoice>
+              <guimenu>Instruments</guimenu><guimenuitem>Import library</guimenuitem>
+              </menuchoice>.  The Import window will pop up with the Internet tab selected.
+              By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
+              and after pressing the 'Update list' button you will get a complete list of all
+              drumkits that are available for download.  In the status column you can see
+              if a kit is installed or not.
             </para>
           </listitem>
           <listitem>
@@ -869,16 +871,7 @@
         <itemizedlist>
           <listitem id="chpt.preferences.audio_engine_tab">
             <para><emphasis role="bold">Show audio engine info</emphasis>: opens a window that shows
-            various stats about Hydrogen and the audio driver. In case <abbrev>JACK</abbrev> is used,
-            buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
-            server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
-            application tries to connect).</para>
-            <note>
-              <para>
-                Note that the Audio Engine tab is only available if Hydrogen was compiled with 
-                debug support.
-              </para>
-            </note>
+            various stats about Hydrogen and the audio driver.
 
             <figure id="fig.preferences.audio_engine_tab">
               <title>The Audio Engine View</title>
@@ -888,6 +881,17 @@
                 </imageobject>
               </mediaobject>
             </figure>
+
+            In case <abbrev>JACK</abbrev> is used,
+            buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
+            server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
+            application tries to connect).</para>
+            <note>
+              <para>
+                Note that the Audio Engine tab is only available if Hydrogen was compiled with 
+                debug support.
+              </para>
+            </note>
 
           </listitem>
           <listitem>
@@ -928,6 +932,16 @@
 <!--   MAIN TOOLBAR  -->
     <chapter id="chpt.main_toolbar">
       <title>Main Toolbar</title>
+      
+      <figure id="fig.main_toolbar">
+        <title>The Main Toolbar</title>
+        
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/MainToolbar_V2.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
 
       <para>Before analyzing the two main frames of Hydrogen, let's take a quick
       look at the main toolbar and its components:</para>
@@ -962,23 +976,17 @@
 	    TODO: drop this apart from the image
       </para>
 
-      <figure id="fig.main_toolbar">
-        <title>The Main Toolbar</title>
-        
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/MainToolbar_V2.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </figure>
-
       <sect1 id="sect.main_toolbar.transport_control">
         <title>
           Transport Control
         </title>
-        <para><inlinemediaobject><imageobject><imagedata
-        fileref="img/background_Control_V2.png" format="PNG"/>
-        </imageobject></inlinemediaobject></para>
+        <para>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/background_Control_V2.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+        </para>
 
           <para>Main controls to start <emphasis role="bold">[Hotkey =
           Spacebar]</emphasis>, stop, record, fast forward, rewind, loop a song or a
@@ -996,9 +1004,13 @@
 
       <sect1 id="sect.main_toolbar.tap_tempo_beat_counter">
         <title>Tap Tempo and Beat Counter</title>
-          <para><inlinemediaobject><imageobject>
-          <imagedata fileref="img/MeasureSettings.png" format="PNG"/>
-          </imageobject></inlinemediaobject></para>
+        <para>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/MeasureSettings.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+        </para>
 
           <para>Set measure type and Beat Counter (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>).</para>
 
@@ -1101,9 +1113,13 @@
       </sect1>
       <sect1 id="sect.main_toolbar.bpm_control_and_metronome">
         <title>BPM Control and Metronome</title>
-          <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/background_BPM.png" format="PNG"/>
-          </imageobject></inlinemediaobject></para>
+        <para>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/background_BPM.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+        </para>
 
           <para>Set speed of playing (range: 30-400 bpm) <emphasis
           role="bold">[Hotkey = mouse wheel]</emphasis> and button to
@@ -1112,18 +1128,26 @@
 
       <sect1 id="sect.main_toolbar.cpu_usage_midi_in">
         <title>CPU Usage and MIDI in</title>
-          <para><inlinemediaobject><imageobject>
-          <imagedata fileref="img/MidiIN_CPU.png" format="PNG"/>
-          </imageobject></inlinemediaobject></para>
+        <para>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/MidiIN_CPU.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+        </para>
 
             <para>Shows CPU load and <abbrev>MIDI</abbrev> events.  The CPU bargraph gives you an indication of the CPU load.  The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a midi message.</para>
       </sect1>
       
       <sect1 id="sect.main_toolbar.jack_control">
         <title>JACK Control</title>
-        <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
-          </imageobject></inlinemediaobject></para>
+        <para>
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+        </para>
 
           <para>Click J. TRANS to enable <abbrev>JACK</abbrev> transport.  If the J. MASTER
           button is pressed Hydrogen will work as <abbrev>JACK</abbrev> timebase 'master' by
@@ -1146,9 +1170,13 @@
       
         <sect1 id="sect.main_toolbar.gui_state">
           <title>GUI State</title>
-          <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/mixer-instrrack_btn.png" format="PNG"/>
-          </imageobject></inlinemediaobject></para>
+          <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/mixer-instrrack_btn.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+          </para>
 
           <para>
           The last section gives you quick access to the Mixer window and the Instrument Rack.
@@ -1162,14 +1190,7 @@
     <chapter id="chpt.song_editor">
       <title>Song Editor</title>
 
-      <para>The "Song Editor" (<xref linkend="fig.song_editor"/>) gives an
-      overview of the whole timeline of the song (e.g. intro, verse, bridge,
-      chorus and so on); each blue colored square on this panel represents a complete
-      bar as shown in the underlying "Pattern Editor" panel. The song editor gives
-      you complete freedom to add/remove patterns to the song and to move or 
-      copy any part of your song.
-      
-           
+      <para>
       <figure id="fig.song_editor">
         <title>The Song Editor</title>
         <mediaobject>
@@ -1180,6 +1201,14 @@
       </figure>
       </para>
 
+      <para>The "Song Editor" (<xref linkend="fig.song_editor"/>) gives an
+      overview of the whole timeline of the song (e.g. intro, verse, bridge,
+      chorus and so on); each blue colored square on this panel represents a complete
+      bar as shown in the underlying "Pattern Editor" panel. The song editor gives
+      you complete freedom to add/remove patterns to the song and to move or 
+      copy any part of your song.
+      </para>
+      
      <sect1 id="chpt.song_editor.main_controls">
       <title>Main Controls</title>
       <para>
@@ -1391,7 +1420,10 @@
      </sect1>
       
      <sect1 id="chpt.song_editor.timeline">
-     <title>Timeline</title>
+       <title>Timeline</title>
+       <para>
+	     TODO: add image of Timeline
+       </para>
        <para>This section describes how you can define tempo changes and 
        how you can add tags to your song.</para>
        <sect2 id="chpt.song_editor.timeline.tempo_marker">
@@ -1529,7 +1561,14 @@
     <chapter id="chpt.pattern_editor">
     
       <title>Pattern Editor</title>
-
+        <figure id="fig.PatternEditor_DrumMode">
+         <title>Pattern Editor in Drum Mode</title>
+         <mediaobject>
+           <imageobject>
+             <imagedata fileref="img/PatternEditor_DrumMode.png" format="PNG" />
+           </imageobject>
+         </mediaobject>
+        </figure>
       <para>The "Pattern Editor" 
       allows you to create or modify the selected pattern by adding/removing notes and tuning 
       a number of per-note properties like velocity and pan.
@@ -1550,22 +1589,11 @@
       
       </para>
       
-      <para>First let's take a look at the (classic) 'Drum' mode :
-        <figure id="fig.PatternEditor_DrumMode">
-         <title>Pattern Editor in Drum Mode</title>
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/PatternEditor_DrumMode.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-        </figure>
-      </para>
+      <para>First let's take a look at the (classic) 'Drum' mode.</para>
       
       <sect1 id="chpt.pattern_editor.controls"> 
-       
         <title>Controls</title>
-        <para>The top part of the pattern editor contains a number of controls :</para>
-      
+        
         <figure id="fig.PatternEditorControls">
          <title>Pattern Editor Controls</title>
          <mediaobject>
@@ -1574,7 +1602,9 @@
            </imageobject>
          </mediaobject>
         </figure>
-        
+
+        <para>The top part of the pattern editor contains a number of controls :</para>
+              
          <para>From left to right : </para>
          <itemizedlist mark="opencircle">
          
@@ -1650,18 +1680,19 @@
       </sect1>
       
       <sect1 id="chpt.pattern_editor.drumkit">
-      <title>Drumkit Editor</title>
-        <para>The section on the left shows you what drumkit is currently selected (GMkit by default) and below that you can see
-        the instruments that are part of this kit.</para>
+        <title>Drumkit Editor</title>
         
         <para>
-        <inlinemediaobject id="ifig.pattern_editor_instrument">
-          <imageobject>
-            <imagedata fileref="img/PatternEditorInstr_V2.png" format="PNG" />
-          </imageobject>
-        </inlinemediaobject>
+          <inlinemediaobject id="ifig.pattern_editor_instrument">
+            <imageobject>
+              <imagedata fileref="img/PatternEditorInstr_V2.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
         </para>
-          
+     
+        <para>The section on the left shows you what drumkit is currently selected (GMkit by default) and below that you can see
+        the instruments that are part of this kit.</para>
+     
         <para>Each instrument has its own set of features that are accessible by 
         right-clicking the instrument.  From the context menu that pops up you can select </para>
         <itemizedlist mark="opencircle"> 
@@ -1807,7 +1838,10 @@
       </sect1>
       
       <sect1 id="chpt.pattern_editor.note_properties">
-      <title>Note Properties Editor</title>
+        <title>Note Properties Editor</title>
+        <para>
+	      TODO: add image of note properties editor (velocity)
+        </para>
       <para>Clicking on an instrument or adding/removing a note next to it 
       will select this instrument.  Once an instrument is selected the note properties 
       for this instrument will be shown in the form of vertical lines in the bottom window.  
@@ -1940,12 +1974,8 @@
       </sect1>
 
       <sect1 id="chpt.pattern_editor.piano_mode">
-      <title>Piano Mode Editor</title>
-      <para>Drum mode (see <xref linkend="fig.PatternEditor_DrumMode"/>) focuses on using Hydrogen as a drum machine.
-      If you are using Hydrogen as an instrument there is a big chance that the Piano mode is for you.
-      It gives you a complete 'piano keyboard' so you can easily put down your tunes.</para>
-      <para>You can compare the Piano mode to the Note properties Notekey (described above), only here you have a 
-      complete piano keyboard, so you don't have to select the octave first.</para>
+        <title>Piano Mode Editor</title>
+        
        <figure id="fig.PatternEditor_PianoMode">
          <title>Pattern Editor in Piano Mode</title>
          <mediaobject>
@@ -1953,7 +1983,15 @@
              <imagedata fileref="img/PatternEditor_PianoMode.png" format="PNG" />
            </imageobject>
          </mediaobject>
-        </figure>
+       </figure>
+       
+       <para>Drum mode (see <xref linkend="fig.PatternEditor_DrumMode"/>) focuses on using Hydrogen as a drum machine.
+       If you are using Hydrogen as an instrument there is a big chance that the Piano mode is for you.
+       It gives you a complete 'piano keyboard' so you can easily put down your tunes.</para>
+       <para>You can compare the Piano mode to the Note properties Notekey (described above), only here you have a 
+       complete piano keyboard, so you don't have to select the octave
+       first.</para>
+      
       </sect1>
      
     </chapter>
@@ -1961,6 +1999,15 @@
   <chapter id="chpt.sound_library" xreflabel="Instrument rack">
     <title>Sound Library (Drumkit/Pattern/Song Manager)</title>
 
+      <figure id="fig.soundlibrary">
+        <title>The Soundlibrary</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/SoundLibrary.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </figure>
+      
     <para>
 	  TODO: split into conceptual part and one that deals with the actual user interface
     </para>
@@ -1999,14 +2046,6 @@
       favourite patterns, and favourite songs.  When making new songs and new drum
       kits, it allows you to reuse and mix the instruments and patterns from other kits and songs.
 
-      <figure id="fig.soundlibrary">
-        <title>The Soundlibrary</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/SoundLibrary.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-      </figure>
       </para>
 
       <sect1 id="sect.systemdrumkits">
@@ -2210,10 +2249,6 @@
       </sect1>      
       <sect1 id="chpt.instrument_editor.general">
         <title>General</title>
-
-        <para>In the instrument editor, click on the
-        <guibutton>General</guibutton> button.  Here you can adjust several
-        parameters that apply to the instrument (applies to all layers as well).
         
         <figure id="instrumenteditor.general">
         <title>The Instrument editor General view</title>
@@ -2223,8 +2258,12 @@
           </imageobject>
         </mediaobject>
         </figure>
-        
+
+        <para>In the instrument editor, click on the
+        <guibutton>General</guibutton> button.  Here you can adjust several
+        parameters that apply to the instrument (applies to all layers as well).      
         The parameters are:</para>
+        
         <itemizedlist>
           <listitem>
             <para><emphasis role="bold">Envelope parameters</emphasis>:
@@ -2491,6 +2530,15 @@
       
       <sect1 id="chpt.instrument_editor.layers">
         <title>Layers</title>
+        
+        <figure id="instrumenteditor.layers">
+        <title>The Instrument Editor Layers View</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/Instrument_Layers.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+        </figure>
 
         <para>For each instrument in a drum kit, you can load several samples
         and set different synthesizer parameters.  This section will step you
@@ -2535,15 +2583,6 @@
         the sides of the light blue rectangles and you see that you get a
         left-right drag cursor.  Now drag the sample to the left or right (like
         a curtain).  You will now see Layer 2 appear.</para>
-        
-        <figure id="instrumenteditor.layers">
-        <title>The Instrument Editor Layers View</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/Instrument_Layers.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-        </figure>
 
         <para>The velocity setting for the layer is 0-velocity on the left, and
         full velocity on the right.  Set up Layer 1 to sound for soft notes, and
@@ -2640,14 +2679,15 @@
 
     
       <chapter id="chpt.sample_editor">
-        <title>Sample Editor</title>        
+        <title>Sample Editor</title>
+        
         <figure id="sample.editor">
-        <title>The Sample Editor</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/SampleEditor_V5.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
+          <title>The Sample Editor</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/SampleEditor_V5.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
         </figure>        
 
         <para>So far we have created a multilayered Drumkit, set a number of 
@@ -2772,14 +2812,6 @@
     <chapter id="chpt.mixer" xreflabel="Mixer">
       <title>Mixer</title>
 
-      <para>The Mixer window can be opened by pressing Alt+M, by clicking 
-      Mixer in the Tools menu, or by clicking the Mixer button on the main toolbar.
-      </para>
-      <para>The Mixer consists of 3 sections (left>right) : the instrument channel strips, 
-      the FX plugin rack and the master fader section.  The Hydrogen Mixer works very
-       much like a hardware mixer does : it lets you set the volume, pan, FX and several 
-       other things for every instrument.
-
       <figure id="fig.mixer">
         <title>The Mixer</title>
         <mediaobject>
@@ -2788,6 +2820,14 @@
           </imageobject>
         </mediaobject>
       </figure>
+
+      <para>The Mixer window can be opened by pressing Alt+M, by clicking 
+      Mixer in the Tools menu, or by clicking the Mixer button on the main toolbar.
+      </para>
+      <para>The Mixer consists of 3 sections (left>right) : the instrument channel strips, 
+      the FX plugin rack and the master fader section.  The Hydrogen Mixer works very
+       much like a hardware mixer does : it lets you set the volume, pan, FX and several 
+       other things for every instrument.
       </para>
 
     <sect1 id="chpt.mixer.channel_strips">
@@ -3138,10 +3178,8 @@
     
    <chapter id="chpt.director" xreflabel="Director">
      <title>Director</title>
-     <para>
-       Now all we need is a way to see the tags we have entered.  This can be done
-       using the Director window.  Open the Director by pressing Alt-D, or Tools- Director :
 
+     <para>
        <informalfigure id="fig.director">
          <mediaobject>
            <imageobject>
@@ -3149,6 +3187,11 @@
            </imageobject>
          </mediaobject>
        </informalfigure>
+     </para>
+     
+     <para>
+       Now all we need is a way to see the tags we have entered.  This can be done
+       using the Director window.  Open the Director by pressing Alt-D, or Tools- Director.
        
        The Director is your best friend when you need a quick overview of what Hydrogen
        is currently doing.  This comes in very handy when you are recording a song, or
