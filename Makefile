@@ -41,8 +41,13 @@ ALL_TUTORIALS = tutorial_en.html \
 ALL_POT_FILES = manual_en.pot tutorial_en.pot
 
 XMLTO_OPTS = --stringparam section.autolabel=1 \
-	--stringparam toc.max.depth=2 \
-	--stringparam xref.with.number.and.title=0
+	--stringparam toc.max.depth=3 \
+	--stringparam xref.with.number.and.title=0 \
+	--stringparam section.label.includes.component.label=1 \
+	--stringparam admon.graphics.extension=.svg \
+	--stringparam admon.graphics=1 \
+	--stringparam admon.graphics.path=img/admonitions/ \
+	-m res/styling.xsd
 
 XML2POT = xml2pot
 XMLTO = xmlto
