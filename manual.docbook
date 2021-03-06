@@ -29,7 +29,7 @@
     <abstract>
       <para>Hydrogen is a software synthesizer which can be used alone,
       emulating a drum machine based on patterns, or via an external <abbrev>MIDI</abbrev>
-      keyboard/sequencer software. Hydrogen compiles on Linux, Mac OS X and Windows.</para>
+      keyboard/sequencer software. Hydrogen runs on Linux, Mac OS X and Windows.</para>
     </abstract>
   </bookinfo>
 
@@ -48,23 +48,27 @@
       <para>
         You can download Hydrogen from 
         <ulink url="http://www.hydrogen-music.org/hcms/node/21">http://www.hydrogen-music.org</ulink>.  
-        On the 'Downloads' page you can find several binaries (installers) for Linux, Mac and Windows.
+        On the <emphasis>Downloads</emphasis> page you can find several binaries (installers) for MacOS and Windows.
       </para>
-      <note>
-        <para>Please note that some versions may not be available for Windows and
-        Mac
-        </para>
-      </note>
+      <para>
+	    Due to the variety of distributions we do not provide packages for Linux. If you do not find Hydrogen in the repository of your distribution, please ask the people behind it to include Hydrogen.
+      </para>
+    </chapter>
+
+<!-- COMPILATION  -->
+
+    <chapter id="chpt.compilation">
+      <title>Build</title>
 
       <para>
-        If you want to compile Hydrogen yourself (see <xref linkend="chpt.compilation"/>), you can download the latest source files directly from our
-        git repository with:
+        If you want to compile Hydrogen yourself, you can download the latest source files directly from our
+        <command>git</command> repository with
       </para>
       <screen>
         <prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
       </screen>
       <para>
-        A certain release can be fetched with:
+        A certain release can be fetched with
       </para>
       <screen>
         <prompt>$</prompt><command> git checkout tags/1.0.0</command>
@@ -111,6 +115,11 @@
           <para><emphasis role="bold"><abbrev>LASH</abbrev></emphasis>: at <ulink url="http://lash.nongnu.org">http://lash.nongnu.org</ulink> (only if
           you wish to use <abbrev>LASH</abbrev>)</para>
         </listitem>
+        <listitem>
+	      <para>
+	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <abbrev>OSC</abbrev> and <abbrev>NSM</abbrev> support
+          </para>
+        </listitem>
       </itemizedlist>
 
       <para>Please install them with your distribution's package manager. If
@@ -125,17 +134,7 @@
 	liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
       </screen>
 
-    </chapter>
-
-<!-- COMPILATION  -->
-
-    <chapter id="chpt.compilation">
-      <title>Build</title>
-
-      <para>Depending on the branch you are compiling you will need to use <command>cmake</command>. Check the <filename>INSTALL.txt</filename> and the <filename>README.txt</filename> files for more info (located in the top level dir once you downloaded the sources).</para>
-      
-
-        <para>Compiling with <command>cmake</command> can be done easily by using the <filename>build.sh</filename> script. Go to the directory where the git repository
+        <para>Compiling with <command>cmake</command> can be done easily by using the <filename>build.sh</filename> script. Go to the directory where the <command>git</command> repository
         was cloned and run the <filename>build.sh</filename> script without any arguments to display the help :</para>
 
         <screen>
@@ -149,21 +148,36 @@
           <command>   r[m]     => all built, temp and cache files</command>
           <command>   c[lean]  => remove cache files</command>
           <command>   m[ake]   => launch the build process</command>
+          <command>   mm       => launch the build process using ccache</command>
+          <command>   mt       => launch the build process with clang tidy checks enabled</command>
           <command>   d[oc]    => build html documentation</command>
           <command>   g[raph]  => draw a dependencies graph</command>
           <command>   h[elp]   => show the build options</command>
           <command>   x|exec   => execute hydrogen</command>
           <command>   t[ests]  => execute tests</command>
           <command>   p[kg]    => build source package</command>
+          <command>   z        => build using ccache and run from tree</command>
+
         </screen>
 
-        <para>To build Hydrogen and execute the result, run the build script with the <parameter>m</parameter> option :
+        <para>To build Hydrogen and execute the result, run the build script with the <parameter>m</parameter> option
         </para>
       
         <screen>
            <prompt>$</prompt> <command>./build.sh m x</command>
         </screen>              
-      
+
+        <para>and to install it permanently on your computer, change into the <filename>build</filename> folder and use the <command>make</command> command.
+        </para>
+
+        <screen>
+          <prompt>$</prompt> <command>cd build</command>
+          <prompt>$</prompt> <command>sudo make install</command>
+        </screen>
+        
+        <note>
+          <para>For further details about the installation process please have a look the <filename>INSTALL.txt</filename> file (located in the top level dir once you downloaded the sources).</para>
+        </note>
     </chapter>
 
 <!--   KEYBOARD AND MOUSE -->
@@ -173,9 +187,23 @@
         The Hydrogen user interface is designed so that it can be
         used entirely with the mouse, with the exception of text entry.
       </para>
+
+      <itemizedlist>
+	    <listitem>
+	      <para>
+	        <keycap>Ctrl</keycap> + <keycap>left click</keycap>: restore default value of knob or fader
+          </para>
+        </listitem>
+        <listitem>
+	      <para>
+	        <keycap>Shift</keycap> + <keycap>left click</keycap>: bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>
+          </para>
+        </listitem>
+      </itemizedlist>
+      
       <para>
         The keyboard can also be used for navigating and editing in
-        the pattern and song editors, using a combination of 
+        the <link linkend="chpt.pattern_editor">Pattern</link> and <link linkend="chpt.song_editor">Song Editors</link>, using a combination of 
         <itemizedlist>
           <listitem>
             <para>
@@ -202,7 +230,7 @@
           <listitem>
             <para>
               <emphasis role="bold"><keycap>Tab</keycap> and <keycap>Shift</keycap> + <keycap>Tab</keycap></emphasis> : move
-              between different areas of the main interface.
+              between the Pattern, Songn and Note Property Editor.
             </para>
           </listitem>
           <listitem>
@@ -224,6 +252,8 @@
         Note that the keyboard input cursor is hidden
         from view until one of the above keys is pressed. This keeps
         the display clear and uncluttered when using the mouse.
+
+        TODO: link and mention the corresponding option in the Preferences
         </para>
       </note>
       <para>
@@ -3273,8 +3303,13 @@
        
         
        </sect1>
-       
 
+       <sect1 id="chpt.midi.learnable">
+         <title>MIDI-learnable Widgets</title>
+         <para>
+	       TODO
+         </para>
+       </sect1>
       <sect1 id="chpt.midi.actions">
         <title>MIDI Actions</title>
 
