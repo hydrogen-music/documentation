@@ -55,8 +55,6 @@
       </para>
     </chapter>
 
-<!-- COMPILATION  -->
-
     <chapter id="chpt.compilation">
       <title>Build</title>
 
@@ -180,7 +178,6 @@
         </note>
     </chapter>
 
-<!--   KEYBOARD AND MOUSE -->
     <chapter id="chpt.keyboard_and_mouse">
       <title>Keyboard and Mouse</title>
       <para>
@@ -264,16 +261,9 @@
 
 </part>
 
-  <!--
-      ####################
-      # SECOND CHAPTER   #
-      ####################
-  -->
-
-  <part id="part.using_hydrogen">
+<part id="part.using_hydrogen">
     <title>Using Hydrogen</title>
 
-<!--   UI OVERVIEW  -->
     <chapter id="chpt.UIoverview">
       <title>Overview</title>
       
@@ -287,13 +277,20 @@
         </mediaobject>
       </figure>
 
+      <para>
+	    TODO: update image (and adding the gimp session as well in order for future maintainance to only replace the background image
+      </para>
+
       <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
       large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
       sizes).
       </para>
       <para>
-      Below you can see the main UI split up in 5 parts : the Main Menu, Main 
-      Toolbar, Song Editor, Pattern Editor and the Instrument and Sound Library Editor.
+	    TODO: mention and link corresponding option in Preferences > Appearance
+      </para>
+      <para>
+      Below you can see the main UI split up in 5 parts: the <link linkend="chpt.main_menu">Main Menu</link>, <link linkend="chpt.main_toolbar">Main 
+      Toolbar</link>, <link linkend="chpt.song_editor">Song Editor</link>, <link linkend="chpt.pattern_editor">Pattern Editor</link> and the <link linkend="chpt.instrument_editor">Instrument</link> and <link linkend="chpt.sound_library">Sound Library Editor</link>.
         These sections will be explained in detail further down in this
         manual.
       </para>
@@ -313,9 +310,7 @@
     <chapter id="chpt.preferences" xreflabel="Preferences">
       <title>Preferences</title>
 
-      <para>First of all you should make sure that the audio engine is
-      configured properly.  The preferences dialog can be accessed via the tools
-      menu (tools -&gt; preferences).</para>
+      <para>Via this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
 
       <sect1 id="chpt.preferences.general_tab">
         <title>General</title>
@@ -328,6 +323,10 @@
             </imageobject>
           </mediaobject>
         </figure>
+
+        <para>
+	      TODO: update image, options, and description. Convert the layout of the section to a item list similar to the other ones.
+        </para>
         
         <para>On the "General" tab (<xref linkend="fig.preferences.general_tab"/>) you can 
         choose to automatically reopen the last used song and/or playlist.  This can save you 
@@ -357,6 +356,10 @@
           </mediaobject>
         </figure>
 
+        <para>
+	      TODO: update image, options, and description
+        </para>
+        
         <para>From the "Audio System" tab (<xref
         linkend="fig.preferences.audio_tab"/>) it is possible to modify the
         audio driver being used (<abbrev>OSS</abbrev>, <abbrev>JACK</abbrev>, <abbrev>ALSA</abbrev>, PortAudio, PulseAudio, CoreAudio, Auto) with its buffer and
@@ -493,6 +496,10 @@
           </mediaobject>
         </figure>
 
+        <para>
+	      TODO: update image, options, and description
+        </para>
+
         <para>The "MIDI System" tab (<xref linkend="fig.preferences.midi_tab"/>)
         contains all <abbrev>MIDI</abbrev> settings. Here you can choose the <abbrev>MIDI</abbrev> driver (<abbrev>ALSA</abbrev>, PortMidi, 
         CoreMidi or JackMidi) input, and channel(s) that Hydrogen should respond to.  
@@ -595,6 +602,10 @@
           </mediaobject>
         </figure>
 
+        <para>
+	      TODO: update image, options, and description
+        </para>
+
         <para>The "Appearance" tab (<xref
         linkend="fig.preferences.appearance_tab"/>) let's you modify Hydrogen look 
         and feel (font settings and interface style). On this tab you can also change the 
@@ -605,9 +616,12 @@
 
     </chapter>
     
-<!--  MAIN MENU -->
     <chapter id="chpt.main_menu">
       <title>Main Menu</title>
+
+      <para>
+	    TODO: add picture of the main menu
+      </para>
 
       <sect1 id="sect.main_menu.projects">
         <title>Projects</title>
@@ -616,64 +630,65 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">New</emphasis>: create a new song</para>
+            <para><emphasis role="bold">New</emphasis>: creates a new song.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Show Info</emphasis>: set general properties of the
-            song such as name, author, license and generic notes</para>
+            <para><emphasis role="bold">Show Info</emphasis>: sets general properties of the
+            song such as name, author, license and generic notes.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open</emphasis>: open a song</para>
+            <para><emphasis role="bold">Open</emphasis>: opens a song.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open Demo</emphasis>: open a demo song (demo songs
+            <para><emphasis role="bold">Open Demo</emphasis>: opens a demo song (demo songs
             are stored in
-            <emphasis>$INSTALLPATH/share/hydrogen/data/demo_songs</emphasis>)</para>
+            <filename>$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open recent</emphasis>: open a menu showing last used
-            songs</para>
+            <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing last used
+            songs.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Save</emphasis>: save changes to current song</para>
+            <para><emphasis role="bold">Save</emphasis>: saves changes to current song.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Save as</emphasis>: save current song specifying a
+            <para><emphasis role="bold">Save as</emphasis>: saves current song specifying a
             name (default path:
-            <emphasis>$HOME/.hydrogen/data/songs)</emphasis></para>
+            <filename>$HOME/.hydrogen/data/songs/)</filename>.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open pattern</emphasis>: open a saved pattern
-            belonging to the current drumkit</para>
+            <para><emphasis role="bold">Open pattern</emphasis>: opens a saved pattern
+            belonging to the current drumkit.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export pattern as</emphasis>: saves a
-            pattern. It will be stored in
-            <emphasis>$HOME/.hydrogen/data/patterns/drumkit_name</emphasis></para>
+            pattern. In order for Hydrogen to automatically list it in the <link linkend="sect.sl.patterns">Patterns section of the Sound Library</link> you have to store it in
+            <filename>$HOME/.hydrogen/data/patterns/drumkit_name/</filename></para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export MIDI file</emphasis>: export current song in
-            <abbrev>MIDI</abbrev> format</para>
+            <para><emphasis role="bold">Export MIDI file</emphasis>: exports the current song in
+            <abbrev>MIDI</abbrev> format.</para>
           </listitem>
           <listitem id="sect.main_form.export_song" xreflabel="Export Song">
-            <para><emphasis role="bold">Export song</emphasis>: export current song in WAV
+            <para><emphasis role="bold">Export song</emphasis>: exports the current song in WAV
             format.</para>
+            
+            <figure id="fig.Export_song">
+              <title>Export a Song</title>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Export_song.png" format="PNG" />
+                </imageobject>
+              </mediaobject>
+            </figure>
+
+            <para>
+	          TODO: update image and describe new and old options (in an itemized list instead of a procedural guide)
+            </para>
             
             <para>Once your song is finished you can export it to an audio file.
             This audio file can then be played on your favorite media player or imported
-            in an other audio application.</para>
-            <para>
-              To do this, go to Project - "Export song" and the following window will pop up:
-              <figure id="fig.Export_song">
-                <title>Export a Song</title>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata fileref="img/Export_song.png" format="PNG" />
-                  </imageobject>
-                </mediaobject>
-              </figure>
-              To export a song you need to do 3 things:
-              
+            in an other audio application. To export a song you need to do 3 things:
             </para>
             
             <procedure>
@@ -717,18 +732,21 @@
                 As a workaround you can record the output of Hydrogen with an audio recording
                 application (like Ardour, Qtractor ...)
               </para>
+              <para>
+	            TODO: is this still valid?
+              </para>
             </note>
 
-            <para>
-	          TODO: fuse
-            </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export Lilypond file</emphasis>: this is a first version of the LilyPond export.
-            It has the following limitations: Only GM-kit is supported, No triplets support</para>
+            <para><emphasis role="bold">Export Lilypond file</emphasis>: exports the current song to LilyPond.</para>
+            <warning>
+	          <para>
+            It has the following limitations: Only the <emphasis>GMRockKit</emphasis> and no triplets are supported.</para>
+            </warning>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Quit</emphasis>: quit Hydrogen</para>
+            <para><emphasis role="bold">Quit</emphasis>: exists Hydrogen.</para>
           </listitem>
         </itemizedlist>
       </sect1>
@@ -739,50 +757,23 @@
         
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">Undo</emphasis>: lets you undo your last action</para>
+            <para><emphasis role="bold">Undo</emphasis>: lets you undo your last action.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Redo</emphasis>: lets you redo the last undone action</para>
+            <para><emphasis role="bold">Redo</emphasis>: lets you redo the last undone action.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Undo History</emphasis>: gives you an overview of your previous
-            actions</para>
+            actions.</para>
           </listitem>
         </itemizedlist>
       </sect1>
-
-      <sect1 id="sect.main_menu.instruments">
-        <title>Instruments</title>
-        <para>This menu offers
-        instruments functions.</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Add instrument</emphasis>: add a new instrument to your current drumkit</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Clear all</emphasis>: delete all instruments from the current drumkit</para>
-          </listitem>
-          <listitem>       
-            <para><emphasis role="bold">Add component</emphasis>: a component is a part of Hydrogen's instrument model.
-            Each instrument consists of one or more components, and each component consists of one or more layers.
-            </para>
-
-            <para>To make an example: A snare could have two components.
-            One component includes sounds from the top side of the snare drum, and the other component includes
-            the sounds from the bottom side of the snare drum (where the snare wires are fitted).
-            Each component can consist of several layers (snare drum hits with different velocities).
-            Now you can adjust the volume of the two components to build your ideal drum sound.
-            If you want more of the attack, you can put in more of the "top head" component.
-            If you want more of the snare wires, you put in more of the bottom component.
-            </para>
-          </listitem>
-        </itemizedlist>
-      </sect1>
-
       <sect1 id="sect.main_menu.drumkits">
         <title>Drumkits</title>
         <para>This menu offers drumkit (sound libraries) functions.</para>
+        <para>
+	      TODO: update item list
+        </para>
         <itemizedlist>
           <listitem>
             <para><emphasis role="bold">Save</emphasis>: saves all instruments settings (and their sound samples) in
@@ -829,54 +820,62 @@
         </itemizedlist>
       </sect1>
 
-      <sect1 id="sect.main_menu.view">
-        <title>View</title>
-        <para>Opens the director, the playlist editor, the instrument rack
-        and the general preferences window.
-        </para>
+      <sect1 id="sect.main_menu.instruments">
+        <title>Instruments</title>
+        <para>This menu offers
+        instruments functions.</para>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">Playlist editor</emphasis>: a tool to manage
-            playlists.</para>
+            <para><emphasis role="bold">Add Instrument</emphasis>: adda a new instrument to your current drumkit.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Director</emphasis>: open the director window.</para>
+            <para><emphasis role="bold">Clear All</emphasis>: deletes all instruments from the current drumkit.</para>
+          </listitem>
+          <listitem>       
+            <para><emphasis role="bold">Add Component</emphasis>: adds a <link linkend="def.component">component</link> to the current drumkit.</para>
+          </listitem>
+        </itemizedlist>
+      </sect1>
+
+      <sect1 id="sect.main_menu.view">
+        <title>View</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Playlist Editor</emphasis>: opens the <link linkend="chpt.playlist_editor">Playlist Editor</link> window.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Mixer</emphasis>: open the mixer window.</para>
+            <para><emphasis role="bold">Director</emphasis>: opens the <link linkend="chpt.director">Director</link> window.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Instrument rack</emphasis>: open the instrument rack
+            <para><emphasis role="bold">Mixer</emphasis>: opens the <link linkend="chpt.mixer">Mixer</link> window.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Instrument Rack</emphasis>: shows or hides the widget of the main window containing both the <link linkend="chpt.instrument_editor">Instrument Editor</link> and the <link linkend="chpt.sound_library">Sound Library</link>.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Automation Path</emphasis>: shows or hides the <link linkend="sect.song_editor.automation_path">Automation Path</link>
             panel.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Automation path</emphasis>: open the automation path
-            panel.</para>
+            <para><emphasis role="bold">Timeline</emphasis>: shows or hides the <link linkend="chpt.song_editor.timeline">Timeline</link> panel.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Timeline</emphasis>: open the time line
-            panel (auto hiding the playback track)</para>
+            <para><emphasis role="bold">Playback Track</emphasis>: shows or hides the <link linkend="chpt.song_editor.playbackTrack">Playback Track</link> panel.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Playback track</emphasis>: open the time line
-            panel (auto hiding the timeline)</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Full screen</emphasis>: maximises the window size to the whole screen area</para>
+            <para><emphasis role="bold">Full screen</emphasis>: maximises the window size to the whole screen area.</para>
           </listitem>
         </itemizedlist>
       </sect1>
 
       <sect1 id="sect.main_menu.options">
         <title>Options</title>
-        <para>Selects the input mode and opens the general preferences
-        window.</para>
-
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">Input mode</emphasis>: when set to <emphasis>Drumset</emphasis> the keys on your midi keyboard will map to the instruments
-            in your drumkit. If you set it to <emphasis>Instrument</emphasis> the keys of your midi 
+            <para><emphasis role="bold">Input mode</emphasis>: when set to <emphasis>Drumset</emphasis> the keys on your <abbrev>MIDI</abbrev> keyboard will map to the instruments
+            in your drumkit. If you set it to <emphasis>Instrument</emphasis> the keys of your <abbrev>MIDI</abbrev>
             keyboard will trigger the instrument that is currently selected.
             The pitch of the instrument will follow the key you press on your keyboard.
             This feature is mainly used for non-drum instruments.
@@ -885,15 +884,19 @@
           </listitem>
           
           <listitem>
-            <para><emphasis role="bold">Preferences</emphasis>: open the main preferences
-            window. Read <xref linkend="chpt.preferences"/> on how to configure
-            Hydrogen.</para>
+            <para><emphasis role="bold">Preferences</emphasis>: opens the main preferences
+            window (see <xref linkend="chpt.preferences"/> for details).</para>
           </listitem>
         </itemizedlist>
       </sect1>
 
       <sect1 id="sect.main_menu.debug">
         <title>Debug</title>
+
+        <para>
+	      TODO: update option list and description
+        </para>
+        
         <para>Tools mainly for debugging
         and monitoring Hydrogen (only available when compiled with debug
         support !).</para>
@@ -940,7 +943,7 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">User manual</emphasis>: open a window with this
+            <para><emphasis role="bold">User manual</emphasis>: opens a window with this
             manual :)</para>
           </listitem>
           <listitem>
@@ -948,11 +951,11 @@
             information, acknowledgments, etc.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Report bug</emphasis>: opens the Hydrogen issue page at github.com in Internet browser
-            You can open a new issue to communicate a bug here (first search if there exists already an issue about it)</para>
+            <para><emphasis role="bold">Report bug</emphasis>: opens the <ulink url="https://github.com/hydrogen-music/hydrogen/issues">Hydrogen issue page at github.com</ulink> in your default Internet browser.
+            You can open a new issue to communicate a bug here (first search if there exists already an issue about it).</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Donate</emphasis>: make a donation to developers/mantainers</para>
+            <para><emphasis role="bold">Donate</emphasis>: make a donation to developers/mantainers.</para>
           </listitem>
         </itemizedlist>
       </sect1>
@@ -2187,14 +2190,14 @@
       </sect1>
     </chapter>
 
-    <chapter id="chpt.instrument_editing">
-      <title>Instrument and Drumkits Editor</title>
+    <chapter id="chpt.instrument_editor">
+      <title>Instrument Editor</title>
 
       <para>
 	    TODO: disentangle this chapter into a plain description of the "General" and "Layers" view of the Instrument Editor and split of the "Create a New Drumkit" tutorial and put it in the examples
       </para>
 
-      <sect1 id="chpt.instrument_editing.concepts">
+      <sect1 id="chpt.instrument_editor.concepts">
         <title>Concepts</title>
 
         <para>
@@ -2340,10 +2343,10 @@
         </itemizedlist>
 
         <para>It's important that you understand <xref
-        linkend="chpt.instrument_editing.concepts"/> in order to continue
+        linkend="chpt.instrument_editor.concepts"/> in order to continue
         on.</para>
 
-        <sect2 id="chpt.instrument_editing.envelope_parameters">
+        <sect2 id="chpt.instrument_editor.envelope_parameters">
           <title>Envelope Parameters</title>
 
           <para>When the instrument is triggered, its volume is run through an
@@ -2400,7 +2403,7 @@
 
         </sect2>
 
-        <sect2 id="chpt.instrument_editing.gain_and_mute_group">
+        <sect2 id="chpt.instrument_editor.gain_and_mute_group">
           <title>Gain and Mute Group</title>
 
           <para>The gain sets the overall volume for the sample.  This gain is
@@ -2436,7 +2439,7 @@
           to 2.)</para>
         </sect2>
         
-        <sect2 id="chpt.instrument_editing.auto_stop_note">
+        <sect2 id="chpt.instrument_editor.auto_stop_note">
           <title>Auto Stop-Note</title>
 
           <para>If this box is checked Hydrogen will immediately stop any playing sample that
@@ -2451,7 +2454,7 @@
 
           </para>
         </sect2>
-        <sect2 id="chpt.instrument_editing.apply_velocity">
+        <sect2 id="chpt.instrument_editor.apply_velocity">
           <title>Apply Velocity</title>
           <para>
              This lets the user decide if Hydrogen will apply the note velocity to the sample being played.
@@ -2469,7 +2472,7 @@
           </para>
         </sect2>  
 
-        <sect2 id="chpt.instrument_editing.filter">
+        <sect2 id="chpt.instrument_editor.filter">
           <title>Filter Parameters</title>
 
           <para>The filter is a low-pass resonance filter.  If you don't wish to
@@ -2500,7 +2503,7 @@
           </note>
         </sect2>
         
-        <sect2 id="chpt.instrument_editing.pitch_shift_parameters">
+        <sect2 id="chpt.instrument_editor.pitch_shift_parameters">
           <title>Pitch Shift Parameters</title>
           <para> The first two knobs control the pitch shift offset.
                  You can use it to change the tuning of the instrument.
@@ -2516,7 +2519,7 @@
         </sect2>   
         
 
-        <sect2 id="chpt.instrument_editing.midi_out_settings">
+        <sect2 id="chpt.instrument_editor.midi_out_settings">
           <title>MIDI Out Settings</title>
 
           <para>Hydrogen is capable of generating midi messages that you can use
@@ -2534,7 +2537,7 @@
           internal Hydrogen sampler with multiple external apps/devices.</para>
 
         </sect2>
-        <sect2 id="chpt.instrument_editing.HH_pressure_group">
+        <sect2 id="chpt.instrument_editor.HH_pressure_group">
           <title>Hi-Hat Pressure Group</title>
             <para>The Hi-Hat is a particular instrument of the drumkit as its sound can be changed by pressing the foot pedal.
             </para>
@@ -4109,7 +4112,7 @@
 	 <title>Create a New Drumkit</title>
      <para>TODO: make consistent</para>
      
-      <sect1 id="chpt.instrument_editing.new_kit">
+      <sect1 id="chpt.instrument_editor.new_kit">
        <title>Creating a New Drumkit</title>
        <para>In the next paragraphs we will show you how to create a complete drumkit.  
        Keeping in mind the 'Soundlibrary hierarchy' (see <xref linkend="fig.SoundlibraryHierarchy"/>)
@@ -4187,7 +4190,7 @@
 
       </sect1>
 
-      <sect1 id="chpt.instrument_editing.tips">
+      <sect1 id="chpt.instrument_editor.tips">
         <title>Tips on Editing Instruments</title>
 
         <para>With all of the different parameters available to tweak, it can be
@@ -4524,6 +4527,24 @@
       </glossdef>
     </glossentry>
 
+    <glossentry id="def.component">
+	  <glossterm>Component</glossterm>
+      <glossdef>
+	    <para>
+	      A component is a part of Hydrogen's instrument model.
+          Each instrument consists of one or more components, and each component consists of one or more layers.
+        </para>
+
+        <para>To make an example: A snare could have two components.
+        One component includes sounds from the top side of the snare drum, and the other component includes
+        the sounds from the bottom side of the snare drum (where the snare wires are fitted).
+        Each component can consist of several layers (snare drum hits with different velocities).
+        Now you can adjust the volume of the two components to build your ideal drum sound.
+        If you want more of the attack, you can put in more of the "top head" component.
+        If you want more of the snare wires, you put in more of the bottom component.
+        </para>
+      </glossdef>
+    </glossentry>
     <glossentry id="def.cutoff">
       <glossterm>Cutoff Frequency</glossterm>
       <glossdef>
