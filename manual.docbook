@@ -33,12 +33,6 @@
     </abstract>
   </bookinfo>
 
-  <!--
-      ###################
-      # FIRST CHAPTER   #
-      ###################
-  -->
-
   <part id="part.1">
     <title>Introduction</title>
 
@@ -188,12 +182,12 @@
       <itemizedlist>
 	    <listitem>
 	      <para>
-	        <keycap>Ctrl</keycap> + <keycap>left click</keycap>: restore default value of knob or fader
+	        <keycap>Ctrl</keycap> + <keycap>left click</keycap> : restore default value of knob or fader
           </para>
         </listitem>
         <listitem>
 	      <para>
-	        <keycap>Shift</keycap> + <keycap>left click</keycap>: bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>
+	        <keycap>Shift</keycap> + <keycap>left click</keycap> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>
           </para>
         </listitem>
       </itemizedlist>
@@ -340,7 +334,33 @@
         and if you want to use rubberband for sample time-stretching (see <xref linkend="chpt.sample_editor.section2"/>)
         you need to enter the path where rubberband is installed on you system here.</para>
         <!-- THIJS : NEED TO AD LINK TO SAMPLE EDITOR -->
-        
+
+
+        <itemizedlist>
+          <listitem><para><emphasis role="bold"><guilabel>Beat counter drift
+          compensation in 1/10ms</guilabel></emphasis> &mdash; adjust to
+          compensate for latency between the keyboard and the
+          program.</para></listitem>
+
+          <listitem><para><emphasis role="bold"><guilabel>Beat counter start
+          offset in ms</guilabel></emphasis> &mdash; adjust the time between the
+          Beat Counter's last input stroke and when the song starts playing (if
+          auto-start is activated).</para></listitem>
+        </itemizedlist>
+
+        <note>
+          <para>
+            Note that these can be set to positive (+) or negative (-) values.
+        In order to find useful values for these, you will need to take some
+        time to play with it.  Also, you may want different values depending on
+        the speed of your hardware, audio devices, drivers, etc.  Using the
+        Beat Counter effectively requires practice.
+          </para>
+        </note>
+
+        <para>
+	      TODO: fuse
+        </para>
 
       </sect1>
 
@@ -385,7 +405,7 @@
             recommended for beginners.</para>
           </listitem>
 
-          <listitem>
+          <listitem id="sect.preferences.jack">
             <para><emphasis role="bold">JACK</emphasis>: The <abbrev>JACK</abbrev> driver is a
             professional audio server which permits very low lag and exchanges
             with other audio software. <emphasis>We strongly recommend using
@@ -411,7 +431,7 @@
                   <listitem><para>layer gain</para></listitem>
                 </itemizedlist>
               </listitem>
-              <listitem>
+              <listitem id="sect.preferences.jack.bbt">
                 <para><emphasis role="bold">BBT sync method</emphasis>: If
                 Hydrogen uses <abbrev>JACK</abbrev> transport in the presence of an external <abbrev>JACK</abbrev>
                 Timebase master (TBM), it will use the provided measure and
@@ -433,6 +453,12 @@
                 be activated and the J. MASTER button deactivated (next to
                 having a <abbrev>JACK</abbrev> TBM application). See <xref
                 linkend="chpt.main_toolbar"/>.</para>
+
+                <tip>
+	              <para>
+	                Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master via the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link>.
+                  </para>
+                </tip>
               </listitem>
               <listitem>
                 <para><emphasis role="bold">Connect to Default Output
@@ -977,42 +1003,13 @@
       </figure>
 
       <para>Before analyzing the two main frames of Hydrogen, let's take a quick
-      look at the main toolbar and its components:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>Pilot the song using the start, stop, pause, etc. buttons</para>
-        </listitem>
-        <listitem>
-          <para>Choose between "pattern" or "song" mode: in "pattern" mode only
-          the currently selected pattern will play, while in "song" mode all
-          patterns inserted will be played.</para>
-        </listitem>
-        <listitem>
-          <para>An advanced tap tempo function: choose note length and how many
-          notes to wait before recalculating BPM, then hit the comma key
-          repeatedly until the 'R' letter appears and then the BPM will be
-          updated.  (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</para>
-        </listitem>
-        <listitem>
-          <para>Manually set BPM</para>
-        </listitem>
-        <listitem>
-          <para>Manage <abbrev>JACK</abbrev> transport</para>
-        </listitem>
-        <listitem>
-          <para>Open the mixer and the instrument rack panels</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>
-	    TODO: drop this apart from the image
-      </para>
-
+      look at the main toolbar and its components</para>
+      
       <sect1 id="sect.main_toolbar.transport_control">
         <title>
           Transport Control
         </title>
+        
         <para>
           <inlinemediaobject>
             <imageobject>
@@ -1021,18 +1018,19 @@
           </inlinemediaobject>
         </para>
 
-          <para>Main controls to start <emphasis role="bold">[Hotkey =
-          Spacebar]</emphasis>, stop, record, fast forward, rewind, loop a song or a
-          pattern.</para>
+          <para>Main controls to start (also bound to <keycap>Space</keycap>), stop, record, fast forward, rewind, loop a song or a
+          pattern and to switch between Song mode and Pattern mode.</para>
 
-          <para>Set Pattern/Song Mode. When Song mode is selected Hydrogen will play 
-          the complete song. This is the sequence of patterns you have created in the Song 
-          Editor (see <xref linkend="chpt.song_editor"/>). When Pattern mode is selected 
+          <para>Set Pattern/Song Mode. When <emphasis>Song mode</emphasis> is selected Hydrogen will play 
+          the complete song. This is the sequence of patterns you have created in the <link linkend="chpt.song_editor">Song Editor</link>. When <emphasis>Pattern mode</emphasis> is selected 
           Hydrogen will play the pattern that is currently selected, and thus displayed 
-          in the Pattern Editor (see <xref
-          linkend="chpt.pattern_editor"/>).</para>
+          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>.</para>
 
-          <para>TODO: update image and fuse pattern/song mode</para>
+          <para>
+	        When using the <link linkend="chpt.keyboard_and_mouse">Keyboard</link> to navigate in the <link linkend="chpt.song_editor">Song Editor</link> and <link linkend="chpt.pattern_editor">Pattern Editor</link> the shortcut <keycap>Ctrl</keycap> + <keycap>Space</keycap> (or <keycap>Alt</keycap> + <keycap>Space</keycap> on MacOS) will change the mode to the one corresponding to the editor. In addition, it will move the current transport position to either the note (Pattern Editor) or the pattern (Song Editor) focused by the cursor and starts the playback.
+          </para>
+
+          <para>TODO: update image</para>
       </sect1>
 
       <sect1 id="sect.main_toolbar.tap_tempo_beat_counter">
@@ -1045,50 +1043,48 @@
           </inlinemediaobject>
         </para>
 
-          <para>Set measure type and Beat Counter (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>).</para>
+          <para>Set measure type and Beat Counter.</para>
 
         <para>It is possible to change the tempo at any time using the Tap Tempo and
-        BeatCounter features of Hydrogen.  You can do this while the song is playing or
+        Beat Counter features of Hydrogen.  You can do this while the song is playing or
         while the song is stopped.  To change the tempo, hit the
         <keycap>,</keycap> (comma) key in the tempo you want.
-        After the correct number of keystrokes have been detected (see 
+        After the correct number of keystrokes has been detected (see 
         below for details), the tempo will change to the average tempo 
-        you tapped the comma key.  If you continue to tap,
+        you tapped the <keycap>,</keycap> key.  If you continue to tap,
         these new taps will become a part of a rolling average.  If you tap
-        accidentally, or if you wait too long between taps, the tap tempo
+        accidentally, or if you wait too long between taps, the Tap Tempo
         counter will start over.</para>
 
-        <para>The Tap Tempo is a part of the BeatCounter, which is essentially a
-        Tap Tempo on steroids.  By default the BeatCounter display is not
-        visible.  To see the BeatCounter widget click the upright button
-        (<guilabel>BC</guilabel>) between Song/Pattern mode selector and the
-        BPM-widget, or, simply press the comma key.
-        (<keycap>,</keycap>).</para>
+        <para>The Tap Tempo is a part of the Beat Counter, which is essentially a
+        Tap Tempo on steroids.  By default the Beat Counter display is not
+        visible.  To see the Beat Counter widget click the upright button (TODO: insert image here)
+        (<guilabel>BC</guilabel>) or simply press <keycap>,</keycap>.</para>
 
         <para>The tempo that you tap will be considered even beats of the song's 
         beat type.  The beat type can be set to 1/8 (for eight-note beats), 1/4 (for
         quarter-note beats), 1/2 (for half-note beats), and 1/1 (for whole-note
-        beats).  To change the beat type use the left +/- buttons.  To change
-        the Countdown Counter value, use the right +/- buttons.  The Countdown 
+        beats).  To change the beat type use the left +/- (TODO: insert images here) buttons.  To change
+        the Countdown Counter value, use the right +/- (TODO: and here) buttons.  The Countdown 
         Counter value can be set between 2 and 16 beats.  (I.e. if you set the beat to 6, you will
         have to tap 6 times before the new tempo is computed and set.)  When the
-        display shows an <guilabel>R</guilabel>, it means that the BeatCounter
-        is ready to start from 0.  When you tap the comma key, the R will change to
+        display shows an <parameter>R</parameter>, it means that the Beat Counter
+        is ready to start from 0.  When you tap <keycap>,</keycap>, the <parameter>R</parameter> will change to
         1, and will increment with every keystroke until it reaches the Countdown 
-        Counter value (shown just below the 'R').</para>
+        Counter value (shown just below the <parameter>R</parameter>).</para>
 
         <para>The button in the bottom right-hand controls the auto-start
-        feature, and it toggles between <guilabel>S</guilabel> and
-        <guilabel>P</guilabel>.  When it shows <guilabel>P</guilabel> for
+        feature, and it toggles between <parameter>S</parameter> and
+        <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
         (<emphasis>Play</emphasis>), the song will set the new tempo and
         automatically start to play after you tap the right number of beats (if
         it's not already playing, of course).  This way, if you have the
-        BeatCounter set up for 4/4, you can tap 1-2-3-4, and start playing on
-        the next beat.  When it shows <guilabel>S</guilabel> (for <emphasis>Set
+        Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
+        the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
         BPM</emphasis>), the auto-start is disabled.</para>
 
         <para>For example: Suppose you have a live band, Hydrogen, and a
-        softsynth that is controlled by Seq24)... and you want them all to start
+        softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
         at the same time.  Set the beat type to 1/4 and the number of beats to
         4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
         the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
@@ -1100,49 +1096,19 @@
         Hydrogen is supposed to play, tap the comma key 1-2-3-4 with the
         beat... and you're in on the next beat (at the right tempo).</para>
 
-        <para>If you are using the <abbrev>JACK</abbrev> Transport, the BeatCounter continues to
-        work.  If another program is the <abbrev>JACK</abbrev> Transport Master, Hydrogen will
-        respond to tempo change events from that application.
-        </para>
-        <note>
-          <para>
-            Please note that in this
-        situation, Hydrogen is supposed to be a <emphasis>slave</emphasis>, so
-        some of the BeatCounter features will be disabled or will not work
-        properly.  If Hydrogen is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
-        Hydrogen will be reflected in those programs (if they support
-        it).
+        <tip>
+          <para>A start offset and a latency compensation for the Beat Counter can be configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences Dialog.
           </para>
-        </note>
-
-        <para>Some of the settings to adjust the BeatCounter's latency
-        compensation, are located on the General tab of the Preferences Dialog 
-        (see <xref linkend="chpt.preferences.general_tab"/>
-        ). Here you will find two spinboxes:</para>
-
-        <itemizedlist>
-          <listitem><para><emphasis role="bold"><guilabel>Beat counter drift
-          compensation in 1/10ms</guilabel></emphasis> &mdash; adjust to
-          compensate for latency between the keyboard and the
-          program.</para></listitem>
-
-          <listitem><para><emphasis role="bold"><guilabel>Beat counter start
-          offset in ms</guilabel></emphasis> &mdash; adjust the time between the
-          BeatCounter's last input stroke and when the song starts playing (if
-          auto-start is activated).</para></listitem>
-        </itemizedlist>
+        </tip>
 
         <note>
           <para>
-            Note that these can be set to positive (+) or negative (-) values.
-        In order to find useful values for these, you will need to take some
-        time to play with it.  Also, you may want different values depending on
-        the speed of your hardware, audio devices, drivers, etc.  Using the
-        BeatCounter effectively requires practice.
+            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and the Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
+        Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
           </para>
         </note>
 
-        <para>TODO: rework</para>
+        <para>TODO: since the Tap Tempo is a subset of the Beat Counter and both are bound to the same key and triggered by the same API function: Is there actually a separate Tap Tempo or can it be dropped since it was superseded by the Beat Counter a long time ago?</para>
       </sect1>
       <sect1 id="sect.main_toolbar.bpm_control_and_metronome">
         <title>BPM Control and Metronome</title>
@@ -1154,9 +1120,23 @@
           </inlinemediaobject>
         </para>
 
-          <para>Set speed of playing (range: 30-400 bpm) <emphasis
-          role="bold">[Hotkey = mouse wheel]</emphasis> and button to
-          enable/disable metronome</para>
+        <para>Set the speed of the song (range: 10-400 bpm).
+        </para>
+        
+          <tip>
+	        <para>
+	          You can use the <emphasis>mouse wheel</emphasis> to decrease and increase the value of this widget.
+            </para>
+          </tip>
+
+          <para>In addition you can use (TODO: insert button image) to toggle the metronome.</para>
+
+        <tip>
+	      <para>
+	        The volume of the metronome can be adjusted in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences.
+          </para>
+        </tip>
+        
       </sect1>
 
       <sect1 id="sect.main_toolbar.cpu_usage_midi_in">
@@ -1169,7 +1149,14 @@
           </inlinemediaobject>
         </para>
 
-            <para>Shows CPU load and <abbrev>MIDI</abbrev> events.  The CPU bargraph gives you an indication of the CPU load.  The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a midi message.</para>
+            <para>The CPU bargraph gives you an indication of the CPU load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a midi message.</para>
+
+        <tip>
+	      <para>
+	        The <abbrev>MIDI</abbrev> settings can be adjusted in the <link linkend="chpt.preferences.midi_tab">MIDI tab</link> of the Preferences.
+          </para>
+        </tip>
+        
       </sect1>
       
       <sect1 id="sect.main_toolbar.jack_control">
@@ -1182,23 +1169,25 @@
           </inlinemediaobject>
         </para>
 
-          <para>Click J. TRANS to enable <abbrev>JACK</abbrev> transport.  If the J. MASTER
-          button is pressed Hydrogen will work as <abbrev>JACK</abbrev> timebase 'master' by
-          sending additional information, like the current speed, to other <abbrev>JACK</abbrev>
-          clients. Else it will either act as 'slave' in the presence of another
-          timebase master (e.g. Ardour) or as a stand-alone client in the
-          absence of it.
+        <para>Clicking J. TRANS (TODO: insert image instead) will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore.
+        </para>
+        <para>
+          Using J. MASTER (TODO: insert image) Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
+          clients. Else it will either act as <emphasis>slave</emphasis> in the presence of another
+          Timebase Master, like <command>Ardour</command>, or as a stand-alone client in the
+          absence of a Master.
           </para>
-          <note>
+          <tip>
             <para>
-            Please note that when acting as 'slave' Hydrogen will obey the tempo
-            provided by the timebase master and instead of its own tempo markers
-            (see <xref linkend="chpt.preferences.audio_tab"/>).
+            You can check whether Hydrogen is in <emphasis>slave</emphasis> mode by hovering over the disabled <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Beat Counter</link> or <link linkend="chpt.song_editor.timeline">Timeline</link>.
+            </para>
+          </tip>
+
+          <note>
+	        <para>
+	          The support of <abbrev>JACK</abbrev> Timebase can disabled in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences. This can be useful in the presence of a fault Master broadcasting nuissance information.
             </para>
           </note>
-          <para>
-	        TODO: put all the JACK stuff in here.
-          </para>
       </sect1>
       
         <sect1 id="sect.main_toolbar.gui_state">
@@ -1212,8 +1201,14 @@
           </para>
 
           <para>
-          The last section gives you quick access to the Mixer window and the Instrument Rack.
-            The LCD screen displays what Hydrogen is up to.
+	        TODO: update image
+          </para>
+
+          <para>
+            Toggles the <link linkend="chpt.mixer">Mixer</link> window and the Instrument Rack (containing both the <link linkend="chpt.instrument_editor">Instrument Editor</link> and the <link linkend="chpt.sound_library">Sound Library</link>).
+          </para>
+          <para>
+            The LCD screen below displays what Hydrogen is up to and gives an optical feedback of the parameters set in the <link linkend="chpt.mixer">Mixer</link>.
           </para>
         </sect1>
     </chapter>
