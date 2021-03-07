@@ -238,13 +238,13 @@
           </listitem>
         </itemizedlist>
       </para>
-      <note>
-        <para>
-        Note that the keyboard input cursor is hidden
-        from view until one of the above keys is pressed. This keeps
-        the display clear and uncluttered when using the mouse.
 
-        TODO: link and mention the corresponding option in the Preferences
+      <note>
+	    <para>
+          Note that the keyboard input cursor is hidden from view until one of
+          the above keys is pressed. This keeps the display clear and
+          uncluttered when using the mouse. You can alter this default behavior in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences.
+	      
         </para>
       </note>
       <para>
@@ -1213,8 +1213,6 @@
         </sect1>
     </chapter>
 
-
-<!-- SONG EDITOR -->
     <chapter id="chpt.song_editor">
       <title>Song Editor</title>
 
@@ -1223,18 +1221,37 @@
         <title>The Song Editor</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/SongEditor.png" format="PNG" />
+            <imagedata fileref="img/EnablePlaybackTrack.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
       </para>
 
-      <para>The "Song Editor" (<xref linkend="fig.song_editor"/>) gives an
-      overview of the whole timeline of the song (e.g. intro, verse, bridge,
-      chorus and so on); each blue colored square on this panel represents a complete
-      bar as shown in the underlying "Pattern Editor" panel. The song editor gives
+      <para>
+	    TODO: how about having multiple patterns of different lengths in one column of the screenshot?
+      </para>
+      <para>The Song Editor gives an
+      overview of the whole song (e.g. intro, verse, bridge,
+      chorus and so on). Each blue colored square on this panel represents a pattern. In case of multiple patterns of different lenghts in one column only the largest one(s) will be represented by a square. The shorter patterns are indicated by rectangles which width indicate their length relative to the longest one.</para>
+
+      <tip>
+	    <para>
+	      Instead of having the same color for all patterns you can set different colors schemes in the <link linkend="chpt.preferences.appearance_tab">Appearance tab</link> in the Preferences.
+        </para>
+      </tip>
+      
+      <para>
+        The song editor gives
       you complete freedom to add/remove patterns to the song and to move or 
       copy any part of your song.
+      </para>
+
+      <para>
+	    TODO: describe the different ways of editing (groups of) patterns using mouse and keyboard. (New UX)
+      </para>
+
+      <para>
+	    TODO: description about how to use the song ruler for navigation.
       </para>
       
      <sect1 id="chpt.song_editor.main_controls">
@@ -1247,12 +1264,12 @@
         </inlinemediaobject>
       </para>
 
-      <itemizedlist mark="opencircle">
+      <itemizedlist>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_clear_off.png" format="PNG"/>
-            </imageobject></inlinemediaobject> Completely delete all patterns
+            </imageobject></inlinemediaobject> : deletes all patterns
             (asks for confirmation!).
           </para>
         </listitem>
@@ -1260,67 +1277,86 @@
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_new_on.png" format="PNG" />
-            </imageobject></inlinemediaobject> Create a new pattern (and asks
-            for a name).
+            </imageobject></inlinemediaobject> : creates a new pattern (and asks for a name).
           </para>
         </listitem>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_updown.png" format="PNG" />
-            </imageobject></inlinemediaobject> Move currently selected pattern
-            up or down.</para>
-            <note>
-              <para>
-                Note that you can also just drag-and-drop a pattern up/down in
-                the pattern list.
-              </para>
-            </note>
+            </imageobject></inlinemediaobject> : moves currently selected pattern
+            up or down.
+          </para>
+          
+          <tip>
+            <para>
+              You can also drag-and-drop a pattern up/down in
+              the pattern list.
+            </para>
+          </tip>
         </listitem>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_draw.png" format="PNG"/>
-            </imageobject></inlinemediaobject> Enable Draw Mode.  This mode allows
-            you to create a song by drawing blocks on the song canvas.</para>
-            <para>Clicking a square on the song canvas will add a pattern (the square 
-            will turn blue), clicking it again will remove that pattern from the song.
+            </imageobject></inlinemediaobject> : enables Draw Mode.  This mode allows
+            you to insert patterns by drawing - holding the left button while moving the mouse - blocks on the song canvas.
+          </para>
+          <para>Clicking a square on the song canvas will add a pattern (the square 
+            will turn blue) and clicking it again will remove it.
           </para>
           <para>
-            Using the arrow keys on the keyboard, and the Return key,
-            will also add and remove patterns from the song. The
-            keyboard input cursor is usually hidden unless you press
-            one of the arrow keys.
+            Using the arrow keys on the keyboard, and the <keycap>Return</keycap>,
+            will also add and remove patterns from the song.
           </para>
+
+          <note>
+	        <para>
+              The keyboard input cursor is usually hidden unless you press one
+              of the keys listed in <xref linkend="chpt.keyboard_and_mouse" />.
+              You can alter this default behavior in the <link
+              linkend="chpt.preferences.general_tab">General tab</link> of the
+              Preferences.
+            </para>
+          </note>
+          
         </listitem>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_select.png" format="PNG"/>
-            </imageobject></inlinemediaobject> Enable Select Mode.  This mode allows 
-            you to select a part of the song and delete/move/copy it.</para>
+            </imageobject></inlinemediaobject> : enables Select Mode.  This mode allows 
+            you to select multiple patterns in the Song Editor and delete/move/copy them.</para>
 		<para>Once you have selected a part of your song you can <emphasis role="bold">delete</emphasis> 
-			it by pressing the Delete button.  You can <emphasis
+			it by pressing the <keycap>Delete</keycap>.  You can <emphasis
              role="bold">move</emphasis> it by simply dragging your selection
-            to another location, and you can also <emphasis role="bold">copy</emphasis>
-             your selection by Ctrl-dragging it to a new location.
+            to another location with your mouse or by cutting (<keycap>Ctrl</keycap> + <keycap>x</keycap>) and pasting (<keycap>Ctrl</keycap> + <keycap>v</keycap>) using your kyeboard. You can also <emphasis role="bold">copy</emphasis>
+             your selection by either holding <keycap>Ctrl</keycap> while dragging it to a new location or by copying (<keycap>Ctrl</keycap> + <keycap>c</keycap>) and pasting (<keycap>Ctrl</keycap> + <keycap>v</keycap>) using your kyeboard.
           </para>
           <para>
-            Selections can be modified by Ctrl-clicking to select
+            Selections can be modified by holding <keycap>Ctrl</keycap> while clicking to select
             additional blocks, or to remove selected blocks from the
             selection.
           </para>
           <para>
             The arrow keys on the keyboard can also be used, along
-            with the Return key, to <emphasis
+            with <keycap>Return</keycap>, to <emphasis
             role="bold">select</emphasis>, <emphasis
             role="bold">move</emphasis> and <emphasis
-            role="bold">copy</emphasis> (Ctrl+Return) parts of the
+            role="bold">copy</emphasis> (<keycap>Ctrl</keycap> + <keycap>Return</keycap>) parts of the
             song.
+
+            TODO: is this still valid? It doesn't work for me.
           </para>
           <para>
-            Pressing Escape will cancel an editing operation that's in
+            Pressing <keycap>Esc</keycap> will cancel an editing operation that's in
             progress, or clear any selection.
+
+            TODO: if I'm not mistaking there are now several additional ways to cancel a selection too.
+          </para>
+
+          <para>
+	        TODO: how about we move the description of the Draw and Select Mode into the previous section or create a dedicated section just for them? It describes the behavior of the overall Song Editor instead of this button. In here there would just be "enables Select mode" including a link to the dedicated section.
           </para>
         </listitem>
 
@@ -1333,14 +1369,22 @@
             </imageobject></inlinemediaobject>
             or to "Stacked pattern mode".</para>
             <para>For more info on this see the SELECT_NEXT_PATTERN midi action in <xref linkend="chpt.midi"/>.
-          </para>
+            </para>
+
+            <para>
+	          TODO: move description in here.
+            </para>
         </listitem>
       </itemizedlist>
 
       </sect1>
 
      <sect1 id="chpt.song_editor.pattern_options">
-     <title>Patterns Options</title>
+       <title>Patterns Options</title>
+
+       <para>
+	     TODO: update option list and description. update or drop image
+       </para>
 
       <para>Right-clicking the name of a pattern will show you a menu 
       where you can change a number of things :</para>
@@ -1394,6 +1438,9 @@
         <listitem>
           <para><emphasis role="bold">Properties</emphasis>: will open a window where you can change 
           the name of the pattern and also assign it to a certain category.
+
+          TODO: elaborate the concept of a "category".
+          
            <informalfigure id="fig.pattern_properties">
             <mediaobject>
               <imageobject>
@@ -1449,30 +1496,33 @@
       
      <sect1 id="chpt.song_editor.timeline">
        <title>Timeline</title>
-       <para>
-	     TODO: add image of Timeline
-       </para>
-       <para>This section describes how you can define tempo changes and 
-       how you can add tags to your song.</para>
-       <sect2 id="chpt.song_editor.timeline.tempo_marker">
-         <title>Tempo Markers</title>
+
+       <informalfigure id="fig.tempo_bar">
+         <mediaobject>
+           <imageobject>
+             <imagedata fileref="img/tempo_bar.png" format="PNG" />
+           </imageobject>
+         </mediaobject>
+       </informalfigure>
+        
        <para>The majority of songs consist of several parts (intro, verse, chorus ...) and
        often these parts will have a different tempo.  Hydrogen provides an easy way
        to let you change the tempo of a song at any given moment in the song.  This is 
-       done by adding Tempo change Markers to your song.</para>
-       <para>To add a Tempo change marker to your song you first need to enable the 'BPM' option
-       (the BPM button is located just above the Song editors main controls).  Once this is done
-       the horizontal bar next to the BPM button changes to a ruler with marks at every bar.
-       Now simply left-click this ruler at the bar you want the tempo to change and a
+       done by adding <emphasis>Tempo Markers</emphasis> to your song.</para>
+       <para>To add a Tempo Marker you first need to show the Timeline by clicking the 'T' button (TODO: add image) at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the 'BPM' (TODO: add image here) button.  Once this is done
+       the horizontal bar next to the button changes to a ruler with marks at every bar.
+       Now simply <keycap>left-click</keycap> this ruler at the bar you want the tempo to change and a
        window will pop up where you can enter the new tempo.
        </para>
+       
        <note>
          <para>
          Please note that the ruler will not be available while using the <abbrev>JACK</abbrev>
-         transport in 'slave' mode.
+         transport in <emphasis>slave</emphasis> mode (see <xref linkend="sect.main_toolbar.jack_control" /> for details.
          </para>
        </note>
-       <para>     
+       <para>
+         
         <informalfigure id="fig.add_tempo_change">
          <mediaobject>
            <imageobject>
@@ -1482,105 +1532,109 @@
          </informalfigure>
             
        Once you have entered the new tempo and clicked OK, the tempo change will 
-       show up on the tempo ruler.  If you click the Tempo marker again you can edit 
-       the tempo, change the bar or delete the tempo marker.
+       show up on the Timeline. If you click the Tempo Marker again you can edit 
+       the tempo, change the bar or delete it.
+       </para>
 
-        <informalfigure id="fig.tempo_bar">
+     </sect1>
+     
+     <sect1 id="chpt.song_editor.tag">
+       <title>Tags</title>       
+
+       <informalfigure id="fig.tag_bar">
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/tempo_bar.png" format="PNG" />
+             <imagedata fileref="img/tag_bar.png" format="PNG" />
            </imageobject>
          </mediaobject>
-         </informalfigure>
-       </para>
-
-       <para>
-       In addition to changing the tempo when the song switches from intro > verse, 
-       it is also very handy to have a clear indication of this tempo switch (or any other
-       event in the song).  For this purpose you can also add Tags markers to the song.
-       These Tags are short text messages you can add to your song at any given 
-       moment that will be displayed whenever the song playhead passes by that Tag.</para>
-       </sect2>
+       </informalfigure>
        
-       <sect2 id="chpt.song_editor.timeline.tag">
-         <title>Tags</title>       
        <para>
-       To add a Tag to your song simply middle-click on the song ruler (just below the 
-       tempo ruler) and a window will pop up where that allows you to add text for any bar.
-            
-        <informalfigure id="fig.add_tag">
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/add_tag.png" format="PNG" />
-           </imageobject>
-          </mediaobject>
-         </informalfigure>
-
-       Once you are done you will see a small blue 'T' in the song ruler for every tag 
-       you have entered.  Middle-click anywhere on the song ruler to edit the tags.
-
-         <informalfigure id="fig.tag_bar">
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/tag_bar.png" format="PNG" />
-            </imageobject>
-          </mediaobject>
-         </informalfigure>
+         In addition to altering the tempo when the song switches from e.g. the intro into a verse, 
+         it is also very handy to have a clear indication of more general changes or special events in the song. For this purpose you can also add <emphasis>Tags</emphasis> to the song.
+         These Tags are short text messages you can add at any given 
+         moment that will be displayed whenever the song playhead passes by that Tag.
        </para>
-       </sect2>
+       
+       <para>
+         To add a Tag <keycap>middle-click</keycap> on the song ruler (just below the 
+         Timeline) and a window will pop up that allows you to add text for any bar.
+         
+         <informalfigure id="fig.add_tag">
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="img/add_tag.png" format="PNG" />
+             </imageobject>
+           </mediaobject>
+         </informalfigure>
+
+         Once you are done you will see a small blue <parameter>T</parameter> in the song ruler for every Tag
+         you have entered. <keycap>Middle-click</keycap> anywhere on the song ruler to edit the tags.
+       </para>
      </sect1>
 
      <sect1 id="chpt.song_editor.playbackTrack">
-		 <title>Playback Track</title>
-		 <para>This section describes how you can use a playback track to write drums for an existing track.
-				This useful when you want to write a drumtrack to an already existing instrumental track, for example a guitar track.
+	   <title>Playback Track</title>
+
+	   <informalfigure id="fig.playbackTrack">
+		 <mediaobject>
+		   <imageobject>
+			 <imagedata fileref="img/PlaybackTrack.png" format="PNG" />
+		   </imageobject>
+		 </mediaobject>
+	   </informalfigure>
+
+       
+	   <para>
+         Using the Playback Track you can program your song alongside an existing audio file, for example a guitar track.
 		 </para>
+
+		 <note>
+	       <para>
+			 When a Playback Track is loaded, it will be played back everytime audio transport in Hydrogen is rolling and <link linkend="sect.main_toolbar.transport_control">Song Mode</link> is activated. 
+           </para>
+         </note>
+
 		 <para>
-			To add a playback track to your song, you need to enable the playback track view. This can be done by pressing the small "P" button in the next to the vertical scroll bar of the song editor.
+		   To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the "P" button (TODO: use image) left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
+         </para>
 
-			 <informalfigure id="fig.enablePlaybackTrack">
-				 <mediaobject>
-					 <imageobject>
-						 <imagedata fileref="img/EnablePlaybackTrack.png" format="PNG" />
-					 </imageobject>
-				 </mediaobject>
-			 </informalfigure>
-
-			 An alternative way to enable the playback track view is to enable the option "Playback track" in the "View" menu.
-
-			 If the playback track view is enabled, a visualisation of the currently loaded track is display above the song editor.
-
-			 <informalfigure id="fig.playbackTrack">
-				 <mediaobject>
-					 <imageobject>
-						 <imagedata fileref="img/PlaybackTrack.png" format="PNG" />
-					 </imageobject>
-				 </mediaobject>
-			 </informalfigure>
-
-			Left to the visualisation, the controls for the playback are displayed:
+         <para>
+		   Left to the wave display, the controls of the Playback Track are displayed.
 
 			 <itemizedlist mark="opencircle">
 				 <listitem>
-				   <para><emphasis role="bold">Edit</emphasis>: load a new playback track</para>
+				   <para><emphasis role="bold">Edit</emphasis>: loads an audio file.</para>
+                   <tip>
+	                 <para>
+	                   As an alternative, you can load an audio file by dragging it into Hydrogen and dropping over the wave display.
+                     </para>
+                   </tip>
                  </listitem>
                  <listitem>
-				   <para><emphasis role="bold">Mute</emphasis>: mute the current playback track</para>
+				   <para><emphasis role="bold">Mute</emphasis>: mutes the Playback Track.</para>
                  </listitem>
                  <listitem>
-				   <para><emphasis role="bold">Fader</emphasis>: adjust the volume of the playback track</para>
+				   <para><emphasis role="bold">Fader</emphasis>: adjusts the volume. You can think of this fader as the mixer strip of the Playback Track. The resulting audio will be pass the <link linkend="sect.master">Master section</link> of the Mixer like any other strip too.</para>
 				 </listitem>
 			 </itemizedlist>
-
-			As an alternative to the use of the Edit Button, you can add a new playback track by drag'n'drop, just drag an audio file to the visualation area.
-			 When a playback track track is loaded, it will be played everytime Hydrogen is in "Play" mode and the song mode is activated. 
-		</para>
+         </para>
+         
+         <note>
+	       <para>
+	         In its current implementation the Playback Track does hide the song ruler used for navigation. It is therefore adviced to hide the Playback Track again once you are done setting the sound file and adjusting its volume.
+           </para>
+         </note>
+         
 	 </sect1>
+     
      <sect1 id="sect.song_editor.automation_path">
 	   <title>Automation Path</title>
+       
        <para>
 	     TODO
        </para>
+       
      </sect1>
    </chapter>
     
