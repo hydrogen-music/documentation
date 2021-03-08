@@ -1360,19 +1360,17 @@
           </para>
         </listitem>
 
-        <listitem>
+        <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked Pattern Mode">
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_pattern_mode.png" format="PNG"/>
-            </imageobject></inlinemediaobject> set Hydrogen to "Single pattern mode"
+            </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern Mode</emphasis> 
             <inlinemediaobject><imageobject>
             <imagedata fileref="img/stacked_mode_V3.png" format="PNG"/>
             </imageobject></inlinemediaobject>
-            or to "Stacked pattern mode".</para>
-            <para>For more info on this see the SELECT_NEXT_PATTERN midi action in <xref linkend="chpt.midi"/>.
-            </para>
+            or to <emphasis>Stacked Pattern Mode</emphasis>.</para>
 
             <para>
-	          TODO: move description in here.
+	          TODO: add a description of these two modes (maybe as subsections next to the Pattern and Song Mode)
             </para>
         </listitem>
       </itemizedlist>
@@ -1651,92 +1649,106 @@
            </imageobject>
          </mediaobject>
         </figure>
-      <para>The "Pattern Editor" 
-      allows you to create or modify the selected pattern by adding/removing notes and tuning 
+
+        <para>
+	      TODO: update image. the 'RES' display has changed.
+        </para>
+        
+        <para>This is where it all happens, this is where you can make music :-)</para>
+        
+      <para>The <emphasis>Pattern Editor</emphasis>
+      allows you to create and modify the selected pattern by adding/removing notes and tuning 
       a number of per-note properties like velocity and pan.
       The Pattern Editor 
-      can be used in 2 modes : 'Drum' mode or 'Piano' mode.  You can switch between these 
-      modes by clicking the Drum/Piano button (located on the top-right of the Pattern Editor) 
-      <note>
-      <itemizedlist mark="opencircle">
-      <listitem><para>
-      If you are editing a pattern in Single Pattern Mode you will always hear the pattern you are 
-      editing when you press play.</para></listitem>
-      <listitem><para>If you are working in Stacked Pattern Mode you will hear the <emphasis>active</emphasis> pattern(s), 
-      not necessarily the pattern you are currently editing.
-      (The active patterns have a small triangle next to the pattern name in the Song Editor). 
-      </para></listitem>
-      </itemizedlist>
-      </note>
-      
+      can be used in 2 modes : as <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> or as <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>. You can switch between these 
+      two by clicking the 'INPUT' button (TODO: include image) (located on the top-right of the Pattern Editor).
       </para>
       
-      <para>First let's take a look at the (classic) 'Drum' mode.</para>
+      <note>
+        <para>
+          If you are editing a pattern in <emphasis role="bold">Single Pattern Mode</emphasis> you will always hear the pattern you are 
+          editing when you press playback is rolling.
+        </para>
+        <para>
+          If you are working in <emphasis role="bold">Stacked Pattern Mode</emphasis> you will hear the <emphasis>active</emphasis> pattern(s), 
+          not necessarily the pattern you are currently editing.
+          The active patterns have a small triangle next to the pattern name in the Song Editor.  (see <xref linkend="chpt.song_editor.main_controls.single_vs_stacked" /> for details).
+        </para>
+      </note>
       
-      <sect1 id="chpt.pattern_editor.controls"> 
-        <title>Controls</title>
-        
-        <figure id="fig.PatternEditorControls">
-         <title>Pattern Editor Controls</title>
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/PatternEditorControls.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-        </figure>
+      <sect1 id="chpt.pattern_editor.general"> 
+        <title>General</title>
 
-        <para>The top part of the pattern editor contains a number of controls :</para>
+        <sect2 id="chpt.pattern_editor.controls"> 
+          <title>Controls</title>
+          
+          <figure id="fig.PatternEditorControls">
+            <title>Pattern Editor Controls</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/PatternEditorControls.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </figure>
+
+          <para>
+	        TODO: update image (RES has changed)
+          </para>
+
+          <para>The top part of the Pattern Editor contains a number of controls applying to both the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>:</para>
+          
+          <itemizedlist mark="opencircle">
+            <listitem id="chpt.pattern_editor.controls.size">
+              <para><emphasis role="bold">SIZE</emphasis>:
+              lets you choose the length of the pattern (in note values).
+              </para>
+              <para>
+                It will open a dialog to enter the new size as text, in the standard music fractional notation:                  
+              </para>
+              <informalfigure id="fig.PatternSizeDialog">
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/PatternSizeDialog.png" format="PNG" />
+                  </imageobject>
+                </mediaobject>
+              </informalfigure>                
+              <para>
+                Type <keycap>/</keycap> to separate numerator and denominator.
+              </para>
+              <para>
+                If you enter just the numerator (e.g. <option>4</option>), the current denominator will be assumed.
+                You can enter a decimal numerator (e.g. <option>4.5/4</option>) but since Hydrogen resolution is limited,
+                some values are not supported and will be approximated.
+              </para>
               
-         <para>From left to right : </para>
-         <itemizedlist mark="opencircle">
-         
-          <!-- TODO DEPRECATED widget. MOVE TO OTHER CHAPTER?? <listitem><para><emphasis role="bold">Note Length / Note off</emphasis> : these are 2 different
-            ways to define the duration of a note. See <xref linkend="chpt.pattern_editor.sequence_area"/> for usage.</para></listitem>  -->
-
-           <listitem>
-                <para><emphasis role="bold">SIZE</emphasis>:
-                    lets you choose the length of the pattern (in note values)
-                </para>
+              <note>
                 <para>
-                   It will open a dialog to enter the new size as text, in the standard music fractional notation:                  
-                </para>
-                <informalfigure id="fig.PatternSizeDialog">
-                     <mediaobject>
-                        <imageobject>
-                          <imagedata fileref="img/PatternSizeDialog.png" format="PNG" />
-                        </imageobject>
-                     </mediaobject>
-                </informalfigure>                
-                <para>
-                   Type '/' to separate numerator and denominator.
-                 </para>
-                 <para>
-                   If you enter just the numerator (e.g. "4"), the current denominator will be assumed.
-                </para>
-                 <para>
-                   You can enter a decimal numerator (e.g. "4.5/4") but since Hydrogen resolution is limited,
-                   some values are not supported and will be approximated.
-                </para>
-                <para>
-                   Hydrogen supports (only) the following denominators: 1, 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 192,
-                     because these are the factors of the maximum resolution (192 ticks per whole note).
-                   You can use unsupported denominators, but the size will be approximated almost all the times,
-                    hence a warning icon will appear:               
+                  Hydrogen supports (only) the following denominators: <option>1</option>, <option>2</option>, <option>3</option>, <option>4</option>, <option>6</option>, <option>8</option>, <option>12</option>, <option>16</option>, <option>24</option>, <option>32</option>, <option>48</option>, <option>64</option>, <option>96</option>, and <option>192</option>
+                  because these are the factors of the maximum resolution (192 ticks per whole note).
+                  You can use unsupported denominators, but the size will be approximated almost all the times,
+                  hence a warning icon will appear:               
                 </para>
                 <informalfigure id="fig.DenominatorWarningIcon">
-                    <mediaobject>
-                        <imageobject>
-                            <imagedata fileref="img/DenominatorWarningIcon.png" format="PNG" />
-                        </imageobject>
-                    </mediaobject>
-                 </informalfigure>
-           </listitem>
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="img/DenominatorWarningIcon.png" format="PNG" />
+                    </imageobject>
+                  </mediaobject>
+                </informalfigure>
+              </note>
+              
+            </listitem>
 
-           <listitem>
-            <para>
-             <emphasis role="bold">RES</emphasis> : this is the current grid resolution (4 through 64)
-            </para>
-            <para>
+            <listitem id="chpt.pattern_editor.controls.res">
+              <para>
+                <emphasis role="bold">RES</emphasis> : this is the current grid resolution (4 through 64)
+              </para>
+
+              <para>
+	            TODO: update
+              </para>
+              
+              <para>
                 Remember this constraint concerning the grid: if you are working
                 with a resolution of 16 you can't go back to 8 and remove an upbeat 16th note. On
                 the other hand if you are working with a resolution of 8 and you try to
@@ -1744,42 +1756,66 @@
                 notes will be placed in the previous or in the following 8th bar.  This
                 constraint can be removed if you disable the whole grid resolution (choose
                 "off" from the grid resolution LCD control). Now you'll be able to place
-                notes wherever you prefer.</para>
-           </listitem>
+              notes wherever you prefer.</para>
+            </listitem>
+            
+            <listitem><para><emphasis role="bold">HEAR</emphasis> : when enabled Hydrogen 
+            will play back samples as they are being added to the pattern (even if transport is not rolling).
+          </para>
+          <note>
+	        <para>
+	          When disabled you will still hear the preview sound when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to click at the left-most position - where the preview is silent - in case you don't want to get disturbed.
+            </para>
+          </note>
+          
+            </listitem>
+
+            <listitem><para><emphasis role="bold">QUANT</emphasis> : enables/disables quantization.
+            When enabled the beats inserted 
+            will automatically respect the grid resolution currently applied.</para>
+
+            <para>
+	          TODO: this is only relevant for recording, isn't it?
+            </para>
+            
+            </listitem>
+
+            <listitem id="chpt.pattern_editor.controls.input">
+              <para><emphasis role="bold">INPUT</emphasis> : switchs between <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.</para>
+            </listitem>
+
+          </itemizedlist>
+
+          <para>
+	        TODO: add button images to list.
+          </para>
+
+        </sect2>
         
-           <listitem><para><emphasis role="bold">HEAR</emphasis> : when enabled Hydrogen 
-           will play the sample as it's being added to the pattern.</para></listitem>
+        <sect2 id="chpt.pattern_editor.sidebar">
+	      <title>Sidebar</title>
 
-           <listitem><para><emphasis role="bold">QUANT</emphasis> : enables/disables quantization.  
-           When enabled the beats inserted 
-            will automatically respect the grid resolution currently applied.</para></listitem>
+          <para>
+            <inlinemediaobject id="ifig.pattern_editor_instrument">
+              <imageobject>
+                <imagedata fileref="img/PatternEditorInstr_V2.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+          </para>
 
-           <listitem><para><emphasis role="bold">INPUT</emphasis> : switch Pattern Editor 
-           between Drum and Piano mode. (see below)</para></listitem>
+          <para>
+	        TODO: include pattern and drumkit name above the instrument list and mention them in the paragraph below. + update image
+          </para>
 
-         </itemizedlist>
-
-      </sect1>
-      
-      <sect1 id="chpt.pattern_editor.drumkit">
-        <title>Drumkit Editor</title>
-        
-        <para>
-          <inlinemediaobject id="ifig.pattern_editor_instrument">
-            <imageobject>
-              <imagedata fileref="img/PatternEditorInstr_V2.png" format="PNG" />
-            </imageobject>
-          </inlinemediaobject>
-        </para>
-     
-        <para>The section on the left shows you what drumkit is currently selected (GMkit by default) and below that you can see
+        <para>The section on the left shows you what drumkit is currently selected (GMRockKit by default) and below that you can see
         the instruments that are part of this kit.</para>
      
         <para>Each instrument has its own set of features that are accessible by 
-        right-clicking the instrument.  From the context menu that pops up you can select </para>
+        <keycap>right-clicking</keycap> the instrument.  From the context menu that pops up you can select </para>
         <itemizedlist mark="opencircle"> 
           <listitem><para><emphasis role="bold">Clear notes</emphasis> : to remove all notes for this instrument in this pattern.  </para></listitem>
-          <listitem><para><emphasis role="bold">Fill notes</emphasis> : this allows you to fill
+          <listitem id="chpt.pattern_editor.sidebar.fill_notes">
+            <para><emphasis role="bold">Fill notes</emphasis> : this allows you to fill
           up the pattern with notes for the selected instrument.  Depending on the choice you make (fill all, fill 1/2, fill 1/4 ...)
           notes will be placed at all, 1/2, 1/4, etc of the note positions <emphasis role="bold">that are allowed by 
           the grid setting</emphasis>.  So be careful not to mix up the 'musical' 1/2-note and the 'fill 1/2' note.</para></listitem>
@@ -1791,32 +1827,49 @@
           </para></listitem>
           <listitem><para><emphasis role="bold">Delete Instrument</emphasis> : well, deletes the instrument ;-)</para></listitem>
         </itemizedlist>
+
+        <para>
+	      TODO: update list
+        </para>
         
         <para>The small red and green buttons right of the instrument names are the
         <quote><emphasis role="bold">mute</emphasis></quote> (red) and <quote><emphasis
         role="bold">solo</emphasis></quote> (green) buttons.</para>
 
+        <para>
+	      TODO: update mute and solo + use button images in description
+        </para>
+        
         <para>The order of the instruments can be rearranged by simply dragging an instrument 
         up/down in the list and dropping it on a new position within the drumkit.  Doing so 
         will not change anything to the sequence you have created for that instrument, nor will
         it change anything to the song or pattern you are working on.  It <emphasis role="bold">
-        will</emphasis> however, have an impact on the <emphasis role="bold"><abbrev>MIDI</abbrev> note 
+        will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <emphasis role="bold"><abbrev>MIDI</abbrev> note 
         mapping</emphasis> : in the table below you can find the link between the instrument
-        position, the <abbrev>MIDI</abbrev> note and the qwerty keyboard keys.</para>
+        position, the <abbrev>MIDI</abbrev> note and the <abbrev>qwerty</abbrev> keyboard keys.</para>
 
-      <para><emphasis role="bold">Important Notes</emphasis> :</para>
-      <para>The name of the instrument depends on the
-      drumkit that is loaded. This list below refers to the GMkit that is loaded by default.
-      </para>
-      <para>Try to follow the GM midi standard as accurately as possible.  This will ensure that switching between 
+        <note>
+	      <para>
+	        The name of the instrument depends on the
+            drumkit that is loaded. This list below refers to the GMkit that is loaded by default.
+          </para>
+        </note>
+
+        <para>
+	      TODO: since the GMKit is not offered anymore, we should update this to match the GMRockKit
+        </para>
+
+        <para>
+	      TODO: this might be better placed in the MIDI chapter.
+        </para>
+        
+        <para>Try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
       drumkits goes smoothly.  You are of course free to place your instruments anywhere in your drumkit, and
       sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
       <para>
       Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
       is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
       </para>
-
-
 
       <informalfigure id="fig.InstrumentMapping">
         <mediaobject>
@@ -1836,15 +1889,25 @@
           </imageobject>
         </mediaobject>
       </informalfigure>
-      </sect1>
+    </sect2>
+  </sect1>
 
-      <sect1 id="chpt.pattern_editor.sequence_area">
-      <title>Sequence Area</title>
-        <para>This is where it all happens, this is where you can make music :-)</para>
-        <para>In this area you can see your selected pattern and add notes for any instrument. 
-        The simplest way to create a pattern is by adding notes using your mouse 
-        (and the 'Fill/Clear notes' function described above). Where you can add notes
-        depends on the used pattern size and resolution.</para>
+      <sect1 id="chpt.pattern_editor.drumkit">
+        <title>Drumkit Editor</title>
+
+        <figure id="fig.PatternEditor_drumkit">
+         <title>Pattern Editor in Drum Mode</title>
+         <mediaobject>
+           <imageobject>
+             <imagedata fileref="img/PatternEditor_DrumMode.png" format="PNG" />
+           </imageobject>
+         </mediaobject>
+        </figure>
+
+
+        <para>Right of the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> area you can see your selected pattern and add notes for any instrument. 
+        The simplest way to create a pattern is by adding notes using <link linkend="chpt.pattern_editor.sidebar.fill_notes">Fill notes</link>. Where you can add notes
+        depends on the used pattern <link linkend="chpt.pattern_editor.controls.size">size</link> and <link linkend="chpt.pattern_editor.controls.res">resolution</link>.</para>
         <para>If you are using Hydrogen as a pure 'drum' you just want Hydrogen to 'hit' 
         the instrument wherever there's a 'dot' in the pattern. If you are using Hydrogen as an 'instrument', the 
         length of the note becomes very important. There are 2 ways to define the length of
@@ -1853,7 +1916,7 @@
         <itemizedlist>
           <listitem>
             <para>
-              you can add a note by left-clicking, and then can 'stretch' that note by right-click-dragging it.
+              you can add a note by <keycap>left-clicking</keycap>, and then can 'stretch' that note by <keycap>right-click-dragging</keycap> it.
               This will change the dot into a rectangle that represents the
               duration of that note.
             </para>
@@ -1861,7 +1924,7 @@
           <listitem>
             <para>
               Alternatively, you can add a stop-note by
-              Shift+left-clicking. This adds a blue dot which
+              <keycap>Shift</keycap> + <keycap>left-clicking</keycap>. This adds a blue dot which
               represents the end of the note.
             </para>
           </listitem>
@@ -1880,28 +1943,24 @@
         <para>
           As in the Song Editor, the arrow keys can also be used to
           move around the pattern, and notes can be placed or removed
-          with Return.
+          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />.
         </para>
 
         <para>
-          Notes can be selected by dragging over them with the mouse (or <emphasis
-          role="bold">Shift+arrow keys</emphasis>), and can be deleted with 'Delete', or moved by
-          dragging (or Return followed by arrow key movements) the notes to a new location. This
+          Notes can be selected by dragging over them with the mouse (or <keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>), and can be deleted with <keycap>Delete</keycap>, or moved by
+          <keycap>dragging</keycap> (or <keycap>Return</keycap> followed by <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap> movements) the notes to a new location. This
           allows notes to be moved between different instruments, or to adjust their
           timing. Movement in the horizontal direction is constrained by the currently selected grid
-          resolution, however this can be overridden by holding down <emphasis
-          role="bold">Alt</emphasis> while moving notes.
+          <link linkend="chpt.pattern_editor.controls.res">resolution</link>, however this can be overridden by holding down <keycap>Alt</keycap> while moving notes.
         </para>
 
         <para>
-          Moving a selection of notes with <emphasis role="bold">Ctrl</emphasis> held down will copy
+          Moving a selection of notes with <keycap>Ctrl</keycap> held down will copy
           them to the new location rather than moving, as in the Song Editor.
         </para>
 
         <para>
-          Selected notes can also be copied to the clipboard with <emphasis
-          role="bold">Ctrl+C</emphasis>, and pasted with <emphasis
-          role="bold">Ctrl+V</emphasis>. When pasting, the relative positions of the input cursor at
+          Selected notes can also be copied to the clipboard with <keycap>Ctrl</keycap> + <keycap>C</keycap>, and pasted with <keycap>Ctrl</keycap> + <keycap>V</keycap>. When pasting, the relative positions of the input cursor at
           the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
@@ -1911,12 +1970,15 @@
            <imagedata fileref="img/Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
-        (see <xref linkend="chpt.main_menu"/>) and simply playing your pattern on your 
-        <abbrev>MIDI</abbrev> drum or your pc keyboard (see instrument mapping above).  This is probably 
+        (see <xref linkend="sect.main_toolbar.transport_control"/>) and simply playing your pattern on your 
+        <abbrev>MIDI</abbrev> drum or your pc keyboard (see <link linkend="chpt.pattern_editor.sidebar">instrument mapping</link>). (TODO: there is no dedicated section/chapter on recording. But there should be one which is easily discoverable in the table of content)  This is probably 
         a more musical way of creating a pattern, but it's up to you to decide what works best for you.
         (Also see <xref linkend="chpt.create_song"/> for a basic
-        walk-through of how the pattern editor works) </para>
- 
+        walk-through of how the Pattern Editor works) </para>
+
+        <para>
+	      TODO: verify if up-to-date
+        </para>
       </sect1>
       
       <sect1 id="chpt.pattern_editor.note_properties">
@@ -1927,9 +1989,12 @@
       <para>Clicking on an instrument or adding/removing a note next to it 
       will select this instrument.  Once an instrument is selected the note properties 
       for this instrument will be shown in the form of vertical lines in the bottom window.  
-      The lines represent the value for the selected property of each note of the selected instrument.
+      The lines represent the values for the selected property of each note of the selected instrument.
       You can select a different note-property from the note property drop-down list (located bottom-left).
-      There are 4 note properties available : 
+      </para>
+
+      <para>
+      The following note properties are available: 
       
       <itemizedlist mark="opencircle">
         <listitem>
@@ -1937,11 +2002,14 @@
           played (the volume of the note)</para>
           <note>
             <para>
-          Note that the color of the note-dot and the vertical bar will change according to the velocity value you have defined. 
+          The color of the vertical bar will change according to the velocity value you have defined. 
           A light shade of gray means a low velocity (low volume) and the higher you set the velocity the darker the color will be,
           turning red when you reach the point of clipping.
             </para>
           </note>
+          <para>
+	        TODO: link to Instrument Editor -> Layers which describes how velocity maps to different samples.
+          </para>
         </listitem>
         
         <listitem>
@@ -1949,10 +2017,13 @@
            the stereo image position of the note (how loud it will be in the
           left/right output).</para>
           <note>
-           <para>Note that the effect of <emphasis>note Pan</emphasis> depends on the <emphasis>instrument Pan</emphasis>
-            knob, which is set in the mixer.
+           <para>The effect of <emphasis>note Pan</emphasis> depends on the <emphasis>instrument Pan</emphasis>
+            knob, which is set in the <link linkend="chpt.mixer">Mixer</link>.
            Look to next figure to see how the <emphasis role="bold"><emphasis>Resultant Pan</emphasis></emphasis>
            is determined (from version 1.1):
+
+	         TODO: replace "note Pan" and "instrument Pan" with links pointing to the particular sections
+           
            <informalfigure id="matryoshkaPanning">
             <mediaobject>
               <imageobject>
@@ -1984,9 +2055,9 @@
           </para>
         </listitem>
         
-        <listitem>
+        <listitem id="chpt.pattern_editor.note_properties.notekey">
           <para>
-          <emphasis role="bold">Notekey</emphasis> : if you select this note parameter the 
+          <emphasis role="bold">NoteKey</emphasis> : if you select this note parameter the 
           area where you can modify the parameter will change into a 'piano keyboard'
           </para>
           <informalfigure id="fig.NoteKey">
@@ -2003,11 +2074,10 @@
             value.
           </para>
           <note>
-          <para>
-            Note that the pattern editor in piano roll mode (see <xref
-            linkend="chpt.pattern_editor.piano_mode" />) can also be used to
-            change the note value of existing notes
-          </para>
+            <para>
+            Note that the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link> can also be used to
+            change the note value of existing notes.
+            </para>
           </note>
         </listitem>
         <listitem>
@@ -2026,7 +2096,7 @@
       </para>
 
       <para>
-        Clicking or dragging the value lines in the note properties editor will
+        <keycap>Clicking</keycap> or <keycap>dragging</keycap> the value lines in the Note Properties Editor will
         set the property value. But often you'll want to set the properties of
         several notes at once, so there are a few ways to do this.
 
@@ -2056,7 +2126,7 @@
       </sect1>
 
       <sect1 id="chpt.pattern_editor.piano_mode">
-        <title>Piano Mode Editor</title>
+        <title>Piano Roll Editor</title>
         
        <figure id="fig.PatternEditor_PianoMode">
          <title>Pattern Editor in Piano Mode</title>
@@ -2066,13 +2136,19 @@
            </imageobject>
          </mediaobject>
        </figure>
-       
-       <para>Drum mode (see <xref linkend="fig.PatternEditor_DrumMode"/>) focuses on using Hydrogen as a drum machine.
-       If you are using Hydrogen as an instrument there is a big chance that the Piano mode is for you.
+
+       <para>
+	     The Pattern Editor can be used as Piano Roll Editor pressing the <link linkend="chpt.pattern_editor.controls.input">Input</link> button.
+       </para>
+       <para>While the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> focuses on using Hydrogen as a drum machine, you can also use it an instrument via the Piano Roll Editor.
        It gives you a complete 'piano keyboard' so you can easily put down your tunes.</para>
-       <para>You can compare the Piano mode to the Note properties Notekey (described above), only here you have a 
+       <para>You can compare the Piano mode to the <link linkend="chpt.pattern_editor.note_properties.notekey">NoteKey</link> property in the Note Properties Editor. Only here you have a 
        complete piano keyboard, so you don't have to select the octave
        first.</para>
+
+       <para>
+	     TODO: add additional information about change properties of multiple notes at a single position, what happens in the Drumkit Editor when there are multiple notes in a single position, that most (all?) of the controls - like note lengths - available in the Drumkit Editor can also be applied here.
+       </para>
       
       </sect1>
      
