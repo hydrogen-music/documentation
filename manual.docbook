@@ -258,47 +258,72 @@
 <part id="part.using_hydrogen">
     <title>Using Hydrogen</title>
 
-    <chapter id="chpt.UIoverview">
+    <chapter id="chpt.overview">
       <title>Overview</title>
+
+      <sect1 id="chpt.overview.gui">
+        <title>Main User Interface</title>
+        
+        <figure id="fig.UI_overview">
+          <title>The Main UI in Single Pane mode</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/GUI_Sections_0.9.5_v2.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <para>
+	      TODO: update image (and adding the gimp session as well in order for future maintainance to only replace the background image
+        </para>
+
+        <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
+        large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
+        sizes).
+        </para>
+        <para>
+	      TODO: mention and link corresponding option in Preferences > Appearance
+        </para>
+        <para>
+          Below you can see the main UI split up in 5 parts: the <link linkend="chpt.main_menu">Main Menu</link>, <link linkend="chpt.main_toolbar">Main 
+          Toolbar</link>, <link linkend="chpt.song_editor">Song Editor</link>, <link linkend="chpt.pattern_editor">Pattern Editor</link> and the <link linkend="chpt.instrument_editor">Instrument</link> and <link linkend="chpt.sound_library">Sound Library Editor</link>.
+          These sections will be explained in detail further down in this
+          manual.
+        </para>
+        
+        <figure id="fig.tabbed_UI_overview">
+          <title>The Main UI in Tabbed mode</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/MainUI_tabbed.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+      </sect1>
       
-      <figure id="fig.UI_overview">
-        <title>The Main UI in Single Pane mode</title>
+      <sect1 id="chpt.overview.drumkits">
+        <title>Drumkit Concept</title>
+        
+        <para>First of all a little history on the Drumkits. Hydrogen began as a
+        dedicated drum machine but has evolved into a versatile sound synthesizer/sequencer 
+        that is capable of generating and manipulating all sorts of sounds. Hence the original 
+        "Drumkit" terminology is slightly misleading. You can load any kind of sound into a
+        "Drumkit" and manipulate that sound just like playing a regular synthesizer. This is 
+        also the main reason why the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link> was introduced.
+        </para>
 
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/GUI_Sections_0.9.5_v2.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </figure>
+        <para>
+          Each Drumkit is a collection of a number
+          of instruments (snare, kick, sampled voice, bass sound ...) and in its turn an instrument can consist of multiple
+        layered samples.
+        </para>
 
-      <para>
-	    TODO: update image (and adding the gimp session as well in order for future maintainance to only replace the background image
-      </para>
-
-      <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
-      large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
-      sizes).
-      </para>
-      <para>
-	    TODO: mention and link corresponding option in Preferences > Appearance
-      </para>
-      <para>
-      Below you can see the main UI split up in 5 parts: the <link linkend="chpt.main_menu">Main Menu</link>, <link linkend="chpt.main_toolbar">Main 
-      Toolbar</link>, <link linkend="chpt.song_editor">Song Editor</link>, <link linkend="chpt.pattern_editor">Pattern Editor</link> and the <link linkend="chpt.instrument_editor">Instrument</link> and <link linkend="chpt.sound_library">Sound Library Editor</link>.
-        These sections will be explained in detail further down in this
-        manual.
-      </para>
-      
-      <figure id="fig.tabbed_UI_overview">
-        <title>The Main UI in Tabbed mode</title>
-
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/MainUI_tabbed.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </figure>
-      
+        <para>
+	      TODO: add component concept in here.
+        </para>
+      </sect1>
     </chapter>
 
     <chapter id="chpt.preferences" xreflabel="Preferences">
@@ -636,7 +661,7 @@
         linkend="fig.preferences.appearance_tab"/>) let's you modify Hydrogen look 
         and feel (font settings and interface style). On this tab you can also change the 
         VU meters fall-off speed and switch between Single pane and Tabbed interface
-        mode (see <xref linkend="chpt.UIoverview"/>)
+        mode (see <xref linkend="chpt.overview"/>)
         </para>
       </sect1>
 
@@ -686,8 +711,8 @@
             <para><emphasis role="bold">Open pattern</emphasis>: opens a saved pattern
             belonging to the current drumkit.</para>
           </listitem>
-          <listitem>
-            <para><emphasis role="bold">Export pattern as</emphasis>: saves a
+          <listitem id="sect.main_menu.projects.export_pattern_as">
+            <para><emphasis role="bold">Export Pattern As</emphasis>: saves a
             pattern. In order for Hydrogen to automatically list it in the <link linkend="sect.sl.patterns">Patterns section of the Sound Library</link> you have to store it in
             <filename>$HOME/.hydrogen/data/patterns/drumkit_name/</filename></para>
           </listitem>
@@ -801,21 +826,39 @@
 	      TODO: update item list
         </para>
         <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Save</emphasis>: saves all instruments settings (and their sound samples) in
-            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>
+          <listitem id="sect.main_menu.drumkits.new">
+            <para><emphasis role="bold">New</emphasis>: creates a new <link linkend="chpt.overview.drumkits">drumkit</link>.
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export</emphasis>: compress all instruments samples and settings in a drumkit in
+            <para><emphasis role="bold">Save</emphasis>: saves all drumkit settings (including those of their instruments and sound samples).
+            </para>
+          </listitem>
+          <listitem id="sect.main_menu.drumkits.save_as">
+            <para><emphasis role="bold">Save As</emphasis>: saves all drumkit settings (including those of their instruments and sound samples) in a folder chosen via a file browser. The default directory is
+            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>.
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Export</emphasis>: compress all instruments samples and settings in a drumkit in 
             <emphasis>$HOME/.hydrogen/data/library_name</emphasis>
             </para>
           </listitem>
           <listitem id="sect.main_form.import_drumkit">
             <para><emphasis role="bold">Import</emphasis>: imports another drumkit from the local filesystem.
             </para>
-            <para>
+          </listitem>
+          
+          <listitem id="sect.main_form.online_import_drumkit">
+            <para><emphasis role="bold">Online Import</emphasis>: imports another drumkit from a remote location
+            through an <abbrev>XML</abbrev> feed. The <abbrev>XML</abbrev> file that should be provided is <emphasis
+            role="bold">NOT</emphasis> <abbrev>RSS</abbrev> compliant (see <ulink
+            url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
+            website</ulink> for an example). To load another drumkit in your
+            current working session of Hydrogen, read <xref linkend="chpt.sound_library"/>.
+            </para>
 
+            <para>
               <figure id="fig.import_drumkit">
                 <title>Import Drumkit</title>
                 <mediaobject>
@@ -824,24 +867,36 @@
                   </imageobject>
                 </mediaobject>
               </figure>
-              
-              You can import existing drumkits from other users via <menuchoice>
-              <guimenu>Instruments</guimenu><guimenuitem>Import library</guimenuitem>
-              </menuchoice>.  The Import window will pop up with the Internet tab selected.
+
+              The Import window will pop up with the Internet tab selected.
               By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
               and after pressing the 'Update list' button you will get a complete list of all
               drumkits that are available for download.  In the status column you can see
               if a kit is installed or not.
             </para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Online import</emphasis>: imports another drumkit from a remote location
-            through an <abbrev>XML</abbrev> feed. The <abbrev>XML</abbrev> file that should be provided is <emphasis
-            role="bold">NOT</emphasis> <abbrev>RSS</abbrev> compliant (see <ulink
-            url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
-            website</ulink> for an example). To load another drumkit in your
-            current working session of Hydrogen, read <xref linkend="chpt.sound_library"/>.
-            </para>
+
+        <para>
+        If you select one of the drumkits you will see info about this kit in the right
+        pane of the Import window: name, description, author and also the
+        license type.
+        </para>
+       <para>
+         You can install a drumkit by selecting it and clicking 'Download and Install'.
+         
+    
+       <informalfigure id="fig.downloading_soundlibrary">
+         <mediaobject>
+           <imageobject>
+             <imagedata fileref="img/Downloading_SoundLibrary.png" format="PNG" />
+           </imageobject>
+         </mediaobject>
+        </informalfigure>
+    
+       Once the kit has been downloaded it will be available in the <link linkend="chpt.sound_library.drumkits">Sound Library</link> under <emphasis>User drumkits</emphasis>.
+     
+       </para>
+
+        
           </listitem>
         </itemizedlist>
       </sect1>
@@ -1377,8 +1432,8 @@
 
       </sect1>
 
-     <sect1 id="chpt.song_editor.pattern_options">
-       <title>Patterns Options</title>
+     <sect1 id="chpt.song_editor.sidebar">
+       <title>Sidebar</title>
 
        <para>
 	     TODO: update option list and description. update or drop image
@@ -1433,7 +1488,7 @@
           </para>
         </listitem>
         
-        <listitem>
+        <listitem id="chpt.song_editor.sidebar.properties">
           <para><emphasis role="bold">Properties</emphasis>: will open a window where you can change 
           the name of the pattern and also assign it to a certain category.
 
@@ -1461,8 +1516,17 @@
           </para>
         </listitem>
         
-        <listitem>
-          <para><emphasis role="bold">Save Pattern</emphasis>: will open the selected pattern in the Pattern Editor.
+        <listitem id="chpt.song_editor.sidebar.save_pattern">
+          <para><emphasis role="bold">Save Pattern</emphasis>: stores the
+          pattern in the <filename role="directory">patterns</filename> folder
+          within the Hydrogen data directory (usually <filename
+          role="directory">$HOME/.hydrogen/data/</filename>).
+          </para>
+        </listitem>
+        
+        <listitem id="chpt.song_editor.sidebar.export_pattern">
+          <para><emphasis role="bold">Export Pattern</emphasis>: stores the
+          pattern at a location determined via a file browser.
           </para>
         </listitem>
         
@@ -2165,153 +2229,104 @@
           </imageobject>
         </mediaobject>
       </figure>
-      
-    <para>
-	  TODO: split into conceptual part and one that deals with the actual user interface
-    </para>
-      <para>First of all a little history on the Sound library and Drumkits. Hydrogen began as a 
-      dedicated drum machine but has evolved into a versatile sound synthesizer/sequencer 
-      that is capable of generating and manipulating all sorts of sounds. Hence the original 
-      "Drumkit" terminology is slightly misleading. You can load any kind of sound into a
-      "Drumkit" and manipulate that sound just like playing a regular synthesizer. This is 
-      also the main reason why the Piano mode was added to the pattern editor 
-      (see <xref linkend="chpt.pattern_editor.piano_mode"/>).</para>
-      <para>In this manual (and in other documentation) "Drumkit" and "Soundlibrary" 
-      frequently mean the same thing, but not always. The diagram below shows the actual 
-      relation between the Soundlibrary and Drumkits:
-      <figure id="fig.SoundlibraryHierarchy">
-         <title>Soundlibrary/Drumkit Hierarchy</title>
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/SoundlibraryHierarchy_V4.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-        </figure>
-      
-      As you can see the Soundlibrary contains all Drumkits (System and User drumkits), 
-      your saved Patterns and your saved Songs.  Each Drumkit is a collection of a number
-      of instruments (snare, kick, sampled voice, bass sound ...) and in its turn an instrument can consist of multiple
-      layered samples.
+
+      <para>
+	    TODO: update image
       </para>
-      <note>
+      
+      <para>The Sound Library helps you manage your drumkits,
+      favourite patterns, and favourite songs. When making new songs or drum
+      kits, it allows you to reuse and mix instruments and patterns from other kits and songs.
+      </para>
+
+      <para>
+	    It is located in the Instrument Rack in the lower right corner of Hydrogen, which can be shown or hidden via the <link linkend="sect.main_menu.view">View</link> option in the Main Menu or via the <link linkend="sect.main_toolbar.gui_state">corresponding button</link> in the Main Toolbar. The Instrument Rack does either show the <link linkend="chpt.instrument_editor">Instrument Editor</link> or the Sound Library depending on what is chosen in the <link linkend="sect.main_menu.view">View</link> option in the Main Menu or the corresponding buttons at the top of the Instrument Rack.
+      </para>
+
+      <sect1 id="chpt.sound_library.drumkits">
+        <title>Drumkits</title>
+
+        <para>The list of drumkits comprises both the kits present at system level and the ones at user level.</para>
         <para>
-        Note that every block has a number of parameters (continue reading for
-        more details).
-        </para>
-      </note>
-      <para>This said. let's take a look at the Soundlibrary interface and see what it can do for you:</para>
-      <para>The Sound Library saves you time in managing your drum kits,
-      favourite patterns, and favourite songs.  When making new songs and new drum
-      kits, it allows you to reuse and mix the instruments and patterns from other kits and songs.
-
-      </para>
-
-      <sect1 id="sect.systemdrumkits">
-        <title>System Drumkits</title>
-
-        <para>This lists the drumkits that were installed by your system
-        administrator.  The location of these System Drumkits is determined by the compile-time prefix.  On
+          The <emphasis role="bold">System drumkits</emphasis> are those installed with your package manager or when <link linkend="chpt.compilation">compiling</link> Hydrogen manually. Their location is determined by the compile-time prefix. On
         Unix-like operating systems, this is usually <filename
         role="directory">/usr/share/hydrogen/data/drumkits</filename>, or
         possibly <filename
         role="directory">/usr/local/share/hydrogen/data/drumkits</filename>.
-        These kits are available to all users on the system, and users are
-        usually not able to add to them.</para>
+        These kits are available to all users on the system, and you usually have no write access to them.</para>
 
-        <para>To load a drumkit from here, right-click the drumkit and select
-        <guimenuitem>Load</guimenuitem>.  This will replace your current drumkit
-        with the one that you selected.  To load a single instrument from that
-        kit, left-click the <guibutton>plus</guibutton> to the left of the
-        drumkit's name to show all the instruments.  With your left mouse
-        button, click and drag the instrument into your current kit.  The
-        instrument will be added to the drumkit that you currently have
-        loaded.</para>
-      </sect1>
+        <tip>
+	      <para>
+	        You can still modify those kids by saving a tweaked version as a user level kit.
+          </para>
+        </tip>
 
-      <sect1 id="sect.userdrumkits">
-        <title>(Adding) User Drumkits</title>
-
-        <para>These are your own drum kits that you can manage yourself.  They
-        are usually stored in <filename
-        role="directory">$HOME/.hydrogen/data/drumkits</filename>.  When you are
-        creating a new drumkit, you can save it here by selecting
-        <menuchoice><guimenu>Instruments</guimenu><guimenuitem>Save
-        library</guimenuitem></menuchoice>.</para>
-
-        <para>
-	      TODO: reference to sect.main_form.import_drumkit
+        <para>The <emphasis role="bold">User drumkits</emphasis> are those which you can manage yourself. They
+        are stored in the Hydrogen data
+        directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>) within the <filename role="directory">drumkits</filename>
+        folder. When you have
+        created a new drumkit via <link linkend="sect.main_menu.drumkits.new">New</link> in the Drumkit option of the Main Menu, you can save it using <link linkend="sect.main_menu.drumkits.save_as">Save As</link> from the same menu. In addition, you can also <link linkend="sect.main_form.online_import_drumkit">Online Import</link> a number of drumkits provided by the dev team of Hydrogen.
         </para>
-        
-        <para>
-        If you select one of the drumkits you will see info about this kit in the right
-        pane of the Import window: name, description, author and also the
-        license type.
-        </para>
-        
 
-       <warning>
-       <para>If you are using Hydrogen for commercial purposes, (creating songs and 
-       selling these on-line or in any other way) you need to pay special attention to the
-       license type of the drumkit(s) you are using.
-       </para>
-       <para>
-       If the exact license is not available for a drumkit, do _NOT_ assume that it is a CC (or
-       other open and free license type).
-       </para>
-       <para>
-       Even if the kit is CC licensed you should always check with the author before using 
-       the kit in your songs.
-       </para>
-       <para>DISCLAIMER : hydrogen is not responsible for the drumkits that are 
-       made available for download by our users, either via the hydrogen-music.org site or
-       via any other channel.</para>
-       
+        <warning>
+          <para>If you are using Hydrogen for commercial purposes, (creating songs and 
+          selling these online or in any other way) you need to pay special attention to the
+          license type of the drumkit(s) you are using.
+          </para>
+          <para>
+            If the exact license is not available for a drumkit, do <emphasis role="bold">not</emphasis> assume that it is a <ulink url="https://creativecommons.org/about/cclicenses/">Creative Commons (CC)</ulink> or
+            other open and free license.
+          </para>
+          <para>
+            Even if the kit is CC licensed you should always check with the author before using 
+            the kit in your songs.
+          </para>
+          <para>DISCLAIMER : Hydrogen is not responsible for the drumkits that are 
+          made available for download by our users, either via the <ulink url="hydrogen-music.org">hydrogen-music.org</ulink> or
+          via any other channel.</para>
        </warning>
 
-
-       <para>
-         You can install a drumkit by selecting it and clicking 'Download and Install'.
-         
-    
-       <informalfigure id="fig.downloading_soundlibrary">
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/Downloading_SoundLibrary.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-        </informalfigure>
-    
-       Once the kit has been downloaded it will be available in the Sound Library under "User drumkits".
-     
+       <para>To <emphasis role="bold">load a drumkit</emphasis> via the Sound Library, right-click the drumkit and select
+       <parameter>Load</parameter>.  This will replace your current drumkit
+       with the one that you selected.  To <emphasis role="bold">load a single instrument</emphasis> from that
+       kit, left-click the <option>&#x25B6;</option> to the left of the
+       drumkit's name to show all the instruments.  With your left mouse
+       button, click and drag the instrument into your current kit.  The
+       instrument will be added to the drumkit that you currently have
+       loaded.
        </para>
-
-
       </sect1>
-      <sect1 id="sect.sl.songs">
-        <title>Songs in the Sound Library</title>
 
-        <para>To save songs in the Sound Library, put them in your data
-        directory underneath the <filename role="directory">songs</filename>
-        folder (usually <filename role="directory">$HOME/.hydrogen/data/songs)</filename>.
+      <sect1 id="sect.sl.songs">
+        <title>Songs</title>
+
+        <para>To access songs via the Sound Library, you have to put them within the Hydrogen data
+        directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>) into the <filename role="directory">songs</filename>
+        folder.
         To remove them, remove the file from that folder.</para>
       </sect1>      
       
       <sect1 id="sect.sl.patterns">
-        <title>Patterns in the Sound Library</title>
+        <title>Patterns</title>
 
-        <para>Before you save a pattern to the sound library, be
-        sure to give it a title and a category.  Right-click on the pattern, select
-        "<guimenuitem>Properties</guimenuitem>" and enter the details.
+        <para>To access patterns via the Sound Library, you have to put them within the Hydrogen data
+        directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>) into the <filename role="directory">patterns</filename>
+        folder.
+
+        <note>
+	      <para>
+	        This is done automatically when using the <link linkend="chpt.song_editor.sidebar.save_pattern">Save Pattern</link> option in the Sidebar of the Song Editor but not when using <link linkend="chpt.song_editor.sidebar.export_pattern">Export Pattern</link> via the same Sidebar or <link linkend="sect.main_menu.projects.export_pattern_as">Export Pattern As</link> in the Project option of the Main Menu.
+          </para>
+        </note>
+        </para>
+        <para>Before you save a pattern, be
+        sure to give it a title and a category. This can be done by right-clicking on the pattern in the Sidebar of the Song Editor, selecting
+        <link linkend="chpt.song_editor.sidebar.properties">Properties</link> and entering the details.
         You can use one of the categories already
         provided, or create your own categories by simply typing in a category
         name.  The category name is important, because the patterns will be
         filed by category in the Sound Library.</para>
 
-        <para>You can add a pattern to the sound library by right
-        clicking the title of the pattern in the song editor, and selecting
-        "<guimenuitem>Save Pattern</guimenuitem>".  It will now appear in the Sound
-        Library underneath "<guilabel>Patterns</guilabel>" and the category that
-        you assigned to the pattern.</para>
       </sect1>
     </chapter>
 
@@ -4240,7 +4255,7 @@
       <sect1 id="chpt.instrument_editor.new_kit">
        <title>Creating a New Drumkit</title>
        <para>In the next paragraphs we will show you how to create a complete drumkit.  
-       Keeping in mind the 'Soundlibrary hierarchy' (see <xref linkend="fig.SoundlibraryHierarchy"/>)
+       Keeping <link linkend="chpt.overview.drumkits">design of a drumkit</link>
        we will use a top-down approach, so we will start at the Drumkit level and work our way 
        down to the samples.</para> 
         
