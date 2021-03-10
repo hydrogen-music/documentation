@@ -249,7 +249,7 @@
       </note>
       <para>
         Most other keys on the keyboard can be used to play
-        samples and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
+        <link linkend="def.sample">samples</link> and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
       </para>
     </chapter>
 
@@ -307,7 +307,7 @@
         <title>Drumkit Concept</title>
         
         <para>First of all a little history on the Drumkits. Hydrogen began as a
-        dedicated drum machine but has evolved into a versatile sound synthesizer/sequencer 
+        dedicated drum machine but has evolved into a versatile <link linkend="def.sample">sample</link>-based sound synthesizer/sequencer 
         that is capable of generating and manipulating all sorts of sounds. Hence the original 
         "Drumkit" terminology is slightly misleading. You can load any kind of sound into a
         "Drumkit" and manipulate that sound just like playing a regular synthesizer. This is 
@@ -319,6 +319,12 @@
           of instruments (snare, kick, sampled voice, bass sound ...) and in its turn an instrument can consist of multiple
         layered samples.
         </para>
+
+        <tip>
+	      <para>
+	        In case you are not familiar with the world of sound synthesis, you can check out the <link linkend="glossary">Glossary</link> for a number of useful definitions.
+          </para>
+        </tip>
 
         <para>
 	      TODO: add component concept in here.
@@ -2333,210 +2339,82 @@
     <chapter id="chpt.instrument_editor">
       <title>Instrument Editor</title>
 
-      <para>
-	    TODO: disentangle this chapter into a plain description of the "General" and "Layers" view of the Instrument Editor and split of the "Create a New Drumkit" tutorial and put it in the examples
-      </para>
-
-      <sect1 id="chpt.instrument_editor.concepts">
-        <title>Concepts</title>
-
-        <para>
-	      TODO: do we needs this or are links to the glossary sufficient?
-        </para>
-        
-        <para>
-          The synthesizer in Hydrogen is a sample-based synthesizer.  A sample
-          is a piece of pre-recorded audio (usually between 0.1 sec and 3 sec).
-          To play a note, the sample is simply played back at the right time.
-          There are a few concepts and terms that you should understand when you
-          are putting together a drumkit.  (See <xref linkend="glossary"/> for
-          more detailed explanations.)
-        </para>
-
-        <para>Sampling Synthesizer Terms:</para>
-
-        <itemizedlist>
-         
-          <listitem>
-            <para><emphasis role="bold">Sample</emphasis>: a short recording of a sound,
-            typically between 0.1 and 3.0 seconds long.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Gain</emphasis>: volume
-            adjustment.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Velocity</emphasis>: how hard you hit a
-            note.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">ADSR Envelope Generator</emphasis>: an
-            Attack/Decay/Sustain/Release envelope generator.  After you trigger
-            a note, Hydrogen will <emphasis>attack</emphasis> the note by
-            increasing its volume from 0 to the full velocity of the note.
-            After reaching full velocity, it will <emphasis>decay</emphasis> the
-            note by lowering the volume until it reaches the
-            <emphasis>sustain</emphasis> level.  When the note is
-            <emphasis>released</emphasis>, Hydrogen reduces the volume from the
-            sustain level back down to 0.  See <ulink url="http://en.wikipedia.org/wiki/ADSR_envelope">ADSR
-            Envelope</ulink> for more info</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Attack</emphasis>: the amount of <emphasis>time</emphasis> to go from 0 to full
-            velocity.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Decay</emphasis>: tthe amount of <emphasis>time</emphasis> to go from full velocity to the sustain
-            volume.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Sustain</emphasis>: the <emphasis>level</emphasis> (how loud) to hold the note between the
-            sustain and the release.  It is a percentage of the velocity.  It
-            does not depend on time.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Release</emphasis>: the amount of <emphasis>time</emphasis> to go from the sustain volume back down
-            to 0.</para>
-          </listitem>
-
-        </itemizedlist>
-
-        <para>
-          Typical samples that are used in Hydrogen are: the sound of a single
-          drum hit, the sound of a single cymbal hit, the sound of a single
-          cowbell hit.  Whenever you put a note in the pattern (or play a note
-          using <abbrev>MIDI</abbrev>), Hydrogen will play whatever sound you have loaded.  So,
-          to put together a drum kit you need to gather short recordings of the
-          bass drum, each tom, each cymbal, the high hat open, the high hat
-          closed, the snare drum (snare on), the snare drum (snare off), rim
-          shots, etc.
-        </para>
-
-        <para>
-          However, there are no rules about what a sample can be.  It's not
-          uncommon to use Hydrogen to trigger non-drum sounds like: audio clips
-          of people talking, a clip from a song, sound effects, audio clips from
-          movies, and famous people speaking.  Be creative!
-        </para>
-
-      </sect1>      
-      <sect1 id="chpt.instrument_editor.general">
-        <title>General</title>
-        
-        <figure id="instrumenteditor.general">
+      <figure id="instrumenteditor.general">
         <title>The Instrument editor General view</title>
         <mediaobject>
           <imageobject>
             <imagedata fileref="img/Instrument_General.png" format="PNG" />
           </imageobject>
         </mediaobject>
-        </figure>
+      </figure>
 
-        <para>In the instrument editor, click on the
-        <guibutton>General</guibutton> button.  Here you can adjust several
-        parameters that apply to the instrument (applies to all layers as well).      
-        The parameters are:</para>
+      <para>
+	    The Instrument Editor is located in the Instrument Rack in the lower right corner of Hydrogen, which can be shown or hidden via the <link linkend="sect.main_menu.view">View</link> option in the Main Menu or via the <link linkend="sect.main_toolbar.gui_state">corresponding button</link> in the Main Toolbar. The Instrument Rack does either show the <link linkend="chpt.instrument_editor">Instrument Editor</link> or the Sound Library depending on what is chosen in the <link linkend="sect.main_menu.view">View</link> option in the Main Menu or the corresponding buttons at the top of the Instrument Rack.
+      </para>
+
+      <sect1 id="chpt.instrument_editor.general">
+        <title>General</title>
         
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Envelope parameters</emphasis>:
-            <guibutton>Attack</guibutton>, <guibutton>Decay</guibutton>,
-            <guibutton>Sustain</guibutton>, <guibutton>Release</guibutton>.
-            (See <xref linkend="def.envelopegenerator"/>)</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><guibutton>Gain</guibutton></emphasis>:
-            the overall volume of the instrument.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><guibutton>Mute
-            Group</guibutton></emphasis>: which mute group this instrument is a
-            member of (see <xref linkend="def.mutegroup"/>).</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><guibutton>Auto Stop-Note</guibutton></emphasis></para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><guibutton>Apply Velocity</guibutton></emphasis></para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Filter Parameters</emphasis>:
-            <guibutton>Byp</guibutton>ass, <guibutton>Cutoff</guibutton>,
-            <guibutton>Resonance</guibutton>.</para>
-          </listitem>
-          <listitem>
-            <para>
-                <emphasis role="bold">Pitch Shift Parameters</emphasis>:
-                <guibutton>Pitch</guibutton>,
-                <guibutton>Fine</guibutton>,
-                <guibutton>Random</guibutton>     
-          </para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><guibutton>MIDI out Channel and Note</guibutton></emphasis></para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold"><guibutton>Hi-Hat Pressure Group</guibutton></emphasis>:
-                Group and Range.
-            </para>
-          </listitem>
-        </itemizedlist>
+        <para>When clicking on the <option>General</option> button in the Instrument Editor you can adjust several
+        parameters that apply to the particular instrument (and all its layers) selected in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
+        </para>
 
-        <para>It's important that you understand <xref
-        linkend="chpt.instrument_editor.concepts"/> in order to continue
-        on.</para>
-
+        <note>
+          <para>It's important that you understand <link
+          linkend="chpt.overview.drumkits">Drumkit Concepts</link> and a couple of basic concepts of sound synthesis described in the <link linkend="glossary">Glossary</link> in order to continue
+          on. To ease reading, several of the latter concepts are linked in the text.</para>
+        </note>
+        
         <sect2 id="chpt.instrument_editor.envelope_parameters">
           <title>Envelope Parameters</title>
 
-          <para>When the instrument is triggered, its volume is run through an
-          ADSR Envelope.  The parameters operate as follows:</para>
+          <para>When a note associated with this instrument is triggered, its volume is run through an
+          <link linkend="def.adsr">ADSR Envelope</link>. Its particular settings can be adjusted using the envelope parameters located right below the instrument name.</para>
 
           <itemizedlist>
-            <listitem>
-              <para><emphasis role="bold">Attack</emphasis>: the amount
-              of <emphasis>time</emphasis> that the volume of the sample goes
-              from 0 to the full velocity of the note.  If the value is 0, the
-              sample will play immediately at full velocity.  If the value is
+            <listitem id="chpt.instrument_editor.general.attack">
+              <para><emphasis role="bold"><link linkend="def.attack">Attack</link></emphasis>: the amount
+              of <emphasis>time</emphasis> that the volume of the <link linkend="def.sample">sample</link> goes
+              from 0 to the full <link linkend="def.velocity">velocity</link> of the note. If the value is 0, the
+              sample will play back immediately at full velocity.  If the value is
               1.0, the sample volume will use the maximum time available for the
-              attack parameter.
-              <footnote id="fn.adsrtimes">
-                <para>The attack, decay, and release parameters are all set by
-                the number of <emphasis>audio samples</emphasis>.  This means
-                that the time changes depending on the sample rate of your sound
-                card.  The max time for each of them is 100,000 audio samples
-                (typ. 2.27 sec at 44.1 kHz).</para>
-              </footnote>
+              attack phase.
               </para>
             </listitem>
-            <listitem>
-              <para><emphasis role="bold">Decay</emphasis>: the amount of
-              <emphasis>time</emphasis> for the volume of the sample to go from
-              full velocity down to the sustain volume.  If the value is 0, the
-              sample will immediately skip from the attack volume to the sustain
+            <listitem id="chpt.instrument_editor.general.decay">
+              <para><emphasis role="bold"><link linkend="def.decay">Decay</link></emphasis>: the amount of
+              <emphasis>time</emphasis> for the volume of the <link linkend="def.sample">sample</link> to go from
+              full <link linkend="def.velocity">velocity</link> down to the sustain volume.  If the value is 0, the
+              sample will immediately skip from the full velocity to the <link linkend="def.sustain">sustain</link>
               volume.  If the value is 1.0, the sample volume will use the
-              maximum time available for the decay parameter.<footnoteref
-              linkend="fn.adsrtimes"/></para>
+              maximum time available for the decay parameter.</para>
             </listitem>
             <listitem>
-              <para><emphasis role="bold">Sustain</emphasis>: the
-              <emphasis>volume</emphasis> to play the note after the decay phase
+              <para><emphasis role="bold"><link linkend="def.sustain">Sustain</link></emphasis>: the
+              <emphasis>volume</emphasis> to play the note after the <link linkend="def.decay">decay</link> phase
               is over, and until the note is released.  If set to 0, the note
               will be silent.  If set to 1.0, the note will play at full
-              velocity.</para>
+              <link linkend="def.velocity">velocity</link>.</para>
             </listitem>
-            <listitem>
-              <para><emphasis role="bold">Release</emphasis>: the
-              <emphasis>time</emphasis> to fade out the note from the sustain
-              volume back down to 0 (silent).  If set to 0, the note will fade
+            <listitem id="chpt.instrument_editor.general.release">
+              <para><emphasis role="bold"><link linkend="def.release">Release</link></emphasis>: the
+              <emphasis>time</emphasis> to fade out the note from the <link linkend="def.sustain">sustain
+              volume</link> back down to 0 (silent).  If set to 0, the note will fade
               out in the minimum amount of time (about 5 ms).  If set to 1, it
-              will fade out for the maximum time available.<footnoteref
-              linkend="fn.adsrtimes"/></para>
+              will fade out for the maximum time available.</para>
             </listitem>
           </itemizedlist>
+          
+          <note id="fn.adsrtimes">
+            <para>The <link linkend="chpt.instrument_editor.general.attack">Attack</link>, <link linkend="chpt.instrument_editor.general.decay">Decay</link>, and <link linkend="chpt.instrument_editor.general.release">Release</link> parameters are all set by
+            the number of <link linkend="def.sample">audio samples</link>.  This means
+            that the time changes depending on the sample rate of your sound
+            card.  The max time for each of them is 100,000 audio samples
+            (typ. 2.27 sec at 44.1 kHz).</para>
+          </note>
 
-          <para>If the sample is shorter than the times that you specify, the
-          sample will end, regardless of which phase of the ADSR it is in.  If
+          <para>If the <link linkend="def.sample">sample</link> is shorter than the times that you specify, the
+          sample will end, regardless of which phase of the <link linkend="def.adsr">ADSR</link> it is in.  If
           the note is sustained, it does <emphasis>not</emphasis> draw out the
           note while you are holding it.  It only holds the gain (volume)
           parameter during that time.</para>
@@ -4385,6 +4263,24 @@
         that change are: anything time-base (like attack and release) and
         anything frequency based (like the cutoff frequency).</para>
 
+        <para>
+          Typical samples that are used in Hydrogen are: the sound of a single
+          drum hit, the sound of a single cymbal hit, the sound of a single
+          cowbell hit.  Whenever you put a note in the pattern (or play a note
+          using <abbrev>MIDI</abbrev>), Hydrogen will play whatever sound you have loaded.  So,
+          to put together a drum kit you need to gather short recordings of the
+          bass drum, each tom, each cymbal, the high hat open, the high hat
+          closed, the snare drum (snare on), the snare drum (snare off), rim
+          shots, etc.
+        </para>
+
+        <para>
+          However, there are no rules about what a sample can be.  It's not
+          uncommon to use Hydrogen to trigger non-drum sounds like: audio clips
+          of people talking, a clip from a song, sound effects, audio clips from
+          movies, and famous people speaking.  Be creative!
+        </para>
+
       </sect1>
    </chapter>
 </part>
@@ -4600,6 +4496,14 @@
         Generally, the
         parameters are proportional to
         the <link linkend="def.velocity">velocity</link>.</para>
+        <para>
+          After you trigger
+            a note, Hydrogen will start the <link linkend="def.attack">attack</link> phase in which the volume of the note is increase from 0 to its full <link linkend="def.velocity">velocity</link>.
+            After reaching full velocity, the volume will <link linkend="def.decay">decay</link> until it reaches the
+            <link linkend="def.sustain">sustain</link> level. When the note is
+            <link linkend="def.release">released</link>, Hydrogen reduces the volume from the
+            sustain level back down to 0.
+        </para>
 
         <para>In Hydrogen, the ADSR envelope generator only controls the volume
         (attenuation).</para>
@@ -4619,9 +4523,9 @@
     <glossentry id="def.attack">
       <glossterm>Attack</glossterm>
       <glossdef>
-        <para>This is the first phase of an ADSR envelope, and is the amount
-        of <emphasis>time</emphasis> to turn the parameter up from
-        0 to full velocity after triggering the note.</para>
+        <para>This is the first phase of an <link linkend="def.adsr">ADSR</link> envelope. It represents the amount
+        of <emphasis>time</emphasis> to increase the volume of a note from
+        0 (triggering) to full <link linkend="def.velocity">velocity</link>.</para>
 
         <glossseealso otherterm="def.adsr"/>
       </glossdef>
@@ -4712,9 +4616,9 @@
     <glossentry id="def.decay">
       <glossterm>Decay</glossterm>
       <glossdef>
-        <para>After reaching full velocity from the attack, this is the amount
-        of <emphasis>time</emphasis> to turn the parameter down from full
-        velocity to the sustain level.</para>
+        <para>After the <link linkend="def.attack">attack</link>phase, this is the amount
+        of <emphasis>time</emphasis> for the volume of a note to decrease from full
+        <link linkend="def.velocity">velocity</link> to the <link linkend="def.sustain">sustain</link> level.</para>
 
         <glossseealso otherterm="def.adsr"/>
       </glossdef>
@@ -4900,8 +4804,8 @@
     <glossentry id="def.release">
       <glossterm>Release</glossterm>
       <glossdef>
-        <para>After the note is released, this is the amount of
-        <emphasis>time</emphasis> to reduce the parameter from the sustain level
+        <para>The amount of
+        <emphasis>time</emphasis> to reduce the volume of a note from the <link linkend="def.sustain">sustain</link> level
         to 0.</para>
 
         <glossseealso otherterm="def.adsr"/>
@@ -4959,16 +4863,14 @@
       <glossterm>Sample</glossterm>
       <glossdef>
         <para>A short recording of a sound, typically between .1 and 3.0 seconds
-        long.</para>
+        long. Each time a note is triggered within Hydrogen the corresponding sample will be played back (after applying all customizations and effects).</para>
       </glossdef>
     </glossentry>
 
     <glossentry id="def.sustain">
       <glossterm>Sustain</glossterm>
       <glossdef>
-        <para>The <emphasis>level</emphasis> to hold the parameter after
-        finishing the decay time.  This level will be maintained until the not
-        is released.</para>
+        <para>The <emphasis>level</emphasis> (how loud; volume) to hold the note between the <link linkend="def.decay">decay</link> and the <link linkend="def.release">release</link>. It is given as percentage of the <link linkend="def.velocity">velocity</link> and does not depend on time.</para>
         <glossseealso otherterm="def.adsr"/>
       </glossdef>
     </glossentry>
@@ -5002,3 +4904,4 @@
   </glossary>
 </part>
 </book>
+
