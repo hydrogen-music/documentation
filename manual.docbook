@@ -317,7 +317,7 @@
         <para>
           Each Drumkit is a collection of a number
           of instruments (snare, kick, sampled voice, bass sound ...) and in its turn an instrument can consist of multiple
-        layered samples.
+        <link linkend="def.layer">layered</link> samples.
         </para>
 
         <tip>
@@ -1680,7 +1680,7 @@
                    </tip>
                  </listitem>
                  <listitem>
-				   <para><emphasis role="bold">Mute</emphasis>: mutes the Playback Track.</para>
+				   <para><emphasis role="bold">Mute</emphasis>: <link linkend="def.mute">mutes</link> the Playback Track.</para>
                  </listitem>
                  <listitem>
 				   <para><emphasis role="bold">Fader</emphasis>: adjusts the volume. You can think of this fader as the mixer strip of the Playback Track. The resulting audio will be pass the <link linkend="sect.master">Master section</link> of the Mixer like any other strip too.</para>
@@ -1903,7 +1903,7 @@
         </para>
         
         <para>The small red and green buttons right of the instrument names are the
-        <quote><emphasis role="bold">mute</emphasis></quote> (red) and <quote><emphasis
+        <quote><emphasis role="bold"><link linkend="def.mute">mute</link></emphasis></quote> (red) and <quote><emphasis
         role="bold">solo</emphasis></quote> (green) buttons.</para>
 
         <para>
@@ -2067,14 +2067,14 @@
       The following note properties are available: 
       
       <itemizedlist mark="opencircle">
-        <listitem>
+        <listitem id="chpt.pattern_editor.note_properties.velocity">
           <para><emphasis role="bold">Velocity</emphasis> : how hard the note is
           played (the volume of the note)</para>
           <note>
             <para>
           The color of the vertical bar will change according to the velocity value you have defined. 
           A light shade of gray means a low velocity (low volume) and the higher you set the velocity the darker the color will be,
-          turning red when you reach the point of clipping.
+          turning red when you reach the point of <link linkend="def.clipping">clipping</link>.
             </para>
           </note>
           <para>
@@ -2355,8 +2355,8 @@
       <sect1 id="chpt.instrument_editor.general">
         <title>General</title>
         
-        <para>When clicking on the <option>General</option> button in the Instrument Editor you can adjust several
-        parameters that apply to the particular instrument (and all its layers) selected in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
+        <para>When clicking the <option>General</option> button in the Instrument Editor you can adjust several
+        parameters that apply to the particular instrument (and all its <link linkend="def.layer">layers</link>) selected in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
         </para>
 
         <note>
@@ -2367,6 +2367,10 @@
         
         <sect2 id="chpt.instrument_editor.envelope_parameters">
           <title>Envelope Parameters</title>
+
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
 
           <para>When a note associated with this instrument is triggered, its volume is run through an
           <link linkend="def.adsr">ADSR Envelope</link>. Its particular settings can be adjusted using the envelope parameters located right below the instrument name.</para>
@@ -2416,7 +2420,7 @@
           <para>If the <link linkend="def.sample">sample</link> is shorter than the times that you specify, the
           sample will end, regardless of which phase of the <link linkend="def.adsr">ADSR</link> it is in.  If
           the note is sustained, it does <emphasis>not</emphasis> draw out the
-          note while you are holding it.  It only holds the gain (volume)
+          note while you are holding it.  It only holds the <link linkend="def.gain">gain</link> (volume)
           parameter during that time.</para>
 
         </sect2>
@@ -2424,47 +2428,55 @@
         <sect2 id="chpt.instrument_editor.gain_and_mute_group">
           <title>Gain and Mute Group</title>
 
-          <para>The gain sets the overall volume for the sample.  This gain is
-          applied after the gain that you set for the layer, and before the gain
-          that is set for the mixer.  If the Gain is 0, the instrument will be
-          silent.  If the gain is 1.0 the volume of the samples will not be
-          adjusted (i.e. 0 dB).  If the gain is set higher, the samples will be
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
+
+          <para>The <emphasis role="bold"><link linkend="def.gain">Gain</link></emphasis> sets the overall volume for the <link linkend="def.sample">sample</link>.  This Gain is
+          applied after the gain that you set for the layer (TODO: link), and before the one
+          that is set in the <link linkend="chpt.mixer">Mixer</link> (TODO: link).  If the
+          set to <option>0</option>, the instrument will be
+          silent.  If the Gain is <option>1.0</option>, the volume of the samples will not be
+          adjusted.  If the Gain is set higher, the samples will be
           amplified.</para>
 
           <warning>
             <para>It is very easy to set the <guibutton>Gain</guibutton> too
-            high, causing your sample to clip.  Remember to test the gain with
-            full-velocity notes.  If you clip your signal here, it will only get
+            high, causing your sample to <link linkend="def.clipping">clip</link>.  Remember to test the Gain with
+            full-<link linkend="def.velocity">velocity</link> notes.  If you clip your signal here, it will only get
             worse as Hydrogen processes it.</para>
           </warning>
 
-          <para>Hydrogen provides more mute groups than you know what to do with
-          (over 256).  A mute group is a grouping of instruments that are
-          mutually exclusive &mdash; only one instrument may be playing at any
+          <para>Hydrogen provides more <emphasis role="bold"><link linkend="def.mutegroup">Mute Groups</link></emphasis> than you know what to do with
+          (over 256).  A Mute Group is a grouping of instruments which's playback is
+          mutually exclusive &mdash; only one instrument of the group may be playing at a
           time.  If one is playing and another instrument in the group is
-          triggered, it will immediately silence (mute) and start playing the
-          other instrument.  This is useful, especially, for instruments like
-          hi-hats where the open sound and the closed sound are different
+          triggered, the former will immediately be silence (<link linkend="def.mute">muted</link>) and the latter starts playing.  This is useful, especially, for instruments like
+          hi-hats where the opened and closed sound are incorporated into the drumkit as different
           instruments.</para>
 
-          <para>If the mute group is set to "<guilabel>Off</guilabel>", then the
-          instrument is not part of any mute grouping.  If the mute group is set
+          <para>If the Mute Group is set to <option>Off</option>, then the
+          instrument is not part of any mute grouping.  If the Mute Group is set
           to any number, then that is the group that the instrument is a part
-          of.  To set other instruments into the same grouping, set their mute
-          group parameter to the same number.  (For example, to group all the
-          high-hat instruments, you can set all their mute group parameters to
-          1.  To have a snare drum mute group, set their mute group parameters
+          of.  To set other instruments into the same grouping, set their Mute
+          Group parameter to the same number.  (For example, to group all the
+          high-hat instruments, you can set all their Mute Group parameters to
+          1.  To have a snare drum Mute Group, set their Mute Group parameters
           to 2.)</para>
         </sect2>
         
         <sect2 id="chpt.instrument_editor.auto_stop_note">
           <title>Auto Stop-Note</title>
 
-          <para>If this box is checked Hydrogen will immediately stop any playing sample that
-          belongs to this instrument whenever the instrument is re-triggered.</para>
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
+
+          <para>If this box is checked, Hydrogen will immediately stop any playing <link linkend="def.sample">samples</link>
+          belonging to this instrument whenever the instrument is re-triggered, e.g. by another note.</para>
           <para>This option is particularly useful when you are using long samples like a 
           crash or some existing audio that you have sampled (like a looped voice in a 
-          dance/electro song)  For the crash you will need to use the Auto Stop-Note when 
+          dance/electro song).  For the crash you will need to use the Auto Stop-Note when 
           you are sequencing multiple notes in fast succession and want to make it sound realistic.  If you do 
           not check this option the cymbal will start to sound like multiple cymbals 
           instead of only one (since the sample of each individual hit will be played completely).
@@ -2474,18 +2486,36 @@
         </sect2>
         <sect2 id="chpt.instrument_editor.apply_velocity">
           <title>Apply Velocity</title>
+
           <para>
-             This lets the user decide if Hydrogen will apply the note velocity to the sample being played.
+	        TODO: insert figure of corresponding widget(s)
           </para>
+          
           <para>
-             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the layer gain,
-              the instrument gain, the component gain or the instrument volume.
-              If all the layer samples are normalized, this option should be used.
-                By default this option will be selected as this is the way older version of Hydrogen used to work.
+             This lets the user decide whether Hydrogen should apply the note <link linkend="def.velocity">velocity</link> to the <link linkend="def.sample">sample</link> being played.
           </para>
+
+          <tip>
+	        <para>
+	          The note velocity can set it the <link linkend="chpt.pattern_editor.note_properties.velocity">Note Properties Editor</link>.
+            </para>
+          </tip>
+          
           <para>
-              When not activated, the note velocity will only be used to select the sample to be played,
-              but the sample gain will not be changed.
+             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the layer gain (TODO: link),
+              the instrument gain (TODO: link), the component gain (TODO: link) or the instrument volume (TODO: link).
+              If all the <link linkend="def.layer">layer</link> samples are <link linkend="def.normalization">normalized</link>, this option should be used.
+          </para>
+
+          <note>
+	        <para>
+              By default this option will be selected as this is the way older versions of Hydrogen used to work.
+            </para>
+          </note>
+          
+          <para>
+              When not activated, the note velocity will only be used to <link linkend="chpt.instrument_editor.layers.sample_selection">select</link> the sample to be played,
+              but the sample gain itself will not be changed.
               This is useful for set of samples that already have their gain "hard-coded".
           </para>
         </sect2>  
@@ -2493,17 +2523,21 @@
         <sect2 id="chpt.instrument_editor.filter">
           <title>Filter Parameters</title>
 
-          <para>The filter is a low-pass resonance filter.  If you don't wish to
-          use is, click the <guibutton>BYP</guibutton>ass button so that it's
-          red.  If it's not red, then the filter is active.  The cutoff
-          parameter adjusts the cutoff frequency for the filter.  The resonance
-          parameter adjusts how much to resonate the cutoff frequency.  If the
-          resonance is set to 0, then the filter is just a simple low-pass
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
+
+          <para>The filter used in here is a <link linkend="def.lowpassfilter">low-pass</link> <link linkend="def.resonancefilter">resonance filter</link>.  If you don't wish to
+          use is, click the <option>BYP</option> button (bypass) so that it's
+          red.  If it's not red, then the filter is active.  The <link linkend="def.cutoff">cutoff</link>
+          parameter adjusts the cutoff frequency for the filter.  The <link linkend="def.resonance">resonance</link>
+          parameter adjusts how much to boost to provide at the cutoff frequency.  If the
+          resonance is set to <option>0</option>, then the filter is just a simple low-pass
           filter.</para>
 
           <note>
             <para>The cutoff frequency of the filter varies with the sample rate
-            of your audio card.  The range of the knob (0 to 1.0) is optimized
+            of your audio card.  The range of the knob <option>0</option> to <option>1.0</option>) is optimized
             for a 48,000 kHz sample rate.</para>
             <!-- NOTE:  I tried to reverse engineer the LPRF in the
                  sampler to calculate what the cutoff frequency is.
@@ -2523,26 +2557,42 @@
         
         <sect2 id="chpt.instrument_editor.pitch_shift_parameters">
           <title>Pitch Shift Parameters</title>
+
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
+          
           <para> The first two knobs control the pitch shift offset.
                  You can use it to change the tuning of the instrument.
-                "Pitch" is the Coarse control and has quantized steps of half-tones from -24 to +24.
-                "Fine" is the Fine control and has quantized steps of cents of half-tones from -0.50 to +0.50.
+                <emphasis role="bold">Pitch</emphasis> is the <emphasis>Coarse</emphasis> control and has quantized steps of half-tones from <option>-24</option> to <option>+24</option>.
+                <emphasis role="bold">Fine</emphasis> is the <emphasis>Fine</emphasis> control and has quantized steps of cents of half-tones from <option>-0.50</option> to <option>+0.50</option>.
           </para>
-          <para>The "random" parameter allows you to randomly vary the pitch
-              of the sample every time it is triggered.  The value is set between 0
-              and 1.0.  The pitch change is fairly small, almost always between &plusmn;1 half-steps
-              &times; value.  Using this sparingly can help your sequences to sound
-              more like a real drummer.
+          <para>The <emphasis role="bold">Random</emphasis> parameter allows you to randomly vary the pitch
+              of the <link linkend="def.sample">sample</link> every time it is triggered.  The value is set between <option>0</option>
+              and <option>1.0</option>.
+
+              <note>
+                <para>
+                  The pitch change is fairly small, almost always between &plusmn;1 half-steps
+                  &times; value.  Using this sparingly can help your sequences to sound
+                  more like a real drummer.	              
+                </para>
+              </note>
+
           </para>
         </sect2>   
         
 
         <sect2 id="chpt.instrument_editor.midi_out_settings">
-          <title>MIDI Out Settings</title>
+          <title><abbrev>MIDI</abbrev> Out Settings</title>
 
-          <para>Hydrogen is capable of generating midi messages that you can use
-          to trigger any external midi device or application.  To do this you
-          simply need to configure the <abbrev>MIDI</abbrev> out channel and Note for every
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
+
+          <para>Hydrogen is capable of generating <abbrev>MIDI</abbrev> messages that you can use
+          to trigger any external <abbrev>MIDI</abbrev> device or application.  To do this, you
+          simply need to configure the <abbrev>MIDI</abbrev> output <emphasis role="bold">Channel</emphasis> and <emphasis role="bold">Note</emphasis> for every
           instrument.  You need to have a sample loaded (an empty WAV file is
           fine) and make sure the proper <abbrev>MIDI</abbrev> routing/wiring is in place and
           you're set.  As you can see this is a very flexible approach that
@@ -2550,28 +2600,33 @@
           apps.</para>
 
           <para>From now on every time a note is played for that instrument (in the Hydrogen sequencer) 
-          a midi message will be sent to your external app/device and trigger a sound.  
+          a <abbrev>MIDI</abbrev> message will be sent to your external app/device and trigger a sound.  
           This way you can use Hydrogen as a pure sequencer for other apps, or combine the 
           internal Hydrogen sampler with multiple external apps/devices.</para>
 
         </sect2>
         <sect2 id="chpt.instrument_editor.HH_pressure_group">
           <title>Hi-Hat Pressure Group</title>
-            <para>The Hi-Hat is a particular instrument of the drumkit as its sound can be changed by pressing the foot pedal.
+
+          <para>
+	        TODO: insert figure of corresponding widget(s)
+          </para>
+          
+            <para>The hi-hat is a particular instrument of the drumkit as its sound can be changed by pressing the foot pedal.
             </para>
-            <para>For e-drummer owner, the hihat pressure group enables to group different hihat instruments
+            <para>For e-drum owners, the hi-hat pressure group enables to group different hi-hat instruments
                 together, for example closed, half closed, fully open.
             </para>
-            <para>Pressure Group: you can assign more instruments to the same group.
-                You can create many groups: for example one group for the different opening levels of a hihat when playing 
+            <para><emphasis role="bold">Pressure Group</emphasis>: you can assign more instruments to the same group.
+                You can create many groups. For example one group for the different opening levels of a hi-hat when playing 
                 the top of it, another group when playing the edge.
                  Another example: timpanis - create a group for each timpani and the pressure will change the note.
             </para>
-            <para>Range: set the minimum and maximum pressure for each instrument.
+            <para><emphasis role="bold">Range</emphasis>: set the minimum and maximum pressure for each instrument.
               Each instrument of a given group should seat in its own separate pressure range.
                The range will decide at what pressure level the instrument will be played.
-                For example, if your closed hi-hat has range from 0 to 20,
-               when the hi-hat pedal is pressed between 0 and 20 the closed hi-hat is played.
+                For example, if your closed hi-hat has range from <option>0</option> to <option>20</option>,
+               when the hi-hat pedal is pressed between <option>0</option> and <option>20</option> the closed hi-hat is played.
             </para>
 
         </sect2>      
@@ -2590,103 +2645,30 @@
           </imageobject>
         </mediaobject>
         </figure>
-
-        <para>For each instrument in a drum kit, you can load several samples
-        and set different synthesizer parameters.  This section will step you
-        through how to create a new instrument and load the samples.</para>
-
-        <para>To begin creating an instrument, select
-        <menuchoice>
-          <guimenu>Instruments</guimenu>
-          <guimenuitem>Add instrument</guimenuitem>
-          </menuchoice>.  This will give you a blank
-        instrument to start from.</para>
-
-        <para>Now, you need two samples.  Any .WAV or .FLAC file will do.
-        Hydrogen provides several in the <filename
-        class="directory">data/drumkits</filename> directory.</para>
-
-        <para>In the instrument editor, click on <guibutton>Layers</guibutton>.
-        You can layer several samples into the instrument.  Which one is played
-        depends on the velocity of the incoming note.  Click <guibutton>Load
-        Layer</guibutton> and point the <guimenu>Audio File Browser</guimenu> to
-        your sample.
-        </para>
-        <note>
-          <para>
-            The <guimenu>Audio File Browser</guimenu> will
-        allow you to preview the sample before you load it.  It will also allow
-        you to load more than one sample at a time.  But for now, only load
-        one.
-          </para>
-        </note>
-
-        <para>After you load the sample, you'll see that there is now a
-        <guilabel>1</guilabel> at the top, and the topmost rectangle has turned
-        light blue.  To load a second sample, click the slot just below it, and
-        then click <guibutton>Load Layer</guibutton> to bring in another
-        sample.</para>
-
-        <para>After bringing in both samples, you'll probably notice that only
-        the <emphasis>first</emphasis> sample is being played whenever you
-        trigger the instrument.  This is because you need to set the
-        <emphasis>velocity</emphasis> ranges for the layers.  Move your mouse to
-        the sides of the light blue rectangles and you see that you get a
-        left-right drag cursor.  Now drag the sample to the left or right (like
-        a curtain).  You will now see Layer 2 appear.</para>
-
-        <para>The velocity setting for the layer is 0-velocity on the left, and
-        full velocity on the right.  Set up Layer 1 to sound for soft notes, and
-        Layer 2 to sound for hard notes (i.e. Layer 1 on the left and Layer 2
-        on the right).</para>
-
-        <para>Now, in the pattern area, set up a simple pattern that plays this
-        instrument.  Adjust the velocity settings on each note so that you can
-        get the different samples to sound.  Now set the pattern to loop and
-        notice how your different samples are getting triggered.  (To learn
-        about editing a pattern, see <xref
-        linkend="chpt.pattern_editor"/>)</para>
-
-        <para>For each layer, you can set the <guibutton>Gain</guibutton> and
-        the <guibutton>Pitch</guibutton>.  The pitch also has a
-        <guibutton>Fine</guibutton> adjustment.</para>
-
-        <para>Use the <guibutton>Gain</guibutton> adjustment to control how loud
-        the sample will play.  This is necessary because it's extremely
-        difficult to get a set of samples that all sound at about the same
-        volume.  By adjusting here, the samples that were recorded too quietly
-        can be turned up to match your loud samples (that had to be turned
-        down).
-        <!--
-            TODO what is the difference between gain and volume here? 
-        -->
+        
+        <para>When clicking the <option>Layers</option> button in the Instrument Editor you can adjust the <link linkend="def.sample">samples</link> and synthesizer parameters of the particular <link linkend="def.layer">layers</link> of the instrument selected in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
         </para>
 
-        <warning>
-          <para>It is very easy to set the <guibutton>Gain</guibutton> too high,
-          causing your sample to clip.  Remember to test the gain with
-          full-velocity notes.  If you clip your signal here, it will only get
-          worse as Hydrogen processes it.</para>
-        </warning>
-
-        <para>The pitch of the sample can be modified with the pitch controls.
-        The <guibutton>Pitch</guibutton> knob adjust the pitch in musical
-        half-steps.  (So, -12 is down 1 octave).  The pitch on the right adjusts
-        the pitch &plusmn;50 cents.  (One half-step is 100 cents.)</para>
-
-        <note>
-          <para>The pitch is adjusted by playing the sample back faster or
-          slower.  This is called the Doppler Effect.  So, if you have a
-          1-second sample that you turn down -12 (1 octave), your sample will
-          only last for 0.5-seconds.  If you do not want this to happen you should
-          use rubberband instead (see <xref linkend="chpt.sample_editor.section2"/>)</para>
-        </note>
-
-        <para>You can hear the sample in a layer by clicking the layer id (just 
-        below the 'General' and 'Layers' buttons) and the 'Delete Layer' button 
-        will delete the currently selected layer.</para>
+        <para>
+	      TODO: overhaul chapter. Short explanation of how instrument is composed of layers and components.
+        </para>
+        <para>
+	      TODO: Below General/Layers button: name of component and arrow button to add/delete component
+        </para>
+        <para>
+	      TODO: How to add/delete/edit layer + mention wav preview + link and mention that samples can be listened to when clicking on the name of the instrument in the sidebar of the Pattern Editor
+        </para>
         <sect2 id="chpt.instrument_editor.layers.sample_selection">
           <title>Sample Selection</title>
+          <para>
+	        TODO: add paragraph covering the general sample selection according to the velocity + adjusting the horizontal bars via mouse.
+          </para>
+          <para>
+	        TODO: what do the five regions (1-5) indicate?
+          </para>
+          <para>
+	        TODO: mention what's happening if there is a "hole" between the sample (they neither overlap nor touch).
+          </para>
             <para>
                 Certain set of samples contain different sample versions of the same sound for the same note/velocity
                 in order to make it more natural - drummers for example never hit the drum set twice the same way.
@@ -2723,6 +2705,36 @@
                    </para> 
                 </listitem>
             </itemizedlist>
+        </sect2>
+
+        <sect2 id="chpt.instrument_editor.layers.controls">
+          <title>Controls</title>
+
+          <itemizedlist>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Layer Gain:</emphasis>: TODO
+              </para>
+            </listitem>
+            <listitem>
+	          <para>
+	            <emphasis role="bold">Component Volume</emphasis>: TOD
+              </para>
+            </listitem>
+            <listitem>
+	          <para>
+	            <emphasis role="bold">Pitch</emphasis>: TODO
+              </para>
+            </listitem>
+            <listitem>
+	          <para>
+	            <emphasis role="bold">Fine</emphasis>: TODO
+              </para>
+            </listitem>
+          </itemizedlist>
+          <para>
+	        TODO: Difference between layer gain and component volume. List and describe. Note + link interaction between layer pitch and instrument pitch.
+          </para>
         </sect2>
       </sect1>
       
@@ -2891,7 +2903,7 @@
         </imageobject>
       </inlinemediaobject>
        )
-         The play button lets you trigger the instrument at maximum velocity (handy for checking clipping), 
+         The play button lets you trigger the instrument at maximum velocity (handy for checking <link linkend="def.clipping">clipping</link>), 
        and the trig led lights up whenever this instrument is triggered (from the song sequence, 
        or by an external midi controller).  Right of this button/led you will find another led that shows
        you what instrument is currently selected.  This is also the instrument that is selected in the pattern editor.
@@ -4130,7 +4142,7 @@
 	 <title>Create a New Drumkit</title>
      <para>TODO: make consistent</para>
      
-      <sect1 id="chpt.instrument_editor.new_kit">
+      <sect1 id="chpt.examples.drumkit.new_kit">
        <title>Creating a New Drumkit</title>
        <para>In the next paragraphs we will show you how to create a complete drumkit.  
        Keeping <link linkend="chpt.overview.drumkits">design of a drumkit</link>
@@ -4139,8 +4151,7 @@
         
        <para>Creating a new drumkit with Hydrogen is done with the Instrument
        Editor.  You can load samples, set envelope
-       parameters, set the gain, and other advanced features like mute
-       groups, a low-pass resonance filter, and pitch randomization.</para>
+       parameters, set the gain, and other advanced features like <link linkend="chpt.instrument_editor.gain_and_mute_group">Mute Groups</link>, a low-pass resonance filter, and pitch randomization.</para>
 
        <para>TIP : Instead of creating your own drumkit, you can also use or download
        existing drumkits using the <xref linkend="chpt.sound_library"/>.</para>
@@ -4208,6 +4219,105 @@
 
       </sect1>
 
+      <sect1 id="chpt.examples.drumkit.new_instrument">
+        <title>Creating a New Instrument</title>
+        
+        <para>For each instrument in a drum kit, you can load several samples
+        and set different synthesizer parameters.  This section will step you
+        through how to create a new instrument and load the samples.</para>
+
+        <para>To begin creating an instrument, select
+        <menuchoice>
+          <guimenu>Instruments</guimenu>
+          <guimenuitem>Add instrument</guimenuitem>
+          </menuchoice>.  This will give you a blank
+        instrument to start from.</para>
+
+        <para>Now, you need two samples.  Any .WAV or .FLAC file will do.
+        Hydrogen provides several in the <filename
+        class="directory">data/drumkits</filename> directory.</para>
+
+        <para>In the instrument editor, click on <guibutton>Layers</guibutton>.
+        You can layer several samples into the instrument.  Which one is played
+        depends on the velocity of the incoming note.  Click <guibutton>Load
+        Layer</guibutton> and point the <guimenu>Audio File Browser</guimenu> to
+        your sample.
+        </para>
+        <note>
+          <para>
+            The <guimenu>Audio File Browser</guimenu> will
+        allow you to preview the sample before you load it.  It will also allow
+        you to load more than one sample at a time.  But for now, only load
+        one.
+          </para>
+        </note>
+
+        <para>After you load the sample, you'll see that there is now a
+        <guilabel>1</guilabel> at the top, and the topmost rectangle has turned
+        light blue.  To load a second sample, click the slot just below it, and
+        then click <guibutton>Load Layer</guibutton> to bring in another
+        sample.</para>
+
+        <para>After bringing in both samples, you'll probably notice that only
+        the <emphasis>first</emphasis> sample is being played whenever you
+        trigger the instrument.  This is because you need to set the
+        <emphasis>velocity</emphasis> ranges for the layers.  Move your mouse to
+        the sides of the light blue rectangles and you see that you get a
+        left-right drag cursor.  Now drag the sample to the left or right (like
+        a curtain).  You will now see Layer 2 appear.</para>
+
+        <para>The velocity setting for the layer is 0-velocity on the left, and
+        full velocity on the right.  Set up Layer 1 to sound for soft notes, and
+        Layer 2 to sound for hard notes (i.e. Layer 1 on the left and Layer 2
+        on the right).</para>
+
+        <para>Now, in the pattern area, set up a simple pattern that plays this
+        instrument.  Adjust the velocity settings on each note so that you can
+        get the different samples to sound.  Now set the pattern to loop and
+        notice how your different samples are getting triggered.  (To learn
+        about editing a pattern, see <xref
+        linkend="chpt.pattern_editor"/>)</para>
+
+        <para>For each layer, you can set the <guibutton>Gain</guibutton> and
+        the <guibutton>Pitch</guibutton>.  The pitch also has a
+        <guibutton>Fine</guibutton> adjustment.</para>
+
+        <para>Use the <guibutton>Gain</guibutton> adjustment to control how loud
+        the sample will play.  This is necessary because it's extremely
+        difficult to get a set of samples that all sound at about the same
+        volume.  By adjusting here, the samples that were recorded too quietly
+        can be turned up to match your loud samples (that had to be turned
+        down).
+        <!--
+            TODO what is the difference between gain and volume here? 
+        -->
+        </para>
+
+        <warning>
+          <para>It is very easy to set the <guibutton>Gain</guibutton> too high,
+          causing your sample to <link linkend="def.clipping">clip</link>.  Remember to test the gain with
+          full-velocity notes.  If you clip your signal here, it will only get
+          worse as Hydrogen processes it.</para>
+        </warning>
+
+        <para>The pitch of the sample can be modified with the pitch controls.
+        The <guibutton>Pitch</guibutton> knob adjust the pitch in musical
+        half-steps.  (So, -12 is down 1 octave).  The pitch on the right adjusts
+        the pitch &plusmn;50 cents.  (One half-step is 100 cents.)</para>
+
+        <note>
+          <para>The pitch is adjusted by playing the sample back faster or
+          slower.  This is called the Doppler Effect.  So, if you have a
+          1-second sample that you turn down -12 (1 octave), your sample will
+          only last for 0.5-seconds.  If you do not want this to happen you should
+          use rubberband instead (see <xref linkend="chpt.sample_editor.section2"/>)</para>
+        </note>
+
+        <para>You can hear the sample in a layer by clicking the layer id (just 
+        below the 'General' and 'Layers' buttons) and the 'Delete Layer' button 
+        will delete the currently selected layer.</para>
+      </sect1>
+
       <sect1 id="chpt.instrument_editor.tips">
         <title>Tips on Editing Instruments</title>
 
@@ -4219,7 +4329,7 @@
         knob (i.e. an amplifier), this is a <emphasis>gain stage</emphasis>.  
         With every gain stage you have, it's
         easy to overdrive your signal &mdash; which means the signal gets
-        distorted by clipping.  In addition, if you have two samples that, by
+        distorted by <link linkend="def.clipping">clipping</link>.  In addition, if you have two samples that, by
         themselves, peg your meters &mdash; what do you think happens when you
         combine them?  That's right, you overdrive the signal again.</para>
 
@@ -4232,7 +4342,7 @@
         Your sample will be played louder if the velocity is higher.  So, if you
         set everything to sound nice and full with velocity at 0.7, what will
         happen when you get a full velocity of 1.0?  (<emphasis>Hint:
-        clipping.</emphasis>)</para>
+        <link linkend="def.clipping">clipping</link>.</emphasis>)</para>
 
         <para><emphasis role="bold">Try to use samples that are -6 dB
         max.</emphasis> Visually, this means samples that peak at only
@@ -4561,7 +4671,7 @@
     <glossentry id="def.clipping">
       <glossterm>Clipping</glossterm>
       <glossdef>
-        <para>A phenomenon that happens to a signal when the signal is too large
+        <para>A phenomenon that happens to a signal when its amplitude is too large
         for whatever is receiving it.  The peaks of the signal (which are
         normally smooth curves) get cut off straight at the max volume
         (clipped).  This distorts the sound and is usually undesirable.</para>
@@ -4630,7 +4740,7 @@
         <para>DC offset, or DC coefficient is the mean value of the waveform.</para>
         <para>DC offset is usually undesirable. For example, in audio processing, a 
         sound that has DC offset will not be at its loudest possible volume when
-        normalized (because the offset consumes headroom), and this problem can 
+        <link linkend="def.normalization">normalized</link> (because the offset consumes headroom), and this problem can 
         possibly extend to the mix as a whole, since a sound with DC offset and a sound
         without DC offset will have DC offset when mixed. It may also cause other artifacts
         depending on what is being done with the signal.</para>
@@ -4764,8 +4874,7 @@
     <glossentry id="def.mutegroup">
       <glossterm>Mute Group</glossterm>
       <glossdef>
-        <para>A group of instruments (samples) that should mute (stop playing)
-        immediately after another instrument in the group is triggered.</para>
+        <para>A group of instruments (<link linkend="def.sample">samples</link>) out of which only a single one can be unmuted. If another instrument from the same group is triggered, the former one will be <link linkend="def.mute">muted</link> (stop playing) immediately.</para>
 
         <para>This is typically used in hi-hats, where there's a different
         instrument (sample) for when the hi-hat is open or closed.  With a real
@@ -4779,6 +4888,14 @@
     </glossentry>
 
     <!--   N   -->
+
+    <glossentry id="def.normalization">
+      <glossterm>Normalization</glossterm>
+      <glossdef>
+        <para>Normalization is the process of applying a uniform <link linkend="def.gain">gain</link> to an audio signal in order to make its largest amplitude peak match a predefined value (usually 0dBFS).</para>
+      </glossdef>
+    </glossentry>
+
 
     <!--   O   -->
 
@@ -4833,6 +4950,8 @@
 
         <glossseealso otherterm="def.filter"/>
         <glossseealso otherterm="def.cutoff"/>
+        <glossseealso otherterm="def.lowpassfilter"/>
+        <glossseealso otherterm="def.highpassfilter"/>
         <glossseealso otherterm="def.resonance"/>
       </glossdef>
     </glossentry>
