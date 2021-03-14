@@ -1978,10 +1978,10 @@
           </para>
           <para>
             Stacked mode will play multiple patterns simultaneously,
-            on a loop. You can select which patterns play by
-            clicking the pattern in the pattern list while holding
-            down <keycap>Ctrl</keycap>. Selected patterns are all
-            marked with a triangle.
+            on a loop. You can select which patterns play using
+            <keycap>Ctrl</keycap> + <keycap>left click</keycap> on the
+            pattern's name. Selected patterns are all marked with a
+            triangle.
           </para>
           <note>
             <para>
@@ -1998,7 +1998,7 @@
        <title>Sidebar</title>
 
        <para>
-	     TODO: update option list and description. update or drop image
+	 TODO: update option list and description. update or drop image
        </para>
 
       <para>Right-clicking the name of a pattern will show you a menu 
@@ -2016,14 +2016,9 @@
       
       
       <itemizedlist mark="opencircle">
-
-        <listitem>
-          <para><emphasis role="bold">Edit</emphasis>: will open the selected pattern in the Pattern Editor.
-          </para>
-        </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Copy</emphasis>: will copy the selected pattern to a new pattern in your song.
+          <para><emphasis role="bold">Duplicate</emphasis>: will copy the selected pattern to a new pattern in your song.
           </para>
           <note>
             <para>
@@ -2074,7 +2069,8 @@
         </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Load Pattern</emphasis>: will open the selected pattern in the Pattern Editor.
+          <para><emphasis role="bold">Load Pattern</emphasis>: will
+          load a pattern from a saved pattern file.
           </para>
         </listitem>
         
@@ -2093,7 +2089,8 @@
         </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Virtual Pattern</emphasis>: will open the selected pattern in the Pattern Editor.
+          <para><emphasis role="bold">Virtual Pattern</emphasis>: will
+          open the virtual pattern editor.
           </para>
           <para>
 	        Virtual patterns are a convenient way of grouping patterns together. 
@@ -2444,14 +2441,11 @@
               <imageobject>
                 <imagedata fileref="img/btn_quant_off.png" format="PNG" />
               </imageobject>
-            </inlinemediaobject>
-             : enables/disables quantization.
-            When enabled the beats inserted 
-            will automatically respect the grid resolution currently applied.</para>
-
-            <para>
-	          TODO: this is only relevant for recording, isn't it?
-            </para>
+            </inlinemediaobject> : enables/disables quantization.
+            When enabled, beats recorded from MIDI or from the
+            computer keyboard will automatically respect the grid
+            resolution currently applied, just like notes inserted by
+            clicking. </para>
             
             </listitem>
 
@@ -2495,8 +2489,9 @@
      
         <para>Each instrument has its own set of features that are accessible by 
         <keycap>right-clicking</keycap> the instrument.  From the context menu that pops up you can select </para>
+
         <itemizedlist mark="opencircle"> 
-          <listitem><para><emphasis role="bold">Clear notes</emphasis> : to remove all notes for this instrument in this pattern.  </para></listitem>
+          <listitem><para><emphasis role="bold">Delete notes</emphasis> : to remove all notes for this instrument in this pattern.  </para></listitem>
           <listitem id="chpt.pattern_editor.sidebar.fill_notes">
             <para><emphasis role="bold">Fill notes</emphasis> : this allows you to fill
           up the pattern with notes for the selected instrument.  Depending on the choice you make (fill all, fill 1/2, fill 1/4 ...)
@@ -2508,12 +2503,84 @@
           the more hydrogen will hit <quote>hard</quote> on that instrument when
           played.
           </para></listitem>
-          <listitem><para><emphasis role="bold">Delete Instrument</emphasis> : well, deletes the instrument ;-)</para></listitem>
-        </itemizedlist>
 
-        <para>
-	      TODO: update list
-        </para>
+          <listitem>
+            <para><emphasis role="bold">Select notes</emphasis> : 
+            will select all the notes played on this instrument in the
+            current pattern. They can then be copied, moved etc. in the
+            pattern editor main area.
+            </para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Edit all patterns</emphasis> :
+            this section of the menu has actions which operate on
+            notes played by the instrument in <emphasis>all</emphasis>
+            the patterns of the song.
+            </para>
+            
+            <itemizedlist>
+              <listitem>
+                <para><emphasis role="bold">Cut notes</emphasis> : 
+                remove <emphasis>all</emphasis> notes played on
+                this instrument, in all patterns, and keep them in the
+                clipboard.
+                </para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis role="bold">Copy notes</emphasis> :
+                copy <emphasis>all</emphasis> notes played on
+                this instrument, in all patterns, to the clipboard.
+                </para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis role="bold">Paste notes</emphasis> :
+                paste a multi-pattern selection from the clipboard to
+                this instrument.
+                </para>
+              </listitem>
+              
+              <listitem>
+                <para><emphasis role="bold">Delete notes</emphasis> :
+                delete all the notes associated with this instrument,
+                without affecting the clipboard.
+                </para>
+              </listitem>
+              
+            </itemizedlist>
+            
+            <para>
+              These can be used together to change the instrumentation
+              of a song, entirely replacing one instrument with
+              another by just copy and pasting the notes to a new
+              instrument.
+            </para>
+
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Instrument</emphasis> :
+            this section of the menu has actions which operate on the
+            instrument as a whole:
+            </para>
+            <itemizedlist>
+              <listitem>
+                <para><emphasis role="bold">Rename
+                instrument</emphasis> :
+                change the name of the instrument.
+                </para>
+              </listitem>
+              
+              <listitem>
+                <para><emphasis role="bold">Delete
+                Instrument</emphasis> : well, deletes the instrument ;-)</para>
+              </listitem>
+
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
         
         <para>The
         <inlinemediaobject>
@@ -2532,8 +2599,8 @@
         
         <para>The order of the instruments can be rearranged by simply dragging an instrument 
         up/down in the list and dropping it on a new position within the drumkit.  Doing so 
-        will not change anything to the sequence you have created for that instrument, nor will
-        it change anything to the song or pattern you are working on.  It <emphasis role="bold">
+        will not change the sequence of notes you have created for that instrument, nor will
+        it change anything about the song or pattern you are working on.  It <emphasis role="bold">
         will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <emphasis role="bold"><abbrev>MIDI</abbrev> note 
         mapping</emphasis> : in the table below you can find the link between the instrument
         position, the <abbrev>MIDI</abbrev> note and the <abbrev>qwerty</abbrev> keyboard keys.</para>
@@ -2584,7 +2651,7 @@
   </sect1>
 
       <sect1 id="chpt.pattern_editor.drumkit">
-        <title>Drumkit Editor</title>
+        <title>Drum Pattern Editor</title>
 
         <figure id="fig.PatternEditor_drumkit">
          <title>Pattern Editor in Drum Mode</title>
@@ -2632,9 +2699,13 @@
         </para>
 
         <para>
+          TODO: image needs update
+        </para>
+
+        <para>
           As in the Song Editor, the arrow keys can also be used to
           move around the pattern, and notes can be placed or removed
-          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />.
+          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />).
         </para>
 
         <para>
@@ -2644,7 +2715,7 @@
           timing. Movement in the horizontal direction is constrained by the currently selected grid
           <link linkend="chpt.pattern_editor.controls.res">resolution</link>, however this can be overridden by holding down <keycap>Alt</keycap> while moving notes.
         </para>
-
+          
         <para>
           Moving a selection of notes with <keycap>Ctrl</keycap> held down will copy
           them to the new location rather than moving, as in the Song Editor.
@@ -2655,10 +2726,10 @@
           the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-        <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
-         <inlinemediaobject>
-          <imageobject>
-           <imagedata fileref="img/Rec_button.png" format="PNG"/>
+          <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
         (see <xref linkend="sect.main_toolbar.transport_control"/>) and simply playing your pattern on your 
