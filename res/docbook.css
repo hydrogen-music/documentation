@@ -1900,6 +1900,14 @@ abbr {
   letter-spacing: 1px;
 }
 
+.figure img {
+  width: 100%;
+}
+
+.mediaobject > img:hover, .mediaobject > img:active {
+  width: unset;
+}
+
 /* ============================================================ */
 
 @media screen and (max-width: 1199px) {
