@@ -337,6 +337,12 @@
 
       <para>Via this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
 
+      <note>
+	    <para>
+	      All changes done in the Preferences Dialog - if not noted otherwise via a popup - will take effect when clicking the <emphasis role="bold">Ok</emphasis> button at the bottom of the window.
+        </para>
+      </note>
+      
       <sect1 id="chpt.preferences.general_tab">
         <title>General</title>
         
@@ -362,7 +368,7 @@
         <para>The Beat Counter drift compensation and start offset allow you to compensate
          for system latency when you are using the Beat Counter function (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</para>
         <para>The Max number of bars in a song can be set here (currently limited to 800) 
-        and if you want to use rubberband for sample time-stretching (see <xref linkend="chpt.sample_editor.section2"/>)
+        and if you want to use rubberband for sample time-stretching (see <xref linkend="chpt.sample_editor.pitch"/>)
         you need to enter the path where rubberband is installed on you system here.</para>
         <!-- THIJS : NEED TO AD LINK TO SAMPLE EDITOR -->
 
@@ -427,6 +433,10 @@
           The following drivers are available:
         </para>
 
+        <para>
+	      TODO: cover restart Audio Driver button and what it is used for.
+        </para>
+        
         <itemizedlist>
 
           <listitem>
@@ -505,6 +515,10 @@
                 Hydrogen will register <abbrev>JACK</abbrev> output ports for every single
                 instrument. This can be useful if you want to add effects to a
                 single instrument with jack-rack for example.</para>
+
+                <para>
+	              TODO: note that JACK options are only available when JACK driver is selected
+                </para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -590,6 +604,10 @@
           </mediaobject>
         </figure>
 
+        <para>
+	      TODO: note that further OSC options are only available when OSC support is enabled
+        </para>
+        
         <para>The <abbrev>OSC</abbrev> tab (<xref linkend="fig.preferences.osc_tab"/>) let's
         you modify all options associated with <abbrev>OSC</abbrev> (Open Sound Control) (see
         section <xref linkend="chpt.osc"/> for details).
@@ -2751,123 +2769,246 @@
               <imagedata fileref="img/SampleEditor_V5.png" format="PNG" />
             </imageobject>
           </mediaobject>
-        </figure>        
+        </figure>
 
-        <para>So far we have created a multilayered Drumkit, set a number of 
-        instrument parameters, played with velocity settings and so on.  Now it's 
-        time to go one step deeper and edit the samples using one of the newest
-        Hydrogen features: the Sample Editor.</para>
-        <para>The Sample Editor allows you to tweak and manipulate your samples.
-        This is a function that will really speed up the creation of a drumkit since
-        you can do the fine-tuning of the sample within Hydrogen. In pre-0.9.5 builds
-        the typical workflow would be to prepare your sample in an external sound editor,
-        import the sample in Hydrogen, test it, go back to the audio editor, import again, 
-        test ...  The sample editor allows you to do most of the sample manipulation 
-        within Hydrogen.  This mean less switching between Hydrogen and your audio editor
-        and more time to make music !</para>
+        <para>
+	      TODO: since there will be screenshots of the corresponding parts in the individual subsections, we can drop the numbers displayed in rectangles to the right of the image.
+        </para>
+
+        <para>The Sample Editor allows you to tweak and manipulate your
+        samples. It can be accessed by selecting a layer in the <link linkend="chpt.instrument_editor.layers">Instrument Editor</link> and clicking the <emphasis role="bold">Edit Layer</emphasis> button (TODO: insert image in here). It will really speed up the creation of a drumkit since
+        you can do the fine-tuning of the <link linkend="def.sample">samples</link> within Hydrogen and avoid a lengthy import-test-tweak workflow using an external application. This mean less switching between Hydrogen and your audio editor
+        and more time to make music!</para>
         
         <note>
         <para>The changes you make to
         your samples in the Sample Editor are <emphasis role="bold">non-destructive
         </emphasis> and are saved <emphasis role="bold">per song</emphasis>.  
-        So the original sample will not be changed,
+        So, the original sample will not be changed,
         and you can reuse the same sample in multiple songs with different Sample Editor
         settings.</para>
         </note>
         
-        <para>The Sample Editor consists of 3 sections (as indicated in the figure above):</para>
        
-        <sect1 id="chpt.sample_editor.section1">
-        <title>In/Out Points</title>
-        <para>
-        In this section you can set the start, stop and loop points for the sample by dragging the 
-        the 3 markers:
-        <itemizedlist>
-          <listitem><para><emphasis role="bold">S-marker (green)</emphasis>: indicates the Start-point (in-point) of the sample.</para></listitem>
-          <listitem><para><emphasis role="bold">E-marker (red)</emphasis>: indicates the End-point (out-point) of the sample.</para></listitem>
-          <listitem><para><emphasis role="bold">L-marker (blue)</emphasis>: determines the loop-in point of your sample</para></listitem>
-        </itemizedlist>
-        You can easily move one of the markers by grabbing them close to the
-        letter that marks them.  Whenever you grab one of the markers you will see a detail
-        view of the position of that marker on the second (smaller) window on the right, making it easy to 
-        find the zero-crossings in the sample.  This detail window also has a slider next to
-        it that allows you to zoom in and out on the vertical axis. Think of it as a sort of 
-        volume 'zoom'.
-        </para>
-        <para>Underneath these 2 windows you can find (from left>right) : the position of the Start
-        marker, the position of the Loop marker, the Loop mode, the number of loops and the
-        position of the End marker.  The position of the markers is expressed in number of
-        samples from the very beginning of the sample.  These values will change if you drag the markers,
-        but you can also fine-tune the marker position by using the up/down arrows of the spinboxes, 
-        the up/down keys on your keyboard, or by using your mouse scroll wheel while hovering
-        above the spinboxes.</para>
-        <para>Apart from the marker positions there are 2 settings that apply to the Sample
-        Editor's loop function: loop mode and loop number.  With the loop function you can
-        repeat the part of your sample <emphasis>that is in between the Loop- and the 
-        End-marker</emphasis>. The way it is looped is determined by the Loop mode 
-        (forward, reverse or ping-pong) and the number of times it is looped is determined
-        by the Loop number.</para>
-        <para>If you want to hear a preview of the tweaking you have done so far, you first need to
-        press the 'Apply Changes' button (@ the bottom of section 3) and then the Play button to
-        hear the result.</para>
+        <sect1 id="chpt.sample_editor.wave_display">
+          <title>Wave Display and Region Editing</title>
+
+          <para>
+	        TODO: screenshot of corresponding part
+          </para>
+          
+          <para>
+            In <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop and loop points for the sample by dragging the 
+            the 3 markers:
+            <itemizedlist>
+              <listitem id="chpt.sample_editor.wave_display.start_marker">
+                <para><emphasis role="bold">Start Marker (green)</emphasis>: labeled with a <option>S</option> and indicates the beginning of the tweaked sample.</para>
+              </listitem>
+              <listitem id="chpt.sample_editor.wave_display.end_marker">
+                <para><emphasis role="bold">End Marker (red)</emphasis>: labeled with a <option>E</option> and indicates the end of the tweaked sample.</para>
+              </listitem>
+              <listitem id="chpt.sample_editor.wave_display.loop_marker">
+                <para><emphasis role="bold">Loop Marker (blue)</emphasis>: labeled with a <option>L</option> and determines the loop-in point of your sample.</para>
+              </listitem>
+            </itemizedlist>
+          </para>
+          
+          <tip>
+	        <para>
+              You can easily move one of the markers by grabbing them close to the letter that marks them.
+            </para>
+          </tip>
+
+          <para>
+            Underneath you can find a numerical display of the position set for the individual markers as well as some further options. The position of the markers is expressed in number of
+            frames from the very beginning of the sample.
+          </para>
+          
+          <itemizedlist>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Start</emphasis>: position of the <link linkend="chpt.sample_editor.wave_display.start_marker">Start Marker</link>.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Loop</emphasis>: position of the <link linkend="chpt.sample_editor.wave_display.loop_marker">Loop Marker</link>.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Loop Mode</emphasis>: <option>forward</option>, <option>reverse</option>, or <option>ping-pong</option>.
+
+                TODO: Describe options.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Loop Count</emphasis>: indicates the number of times the sample will be repeated between Loop and the End Marker.
+
+                TODO: check whether this is true
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">End</emphasis>: position of the <link linkend="chpt.sample_editor.wave_display.end_marker">End Marker</link>.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Close</emphasis>: exits the Sample Editor.
+              </para>
+            </listitem>
+          </itemizedlist>
+
+          <note>
+	        <para>
+	          These values will change if you drag the markers,
+          but you can also fine-tune the marker position by using the up/down arrows of the spinboxes, 
+          the up/down keys on your keyboard, or by using your mouse scroll wheel while hovering
+          above the spinboxes.
+            </para>
+          </note>
+          
+          <para>
+            Whenever you move one of the markers you will see a detail
+            view of the position of that marker on the <emphasis role="bold">smaller (right) wave display</emphasis> on the right, making it easy to 
+            find the zero-crossings in the sample.  This detail window also has a <emphasis role="bold">slider</emphasis> next to
+            it that allows you to zoom in and out on the vertical axis. Think of it as a sort of 
+            volume 'zoom'.
+          </para>
+
+          <tip>
+	        <para>
+	          If you want to hear a preview of the tweaking you have done so far, you first need to
+          press the <link linkend="chpt.sample_editor.playback_and_envelope_editor.apply_changes">Apply Changes</link> and then the <link linkend="chpt.sample_editor.playback_and_envelope_editor.play">Play</link> button (both at the bottom of the window) to
+          hear the result.
+            </para>
+          </tip>
+          
         </sect1>
         
-        <sect1 id="chpt.sample_editor.section2">
-        <title>Rubberband</title>
-        <para>This section of the Sample Editor allows you to control the Rubberband settings.
-        Rubberband is a tool that can change the tempo of a sample without changing 
-        the sample's pitch (and vice versa).</para>
-        <para>If you are using Ubuntu you can install rubberband from the Software Center 
-        (rubberband-cli).  For other linux distros check your package manager.  For other platforms
-        please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
-        </ulink>.  After installing rubberband you should check if the path to the rubberband cli is 
-        configured correctly (see <xref linkend="chpt.preferences.general_tab"/>).</para>
-        
-        <para>If rubberband is installed correctly you will have access to the rubberband 
-        settings, and an extra button named 'RUB' will be available in the Main Toolbar,
-        right of the BPM LCD display:
-        
-       <informalfigure id="rubberband_button">
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/MainControls_Rubberband_btn.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-        </informalfigure>                
-        
-        </para>
-        <para>Back to the rubberband settings : 
-        <itemizedlist mark="opencircle">
-         <listitem><para><emphasis role="bold">Sample length to beat</emphasis>: when set to 'off', rubberband functionality is disabled. 
-         Normally this parameter should be set to the length of the part of the sample between 
-         the Start and End marker, expressed in number of beats.</para>
-         </listitem>
-         <listitem><para><emphasis role="bold">Pitch</emphasis>: this setting allows you to change the pitch of the sample, expressed in 
-         semitones,cent.</para>
-         </listitem>
-         <listitem><para><emphasis role="bold">Crispness</emphasis>: this setting does not affect tempo or pitch, but changes the way
-         the sample sounds.</para>
-         </listitem>
-        </itemizedlist>
-        </para>
-        <para><emphasis role="bold">Note</emphasis>: If you want Hydrogen to recalculate the sample length on the fly (using rubberband)
-        you must enable the 'RUB' button (see figure above).</para>
-        
+        <sect1 id="chpt.sample_editor.pitch">
+        <title>Pitch Shifting</title>
+
+          <para>
+	        TODO: screenshot of corresponding part
+          </para>
+
+          <para>
+	        TODO: is this section valid? AFAIK rubberband support is experimental and only activated if explicitly activated during the compilation. In all other instances there is Hydrogen's own pitch shifting in the Sampler. But there is still the RUB button in the Main Toolbar. Maybe that one is doing nothing either.
+          </para>
+
+          <para>
+	        TODO: how is this related to the (layer-level) pitch set in the Instrument Editor?
+          </para>
+          <para>This section of the Sample Editor allows you to control the Rubberband settings.
+          Rubberband is a tool that can change the tempo of a sample without changing 
+          the sample's pitch (and vice versa).</para>
+          <para>If you are using Ubuntu you can install rubberband from the Software Center 
+          (rubberband-cli).  For other linux distros check your package manager.  For other platforms
+          please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
+          </ulink>.  After installing rubberband you should check if the path to the rubberband cli is 
+          configured correctly (see <xref linkend="chpt.preferences.general_tab"/>).</para>
+          
+          <para>If rubberband is installed correctly you will have access to the rubberband 
+          settings, and an extra button named 'RUB' will be available in the Main Toolbar,
+          right of the BPM LCD display:
+          
+          <informalfigure id="rubberband_button">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/MainControls_Rubberband_btn.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>                
+          
+          </para>
+          <para>Back to the rubberband settings : 
+          <itemizedlist mark="opencircle">
+            <listitem><para><emphasis role="bold">Sample length to beat</emphasis>: when set to 'off', rubberband functionality is disabled. 
+            Normally this parameter should be set to the length of the part of the sample between 
+            the Start and End marker, expressed in number of beats.</para>
+            </listitem>
+            <listitem><para><emphasis role="bold">Pitch</emphasis>: this setting allows you to change the pitch of the sample, expressed in 
+            semitones,cent.</para>
+            </listitem>
+            <listitem><para><emphasis role="bold">Crispness</emphasis>: this setting does not affect tempo or pitch, but changes the way
+            the sample sounds.</para>
+            </listitem>
+          </itemizedlist>
+          </para>
+          <para><emphasis role="bold">Note</emphasis>: If you want Hydrogen to recalculate the sample length on the fly (using rubberband)
+          you must enable the 'RUB' button (see figure above).</para>
         </sect1>
         
-        
-        <sect1 id="chpt.sample_editor.section3">
-        <title>Volume and Pan</title>
-        <para>In the bottom section of the Sample Editor you can see the end result 
-        of the tweaks you have made by pressing the Apply Changes button.  You can
-        also change the the Volume and Panorama (Pan) of your sample here.
-        This is done by creating 'envelopes' like the 
-        ones you find in numerous DAW's for automation.  To edit an
-        envelope you first need to select 'Volume' or 'Panorama'in the upper right 
-        corner of section 3.  The Volume envelope is blue, and the pan envelope is yellow.
-        Left clicking in the bottom window will ad a node to an envelope and also 
-        allows you to drag an existing node.  Right-clicking a node will delete it. 
-        Don't forget to Apply Changes before you play your tweaked sample.</para>
+        <sect1 id="chpt.sample_editor.playback_and_envelope_editor">
+          <title>Playback and Envelope Editor</title>
+
+          <para>
+	        TODO: screenshot of corresponding part
+          </para>
+
+          <para>
+	        The bottom part of the Sample Editor features some basic controls and the Envelope Editor.
+          </para>
+
+          <itemizedlist>
+	        <listitem id="chpt.sample_editor.playback_and_envelope_editor.apply_changes">
+              <para>
+	            <emphasis role="bold">Apply Changes</emphasis>: applies all settings of the Sample Editor to the selected sample in a non-destructive way.
+              </para>
+            </listitem>
+	        <listitem id="chpt.sample_editor.playback_and_envelope_editor.play">
+              <para>
+	            <emphasis role="bold">Play</emphasis>: plays back the underlying sample with the latest changes applied to it.
+              </para>
+            </listitem>
+	        <listitem>
+              <para>
+	            <emphasis role="bold">Play original sample</emphasis>:  plays back the underlying sample (without applying any changes).
+              </para>
+            </listitem>
+	        <listitem id="chpt.sample_editor.playback_and_envelope_editor.dropdown">
+              <para>
+	            <emphasis role="bold">panorama/volume</emphasis>: dropdown specifying whether the <option>panorama</option> (pan) or <option>volume</option> of the sample will be tweaked in the Envelope Editor.
+              </para>
+            </listitem>
+          </itemizedlist>
+          
+          <para>Using the Envelope Editor you can fine-tune both the volume and panorama (pan) of your sample.
+          This is done by creating <link linkend="def.envelopegenerator">envelopes</link> by
+          </para>
+          
+          <note>
+	        <para>
+	          The volume envelope is blue and the pan envelope is yellow.
+            </para>
+          </note>
+
+          <procedure id="chpt.sample_editor.playback_and_envelope_editor.envelope">
+            <step>
+              <para>
+                First select <option>volume</option> or <option>panorama</option> in the <link linkend="chpt.sample_editor.playback_and_envelope_editor.dropdown">dropdown</link> to the right.
+              </para>
+            </step>
+            <step>
+              <para>
+	            Left clicking in the Envelope Editor will add a point to the selected envelope or allows you to drag an existing one.
+              </para>
+            </step>
+            <step>
+              <para>
+	          Right-clicking will delete a point.   
+              </para>
+            </step>
+            <step>
+              <para>
+	            Hit <link linkend="chpt.sample_editor.playback_and_envelope_editor.apply_changes">Apply Changes</link> to make your changes take effect.
+              </para>
+            </step>
+          </procedure>
+
         </sect1>
         
       </chapter>
@@ -4296,7 +4437,7 @@
         <warning>
           <para>It is very easy to set the <guibutton>Gain</guibutton> too high,
           causing your sample to <link linkend="def.clipping">clip</link>.  Remember to test the gain with
-          full-velocity notes.  If you clip your signal here, it will only get
+          full-velocity notes.  If you clip your sigknal here, it will only get
           worse as Hydrogen processes it.</para>
         </warning>
 
@@ -4310,7 +4451,7 @@
           slower.  This is called the Doppler Effect.  So, if you have a
           1-second sample that you turn down -12 (1 octave), your sample will
           only last for 0.5-seconds.  If you do not want this to happen you should
-          use rubberband instead (see <xref linkend="chpt.sample_editor.section2"/>)</para>
+          use rubberband instead (see <xref linkend="chpt.sample_editor.pitch"/>)</para>
         </note>
 
         <para>You can hear the sample in a layer by clicking the layer id (just 
