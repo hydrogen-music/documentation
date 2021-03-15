@@ -454,7 +454,7 @@
             server will start automatically if not already running.</para>
             <para>Available options:</para>
             <itemizedlist>
-              <listitem>
+              <listitem id="sect.preferences.jack.track_output">
                 <para><emphasis role="bold">Track output</emphasis>: This
                 options determines which audio settings will be applied to the
                 audio of the per-instrument output ports.</para>
@@ -509,13 +509,16 @@
                 <emphasis>system:playback_2</emphasis>) every time Hydrogen
                 starts up or the audio driver is restarted.</para>
               </listitem>
-              <listitem>
+              <listitem id="sect.preferences.jack.per_instrument_outs">
                 <para><emphasis role="bold">Create per-instrument
                 outputs</emphasis>: In addition to the main stereo output
                 Hydrogen will register <abbrev>JACK</abbrev> output ports for every single
                 instrument. This can be useful if you want to add effects to a
                 single instrument with jack-rack for example.</para>
 
+                <para>
+	              TODO: no port for metronome and playback track
+                </para>
                 <para>
 	              TODO: note that JACK options are only available when JACK driver is selected
                 </para>
@@ -978,14 +981,19 @@
       <sect1 id="sect.main_menu.options">
         <title>Options</title>
         <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Input mode</emphasis>: when set to <emphasis>Drumset</emphasis> the keys on your <abbrev>MIDI</abbrev> keyboard will map to the instruments
-            in your drumkit. If you set it to <emphasis>Instrument</emphasis> the keys of your <abbrev>MIDI</abbrev>
+          <listitem id="sect.main_menu.options.input_mode">
+            <para><emphasis role="bold">Input mode</emphasis>: when set to <option>Drumset</option> the keys on your <abbrev>MIDI</abbrev> keyboard will map to the instruments
+            in your drumkit. If you set it to <option>Instrument</option> the keys of your <abbrev>MIDI</abbrev>
             keyboard will trigger the instrument that is currently selected.
             The pitch of the instrument will follow the key you press on your keyboard.
             This feature is mainly used for non-drum instruments.
             An example: if you use a sample of a piano for one of your instruments, you will be able to 'play'
             that piano instrument using your keyboard just like you are playing a piano synth.</para>
+
+            <para>
+	          TODO: link to list/image of virtual keyboard mappings in Pattern Editor > Sidebar.
+            </para>
+
           </listitem>
           
           <listitem>
@@ -1199,6 +1207,10 @@
           </inlinemediaobject>
         </para>
 
+        <para>
+	      TODO: update image: Rubberband button is missing
+        </para>
+
         <para>Set the speed of the song (range: 10-400 bpm).
         </para>
         
@@ -1215,6 +1227,10 @@
 	        The volume of the metronome can be adjusted in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences.
           </para>
         </tip>
+
+        <para>
+	      TODO: describe Rubberband button
+        </para>
         
       </sect1>
 
@@ -1701,7 +1717,7 @@
 				   <para><emphasis role="bold">Mute</emphasis>: <link linkend="def.mute">mutes</link> the Playback Track.</para>
                  </listitem>
                  <listitem>
-				   <para><emphasis role="bold">Fader</emphasis>: adjusts the volume. You can think of this fader as the mixer strip of the Playback Track. The resulting audio will be pass the <link linkend="sect.master">Master section</link> of the Mixer like any other strip too.</para>
+				   <para><emphasis role="bold">Fader</emphasis>: adjusts the volume. You can think of this fader as the mixer strip of the Playback Track. The resulting audio will be pass the <link linkend="chpt.mixer.master_fader_strip">Master section</link> of the Mixer like any other strip too.</para>
 				 </listitem>
 			 </itemizedlist>
          </para>
@@ -1948,7 +1964,8 @@
         </para>
 
         <para>
-	      TODO: this might be better placed in the MIDI chapter.
+	      TODO: link this to Main Menu > Options > input mode.
+          This might be better placed in a dedicated chapter like "virtual keyboard".
         </para>
         
         <para>Try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
@@ -3025,94 +3042,178 @@
         </mediaobject>
       </figure>
 
-      <para>The Mixer window can be opened by pressing Alt+M, by clicking 
-      Mixer in the Tools menu, or by clicking the Mixer button on the main toolbar.
+      <para>The Mixer window can be opened by pressing <keycap>Alt</keycap> + <keycap>M</keycap>, by selecting Mixer in the <link linkend="sect.main_menu.view">View</link> option of the Main Menu, or by clicking the Mixer button (TODO: insert image) on the <link linkend="sect.main_toolbar.gui_state">Main Toolbar</link>.
       </para>
-      <para>The Mixer consists of 3 sections (left>right) : the instrument channel strips, 
-      the FX plugin rack and the master fader section.  The Hydrogen Mixer works very
-       much like a hardware mixer does : it lets you set the volume, pan, FX and several 
-       other things for every instrument.
+      <para>The Mixer consists of 3 sections (from left to right): the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, 
+      the <link linkend="sect.fx_rack_LADSPA">FX Plugin Rack</link>, and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>. The Hydrogen Mixer works very
+       much like a hardware mixer does: it lets you set the volume, pan, FX and several 
+       other things for every instrument as well as the volume of all of these sources mixed together.
       </para>
 
     <sect1 id="chpt.mixer.channel_strips">
       <title>Instrument Channel Strips</title>
-       <para>From top to bottom : the 2 top elements on the strip are a 'play' button / 'trig' led combination.
-            (
-      <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
-        </imageobject>
-      </inlinemediaobject>
-       )
-         The play button lets you trigger the instrument at maximum velocity (handy for checking <link linkend="def.clipping">clipping</link>), 
-       and the trig led lights up whenever this instrument is triggered (from the song sequence, 
-       or by an external midi controller).  Right of this button/led you will find another led that shows
-       you what instrument is currently selected.  This is also the instrument that is selected in the pattern editor.
-       As soon as you change one of the settings of a channel strip the instrument will be selected.</para>
-
-       <para>Just below you can find the Mute
-       
-       <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="img/btn_mute_on.png" format="PNG" />
-        </imageobject>
-       </inlinemediaobject>
-      
-        and Solo
-        
-       <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="img/btn_solo_on.png" format="PNG" />
-        </imageobject>
-       </inlinemediaobject>       
-
-       buttons and the Pan(orama) knob.
-       </para>
-       <note>
-         <para>
-           Note that the Mute and Solo states are also reflected in the Song editor.
-         </para>
-       </note>
 
       <para>
-      Next are 4 pre-fader FX send knobs that determine how much of this instrument will be sent to
-      the effect plugins in the FX rack.
-      
-        <informalfigure id="fig.FX_send_knobs">
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/FX_send_knobs.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-         </informalfigure>
-      
-      
-      
-      Just below that you can find an LCD peak-value display,
-      and finally the volume fader and VU meter for that instrument.</para>
-      <para><emphasis role="bold">IMPORTANT NOTE</emphasis> : keep in mind that the volume and pan settings that you
-      find on the Mixer are global settings.  The per-note velocity and pan settings in the Pattern editor
-      are settings that are relative to the settings in the Mixer window !</para>
+	    TODO: add image showing corresponding part of Mixer
+      </para>
 
+      <para>
+	    TODO: insert images in list
+      </para>
+
+      <itemizedlist>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> : lets you trigger the instrument at maximum velocity.
+          </para>
+          <tip>
+	        <para>
+	          This is quite handy for checking <link linkend="def.clipping">clipping</link>.
+            </para>
+            </tip>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> [trigger-led]:
+              lights up whenever this instrument is triggered, e.g. by a note in a pattern or an external <abbrev>MIDI</abbrev> controller).
+          </para>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> [select-led]:
+              shows whether the instrument is currently selected (in both the Mixer and the Pattern Editor).
+
+              <note>
+	            <para>
+	              If the <link linkend="sect.main_menu.options.input_mode">Input mode</link> is set to <option>Instrument</option>, incoming <abbrev>MIDI</abbrev> events and virtual keyboard keys will trigger only (pitch shifted) sounds of the currently selected instrument.
+                </para>
+              </note>
+
+              <tip>
+	            <para>
+	              An instrument can be selected by interacting with its Instrument Channel Strip in the Mixer, by interacing with its associated row in the Pattern Editor, or by the corresponding <link linkend="chpt.midi.actions.select_instrument"><abbrev>MIDI</abbrev></link> or <link linkend="chpt.osc.command.select_instrument"><abbrev>OSC</abbrev> command.</link>
+                </para>
+              </tip>
+          </para>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_mute_on.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> : <link linkend="def.mute">mutes</link> the instrument.
+          </para>
+          <note>
+	        <para>
+	          This button is sharing its state with the mute button of corresponding instrument in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
+            </para>
+          </note>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_solo_on.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> : solos the instrument.
+          </para>
+          <note>
+	        <para>
+	          This button is sharing its state with the solo button of corresponding instrument in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
+            </para>
+          </note>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> [PAN knob]: sets a pan value affecting all layers and note played using this instrument.
+          </para>
+          <para>
+            TODO: mention/link/describe interaction with note, layer, sample pan
+          </para>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/FX_send_knobs.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> :
+              the four pre-fader FX send knobs that determine how much of this instrument will be sent to
+      the effect plugins in the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>.
+          </para>
+        </listitem>
+	    <listitem>
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> [Fader + LCD]:
+              the fader next to the instrument's name allows you to adjust the volume of the instrument which will be applied on top of all the individual note velocities, layer gains etc. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The LCD displays shows its peak value.
+          </para>
+          <tip>
+	        <para>
+	          You can adjust the falloff speed of the peak values in the LCD display via the <link linkend="fig.preferences.appearance_tab">Appearance</link> tab in the Preferences.
+            </para>
+          </tip>
+        </listitem>
+      </itemizedlist>
+      
+       <note>
+         <para>
+           If the <link linkend="sect.preferences.jack.per_instrument_outs">Create per-instrument outputs</link> option in the Audio Engine tab of the Preferences was selected for the <abbrev>JACK</abbrev> audio driver, Hydrogen will register ports for each instrument. All the options described above will only take effect if in addition the <link linkend="sect.preferences.jack.track_output">Track output</link> option in the same tab as set to <option>Post-Fader</option>.
+         </para>
+         <para>
+           This allows you to route the individual instruments directly into any other <abbrev>JACK</abbrev> enabled application, like Ardour, and gives you
+           a lot more flexibility.
+         </para>
+       </note>
 
     </sect1>
     
     <sect1 id="sect.fx_rack_LADSPA">
       <title>FX Rack and LADSPA Plugins</title>
-       <para>The FX rack has 4 bays where you can load a LADSPA effect plugin, but before
-        you can load any plugins these must be installed (surprised ?  ;-)</para>
-        <para>There are dozens of plugins available for download from various sources :
+      
+      <para>
+	    TODO: add image showing corresponding part of Mixer
+      </para>
+
+      <para>
+      The FX Rack can be accessed by clicking the
+
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="img/showFX_on.png" format="PNG" />
+        </imageobject>
+      </inlinemediaobject>
+
+      button in the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>).
+      </para>
+      <para>It has 4 bays where you can load a <abbrev>LADSPA</abbrev> effect plugin, but before
+        you can load any plugins these must be installed on system-level.</para>
+        <para>There are dozens of plugins available for download from various sources:
 
       <itemizedlist>
         <listitem>
           <para><emphasis role="bold"><abbrev>SWH</abbrev>-Plugins</emphasis>: available at <ulink
           url="http://plugin.org.uk">http://plugin.org.uk</ulink>. </para>
-          <note>
-            <para>If you want to compile these plugins
-          you need the <application>FFTW</application> tarball from <ulink
-          url="http://www.fftw.org">http://www.fftw.org</ulink>)
-            </para>
-          </note>
         </listitem>
 
         <listitem>
@@ -3156,15 +3257,8 @@
         </imageobject>
       </inlinemediaobject>
 
-      button.  (if you do not see the FX rack, make sure that the 
-
-      <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="img/showFX_on.png" format="PNG" />
-        </imageobject>
-      </inlinemediaobject>
-
-      button (in the Master section) is enabled)</para>
+      button.
+      </para>
       <para>Now the FX selector window will pop up :
       
       <figure id="fig.select_effect">
@@ -3189,8 +3283,8 @@
          </informalfigure>
 
 
-      You can select another plugin by clicking the 'Select FX' button. If you quickly want to 
-      enable/disable the effect click the 'Deactivate' button (or the Bypass (
+      You can select another plugin by clicking the <emphasis role="bold">Select FX</emphasis> button. If you quickly want to 
+      enable/disable the effect click the <emphasis role="bold">Deactivate</emphasis> button (or the Bypass (
 
       <inlinemediaobject>
         <imageobject>
@@ -3198,182 +3292,189 @@
         </imageobject>
         </inlinemediaobject>)
 
-      button in the FX rack).  This can be handy for a quick A/B comparison.</para>
+        button in the FX Rack).
+      <tip>
+	    <para>
+	      This can be handy for a quick A/B comparison.
+        </para>
+      </tip></para>
       
       <para>After you have selected the FX and tweaked it's parameters you can use the 
-      FX return knob to increase/decrease how much of this FX will be returned to the master output.</para>
+      <emphasis role="bold">Return</emphasis> knob to increase/decrease how much of this FX will be returned to the master output.</para>
 
     </sect1>
      
-    <sect1 id="sect.master">
-      <title>Master Section</title>
+    <sect1 id="chpt.mixer.master_fader_strip">
+      <title>Master Fader Strip</title>
+      
+      <para>
+	    TODO: add image showing corresponding part of Mixer
+      </para>
+
        <para>
        
-      The Master section contains the Master volume fader with VU meters and three global Humanize 
-      settings for Velocity, Timing and Swing (in order to add a 'human feel' to the song):
-      
-     <itemizedlist>
-        <listitem>
-          <para><emphasis role="bold">Velocity</emphasis>: adds a certain randomness to the note velocity. 
-           The higher you turn this knob, the more the velocity will be randomized.
-          </para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis role="bold">Timing</emphasis>: adds a certain randomness to the note timing (lead/lag).  
-            The higher you turn this knob, the more the timing will be randomized.
-          </para>
-          <note><para>Notes are displaced in time (using Gaussian perturbation)
-            but the pattern durations or bpm do not change.</para>
-          </note>
-          
-        </listitem>
-        
-       <listitem>
-          <para><emphasis role="bold">Swing</emphasis>: this knob will add a certain amount of swing to the song.</para>
-          <note> <para> Swing (a slight time delay) is applied to upbeat 16th-notes,
-          and not to 8th-notes as it happens in traditional Jazz.</para> </note>
-        </listitem>        
-        
-     </itemizedlist>
+         The Master Fader Strip contains the Master volume fader with volume unit (VU) meter representing the signal level, and three global humanization settings.
        </para>
-       <note>
-         <para>
-      Note that Hydrogen can also be switched to 'per instrument output' mode (see <xref linkend="chpt.preferences.audio_tab"/>),
-      and in this mode all channel strip outputs will be available in <abbrev>JACK</abbrev> (not just the Master output).  
-      This allows you to route the individual instruments directly into any other <abbrev>JACK</abbrev> enabled application (eg Ardour) and gives you
-      a lot more flexibility.
-         </para>
-       </note>
-      
-      <para>On the bottom-right of the Master section the 'FX' button 
+
+      <sect2 id="chpt.mixer.master_fader_strip.humanization">
+        <title>Humanization</title>
+        
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Velocity</emphasis>: adds a certain randomness to the note velocity. 
+            The higher you turn this knob, the more the velocity will be randomized.
+            </para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Timing</emphasis>: adds a certain randomness to the note timing (lead/lag).  
+            The higher you turn this knob, the more the timing will be randomized.
+            </para>
+            <note><para>Notes are displaced in time (using Gaussian perturbation)
+            but the pattern durations or bpm do not change.</para>
+            </note>
+            
+          </listitem>
+          
+          <listitem>
+            <para><emphasis role="bold">Swing</emphasis>: this knob will add a certain amount of swing to the song.</para>
+            <note> <para> Swing (a slight time delay) is applied to upbeat 16th-notes,
+            and not to 8th-notes as it happens in traditional Jazz.</para> </note>
+          </listitem>        
+          
+        </itemizedlist>
+      </sect2>
+
+      <sect2 id="chpt.mixer.master_fader_strip.configurations">
+        <title>Configurations</title>
+        <para>On the bottom-right of the Master section the 'FX' button 
         <inlinemediaobject>
           <imageobject>
             <imagedata fileref="img/showFX_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>      
         will show/hide the FX rack, and the 'Peak' button 
-       
-      <inlinemediaobject>
-        <imageobject>
-          <imagedata fileref="img/showPeaks_on.png" format="PNG" />
-        </imageobject>
-      </inlinemediaobject>       
-       will enable/disable the VU meters.
-       
-       <note>
-       <para>The VU meter fall off speed can be configured in the preferences window (see <xref linkend="chpt.preferences.appearance_tab"/>)</para>
-       </note>
-       
-      </para>
-  
-      <para>  In the upper part of Master section there is a small "cog" icon button:</para>
+        
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/showPeaks_on.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>       
+        will enable/disable the VU meters.
+        
+        <note>
+          <para>The VU meter fall off speed can be configured in the preferences window (see <xref linkend="chpt.preferences.appearance_tab"/>)</para>
+        </note>
+        
+        </para>
+        
+        <para>  In the upper part of Master section there is a small "cog" icon button:</para>
 
         <informalfigure id="mixerSettingsButton">
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/mixerSettingsButton.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-         </informalfigure>
-         <para>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/mixerSettingsButton.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+        <para>
 
-         Click it to open the Mixer Settings window:
+          Click it to open the Mixer Settings window:
 
-         <informalfigure id="mixerSettingsDialog">
-         <mediaobject>
-           <imageobject>
-             <imagedata fileref="img/mixerSettingsDialog.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-         </informalfigure>
+          <informalfigure id="mixerSettingsDialog">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/mixerSettingsDialog.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
           Here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
-          </para>
-         <para>
-             The Pan Law is the relationship between the pan knob and the separate gains of Left and Right outputs.
-             The aim is to control the horizontal angle the sound seems to arrive from.
-         </para>
-         <para>
-            Hydrogen features one the most customizable and accurate Pan Law set. </para>
+        </para>
+        <para>
+          The Pan Law is the relationship between the pan knob and the separate gains of Left and Right outputs.
+          The aim is to control the horizontal angle the sound seems to arrive from.
+        </para>
+        <para>
+        Hydrogen features one the most customizable and accurate Pan Law set. </para>
+        
+        <para>
+          You will find four categories: <emphasis>linear</emphasis>, <emphasis>polar</emphasis>,
+          <emphasis>ratio</emphasis>, <emphasis>quadratic</emphasis>.
+          Every category gives a different "scale" or "sensibility" to the pan knob:
+          the same knob position will make the sound appear more lateral or central depending on the category,
+          from the most lateral (<emphasis>linear</emphasis>) to the most central (<emphasis>quadratic</emphasis>).
+        </para>
+        
+        <para>
+          Then for each category you will find four options, that define a <emphasis>constraint</emphasis> between the
+          gains of the two channels:     
+          <itemizedlist>
+            <listitem>
+              <para><emphasis role="bold">Balance Law (0dB)</emphasis>: 
+              when you turn the pan knob from center to right, the right gain stays constant at maximum level
+              while the left gain decreases from the maximum level to 0 (and symmetrically turning from center to left). </para>
+              <para>It is ideal for balancing a DUAL-channel track. It has ZERO center compensation: the sound 
+              will be <emphasis>louder</emphasis> when the pan knob is at <emphasis>center</emphasis> -
+              unless channels are out of phase - so you may have to readjust the volume manually with the
+              mixer fader.
+              </para>
+            </listitem>
             
-          <para>
-             You will find four categories: <emphasis>linear</emphasis>, <emphasis>polar</emphasis>,
-             <emphasis>ratio</emphasis>, <emphasis>quadratic</emphasis>.
-             Every category gives a different "scale" or "sensibility" to the pan knob:
-              the same knob position will make the sound appear more lateral or central depending on the category,
-              from the most lateral (<emphasis>linear</emphasis>) to the most central (<emphasis>quadratic</emphasis>).
-         </para>
-         
-         <para>
-           Then for each category you will find four options, that define a <emphasis>constraint</emphasis> between the
-            gains of the two channels:     
-           <itemizedlist>
-                <listitem>
-                  <para><emphasis role="bold">Balance Law (0dB)</emphasis>: 
-                  when you turn the pan knob from center to right, the right gain stays constant at maximum level
-                   while the left gain decreases from the maximum level to 0 (and symmetrically turning from center to left). </para>
-                    <para>It is ideal for balancing a DUAL-channel track. It has ZERO center compensation: the sound 
-                    will be <emphasis>louder</emphasis> when the pan knob is at <emphasis>center</emphasis> -
-                    unless channels are out of phase - so you may have to readjust the volume manually with the
-                     mixer fader.
-                  </para>
-                </listitem>
-                
-                <listitem>
-                  <para> <emphasis role="bold">Constant Power (-3dB)</emphasis>: the total <emphasis>power</emphasis>
-                   (which is proportional to the <emphasis>square</emphasis> of the gain) is constant for any position
-                    of the pan knob. </para>
-                    <para>Compared to the Balance Law, each channel gain is divided by the square root of 2
-                    when the pan knob is at center (-3.0103 dB center compensation).
-                    In a common room, this constraint <emphasis>may</emphasis> give the general perception of uniform
-                     volume for any pan knob position (panning a MONO track).
-                  </para>
-                </listitem>
-                
-                <listitem>
-                  <para> <emphasis role="bold">Constant Sum (-6dB)</emphasis>: the sum of left and right gains is
-                   constant for any position of the pan knob. </para>
-                     <para>This constraint preserves the mix volumes in mono export.
-                     Compared to the Balance Law, each channel gain is halved (-6.0206 dB) when the pan knob
-                      is at center.
-                     If you are in an ideal anechoic room (where there are no acoustic reflections)
-                     and you seat perfectly at the same distance from the speakers,
-                     with this constraint the volume will be really constant for any pan position, because of the linear
-                     <emphasis>super-position</emphasis> of sound waves (panning a MONO track).
-                  </para>
-                </listitem>
+            <listitem>
+              <para> <emphasis role="bold">Constant Power (-3dB)</emphasis>: the total <emphasis>power</emphasis>
+              (which is proportional to the <emphasis>square</emphasis> of the gain) is constant for any position
+              of the pan knob. </para>
+              <para>Compared to the Balance Law, each channel gain is divided by the square root of 2
+              when the pan knob is at center (-3.0103 dB center compensation).
+              In a common room, this constraint <emphasis>may</emphasis> give the general perception of uniform
+              volume for any pan knob position (panning a MONO track).
+              </para>
+            </listitem>
+            
+            <listitem>
+              <para> <emphasis role="bold">Constant Sum (-6dB)</emphasis>: the sum of left and right gains is
+              constant for any position of the pan knob. </para>
+              <para>This constraint preserves the mix volumes in mono export.
+              Compared to the Balance Law, each channel gain is halved (-6.0206 dB) when the pan knob
+              is at center.
+              If you are in an ideal anechoic room (where there are no acoustic reflections)
+              and you seat perfectly at the same distance from the speakers,
+              with this constraint the volume will be really constant for any pan position, because of the linear
+              <emphasis>super-position</emphasis> of sound waves (panning a MONO track).
+              </para>
+            </listitem>
 
-               <listitem>
-                  <para><emphasis role="bold">Constant k-Norm (Custom dB center compensation)</emphasis>:
-                   you can experiment adjusting the center compensation to your
-                  taste! </para>
-                  <note>
-                    <para>Note that some hi-end studio mixers - to be used in well tuned rooms -
-                    have center compensation between -3dB and -6dB.
-                    </para>
-                  </note>
-                </listitem>
-             </itemizedlist>
-             </para>
+            <listitem>
+              <para><emphasis role="bold">Constant k-Norm (Custom dB center compensation)</emphasis>:
+              you can experiment adjusting the center compensation to your
+              taste! </para>
+              <note>
+                <para>Note that some hi-end studio mixers - to be used in well tuned rooms -
+                have center compensation between -3dB and -6dB.
+                </para>
+              </note>
+            </listitem>
+          </itemizedlist>
+        </para>
 
-          <para>The four constraints should not change the perception of the <emphasis>stereo angle</emphasis>,
-          but the <emphasis>volume</emphasis> only (depending on the pan knob).
-         </para>
-         <para>
+        <para>The four constraints should not change the perception of the <emphasis>stereo angle</emphasis>,
+        but the <emphasis>volume</emphasis> only (depending on the pan knob).
+        </para>
+        <para>
           The Pan Law is something you should choose <emphasis>before</emphasis> starting the mix and keep untouched.
-           Hydrogen sets the <emphasis>ratio Balance Law</emphasis> by default because it was the only available law
-            until version 1.0 (so old songs and drumkits will sound the same).
+          Hydrogen sets the <emphasis>ratio Balance Law</emphasis> by default because it was the only available law
+          until version 1.0 (so old songs and drumkits will sound the same).
           The setting is saved in the songfile but not in preferences, 
           so it is NOT remembered when you create a new song.
-         </para>
-       <note>
-       <para>Unlike in advanced mixers, Hydrogen panning makes no distinction if a track is mono or dual-channel (stereo).
-       You cannot pan each channel of stereo tracks separately, nor use a balance law for them and another
-       pan law for mono tracks.
-        If the drumkit you are using is made of true stereo samples, you don't want a negative center compensation
-         probably, so you should select a Balance Law.</para>
-       </note>
-
+        </para>
+        <note>
+          <para>Unlike in advanced mixers, Hydrogen panning makes no distinction if a track is mono or dual-channel (stereo).
+          You cannot pan each channel of stereo tracks separately, nor use a balance law for them and another
+          pan law for mono tracks.
+          If the drumkit you are using is made of true stereo samples, you don't want a negative center compensation
+          probably, so you should select a Balance Law.</para>
+        </note>
+      </sect2>
 
     </sect1>
     
@@ -3643,7 +3744,8 @@
           linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)
 	    </para></listitem>
 	    
-      <listitem><para>
+        <listitem id="chpt.midi.actions.select_instrument">
+          <para>
 	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects a specific instrument in the drumkit
 	    </para></listitem>
 	    
@@ -4083,7 +4185,7 @@
                <entry></entry>
                <entry>Toggles the metronome.</entry>
              </row>
-             <row>
+             <row id="chpt.osc.command.select_instrument">
                <entry>/Hydrogen/<emphasis role="bold">SELECT_INSTRUMENT</emphasis>/</entry>
                <entry>f</entry>
                <entry>[0,]</entry>
@@ -5055,6 +5157,14 @@
 
     <!--   P   -->
 
+
+    <glossentry id="def.pan">
+      <glossterm>Pan</glossterm>
+      <glossdef>
+        <para>TODO</para>
+      </glossdef>
+    </glossentry>
+    
     <!--   Q   -->
 
     <!--   R   -->
