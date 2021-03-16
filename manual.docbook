@@ -2117,7 +2117,7 @@
           </para>
         </listitem>
         
-        <listitem>
+        <listitem id="chpt.pattern_editor.note_properties.pan">
           <para><emphasis role="bold">Pan</emphasis> : with this parameter you can move
            the stereo image position of the note (how loud it will be in the
           left/right output).</para>
@@ -2151,7 +2151,7 @@
            
         </listitem>
         
-        <listitem>
+        <listitem id="chpt.pattern_editor.note_properties.lead_and_lag">
           <para>
           <emphasis role="bold">Lead/Lag</emphasis> : Lead and Lag allows a slight note
           lead or lag in respect of the actual beat. The range is ca. 5 ticks (ca. 1/10 of quarter notes) which
@@ -3058,7 +3058,15 @@
       </para>
 
       <para>
+	    TODO: is the preview sound in the Pattern Editor routed through these strips?
+      </para>
+
+      <para>
 	    TODO: insert images in list
+      </para>
+
+      <para>
+	    TODO: mention and describe component strip
       </para>
 
       <itemizedlist>
@@ -3316,59 +3324,80 @@
          The Master Fader Strip contains the Master volume fader with volume unit (VU) meter representing the signal level, and three global humanization settings.
        </para>
 
-      <sect2 id="chpt.mixer.master_fader_strip.humanization">
-        <title>Humanization</title>
-        
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Velocity</emphasis>: adds a certain randomness to the note velocity. 
-            The higher you turn this knob, the more the velocity will be randomized.
-            </para>
-          </listitem>
+       <para>
+	     Using the fader you can control the volume of the resulting audio output of Hydrogen which is the sum of all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, the <link linkend="chpt.song_editor.playbackTrack">Playback Track</link>, and the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link>. The 'Mute' button (TODO: use image) <link linkend="def.mute">mutes</link> the whole output.
+       </para>
 
-          <listitem>
-            <para><emphasis role="bold">Timing</emphasis>: adds a certain randomness to the note timing (lead/lag).  
-            The higher you turn this knob, the more the timing will be randomized.
-            </para>
-            <note><para>Notes are displaced in time (using Gaussian perturbation)
-            but the pattern durations or bpm do not change.</para>
-            </note>
-            
-          </listitem>
-          
-          <listitem>
-            <para><emphasis role="bold">Swing</emphasis>: this knob will add a certain amount of swing to the song.</para>
-            <note> <para> Swing (a slight time delay) is applied to upbeat 16th-notes,
-            and not to 8th-notes as it happens in traditional Jazz.</para> </note>
-          </listitem>        
-          
-        </itemizedlist>
-      </sect2>
-
-      <sect2 id="chpt.mixer.master_fader_strip.configurations">
-        <title>Configurations</title>
-        <para>On the bottom-right of the Master section the 'FX' button 
+        <para>On the bottom-right of the Master section the
         <inlinemediaobject>
           <imageobject>
             <imagedata fileref="img/showFX_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>      
-        will show/hide the FX rack, and the 'Peak' button 
+        button will show or hide the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>, and the
         
         <inlinemediaobject>
           <imageobject>
             <imagedata fileref="img/showPeaks_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>       
-        will enable/disable the VU meters.
+        button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>.
+
+        </para>
+
+       <para>
+	     TODO: mutes the whole output or all of Hydrogen? Is Sample Editor -> Play still working? Or the previews?
+       </para>
+       
+      <sect2 id="chpt.mixer.master_fader_strip.humanization">
+        <title>Humanization</title>
+
+        <para>
+	      In order to make the resulting audio sound more natural and less artificial, Hydrogen does offer some humanization capabilities.
+        </para>
+
+        <tip>
+	    <para>
+	        Further humanization capabilities are provided via <link linkend="chpt.instrument_editor.pitch_shift_parameters">Random Pitch Shift Parameter</link> in the Instrument Editor. In contrast to the global nature of the humanization in the Master Fader Strip this random pitch will only be applied to notes associated with the corresponding instrument.
+        </para>
+        </tip>
         
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Velocity</emphasis>: adds a certain randomness to the note <link linkend="def.velocity">velocity</link> set in the <link linkend="chpt.pattern_editor.note_properties.velocity">Note Properties Editor</link>. 
+            The higher you turn this knob, the bigger will be the randomness.
+            </para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Timing</emphasis>: adds a certain randomness to the note timing set in the <link linkend="chpt.pattern_editor.note_properties.lead_and_lag">Note Properties Editor</link> (as Lead/Lag).
+            The higher you turn this knob, the more the timing will be randomized.
+            </para>
+            <note><para>Notes are displaced in time
+            but the pattern durations or BPM do not change.</para>
+            </note>
+            
+          </listitem>
+          
+          <listitem>
+            <para><emphasis role="bold">Swing</emphasis>: this knob will add a certain amount of swing to the song. Swing (a slight time delay) is applied to upbeat 16th-notes,
+            and not to 8th-notes as it happens in traditional Jazz.</para>
+          </listitem>
+          
+        </itemizedlist>
+
         <note>
-          <para>The VU meter fall off speed can be configured in the preferences window (see <xref linkend="chpt.preferences.appearance_tab"/>)</para>
+	      <para>
+	        In technical terms both for the <emphasis role="bold">Velocity</emphasis> and the <emphasis role="bold">Timing</emphasis> a random number will be sampled indepedently and identically distributed from a Gaussian distribution. The associated knobs provide a linear scaling of the variance of the underlying distribution.
+          </para>
         </note>
         
-        </para>
+      </sect2>
+
+      <sect2 id="chpt.mixer.master_fader_strip.mixer_settings">
+        <title>Mixer Settings</title>
         
-        <para>  In the upper part of Master section there is a small "cog" icon button:</para>
+        <para>In the upper right corner of Master Fader Strip there is a small "cog" icon button:</para>
 
         <informalfigure id="mixerSettingsButton">
           <mediaobject>
@@ -3391,15 +3420,15 @@
           Here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
         </para>
         <para>
-          The Pan Law is the relationship between the pan knob and the separate gains of Left and Right outputs.
+          The Pan Law is the relationship between the <link linkend="chpt.pattern_editor.note_properties.pan">Resultant Pan</link> and the separate <link linkend="def.gain">gains</link> of left and right audio outputs.
           The aim is to control the horizontal angle the sound seems to arrive from.
         </para>
         <para>
         Hydrogen features one the most customizable and accurate Pan Law set. </para>
         
         <para>
-          You will find four categories: <emphasis>linear</emphasis>, <emphasis>polar</emphasis>,
-          <emphasis>ratio</emphasis>, <emphasis>quadratic</emphasis>.
+          You will find four categories: <option>linear</option>, <option>polar</option>,
+          <option>ratio</option>, <option>quadratic</option>.
           Every category gives a different "scale" or "sensibility" to the pan knob:
           the same knob position will make the sound appear more lateral or central depending on the category,
           from the most lateral (<emphasis>linear</emphasis>) to the most central (<emphasis>quadratic</emphasis>).
@@ -3448,11 +3477,11 @@
               <para><emphasis role="bold">Constant k-Norm (Custom dB center compensation)</emphasis>:
               you can experiment adjusting the center compensation to your
               taste! </para>
-              <note>
-                <para>Note that some hi-end studio mixers - to be used in well tuned rooms -
+              <tip>
+                <para>Some hi-end studio mixers - to be used in well tuned rooms -
                 have center compensation between -3dB and -6dB.
                 </para>
-              </note>
+              </tip>
             </listitem>
           </itemizedlist>
         </para>
