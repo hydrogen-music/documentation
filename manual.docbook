@@ -3545,9 +3545,114 @@
 
    <chapter id="chpt.playlist_editor">
      <title>Playlist Editor</title>
-     <para>
-	   TODO
-     </para>
+         
+         <para>
+	       TODO: add image
+         </para>
+
+     <sect1 id="chpt.playlist_editor.menu">
+	   <title>Menu</title>
+
+       <sect2 id="chpt.playlist_editor.menu.playlist">
+	     <title>Playlist</title>
+         
+         <itemizedlist>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Add song to Playlist</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Add current song to Playlist</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Remove selected song from Playlist</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">New Playlist</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Open Playlist</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Save Playlist</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Save Playlist as</emphasis>:
+               
+             </para>
+           </listitem>
+         </itemizedlist>
+       </sect2>
+
+       <sect2 id="chpt.playlist_editor.menu.scripts">
+	     <title>Scripts</title>
+
+         <itemizedlist>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Add Script to selected song</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Edit selected Script</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Remove selected Script</emphasis>:
+               
+             </para>
+           </listitem>
+	       <listitem>
+	         <para>
+	           <emphasis role="bold">Create a new Script</emphasis>:
+               
+             </para>
+           </listitem>
+         </itemizedlist>
+       </sect2>
+       
+     </sect1>
+     <sect1 id="chpt.playlist_editor.main_window">
+	   <title>Main Window</title>
+
+       <sect2 id="chpt.playlist_editor.main_window.song_list">
+	     <title>Song List</title>
+
+         <para>
+	       TODO
+         </para>
+       </sect2>
+
+       <sect2 id="chpt.playlist_editor.main_window.controls">
+	     <title>Controls</title>
+         
+         <para>
+	       TODO: add image
+         </para>
+       </sect2>
+     </sect1>
    </chapter>
     <chapter id="chpt.midi">
       <title>MIDI API</title>
