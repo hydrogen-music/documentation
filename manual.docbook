@@ -584,6 +584,11 @@
         this action.  The popup will close and the Event Param value will now show the 
         midi note value of the key you pressed.  Once this is done you can select an Action 
         from the action drop-down list.  </para>
+
+        <para>
+	      TODO: note and enforce that table will be covered in MIDI API chapter.
+        </para>
+        
         <note>
           <para>
           Note that some actions (like SELECT_NEXT_PATTERN) 
@@ -3657,44 +3662,59 @@
     <chapter id="chpt.midi">
       <title>MIDI API</title>
       
-      <para>In this section you can find more info about defining <abbrev>MIDI</abbrev> actions 
-       and how they can be useful for you.  Before you can work with midi actions
-       you should have your <abbrev>MIDI</abbrev> devices, drivers and connections configured
-       correctly (see <xref linkend="chpt.preferences.midi_tab"/>).
+      <para>In this section you can find more info about how to make Hydrogen respond to <abbrev>MIDI</abbrev> messages. On the one hand, this is done via the <link linkend="chpt.midi.actions">available <abbrev>MIDI</abbrev> actions</link> triggered in Hydrogen using <link linkend="chpt.midi.events"><abbrev>MIDI</abbrev> Event</link>. These can be set at the bottom of the <link linkend="chpt.preferences.midi_tab">MIDI System</link> tab of the Preferences.
       </para>
 
-      <para>Lets take a look at the available options :
+      <para>
+	    TODO: update image
+      </para>
+      
       <informalfigure id="midi_actions">
         <mediaobject>
           <imageobject>
             <imagedata fileref="img/Midi_Actions.png" format="PNG" />
           </imageobject>
         </mediaobject>
-        </informalfigure>                
+      </informalfigure>                
+
+      <para>
+	    On the other hand, it also includes the ability to control various widgets, like knobs or faders, via <abbrev>MIDI</abbrev> events. These will be called <link linkend="chpt.midi.learnable"><abbrev>MIDI</abbrev>-learnable Widgets</link>.
       </para>
+      
+      <note>
+	    <para>
+          Before you can work with <abbrev>MIDI</abbrev> actions
+          you should have your <abbrev>MIDI</abbrev> devices, drivers, and connections configured
+          correctly in the <link linkend="chpt.preferences.midi_tab">MIDI System </link> tab of the Preferences.
+        </para>
+        <para>
+	      Please note that this chapter will only cover the table linking external <abbrev>MIDI</abbrev> Events to Hydrogen's <abbrev>MIDI</abbrev> Actions. For all other parameters of the <abbrev>MIDI</abbrev> API you can see in the screenshot please see the tab of the Preferences mentioned above.
+        </para>
+      </note>
 
       <sect1 id="chpt.midi.events">
         <title>MIDI Events</title>
 
-        <para>An Event is an incoming <abbrev>MIDI</abbrev> message, coming from a <abbrev>MIDI</abbrev> controller or 
+
+        <para>An Event is an incoming <abbrev>MIDI</abbrev> message, coming from e.g. a <abbrev>MIDI</abbrev> controller or 
         an external sequencer.</para>
-        <para>If you look at the Events list you will see that there are 3 types of Events 
+        <para>If you look at the Events list in <link linkend="chpt.preferences.midi_tab">MIDI System</link> tab of the Preferences, you will see that there are 3 types of Events
         available (as described in the <abbrev>MIDI</abbrev> standard): </para>
 
         
         <itemizedlist mark="opencircle">
 
          <listitem><para>
-	         <emphasis role="bold">NOTE</emphasis>: input coming from a regular black/white key of a keyboard or a drumpad
+	         <emphasis role="bold">NOTE</emphasis>: an input coming from a regular black/white key of a keyboard or a drumpad.
 	       </para></listitem>
 	     
          <listitem><para>
-	         <emphasis role="bold">CC</emphasis>: controller commands coming from faders or rotary controllers
+	         <emphasis role="bold">CC</emphasis>: controller commands coming from faders or rotary controllers.
 	       </para></listitem>
 	     
          <listitem><para>
 	         <emphasis role="bold">MMC_x</emphasis>: <ulink url="http://en.wikipedia.org/wiki/MIDI_Machine_Control">
-	         machine control events</ulink> coming from play/stop... buttons on a controller
+	         machine control events</ulink> coming from play/stop... buttons on a controller.
 	       </para></listitem>
 	     
         </itemizedlist>
@@ -3704,27 +3724,38 @@
        The Param. (parameter) value to the right of the Event is the identifier of the note/button/controller
        that is linked to this Action.  This parameter can be entered manually, or automatically by 
        using the <abbrev>MIDI</abbrev> learn function (see <xref linkend="chpt.preferences.midi_tab"/>).
-       </para>       
-       
-       <note><para>You can also activate the <abbrev>MIDI</abbrev> learn function by Shift-clicking most of the gui elements.  
-       A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
-       a key or turn/move a controller.
        </para>
-       <para>If you Shift-click on a gui element that does not support <abbrev>MIDI</abbrev> automation a popup will
-       inform you.
-       </para></note>
-       
-        
-       </sect1>
 
+       <para>
+	     TODO: I don't get the use of the Param on first read and I might not be the only one.
+       </para>
+
+       <para>
+	     TODO: also cover the Action and the corresponding Param. column 
+       </para>
+
+       <para>
+	     TODO: describe the record button
+       </para>
+       
+       </sect1>
        <sect1 id="chpt.midi.learnable">
          <title>MIDI-learnable Widgets</title>
-         <para>
-	       TODO
+         
+         <para>Apart from the <abbrev>MIDI</abbrev> Actions a lot of GUI elements, such as faders or knobs, can also be controlled via <abbrev>MIDI</abbrev> messages. To configure an element to listen for incoming events, press <keycap>Shift</keycap> while left-clicking it. 
+         A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
+         a key or turn/move a controller on your <abbrev>MIDI</abbrev> device.
+         </para>
+         <para>If the element that does not support <abbrev>MIDI</abbrev> automation, a different popup will inform you.
          </para>
        </sect1>
+       
       <sect1 id="chpt.midi.actions">
-        <title>MIDI Actions</title>
+        <title>Available MIDI Actions</title>
+
+        <para>
+	      TODO: list is out of date and not ordered as the one in the GUI
+        </para>
 
         <para>Next is a list of the available Actions: an Action describes what Hydrogen should do 
         when a specific <abbrev>MIDI</abbrev> Event is detected.</para>
