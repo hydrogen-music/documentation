@@ -3524,19 +3524,23 @@
      </para>
      
      <para>
-       Now all we need is a way to see the tags we have entered.  This can be done
-       using the Director window.  Open the Director by pressing Alt-D, or Tools- Director.
-       
-       The Director is your best friend when you need a quick overview of what Hydrogen
-       is currently doing.  This comes in very handy when you are recording a song, or
-     if you are using Hydrogen live on stage.</para>
+       The Director provides a quick overview of what Hydrogen
+       is currently doing. It can be opened by pressing <keycap>Alt</keycap> + <keycap>D</keycap> or by via the <link linkend="sect.main_menu.view">View</link> option in the Main Menu. </para>
      
      <para>
-       The Director shows you the song name, a visual metronome and of course the
-       song Tags.  Just below the metronome you can see the latest tag, and below that
-       the next upcoming tag.  This way you have a nice overview of what is going on,
+       The Director shows you the song name, a visualization of the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link>, and the
+       <link linkend="chpt.song_editor.tag">Tags</link>. Just below the metronome you can see the latest tag, and below that
+       the next upcoming tag. This way you have a nice overview of what is going on,
        and what is about to happen in the song.
      </para>
+
+     <tip>
+	   <para>
+	     This comes in very handy when you are recording a song, or
+         if you are using Hydrogen live on stage.
+       </para>
+     </tip>
+     
    </chapter>
 
    <chapter id="chpt.playlist_editor">
