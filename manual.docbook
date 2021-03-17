@@ -1150,14 +1150,19 @@
 
         <para>The Tap Tempo is a part of the Beat Counter, which is essentially a
         Tap Tempo on steroids.  By default the Beat Counter display is not
-        visible.  To see the Beat Counter widget click the upright button (TODO: insert image here)
-        (<guilabel>BC</guilabel>) or simply press <keycap>,</keycap>.</para>
+        visible.  To see the Beat Counter widget click the 
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/btn_bc_off.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        button or simply press <keycap>,</keycap>.</para>
 
         <para>The tempo that you tap will be considered even beats of the song's 
         beat type.  The beat type can be set to 1/8 (for eight-note beats), 1/4 (for
         quarter-note beats), 1/2 (for half-note beats), and 1/1 (for whole-note
-        beats).  To change the beat type use the left +/- (TODO: insert images here) buttons.  To change
-        the Countdown Counter value, use the right +/- (TODO: and here) buttons.  The Countdown 
+        beats).  To change the beat type use the left <keycap>+</keycap> / <keycap>-</keycap> buttons.  To change
+        the Countdown Counter value, use the right <keycap>+</keycap> / <keycap>-</keycap> buttons.  The Countdown 
         Counter value can be set between 2 and 16 beats.  (I.e. if you set the beat to 6, you will
         have to tap 6 times before the new tempo is computed and set.)  When the
         display shows an <parameter>R</parameter>, it means that the Beat Counter
@@ -1225,7 +1230,13 @@
             </para>
           </tip>
 
-          <para>In addition you can use (TODO: insert button image) to toggle the metronome.</para>
+          <para>In addition you can use
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_metronome_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          to toggle the metronome.</para>
 
         <tip>
 	      <para>
@@ -1269,10 +1280,24 @@
           </inlinemediaobject>
         </para>
 
-        <para>Clicking J. TRANS (TODO: insert image instead) will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore.
+        <para>Clicking
+        
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/btn_jack_transport_off.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore.
         </para>
         <para>
-          Using J. MASTER (TODO: insert image) Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
+          Using
+          
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_jack_master_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
           clients. Else it will either act as <emphasis>slave</emphasis> in the presence of another
           Timebase Master, like <command>Ardour</command>, or as a stand-alone client in the
           absence of a Master.
@@ -1616,7 +1641,19 @@
        often these parts will have a different tempo.  Hydrogen provides an easy way
        to let you change the tempo of a song at any given moment in the song.  This is 
        done by adding <emphasis>Tempo Markers</emphasis> to your song.</para>
-       <para>To add a Tempo Marker you first need to show the Timeline by clicking the 'T' button (TODO: add image) at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the 'BPM' (TODO: add image here) button.  Once this is done
+       <para>To add a Tempo Marker you first need to show the Timeline by clicking the
+       <inlinemediaobject>
+         <imageobject>
+           <imagedata fileref="img/btn_viewTL_off.png" format="PNG" />
+         </imageobject>
+       </inlinemediaobject>
+       button at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the
+       <inlinemediaobject>
+         <imageobject>
+           <imagedata fileref="img/btn_bpm_off.png" format="PNG" />
+         </imageobject>
+       </inlinemediaobject>
+       button.  Once this is done
        the horizontal bar next to the button changes to a ruler with marks at every bar.
        Now simply <keycap>left-click</keycap> this ruler at the bar you want the tempo to change and a
        window will pop up where you can enter the new tempo.
@@ -1703,7 +1740,13 @@
          </note>
 
 		 <para>
-		   To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the "P" button (TODO: use image) left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
+		   To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_viewPL_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+            button left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
          </para>
 
          <para>
@@ -1770,7 +1813,13 @@
       a number of per-note properties like velocity and pan.
       The Pattern Editor 
       can be used in 2 modes : as <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> or as <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>. You can switch between these 
-      two by clicking the 'INPUT' button (TODO: include image) (located on the top-right of the Pattern Editor).
+      two by clicking the
+      <inlinemediaobject>
+        <imageobject>
+          <imagedata fileref="img/btn_drum_piano_off.png" format="PNG" />
+        </imageobject>
+      </inlinemediaobject>
+      button (located on the top-right of the Pattern Editor).
       </para>
       
       <note>
@@ -1808,8 +1857,14 @@
           
           <itemizedlist mark="opencircle">
             <listitem id="chpt.pattern_editor.controls.size">
-              <para><emphasis role="bold">SIZE</emphasis>:
-              lets you choose the length of the pattern (in note values).
+              <para>
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/lcd_size.png" format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                
+               : lets you choose the length of the pattern (in note values).
               </para>
               <para>
                 It will open a dialog to enter the new size as text, in the standard music fractional notation:                  
@@ -1850,7 +1905,12 @@
 
             <listitem id="chpt.pattern_editor.controls.res">
               <para>
-                <emphasis role="bold">RES</emphasis> : this is the current grid resolution (4 through 64)
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/lcd_res.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject>
+                 : this is the current grid resolution (4 through 64)
               </para>
 
               <para>
@@ -1868,18 +1928,32 @@
               notes wherever you prefer.</para>
             </listitem>
             
-            <listitem><para><emphasis role="bold">HEAR</emphasis> : when enabled Hydrogen 
-            will play back samples as they are being added to the pattern (even if transport is not rolling).
-          </para>
-          <note>
-	        <para>
-	          When disabled you will still hear the preview sound when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to click at the left-most position - where the preview is silent - in case you don't want to get disturbed.
-            </para>
-          </note>
+            <listitem>
+              <para>
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/btn_hear.png" format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                : when enabled Hydrogen 
+                will play back samples as they are being added to the pattern (even if transport is not rolling).
+              </para>
+              <note>
+	            <para>
+	              When disabled you will still hear the preview sound when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to click at the left-most position - where the preview is silent - in case you don't want to get disturbed.
+                </para>
+              </note>
           
             </listitem>
 
-            <listitem><para><emphasis role="bold">QUANT</emphasis> : enables/disables quantization.
+            <listitem>
+              <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_quant_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+             : enables/disables quantization.
             When enabled the beats inserted 
             will automatically respect the grid resolution currently applied.</para>
 
@@ -1890,14 +1964,22 @@
             </listitem>
 
             <listitem id="chpt.pattern_editor.controls.input">
-              <para><emphasis role="bold">INPUT</emphasis> : switchs between <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.</para>
+              <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_drum_piano_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject> / 
+            
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_drum_piano_on.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+              : switchs between <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.</para>
             </listitem>
 
           </itemizedlist>
-
-          <para>
-	        TODO: add button images to list.
-          </para>
 
         </sect2>
         
@@ -1941,12 +2023,19 @@
 	      TODO: update list
         </para>
         
-        <para>The small red and green buttons right of the instrument names are the
-        <quote><emphasis role="bold"><link linkend="def.mute">mute</link></emphasis></quote> (red) and <quote><emphasis
-        role="bold">solo</emphasis></quote> (green) buttons.</para>
-
-        <para>
-	      TODO: update mute and solo + use button images in description
+        <para>The
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/btn_mute_off.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        button <link linkend="def.mute">mutes</link> the instrument and 
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/btn_solo_off.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        solos it.
         </para>
         
         <para>The order of the instruments can be rearranged by simply dragging an instrument 
@@ -2407,9 +2496,13 @@
         
         <sect2 id="chpt.instrument_editor.envelope_parameters">
           <title>Envelope Parameters</title>
-
+          
           <para>
-	        TODO: insert figure of corresponding widget(s)
+            <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/instrument_editor_envelope.png" format="PNG" />
+            </imageobject>
+            </inlinemediaobject>
           </para>
 
           <para>When a note associated with this instrument is triggered, its volume is run through an
@@ -2461,7 +2554,8 @@
           sample will end, regardless of which phase of the <link linkend="def.adsr">ADSR</link> it is in.  If
           the note is sustained, it does <emphasis>not</emphasis> draw out the
           note while you are holding it.  It only holds the <link linkend="def.gain">gain</link> (volume)
-          parameter during that time.</para>
+          parameter during that time.
+          </para>
 
         </sect2>
 
@@ -2469,7 +2563,11 @@
           <title>Gain and Mute Group</title>
 
           <para>
-	        TODO: insert figure of corresponding widget(s)
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/instrument_editor_mute_group.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
           </para>
 
           <para>The <emphasis role="bold"><link linkend="def.gain">Gain</link></emphasis> sets the overall volume for the <link linkend="def.sample">sample</link>.  This Gain is
@@ -2502,17 +2600,10 @@
           Group parameter to the same number.  (For example, to group all the
           high-hat instruments, you can set all their Mute Group parameters to
           1.  To have a snare drum Mute Group, set their Mute Group parameters
-          to 2.)</para>
-        </sect2>
-        
-        <sect2 id="chpt.instrument_editor.auto_stop_note">
-          <title>Auto Stop-Note</title>
-
-          <para>
-	        TODO: insert figure of corresponding widget(s)
+          to 2.)
           </para>
 
-          <para>If this box is checked, Hydrogen will immediately stop any playing <link linkend="def.sample">samples</link>
+          <para>If the <emphasis role="bold">Auto-Stop-Note</emphasis> box is checked, Hydrogen will immediately stop any playing <link linkend="def.sample">samples</link>
           belonging to this instrument whenever the instrument is re-triggered, e.g. by another note.</para>
           <para>This option is particularly useful when you are using long samples like a 
           crash or some existing audio that you have sampled (like a looped voice in a 
@@ -2523,16 +2614,9 @@
           For the voice sample this option is useful if you are trying to get that 'stuttering' effect.
 
           </para>
-        </sect2>
-        <sect2 id="chpt.instrument_editor.apply_velocity">
-          <title>Apply Velocity</title>
-
-          <para>
-	        TODO: insert figure of corresponding widget(s)
-          </para>
           
           <para>
-             This lets the user decide whether Hydrogen should apply the note <link linkend="def.velocity">velocity</link> to the <link linkend="def.sample">sample</link> being played.
+             The <emphasis role="bold">Apply Velocity</emphasis> box lets the user decide whether Hydrogen should apply the note <link linkend="def.velocity">velocity</link> to the <link linkend="def.sample">sample</link> being played.
           </para>
 
           <tip>
@@ -2564,7 +2648,11 @@
           <title>Filter Parameters</title>
 
           <para>
-	        TODO: insert figure of corresponding widget(s)
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/instrument_editor_filter.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
           </para>
 
           <para>The filter used in here is a <link linkend="def.lowpassfilter">low-pass</link> <link linkend="def.resonancefilter">resonance filter</link>.  If you don't wish to
@@ -2599,7 +2687,11 @@
           <title>Pitch Shift Parameters</title>
 
           <para>
-	        TODO: insert figure of corresponding widget(s)
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/instrument_editor_pitch.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
           </para>
           
           <para> The first two knobs control the pitch shift offset.
@@ -2627,7 +2719,11 @@
           <title><abbrev>MIDI</abbrev> Out Settings</title>
 
           <para>
-	        TODO: insert figure of corresponding widget(s)
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/instrument_editor_midi_out.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
           </para>
 
           <para>Hydrogen is capable of generating <abbrev>MIDI</abbrev> messages that you can use
@@ -2649,7 +2745,11 @@
           <title>Hi-Hat Pressure Group</title>
 
           <para>
-	        TODO: insert figure of corresponding widget(s)
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/instrument_editor_hihat_pressure_group.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
           </para>
           
             <para>The hi-hat is a particular instrument of the drumkit as its sound can be changed by pressing the foot pedal.
@@ -2758,7 +2858,7 @@
             </listitem>
             <listitem>
 	          <para>
-	            <emphasis role="bold">Component Volume</emphasis>: TOD
+	            <emphasis role="bold">Component Volume</emphasis>: TODO
               </para>
             </listitem>
             <listitem>
@@ -2798,7 +2898,13 @@
         </para>
 
         <para>The Sample Editor allows you to tweak and manipulate your
-        samples. It can be accessed by selecting a layer in the <link linkend="chpt.instrument_editor.layers">Instrument Editor</link> and clicking the <emphasis role="bold">Edit Layer</emphasis> button (TODO: insert image in here). It will really speed up the creation of a drumkit since
+        samples. It can be accessed by selecting a layer in the <link linkend="chpt.instrument_editor.layers">Instrument Editor</link> and clicking the
+        <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/editLayer_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+           button. It will really speed up the creation of a drumkit since
         you can do the fine-tuning of the <link linkend="def.sample">samples</link> within Hydrogen and avoid a lengthy import-test-tweak workflow using an external application. This mean less switching between Hydrogen and your audio editor
         and more time to make music!</para>
         
@@ -3047,7 +3153,7 @@
         </mediaobject>
       </figure>
 
-      <para>The Mixer window can be opened by pressing <keycap>Alt</keycap> + <keycap>M</keycap>, by selecting Mixer in the <link linkend="sect.main_menu.view">View</link> option of the Main Menu, or by clicking the Mixer button (TODO: insert image) on the <link linkend="sect.main_toolbar.gui_state">Main Toolbar</link>.
+      <para>The Mixer window can be opened by pressing <keycap>Alt</keycap> + <keycap>M</keycap>, by selecting Mixer in the <link linkend="sect.main_menu.view">View</link> option of the Main Menu, or by clicking the Mixer button on the <link linkend="sect.main_toolbar.gui_state">Main Toolbar</link>.
       </para>
       <para>The Mixer consists of 3 sections (from left to right): the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, 
       the <link linkend="sect.fx_rack_LADSPA">FX Plugin Rack</link>, and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>. The Hydrogen Mixer works very
@@ -3064,10 +3170,6 @@
 
       <para>
 	    TODO: is the preview sound in the Pattern Editor routed through these strips?
-      </para>
-
-      <para>
-	    TODO: insert images in list
       </para>
 
       <para>
@@ -3093,9 +3195,9 @@
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+                <imagedata fileref="img/led_trigger_on.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> [trigger-led]:
+              </inlinemediaobject> :
               lights up whenever this instrument is triggered, e.g. by a note in a pattern or an external <abbrev>MIDI</abbrev> controller).
           </para>
         </listitem>
@@ -3103,9 +3205,9 @@
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+                <imagedata fileref="img/item_selected.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> [select-led]:
+              </inlinemediaobject> :
               shows whether the instrument is currently selected (in both the Mixer and the Pattern Editor).
 
               <note>
@@ -3153,9 +3255,9 @@
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+                <imagedata fileref="img/mixer_rotary.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> [PAN knob]: sets a pan value affecting all layers and note played using this instrument.
+              </inlinemediaobject> : sets a pan value affecting all layers and note played using this instrument.
           </para>
           <para>
             TODO: mention/link/describe interaction with note, layer, sample pan
@@ -3165,7 +3267,7 @@
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/FX_send_knobs.png" format="PNG" />
+                <imagedata fileref="img/mixer_knob.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> :
               the four pre-fader FX send knobs that determine how much of this instrument will be sent to
@@ -3174,11 +3276,7 @@
         </listitem>
 	    <listitem>
 	      <para>
-            <inlinemediaobject>
-              <imageobject>
-                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
-              </imageobject>
-              </inlinemediaobject> [Fader + LCD]:
+            <emphasis role="bold">Fader and LCD</emphasis>:
               the fader next to the instrument's name allows you to adjust the volume of the instrument which will be applied on top of all the individual note velocities, layer gains etc. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The LCD displays shows its peak value.
           </para>
           <tip>
@@ -3330,7 +3428,13 @@
        </para>
 
        <para>
-	     Using the fader you can control the volume of the resulting audio output of Hydrogen which is the sum of all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, the <link linkend="chpt.song_editor.playbackTrack">Playback Track</link>, and the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link>. The 'Mute' button (TODO: use image) <link linkend="def.mute">mutes</link> the whole output.
+	     Using the fader you can control the volume of the resulting audio output of Hydrogen which is the sum of all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, the <link linkend="chpt.song_editor.playbackTrack">Playback Track</link>, and the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link>. The
+         <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/master_mute_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          button <link linkend="def.mute">mutes</link> the whole output.
        </para>
 
         <para>On the bottom-right of the Master section the
