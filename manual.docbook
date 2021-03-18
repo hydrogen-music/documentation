@@ -430,7 +430,7 @@
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Beat counter drift componensation in 1/10 ms</emphasis>:
-              allows you to compensate for system latency. The provided number will be added to each consecutive triggering of the <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Beat Counter</link>. The allowed range is from <option>-200</option> to <option>200</option>.
+              allows you to compensate for system latency. The provided number will be added to each consecutive triggering of the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>. The allowed range is from <option>-200</option> to <option>200</option>.
 
               <tip>
 	            <para>
@@ -1371,77 +1371,87 @@
           </inlinemediaobject>
         </para>
 
-          <para>Set measure type and Beat Counter.</para>
+        <para>This section covers how to interactively change tempo using the <emphasis>Beat Counter</emphasis>. Due to conceptional similarities the <emphasis>Tap Tempo</emphasis> will be covered as well which itself is not related to the widget displayed above.</para>
 
-        <para>It is possible to change the tempo at any time using the Tap Tempo and
-        Beat Counter features of Hydrogen.  You can do this while the song is playing or
-        while the song is stopped.  To change the tempo, hit the
-        <keycap>,</keycap> (comma) key in the tempo you want.
-        After the correct number of keystrokes has been detected (see 
-        below for details), the tempo will change to the average tempo 
-        you tapped the <keycap>,</keycap> key.  If you continue to tap,
-        these new taps will become a part of a rolling average.  If you tap
-        accidentally, or if you wait too long between taps, the Tap Tempo
-        counter will start over.</para>
+        <sect2 id="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">
+          <title>Tap Tempo</title>
+	      
+          <para>The Tap Tempo allows you to change the tempo at any time - with playback rolling or stopped - within Hydrogen. To change the tempo, hit the
+          <keycap>\</keycap> key in the tempo you want.
+          </para>
 
-        <para>The Tap Tempo is a part of the Beat Counter, which is essentially a
-        Tap Tempo on steroids.  By default the Beat Counter display is not
-        visible.  To see the Beat Counter widget click the 
-        <inlinemediaobject>
-          <imageobject>
-            <imagedata fileref="img/btn_bc_off.png" format="PNG" />
-          </imageobject>
-        </inlinemediaobject>
-        button or simply press <keycap>,</keycap>.</para>
+          <para>
+            After two keystrokes the tempo will be first changed according to the time difference between the two taps. With each addition keystroke the tempo will be changed again to the rolling average value of the last up top eight hits of the <keycap>\</keycap> button. If you tap
+          accidentally, or if you wait too long between taps, the Tap Tempo
+          counter will start over.</para>
 
-        <para>The tempo that you tap will be considered even beats of the song's 
-        beat type.  The beat type can be set to 1/8 (for eight-note beats), 1/4 (for
-        quarter-note beats), 1/2 (for half-note beats), and 1/1 (for whole-note
-        beats).  To change the beat type use the left <keycap>+</keycap> / <keycap>-</keycap> buttons.  To change
-        the Countdown Counter value, use the right <keycap>+</keycap> / <keycap>-</keycap> buttons.  The Countdown 
-        Counter value can be set between 2 and 16 beats.  (I.e. if you set the beat to 6, you will
-        have to tap 6 times before the new tempo is computed and set.)  When the
-        display shows an <parameter>R</parameter>, it means that the Beat Counter
-        is ready to start from 0.  When you tap <keycap>,</keycap>, the <parameter>R</parameter> will change to
-        1, and will increment with every keystroke until it reaches the Countdown 
-        Counter value (shown just below the <parameter>R</parameter>).</para>
+          <note>
+	        <para>
+	          The widget shown above is the one of the Beat Counter. The Tap Tempo itself does neither have a dedicated widget nor any option to be set by the user.
+            </para>
+          </note>
+        </sect2>
+        
+        <sect2 id="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">
+          <title>Beat Counter</title>
 
-        <para>The button in the bottom right-hand controls the auto-start
-        feature, and it toggles between <parameter>S</parameter> and
-        <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
-        (<emphasis>Play</emphasis>), the song will set the new tempo and
-        automatically start to play after you tap the right number of beats (if
-        it's not already playing, of course).  This way, if you have the
-        Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
-        the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
-        BPM</emphasis>), the auto-start is disabled.</para>
+          <para>The Beat Counter is essentially a Tap Tempo on steroids.  By default the Beat Counter widget is not
+          visible.  To see the Beat Counter widget click the 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_bc_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          button or simply press <keycap>,</keycap>.</para>
 
-        <para>For example: Suppose you have a live band, Hydrogen, and a
-        softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
-        at the same time.  Set the beat type to 1/4 and the number of beats to
-        4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
-        the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
-        starts on 1.</para>
+          <para>The tempo that you tap will be considered to correspond to even beats of the song's 
+          beat type.  The beat type can be set to 1/8 (for eight-note beats), 1/4 (for
+          quarter-note beats), 1/2 (for half-note beats), and 1/1 (for whole-note
+          beats).  To change the beat type use the left <keycap>+</keycap> / <keycap>-</keycap> buttons.  To change
+          the Countdown Counter value, use the right <keycap>+</keycap> / <keycap>-</keycap> buttons.  The Countdown 
+          Counter value can be set between 2 and 16 beats.  (I.e. if you set the beat to 6, you will
+          have to tap 6 times before the new tempo is computed and set.)  When the
+          display shows an <parameter>R</parameter>, it means that the Beat Counter
+          is ready to start from 0.  When you tap <keycap>,</keycap>, the <parameter>R</parameter> will change to
+          1, and will increment with every keystroke until it reaches the Countdown 
+          Counter value (shown just below the <parameter>R</parameter>).</para>
 
-        <para>Another example: Same situation, but the song doesn't require
-        Hydrogen or synths until some point later.  During that time, a human
-        (e.g. guitar player) will be setting the tempo.  On the measure before
-        Hydrogen is supposed to play, tap the comma key 1-2-3-4 with the
-        beat... and you're in on the next beat (at the right tempo).</para>
+          <para>The button in the bottom right-hand controls the auto-start
+          feature, and it toggles between <parameter>S</parameter> and
+          <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
+          (<emphasis>Play</emphasis>), the song will set the new tempo and
+          automatically start to play after you tap the right number of beats (if
+          it's not already playing, of course).  This way, if you have the
+          Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
+          the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
+          BPM</emphasis>), the auto-start is disabled.</para>
 
-        <tip>
-          <para>A start offset and a latency compensation for the Beat Counter can be configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences Dialog.
+          <para>For example: Suppose you have a live band, Hydrogen, and a
+          softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
+          at the same time.  Set the beat type to 1/4 and the number of beats to
+          4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
+          the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
+          starts on 1.</para>
+
+          <para>Another example: Same situation, but the song doesn't require
+          Hydrogen or synths until some point later.  During that time, a human
+          (e.g. guitar player) will be setting the tempo.  On the measure before
+          Hydrogen is supposed to play, tap the comma key 1-2-3-4 with the
+          beat... and you're in on the next beat (at the right tempo).</para>
+
+          <tip>
+            <para>An temporal offset when starting the playback after setting the tempo and a latency compensation for the Beat Counter can be configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences Dialog.
           </para>
         </tip>
 
         <note>
           <para>
-            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and the Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
-        Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
+            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and both Tap Tempo and Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
+            Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
           </para>
         </note>
-
-        <para>TODO: since the Tap Tempo is a subset of the Beat Counter and both are bound to the same key and triggered by the same API function: Is there actually a separate Tap Tempo or can it be dropped since it was superseded by the Beat Counter a long time ago?</para>
+      </sect2>
+      
       </sect1>
       <sect1 id="sect.main_toolbar.bpm_control_and_metronome">
         <title>BPM Control and Metronome</title>
@@ -1540,7 +1550,7 @@
           </para>
           <tip>
             <para>
-            You can check whether Hydrogen is in <emphasis>slave</emphasis> mode by hovering over the disabled <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Beat Counter</link> or <link linkend="chpt.song_editor.timeline">Timeline</link>.
+            You can check whether Hydrogen is in <emphasis>slave</emphasis> mode by hovering over the disabled <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link> or <link linkend="chpt.song_editor.timeline">Timeline</link>.
             </para>
           </tip>
 
@@ -4243,14 +4253,13 @@
       <listitem><para>
 	      <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
           time passing between successive encounters of this commands and uses
-          it to set the current tempo. (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)
+          it to set the current tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.
 	    </para></listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">TAP_TEMPO</emphasis> : another command
           calculating the average time passing between successive encounters of
-          this commands and uses it to set the current tempo (see <xref
-          linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)
+          this commands and uses it to set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.
 	    </para></listitem>
 	    
         <listitem id="chpt.midi.actions.select_instrument">
@@ -4518,7 +4527,7 @@
                  <entry></entry>
                  <entry>Calculates the average time passing between successive
                  encounters of this commands and uses it to set the current
-                 tempo (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>).</entry>
+                 tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TAP_TEMPO</emphasis>/</entry>
@@ -4526,7 +4535,7 @@
                  <entry></entry>
                  <entry>Another command calculating the average time passing
                  between successive encounters of this commands and uses it to
-                 set the current tempo (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>).</entry>
+                 set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Tap Tempo</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ACTIVATION</emphasis>/</entry>
@@ -5315,11 +5324,11 @@
           </row>
           <row>
             <entry><keycap>,</keycap></entry>
-            <entry>Use Beatcounter (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</entry>
+            <entry>Use the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link></entry>
           </row>
           <row>
             <entry><keycap>\</keycap></entry>
-            <entry>Use Tap Tempo (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</entry>
+            <entry>Use <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link></entry>
           </row>
           <row>
             <entry><keycap>+</keycap></entry>
