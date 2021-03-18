@@ -356,48 +356,135 @@
         </figure>
 
         <para>
-	      TODO: update image, options, and description. Convert the layout of the section to a item list similar to the other ones.
+	      TODO: update image
         </para>
-        
-        <para>On the "General" tab (<xref linkend="fig.preferences.general_tab"/>) you can 
-        choose to automatically reopen the last used song and/or playlist.  This can save you 
-        the trouble of having to reopen the song you are working on every time you open 
-        Hydrogen.  Auto loading the playlist can come in handy when you are using Hydrogen live.</para>
-        <para>If you want to use <abbrev>LASH</abbrev> for session management you should enable 
-        it here so Hydrogen allows interaction with <abbrev>LASH</abbrev>.</para>
-        <para>The Beat Counter drift compensation and start offset allow you to compensate
-         for system latency when you are using the Beat Counter function (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</para>
-        <para>The Max number of bars in a song can be set here (currently limited to 800) 
-        and if you want to use rubberband for sample time-stretching (see <xref linkend="chpt.sample_editor.pitch"/>)
-        you need to enter the path where rubberband is installed on you system here.</para>
-        <!-- THIJS : NEED TO AD LINK TO SAMPLE EDITOR -->
-
 
         <itemizedlist>
-          <listitem><para><emphasis role="bold"><guilabel>Beat counter drift
-          compensation in 1/10ms</guilabel></emphasis> &mdash; adjust to
-          compensate for latency between the keyboard and the
-          program.</para></listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Language</emphasis>:
+              chooses one of the translations Hydrogen is avaiable in.            
+              <note>
+	            <para>
+	              For this setting to take effect you have to restart Hydrogen.
+                </para>
+              </note>
 
-          <listitem><para><emphasis role="bold"><guilabel>Beat counter start
-          offset in ms</guilabel></emphasis> &mdash; adjust the time between the
-          Beat Counter's last input stroke and when the song starts playing (if
-          auto-start is activated).</para></listitem>
-        </itemizedlist>
+              <tip>
+	            <para>
+	              If your mother tongue is not available or the corresponding translation is flawed or incomplete, you would have an accessible way to contribute to Hydrogen at hand. Please see the <link linkend="sect.main_menu.info">About</link> dialog in the Info option of the Main menu for information of how to contact the Hydrogen dev team.
+                </para>
+              </tip>
+  
 
-        <note>
-          <para>
-            Note that these can be set to positive (+) or negative (-) values.
-        In order to find useful values for these, you will need to take some
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Reopen last used song</emphasis>:
+              determines whether Hydrogen will open the last used song during startup or an empty song instead.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Reopen last used playlist</emphasis>:
+              determines whether the last used <link linkend="chpt.playlist_editor">Playlist</link> will be loaded during startup or none at all.
+              <tip>
+	            <para>
+	              This can come in handy when you are using Hydrogen live.
+                </para>
+              </tip>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Use relative paths for playlist</emphasis>:
+              specifies whether the path names in the stored <link linkend="chpt.file_types.h2playlist">.h2playlist</link> file will contain absolute paths or a path relative to the <filename role="directory">playlist</filename> folder in the Hydrogen data
+              directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).
+
+              <tip>
+	            <para>
+	              Using relative paths might be handy when using your playlist on different computers or user profiles.
+                </para>
+              </tip>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Hide keyboard input cursor</emphasis>:
+              hides the keyboard cursor until you press a key on you keyboard (see <xref linkend="chpt.keyboard_and_mouse" />). By enabling this feature you can switch to the look and feel of the interaction with the <link linkend="chpt.pattern_editor">Pattern Editor</link> and <link linkend="chpt.song_editor">Song Editor</link> prior to Hydrogen v1.1.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Use LASH</emphasis>:
+              enables <abbrev>LASH</abbrev> (<abbrev>LASH</abbrev> Audio Session Handler) support within Hydrogen. This allows you to recover a particular song associated with a session.
+
+              <tip>
+	            <para>
+	              You may consider using the more advanced <link linkend="chpt.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
+                </para>
+              </tip>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Beat counter drift componensation in 1/10 ms</emphasis>:
+              allows you to compensate for system latency. The provided number will be added to each consecutive triggering of the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>. The allowed range is from <option>-200</option> to <option>200</option>.
+
+              <tip>
+	            <para>
+	              This is quite handy if you are using different sound cards or external <abbrev>MIDI</abbrev> devices, like a keyboard or an e-drum, with mismatching clocks.
+                </para>
+                <para>
+	              In order to find useful values for these, you will need to take some
         time to play with it.  Also, you may want different values depending on
         the speed of your hardware, audio devices, drivers, etc.  Using the
         Beat Counter effectively requires practice.
-          </para>
-        </note>
+                </para>
+              </tip>
+              
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Beat counter start offset in ms</emphasis>:
+              sets the time between the
+              Beat Counter's last input stroke and when the song starts playing. Its allowed range is from <option>-500</option> to <option>500</option>.
 
-        <para>
-	      TODO: fuse
-        </para>
+              <note>
+	            <para>
+	              The Beat Counter has to be set to <emphasis role="bold">Set <abbrev>BPM</abbrev> and play</emphasis> - 
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+                    </imageobject>
+                  </inlinemediaobject>
+          should be displayed in the bottom right corner - for this setting to take effect.
+                </para>
+              </note>
+              
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Maximum number of bars</emphasis>:
+              sets the maximum number of supported bars/patterns for a single song. Its allowed range is from <option>1</option> to <option>800</option>.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Maximum number of layers</emphasis>:
+              sets the maximum number of <link linkend="def.layer">layers</link> for a single instrument. Its allowed range is from <option>16</option> to <option>8192</option>.
+              <note>
+	            <para>
+	              For this setting to take effect you have to restart Hydrogen.
+                </para>
+              </note>
+            </para>
+            
+          </listitem>
+        </itemizedlist>
 
       </sect1>
 
@@ -414,148 +501,263 @@
         </figure>
 
         <para>
-	      TODO: update image, options, and description
-        </para>
-        
-        <para>From the "Audio System" tab (<xref
-        linkend="fig.preferences.audio_tab"/>) it is possible to modify the
-        audio driver being used (<abbrev>OSS</abbrev>, <abbrev>JACK</abbrev>, <abbrev>ALSA</abbrev>, PortAudio, PulseAudio, CoreAudio, Auto) with its buffer and
-        sampling rate (unless you are using <abbrev>JACK</abbrev>, in this case the audio driver
-        configuration should happen before starting the <abbrev>JACK</abbrev> server).</para>
-
-        <para>Also keep an eye on the value of "Polyphony": depending on your
-        CPU you may want to change the max simultaneous notes in order to
-        prevent hydrogen from overrunning the audio driver.</para>
-        <para>The "Interpolate resampling" parameter allows you to select your preferred
-        interpolation method.</para>
-
-        <para>
-          The following drivers are available:
+	      TODO: update image
         </para>
 
-        <para>
-	      TODO: cover restart Audio Driver button and what it is used for.
-        </para>
-        
         <itemizedlist>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Audio System</emphasis>: let's you choose the audio driver used by Hydrogen to connect to your computer's sound card.
+            </para>
 
-          <listitem>
-            <para><emphasis role="bold">Auto</emphasis>: Hydrogen will try a
-            number of different drivers in a predetermined order, choose the
-            first working one, and display the result. This option is
-            recommended for beginners.</para>
-          </listitem>
-
-          <listitem id="sect.preferences.jack">
-            <para><emphasis role="bold">JACK</emphasis>: The <abbrev>JACK</abbrev> driver is a
-            professional audio server which permits very low lag and exchanges
-            with other audio software. <emphasis>We strongly recommend using
-            this driver to have the best out of Hydrogen</emphasis>.  <abbrev>JACK</abbrev>
-            server will start automatically if not already running.</para>
-            <para>Available options:</para>
+            <para>
+	          Available options:
+            </para>
             <itemizedlist>
-              <listitem id="sect.preferences.jack.track_output">
-                <para><emphasis role="bold">Track output</emphasis>: This
-                options determines which audio settings will be applied to the
-                audio of the per-instrument output ports.</para>
 
-                <para>Post-Fader:</para>
-                <itemizedlist>
-                  <listitem><para>note velocity</para></listitem>
-                  <listitem><para>note and instrument pan</para></listitem>
-                  <listitem><para>layer, instrument, and component gain</para></listitem>
-                  <listitem><para>instrument and main component volume</para></listitem>
-                </itemizedlist>
-                <para>Pre-Fader:</para>
-                <itemizedlist>
-                  <listitem><para>note velocity</para></listitem>
-                  <listitem><para>layer gain</para></listitem>
-                </itemizedlist>
-              </listitem>
-              <listitem id="sect.preferences.jack.bbt">
-                <para><emphasis role="bold">BBT sync method</emphasis>: If
-                Hydrogen uses <abbrev>JACK</abbrev> transport in the presence of an external <abbrev>JACK</abbrev>
-                Timebase master (TBM), it will use the provided measure and
-                tempo information instead of the local one of either the Song's
-                tempo (see <xref linkend="chpt.main_toolbar"/>) or the markers
-                added to the Timeline (see <xref
-                linkend="chpt.song_editor.timeline"/>).  But due to
-                limitations in the current implementation, Hydrogen can not set
-                both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
-                combinations. The user has two options. Either drop all measure
-                changes in the TBM and work with tempo changes only to support
-                arbitrary patterns (using option <emphasis>constant
-                measure</emphasis>) or to keep the length of each pattern
-                consistent with the corresponding measure in the TBM and to use
-                both tempo and measure provided by <abbrev>JACK</abbrev> (option
-                <emphasis>matching bars</emphasis>).</para>
-
-                <para>For this option to take effect the J. TRAMS button has to
-                be activated and the J. MASTER button deactivated (next to
-                having a <abbrev>JACK</abbrev> TBM application). See <xref
-                linkend="chpt.main_toolbar"/>.</para>
+              <listitem>
+                <para><option>Auto</option>: Hydrogen will try a
+                number of different drivers in a predetermined order, choose the
+                first working one, and display the result.
 
                 <tip>
 	              <para>
-	                Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master via the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link>.
+	                This option is recommended for beginners.
+                  </para>
+                </tip>
+                
+                </para>
+              </listitem>
+
+              <listitem id="sect.preferences.jack">
+                <para><option>JACK</option>: The <abbrev>JACK</abbrev> driver is a
+                professional audio server which permits very low lag and exchanges
+                with other audio software. The <abbrev>JACK</abbrev>
+                server will start automatically if not already running.
+                </para>
+
+                <tip>
+	              <para>
+	                We strongly recommend using
+                    this driver to have the best out of Hydrogen.
                   </para>
                 </tip>
               </listitem>
               <listitem>
-                <para><emphasis role="bold">Connect to Default Output
-                Pair</emphasis>: Connects the main stereo output of the Mixer to
-                the default ports of your system
-                (<emphasis>system:playback_1</emphasis> and
-                <emphasis>system:playback_2</emphasis>) every time Hydrogen
-                starts up or the audio driver is restarted.</para>
+                <para><option>ALSA</option>: The widely adopted
+                Linux standard audio driver.</para>
               </listitem>
-              <listitem id="sect.preferences.jack.per_instrument_outs">
-                <para><emphasis role="bold">Create per-instrument
-                outputs</emphasis>: In addition to the main stereo output
-                Hydrogen will register <abbrev>JACK</abbrev> output ports for every single
-                instrument. This can be useful if you want to add effects to a
-                single instrument with jack-rack for example.</para>
 
-                <para>
-	              TODO: no port for metronome and playback track
-                </para>
-                <para>
-	              TODO: note that JACK options are only available when JACK driver is selected
+              <listitem>
+                <para><option>OSS</option>: The <abbrev>OSS</abbrev> audio driver
+                uses <filename>/dev/dsp</filename> and it's based on the <abbrev>OSS</abbrev> interface which is supported
+                by the vast majority of sound cards available for Linux; this said,
+                the use of this audio driver blocks <filename>/dev/dsp</filename> until Hydrogen is
+                closed i.e. unusable by any other software. Use it as last
+                resort.
                 </para>
               </listitem>
+
+              <listitem>
+                <para><option>PortAudio</option>: An open-source
+                multi platform audio driver.</para>
+              </listitem>
+
+              <listitem>
+                <para><option>CoreAudio</option>: A driver for MacOS.</para>
+		      </listitem>
+
+              <listitem>
+                <para><option>PulseAudio</option>: A driver for the cross platform
+                PulseAudio sound server.</para>
+		      </listitem>
             </itemizedlist>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">ALSA</emphasis>: The widely adopted
-            Linux standard audio drivers</para>
+
           </listitem>
 
           <listitem>
-            <para><emphasis role="bold">OSS</emphasis>: The Oss audio driver
-            uses /dev/dsp and it's based on the <abbrev>OSS</abbrev> interface which is supported
-            by the vast majority of sound cards available for Linux; this said,
-            the use of this audio driver blocks /dev/dsp until Hydrogen is
-            closed i.e. unusable by any other software. Use it as last
-            resort.</para>
+	        <para>
+	          <emphasis role="bold">Device</emphasis>:
+              specifies the particular sound card the audio driver will use.
+            </para>
           </listitem>
-
           <listitem>
-            <para><emphasis role="bold">PortAudio</emphasis>: an open-source
-            multi platform audio driver</para>
+	        <para>
+	          <emphasis role="bold">Buffer size</emphasis>:
+              specifies the size of the batch of time Hydrogen will process in one run. Supported values are from <option>100</option> to <option>5000</option>.
+            </para>
           </listitem>
-
           <listitem>
-            <para><emphasis role="bold">CoreAudio</emphasis>: a driver for Mac
-            OS X (experimental)</para>
-		  </listitem>
+	        <para>
+	          <emphasis role="bold">Sample rate</emphasis>:
+              specifies the number of data points the audio signal will contain within one second.
+              <note>
+	            <para>
+	              If you are using the <abbrev>JACK</abbrev> audio driver, the sample rate can not be altered from within Hydrogen and the audio driver
+            configuration should happen before starting the <abbrev>JACK</abbrev> server.
+                </para>
+              </note>
+            </para>
+          </listitem>
+          
+          <listitem id="sect.preferences.jack.track_output">
+            <para><emphasis role="bold">Track output</emphasis>: determines which audio settings will be applied to the outgoing
+            audio of the per-instrument <abbrev>JACK</abbrev> output ports.</para>
 
+            <para><option>Post-Fader</option>:</para>
+            <itemizedlist>
+              <listitem><para>note <link linkend="chpt.pattern_editor.note_properties.velocity">velocity</link> and <link linkend="chpt.pattern_editor.note_properties.pan">pan</link></para></listitem>
+              <listitem><para><link linkend="chpt.instrument_editor.layers.controls.component_volume">component volume</link></para></listitem>
+              <listitem><para><link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link></para></listitem>
+              <listitem><para>instrument <link linkend="chpt.instrument_editor.gain_and_mute_group">gain</link>, <link linkend="chpt.mixer.channel_strips.pan">pan</link>, and <link linkend="chpt.mixer.channel_strips.fader_and_lcd">volume</link></para></listitem>
+              <listitem><para>main component volume (TODO: insert link)</para></listitem>
+            </itemizedlist>
+            <para><option>Pre-Fader</option>:</para>
+            <itemizedlist>
+              <listitem><para>note <link linkend="chpt.pattern_editor.note_properties.velocity">velocity</link></para></listitem>
+              <listitem><para><link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link></para></listitem>
+            </itemizedlist>
+
+            <note>
+              <para>
+                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected and it will only take effect if the <emphasis role="bold">Connect to default <abbrev>JACK</abbrev> output ports</emphasis> option is checked.
+              </para>
+            </note>
+          </listitem>
+          <listitem id="sect.preferences.jack.bbt">
+            <para><emphasis role="bold">BBT sync method</emphasis>: if
+            Hydrogen uses <abbrev>JACK</abbrev> transport in the presence of an external <abbrev>JACK</abbrev>
+            Timebase master (TBM), it will use the provided measure and
+            tempo information instead of the local one of either the <link linkend="sect.main_toolbar.bpm_control_and_metronome">song's
+            tempo</link> or the Tempo Markers
+            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>.  But due to
+            limitations in the current implementation, Hydrogen can not set
+            both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
+            combinations. You have two options here. Either drop all measure
+            changes in the TBM and work with tempo changes only to support
+            arbitrary patterns (using option <option>constant
+            measure</option>) or to keep the length of each pattern
+            consistent with the corresponding measure in the TBM and to use
+            both tempo and measure provided by <abbrev>JACK</abbrev> (option
+            <option>matching bars</option>).</para>
+
+            <note>
+              <para>
+                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected.
+              </para>
+              <para>
+                For this option to take effect the
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/btn_jack_transport_off.png" format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                button has to be activated and the
+                <inlinemediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/btn_jack_master_off.png" format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>                
+                button deactivated in the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link> (next to
+                having a <abbrev>JACK</abbrev> TBM application).</para>
+            </note>
+
+            <tip>
+	          <para>
+	            Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master via the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link>.
+              </para>
+            </tip>
+          </listitem>
           <listitem>
-            <para><emphasis role="bold">PulseAudio</emphasis>: a driver for the cross platform
-            PulseAudio sound server.</para>
-		  </listitem>
+            <para><emphasis role="bold">Connect to default <abbrev>JACK</abbrev> output
+            ports</emphasis>: connects the main stereo <abbrev>JACK</abbrev> output ports of the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> to
+            the default <abbrev>JACK</abbrev> input ports of your system
+            (<emphasis>system:playback_1</emphasis> and
+            <emphasis>system:playback_2</emphasis>). This will be done every time Hydrogen
+            starts up or the <abbrev>JACK</abbrev> audio driver is restarted.</para>
 
+            <note>
+              <para>
+                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected.
+              </para>
+            </note>
 
+          </listitem>
+          <listitem id="sect.preferences.jack.per_instrument_outs">
+            <para><emphasis role="bold">Create per-instrument
+            <abbrev>JACK</abbrev> output ports</emphasis>: in addition to the main stereo output
+            Hydrogen will register <abbrev>JACK</abbrev> output ports for every single
+            instrument.
+            </para>
+
+            <tip>
+	          <para>
+	            This can be useful if you want to add effects to a
+            single instrument with jack-rack for example.
+              </para>
+            </tip>
+
+            <note>
+              <para>
+                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected.
+              </para>
+            </note>
+            
+            <warning>
+              <para>
+	            There are no <abbrev>JACK</abbrev> output ports for the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link> and the <link linkend="chpt.song_editor.playbackTrack">Playback Track</link>. Their audio is only available via the main stereo output ports of Hydrogen.
+              </para>
+            </warning>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Enable <abbrev>JACK</abbrev> timebase master support</emphasis>:
+              whether Hydrogen will respond to or ignore the incoming BBT (tempo and measure) information sent by the <abbrev>JACK</abbrev> server.
+
+              <tip>
+	            <para>
+	              Some <abbrev>JACK</abbrev> clients are not well written or have fallen into despair. As a result Hydrogen could receive nuissance signals messing up its playback. If you encounter weird jumps in the transport position and/or Hydrogen is out of sync after relocating the transport position, you might try to uncheck this option.
+                </para>
+              </tip>
+              
+            <note>
+              <para>
+                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected.
+              </para>
+            </note>
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Apply and restart output</emphasis>:
+              restarts the audio driver and makes all settings specified above take effect without closing and reopening the entire Preferences dialog.
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Polyphony</emphasis>:
+              specifies the maximum number of notes played simultaneously. Supported values are from <option>1</option> to <option>512</option>.
+              <tip>
+	            <para>
+	              Depending on your CPU Hydrogen might be overrunning your audio driver due to this parameter.
+                </para>
+              </tip>
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Metronome volume</emphasis>:
+              sets the volume of the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link>. Supported values are from <option>1</option> to <option>100</option>.
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Interpolate resampling</emphasis>:
+              specifies the type of resampling applied if a <link linkend="def.sample">sample</link> does not use the same Sample Rate as Hydrogen.
+            </para>
+          </listitem>
         </itemizedlist>
+        
       </sect1>
 
       <sect1 id="chpt.preferences.midi_tab">
@@ -571,33 +773,92 @@
         </figure>
 
         <para>
-	      TODO: update image, options, and description
+	      TODO: update image
         </para>
 
-        <para>The "MIDI System" tab (<xref linkend="fig.preferences.midi_tab"/>)
-        contains all <abbrev>MIDI</abbrev> settings. Here you can choose the <abbrev>MIDI</abbrev> driver (<abbrev>ALSA</abbrev>, PortMidi, 
-        CoreMidi or JackMidi) input, and channel(s) that Hydrogen should respond to.  
-        You can also define midi bindings: link a midi note/message to an action. 
-        To do this simply press the red 'REC' button left of the event-action binding line.  
-        A popup will inform you that Hydrogen is waiting for your input.  Press/hit/turn 
-        the key/pad/knob on your midi keyboard (or controller) that you want to link to 
-        this action.  The popup will close and the Event Param value will now show the 
-        midi note value of the key you pressed.  Once this is done you can select an Action 
-        from the action drop-down list.  </para>
+        <itemizedlist>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold"><abbrev>MIDI</abbrev> driver</emphasis>:
+              selects the <abbrev>MIDI</abbrev> driver Hydrogen will use to send <abbrev>MIDI</abbrev> messages.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Input</emphasis>:
+              selects the device Hydrogen will expect <abbrev>MIDI</abbrev> messages to receive from.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Output</emphasis>:
+              selects the device Hydrogen will send <abbrev>MIDI</abbrev> messages to.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Channel</emphasis>:
+              specifies whether Hydrogen should listen to <abbrev>MIDI</abbrev> messages on one particular of the 16 available channels or on all of them.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Ignore note-off</emphasis>:
+              specifies whether Hydrogen will respond to the <emphasis>note-off</emphasis> <abbrev>MIDI</abbrev> message.
+              <note>
+	            <para>
+                  This makes better use of the drumkit samples used in Hydrogen when working with certain external <abbrev>MIDI</abbrev> devices. But it may also discrd <emphasis>Cymbal choke</emphasis> messages in some e-drums.
+                </para>
+              </note>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Enable <abbrev>MIDI</abbrev> feedback</emphasis>:
+              specifies whether Hydrogen will send a message about updated values everytime a certain parameter is changed. These parameters are
+              <itemizedlist>
+	            <listitem>
+	              <para>
+	                the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> volume and mute state
+                  </para>
+                </listitem>
+                <listitem>
+                  <para>
+	                an Instrument Strip <link linkend="chpt.mixer.channel_strips.pan">pan</link>, <link linkend="chpt.mixer.channel_strips.fader_and_lcd">volume</link>, <link linkend="chpt.mixer.channel_strips.mute">mute</link> and <link linkend="chpt.mixer.channel_strips.solo">solo</link> state
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                whether the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link> is activated
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Discard <abbrev>MIDI</abbrev> messages after action has been triggered</emphasis>:
+              specifies whether a <abbrev>MIDI</abbrev> note - after performing the <abbrev>MIDI</abbrev> action associated with it - should be played back or be discard.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Use output note as input note</emphasis>:
+              specifies whether the output <abbrev>MIDI</abbrev> note of an instrument specified in the <link linkend="chpt.instrument_editor.midi_out_settings"><abbrev>MIDI</abbrev> Out Settings</link> of the Instrument Editor should be used to map the input as well.
+
+              <note>
+	            <para>
+	              If this option is unchecked, only the currently selected instrument will used to play back the received <abbrev>MIDI</abbrev> notes.
+                </para>
+              </note>
+            </para>
+          </listitem>
+        </itemizedlist>
 
         <para>
-	      TODO: note and enforce that table will be covered in MIDI API chapter.
+	      Using the table in the lower part of the tab you can associate <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> actions</link> provided by Hydrogen with incoming <abbrev>MIDI</abbrev> messages. How this is done will be explained in the <xref linkend="chpt.midi.events" />.
         </para>
         
-        <note>
-          <para>
-          Note that some actions (like SELECT_NEXT_PATTERN) 
-        also require an Action Param that references the pattern you want to
-        select with this midi action.
-          </para>
-        </note>
-       <para>See <xref linkend="chpt.midi"/> for more info on
-       <abbrev>MIDI</abbrev> actions.</para>
      </sect1>
 
       <sect1 id="chpt.preferences.osc_tab">
@@ -613,12 +874,19 @@
         </figure>
 
         <para>
-	      TODO: note that further OSC options are only available when OSC support is enabled
+	      TODO: update image
         </para>
         
         <para>The <abbrev>OSC</abbrev> tab (<xref linkend="fig.preferences.osc_tab"/>) let's
         you modify all options associated with <abbrev>OSC</abbrev> (Open Sound Control) (see
-        section <xref linkend="chpt.osc"/> for details).
+        chapter <link linkend="chpt.osc">OSC API</link> for details).
+
+        <note>
+	      <para>
+	        In order to see and access the <emphasis role="bold">Enable OSC feedback</emphasis> and <emphasis role="bold">Import port</emphasis> option, <emphasis role="bold">Enable OSC support</emphasis> has to be checked first.
+          </para>
+        </note>
+        
         <itemizedlist>
           <listitem>
             <para><emphasis role="bold">Enable OSC support</emphasis>: Allows
@@ -630,30 +898,31 @@
             change. A client can register to receive <abbrev>OSC</abbrev> messages by sending
             a message to Hydrogen previously. The <emphasis role="bold">state broadcast as feedback</emphasis> is
             composed of the following <abbrev>OSC</abbrev> paths:
+            
             <itemizedlist>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis></para>
+                <para><link linkend="chpt.osc.command.master_volume_absolute">/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis></para>
+                <para><link linkend="chpt.osc.command.toggle_metronome">/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis></para>
+                <para><link linkend="chpt.osc.command.mute_toggle">/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis></para>
+                <para><link linkend="chpt.osc.command.strip_volume_absolute">/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis></para>
+                <para><link linkend="chpt.osc.command.strip_volume_relative">/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis></para>
+                <para><link linkend="chpt.osc.command.pan_absolute">/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis></para>
+                <para><link linkend="chpt.osc.command.strip_mute_toggle">/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis></link></para>
               </listitem>
               <listitem>
-                <para>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis></para>
+                <para><link linkend="chpt.osc.command.strip_solo_toggle">/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis></link></para>
               </listitem>
             </itemizedlist>
 
@@ -661,7 +930,7 @@
           </listitem>
           <listitem>
             <para><emphasis role="bold">Incoming port</emphasis>: Specifies the
-            <abbrev>OSC</abbrev> port Hydrogen will be register to.</para>
+            <abbrev>OSC</abbrev> port Hydrogen will be register to. Values up to <option>20000</option> are supported.</para>
           </listitem>
         </itemizedlist>
         </para>
@@ -686,15 +955,100 @@
         </figure>
 
         <para>
-	      TODO: update image, options, and description
+	      TODO: update image
         </para>
 
-        <para>The "Appearance" tab (<xref
-        linkend="fig.preferences.appearance_tab"/>) let's you modify Hydrogen look 
-        and feel (font settings and interface style). On this tab you can also change the 
-        VU meters fall-off speed and switch between Single pane and Tabbed interface
-        mode (see <xref linkend="chpt.overview"/>)
+        <para>The Appearance tab let's you modify Hydrogen's look 
+        and feel.
         </para>
+
+        <itemizedlist>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Application font</emphasis>:
+              specifies both the font family and point size of the application font used for the grid in <link linkend="chpt.pattern_editor">Pattern Editor</link> and <link linkend="chpt.song_editor">Song Editor</link> as well as for the pattern names in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor.
+
+              <note>
+	            <para>
+	              In order for this setting to take effect, Hydrogen has to be restarted.
+                </para>
+              </note>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Style</emphasis>:
+              specifies a certain look of GUI elements like menus, scrollbars, and dialog windows.
+
+              <tip>
+	            <para>
+	              Using this option you might can make Hydrogen integrate with you operating system better.
+                </para>
+              </tip>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Mixer font</emphasis>:
+              specifies both the font family and point size of the mixer font used for the instrument name in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>.
+
+              <note>
+	            <para>
+	              In order for this setting to take effect, Hydrogen has to be restarted.
+                </para>
+              </note>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Meters falloff speed</emphasis>:
+              specifies for how fast the update of the maximum value of the audio signal will be shown in the LCD displays of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> before its replacement with a more recent value will take place.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Default interface layout</emphasis>:
+              specifies whether the GUI of Hydrogen will be arranged in Single Pane mode or Tabbed mode (see <link linkend="chpt.overview.gui">Main User Interface</link> for details).
+              <note>
+	            <para>
+	              In order for this setting to take effect, Hydrogen has to be restarted.
+                </para>
+              </note>
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">High-resolution display scaling</emphasis>:
+              specifies whether the underlying bitmap graphics of the GUI should be scaled to larger sizes by Qt in order for Hydrogen to look nice with your system's resolution settings.
+            </para>
+          </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Coloring method for Song Editor elements</emphasis>:
+              determines the coloring of the boxes indicating the presence of a pattern in the <link linkend="chpt.song_editor">Song editor</link>. The available options are:
+              <itemizedlist>
+	            <listitem>
+	              <para>
+	                <option>Automatic</option>:
+                    Uses as much colors as there are patterns in the song.
+                  </para>
+                </listitem>
+	            <listitem>
+	              <para>
+	                <option>Steps</option>:
+                    Uses a certain number <parameter>n</parameter> of colors you have to enter via a second input widget. After coloring the first <parameter>n</parameter> patterns with different colors the same set of colors will be used for the next <parameter>n</parameter> patterns and so on.
+                  </para>
+                </listitem>
+	            <listitem>
+	              <para>
+	                <option>Fixed</option>:
+                    Colors all patterns using a single color determined via its hue in a separate input widget.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </listitem>
+        </itemizedlist>
       </sect1>
 
     </chapter>
@@ -1135,77 +1489,87 @@
           </inlinemediaobject>
         </para>
 
-          <para>Set measure type and Beat Counter.</para>
+        <para>This section covers how to interactively change tempo using the <emphasis>Beat Counter</emphasis>. Due to conceptional similarities the <emphasis>Tap Tempo</emphasis> will be covered as well which itself is not related to the widget displayed above.</para>
 
-        <para>It is possible to change the tempo at any time using the Tap Tempo and
-        Beat Counter features of Hydrogen.  You can do this while the song is playing or
-        while the song is stopped.  To change the tempo, hit the
-        <keycap>,</keycap> (comma) key in the tempo you want.
-        After the correct number of keystrokes has been detected (see 
-        below for details), the tempo will change to the average tempo 
-        you tapped the <keycap>,</keycap> key.  If you continue to tap,
-        these new taps will become a part of a rolling average.  If you tap
-        accidentally, or if you wait too long between taps, the Tap Tempo
-        counter will start over.</para>
+        <sect2 id="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">
+          <title>Tap Tempo</title>
+	      
+          <para>The Tap Tempo allows you to change the tempo at any time - with playback rolling or stopped - within Hydrogen. To change the tempo, hit the
+          <keycap>\</keycap> key in the tempo you want.
+          </para>
 
-        <para>The Tap Tempo is a part of the Beat Counter, which is essentially a
-        Tap Tempo on steroids.  By default the Beat Counter display is not
-        visible.  To see the Beat Counter widget click the 
-        <inlinemediaobject>
-          <imageobject>
-            <imagedata fileref="img/btn_bc_off.png" format="PNG" />
-          </imageobject>
-        </inlinemediaobject>
-        button or simply press <keycap>,</keycap>.</para>
+          <para>
+            After two keystrokes the tempo will be first changed according to the time difference between the two taps. With each addition keystroke the tempo will be changed again to the rolling average value of the last up top eight hits of the <keycap>\</keycap> button. If you tap
+          accidentally, or if you wait too long between taps, the Tap Tempo
+          counter will start over.</para>
 
-        <para>The tempo that you tap will be considered even beats of the song's 
-        beat type.  The beat type can be set to 1/8 (for eight-note beats), 1/4 (for
-        quarter-note beats), 1/2 (for half-note beats), and 1/1 (for whole-note
-        beats).  To change the beat type use the left <keycap>+</keycap> / <keycap>-</keycap> buttons.  To change
-        the Countdown Counter value, use the right <keycap>+</keycap> / <keycap>-</keycap> buttons.  The Countdown 
-        Counter value can be set between 2 and 16 beats.  (I.e. if you set the beat to 6, you will
-        have to tap 6 times before the new tempo is computed and set.)  When the
-        display shows an <parameter>R</parameter>, it means that the Beat Counter
-        is ready to start from 0.  When you tap <keycap>,</keycap>, the <parameter>R</parameter> will change to
-        1, and will increment with every keystroke until it reaches the Countdown 
-        Counter value (shown just below the <parameter>R</parameter>).</para>
+          <note>
+	        <para>
+	          The widget shown above is the one of the Beat Counter. The Tap Tempo itself does neither have a dedicated widget nor any option to be set by the user.
+            </para>
+          </note>
+        </sect2>
+        
+        <sect2 id="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">
+          <title>Beat Counter</title>
 
-        <para>The button in the bottom right-hand controls the auto-start
-        feature, and it toggles between <parameter>S</parameter> and
-        <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
-        (<emphasis>Play</emphasis>), the song will set the new tempo and
-        automatically start to play after you tap the right number of beats (if
-        it's not already playing, of course).  This way, if you have the
-        Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
-        the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
-        BPM</emphasis>), the auto-start is disabled.</para>
+          <para>The Beat Counter is essentially a Tap Tempo on steroids.  By default the Beat Counter widget is not
+          visible.  To see the Beat Counter widget click the 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_bc_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          button or simply press <keycap>,</keycap>.</para>
 
-        <para>For example: Suppose you have a live band, Hydrogen, and a
-        softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
-        at the same time.  Set the beat type to 1/4 and the number of beats to
-        4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
-        the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
-        starts on 1.</para>
+          <para>The tempo that you tap will be considered to correspond to even beats of the song's 
+          beat type.  The beat type can be set to 1/8 (for eight-note beats), 1/4 (for
+          quarter-note beats), 1/2 (for half-note beats), and 1/1 (for whole-note
+          beats).  To change the beat type use the left <keycap>+</keycap> / <keycap>-</keycap> buttons.  To change
+          the Countdown Counter value, use the right <keycap>+</keycap> / <keycap>-</keycap> buttons.  The Countdown 
+          Counter value can be set between 2 and 16 beats.  (I.e. if you set the beat to 6, you will
+          have to tap 6 times before the new tempo is computed and set.)  When the
+          display shows an <parameter>R</parameter>, it means that the Beat Counter
+          is ready to start from 0.  When you tap <keycap>,</keycap>, the <parameter>R</parameter> will change to
+          1, and will increment with every keystroke until it reaches the Countdown 
+          Counter value (shown just below the <parameter>R</parameter>).</para>
 
-        <para>Another example: Same situation, but the song doesn't require
-        Hydrogen or synths until some point later.  During that time, a human
-        (e.g. guitar player) will be setting the tempo.  On the measure before
-        Hydrogen is supposed to play, tap the comma key 1-2-3-4 with the
-        beat... and you're in on the next beat (at the right tempo).</para>
+          <para>The button in the bottom right-hand controls the auto-start
+          feature, and it toggles between <parameter>S</parameter> and
+          <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
+          (<emphasis>Play</emphasis>), the song will set the new tempo and
+          automatically start to play after you tap the right number of beats (if
+          it's not already playing, of course).  This way, if you have the
+          Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
+          the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
+          BPM</emphasis>), the auto-start is disabled.</para>
 
-        <tip>
-          <para>A start offset and a latency compensation for the Beat Counter can be configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences Dialog.
+          <para>For example: Suppose you have a live band, Hydrogen, and a
+          softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
+          at the same time.  Set the beat type to 1/4 and the number of beats to
+          4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
+          the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
+          starts on 1.</para>
+
+          <para>Another example: Same situation, but the song doesn't require
+          Hydrogen or synths until some point later.  During that time, a human
+          (e.g. guitar player) will be setting the tempo.  On the measure before
+          Hydrogen is supposed to play, tap the comma key 1-2-3-4 with the
+          beat... and you're in on the next beat (at the right tempo).</para>
+
+          <tip>
+            <para>An temporal offset when starting the playback after setting the tempo and a latency compensation for the Beat Counter can be configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences Dialog.
           </para>
         </tip>
 
         <note>
           <para>
-            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and the Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
-        Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
+            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and both Tap Tempo and Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
+            Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
           </para>
         </note>
-
-        <para>TODO: since the Tap Tempo is a subset of the Beat Counter and both are bound to the same key and triggered by the same API function: Is there actually a separate Tap Tempo or can it be dropped since it was superseded by the Beat Counter a long time ago?</para>
+      </sect2>
+      
       </sect1>
       <sect1 id="sect.main_toolbar.bpm_control_and_metronome">
         <title>BPM Control and Metronome</title>
@@ -1304,7 +1668,7 @@
           </para>
           <tip>
             <para>
-            You can check whether Hydrogen is in <emphasis>slave</emphasis> mode by hovering over the disabled <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Beat Counter</link> or <link linkend="chpt.song_editor.timeline">Timeline</link>.
+            You can check whether Hydrogen is in <emphasis>slave</emphasis> mode by hovering over the disabled <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link> or <link linkend="chpt.song_editor.timeline">Timeline</link>.
             </para>
           </tip>
 
@@ -2851,12 +3215,12 @@
           <title>Controls</title>
 
           <itemizedlist>
-	        <listitem>
+	        <listitem id="chpt.instrument_editor.layers.controls.layer_gain">
 	          <para>
 	            <emphasis role="bold">Layer Gain:</emphasis>: TODO
               </para>
             </listitem>
-            <listitem>
+            <listitem id="chpt.instrument_editor.layers.controls.component_volume">
 	          <para>
 	            <emphasis role="bold">Component Volume</emphasis>: TODO
               </para>
@@ -3223,7 +3587,7 @@
               </tip>
           </para>
         </listitem>
-	    <listitem>
+	    <listitem id="chpt.mixer.channel_strips.mute">
 	      <para>
             <inlinemediaobject>
               <imageobject>
@@ -3237,7 +3601,7 @@
             </para>
           </note>
         </listitem>
-	    <listitem>
+	    <listitem id="chpt.mixer.channel_strips.solo">
 	      <para>
             <inlinemediaobject>
               <imageobject>
@@ -3251,7 +3615,7 @@
             </para>
           </note>
         </listitem>
-	    <listitem>
+	    <listitem id="chpt.mixer.channel_strips.pan">
 	      <para>
             <inlinemediaobject>
               <imageobject>
@@ -3274,7 +3638,7 @@
       the effect plugins in the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>.
           </para>
         </listitem>
-	    <listitem>
+	    <listitem id="chpt.mixer.channel_strips.fader_and_lcd">
 	      <para>
             <emphasis role="bold">Fader and LCD</emphasis>:
               the fader next to the instrument's name allows you to adjust the volume of the instrument which will be applied on top of all the individual note velocities, layer gains etc. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The LCD displays shows its peak value.
@@ -3782,6 +4146,16 @@
       </informalfigure>                
 
       <para>
+	            You can also define midi bindings: link a midi note/message to an action. 
+        To do this simply press the red 'REC' button left of the event-action binding line.  
+        A popup will inform you that Hydrogen is waiting for your input.  Press/hit/turn 
+        the key/pad/knob on your midi keyboard (or controller) that you want to link to 
+        this action.  The popup will close and the Event Param value will now show the 
+        midi note value of the key you pressed.  Once this is done you can select an Action 
+        from the action drop-down list.
+      </para>
+      
+      <para>
 	    On the other hand, it also includes the ability to control various widgets, like knobs or faders, via <abbrev>MIDI</abbrev> events. These will be called <link linkend="chpt.midi.learnable"><abbrev>MIDI</abbrev>-learnable Widgets</link>.
       </para>
       
@@ -3860,6 +4234,13 @@
         <para>
 	      TODO: list is out of date and not ordered as the one in the GUI
         </para>
+        <note>
+          <para>
+          Note that some actions (like SELECT_NEXT_PATTERN) 
+        also require an Action Param that references the pattern you want to
+        select with this midi action.
+          </para>
+        </note>
 
         <para>Next is a list of the available Actions: an Action describes what Hydrogen should do 
         when a specific <abbrev>MIDI</abbrev> Event is detected.</para>
@@ -4007,14 +4388,13 @@
       <listitem><para>
 	      <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
           time passing between successive encounters of this commands and uses
-          it to set the current tempo. (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)
+          it to set the current tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.
 	    </para></listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">TAP_TEMPO</emphasis> : another command
           calculating the average time passing between successive encounters of
-          this commands and uses it to set the current tempo (see <xref
-          linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)
+          this commands and uses it to set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.
 	    </para></listitem>
 	    
         <listitem id="chpt.midi.actions.select_instrument">
@@ -4282,7 +4662,7 @@
                  <entry></entry>
                  <entry>Calculates the average time passing between successive
                  encounters of this commands and uses it to set the current
-                 tempo (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>).</entry>
+                 tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TAP_TEMPO</emphasis>/</entry>
@@ -4290,7 +4670,7 @@
                  <entry></entry>
                  <entry>Another command calculating the average time passing
                  between successive encounters of this commands and uses it to
-                 set the current tempo (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>).</entry>
+                 set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Tap Tempo</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ACTIVATION</emphasis>/</entry>
@@ -4328,7 +4708,7 @@
                  <entry>Unmutes the <emphasis>Master</emphasis> output in the
                  Mixer (sequencer keeps running).</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.mute_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
@@ -4351,7 +4731,7 @@
                  volume by 0.05 and for all other values it decreases it by
                  0.05. (-1: -0.05 , 0: 0 , 1: +0.05)</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.strip_volume_absolute">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0.0,1.5]</entry>
@@ -4362,7 +4742,7 @@
                  control for instrument component strips is not implemented
                  yet).</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.strip_volume_relative">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_RELATIVE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{-1;0;1}</entry>
@@ -4373,7 +4753,7 @@
                  control for instrument component strips is not implemented
                  yet).</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.pan_absolute">
                  <entry>/Hydrogen/<emphasis role="bold">PAN_ABSOLUTE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0.0,1.0]</entry>
@@ -4398,7 +4778,7 @@
                  127.0. Please note that this parameter is not displayed
                  anywhere in the Mixer but in the Instrument Rack.</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.strip_mute_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
@@ -4406,7 +4786,7 @@
                  <emphasis>X</emphasis>. Input argument will be
                  ignored.</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.strip_solo_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
@@ -4472,7 +4852,7 @@
                  <entry>Deactivated Loop Mode for a value of 0 and activates it
                  for all others.</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.toggle_metronome">
                  <entry>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
@@ -4954,7 +5334,7 @@
           the whole song (or sequence). Songs are group of patterns with their
           properties and are manager using the song editor</para>
         </listitem>
-        <listitem>
+        <listitem id="chpt.file_types.h2playlist">
           <para><emphasis role="bold">*.h2playlist</emphasis>: <abbrev>XML</abbrev> file
           describing a playlist. A Playlist is a (ordered) group of songs.</para>
         </listitem>
@@ -5079,11 +5459,11 @@
           </row>
           <row>
             <entry><keycap>,</keycap></entry>
-            <entry>Use Beatcounter (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</entry>
+            <entry>Use the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link></entry>
           </row>
           <row>
             <entry><keycap>\</keycap></entry>
-            <entry>Use Tap Tempo (see <xref linkend="sect.main_toolbar.tap_tempo_beat_counter"/>)</entry>
+            <entry>Use <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link></entry>
           </row>
           <row>
             <entry><keycap>+</keycap></entry>
