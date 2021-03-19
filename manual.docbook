@@ -297,9 +297,13 @@
         large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
         sizes).
         </para>
-        <para>
-	      TODO: mention and link corresponding option in Preferences > Appearance
-        </para>
+
+        <tip>
+	      <para>
+	        You can switch between these two modes in the <link linkend="chpt.preferences.appearance_tab">Appearance</link> tab of the Preferences.
+          </para>
+        </tip>
+
         <para>
           Below you can see the main UI split up in 5 parts: the <link linkend="chpt.main_menu">Main Menu</link>, <link linkend="chpt.main_toolbar">Main 
           Toolbar</link>, <link linkend="chpt.song_editor">Song Editor</link>, <link linkend="chpt.pattern_editor">Pattern Editor</link> and the <link linkend="chpt.instrument_editor">Instrument</link> and <link linkend="chpt.sound_library">Sound Library Editor</link>.
@@ -1076,112 +1080,77 @@
         <para>This menu offers file
         related functions.</para>
 
+        <note>
+	      <para>
+	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.nsm" /> for details).
+          </para>
+        </note>
+
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">New</emphasis>: creates a new song.</para>
+            <para><emphasis role="bold">New</emphasis>: creates a new and empty song.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Show Info</emphasis>: sets general properties of the
-            song such as name, author, license and generic notes.</para>
+            song such as name, author, license, and generic notes.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open</emphasis>: opens a song.</para>
+            <para><emphasis role="bold">Open</emphasis>: opens an existing song (a <link linkend="chpt.file_types.h2song">.h2song</link> file).</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open Demo</emphasis>: opens a demo song (demo songs
-            are stored in
-            <filename>$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).</para>
+            <para><emphasis role="bold">Open Demo</emphasis>: opens one of the demo song shipped with Hydrogen.
+
+            <note>
+	          <para>
+	            The demo songs are stored in <filename>$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).
+              </para>
+            </note>
+            </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing last used
-            songs.</para>
+            <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing the last used songs (ordered from most recent to least recent).</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Save</emphasis>: saves changes to current song.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Save as</emphasis>: saves current song specifying a
-            name (default path:
-            <filename>$HOME/.hydrogen/data/songs/)</filename>.</para>
+            <para><emphasis role="bold">Save as</emphasis>: saves current song as <link linkend="chpt.file_types.h2song">.h2song</link> file to a path of your choice.
+
+            <tip>
+	          <para>
+	            In order for Hydrogen to automatically list it in the <link linkend="sect.sl.songs">Songs section of the Sound Library</link>, you have to store it in 
+            <filename>$HOME/.hydrogen/data/songs/</filename>.
+              </para>
+            </tip>
+            </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open pattern</emphasis>: opens a saved pattern
+            <para><emphasis role="bold">Open pattern</emphasis>: opens a pattern (a <link linkend="chpt.file_types.h2pattern">.h2pattern</link> file)
             belonging to the current drumkit.</para>
           </listitem>
           <listitem id="sect.main_menu.projects.export_pattern_as">
             <para><emphasis role="bold">Export Pattern As</emphasis>: saves a
-            pattern. In order for Hydrogen to automatically list it in the <link linkend="sect.sl.patterns">Patterns section of the Sound Library</link> you have to store it in
-            <filename>$HOME/.hydrogen/data/patterns/drumkit_name/</filename></para>
+            pattern as a <link linkend="chpt.file_types.h2pattern">.h2pattern</link> file.
+
+            <tip>
+	          <para>
+	            In order for Hydrogen to automatically list it in the <link linkend="sect.sl.patterns">Patterns section of the Sound Library</link>, you have to store it in
+            <filename>$HOME/.hydrogen/data/patterns/drumkit_name/</filename>.
+              </para>
+            </tip>
+            </para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export MIDI file</emphasis>: exports the current song in
             <abbrev>MIDI</abbrev> format.</para>
           </listitem>
           <listitem id="sect.main_form.export_song" xreflabel="Export Song">
-            <para><emphasis role="bold">Export song</emphasis>: exports the current song in WAV
-            format.</para>
+            <para><emphasis role="bold">Export song</emphasis>: exports the current song into an audio file.</para>
             
-            <figure id="fig.Export_song">
-              <title>Export a Song</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="img/Export_song.png" format="PNG" />
-                </imageobject>
-              </mediaobject>
-            </figure>
-
-            <para>
-	          TODO: update image and describe new and old options (in an itemized list instead of a procedural guide)
-            </para>
-            
-            <para>Once your song is finished you can export it to an audio file.
-            This audio file can then be played on your favorite media player or imported
-            in an other audio application. To export a song you need to do 3 things:
-            </para>
-            
-            <procedure>
-
-              <step>
-                <para>Enter a name and location for the export file in the 'Export filename' field
-                </para>
-              </step>
-              
-              <step>
-                <para>Select one of the available templates (e.g. CD, DAT ...) according to your needs:  
-                each template has a specific bitrate, resolution, and audio format (WAV, AIFF, FLAC or OGG).
-                You can tweak the selected template using the samplerate/sampledepth dropdown boxes
-                underneath the template field.
-                
-                </para>
-              </step>
-              
-              <step>
-                <para>Export mode: 'Export to a single track' will export 1 stereo downmix of your 
-                song (= the master output).  'Export to separate tracks' will create files for each 
-                instrument/track.  'Both' will create a stereo downmix + audio files for all individual
-                instruments.
-                </para>
-              </step>
-              
-            </procedure>
-            
-            <para>
-              Once all these settings have been configured all you need to do is click the 'Export'
-              button and Hydrogen will generate the requested files.
-            </para>
-
-            <note>
-              <para>
-                If you have tempo changes in your song (see <xref linkend="chpt.song_editor.timeline"/>) 
-                these tempo changes will not be exported.  This is a know limitation of the current versions 
-                (including 0.9.6)
+            <para>The <emphasis role="bold">Export mode</emphasis> option <option>Export to a single track</option> will export one stereo downmix of your song - the master output. <option>Export to separate tracks</option> will create files for each 
+              instrument/track. <option>Both</option> will create a stereo downmix + audio files for all individual
+              instruments.
               </para>
-              <para>
-                As a workaround you can record the output of Hydrogen with an audio recording
-                application (like Ardour, Qtractor ...)
-              </para>
-            </note>
-
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export Lilypond file</emphasis>: exports the current song to LilyPond.</para>
@@ -1198,7 +1167,6 @@
 
       <sect1 id="sect.main_menu.undo">
         <title>Undo</title>
-        <para>Undo/Redo functions.</para>
         
         <itemizedlist>
           <listitem>
@@ -1213,43 +1181,61 @@
           </listitem>
         </itemizedlist>
       </sect1>
+      
       <sect1 id="sect.main_menu.drumkits">
         <title>Drumkits</title>
-        <para>This menu offers drumkit (sound libraries) functions.</para>
-        <para>
-	      TODO: update item list
-        </para>
         <itemizedlist>
           <listitem id="sect.main_menu.drumkits.new">
-            <para><emphasis role="bold">New</emphasis>: creates a new <link linkend="chpt.overview.drumkits">drumkit</link>.
+            <para><emphasis role="bold">New</emphasis>: creates a new and empty <link linkend="chpt.overview.drumkits">drumkit</link> by clearing all the instruments of the current one.
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Save</emphasis>: saves all drumkit settings (including those of their instruments and sound samples).
+	        <para>
+	          <emphasis role="bold">Open</emphasis>:
+              opens one of the registered drumkits and replaces the currently loaded one.
+
+              <note>
+	            <para>
+	              Via this option you can only load drumkits that have been already imported into Hydrogen. If you just received a new one from an external source, be sure to use the <link linkend="sect.main_form.import_drumkit">Import</link> option described below.
+                </para>
+              </note>
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Properties</emphasis>:
+              sets general properties of the drumkit such as its name, author, license, general information, image, and image license.
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Save</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples).
             </para>
           </listitem>
           <listitem id="sect.main_menu.drumkits.save_as">
-            <para><emphasis role="bold">Save As</emphasis>: saves all drumkit settings (including those of their instruments and sound samples) in a folder chosen via a file browser. The default directory is
-            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>.
+            <para><emphasis role="bold">Save As</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples) as new drumkit.
+
+            <note>
+	          <para>
+	            The new drumkit will be a physical copy of the old one and is stored into the <filename>$HOME/.hydrogen/data/drumkits/</filename> folder.
+              </para>
+            </note>
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export</emphasis>: compress all instruments samples and settings in a drumkit in 
-            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>
+            <para><emphasis role="bold">Export</emphasis>: compress and stores all instruments samples and settings of any drumkit (not just the current one) into a folder of your choice as <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file.
             </para>
           </listitem>
           <listitem id="sect.main_form.import_drumkit">
-            <para><emphasis role="bold">Import</emphasis>: imports another drumkit from the local filesystem.
+            <para><emphasis role="bold">Import</emphasis>: imports a drumkit (a <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file) from the local filesystem.
             </para>
           </listitem>
           
           <listitem id="sect.main_form.online_import_drumkit">
             <para><emphasis role="bold">Online Import</emphasis>: imports another drumkit from a remote location
-            through an <abbrev>XML</abbrev> feed. The <abbrev>XML</abbrev> file that should be provided is <emphasis
+            through a <abbrev>XML</abbrev> feed. The <abbrev>XML</abbrev> file that should be provided is <emphasis
             role="bold">NOT</emphasis> <abbrev>RSS</abbrev> compliant (see <ulink
             url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
-            website</ulink> for an example). To load another drumkit in your
-            current working session of Hydrogen, read <xref linkend="chpt.sound_library"/>.
+            website</ulink> for an example).
             </para>
 
             <para>
@@ -1264,7 +1250,7 @@
 
               The Import window will pop up with the Internet tab selected.
               By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
-              and after pressing the 'Update list' button you will get a complete list of all
+              and after pressing the <emphasis role="bold">Update list</emphasis> button you will get a complete list of all
               drumkits that are available for download.  In the status column you can see
               if a kit is installed or not.
             </para>
@@ -1275,7 +1261,7 @@
         license type.
         </para>
        <para>
-         You can install a drumkit by selecting it and clicking 'Download and Install'.
+         You can install a drumkit by selecting it and clicking <emphasis role="bold">Download and Install</emphasis>.
          
     
        <informalfigure id="fig.downloading_soundlibrary">
@@ -1302,7 +1288,7 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">Add Instrument</emphasis>: adda a new instrument to your current drumkit.</para>
+            <para><emphasis role="bold">Add Instrument</emphasis>: adds a new instrument to the current drumkit.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Clear All</emphasis>: deletes all instruments from the current drumkit.</para>
@@ -1373,17 +1359,20 @@
       <sect1 id="sect.main_menu.debug">
         <title>Debug</title>
 
-        <para>
-	      TODO: update option list and description
-        </para>
-        
         <para>Tools mainly for debugging
-        and monitoring Hydrogen (only available when compiled with debug
-        support !).</para>
+        and monitoring Hydrogen.</para>
+
+        <note>
+          <para>
+            The Debug option is only available if Hydrogen was compiled with 
+            debug support.
+          </para>
+        </note>
+
 
         <itemizedlist>
           <listitem id="chpt.preferences.audio_engine_tab">
-            <para><emphasis role="bold">Show audio engine info</emphasis>: opens a window that shows
+            <para><emphasis role="bold">Show Audio Engine Info</emphasis>: opens a window that shows
             various stats about Hydrogen and the audio driver.
 
             <figure id="fig.preferences.audio_engine_tab">
@@ -1395,25 +1384,59 @@
               </mediaobject>
             </figure>
 
-            In case <abbrev>JACK</abbrev> is used,
-            buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
-            server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
-            application tries to connect).</para>
             <note>
-              <para>
-                Note that the Audio Engine tab is only available if Hydrogen was compiled with 
-                debug support.
+	          <para>
+                In case <abbrev>JACK</abbrev> is used,
+                buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
+                server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
+                application tries to connect).
               </para>
             </note>
+            </para>
+          </listitem>
+          
+          <listitem id="chpt.main_menu.debug.show_filesystem_info">
+            <para><emphasis role="bold">Show Filesystem Info</emphasis>:
+            opens a window that shows you the paths to the user and system data directory as well as to the folder used to create temporary files.
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Log Level</emphasis>:
+              specifies which log messages will be written into the log file.
+              <itemizedlist>
+	            <listitem>
+	              <para>
+                    <option>None</option>: No messages will be written at all.
+                  </para>
+                </listitem>
+	            <listitem>
+	              <para>
+                    <option>Error</option>: Only messages concerning critical errors will be written out.
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                <option>Warning</option>: Like <option>Error</option> but in addition also general warnings about potential bugs or inconsistencies will be written out.
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                <option>Info</option>: Like <option>Warning</option> but also all info messages indicating the correct behavior of Hydrogen will be written out.
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                <option>Debug</option>: Like <option>Info</option> but also internal help messages used for developing will be written out.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </listitem>
 
-          </listitem>
           <listitem>
-            <para><emphasis role="bold">debug action</emphasis>: insert debug
-            commands.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Print Objects</emphasis>: print on stdout current
-            objects map.</para>
+            <para><emphasis role="bold">Open Log File</emphasis>:
+            opens Hydrogen's log in either the terminal the application was started in or in a new terminal instance.</para>
           </listitem>
         </itemizedlist>
       </sect1>
@@ -1423,15 +1446,14 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">User manual</emphasis>: opens a window with this
-            manual :)</para>
+            <para><emphasis role="bold">User Manual</emphasis>: opens a window with a version of this manual installed on your local computer.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">About</emphasis>: the usual window with license
             information, acknowledgments, etc.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Report bug</emphasis>: opens the <ulink url="https://github.com/hydrogen-music/hydrogen/issues">Hydrogen issue page at github.com</ulink> in your default Internet browser.
+            <para><emphasis role="bold">Report Bug</emphasis>: opens the <ulink url="https://github.com/hydrogen-music/hydrogen/issues">Hydrogen issue page at github.com</ulink> in your default Internet browser.
             You can open a new issue to communicate a bug here (first search if there exists already an issue about it).</para>
           </listitem>
           <listitem>
@@ -5643,12 +5665,12 @@
       filetypes:</para>
 
       <itemizedlist>
-        <listitem>
+        <listitem id="chpt.file_types.h2pattern">
           <para><emphasis role="bold">*.h2pattern</emphasis>: <abbrev>XML</abbrev> file
           describing a single pattern. Patterns are group of beats and are
           managed in the pattern editor.</para>
         </listitem>
-        <listitem>
+        <listitem id="chpt.file_types.h2song">
           <para><emphasis role="bold">*.h2song</emphasis>: <abbrev>XML</abbrev> file describing
           the whole song (or sequence). Songs are group of patterns with their
           properties and are manager using the song editor</para>
@@ -5657,7 +5679,7 @@
           <para><emphasis role="bold">*.h2playlist</emphasis>: <abbrev>XML</abbrev> file
           describing a playlist. A Playlist is a (ordered) group of songs.</para>
         </listitem>
-        <listitem>
+        <listitem id="chpt.file_types.h2drumkit">
           <para><emphasis role="bold">*.h2drumkit</emphasis>: a compressed and
           archived folder containing all sound samples composing a drumkit and a
           description <abbrev>XML</abbrev> file. Drumkits are basically group of sound
