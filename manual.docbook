@@ -1479,7 +1479,7 @@
       </figure>
 
       <para>Before analyzing the two main frames of Hydrogen, let's take a quick
-      look at the main toolbar and its components</para>
+      look at the main toolbar and its components.</para>
       
       <sect1 id="sect.main_toolbar.transport_control">
         <title>
@@ -1494,17 +1494,18 @@
           </inlinemediaobject>
         </para>
 
-          <para>Main controls to start (also bound to <keycap>Space</keycap>), stop, record, fast forward, rewind, loop a song or a
-          pattern and to switch between Song mode and Pattern mode.</para>
+        <para>Using these buttons you can <emphasis role="bold">start</emphasis> (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis> the playback, <emphasis role="bold">record</emphasis> new patterns (TODO: link to recording section), <emphasis role="bold">fast forward</emphasis> and <emphasis role="bold">rewind</emphasis> the transport position, and <emphasis role="bold">loop</emphasis> playback.</para>
 
-          <para>Set Pattern/Song Mode. When <emphasis>Song mode</emphasis> is selected Hydrogen will play 
+          <para>In addition, you can switch between Song mode and Pattern mode. When <emphasis>Song mode</emphasis> is selected Hydrogen will play 
           the complete song. This is the sequence of patterns you have created in the <link linkend="chpt.song_editor">Song Editor</link>. When <emphasis>Pattern mode</emphasis> is selected 
           Hydrogen will play the pattern that is currently selected, and thus displayed 
-          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>.</para>
+          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. TODO: replace this paragraph by section (elsewhere) about both modes.</para>
 
-          <para>
-	        When using the <link linkend="chpt.keyboard_and_mouse">Keyboard</link> to navigate in the <link linkend="chpt.song_editor">Song Editor</link> and <link linkend="chpt.pattern_editor">Pattern Editor</link> the shortcut <keycap>Ctrl</keycap> + <keycap>Space</keycap> (or <keycap>Alt</keycap> + <keycap>Space</keycap> on MacOS) will change the mode to the one corresponding to the editor. In addition, it will move the current transport position to either the note (Pattern Editor) or the pattern (Song Editor) focused by the cursor and starts the playback.
-          </para>
+          <tip>
+            <para>
+	          When using the <link linkend="chpt.keyboard_and_mouse">Keyboard</link> to navigate in the <link linkend="chpt.song_editor">Song Editor</link> and <link linkend="chpt.pattern_editor">Pattern Editor</link> the shortcut <keycap>Ctrl</keycap> + <keycap>Space</keycap> (or <keycap>Alt</keycap> + <keycap>Space</keycap> on MacOS) will change the mode to the one corresponding to the editor. In addition, it will move the current transport position to either the note (Pattern Editor) or the pattern (Song Editor) focused by the cursor and starts the playback.
+            </para>
+          </tip>
 
           <para>TODO: update image</para>
       </sect1>
@@ -1565,19 +1566,40 @@
           Counter value (shown just below the <parameter>R</parameter>).</para>
 
           <para>The button in the bottom right-hand controls the auto-start
-          feature, and it toggles between <parameter>S</parameter> and
-          <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
-          (<emphasis>Play</emphasis>), the song will set the new tempo and
+          feature, and it toggles between 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          and
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          .  When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and
           automatically start to play after you tap the right number of beats (if
           it's not already playing, of course).  This way, if you have the
           Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
-          the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
-          BPM</emphasis>), the auto-start is disabled.</para>
+          the next beat.  When it shows
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+          (for <emphasis>Set BPM</emphasis>), the auto-start is disabled.</para>
 
           <para>For example: Suppose you have a live band, Hydrogen, and a
           softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
           at the same time.  Set the beat type to 1/4 and the number of beats to
-          4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
+          4.  Enable auto-start (button shows
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          ).  Count off
           the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
           starts on 1.</para>
 
@@ -1615,7 +1637,7 @@
 	      TODO: update image: Rubberband button is missing
         </para>
 
-        <para>Set the speed of the song (range: 10-400 bpm).
+        <para>Set the speed of the song in the range from <option>10</option> to <option>400</option> bpm (beats per minute).
         </para>
         
           <tip>
@@ -1654,7 +1676,7 @@
           </inlinemediaobject>
         </para>
 
-            <para>The CPU bargraph gives you an indication of the CPU load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a midi message.</para>
+            <para>The CPU bargraph gives you an indication of the CPU load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a <abbrev>MIDI</abbrev> message.</para>
 
         <tip>
 	      <para>
@@ -3151,9 +3173,9 @@
             </inlinemediaobject>
           </para>
 
-          <para>The <emphasis role="bold"><link linkend="def.gain">Gain</link></emphasis> sets the overall volume for the <link linkend="def.sample">sample</link>.  This Gain is
-          applied after the gain that you set for the layer (TODO: link), and before the one
-          that is set in the <link linkend="chpt.mixer">Mixer</link> (TODO: link).  If the
+          <para>The <emphasis role="bold"><link linkend="def.gain">Gain</link></emphasis> adjusts the overall volume of all <link linkend="def.sample">samples</link> associated with this Instrument. This Gain is
+          applied in addition to the one you set for each <link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer</link> and before the one
+          that is set in the <link linkend="chpt.mixer.channel_strips.fader_and_lcd">Instrument Channel Strips</link>.  If the
           set to <option>0</option>, the instrument will be
           silent.  If the Gain is <option>1.0</option>, the volume of the samples will not be
           adjusted.  If the Gain is set higher, the samples will be
@@ -3180,8 +3202,8 @@
           of.  To set other instruments into the same grouping, set their Mute
           Group parameter to the same number.  (For example, to group all the
           high-hat instruments, you can set all their Mute Group parameters to
-          1.  To have a snare drum Mute Group, set their Mute Group parameters
-          to 2.)
+          <option>1</option>.  To have a snare drum Mute Group, set their Mute Group parameters
+          to <option>2</option>.)
           </para>
 
           <para>If the <emphasis role="bold">Auto-Stop-Note</emphasis> box is checked, Hydrogen will immediately stop any playing <link linkend="def.sample">samples</link>
@@ -3585,7 +3607,7 @@
           </para>
           
           <para>
-            In <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop and loop points for the sample by dragging the 
+            In the <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop, and loop point for the sample by dragging the 
             the 3 markers:
             <itemizedlist>
               <listitem id="chpt.sample_editor.wave_display.start_marker">
@@ -3624,16 +3646,30 @@
             </listitem>
 	        <listitem>
 	          <para>
-	            <emphasis role="bold">Loop Mode</emphasis>: <option>forward</option>, <option>reverse</option>, or <option>ping-pong</option>.
-
-                TODO: Describe options.
+	            <emphasis role="bold">Loop Mode</emphasis>:
+                specifies the way the individual loops will be played back.
+                <itemizedlist>
+	              <listitem>
+	                <para>
+	                  <option>forward</option>: plays the <emphasis>Loop Count</emphasis> loop passages the usual way from left to right.
+                    </para>
+                  </listitem>
+                  <listitem>
+	                <para>
+	                  <option>reverse</option>: plays the <emphasis>Loop Count</emphasis> loop passages the backwards (from right to left).
+                    </para>
+                  </listitem>
+                  <listitem>
+	                <para>
+	                  <option>ping-pong</option>: plays the <emphasis>Loop Count</emphasis> loop passages alternatively backwards and forwards (starting with backwards).
+                    </para>
+                  </listitem>
+                </itemizedlist>
               </para>
             </listitem>
 	        <listitem>
 	          <para>
-	            <emphasis role="bold">Loop Count</emphasis>: indicates the number of times the sample will be repeated between Loop and the End Marker.
-
-                TODO: check whether this is true
+	            <emphasis role="bold">Loop Count</emphasis>: indicates the number of times the sample will be repeated between Loop and the End Marker. This section will therefore be played back <emphasis>Loop Count + 1</emphasis> times.
               </para>
             </listitem>
 	        <listitem>
@@ -3683,14 +3719,9 @@
           </para>
 
           <para>
-	        TODO: is this section valid? AFAIK rubberband support is experimental and only activated if explicitly activated during the compilation. In all other instances there is Hydrogen's own pitch shifting in the Sampler. But there is still the RUB button in the Main Toolbar. Maybe that one is doing nothing either.
-          </para>
-
-          <para>
 	        TODO: how is this related to the (layer-level) pitch set in the Instrument Editor?
           </para>
-          <para>This section of the Sample Editor allows you to control the Rubberband settings.
-          Rubberband is a tool that can change the tempo of a sample without changing 
+          <para>This section of the Sample Editor allows you to control the <command>Rubberband</command> settings - a tool that can change the tempo of a sample without changing 
           the sample's pitch (and vice versa).</para>
           <para>If you are using Ubuntu you can install rubberband from the Software Center 
           (rubberband-cli).  For other linux distros check your package manager.  For other platforms
