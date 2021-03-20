@@ -179,6 +179,15 @@
         used entirely with the mouse, with the exception of text entry.
       </para>
 
+      <para>
+        Most actions are performed with the left mouse button, and
+        implement what should be the most obvious behaviour for any
+        control. The right mouse button may sometimes perform an
+        alternate action, or bring up a context menu. Some common
+        controls also have alternate actions accessed by clicking
+        while holding a modifier key:
+      </para>
+
       <itemizedlist>
 	    <listitem>
 	      <para>
@@ -187,10 +196,15 @@
         </listitem>
         <listitem>
 	      <para>
-	        <keycap>Shift</keycap> + <keycap>left click</keycap> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>
+	        <keycap>Shift</keycap> + <keycap>left click</keycap> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>)
           </para>
         </listitem>
       </itemizedlist>
+
+      <para>
+        Some controls will also respond to scroll wheel events for
+        convenience.
+      </para>
       
       <para>
         The keyboard can also be used for navigating and editing in
@@ -221,7 +235,7 @@
           <listitem>
             <para>
               <emphasis role="bold"><keycap>Tab</keycap> and <keycap>Shift</keycap> + <keycap>Tab</keycap></emphasis> : move
-              between the Pattern, Songn and Note Property Editor.
+              between the Pattern, Song and Note Property Editor.
             </para>
           </listitem>
           <listitem>
@@ -241,7 +255,7 @@
 
       <note>
 	    <para>
-          Note that the keyboard input cursor is hidden from view until one of
+          The keyboard input cursor is hidden from view until one of
           the above keys is pressed. This keeps the display clear and
           uncluttered when using the mouse. You can alter this default behavior in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences.
 	      
@@ -252,6 +266,7 @@
         <link linkend="def.sample">samples</link> and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
       </para>
     </chapter>
+
 
 </part>
 
@@ -1169,9 +1184,6 @@
                 As a workaround you can record the output of Hydrogen with an audio recording
                 application (like Ardour, Qtractor ...)
               </para>
-              <para>
-	            TODO: is this still valid?
-              </para>
             </note>
 
           </listitem>
@@ -1719,30 +1731,45 @@
       <para>
 	    TODO: how about having multiple patterns of different lengths in one column of the screenshot?
       </para>
-      <para>The Song Editor gives an
-      overview of the whole song (e.g. intro, verse, bridge,
-      chorus and so on). Each blue colored square on this panel represents a pattern. In case of multiple patterns of different lenghts in one column only the largest one(s) will be represented by a square. The shorter patterns are indicated by rectangles which width indicate their length relative to the longest one.</para>
-
+      <para>
+        The Song Editor gives an overview of the whole song
+        (e.g. intro, verse, bridge, chorus and so on).  Each blue
+        colored square on this panel represents a playing pattern.
+        The song editor gives you complete freedom to add/remove
+        patterns to the song and to move or copy any part of your
+        song.
+      </para>
+      <para>
+        Columns represent time periods within the song. While they're
+        shown as the same width in the Song Editor, the length of time
+        taken to play through a column is set by the length of the
+        pattern or patterns which are active and playing during that
+        time slot.
+      </para>
+      <para>
+        Multiple patterns can be active at the same time in a
+        column, and they will play simultaneously. This allows
+        instrument parts to be separated out into different patterns,
+        or to add ornamentation or fills on top of basic patterns
+        without duplicating the basics into both patterns.
+      </para>
+      <para>
+        In the case of multiple patterns of different lengths in one
+        column only the largest one(s) will be represented by a
+        square. The shorter patterns are indicated by rectangles whose
+        width indicate their length relative to the longest one.
+      </para>
       <tip>
 	    <para>
 	      Instead of having the same color for all patterns you can set different colors schemes in the <link linkend="chpt.preferences.appearance_tab">Appearance tab</link> in the Preferences.
         </para>
       </tip>
-      
-      <para>
-        The song editor gives
-      you complete freedom to add/remove patterns to the song and to move or 
-      copy any part of your song.
-      </para>
-
-      <para>
-	    TODO: describe the different ways of editing (groups of) patterns using mouse and keyboard. (New UX)
-      </para>
 
       <para>
 	    TODO: description about how to use the song ruler for navigation.
       </para>
-      
+
+
      <sect1 id="chpt.song_editor.main_controls">
       <title>Main Controls</title>
       <para>
@@ -1788,39 +1815,79 @@
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_draw.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Draw Mode.  This mode allows
-            you to insert patterns by drawing - holding the left button while moving the mouse - blocks on the song canvas.
+            </imageobject></inlinemediaobject> : enables Select Mode (<xref
+            linkend="chpt.song_editor.editor_modes.select" />).
           </para>
-          <para>Clicking a square on the song canvas will add a pattern (the square 
-            will turn blue) and clicking it again will remove it.
-          </para>
-          <para>
-            Using the arrow keys on the keyboard, and the <keycap>Return</keycap>,
-            will also add and remove patterns from the song.
-          </para>
-
-          <note>
-	        <para>
-              The keyboard input cursor is usually hidden unless you press one
-              of the keys listed in <xref linkend="chpt.keyboard_and_mouse" />.
-              You can alter this default behavior in the <link
-              linkend="chpt.preferences.general_tab">General tab</link> of the
-              Preferences.
-            </para>
-          </note>
           
         </listitem>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_select.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Select Mode.  This mode allows 
-            you to select multiple patterns in the Song Editor and delete/move/copy them.</para>
-		<para>Once you have selected a part of your song you can <emphasis role="bold">delete</emphasis> 
-			it by pressing the <keycap>Delete</keycap>.  You can <emphasis
-             role="bold">move</emphasis> it by simply dragging your selection
-            to another location with your mouse or by cutting (<keycap>Ctrl</keycap> + <keycap>x</keycap>) and pasting (<keycap>Ctrl</keycap> + <keycap>v</keycap>) using your kyeboard. You can also <emphasis role="bold">copy</emphasis>
-             your selection by either holding <keycap>Ctrl</keycap> while dragging it to a new location or by copying (<keycap>Ctrl</keycap> + <keycap>c</keycap>) and pasting (<keycap>Ctrl</keycap> + <keycap>v</keycap>) using your kyeboard.
+            </imageobject></inlinemediaobject> : enables Draw Mode (<xref
+            linkend="chpt.song_editor.editor_modes.select" />).</para>
+        </listitem>
+
+        <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked Mode">
+          <para><inlinemediaobject><imageobject>
+            <imagedata fileref="img/btn_pattern_mode.png" format="PNG"/>
+            </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern Mode</emphasis> 
+            <inlinemediaobject><imageobject>
+            <imagedata fileref="img/stacked_mode_V3.png" format="PNG"/>
+            </imageobject></inlinemediaobject>
+            or to <emphasis>Stacked Mode</emphasis> (<xref
+            linkend="chpt.song_editor.editor_modes.stacked" />).</para>
+
+        </listitem>
+      </itemizedlist>
+
+     </sect1>
+
+           <sect1 id="chpt.song_editor.editor_modes">
+        <title>Song Editor modes</title>
+        <para>
+          The Song Editor has two different interaction modes. The
+          default <emphasis role="bold">Select mode</emphasis> allows
+          pattern blocks to be set, cleared, selected, moved and
+          copied. The <emphasis role="bold">Draw mode</emphasis>
+          instead allows pattern sequences to be drawn freehand.
+        </para>
+
+        <para>
+          In both modes, you can perform basic editing: clicking an
+          empty square activates the pattern in that time slot, and
+          clicking again will deactivate it.
+        </para>
+
+        <para>
+          They keyboard can also be used for editing. The arrow keys
+          <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>
+          will move the keyboard input cursor, and pressing
+          <keycap>Return</keycap> will activate or deactivate the
+          pattern in the current column.
+        </para>
+
+        <sect2 id="chpt.song_editor.editor_modes.select">
+          <title>Select mode</title>
+          <para>
+            This mode allows
+            you to select multiple patterns in the Song Editor and
+            delete/move/copy them.
+          </para>
+	  <para>
+            Once you have selected a part of your song you can
+            <emphasis role="bold">delete</emphasis> it by pressing
+            <keycap>Delete</keycap>.  You can <emphasis
+            role="bold">move</emphasis> it by simply dragging your
+            selection to another location with your mouse, or by
+            cutting (<keycap>Ctrl</keycap> + <keycap>x</keycap>) and
+            pasting (<keycap>Ctrl</keycap> + <keycap>v</keycap>) using
+            your keyboard. You can also <emphasis
+            role="bold">copy</emphasis> your selection by either
+            holding <keycap>Ctrl</keycap> while dragging it to a new
+            location, or by copying (<keycap>Ctrl</keycap> +
+            <keycap>c</keycap>) and pasting (<keycap>Ctrl</keycap> +
+            <keycap>v</keycap>) using your keyboard.
           </para>
           <para>
             Selections can be modified by holding <keycap>Ctrl</keycap> while clicking to select
@@ -1832,10 +1899,34 @@
             with <keycap>Return</keycap>, to <emphasis
             role="bold">select</emphasis>, <emphasis
             role="bold">move</emphasis> and <emphasis
-            role="bold">copy</emphasis> (<keycap>Ctrl</keycap> + <keycap>Return</keycap>) parts of the
-            song.
+            role="bold">copy</emphasis> parts of the
+            song:
 
-            TODO: is this still valid? It doesn't work for me.
+            <itemizedlist>
+              <listitem>
+                <para><keycap>Shift</keycap> +
+                <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>
+                can be used to make selections using the keyboard</para>
+              </listitem>
+              <listitem>
+                <para><keycap>Return</keycap> over a selected block
+                will begin a move or copy</para>
+              </listitem>
+              <listitem>
+                <para><keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap> to
+                move the selected cells into position</para>
+              </listitem>
+              <listitem>
+                <para><keycap>Return</keycap> to move the selected
+                blocks into place</para>
+              </listitem>
+              <listitem>
+                <para><keycap>Ctrl</keycap> + <keycap>Return</keycap> to
+                <emphasis role="bold">copy</emphasis> the selected
+                blocks into place</para>
+              </listitem>
+            </itemizedlist>
+
           </para>
           <para>
             Pressing <keycap>Esc</keycap> will cancel an editing operation that's in
@@ -1843,26 +1934,63 @@
 
             TODO: if I'm not mistaking there are now several additional ways to cancel a selection too.
           </para>
+        </sect2>
 
+        <sect2 id="chpt.song_editor.editor_modes.draw">
+          <title>Draw mode</title>
           <para>
-	        TODO: how about we move the description of the Draw and Select Mode into the previous section or create a dedicated section just for them? It describes the behavior of the overall Song Editor instead of this button. In here there would just be "enables Select mode" including a link to the dedicated section.
+            This mode allows you to insert patterns by drawing -
+            holding the left button while moving the mouse - blocks on
+            the song canvas.
           </para>
-        </listitem>
+          <para>
+            Clicking a square on the song canvas will add a pattern
+            (the square will turn blue) and clicking it again will
+            remove it. Holding the mouse button down will continue
+            either adding or removing patterns from under the mouse
+            cursor.
+          </para>
+          <para>
+            Using the arrow keys on the keyboard, and the <keycap>Return</keycap>,
+            will also add and remove patterns from the song.
+          </para>
 
-        <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked Pattern Mode">
-          <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_pattern_mode.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern Mode</emphasis> 
-            <inlinemediaobject><imageobject>
-            <imagedata fileref="img/stacked_mode_V3.png" format="PNG"/>
-            </imageobject></inlinemediaobject>
-            or to <emphasis>Stacked Pattern Mode</emphasis>.</para>
-
-            <para>
-	          TODO: add a description of these two modes (maybe as subsections next to the Pattern and Song Mode)
+          <note>
+	    <para>
+              The keyboard input cursor is usually hidden unless you press one
+              of the keys listed in <xref linkend="chpt.keyboard_and_mouse" />.
+              You can alter this default behavior in the <link
+              linkend="chpt.preferences.general_tab">General tab</link> of the
+              Preferences.
             </para>
-        </listitem>
-      </itemizedlist>
+          </note>
+
+        </sect2>
+
+        <sect2 id="chpt.song_editor.editor_modes.stacked">
+          <title>Stacked Mode</title>
+          <para>
+            Normally when composing a pattern and editing it, you'll
+            listen to that single pattern looping over and over again
+            while working on it. Sometimes, however, it's useful to
+            hear that pattern in the context of other patterns (for
+            example, other instrument parts) while working on it.
+          </para>
+          <para>
+            Stacked mode will play multiple patterns simultaneously,
+            on a loop. You can select which patterns play using
+            <keycap>Ctrl</keycap> + <keycap>left click</keycap> on the
+            pattern's name. Selected patterns are all marked with a
+            triangle.
+          </para>
+          <note>
+            <para>
+              Hydrogen's playback mode must be set to <emphasis
+              role="bold">Pattern</emphasis> rather than
+              <emphasis role="bold">Song</emphasis> for Stacked mode to take effect.
+            </para>
+          </note>
+        </sect2>
 
       </sect1>
 
@@ -1870,7 +1998,7 @@
        <title>Sidebar</title>
 
        <para>
-	     TODO: update option list and description. update or drop image
+	 TODO: update option list and description. update or drop image
        </para>
 
       <para>Right-clicking the name of a pattern will show you a menu 
@@ -1888,14 +2016,9 @@
       
       
       <itemizedlist mark="opencircle">
-
-        <listitem>
-          <para><emphasis role="bold">Edit</emphasis>: will open the selected pattern in the Pattern Editor.
-          </para>
-        </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Copy</emphasis>: will copy the selected pattern to a new pattern in your song.
+          <para><emphasis role="bold">Duplicate</emphasis>: will copy the selected pattern to a new pattern in your song.
           </para>
           <note>
             <para>
@@ -1946,7 +2069,8 @@
         </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Load Pattern</emphasis>: will open the selected pattern in the Pattern Editor.
+          <para><emphasis role="bold">Load Pattern</emphasis>: will
+          load a pattern from a saved pattern file.
           </para>
         </listitem>
         
@@ -1965,7 +2089,8 @@
         </listitem>
         
         <listitem>
-          <para><emphasis role="bold">Virtual Pattern</emphasis>: will open the selected pattern in the Pattern Editor.
+          <para><emphasis role="bold">Virtual Pattern</emphasis>: will
+          open the virtual pattern editor.
           </para>
           <para>
 	        Virtual patterns are a convenient way of grouping patterns together. 
@@ -2316,14 +2441,11 @@
               <imageobject>
                 <imagedata fileref="img/btn_quant_off.png" format="PNG" />
               </imageobject>
-            </inlinemediaobject>
-             : enables/disables quantization.
-            When enabled the beats inserted 
-            will automatically respect the grid resolution currently applied.</para>
-
-            <para>
-	          TODO: this is only relevant for recording, isn't it?
-            </para>
+            </inlinemediaobject> : enables/disables quantization.
+            When enabled, beats recorded from MIDI or from the
+            computer keyboard will automatically respect the grid
+            resolution currently applied, just like notes inserted by
+            clicking. </para>
             
             </listitem>
 
@@ -2367,8 +2489,9 @@
      
         <para>Each instrument has its own set of features that are accessible by 
         <keycap>right-clicking</keycap> the instrument.  From the context menu that pops up you can select </para>
+
         <itemizedlist mark="opencircle"> 
-          <listitem><para><emphasis role="bold">Clear notes</emphasis> : to remove all notes for this instrument in this pattern.  </para></listitem>
+          <listitem><para><emphasis role="bold">Delete notes</emphasis> : to remove all notes for this instrument in this pattern.  </para></listitem>
           <listitem id="chpt.pattern_editor.sidebar.fill_notes">
             <para><emphasis role="bold">Fill notes</emphasis> : this allows you to fill
           up the pattern with notes for the selected instrument.  Depending on the choice you make (fill all, fill 1/2, fill 1/4 ...)
@@ -2380,12 +2503,84 @@
           the more hydrogen will hit <quote>hard</quote> on that instrument when
           played.
           </para></listitem>
-          <listitem><para><emphasis role="bold">Delete Instrument</emphasis> : well, deletes the instrument ;-)</para></listitem>
-        </itemizedlist>
 
-        <para>
-	      TODO: update list
-        </para>
+          <listitem>
+            <para><emphasis role="bold">Select notes</emphasis> : 
+            will select all the notes played on this instrument in the
+            current pattern. They can then be copied, moved etc. in the
+            pattern editor main area.
+            </para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Edit all patterns</emphasis> :
+            this section of the menu has actions which operate on
+            notes played by the instrument in <emphasis>all</emphasis>
+            the patterns of the song.
+            </para>
+            
+            <itemizedlist>
+              <listitem>
+                <para><emphasis role="bold">Cut notes</emphasis> : 
+                remove <emphasis>all</emphasis> notes played on
+                this instrument, in all patterns, and keep them in the
+                clipboard.
+                </para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis role="bold">Copy notes</emphasis> :
+                copy <emphasis>all</emphasis> notes played on
+                this instrument, in all patterns, to the clipboard.
+                </para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis role="bold">Paste notes</emphasis> :
+                paste a multi-pattern selection from the clipboard to
+                this instrument.
+                </para>
+              </listitem>
+              
+              <listitem>
+                <para><emphasis role="bold">Delete notes</emphasis> :
+                delete all the notes associated with this instrument,
+                without affecting the clipboard.
+                </para>
+              </listitem>
+              
+            </itemizedlist>
+            
+            <para>
+              These can be used together to change the instrumentation
+              of a song, entirely replacing one instrument with
+              another by just copy and pasting the notes to a new
+              instrument.
+            </para>
+
+          </listitem>
+
+          <listitem>
+            <para><emphasis role="bold">Instrument</emphasis> :
+            this section of the menu has actions which operate on the
+            instrument as a whole:
+            </para>
+            <itemizedlist>
+              <listitem>
+                <para><emphasis role="bold">Rename
+                instrument</emphasis> :
+                change the name of the instrument.
+                </para>
+              </listitem>
+              
+              <listitem>
+                <para><emphasis role="bold">Delete
+                Instrument</emphasis> : well, deletes the instrument ;-)</para>
+              </listitem>
+
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
         
         <para>The
         <inlinemediaobject>
@@ -2404,8 +2599,8 @@
         
         <para>The order of the instruments can be rearranged by simply dragging an instrument 
         up/down in the list and dropping it on a new position within the drumkit.  Doing so 
-        will not change anything to the sequence you have created for that instrument, nor will
-        it change anything to the song or pattern you are working on.  It <emphasis role="bold">
+        will not change the sequence of notes you have created for that instrument, nor will
+        it change anything about the song or pattern you are working on.  It <emphasis role="bold">
         will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <emphasis role="bold"><abbrev>MIDI</abbrev> note 
         mapping</emphasis> : in the table below you can find the link between the instrument
         position, the <abbrev>MIDI</abbrev> note and the <abbrev>qwerty</abbrev> keyboard keys.</para>
@@ -2456,7 +2651,7 @@
   </sect1>
 
       <sect1 id="chpt.pattern_editor.drumkit">
-        <title>Drumkit Editor</title>
+        <title>Drum Pattern Editor</title>
 
         <figure id="fig.PatternEditor_drumkit">
          <title>Pattern Editor in Drum Mode</title>
@@ -2504,9 +2699,13 @@
         </para>
 
         <para>
+          TODO: image needs update
+        </para>
+
+        <para>
           As in the Song Editor, the arrow keys can also be used to
           move around the pattern, and notes can be placed or removed
-          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />.
+          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />).
         </para>
 
         <para>
@@ -2516,7 +2715,7 @@
           timing. Movement in the horizontal direction is constrained by the currently selected grid
           <link linkend="chpt.pattern_editor.controls.res">resolution</link>, however this can be overridden by holding down <keycap>Alt</keycap> while moving notes.
         </para>
-
+          
         <para>
           Moving a selection of notes with <keycap>Ctrl</keycap> held down will copy
           them to the new location rather than moving, as in the Song Editor.
@@ -2527,10 +2726,10 @@
           the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-        <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
-         <inlinemediaobject>
-          <imageobject>
-           <imagedata fileref="img/Rec_button.png" format="PNG"/>
+          <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
         (see <xref linkend="sect.main_toolbar.transport_control"/>) and simply playing your pattern on your 
