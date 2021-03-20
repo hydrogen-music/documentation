@@ -500,6 +500,39 @@
             </para>
             
           </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Path to the Rubberband command-line utility</emphasis>:
+              sets the absolute path to the <command>rubberband</command> command line interface (CLI) Hydrogen will use for stretching samples in the <link linkend="chpt.sample_editor.pitch">Sample Editor</link>.
+              <note>
+	            <para>
+	              This option is only available if your version of Hydrogen does <emphasis>not</emphasis> already has <command>rubberband</command> support compiled into it. If it does and the option is hot shown, everything is already configured and you don't have to worry about <command>rubberband</command> at all.
+                </para>
+              </note>
+
+              <tip>
+	            <para>
+	              If you are using Ubuntu, you can install <command>rubberband</command> from the Software Center 
+                  via the package <option>rubberband-cli</option>.  For other Linux distros please check your package manager and for other platforms
+                  please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
+                  </ulink>.
+                </para>
+              </tip>
+
+              <tip>
+	            <para>
+                  If <command>rubberband</command> is installed and configured correctly, you will see an extra button
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="img/rubber_off.png" format="PNG" />
+                    </imageobject>
+                  </inlinemediaobject>
+          button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link>. You can use this behavior to verify your configuration.
+                </para>
+              </tip>
+          
+            </para>
+          </listitem>
         </itemizedlist>
 
       </sect1>
@@ -1661,7 +1694,13 @@
         </tip>
 
         <para>
-	      TODO: describe Rubberband button
+	      If either <command>rubberband</command> support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/rubber_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using <command>rubberband</command> whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
         </para>
         
       </sect1>
@@ -3718,46 +3757,61 @@
 	        TODO: screenshot of corresponding part
           </para>
 
-          <para>
-	        TODO: how is this related to the (layer-level) pitch set in the Instrument Editor?
-          </para>
-          <para>This section of the Sample Editor allows you to control the <command>Rubberband</command> settings - a tool that can change the tempo of a sample without changing 
-          the sample's pitch (and vice versa).</para>
-          <para>If you are using Ubuntu you can install rubberband from the Software Center 
-          (rubberband-cli).  For other linux distros check your package manager.  For other platforms
-          please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
-          </ulink>.  After installing rubberband you should check if the path to the rubberband cli is 
-          configured correctly (see <xref linkend="chpt.preferences.general_tab"/>).</para>
+          <para>This section of the Sample Editor allows you to use <command>Rubberband</command> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
+
+          <note>
+            <para>
+              These options are only avaiable if <command>rubberband</command> support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
+  After installing rubberband you should check if the path to the rubberband cli is 
+  configured correctly (see <xref linkend="chpt.preferences.general_tab"/>). If neither is the case, all associated widgets will be disabled.
+            </para>
+	        <para>
+	          When <emphasis role="bold">Sample length to beat</emphasis> is set to <option>off</option> the whole <command>rubberband</command> functionality will be disabled.
+              </para>
+            </note>
           
-          <para>If rubberband is installed correctly you will have access to the rubberband 
-          settings, and an extra button named 'RUB' will be available in the Main Toolbar,
-          right of the BPM LCD display:
-          
-          <informalfigure id="rubberband_button">
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/MainControls_Rubberband_btn.png" format="PNG" />
-              </imageobject>
-            </mediaobject>
-          </informalfigure>                
-          
-          </para>
-          <para>Back to the rubberband settings : 
           <itemizedlist mark="opencircle">
-            <listitem><para><emphasis role="bold">Sample length to beat</emphasis>: when set to 'off', rubberband functionality is disabled. 
-            Normally this parameter should be set to the length of the part of the sample between 
-            the Start and End marker, expressed in number of beats.</para>
+            <listitem><para><emphasis role="bold">Sample length to beat</emphasis>:
+            speficies the length of the resulting sample (after <command>rubberband</command> was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
+
+            <tip>
+	          <para>
+	            This should be set to the length of the part of the sample between 
+                the Start and End marker, expressed in number of beats.
+              </para>
+            </tip>
+
+            <note>
+	          <para>
+	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using <command>rubberband</command> again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/rubber_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+          button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly.
+              </para>
+            </note>
+            
+          </para>
             </listitem>
-            <listitem><para><emphasis role="bold">Pitch</emphasis>: this setting allows you to change the pitch of the sample, expressed in 
-            semitones,cent.</para>
+            <listitem><para><emphasis role="bold">Pitch</emphasis>:
+            specifies the resulting pitch of the sample, expressed in 
+            <option>semitones,cent</option>.
+
+            <note>
+	          <para>
+	            This pitch will affect all instances of the sample in addition to the <link linkend="chpt.instrument_editor.pitch_shift_parameters">Pitch Shift Parameters</link> in the Instrument Editor and the <link linkend="chpt.pattern_editor.note_properties.notekey">NoteKey</link> property of each individual note.
+              </para>
+            </note>
+          </para>
             </listitem>
-            <listitem><para><emphasis role="bold">Crispness</emphasis>: this setting does not affect tempo or pitch, but changes the way
-            the sample sounds.</para>
+            <listitem><para><emphasis role="bold">Crispness</emphasis>:
+            fine-tunes the processing algorithm used by <command>rubberband</command>. It does not affect tempo or pitch, but changes the way
+            the sample sounds.
+          </para>
             </listitem>
           </itemizedlist>
-          </para>
-          <para><emphasis role="bold">Note</emphasis>: If you want Hydrogen to recalculate the sample length on the fly (using rubberband)
-          you must enable the 'RUB' button (see figure above).</para>
         </sect1>
         
         <sect1 id="chpt.sample_editor.playback_and_envelope_editor">
