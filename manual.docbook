@@ -297,9 +297,13 @@
         large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
         sizes).
         </para>
-        <para>
-	      TODO: mention and link corresponding option in Preferences > Appearance
-        </para>
+
+        <tip>
+	      <para>
+	        You can switch between these two modes in the <link linkend="chpt.preferences.appearance_tab">Appearance</link> tab of the Preferences.
+          </para>
+        </tip>
+
         <para>
           Below you can see the main UI split up in 5 parts: the <link linkend="chpt.main_menu">Main Menu</link>, <link linkend="chpt.main_toolbar">Main 
           Toolbar</link>, <link linkend="chpt.song_editor">Song Editor</link>, <link linkend="chpt.pattern_editor">Pattern Editor</link> and the <link linkend="chpt.instrument_editor">Instrument</link> and <link linkend="chpt.sound_library">Sound Library Editor</link>.
@@ -321,7 +325,7 @@
       <sect1 id="chpt.overview.drumkits">
         <title>Drumkit Concept</title>
         
-        <para>First of all a little history on the Drumkits. Hydrogen began as a
+        <para>Let's start with a little history on the concept of Drumkits within in Hydrogen. It began as a
         dedicated drum machine but has evolved into a versatile <link linkend="def.sample">sample</link>-based sound synthesizer/sequencer 
         that is capable of generating and manipulating all sorts of sounds. Hence the original 
         "Drumkit" terminology is slightly misleading. You can load any kind of sound into a
@@ -330,8 +334,8 @@
         </para>
 
         <para>
-          Each Drumkit is a collection of a number
-          of instruments (snare, kick, sampled voice, bass sound ...) and in its turn an instrument can consist of multiple
+          To sum it up, nowadays a Drumkit is a collection of a number
+          of instruments (snare, kick, sampled voice, bass sound ...), using one or more <link linkend="def.component">components</link> which each can consist of multiple
         <link linkend="def.layer">layered</link> samples.
         </para>
 
@@ -341,9 +345,6 @@
           </para>
         </tip>
 
-        <para>
-	      TODO: add component concept in here.
-        </para>
       </sect1>
     </chapter>
 
@@ -499,6 +500,39 @@
             </para>
             
           </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Path to the Rubberband command-line utility</emphasis>:
+              sets the absolute path to the <command>rubberband</command> command line interface (CLI) Hydrogen will use for stretching samples in the <link linkend="chpt.sample_editor.pitch">Sample Editor</link>.
+              <note>
+	            <para>
+	              This option is only available if your version of Hydrogen does <emphasis>not</emphasis> already has <command>rubberband</command> support compiled into it. If it does and the option is hot shown, everything is already configured and you don't have to worry about <command>rubberband</command> at all.
+                </para>
+              </note>
+
+              <tip>
+	            <para>
+	              If you are using Ubuntu, you can install <command>rubberband</command> from the Software Center 
+                  via the package <option>rubberband-cli</option>.  For other Linux distros please check your package manager and for other platforms
+                  please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
+                  </ulink>.
+                </para>
+              </tip>
+
+              <tip>
+	            <para>
+                  If <command>rubberband</command> is installed and configured correctly, you will see an extra button
+                  <inlinemediaobject>
+                    <imageobject>
+                      <imagedata fileref="img/rubber_off.png" format="PNG" />
+                    </imageobject>
+                  </inlinemediaobject>
+          button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link>. You can use this behavior to verify your configuration.
+                </para>
+              </tip>
+          
+            </para>
+          </listitem>
         </itemizedlist>
 
       </sect1>
@@ -622,10 +656,9 @@
             <para><option>Post-Fader</option>:</para>
             <itemizedlist>
               <listitem><para>note <link linkend="chpt.pattern_editor.note_properties.velocity">velocity</link> and <link linkend="chpt.pattern_editor.note_properties.pan">pan</link></para></listitem>
-              <listitem><para><link linkend="chpt.instrument_editor.layers.controls.component_volume">component volume</link></para></listitem>
               <listitem><para><link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link></para></listitem>
+              <listitem><para>component <link linkend="chpt.instrument_editor.layers.controls.component_volume">gain</link> and <link linkend="chpt.mixer.component_strips.fader_and_lcd">volume</link></para></listitem>
               <listitem><para>instrument <link linkend="chpt.instrument_editor.gain_and_mute_group">gain</link>, <link linkend="chpt.mixer.channel_strips.pan">pan</link>, and <link linkend="chpt.mixer.channel_strips.fader_and_lcd">volume</link></para></listitem>
-              <listitem><para>main component volume (TODO: insert link)</para></listitem>
             </itemizedlist>
             <para><option>Pre-Fader</option>:</para>
             <itemizedlist>
@@ -1005,7 +1038,7 @@
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Mixer font</emphasis>:
-              specifies both the font family and point size of the mixer font used for the instrument name in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>.
+              specifies both the font family and point size of the mixer font used for the instrument names in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and the component names in the <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
 
               <note>
 	            <para>
@@ -1017,7 +1050,7 @@
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Meters falloff speed</emphasis>:
-              specifies for how fast the update of the maximum value of the audio signal will be shown in the LCD displays of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> before its replacement with a more recent value will take place.
+              specifies for how fast the update of the maximum value of the audio signal will be shown in the LCD displays of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>, and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> before its replacement with a more recent value will take place.
             </para>
           </listitem>
 	      <listitem>
@@ -1080,112 +1113,77 @@
         <para>This menu offers file
         related functions.</para>
 
+        <note>
+	      <para>
+	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.nsm" /> for details).
+          </para>
+        </note>
+
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">New</emphasis>: creates a new song.</para>
+            <para><emphasis role="bold">New</emphasis>: creates a new and empty song.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Show Info</emphasis>: sets general properties of the
-            song such as name, author, license and generic notes.</para>
+            song such as name, author, license, and generic notes.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open</emphasis>: opens a song.</para>
+            <para><emphasis role="bold">Open</emphasis>: opens an existing song (a <link linkend="chpt.file_types.h2song">.h2song</link> file).</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open Demo</emphasis>: opens a demo song (demo songs
-            are stored in
-            <filename>$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).</para>
+            <para><emphasis role="bold">Open Demo</emphasis>: opens one of the demo song shipped with Hydrogen.
+
+            <note>
+	          <para>
+	            The demo songs are stored in <filename>$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).
+              </para>
+            </note>
+            </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing last used
-            songs.</para>
+            <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing the last used songs (ordered from most recent to least recent).</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Save</emphasis>: saves changes to current song.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Save as</emphasis>: saves current song specifying a
-            name (default path:
-            <filename>$HOME/.hydrogen/data/songs/)</filename>.</para>
+            <para><emphasis role="bold">Save as</emphasis>: saves current song as <link linkend="chpt.file_types.h2song">.h2song</link> file to a path of your choice.
+
+            <tip>
+	          <para>
+	            In order for Hydrogen to automatically list it in the <link linkend="sect.sl.songs">Songs section of the Sound Library</link>, you have to store it in 
+            <filename>$HOME/.hydrogen/data/songs/</filename>.
+              </para>
+            </tip>
+            </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open pattern</emphasis>: opens a saved pattern
+            <para><emphasis role="bold">Open pattern</emphasis>: opens a pattern (a <link linkend="chpt.file_types.h2pattern">.h2pattern</link> file)
             belonging to the current drumkit.</para>
           </listitem>
           <listitem id="sect.main_menu.projects.export_pattern_as">
             <para><emphasis role="bold">Export Pattern As</emphasis>: saves a
-            pattern. In order for Hydrogen to automatically list it in the <link linkend="sect.sl.patterns">Patterns section of the Sound Library</link> you have to store it in
-            <filename>$HOME/.hydrogen/data/patterns/drumkit_name/</filename></para>
+            pattern as a <link linkend="chpt.file_types.h2pattern">.h2pattern</link> file.
+
+            <tip>
+	          <para>
+	            In order for Hydrogen to automatically list it in the <link linkend="sect.sl.patterns">Patterns section of the Sound Library</link>, you have to store it in
+            <filename>$HOME/.hydrogen/data/patterns/drumkit_name/</filename>.
+              </para>
+            </tip>
+            </para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export MIDI file</emphasis>: exports the current song in
             <abbrev>MIDI</abbrev> format.</para>
           </listitem>
           <listitem id="sect.main_form.export_song" xreflabel="Export Song">
-            <para><emphasis role="bold">Export song</emphasis>: exports the current song in WAV
-            format.</para>
+            <para><emphasis role="bold">Export song</emphasis>: exports the current song into an audio file.</para>
             
-            <figure id="fig.Export_song">
-              <title>Export a Song</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="img/Export_song.png" format="PNG" />
-                </imageobject>
-              </mediaobject>
-            </figure>
-
-            <para>
-	          TODO: update image and describe new and old options (in an itemized list instead of a procedural guide)
-            </para>
-            
-            <para>Once your song is finished you can export it to an audio file.
-            This audio file can then be played on your favorite media player or imported
-            in an other audio application. To export a song you need to do 3 things:
-            </para>
-            
-            <procedure>
-
-              <step>
-                <para>Enter a name and location for the export file in the 'Export filename' field
-                </para>
-              </step>
-              
-              <step>
-                <para>Select one of the available templates (e.g. CD, DAT ...) according to your needs:  
-                each template has a specific bitrate, resolution, and audio format (WAV, AIFF, FLAC or OGG).
-                You can tweak the selected template using the samplerate/sampledepth dropdown boxes
-                underneath the template field.
-                
-                </para>
-              </step>
-              
-              <step>
-                <para>Export mode: 'Export to a single track' will export 1 stereo downmix of your 
-                song (= the master output).  'Export to separate tracks' will create files for each 
-                instrument/track.  'Both' will create a stereo downmix + audio files for all individual
-                instruments.
-                </para>
-              </step>
-              
-            </procedure>
-            
-            <para>
-              Once all these settings have been configured all you need to do is click the 'Export'
-              button and Hydrogen will generate the requested files.
-            </para>
-
-            <note>
-              <para>
-                If you have tempo changes in your song (see <xref linkend="chpt.song_editor.timeline"/>) 
-                these tempo changes will not be exported.  This is a know limitation of the current versions 
-                (including 0.9.6)
+            <para>The <emphasis role="bold">Export mode</emphasis> option <option>Export to a single track</option> will export one stereo downmix of your song - the master output. <option>Export to separate tracks</option> will create files for each 
+              instrument/track. <option>Both</option> will create a stereo downmix + audio files for all individual
+              instruments.
               </para>
-              <para>
-                As a workaround you can record the output of Hydrogen with an audio recording
-                application (like Ardour, Qtractor ...)
-              </para>
-            </note>
-
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export Lilypond file</emphasis>: exports the current song to LilyPond.</para>
@@ -1202,7 +1200,6 @@
 
       <sect1 id="sect.main_menu.undo">
         <title>Undo</title>
-        <para>Undo/Redo functions.</para>
         
         <itemizedlist>
           <listitem>
@@ -1217,43 +1214,61 @@
           </listitem>
         </itemizedlist>
       </sect1>
+      
       <sect1 id="sect.main_menu.drumkits">
         <title>Drumkits</title>
-        <para>This menu offers drumkit (sound libraries) functions.</para>
-        <para>
-	      TODO: update item list
-        </para>
         <itemizedlist>
           <listitem id="sect.main_menu.drumkits.new">
-            <para><emphasis role="bold">New</emphasis>: creates a new <link linkend="chpt.overview.drumkits">drumkit</link>.
+            <para><emphasis role="bold">New</emphasis>: creates a new and empty <link linkend="chpt.overview.drumkits">drumkit</link> by clearing all the instruments of the current one.
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Save</emphasis>: saves all drumkit settings (including those of their instruments and sound samples).
+	        <para>
+	          <emphasis role="bold">Open</emphasis>:
+              opens one of the registered drumkits and replaces the currently loaded one.
+
+              <note>
+	            <para>
+	              Via this option you can only load drumkits that have been already imported into Hydrogen. If you just received a new one from an external source, be sure to use the <link linkend="sect.main_form.import_drumkit">Import</link> option described below.
+                </para>
+              </note>
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Properties</emphasis>:
+              sets general properties of the drumkit such as its name, author, license, general information, image, and image license.
+            </para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Save</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples).
             </para>
           </listitem>
           <listitem id="sect.main_menu.drumkits.save_as">
-            <para><emphasis role="bold">Save As</emphasis>: saves all drumkit settings (including those of their instruments and sound samples) in a folder chosen via a file browser. The default directory is
-            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>.
+            <para><emphasis role="bold">Save As</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples) as new drumkit.
+
+            <note>
+	          <para>
+	            The new drumkit will be a physical copy of the old one and is stored into the <filename>$HOME/.hydrogen/data/drumkits/</filename> folder.
+              </para>
+            </note>
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export</emphasis>: compress all instruments samples and settings in a drumkit in 
-            <emphasis>$HOME/.hydrogen/data/library_name</emphasis>
+            <para><emphasis role="bold">Export</emphasis>: compress and stores all instruments samples and settings of any drumkit (not just the current one) into a folder of your choice as <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file.
             </para>
           </listitem>
           <listitem id="sect.main_form.import_drumkit">
-            <para><emphasis role="bold">Import</emphasis>: imports another drumkit from the local filesystem.
+            <para><emphasis role="bold">Import</emphasis>: imports a drumkit (a <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file) from the local filesystem.
             </para>
           </listitem>
           
           <listitem id="sect.main_form.online_import_drumkit">
             <para><emphasis role="bold">Online Import</emphasis>: imports another drumkit from a remote location
-            through an <abbrev>XML</abbrev> feed. The <abbrev>XML</abbrev> file that should be provided is <emphasis
+            through a <abbrev>XML</abbrev> feed. The <abbrev>XML</abbrev> file that should be provided is <emphasis
             role="bold">NOT</emphasis> <abbrev>RSS</abbrev> compliant (see <ulink
             url="http://www.hydrogen-music.org/feeds/drumkit_list.php" >Hydrogen
-            website</ulink> for an example). To load another drumkit in your
-            current working session of Hydrogen, read <xref linkend="chpt.sound_library"/>.
+            website</ulink> for an example).
             </para>
 
             <para>
@@ -1268,7 +1283,7 @@
 
               The Import window will pop up with the Internet tab selected.
               By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
-              and after pressing the 'Update list' button you will get a complete list of all
+              and after pressing the <emphasis role="bold">Update list</emphasis> button you will get a complete list of all
               drumkits that are available for download.  In the status column you can see
               if a kit is installed or not.
             </para>
@@ -1279,7 +1294,7 @@
         license type.
         </para>
        <para>
-         You can install a drumkit by selecting it and clicking 'Download and Install'.
+         You can install a drumkit by selecting it and clicking <emphasis role="bold">Download and Install</emphasis>.
          
     
        <informalfigure id="fig.downloading_soundlibrary">
@@ -1306,7 +1321,7 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">Add Instrument</emphasis>: adda a new instrument to your current drumkit.</para>
+            <para><emphasis role="bold">Add Instrument</emphasis>: adds a new instrument to the current drumkit.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Clear All</emphasis>: deletes all instruments from the current drumkit.</para>
@@ -1377,17 +1392,20 @@
       <sect1 id="sect.main_menu.debug">
         <title>Debug</title>
 
-        <para>
-	      TODO: update option list and description
-        </para>
-        
         <para>Tools mainly for debugging
-        and monitoring Hydrogen (only available when compiled with debug
-        support !).</para>
+        and monitoring Hydrogen.</para>
+
+        <note>
+          <para>
+            The Debug option is only available if Hydrogen was compiled with 
+            debug support.
+          </para>
+        </note>
+
 
         <itemizedlist>
           <listitem id="chpt.preferences.audio_engine_tab">
-            <para><emphasis role="bold">Show audio engine info</emphasis>: opens a window that shows
+            <para><emphasis role="bold">Show Audio Engine Info</emphasis>: opens a window that shows
             various stats about Hydrogen and the audio driver.
 
             <figure id="fig.preferences.audio_engine_tab">
@@ -1399,25 +1417,59 @@
               </mediaobject>
             </figure>
 
-            In case <abbrev>JACK</abbrev> is used,
-            buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
-            server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
-            application tries to connect).</para>
             <note>
-              <para>
-                Note that the Audio Engine tab is only available if Hydrogen was compiled with 
-                debug support.
+	          <para>
+                In case <abbrev>JACK</abbrev> is used,
+                buffer and sampling rate should be set in the configuration of the <abbrev>JACK</abbrev>
+                server before starting Hydrogen (<abbrev>JACK</abbrev> automatically starts when an
+                application tries to connect).
               </para>
             </note>
+            </para>
+          </listitem>
+          
+          <listitem id="chpt.main_menu.debug.show_filesystem_info">
+            <para><emphasis role="bold">Show Filesystem Info</emphasis>:
+            opens a window that shows you the paths to the user and system data directory as well as to the folder used to create temporary files.
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold">Log Level</emphasis>:
+              specifies which log messages will be written into the log file.
+              <itemizedlist>
+	            <listitem>
+	              <para>
+                    <option>None</option>: No messages will be written at all.
+                  </para>
+                </listitem>
+	            <listitem>
+	              <para>
+                    <option>Error</option>: Only messages concerning critical errors will be written out.
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                <option>Warning</option>: Like <option>Error</option> but in addition also general warnings about potential bugs or inconsistencies will be written out.
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                <option>Info</option>: Like <option>Warning</option> but also all info messages indicating the correct behavior of Hydrogen will be written out.
+                  </para>
+                </listitem>
+                <listitem>
+	              <para>
+	                <option>Debug</option>: Like <option>Info</option> but also internal help messages used for developing will be written out.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </para>
+          </listitem>
 
-          </listitem>
           <listitem>
-            <para><emphasis role="bold">debug action</emphasis>: insert debug
-            commands.</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Print Objects</emphasis>: print on stdout current
-            objects map.</para>
+            <para><emphasis role="bold">Open Log File</emphasis>:
+            opens Hydrogen's log in either the terminal the application was started in or in a new terminal instance.</para>
           </listitem>
         </itemizedlist>
       </sect1>
@@ -1427,15 +1479,14 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis role="bold">User manual</emphasis>: opens a window with this
-            manual :)</para>
+            <para><emphasis role="bold">User Manual</emphasis>: opens a window with a version of this manual installed on your local computer.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">About</emphasis>: the usual window with license
             information, acknowledgments, etc.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Report bug</emphasis>: opens the <ulink url="https://github.com/hydrogen-music/hydrogen/issues">Hydrogen issue page at github.com</ulink> in your default Internet browser.
+            <para><emphasis role="bold">Report Bug</emphasis>: opens the <ulink url="https://github.com/hydrogen-music/hydrogen/issues">Hydrogen issue page at github.com</ulink> in your default Internet browser.
             You can open a new issue to communicate a bug here (first search if there exists already an issue about it).</para>
           </listitem>
           <listitem>
@@ -1461,7 +1512,7 @@
       </figure>
 
       <para>Before analyzing the two main frames of Hydrogen, let's take a quick
-      look at the main toolbar and its components</para>
+      look at the main toolbar and its components.</para>
       
       <sect1 id="sect.main_toolbar.transport_control">
         <title>
@@ -1476,17 +1527,18 @@
           </inlinemediaobject>
         </para>
 
-          <para>Main controls to start (also bound to <keycap>Space</keycap>), stop, record, fast forward, rewind, loop a song or a
-          pattern and to switch between Song mode and Pattern mode.</para>
+        <para>Using these buttons you can <emphasis role="bold">start</emphasis> (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis> the playback, <emphasis role="bold">record</emphasis> new patterns (TODO: link to recording section), <emphasis role="bold">fast forward</emphasis> and <emphasis role="bold">rewind</emphasis> the transport position, and <emphasis role="bold">loop</emphasis> playback.</para>
 
-          <para>Set Pattern/Song Mode. When <emphasis>Song mode</emphasis> is selected Hydrogen will play 
+          <para>In addition, you can switch between Song mode and Pattern mode. When <emphasis>Song mode</emphasis> is selected Hydrogen will play 
           the complete song. This is the sequence of patterns you have created in the <link linkend="chpt.song_editor">Song Editor</link>. When <emphasis>Pattern mode</emphasis> is selected 
           Hydrogen will play the pattern that is currently selected, and thus displayed 
-          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>.</para>
+          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. TODO: replace this paragraph by section (elsewhere) about both modes.</para>
 
-          <para>
-	        When using the <link linkend="chpt.keyboard_and_mouse">Keyboard</link> to navigate in the <link linkend="chpt.song_editor">Song Editor</link> and <link linkend="chpt.pattern_editor">Pattern Editor</link> the shortcut <keycap>Ctrl</keycap> + <keycap>Space</keycap> (or <keycap>Alt</keycap> + <keycap>Space</keycap> on MacOS) will change the mode to the one corresponding to the editor. In addition, it will move the current transport position to either the note (Pattern Editor) or the pattern (Song Editor) focused by the cursor and starts the playback.
-          </para>
+          <tip>
+            <para>
+	          When using the <link linkend="chpt.keyboard_and_mouse">Keyboard</link> to navigate in the <link linkend="chpt.song_editor">Song Editor</link> and <link linkend="chpt.pattern_editor">Pattern Editor</link> the shortcut <keycap>Ctrl</keycap> + <keycap>Space</keycap> (or <keycap>Alt</keycap> + <keycap>Space</keycap> on MacOS) will change the mode to the one corresponding to the editor. In addition, it will move the current transport position to either the note (Pattern Editor) or the pattern (Song Editor) focused by the cursor and starts the playback.
+            </para>
+          </tip>
 
           <para>TODO: update image</para>
       </sect1>
@@ -1547,19 +1599,40 @@
           Counter value (shown just below the <parameter>R</parameter>).</para>
 
           <para>The button in the bottom right-hand controls the auto-start
-          feature, and it toggles between <parameter>S</parameter> and
-          <parameter>P</parameter>.  When it shows <parameter>P</parameter> for
-          (<emphasis>Play</emphasis>), the song will set the new tempo and
+          feature, and it toggles between 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          and
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          .  When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and
           automatically start to play after you tap the right number of beats (if
           it's not already playing, of course).  This way, if you have the
           Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
-          the next beat.  When it shows <parameter>S</parameter> (for <emphasis>Set
-          BPM</emphasis>), the auto-start is disabled.</para>
+          the next beat.  When it shows
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+          (for <emphasis>Set BPM</emphasis>), the auto-start is disabled.</para>
 
           <para>For example: Suppose you have a live band, Hydrogen, and a
           softsynth that is controlled by <command>Seq24</command>)... and you want them all to start
           at the same time.  Set the beat type to 1/4 and the number of beats to
-          4.  Enable auto-start (button shows <guilabel>P</guilabel>).  Count off
+          4.  Enable auto-start (button shows
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          ).  Count off
           the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
           starts on 1.</para>
 
@@ -1597,7 +1670,7 @@
 	      TODO: update image: Rubberband button is missing
         </para>
 
-        <para>Set the speed of the song (range: 10-400 bpm).
+        <para>Set the speed of the song in the range from <option>10</option> to <option>400</option> bpm (beats per minute).
         </para>
         
           <tip>
@@ -1621,7 +1694,13 @@
         </tip>
 
         <para>
-	      TODO: describe Rubberband button
+	      If either <command>rubberband</command> support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/rubber_off.png" format="PNG" />
+            </imageobject>
+          </inlinemediaobject>
+          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using <command>rubberband</command> whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
         </para>
         
       </sect1>
@@ -1636,7 +1715,7 @@
           </inlinemediaobject>
         </para>
 
-            <para>The CPU bargraph gives you an indication of the CPU load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a midi message.</para>
+            <para>The CPU bargraph gives you an indication of the CPU load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a <abbrev>MIDI</abbrev> message.</para>
 
         <tip>
 	      <para>
@@ -3133,9 +3212,9 @@
             </inlinemediaobject>
           </para>
 
-          <para>The <emphasis role="bold"><link linkend="def.gain">Gain</link></emphasis> sets the overall volume for the <link linkend="def.sample">sample</link>.  This Gain is
-          applied after the gain that you set for the layer (TODO: link), and before the one
-          that is set in the <link linkend="chpt.mixer">Mixer</link> (TODO: link).  If the
+          <para>The <emphasis role="bold"><link linkend="def.gain">Gain</link></emphasis> adjusts the overall volume of all <link linkend="def.sample">samples</link> associated with this Instrument. This Gain is
+          applied in addition to the one you set for each <link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer</link> and before the one
+          that is set in the <link linkend="chpt.mixer.channel_strips.fader_and_lcd">Instrument Channel Strips</link>.  If the
           set to <option>0</option>, the instrument will be
           silent.  If the Gain is <option>1.0</option>, the volume of the samples will not be
           adjusted.  If the Gain is set higher, the samples will be
@@ -3162,8 +3241,8 @@
           of.  To set other instruments into the same grouping, set their Mute
           Group parameter to the same number.  (For example, to group all the
           high-hat instruments, you can set all their Mute Group parameters to
-          1.  To have a snare drum Mute Group, set their Mute Group parameters
-          to 2.)
+          <option>1</option>.  To have a snare drum Mute Group, set their Mute Group parameters
+          to <option>2</option>.)
           </para>
 
           <para>If the <emphasis role="bold">Auto-Stop-Note</emphasis> box is checked, Hydrogen will immediately stop any playing <link linkend="def.sample">samples</link>
@@ -3189,8 +3268,8 @@
           </tip>
           
           <para>
-             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the layer gain (TODO: link),
-              the instrument gain (TODO: link), the component gain (TODO: link) or the instrument volume (TODO: link).
+             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link>,
+              the <link linkend="chpt.instrument_editor.gain_and_mute_group">instrument gain</link>, the <link linkend="chpt.instrument_editor.layers.controls.component_volume">component gain</link>, or the <link linkend="chpt.mixer.channel_strips.fader_and_lcd">instrument volume</link>.
               If all the <link linkend="def.layer">layer</link> samples are <link linkend="def.normalization">normalized</link>, this option should be used.
           </para>
 
@@ -3351,94 +3430,172 @@
         
         <para>When clicking the <option>Layers</option> button in the Instrument Editor you can adjust the <link linkend="def.sample">samples</link> and synthesizer parameters of the particular <link linkend="def.layer">layers</link> of the instrument selected in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor.
         </para>
+        
+        <sect2 id="chpt.instrument_editor.layers.components">
+          <title>Components</title>
+          
+          <para>
+            TODO: add image showing corresponding part
+          </para>
 
-        <para>
-	      TODO: overhaul chapter. Short explanation of how instrument is composed of layers and components.
-        </para>
-        <para>
-	      TODO: Below General/Layers button: name of component and arrow button to add/delete component
-        </para>
-        <para>
-	      TODO: How to add/delete/edit layer + mention wav preview + link and mention that samples can be listened to when clicking on the name of the instrument in the sidebar of the Pattern Editor
-        </para>
+          <para>
+	        Right below the <option>General</option> and <option>Layers</option> button you find the name of the currently selected <link linkend="def.component">component</link>. In the drop down menu accessible by pressing
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_dropdown_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+            you find a list of all components available in the current drumkit and can select them via a left click. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one.
+          </para>
+
+          <warning>
+	        <para>
+	          The components are shared by all instruments. This means deleting it will delete it including all associated layers from a <emphasis>all</emphasis> instruments and not just the currently selected one.
+            </para>
+          </warning>
+        </sect2>
+
+        <sect2 id="chpt.instrument_editor.layers.layers">
+          <title>Layers</title>
+
+          <para>
+            TODO: add image showing corresponding part
+          </para>
+
+          <para>
+	        Next you find a listing of all layers of the current component in the selected instrument. The wave form of the sample loaded to the currently selected layer (the one enclosed by a red rectable) is displayed below.
+          </para>
+
+          <note>
+	        <para>
+	          Empty layers will be displayed as <option>&#60; - &#62;</option>.
+            </para>
+          </note>
+
+          <para>
+            Using
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="img/loadLayer_off.png" format="PNG" />
+                </imageobject>
+              </inlinemediaobject>
+            you can load a sample into the currently selected layer, using
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="img/deleteLayer_off.png" format="PNG" />
+                </imageobject>
+              </inlinemediaobject>
+            you can delete the current layer, and using
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="img/editLayer_off.png" format="PNG" />
+                </imageobject>
+              </inlinemediaobject>
+            you can open the <link linkend="chpt.sample_editor">Sample Editor</link> to customize the sample loaded to the currently selected layer.
+          </para>
+
+          <para>
+	        Above the layer listing you find boxes in different shades of grey indicating which range of note <link linkend="def.velocity">velocity</link> will trigger which sample (left: 0 velocity, right: maximum velocity). Left clicking on any of these boxes will play back the sound of associated sample modulated by the velocity corresponding to the horizontal position of the mouse cursor.
+
+            <tip>
+	          <para>
+	            This will be quite handy when adjusting the velocity ranges of the layers.
+              </para>
+            </tip>
+          </para>
+
+          <para>
+	        You might have already noticed in the picture above or for shipped drumkits in the Hydrogen GUI that a layer row contains a light blue rectangle that those not quite fill the whole row. This rectangle indicates the range in velocity the associated sample should be triggered. This way you can separate samples for soft hits, regular hits, and so on for each instrument (component). Whenever two rectangles do overlap a triggered note with a velocity within this shared range will consult the <link linkend="chpt.instrument_editor.layers.sample_selection">Sample Selection</link> to determine which sample will be played back. You can adjust the velocity ranges of each layer by left clicking the left or right end of the light blue rectangles and dragging it to the desired position.
+          </para>
+
+          <note>
+	        <para>
+	          If there is a(n accidental) hole between two adjacent velocity ranges, the layer closest to the triggered velocity will be used.
+            </para>
+          </note>
+        </sect2>
+          
         <sect2 id="chpt.instrument_editor.layers.sample_selection">
           <title>Sample Selection</title>
+
           <para>
-	        TODO: add paragraph covering the general sample selection according to the velocity + adjusting the horizontal bars via mouse.
+            TODO: add image showing corresponding part
           </para>
+
           <para>
-	        TODO: what do the five regions (1-5) indicate?
+            Having a set of samples containing different sample versions of similar sound for the same note velocity is a good way to make your drumkit sound more natural. After all, drummers for example never hit the drum set twice the exact same way.
           </para>
+
           <para>
-	        TODO: mention what's happening if there is a "hole" between the sample (they neither overlap nor touch).
+	        Hydrogen tries to emulate this behavior by providing multiple <link linkend="chpt.instrument_editor.layers.layers">layers</link> with overlapping velocity ranges. <emphasis>How</emphasis> the selection of the resulting sample will take place is for you to decide using the <emphasis role="bold">Sample Sel.</emphasis> dropdown menu at the bottom of the Instrument Editor.
           </para>
-            <para>
-                Certain set of samples contain different sample versions of the same sound for the same note/velocity
-                in order to make it more natural - drummers for example never hit the drum set twice the same way.
-                This functionality is making Hydrogen compatible with this type of sample collection.
-            </para>
-            <informalfigure id="fig.sample_selection">
-             <mediaobject>
-               <imageobject>
-                <imagedata fileref="img/Instrument_Layers_sampleSelection.png" format="PNG" />
-               </imageobject>
-             </mediaobject>
-            </informalfigure>
                     
-            <para>
-                To use this functionality, you need to first a few samples that share the same velocity range in Hydrogen.
-                The second step is to select how Hydrogen will chose the sample when a note within a certain velocity
-                is played.
-            </para> 
-            <itemizedlist>
-                <listitem>
-                   <para> <emphasis role="bold">First in Velocity</emphasis>:
-                       will select the first sample available in the velocity set.
-                       This is the way previous versions of Hydrogen were working.
-                    </para> 
-                </listitem>
-                <listitem>
-                   <para> <emphasis role="bold">Round Robin</emphasis>:
-                      will cycle through the different samples one after another as note in the same velocity range is played.
-                   </para> 
-                </listitem>
-                <listitem>
-                   <para> <emphasis role="bold">Random</emphasis>:
-                      will select a random sample inside the velocity range for each note played.
-                   </para> 
-                </listitem>
-            </itemizedlist>
+          <itemizedlist>
+            <listitem>
+              <para><option>First in Velocity</option>:
+              will select the first sample available in the velocity set - the one of the layer most further down in the layer listing.
+
+              <note>
+	            <para>
+                  This is the way previous versions of Hydrogen were working.
+                </para>
+              </note>
+              </para> 
+            </listitem>
+            <listitem>
+              <para><option>Round Robin</option>:
+              will cycle through the different samples one after another as notea in the same velocity range are played.
+              </para> 
+            </listitem>
+            <listitem>
+              <para> <option>Random</option>:
+              will select a random sample inside the velocity range for each note played.
+              </para> 
+            </listitem>
+          </itemizedlist>
         </sect2>
 
         <sect2 id="chpt.instrument_editor.layers.controls">
           <title>Controls</title>
 
+          <para>
+            TODO: add image showing corresponding part
+          </para>
+
           <itemizedlist>
 	        <listitem id="chpt.instrument_editor.layers.controls.layer_gain">
 	          <para>
-	            <emphasis role="bold">Layer Gain:</emphasis>: TODO
+	            <emphasis role="bold">Layer Gain</emphasis>:
+                adds <link linkend="def.gain">Gain</link> for the currently selected layer and the associated sample.
               </para>
             </listitem>
             <listitem id="chpt.instrument_editor.layers.controls.component_volume">
 	          <para>
-	            <emphasis role="bold">Component Volume</emphasis>: TODO
+	            <emphasis role="bold">Component Volume</emphasis>:
+                adjusts the volume of all layers within the current component with respect to the ones of the other instruments.
+                
+                <tip>
+	              <para>
+	                The resulting audio from all layers of each instrument associated with a certain component can be controlled via its <link linkend="chpt.mixer.component_strips">Component Channel Strip</link> in the Mixer.
+                  </para>
+                </tip>
               </para>
             </listitem>
             <listitem>
 	          <para>
-	            <emphasis role="bold">Pitch</emphasis>: TODO
+	            <emphasis role="bold">Pitch</emphasis>:
+                adjusts the pitch of the currently selected layer and the associated sample in quantized steps of half-tones from <option>-24</option> to <option>+24</option>.
               </para>
             </listitem>
             <listitem>
 	          <para>
-	            <emphasis role="bold">Fine</emphasis>: TODO
+	            <emphasis role="bold">Fine</emphasis>:
+                adjusts the pitch of the currently selected layer and the associated sample in quantized steps of cents of half-tones from <option>-0.50</option> to <option>+0.50</option>.
               </para>
             </listitem>
           </itemizedlist>
-          <para>
-	        TODO: Difference between layer gain and component volume. List and describe. Note + link interaction between layer pitch and instrument pitch.
-          </para>
         </sect2>
+        
       </sect1>
       
     </chapter>
@@ -3489,7 +3646,7 @@
           </para>
           
           <para>
-            In <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop and loop points for the sample by dragging the 
+            In the <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop, and loop point for the sample by dragging the 
             the 3 markers:
             <itemizedlist>
               <listitem id="chpt.sample_editor.wave_display.start_marker">
@@ -3528,16 +3685,30 @@
             </listitem>
 	        <listitem>
 	          <para>
-	            <emphasis role="bold">Loop Mode</emphasis>: <option>forward</option>, <option>reverse</option>, or <option>ping-pong</option>.
-
-                TODO: Describe options.
+	            <emphasis role="bold">Loop Mode</emphasis>:
+                specifies the way the individual loops will be played back.
+                <itemizedlist>
+	              <listitem>
+	                <para>
+	                  <option>forward</option>: plays the <emphasis>Loop Count</emphasis> loop passages the usual way from left to right.
+                    </para>
+                  </listitem>
+                  <listitem>
+	                <para>
+	                  <option>reverse</option>: plays the <emphasis>Loop Count</emphasis> loop passages the backwards (from right to left).
+                    </para>
+                  </listitem>
+                  <listitem>
+	                <para>
+	                  <option>ping-pong</option>: plays the <emphasis>Loop Count</emphasis> loop passages alternatively backwards and forwards (starting with backwards).
+                    </para>
+                  </listitem>
+                </itemizedlist>
               </para>
             </listitem>
 	        <listitem>
 	          <para>
-	            <emphasis role="bold">Loop Count</emphasis>: indicates the number of times the sample will be repeated between Loop and the End Marker.
-
-                TODO: check whether this is true
+	            <emphasis role="bold">Loop Count</emphasis>: indicates the number of times the sample will be repeated between Loop and the End Marker. This section will therefore be played back <emphasis>Loop Count + 1</emphasis> times.
               </para>
             </listitem>
 	        <listitem>
@@ -3586,51 +3757,61 @@
 	        TODO: screenshot of corresponding part
           </para>
 
-          <para>
-	        TODO: is this section valid? AFAIK rubberband support is experimental and only activated if explicitly activated during the compilation. In all other instances there is Hydrogen's own pitch shifting in the Sampler. But there is still the RUB button in the Main Toolbar. Maybe that one is doing nothing either.
-          </para>
+          <para>This section of the Sample Editor allows you to use <command>Rubberband</command> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
 
-          <para>
-	        TODO: how is this related to the (layer-level) pitch set in the Instrument Editor?
-          </para>
-          <para>This section of the Sample Editor allows you to control the Rubberband settings.
-          Rubberband is a tool that can change the tempo of a sample without changing 
-          the sample's pitch (and vice versa).</para>
-          <para>If you are using Ubuntu you can install rubberband from the Software Center 
-          (rubberband-cli).  For other linux distros check your package manager.  For other platforms
-          please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
-          </ulink>.  After installing rubberband you should check if the path to the rubberband cli is 
-          configured correctly (see <xref linkend="chpt.preferences.general_tab"/>).</para>
+          <note>
+            <para>
+              These options are only avaiable if <command>rubberband</command> support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
+  After installing rubberband you should check if the path to the rubberband cli is 
+  configured correctly (see <xref linkend="chpt.preferences.general_tab"/>). If neither is the case, all associated widgets will be disabled.
+            </para>
+	        <para>
+	          When <emphasis role="bold">Sample length to beat</emphasis> is set to <option>off</option> the whole <command>rubberband</command> functionality will be disabled.
+              </para>
+            </note>
           
-          <para>If rubberband is installed correctly you will have access to the rubberband 
-          settings, and an extra button named 'RUB' will be available in the Main Toolbar,
-          right of the BPM LCD display:
-          
-          <informalfigure id="rubberband_button">
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/MainControls_Rubberband_btn.png" format="PNG" />
-              </imageobject>
-            </mediaobject>
-          </informalfigure>                
-          
-          </para>
-          <para>Back to the rubberband settings : 
           <itemizedlist mark="opencircle">
-            <listitem><para><emphasis role="bold">Sample length to beat</emphasis>: when set to 'off', rubberband functionality is disabled. 
-            Normally this parameter should be set to the length of the part of the sample between 
-            the Start and End marker, expressed in number of beats.</para>
+            <listitem><para><emphasis role="bold">Sample length to beat</emphasis>:
+            speficies the length of the resulting sample (after <command>rubberband</command> was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
+
+            <tip>
+	          <para>
+	            This should be set to the length of the part of the sample between 
+                the Start and End marker, expressed in number of beats.
+              </para>
+            </tip>
+
+            <note>
+	          <para>
+	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using <command>rubberband</command> again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/rubber_off.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+          button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly.
+              </para>
+            </note>
+            
+          </para>
             </listitem>
-            <listitem><para><emphasis role="bold">Pitch</emphasis>: this setting allows you to change the pitch of the sample, expressed in 
-            semitones,cent.</para>
+            <listitem><para><emphasis role="bold">Pitch</emphasis>:
+            specifies the resulting pitch of the sample, expressed in 
+            <option>semitones,cent</option>.
+
+            <note>
+	          <para>
+	            This pitch will affect all instances of the sample in addition to the <link linkend="chpt.instrument_editor.pitch_shift_parameters">Pitch Shift Parameters</link> in the Instrument Editor and the <link linkend="chpt.pattern_editor.note_properties.notekey">NoteKey</link> property of each individual note.
+              </para>
+            </note>
+          </para>
             </listitem>
-            <listitem><para><emphasis role="bold">Crispness</emphasis>: this setting does not affect tempo or pitch, but changes the way
-            the sample sounds.</para>
+            <listitem><para><emphasis role="bold">Crispness</emphasis>:
+            fine-tunes the processing algorithm used by <command>rubberband</command>. It does not affect tempo or pitch, but changes the way
+            the sample sounds.
+          </para>
             </listitem>
           </itemizedlist>
-          </para>
-          <para><emphasis role="bold">Note</emphasis>: If you want Hydrogen to recalculate the sample length on the fly (using rubberband)
-          you must enable the 'RUB' button (see figure above).</para>
         </sect1>
         
         <sect1 id="chpt.sample_editor.playback_and_envelope_editor">
@@ -3718,7 +3899,7 @@
 
       <para>The Mixer window can be opened by pressing <keycap>Alt</keycap> + <keycap>M</keycap>, by selecting Mixer in the <link linkend="sect.main_menu.view">View</link> option of the Main Menu, or by clicking the Mixer button on the <link linkend="sect.main_toolbar.gui_state">Main Toolbar</link>.
       </para>
-      <para>The Mixer consists of 3 sections (from left to right): the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, 
+      <para>The Mixer consists of 3 sections (from left to right): the one containing the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>, 
       the <link linkend="sect.fx_rack_LADSPA">FX Plugin Rack</link>, and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>. The Hydrogen Mixer works very
        much like a hardware mixer does: it lets you set the volume, pan, FX and several 
        other things for every instrument as well as the volume of all of these sources mixed together.
@@ -3733,10 +3914,6 @@
 
       <para>
 	    TODO: is the preview sound in the Pattern Editor routed through these strips?
-      </para>
-
-      <para>
-	    TODO: mention and describe component strip
       </para>
 
       <itemizedlist>
@@ -3860,6 +4037,57 @@
          </para>
        </note>
 
+    </sect1>
+
+
+    <sect1 id="chpt.mixer.component_strips">
+      <title>Component Channel Strips</title>
+
+      <para>
+	    TODO: add image showing corresponding part of Mixer
+      </para>
+
+      <para>
+      Right of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> there additional strips corresponding to the instrument <link linkend="def.component">components</link>.
+      </para>
+      
+      <note>
+	    <para>
+	      These channels will not be exposed as <abbrev>JACK</abbrev> output ports when enabling the <link linkend="sect.preferences.jack.per_instrument_outs">Create per-instrument outputs</link> option in the Preferences.
+        </para>
+      </note>
+
+      <itemizedlist>
+	    <listitem id="chpt.mixer.component_strips.mute">
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_mute_on.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> : <link linkend="def.mute">mutes</link> the instrument.
+          </para>
+        </listitem>
+	    <listitem id="chpt.mixer.component_strips.solo">
+	      <para>
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="img/btn_solo_on.png" format="PNG" />
+              </imageobject>
+              </inlinemediaobject> : solos the instrument.
+          </para>
+        </listitem>
+	    <listitem id="chpt.mixer.component_strips.fader_and_lcd">
+	      <para>
+            <emphasis role="bold">Fader and LCD</emphasis>:
+              the fader next to the component's name allows you to adjust the volume of all layers (of all instruments) associated with this component. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The LCD displays shows its peak value.
+          </para>
+          <tip>
+	        <para>
+	          You can adjust the falloff speed of the peak values in the LCD display via the <link linkend="fig.preferences.appearance_tab">Appearance</link> tab in the Preferences.
+            </para>
+          </tip>
+        </listitem>
+      </itemizedlist>
     </sect1>
     
     <sect1 id="sect.fx_rack_LADSPA">
@@ -4013,7 +4241,7 @@
             <imagedata fileref="img/showPeaks_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>       
-        button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>.
+        button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
 
         </para>
 
@@ -4546,17 +4774,17 @@
 	    
       <listitem><para>
 	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="chpt.midi.actions.master_volume_relative"/>, but applies to
-	      the channel strip defined in the Action Parameter **
+	      the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
 	    </para></listitem>
 	    
       <listitem><para>
 	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="chpt.midi.actions.master_volume_absolute"/>, but applies to
-	      the channel strip defined in the Action Parameter **
+	      the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
 	    </para></listitem>
 	    
       <listitem><para>
         <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis> : changes the volume level of effect 'x';
-         the value you enter in the Action Parameter determines the channel strip this action applies to **
+         the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
       </para></listitem>
 	    
       <listitem id="chpt.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
@@ -4576,8 +4804,7 @@
 	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the pan, relative to the current value. For a
           value of 1 it increase the pan by 0.05. For all other values
           it decreases it by 0.05. (-1: -0.05 , 1: +0.05);
-          the value you enter in the Action Parameter determines the channel
-          strip this action applies to **
+          the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
 	    </para></listitem>
 	    
       <listitem><para>
@@ -4935,10 +5162,10 @@
                  <entry>f</entry>
                  <entry>[0.0,1.5]</entry>
                  <entry>See <xref linkend="chpt.osc.command.master_volume_absolute"/>, but
-                 applies to the channel strip provided in the <abbrev>OSC</abbrev> command path
+                 applies to the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> provided in the <abbrev>OSC</abbrev> command path
                  as <emphasis>X</emphasis>. Please not that this only affects
-                 instrument strips (those with pan and FX knobs). Strip volume
-                 control for instrument component strips is not implemented
+                 <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>. Strip volume
+                 control for <link linkend="chpt.mixer.component_strips">Component Channel Strips</link> is not implemented
                  yet).</entry>
                </row>
                <row id="chpt.osc.command.strip_volume_relative">
@@ -4946,10 +5173,10 @@
                  <entry>f</entry>
                  <entry>{-1;0;1}</entry>
                  <entry>See <xref linkend="chpt.osc.command.master_volume_relative"/>, but
-                 applies to the channel strip provided in the <abbrev>OSC</abbrev> command path
+                 applies to the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> provided in the <abbrev>OSC</abbrev> command path
                  as <emphasis>X</emphasis>. Please not that this only affects
-                 instrument strips (those with pan and FX knobs). Strip volume
-                 control for instrument component strips is not implemented
+                 <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>. Strip volume
+                 control for <link linkend="chpt.mixer.component_strips">Component Channel Strips</link> is not implemented
                  yet).</entry>
                </row>
                <row id="chpt.osc.command.pan_absolute">
@@ -5523,12 +5750,12 @@
       filetypes:</para>
 
       <itemizedlist>
-        <listitem>
+        <listitem id="chpt.file_types.h2pattern">
           <para><emphasis role="bold">*.h2pattern</emphasis>: <abbrev>XML</abbrev> file
           describing a single pattern. Patterns are group of beats and are
           managed in the pattern editor.</para>
         </listitem>
-        <listitem>
+        <listitem id="chpt.file_types.h2song">
           <para><emphasis role="bold">*.h2song</emphasis>: <abbrev>XML</abbrev> file describing
           the whole song (or sequence). Songs are group of patterns with their
           properties and are manager using the song editor</para>
@@ -5537,7 +5764,7 @@
           <para><emphasis role="bold">*.h2playlist</emphasis>: <abbrev>XML</abbrev> file
           describing a playlist. A Playlist is a (ordered) group of songs.</para>
         </listitem>
-        <listitem>
+        <listitem id="chpt.file_types.h2drumkit">
           <para><emphasis role="bold">*.h2drumkit</emphasis>: a compressed and
           archived folder containing all sound samples composing a drumkit and a
           description <abbrev>XML</abbrev> file. Drumkits are basically group of sound
@@ -5804,7 +6031,7 @@
       <glossdef>
 	    <para>
 	      A component is a part of Hydrogen's instrument model.
-          Each instrument consists of one or more components, and each component consists of one or more layers.
+          Instrument consist of one or more components, and each component consists of one or more layers.
         </para>
 
         <para>To make an example: A snare could have two components.
@@ -5814,7 +6041,17 @@
         Now you can adjust the volume of the two components to build your ideal drum sound.
         If you want more of the attack, you can put in more of the "top head" component.
         If you want more of the snare wires, you put in more of the bottom component.
+        
+        <note>
+	      <para>
+	        Components will be created for all instruments. So, even if you just want to have two of them in the snare you will automatically have two components in all other instruments. If you thus remove an empty component in one instrument, you will remove it for all other instruments - even if they are non-empty - too.
+          </para>
+          <para>
+	        In addition, all <link linkend="def.layer">layers</link> belonging to the same component do share a common volume fader in the <link linkend="chpt.mixer.component_strips">Component Channel Strips</link> in the Mixer.
+          </para>
+        </note>
         </para>
+
       </glossdef>
     </glossentry>
     <glossentry id="def.cutoff">
