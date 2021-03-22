@@ -506,22 +506,22 @@
               sets the absolute path to the <command>rubberband</command> command line interface (CLI) Hydrogen will use for stretching samples in the <link linkend="chpt.sample_editor.pitch">Sample Editor</link>.
               <note>
 	            <para>
-	              This option is only available if your version of Hydrogen does <emphasis>not</emphasis> already has <command>rubberband</command> support compiled into it. If it does and the option is hot shown, everything is already configured and you don't have to worry about <command>rubberband</command> at all.
+	              This option is only available if your version of Hydrogen does <emphasis>not</emphasis> already has Rubber Band support compiled into it. If it does and the option is hot shown, everything is already configured and you don't have to worry about Rubber Band at all.
                 </para>
               </note>
 
               <tip>
 	            <para>
-	              If you are using Ubuntu, you can install <command>rubberband</command> from the Software Center 
+	              If you are using Ubuntu, you can install Rubber Band from the Software Center 
                   via the package <option>rubberband-cli</option>.  For other Linux distros please check your package manager and for other platforms
-                  please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
+                  please check <ulink url="http://breakfastquay.com/rubberband/">the Rubber Band site
                   </ulink>.
                 </para>
               </tip>
 
               <tip>
 	            <para>
-                  If <command>rubberband</command> is installed and configured correctly, you will see an extra button
+                  If Rubber Band is installed and configured correctly, you will see an extra button
                   <inlinemediaobject>
                     <imageobject>
                       <imagedata fileref="img/rubber_off.png" format="PNG" />
@@ -1667,7 +1667,7 @@
         </para>
 
         <para>
-	      TODO: update image: Rubberband button is missing
+	      TODO: update image: Rubber Band button is missing
         </para>
 
         <para>Set the speed of the song in the range from <option>10</option> to <option>400</option> bpm (beats per minute).
@@ -1694,13 +1694,13 @@
         </tip>
 
         <para>
-	      If either <command>rubberband</command> support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
+	      If either Rubber Band support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
           <inlinemediaobject>
             <imageobject>
               <imagedata fileref="img/rubber_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
-          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using <command>rubberband</command> whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
+          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
         </para>
         
       </sect1>
@@ -3757,22 +3757,22 @@
 	        TODO: screenshot of corresponding part
           </para>
 
-          <para>This section of the Sample Editor allows you to use <command>Rubberband</command> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
+          <para>This section of the Sample Editor allows you to use <emphasis role="bold">Rubber Band</emphasis> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
 
           <note>
             <para>
-              These options are only avaiable if <command>rubberband</command> support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
-  After installing rubberband you should check if the path to the rubberband cli is 
+              These options are only avaiable if Rubber Band support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
+  After installing Rubber Band you should check if the path to the <command>rubberband cli</command> is 
   configured correctly (see <xref linkend="chpt.preferences.general_tab"/>). If neither is the case, all associated widgets will be disabled.
             </para>
 	        <para>
-	          When <emphasis role="bold">Sample length to beat</emphasis> is set to <option>off</option> the whole <command>rubberband</command> functionality will be disabled.
+	          When <emphasis role="bold">Sample length to beat</emphasis> is set to <option>off</option> the whole Rubber Band functionality will be disabled.
               </para>
             </note>
           
           <itemizedlist mark="opencircle">
             <listitem><para><emphasis role="bold">Sample length to beat</emphasis>:
-            speficies the length of the resulting sample (after <command>rubberband</command> was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
+            speficies the length of the resulting sample (after Rubber Band was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
 
             <tip>
 	          <para>
@@ -3783,7 +3783,7 @@
 
             <note>
 	          <para>
-	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using <command>rubberband</command> again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
+	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using Rubber Band again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
             <inlinemediaobject>
               <imageobject>
                 <imagedata fileref="img/rubber_off.png" format="PNG" />
@@ -3807,7 +3807,7 @@
           </para>
             </listitem>
             <listitem><para><emphasis role="bold">Crispness</emphasis>:
-            fine-tunes the processing algorithm used by <command>rubberband</command>. It does not affect tempo or pitch, but changes the way
+            fine-tunes the processing algorithm used by Rubber Band. It does not affect tempo or pitch, but changes the way
             the sample sounds.
           </para>
             </listitem>
@@ -3912,10 +3912,6 @@
 	    TODO: add image showing corresponding part of Mixer
       </para>
 
-      <para>
-	    TODO: is the preview sound in the Pattern Editor routed through these strips?
-      </para>
-
       <itemizedlist>
 	    <listitem>
 	      <para>
@@ -3969,7 +3965,7 @@
               <imageobject>
                 <imagedata fileref="img/btn_mute_on.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> : <link linkend="def.mute">mutes</link> the instrument.
+              </inlinemediaobject> : <link linkend="def.mute">mutes</link> all sounds related to the instrument (including the preview sound you hear when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor).
           </para>
           <note>
 	        <para>
@@ -4488,7 +4484,7 @@
 
          <note>
 	       <para>
-	         While focussing the Playlist Editor instead of the main UI the usual <link linkend="chap.shortcuts">shortcuts</link> of Hydrogen, like <keycap>Space</keycap> for starting/pausing playback, won't work.
+	         While focussing the Playlist Editor instead of the main UI the usual <link linkend="chap.shortcuts">shortcuts</link> of Hydrogen, like <link linkend="chap.shortcuts.space"><keycap>Space</keycap></link> for starting/pausing playback, won't work.
            </para>
          </note>
 
@@ -5722,7 +5718,7 @@
           slower.  This is called the Doppler Effect.  So, if you have a
           1-second sample that you turn down -12 (1 octave), your sample will
           only last for 0.5-seconds.  If you do not want this to happen you should
-          use rubberband instead (see <xref linkend="chpt.sample_editor.pitch"/>)</para>
+          use Rubber Band instead (see <xref linkend="chpt.sample_editor.pitch"/>)</para>
         </note>
 
         <para>You can hear the sample in a layer by clicking the layer id (just 
@@ -5942,7 +5938,7 @@
             <entry><keycap>Backspace</keycap></entry>
             <entry>Restart song or pattern from the beginning</entry>
           </row>
-          <row>
+          <row id="chap.shortcuts.space">
             <entry><keycap>Space</keycap></entry>
             <entry>Play / Pause</entry>
           </row>
