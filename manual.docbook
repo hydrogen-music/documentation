@@ -4446,10 +4446,78 @@
    <chapter id="chpt.playlist_editor">
      <title>Playlist Editor</title>
          
+     <para>
+	   TODO: add image
+     </para>
+     <sect1 id="chpt.playlist_editor.main_window">
+	   <title>Main Window</title>
+
+       <sect2 id="chpt.playlist_editor.main_window.song_list">
+	     <title>Song List</title>
+
+         <para>
+	       The Playlist Editor allows you to group various songs into a
+           playlist and is intended to ease using Hydrogen live on stage. You can access this window via the <link linkend="sect.main_menu.view">View</link> option of the Main Menu.
+         </para>
+
+         <para>
+	       Using the <link linkend="chpt.playlist_editor.menu">menu</link> you can add various songs to the playlist and you can arrange their order using the arrow buttons to the right of the widget.
+         </para>
+
+         <note>
+	       <para>
+	         When playback reaches the end of one song the next one won't be automatically selected and played! You can select an arbitrary song in the playlist using double left clicking, by pressing the hotkeys <link linkend="chap.shortcuts.f5"><keycap>F5</keycap></link> and <link linkend="chap.shortcuts.f6"><keycap>F6</keycap></link>, or the corresponding <link linkend="chpt.osc.command.playlist_song">OSC</link> commands.
+           </para>
+           <para>
+	         Also note that selecting a song won't start playback automatically.
+           </para>
+         </note>
+
+       </sect2>
+
+       <sect2 id="chpt.playlist_editor.main_window.controls">
+	     <title>Controls</title>
+         
          <para>
 	       TODO: add image
          </para>
 
+         <para>
+	       At the bottom of the widget you find a couple of <emphasis role="bold">buttons</emphasis> you already know from the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> in the Main Toolbar. They do have the same purposes of starting, pausing, and stopping the playback as well as moving the transport position backwards or forwards by one pattern.
+         </para>
+
+         <note>
+	       <para>
+	         While focussing the Playlist Editor instead of the main UI the usual <link linkend="chap.shortcuts">shortcuts</link> of Hydrogen, like <keycap>Space</keycap> for starting/pausing playback, won't work.
+           </para>
+         </note>
+
+       </sect2>
+
+       <sect2 id="chpt.playlist_editor.main_window.scripts">
+	     <title>Scripts</title>
+
+         <para>
+	       In addition, the Playlist Editor allows you to add <emphasis role="bold">scripts</emphasis> executed right <emphasis>before</emphasis> the
+           selected song is loaded.
+           
+           <note>
+	         <para>
+	           This means that e.g. <link linkend="chpt.osc.messages.all_messages">OSC</link> commands can not be used to change the state of Hydrogen as the subsequent loading of the associated song would reset it immediately.
+             </para>
+           </note>
+
+           The scripts supported in the Playlist Editor are <abbrev>BASH</abbrev> scripts and one has to both add a script to a song as well as to check the corresponding box in the <emphasis>exec Script</emphasis> column in order to have it by your computer whenever you switch to the particular song.
+         </para>
+
+         <warning>
+	       <para>
+	         Scripts are not supported in the Windows version of Hydrogen.
+           </para>
+         </warning>
+       </sect2>         
+     </sect1>
+         
      <sect1 id="chpt.playlist_editor.menu">
 	   <title>Menu</title>
 
@@ -4460,43 +4528,49 @@
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Add song to Playlist</emphasis>:
-               
+               let's you select a song to be added to the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Add current song to Playlist</emphasis>:
-               
+               adds the currently loaded song to the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Remove selected song from Playlist</emphasis>:
-               
+               deletes the selected song from the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">New Playlist</emphasis>:
-               
+               creates a new and empty playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Open Playlist</emphasis>:
-               
+               opens an existing playlist (file of type <link linkend="chpt.file_types.h2playlist">.h2playlist</link>).
+
+               <tip>
+	             <para>
+	               In the <link linkend="fig.preferences.general_tab">General</link> tab of the Preferences dialog you can configure Hydrogen to reload the last used playlist.
+                 </para>
+               </tip>
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Save Playlist</emphasis>:
-               
+               saves all changes done to the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Save Playlist as</emphasis>:
-               
+               saves the current playlist into a file (of type <link linkend="chpt.file_types.h2playlist">.h2playlist</link>) and location of your choice.
              </para>
            </listitem>
          </itemizedlist>
@@ -4509,49 +4583,42 @@
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Add Script to selected song</emphasis>:
-               
+               associates a <abbrev>BASH</abbrev> script (file of type <command>.sh</command>) to the currently selected song of the playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Edit selected Script</emphasis>:
-               
+               opens the selected script with your default editor (in an external window).
+               <note>
+	             <para>
+	               When using the function for the first time Hydrogen will ask you which program to use as your default editor.
+                 </para>
+               </note>
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Remove selected Script</emphasis>:
-               
+               removes the selected script from the playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Create a new Script</emphasis>:
-               
+               creates a new and empty <command>.sh</command> scrip at a location of your choice.
+
+               <note>
+	             <para>
+	               The default one is the <filename role="directory">scripts</filename> folder in the Hydrogen data
+              directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).
+                 </para>
+               </note>
              </para>
            </listitem>
          </itemizedlist>
        </sect2>
        
-     </sect1>
-     <sect1 id="chpt.playlist_editor.main_window">
-	   <title>Main Window</title>
-
-       <sect2 id="chpt.playlist_editor.main_window.song_list">
-	     <title>Song List</title>
-
-         <para>
-	       TODO
-         </para>
-       </sect2>
-
-       <sect2 id="chpt.playlist_editor.main_window.controls">
-	     <title>Controls</title>
-         
-         <para>
-	       TODO: add image
-         </para>
-       </sect2>
      </sect1>
    </chapter>
     <chapter id="chpt.midi">
@@ -5220,7 +5287,7 @@
                  <emphasis>X</emphasis>. Input argument will be
                  ignored.</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.playlist_song">
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_SONG</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
@@ -5899,11 +5966,11 @@
             <entry><keycap>-</keycap></entry>
             <entry>Decrease tempo by 0.1 BPM</entry>
           </row>
-          <row>
+          <row id="chap.shortcuts.f5">
             <entry><keycap>F5</keycap></entry>
             <entry>Jump to previous song in playlist</entry>
           </row>
-          <row>
+          <row id="chap.shortcuts.f6">
             <entry><keycap>F6</keycap></entry>
             <entry>Jump to next song in playlist</entry>
           </row>
