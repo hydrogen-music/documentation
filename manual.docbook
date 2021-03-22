@@ -2857,34 +2857,13 @@
           <para><emphasis role="bold">Pan</emphasis> : with this parameter you can move
            the stereo image position of the note (how loud it will be in the
           left/right output).</para>
-          <note>
-           <para>The effect of <emphasis>note Pan</emphasis> depends on the <emphasis>instrument Pan</emphasis>
-            knob, which is set in the <link linkend="chpt.mixer">Mixer</link>.
-           Look to next figure to see how the <emphasis role="bold"><emphasis>Resultant Pan</emphasis></emphasis>
-           is determined (from version 1.1):
 
-	         TODO: replace "note Pan" and "instrument Pan" with links pointing to the particular sections
-           
-           <informalfigure id="matryoshkaPanning">
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/matrioskaPanH2.png" format="PNG" />
-              </imageobject>
-            </mediaobject>
-          </informalfigure>
-           
-	       This multi-pan model resembles a "matryoshka" in some way: the <emphasis>note Pan</emphasis> value moves the 
-	       <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at
-	        <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value.
-	        Some examples: 
-		    if <emphasis>instrument Pan</emphasis> is central, <emphasis>note Pan</emphasis> moves the signal in the
-		     whole stereo range (really from Left to Right);
-		    if <emphasis>instrument Pan</emphasis> is sided, <emphasis>note Pan</emphasis> moves the signal in a
-		     progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>;
-		    if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect.
-           </para>
-          </note>
-           
+          <tip>
+	        <para>
+	          
+	          For a detailed description of how this Pan value does interact with the <link linkend="chpt.mixer.channel_strips.pan">instrument Pan</link> and the <link linkend="chpt.mixer.master_fader_strip.mixer_settings">Pan Laws</link> in the Mixer please see <xref linkend="def.pan" />.
+            </para>
+          </tip>
         </listitem>
         
         <listitem id="chpt.pattern_editor.note_properties.lead_and_lag">
@@ -3843,7 +3822,7 @@
             </listitem>
 	        <listitem id="chpt.sample_editor.playback_and_envelope_editor.dropdown">
               <para>
-	            <emphasis role="bold">panorama/volume</emphasis>: dropdown specifying whether the <option>panorama</option> (pan) or <option>volume</option> of the sample will be tweaked in the Envelope Editor.
+	            <emphasis role="bold">panorama/volume</emphasis>: dropdown specifying whether the <option><link linkend="def.pan">pan(orama)</link></option> or <option>volume</option> of the sample will be tweaked in the Envelope Editor.
               </para>
             </listitem>
           </itemizedlist>
@@ -3993,11 +3972,13 @@
               <imageobject>
                 <imagedata fileref="img/mixer_rotary.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> : sets a pan value affecting all layers and note played using this instrument.
+              </inlinemediaobject> : sets a pan value affecting all note played using this instrument.
           </para>
-          <para>
-            TODO: mention/link/describe interaction with note, layer, sample pan
-          </para>
+          <tip>
+	        <para>
+	          For a detailed description of how this pan value does interact with the <link linkend="chpt.pattern_editor.note_properties.pan">note pan</link> and the <link linkend="chpt.mixer.master_fader_strip.mixer_settings">Pan Laws</link> in the Mixer please see <xref linkend="def.pan" />.
+            </para>
+          </tip>
         </listitem>
 	    <listitem>
 	      <para>
@@ -4316,7 +4297,7 @@
           Here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
         </para>
         <para>
-          The Pan Law is the relationship between the <link linkend="chpt.pattern_editor.note_properties.pan">Resultant Pan</link> and the separate <link linkend="def.gain">gains</link> of left and right audio outputs.
+          The Pan Law is the relationship between the <link linkend="def.pan">Resultant Pan</link> and the separate <link linkend="def.gain">gains</link> of left and right audio outputs.
           The aim is to control the horizontal angle the sound seems to arrive from.
         </para>
         <para>
@@ -6336,7 +6317,38 @@
     <glossentry id="def.pan">
       <glossterm>Pan</glossterm>
       <glossdef>
-        <para>TODO</para>
+        <para>Panning allows you to change the position of both a mono and stereo sample within the stereo sound field of the resulting audio output. In other words, it controls whether the sound of e.g. the snare is coming from the left or right speaker or somewhere in between. With careful pan adjustments of the different instruments you can make you drumkit sound more natural and simulate the feeling of listening to a real kit in close distance.</para>
+
+        
+        <para>
+          The effect of <link linkend="chpt.pattern_editor.note_properties.pan">note Pan</link> depends on the <link linkend="chpt.mixer.channel_strips.pan">instrument Pan</link>
+          knob, which is set in the <link linkend="chpt.mixer.channel_strips">Mixer</link>.
+          Look to next figure to see how the <emphasis role="bold">Resultant Pan</emphasis>
+          is determined (from version 1.1):
+
+          <informalfigure id="matryoshkaPanning">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/matrioskaPanH2.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
+          
+	      This multi-pan model resembles a "matryoshka" in some way: the <emphasis>note Pan</emphasis> value moves the 
+	      <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at
+	      <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value.
+	      Some examples: 
+		  if <emphasis>instrument Pan</emphasis> is central, <emphasis>note Pan</emphasis> moves the signal in the
+		  whole stereo range (really from Left to Right);
+		  if <emphasis>instrument Pan</emphasis> is sided, <emphasis>note Pan</emphasis> moves the signal in a
+		  progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>;
+		  if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect.
+        </para>
+
+          <para>
+	        The way the <emphasis>Resultant Pan</emphasis> will be translated into the volume of each stereo channel is determined by the <link linkend="chpt.mixer.master_fader_strip.mixer_settings">Pan Law</link> in the Mixer settings.
+          </para>
+                   
       </glossdef>
     </glossentry>
     
