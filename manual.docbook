@@ -4722,158 +4722,277 @@
         have to enter '0' in the Parameter field (1 for channel 2, 2 for channel 3 ...)</para></note>
 
 
-      <itemizedlist mark="opencircle">
-      <listitem id="chpt.midi.actions.play" xreflabel="PLAY"><para>
-	      <emphasis role="bold">PLAY</emphasis> : starts playback
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.pause" xreflabel="PAUSE"><para>
-	      <emphasis role="bold">PAUSE</emphasis> : pauses playback
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.stop" xreflabel="STOP"><para>
-	    <emphasis role="bold">STOP</emphasis> : stops playback and moves the
-          playhead to the beginning of the song 
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : Works the same as
-          <xref linkend="chpt.midi.actions.play"/> if the
-          playback has not started yet and same as. 
-          <xref linkend="chpt.midi.actions.pause"/> otherwise. (The playhead will not return
-	      to the start of the song, but will stay at its current position)
-	    </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <xref linkend="chpt.midi.actions.play"/> if the
-                  playback has not started yet and same as.
-                  <xref linkend="chpt.midi.actions.stop"/> otherwise.
-	    </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">MUTE</emphasis> : mutes the Master output in the
-        Mixer (sequencer keeps running).
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output in the
-        Mixer (sequencer keeps running).
-	    </para></listitem>
-	    
-      <listitem><para>
-	    <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles the muting of the
-        Master output in the Mixer (sequencer keeps running)
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">NEXT_BAR</emphasis> : moves the playhead to the next pattern/bar.
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PREVIOUS_BAR</emphasis> : moves the playhead to the previous pattern/bar.
-	    </para></listitem>
-	    
-      <listitem><para>
-	    <emphasis role="bold">BPM_INCR</emphasis> : increases the current tempo
-        by the supplied value.
-      </para>
-      <note>
-        <para>
-          Note that this command will have no
-        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
-        and <emphasis>Tempo Marker</emphasis> has been passed
-	    </para>
-      </note>
-      </listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BPM_DECR</emphasis> : decreases the current tempo
-          by the supplied value.
-        </para>
-        <note>
-          <para>
-            Note that this command will have no
-        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
-        and <emphasis>Tempo Marker</emphasis> has been passed
-	      </para>
-        </note>
-      </listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BPM_CC_RELATIVE</emphasis> : changes the tempo relative to the current tempo, using a controller
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
-	      <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis> : changes the Master output volume, relative
-	      to the current setting. For a value of 0 it sets the volume of
-          the master fader to 0. For a value of one 1 it increases its
-          volume by 0.05 and for all other values it decreases it by
-          0.05. (-1: -0.05 , 0: 0 , 1: +0.05)
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
-	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : sets the volume of the master fader to the 
-	      absolute value of the midi control (use with midi fader or pot)
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="chpt.midi.actions.master_volume_relative"/>, but applies to
-	      the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="chpt.midi.actions.master_volume_absolute"/>, but applies to
-	      the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
-	    </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis> : changes the volume level of effect 'x';
-         the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
-      </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
-        <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : if Hydrogen is in <emphasis>Pattern Mode</emphasis>,
-        switches to pattern that is defined in the Action Parameter **. If
-        Hydrogen is in <emphasis>Song Mode</emphasis>, the command will have no
-        effect
-      </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : works as
-        <xref linkend="chpt.midi.actions.select_next_pattern"/> combined with
-        <xref linkend="chpt.midi.actions.play"/>
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the pan, relative to the current value. For a
-          value of 1 it increase the pan by 0.05. For all other values
-          it decreases it by 0.05. (-1: -0.05 , 1: +0.05);
-          the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the pan to the absolute value that the linked controller sends to Hydrogen
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
-          time passing between successive encounters of this commands and uses
-          it to set the current tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">TAP_TEMPO</emphasis> : another command
-          calculating the average time passing between successive encounters of
-          this commands and uses it to set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.
-	    </para></listitem>
-	    
-        <listitem id="chpt.midi.actions.select_instrument">
-          <para>
-	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects a specific instrument in the drumkit
-	    </para></listitem>
-	    
-   
-      </itemizedlist>
+        <itemizedlist mark="opencircle">
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">&#60;&#60;_PREVIOUS_BAR</emphasis>:
+              TODO
+              moves the playhead to the previous pattern/bar.
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">&#62;&#62;_NEXT_BAR</emphasis>:
+              TODO
+              moves the playhead to the next pattern/bar.
+            </para>
+          </listitem>
+          
+          <listitem><para>
+	        <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
+            time passing between successive encounters of this commands and uses
+            it to set the current tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.
+	      </para></listitem>
+
+          <listitem><para>
+	        <emphasis role="bold">BPM_CC_RELATIVE</emphasis> : changes the tempo relative to the current tempo, using a controller
+	      </para></listitem>
+
+	      
+          <listitem><para>
+	        <emphasis role="bold">BPM_DECR</emphasis> : decreases the current tempo
+            by the supplied value.
+          </para>
+          <note>
+            <para>
+              Note that this command will have no
+              effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+              and <emphasis>Tempo Marker</emphasis> has been passed
+	        </para>
+          </note>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">BPM_FINE_CC_RELATIVE</emphasis>:
+              TODO
+            </para>
+          </listitem>
+          
+          <listitem><para>
+	        <emphasis role="bold">BPM_INCR</emphasis> : increases the current tempo
+            by the supplied value.
+          </para>
+          <note>
+            <para>
+              Note that this command will have no
+              effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+              and <emphasis>Tempo Marker</emphasis> has been passed
+	        </para>
+          </note>
+          </listitem>
+	      
+          <listitem><para>
+            <emphasis role="bold">EFFECTx_LEVEL_ABSOLUTE</emphasis> :
+            TODO
+          </para></listitem>
+
+          <listitem><para>
+            <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis> : changes the volume level of effect 'x';
+            the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
+          </para></listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE</emphasis>:
+            </para>
+          </listitem>
+	      
+          <listitem id="chpt.midi.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
+	        <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : sets the volume of the master fader to the 
+	        absolute value of the midi control (use with midi fader or pot)
+	      </para></listitem>
+	      
+          <listitem id="chpt.midi.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
+	        <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis> : changes the Master output volume, relative
+	        to the current setting. For a value of 0 it sets the volume of
+            the master fader to 0. For a value of one 1 it increases its
+            volume by 0.05 and for all other values it decreases it by
+            0.05. (-1: -0.05 , 0: 0 , 1: +0.05)
+	      </para></listitem>
+	      
+          <listitem><para>
+            <emphasis role="bold">MUTE</emphasis> : mutes the Master output in the
+            Mixer (sequencer keeps running).
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles the muting of the
+            Master output in the Mixer (sequencer keeps running)
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the pan to the absolute value that the linked controller sends to Hydrogen
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the pan, relative to the current value. For a
+            value of 1 it increase the pan by 0.05. For all other values
+            it decreases it by 0.05. (-1: -0.05 , 1: +0.05);
+            the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
+	      </para></listitem>
+
+          <listitem id="chpt.midi.actions.pause" xreflabel="PAUSE"><para>
+	        <emphasis role="bold">PAUSE</emphasis> : pauses playback
+	      </para></listitem>
+	      
+          <listitem id="chpt.midi.actions.play" xreflabel="PLAY"><para>
+	        <emphasis role="bold">PLAY</emphasis> : starts playback
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : Works the same as
+            <xref linkend="chpt.midi.actions.play"/> if the
+            playback has not started yet and same as. 
+            <xref linkend="chpt.midi.actions.pause"/> otherwise. (The playhead will not return
+	        to the start of the song, but will stay at its current position)
+	      </para></listitem>
+	      
+          <listitem><para>
+            <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <xref linkend="chpt.midi.actions.play"/> if the
+            playback has not started yet and same as.
+            <xref linkend="chpt.midi.actions.stop"/> otherwise.
+	      </para></listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">PLAYLIST_PREV_SONG</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">PLAYLIST_SONG</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">RECORD/STROBE_TOGGLE</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">RECORD_EXIT</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">RECORD_READY</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">RECORD_STROBE</emphasis>:
+              TODO
+            </para>
+          </listitem>
+
+          <listitem>
+	        <para>
+	          <emphasis role="bold">REDO_ACTION</emphasis>:
+              TODO
+            </para>
+          </listitem>
+          
+          <listitem><para>
+            <emphasis role="bold">SELECT_AND_PLAY_PATTERN</emphasis> : works as
+            <xref linkend="chpt.midi.actions.select_next_pattern"/> combined with
+            <xref linkend="chpt.midi.actions.play"/>
+            TODO
+	      </para></listitem>
+	      
+          <listitem id="chpt.midi.actions.select_instrument">
+            <para>
+	          <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects a specific instrument in the drumkit
+	      </para></listitem>
+	      
+          <listitem id="chpt.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
+            <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : if Hydrogen is in <emphasis>Pattern Mode</emphasis>,
+            switches to pattern that is defined in the Action Parameter **. If
+            Hydrogen is in <emphasis>Song Mode</emphasis>, the command will have no
+            effect
+          </para></listitem>
+
+          <listitem><para>
+            <emphasis role="bold">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis> :
+            TODO
+          </para></listitem>
+
+          <listitem><para>
+            <emphasis role="bold">SELECT_NEXT_PATTERN_RELATIVE</emphasis> :
+            TODO
+          </para></listitem>
+
+          <listitem><para>
+            <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis> :
+            TODO
+          </para></listitem>
+
+          <listitem id="chpt.midi.actions.stop" xreflabel="STOP"><para>
+	        <emphasis role="bold">STOP</emphasis> : stops playback and moves the
+            playhead to the beginning of the song 
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">STRIP_MUTE_TOGGLE</emphasis> :
+            TODO
+	      </para></listitem>
+
+          <listitem><para>
+	        <emphasis role="bold">STRIP_SOLO_TOGGLE</emphasis> :
+            TODO
+	      </para></listitem>
+
+          <listitem><para>
+	        <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="chpt.midi.actions.master_volume_absolute"/>, but applies to
+	        the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="chpt.midi.actions.master_volume_relative"/>, but applies to
+	        the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
+	      </para></listitem>
+	      
+          <listitem><para>
+	        <emphasis role="bold">TAP_TEMPO</emphasis> : another command
+            calculating the average time passing between successive encounters of
+            this commands and uses it to set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.
+	      </para></listitem>
+
+          <listitem><para>
+	        <emphasis role="bold">TOGGLE_METRONOME</emphasis> :
+            TODO
+	      </para></listitem>
+
+          <listitem><para>
+	        <emphasis role="bold">UNDO_ACTION</emphasis> :
+            TODO
+	      </para></listitem>
+
+          <listitem><para>
+	        <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output in the
+            Mixer (sequencer keeps running).
+	      </para></listitem>
+          
+        </itemizedlist>
 
 
      </sect1>
