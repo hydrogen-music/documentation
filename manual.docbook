@@ -109,7 +109,7 @@
         </listitem>
         <listitem>
 	      <para>
-	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <abbrev>OSC</abbrev> and <abbrev>NSM</abbrev> support
+	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <link linkend="chpt.osc"><abbrev>OSC</abbrev></link> and <link linkend="chpt.session_management.nsm"><abbrev>NSM</abbrev></link> support
           </para>
         </listitem>
       </itemizedlist>
@@ -438,7 +438,7 @@
 
               <tip>
 	            <para>
-	              You may consider using the more advanced <link linkend="chpt.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
+	              You may consider using the more advanced <link linkend="chpt.session_management.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
                 </para>
               </tip>
             </para>
@@ -1115,22 +1115,22 @@
 
         <note>
 	      <para>
-	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.nsm" /> for details).
+	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.session_management.nsm" /> for details).
           </para>
         </note>
 
         <itemizedlist>
-          <listitem>
+          <listitem id="sect.main_menu.projects.new">
             <para><emphasis role="bold">New</emphasis>: creates a new and empty song.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Show Info</emphasis>: sets general properties of the
             song such as name, author, license, and generic notes.</para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.open">
             <para><emphasis role="bold">Open</emphasis>: opens an existing song (a <link linkend="chpt.file_types.h2song">.h2song</link> file).</para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.open_demo">
             <para><emphasis role="bold">Open Demo</emphasis>: opens one of the demo song shipped with Hydrogen.
 
             <note>
@@ -1140,13 +1140,13 @@
             </note>
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.open_recent">
             <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing the last used songs (ordered from most recent to least recent).</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Save</emphasis>: saves changes to current song.</para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.save_as">
             <para><emphasis role="bold">Save as</emphasis>: saves current song as <link linkend="chpt.file_types.h2song">.h2song</link> file to a path of your choice.
 
             <tip>
@@ -5517,12 +5517,124 @@
 	 </sect1>
    </chapter>
    
-   <chapter id="chpt.nsm">
-     <title>NSM Support</title>
-     
+   <chapter id="chpt.session_management">
+     <title>Session Management</title>
+
      <para>
-	   TODO
+       With Session Management you can easily restore complex sessions involving numerous applications including their particular state. Hydrogen does support some Session Management systems too.
      </para>
+
+     <warning>
+	   <para>
+	     All the supported Session Management protocols are Linux only. There is no (tested) support for MacOS and Windows yet.
+       </para>
+     </warning>
+     
+     <itemizedlist>
+	   <listitem>
+	     <para>
+	       <emphasis role="bold"><abbrev>NSM</abbrev></emphasis>:
+           <ulink url="http://non.tuxfamily.org/nsm/API.html">Non Session Manager (<abbrev>NSM</abbrev>)</ulink> is of 2021 the defacto standard in Session Management tools within the Linux audio community and Hydrogen does over full support and compliance to its API.
+
+           <tip>
+	         <para>
+	           We highly recommend using this protocol for Session Management.
+             </para>
+           </tip>
+         </para>
+       </listitem>
+       <listitem>
+	     <para>
+	       <emphasis role="bold"><abbrev>LASH</abbrev></emphasis>:
+           Hydrogen provides a basic support for <ulink url="http://lash.nongnu.org">LASH Audio Session Handler (<abbrev>LASH</abbrev>)</ulink>. This covers recalling the song used within the session but, unlike the NSM support, no recalling of the <abbrev>JACK</abbrev> connections and no per-session preferences.
+
+           <note>
+	         <para>
+	           You have to activate <abbrev>LASH</abbrev> support in the <link linkend="fig.preferences.general_tab">General</link> tab of the Preference dialog in order to use it.
+             </para>
+           </note>
+         </para>
+       </listitem>
+       <listitem>
+	     <para>
+	       <emphasis role="bold"><abbrev>JACK</abbrev> Session</emphasis>:
+           <ulink url="https://jackaudio.org"><abbrev>JACK</abbrev> Session</ulink> has been marked <ulink url="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html">deprecated</ulink> by the <abbrev>JACK</abbrev> project.
+           <warning>
+	         <para>
+	           Hydrogen versions &#60;= 1.1 still feature this Session Management protocol. But it will be removed in future releases.
+             </para>
+           </warning>
+         </para>
+       </listitem>
+     </itemizedlist>
+
+     <sect1 id="chpt.session_management.nsm">
+	   <title>NSM</title>
+
+       <para>
+         Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <command>Non Session Manager</command> or <command>RaySession</command>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
+       </para>
+       
+       <itemizedlist>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Replace With New Song</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.new">New</link>. Replaces the song associated with the session by an empty one.
+           </para>
+         </listitem>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Import Into Session</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
+
+             <warning>
+	           <para>
+	             In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
+               </para>
+             </warning>
+           </para>
+         </listitem>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Import Recent Info Session</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.open_recent">Open Recent</link>. Replaces the song associated with the session by one of the recently used songs.
+             <warning>
+	           <para>
+	             In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
+               </para>
+             </warning>
+           </para>
+         </listitem>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Export From Session As</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.save_as">Save As</link>. Stores the song associated with the session at a location of your choice as <link linkend="chpt.file_types.h2song">.h2song</link> file.
+
+             <note>
+	           <para>
+	             In contrast to the <emphasis>Save As</emphasis> command the underlying path of the current song will not be changed. All subsequent <emphasis>Save</emphasis> actions will store the current state of the song to the file in the session folder and <emphasis role="bold">not</emphasis> to the path of the exported file.
+               </para>
+             </note>
+           </para>
+         </listitem>
+       </itemizedlist>
+
+       <note>
+         <para>
+           The <link linkend="sect.main_menu.projects.open_demo">Open Demo</link> option will be missing.
+         </para>
+       </note>
+
+       <para>
+	     Both the song and the preferences associated with the session will be stored in a session folder called <filename>Hydrogen.*</filename>. In addition, the drumkit (and its samples) used with the song will linked into the session folder as well. If the link is replaced by a folder containing a valid drumkit, this one will be used over the system and user drumkits.
+
+         <tip>
+	       <para>
+	         This allows you to create fully self sufficient backup of your Hydrogen session using <command>tar -chf</command>. These can be even ported and used to systems which do not have the required drumkits installed.
+           </para>
+         </tip>
+       </para>
+     </sect1>
    </chapter>
  </part>
  <!--
