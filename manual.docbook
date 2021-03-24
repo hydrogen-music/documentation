@@ -4480,7 +4480,7 @@
            
            <note>
 	         <para>
-	           This means that e.g. <link linkend="chpt.osc.messages.all_messages">OSC</link> commands can not be used to change the state of Hydrogen as the subsequent loading of the associated song would reset it immediately.
+	           This means that e.g. <link linkend="chpt.osc.commands.all_messages">OSC</link> commands can not be used to change the state of Hydrogen as the subsequent loading of the associated song would reset it immediately.
              </para>
            </note>
 
@@ -4726,8 +4726,8 @@
 	           <emphasis role="bold">BPM_CC_RELATIVE</emphasis>: changes the tempo relative to the current tempo, using a controller. Using the <emphasis role="bold">Action Param</emphasis> you can specify by how much the current tempo will change. If the incoming Event is <option>-1</option> (negative), the tempo will be increased and if it's <option>1</option> (positive), it will be increased.
                <note>
                  <para>
-                   This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
-                   or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
+                   This Action will have no effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                   and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	             </para>
                </note>
 	         </para>
@@ -5054,16 +5054,16 @@
 
        <tip>
          <para>
-           Hydrogen's port number defaults to 9000 for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's adviced to set a different default port in such cases.
+           Hydrogen's port number defaults to <option>9000</option> for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's adviced to set a different default port in such cases.
          </para>
        </tip>
        
      </sect1>
        
-     <sect1 id="chpt.osc.messages">
-       <title>Messages</title>
+     <sect1 id="chpt.osc.commands">
+       <title>Commands</title>
 
-       <sect2 id="chpt.osc.messages.syntax">
+       <sect2 id="chpt.osc.commands.syntax">
 	     <title>Syntax</title>
 
          <para>The syntax for sending the commands is</para>
@@ -5073,7 +5073,7 @@
          </screen>
 
          <para>with the supported types</para>
-         <itemizedlist>
+         <itemizedlist mark="opencircle">
            <listitem><para><emphasis role="bold">' '</emphasis>: no argument required</para></listitem>
            <listitem><para><emphasis role="bold">i</emphasis>: int32</para></listitem>
            <listitem><para><emphasis role="bold">f</emphasis>: float32</para></listitem>
@@ -5082,7 +5082,7 @@
          </itemizedlist>
          <para>Detailed description of the formats and conventions used in the
          tables below</para>
-         <itemizedlist>
+         <itemizedlist mark="opencircle">
            <listitem>
              <para><emphasis role="bold">ff</emphasis>: two types placed right after each
              other indicated that the command requires two distinct
@@ -5091,7 +5091,7 @@
            <listitem>
              <para><emphasis role="bold">' ',[f]</emphasis>: two types separated by a comma
              indicate that two versions of the command are available. To support
-             <emphasis>TouchOSC</emphasis> all commands expecting no parameter
+             <command>TouchOSC</command> all commands expecting no parameter
              are available in an alternative version requiring a float too. In
              the latter version the argument will be ignored and it is placed in
              squared brackets <emphasis>[f]</emphasis> to indicate its
@@ -5113,7 +5113,7 @@
            </listitem>
            <listitem>
              <para><emphasis role="bold">1.0</emphasis>: also in order to support
-             TouchOSC all numerical input has to be passed as type float while
+             <command>TouchOSCM</command> all numerical input has to be passed as type float while
              most of these numbers will be rounded to integers internally. For
              all true float inputs the <emphasis>range</emphasis> column uses a
              floating point representation of the limits, like 1.0 instead of 1.</para>
@@ -5130,8 +5130,8 @@
          </itemizedlist>
        </sect2>
 
-       <sect2 id="chpt.osc.messages.all_messages">
-         <title>All Messages</title>
+       <sect2 id="chpt.osc.commands.all_messages">
+         <title>All Commands</title>
          
          <table frame='all'>
            <title>All <abbrev>OSC</abbrev> Messages</title>
@@ -5255,14 +5255,15 @@
                  <entry>Decreases the current tempo by
                  <emphasis>f</emphasis>. Note that this command will have no
                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
-                 and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
+                 and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">BPM_INCR</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
                  <entry>Increases the current tempo by
-                 <emphasis>f</emphasis>. Note that this command will have no
+                 <emphasis>f</emphasis>.
+                 Note that this command will have no
                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
                </row>
@@ -5280,20 +5281,20 @@
                  <entry></entry>
                  <entry>Another command calculating the average time passing
                  between successive encounters of this commands and uses it to
-                 set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Tap Tempo</link>.</entry>
+                 set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0,1}</entry>
-                 <entry>Activates the Timeline if <emphasis>f</emphasis> is not
+                 <entry>Activates the <link linkend="chpt.song_editor.timeline">Timeline</link> if <emphasis>f</emphasis> is not
                  zero and deactivates it otherwise.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ADD_MARKER</emphasis>/</entry>
                  <entry>ff</entry>
                  <entry>[0,] [10,400]</entry>
-                 <entry>Adds a Tempo Marker to the Timeline. The first argument
+                 <entry>Adds a Tempo Marker to the <link linkend="chpt.song_editor.timeline">Timeline</link>. The first argument
                  specifies the pattern/bar to at the marker to and the second
                  its tempo.</entry>
                </row>
@@ -5302,44 +5303,41 @@
                  <entry>f</entry>
                  <entry>[0,]</entry>
                  <entry>Deletes a Tempo Marker at pattern/bar
-                 <emphasis>f</emphasis> on the Timeline.</entry>
+                 <emphasis>f</emphasis> on the <link linkend="chpt.song_editor.timeline">Timeline</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">MUTE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Mutes the <emphasis>Master</emphasis> output in the
-                 Mixer (sequencer keeps running).</entry>
+                 <entry><link linkend="def.mute">Mutes</link> the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">UNMUTE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Unmutes the <emphasis>Master</emphasis> output in the
-                 Mixer (sequencer keeps running).</entry>
+                 <entry>Unmutes the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).</entry>
                </row>
                <row id="chpt.osc.command.mute_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Toggles the muting of the <emphasis>Master</emphasis>
-                 output in the Mixer (sequencer keeps running).</entry>
+                 <entry>Toggles the muting of the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).</entry>
                </row>
                <row id="chpt.osc.command.master_volume_absolute" xreflabel="/Hydrogen/MASTER_VOLUME_ABSOLUTE/">
                  <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0.0,1.5]</entry>
-                 <entry>Sets the volume of the master fader.</entry>
+                 <entry>Sets the volume of the <link linkend="chpt.mixer.master_fader_strip">Master fader</link>.</entry>
                </row>
                <row id="chpt.osc.command.master_volume_relative" xreflabel="/Hydrogen/MASTER_VOLUME_RELATIVE/">
                  <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{-1;0;1}</entry>
-                 <entry>Changes the Master output volume, relative
-	             to the current setting. For a value of 0 it sets the volume of
-                 the master fader to 0. For a value of one 1 it increases its
+                 <entry>Changes the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link>, relative
+	             to the current setting. For a value of <option>0</option> it sets the volume of
+                 the master fader to 0. For a value of <option>1</option> it increases its
                  volume by 0.05 and for all other values it decreases it by
-                 0.05. (-1: -0.05 , 0: 0 , 1: +0.05)</entry>
+                 0.05. (<option>-1</option>: -0.05 ,<option>0</option>: 0 ,<option>1</option>: +0.05)</entry>
                </row>
                <row id="chpt.osc.command.strip_volume_absolute">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis>/</entry>
@@ -5373,17 +5371,17 @@
                  <entry>/Hydrogen/<emphasis role="bold">PAN_RELATIVE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{-1;1}</entry>
-                 <entry>Changes the pan of the instrument strip
+                 <entry>Changes the <link linkend="def.pan">pan</link> of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
                  <emphasis>X</emphasis>, relative to the current value. For a
-                 value of 1 it increase the pan by 0.05. For all other values
-                 it decreases it by 0.05. (-1: -0.05 , 1: +0.05)</entry>
+                 value of <option>1</option> it increase the pan by 0.05. For all other values
+                 it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>1</option>: +0.05)</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,127]</entry>
-                 <entry>For a value of 0 it sets the filter cutoff of the
-                 instrument strip <emphasis>X</emphasis> to 0. For all other
+                 <entry>For a value of <option>0</option> it sets the <link linkend="chpt.instrument_editor.filter">Filter Cutoff</link> of the
+                 <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> <emphasis>X</emphasis> to 0. For all other
                  values it sets the cutoff to the provided number divided by
                  127.0. Please note that this parameter is not displayed
                  anywhere in the Mixer but in the Instrument Rack.</entry>
@@ -5392,7 +5390,7 @@
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
-                 <entry>Toggles muting of instrument strip
+                 <entry>Toggles muting of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
                  <emphasis>X</emphasis>. Input argument will be
                  ignored.</entry>
                </row>
@@ -5400,7 +5398,7 @@
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
-                 <entry>Toggles soloing of instrument strip
+                 <entry>Toggles soloing of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
                  <emphasis>X</emphasis>. Input argument will be
                  ignored.</entry>
                </row>
@@ -5408,19 +5406,19 @@
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_SONG</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
-                 <entry>Opens song <emphasis>f</emphasis> of the Playlist.</entry>
+                 <entry>Opens song <emphasis>f</emphasis> of the <link linkend="chpt.playlist_editor">Playlist</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Opens the next song in the Playlist.</entry>
+                 <entry>Opens the next song in the <link linkend="chpt.playlist_editor">Playlist</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_PREV_SONG</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Opens the previous song in the Playlist.</entry>
+                 <entry>Opens the previous song in the <link linkend="chpt.playlist_editor">Playlist</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">UNDO_ACTION</emphasis>/</entry>
@@ -5438,35 +5436,35 @@
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TRANSPORT_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated the <abbrev>JACK</abbrev> transport support for a value of 0
+                 <entry>Deactivated the <link linkend="sect.preferences.jack"><abbrev>JACK</abbrev> transport</link> support for a value of <option>0</option>
                  and activates it for all others.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated the <abbrev>JACK</abbrev> Timebase Master transport support
-                 for a value of 0 and activates it for all others.</entry>
+                 <entry>Unregisters Hydrogen as <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>
+                 for a value of <option>0</option> and registers it for all others.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">SONG_MODE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated Song Mode for a value of 0 and activates it
+                 <entry>Deactivated Song Mode (TODO: link) for a value of <option>0</option> and activates it
                  for all others.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">LOOP_MODE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated Loop Mode for a value of 0 and activates it
+                 <entry>Deactivated <link linkend="sect.main_toolbar.transport_control">looped playback</link> for a value of <option>0</option> and activates it
                  for all others.</entry>
                </row>
                <row id="chpt.osc.command.toggle_metronome">
                  <entry>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Toggles the metronome.</entry>
+                 <entry>Toggles the <link linkend="sect.main_toolbar.bpm_control_and_metronome">metronome</link>.</entry>
                </row>
                <row id="chpt.osc.command.select_instrument">
                  <entry>/Hydrogen/<emphasis role="bold">SELECT_INSTRUMENT</emphasis>/</entry>
