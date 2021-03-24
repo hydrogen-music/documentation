@@ -109,7 +109,7 @@
         </listitem>
         <listitem>
 	      <para>
-	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <abbrev>OSC</abbrev> and <abbrev>NSM</abbrev> support
+	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <link linkend="chpt.osc"><abbrev>OSC</abbrev></link> and <link linkend="chpt.session_management.nsm"><abbrev>NSM</abbrev></link> support
           </para>
         </listitem>
       </itemizedlist>
@@ -438,7 +438,7 @@
 
               <tip>
 	            <para>
-	              You may consider using the more advanced <link linkend="chpt.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
+	              You may consider using the more advanced <link linkend="chpt.session_management.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
                 </para>
               </tip>
             </para>
@@ -506,22 +506,22 @@
               sets the absolute path to the <command>rubberband</command> command line interface (CLI) Hydrogen will use for stretching samples in the <link linkend="chpt.sample_editor.pitch">Sample Editor</link>.
               <note>
 	            <para>
-	              This option is only available if your version of Hydrogen does <emphasis>not</emphasis> already has <command>rubberband</command> support compiled into it. If it does and the option is hot shown, everything is already configured and you don't have to worry about <command>rubberband</command> at all.
+	              This option is only available if your version of Hydrogen does <emphasis>not</emphasis> already has Rubber Band support compiled into it. If it does and the option is hot shown, everything is already configured and you don't have to worry about Rubber Band at all.
                 </para>
               </note>
 
               <tip>
 	            <para>
-	              If you are using Ubuntu, you can install <command>rubberband</command> from the Software Center 
+	              If you are using Ubuntu, you can install Rubber Band from the Software Center 
                   via the package <option>rubberband-cli</option>.  For other Linux distros please check your package manager and for other platforms
-                  please check <ulink url="http://breakfastquay.com/rubberband/">the rubberband site
+                  please check <ulink url="http://breakfastquay.com/rubberband/">the Rubber Band site
                   </ulink>.
                 </para>
               </tip>
 
               <tip>
 	            <para>
-                  If <command>rubberband</command> is installed and configured correctly, you will see an extra button
+                  If Rubber Band is installed and configured correctly, you will see an extra button
                   <inlinemediaobject>
                     <imageobject>
                       <imagedata fileref="img/rubber_off.png" format="PNG" />
@@ -904,7 +904,7 @@
         </itemizedlist>
 
         <para>
-	      Using the table in the lower part of the tab you can associate <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> actions</link> provided by Hydrogen with incoming <abbrev>MIDI</abbrev> messages. How this is done will be explained in the <xref linkend="chpt.midi.events" />.
+	      Using the table in the lower part of the tab you can associate <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> actions</link> provided by Hydrogen with incoming <abbrev>MIDI</abbrev> messages. How this is done will be explained in the <xref linkend="chpt.midi.actions" />.
         </para>
         
      </sect1>
@@ -1115,22 +1115,22 @@
 
         <note>
 	      <para>
-	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.nsm" /> for details).
+	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.session_management.nsm" /> for details).
           </para>
         </note>
 
         <itemizedlist>
-          <listitem>
+          <listitem id="sect.main_menu.projects.new">
             <para><emphasis role="bold">New</emphasis>: creates a new and empty song.</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Show Info</emphasis>: sets general properties of the
             song such as name, author, license, and generic notes.</para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.open">
             <para><emphasis role="bold">Open</emphasis>: opens an existing song (a <link linkend="chpt.file_types.h2song">.h2song</link> file).</para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.open_demo">
             <para><emphasis role="bold">Open Demo</emphasis>: opens one of the demo song shipped with Hydrogen.
 
             <note>
@@ -1140,13 +1140,13 @@
             </note>
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.open_recent">
             <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing the last used songs (ordered from most recent to least recent).</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Save</emphasis>: saves changes to current song.</para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.projects.save_as">
             <para><emphasis role="bold">Save as</emphasis>: saves current song as <link linkend="chpt.file_types.h2song">.h2song</link> file to a path of your choice.
 
             <tip>
@@ -1667,7 +1667,7 @@
         </para>
 
         <para>
-	      TODO: update image: Rubberband button is missing
+	      TODO: update image: Rubber Band button is missing
         </para>
 
         <para>Set the speed of the song in the range from <option>10</option> to <option>400</option> bpm (beats per minute).
@@ -1694,13 +1694,13 @@
         </tip>
 
         <para>
-	      If either <command>rubberband</command> support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
+	      If either Rubber Band support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
           <inlinemediaobject>
             <imageobject>
               <imagedata fileref="img/rubber_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
-          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using <command>rubberband</command> whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
+          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
         </para>
         
       </sect1>
@@ -2857,34 +2857,13 @@
           <para><emphasis role="bold">Pan</emphasis> : with this parameter you can move
            the stereo image position of the note (how loud it will be in the
           left/right output).</para>
-          <note>
-           <para>The effect of <emphasis>note Pan</emphasis> depends on the <emphasis>instrument Pan</emphasis>
-            knob, which is set in the <link linkend="chpt.mixer">Mixer</link>.
-           Look to next figure to see how the <emphasis role="bold"><emphasis>Resultant Pan</emphasis></emphasis>
-           is determined (from version 1.1):
 
-	         TODO: replace "note Pan" and "instrument Pan" with links pointing to the particular sections
-           
-           <informalfigure id="matryoshkaPanning">
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/matrioskaPanH2.png" format="PNG" />
-              </imageobject>
-            </mediaobject>
-          </informalfigure>
-           
-	       This multi-pan model resembles a "matryoshka" in some way: the <emphasis>note Pan</emphasis> value moves the 
-	       <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at
-	        <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value.
-	        Some examples: 
-		    if <emphasis>instrument Pan</emphasis> is central, <emphasis>note Pan</emphasis> moves the signal in the
-		     whole stereo range (really from Left to Right);
-		    if <emphasis>instrument Pan</emphasis> is sided, <emphasis>note Pan</emphasis> moves the signal in a
-		     progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>;
-		    if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect.
-           </para>
-          </note>
-           
+          <tip>
+	        <para>
+	          
+	          For a detailed description of how this Pan value does interact with the <link linkend="chpt.mixer.channel_strips.pan">instrument Pan</link> and the <link linkend="chpt.mixer.master_fader_strip.mixer_settings">Pan Laws</link> in the Mixer please see <xref linkend="def.pan" />.
+            </para>
+          </tip>
         </listitem>
         
         <listitem id="chpt.pattern_editor.note_properties.lead_and_lag">
@@ -3757,22 +3736,22 @@
 	        TODO: screenshot of corresponding part
           </para>
 
-          <para>This section of the Sample Editor allows you to use <command>Rubberband</command> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
+          <para>This section of the Sample Editor allows you to use <emphasis role="bold">Rubber Band</emphasis> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
 
           <note>
             <para>
-              These options are only avaiable if <command>rubberband</command> support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
-  After installing rubberband you should check if the path to the rubberband cli is 
+              These options are only avaiable if Rubber Band support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
+  After installing Rubber Band you should check if the path to the <command>rubberband cli</command> is 
   configured correctly (see <xref linkend="chpt.preferences.general_tab"/>). If neither is the case, all associated widgets will be disabled.
             </para>
 	        <para>
-	          When <emphasis role="bold">Sample length to beat</emphasis> is set to <option>off</option> the whole <command>rubberband</command> functionality will be disabled.
+	          When <emphasis role="bold">Sample length to beat</emphasis> is set to <option>off</option> the whole Rubber Band functionality will be disabled.
               </para>
             </note>
           
           <itemizedlist mark="opencircle">
             <listitem><para><emphasis role="bold">Sample length to beat</emphasis>:
-            speficies the length of the resulting sample (after <command>rubberband</command> was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
+            speficies the length of the resulting sample (after Rubber Band was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
 
             <tip>
 	          <para>
@@ -3783,7 +3762,7 @@
 
             <note>
 	          <para>
-	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using <command>rubberband</command> again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
+	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using Rubber Band again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
             <inlinemediaobject>
               <imageobject>
                 <imagedata fileref="img/rubber_off.png" format="PNG" />
@@ -3807,7 +3786,7 @@
           </para>
             </listitem>
             <listitem><para><emphasis role="bold">Crispness</emphasis>:
-            fine-tunes the processing algorithm used by <command>rubberband</command>. It does not affect tempo or pitch, but changes the way
+            fine-tunes the processing algorithm used by Rubber Band. It does not affect tempo or pitch, but changes the way
             the sample sounds.
           </para>
             </listitem>
@@ -3843,7 +3822,7 @@
             </listitem>
 	        <listitem id="chpt.sample_editor.playback_and_envelope_editor.dropdown">
               <para>
-	            <emphasis role="bold">panorama/volume</emphasis>: dropdown specifying whether the <option>panorama</option> (pan) or <option>volume</option> of the sample will be tweaked in the Envelope Editor.
+	            <emphasis role="bold">panorama/volume</emphasis>: dropdown specifying whether the <option><link linkend="def.pan">pan(orama)</link></option> or <option>volume</option> of the sample will be tweaked in the Envelope Editor.
               </para>
             </listitem>
           </itemizedlist>
@@ -3912,10 +3891,6 @@
 	    TODO: add image showing corresponding part of Mixer
       </para>
 
-      <para>
-	    TODO: is the preview sound in the Pattern Editor routed through these strips?
-      </para>
-
       <itemizedlist>
 	    <listitem>
 	      <para>
@@ -3958,7 +3933,7 @@
 
               <tip>
 	            <para>
-	              An instrument can be selected by interacting with its Instrument Channel Strip in the Mixer, by interacing with its associated row in the Pattern Editor, or by the corresponding <link linkend="chpt.midi.actions.select_instrument"><abbrev>MIDI</abbrev></link> or <link linkend="chpt.osc.command.select_instrument"><abbrev>OSC</abbrev> command.</link>
+	              An instrument can be selected by interacting with its Instrument Channel Strip in the Mixer, by interacing with its associated row in the Pattern Editor, or by the corresponding <link linkend="chpt.midi.actions.actions.select_instrument"><abbrev>MIDI</abbrev></link> or <link linkend="chpt.osc.command.select_instrument"><abbrev>OSC</abbrev> command.</link>
                 </para>
               </tip>
           </para>
@@ -3969,7 +3944,7 @@
               <imageobject>
                 <imagedata fileref="img/btn_mute_on.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> : <link linkend="def.mute">mutes</link> the instrument.
+              </inlinemediaobject> : <link linkend="def.mute">mutes</link> all sounds related to the instrument (including the preview sound you hear when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor).
           </para>
           <note>
 	        <para>
@@ -3997,13 +3972,15 @@
               <imageobject>
                 <imagedata fileref="img/mixer_rotary.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> : sets a pan value affecting all layers and note played using this instrument.
+              </inlinemediaobject> : sets a pan value affecting all note played using this instrument.
           </para>
-          <para>
-            TODO: mention/link/describe interaction with note, layer, sample pan
-          </para>
+          <tip>
+	        <para>
+	          For a detailed description of how this pan value does interact with the <link linkend="chpt.pattern_editor.note_properties.pan">note pan</link> and the <link linkend="chpt.mixer.master_fader_strip.mixer_settings">Pan Laws</link> in the Mixer please see <xref linkend="def.pan" />.
+            </para>
+          </tip>
         </listitem>
-	    <listitem>
+	    <listitem id="chpt.mixer.channel_strips.fx_volume">
 	      <para>
             <inlinemediaobject>
               <imageobject>
@@ -4320,7 +4297,7 @@
           Here you can select the <emphasis role="bold">Pan Law</emphasis> used by Hydrogen Mixer.
         </para>
         <para>
-          The Pan Law is the relationship between the <link linkend="chpt.pattern_editor.note_properties.pan">Resultant Pan</link> and the separate <link linkend="def.gain">gains</link> of left and right audio outputs.
+          The Pan Law is the relationship between the <link linkend="def.pan">Resultant Pan</link> and the separate <link linkend="def.gain">gains</link> of left and right audio outputs.
           The aim is to control the horizontal angle the sound seems to arrive from.
         </para>
         <para>
@@ -4446,10 +4423,78 @@
    <chapter id="chpt.playlist_editor">
      <title>Playlist Editor</title>
          
+     <para>
+	   TODO: add image
+     </para>
+     <sect1 id="chpt.playlist_editor.main_window">
+	   <title>Main Window</title>
+
+       <sect2 id="chpt.playlist_editor.main_window.song_list">
+	     <title>Song List</title>
+
+         <para>
+	       The Playlist Editor allows you to group various songs into a
+           playlist and is intended to ease using Hydrogen live on stage. You can access this window via the <link linkend="sect.main_menu.view">View</link> option of the Main Menu.
+         </para>
+
+         <para>
+	       Using the <link linkend="chpt.playlist_editor.menu">menu</link> you can add various songs to the playlist and you can arrange their order using the arrow buttons to the right of the widget.
+         </para>
+
+         <note>
+	       <para>
+	         When playback reaches the end of one song the next one won't be automatically selected and played! You can select an arbitrary song in the playlist using double left clicking, by pressing the hotkeys <link linkend="chap.shortcuts.f5"><keycap>F5</keycap></link> and <link linkend="chap.shortcuts.f6"><keycap>F6</keycap></link>, or the corresponding <link linkend="chpt.osc.command.playlist_song">OSC</link> commands.
+           </para>
+           <para>
+	         Also note that selecting a song won't start playback automatically.
+           </para>
+         </note>
+
+       </sect2>
+
+       <sect2 id="chpt.playlist_editor.main_window.controls">
+	     <title>Controls</title>
+         
          <para>
 	       TODO: add image
          </para>
 
+         <para>
+	       At the bottom of the widget you find a couple of <emphasis role="bold">buttons</emphasis> you already know from the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> in the Main Toolbar. They do have the same purposes of starting, pausing, and stopping the playback as well as moving the transport position backwards or forwards by one pattern.
+         </para>
+
+         <note>
+	       <para>
+	         While focussing the Playlist Editor instead of the main UI the usual <link linkend="chap.shortcuts">shortcuts</link> of Hydrogen, like <link linkend="chap.shortcuts.space"><keycap>Space</keycap></link> for starting/pausing playback, won't work.
+           </para>
+         </note>
+
+       </sect2>
+
+       <sect2 id="chpt.playlist_editor.main_window.scripts">
+	     <title>Scripts</title>
+
+         <para>
+	       In addition, the Playlist Editor allows you to add <emphasis role="bold">scripts</emphasis> executed right <emphasis>before</emphasis> the
+           selected song is loaded.
+           
+           <note>
+	         <para>
+	           This means that e.g. <link linkend="chpt.osc.commands.all_messages">OSC</link> commands can not be used to change the state of Hydrogen as the subsequent loading of the associated song would reset it immediately.
+             </para>
+           </note>
+
+           The scripts supported in the Playlist Editor are <abbrev>BASH</abbrev> scripts and one has to both add a script to a song as well as to check the corresponding box in the <emphasis>exec Script</emphasis> column in order to have it by your computer whenever you switch to the particular song.
+         </para>
+
+         <warning>
+	       <para>
+	         Scripts are not supported in the Windows version of Hydrogen.
+           </para>
+         </warning>
+       </sect2>         
+     </sect1>
+         
      <sect1 id="chpt.playlist_editor.menu">
 	   <title>Menu</title>
 
@@ -4460,43 +4505,49 @@
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Add song to Playlist</emphasis>:
-               
+               let's you select a song to be added to the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Add current song to Playlist</emphasis>:
-               
+               adds the currently loaded song to the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Remove selected song from Playlist</emphasis>:
-               
+               deletes the selected song from the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">New Playlist</emphasis>:
-               
+               creates a new and empty playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Open Playlist</emphasis>:
-               
+               opens an existing playlist (file of type <link linkend="chpt.file_types.h2playlist">.h2playlist</link>).
+
+               <tip>
+	             <para>
+	               In the <link linkend="fig.preferences.general_tab">General</link> tab of the Preferences dialog you can configure Hydrogen to reload the last used playlist.
+                 </para>
+               </tip>
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Save Playlist</emphasis>:
-               
+               saves all changes done to the current playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Save Playlist as</emphasis>:
-               
+               saves the current playlist into a file (of type <link linkend="chpt.file_types.h2playlist">.h2playlist</link>) and location of your choice.
              </para>
            </listitem>
          </itemizedlist>
@@ -4509,81 +4560,48 @@
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Add Script to selected song</emphasis>:
-               
+               associates a <abbrev>BASH</abbrev> script (file of type <command>.sh</command>) to the currently selected song of the playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Edit selected Script</emphasis>:
-               
+               opens the selected script with your default editor (in an external window).
+               <note>
+	             <para>
+	               When using the function for the first time Hydrogen will ask you which program to use as your default editor.
+                 </para>
+               </note>
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Remove selected Script</emphasis>:
-               
+               removes the selected script from the playlist.
              </para>
            </listitem>
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Create a new Script</emphasis>:
-               
+               creates a new and empty <command>.sh</command> scrip at a location of your choice.
+
+               <note>
+	             <para>
+	               The default one is the <filename role="directory">scripts</filename> folder in the Hydrogen data
+              directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).
+                 </para>
+               </note>
              </para>
            </listitem>
          </itemizedlist>
        </sect2>
        
      </sect1>
-     <sect1 id="chpt.playlist_editor.main_window">
-	   <title>Main Window</title>
-
-       <sect2 id="chpt.playlist_editor.main_window.song_list">
-	     <title>Song List</title>
-
-         <para>
-	       TODO
-         </para>
-       </sect2>
-
-       <sect2 id="chpt.playlist_editor.main_window.controls">
-	     <title>Controls</title>
-         
-         <para>
-	       TODO: add image
-         </para>
-       </sect2>
-     </sect1>
    </chapter>
     <chapter id="chpt.midi">
       <title>MIDI API</title>
       
-      <para>In this section you can find more info about how to make Hydrogen respond to <abbrev>MIDI</abbrev> messages. On the one hand, this is done via the <link linkend="chpt.midi.actions">available <abbrev>MIDI</abbrev> actions</link> triggered in Hydrogen using <link linkend="chpt.midi.events"><abbrev>MIDI</abbrev> Event</link>. These can be set at the bottom of the <link linkend="chpt.preferences.midi_tab">MIDI System</link> tab of the Preferences.
-      </para>
-
-      <para>
-	    TODO: update image
-      </para>
-      
-      <informalfigure id="midi_actions">
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/Midi_Actions.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-      </informalfigure>                
-
-      <para>
-	            You can also define midi bindings: link a midi note/message to an action. 
-        To do this simply press the red 'REC' button left of the event-action binding line.  
-        A popup will inform you that Hydrogen is waiting for your input.  Press/hit/turn 
-        the key/pad/knob on your midi keyboard (or controller) that you want to link to 
-        this action.  The popup will close and the Event Param value will now show the 
-        midi note value of the key you pressed.  Once this is done you can select an Action 
-        from the action drop-down list.
-      </para>
-      
-      <para>
-	    On the other hand, it also includes the ability to control various widgets, like knobs or faders, via <abbrev>MIDI</abbrev> events. These will be called <link linkend="chpt.midi.learnable"><abbrev>MIDI</abbrev>-learnable Widgets</link>.
+      <para>In this section you can find more info about how to make Hydrogen respond to <abbrev>MIDI</abbrev> messages. This is either done using the <link linkend="chpt.midi.actions">available <abbrev>MIDI</abbrev> Actions</link> or using the <link linkend="chpt.midi.learnable"><abbrev>MIDI</abbrev>-learnable Widgets</link>, like knobs or faders, both triggered using <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> Events</link>.
       </para>
       
       <note>
@@ -4593,245 +4611,411 @@
           correctly in the <link linkend="chpt.preferences.midi_tab">MIDI System </link> tab of the Preferences.
         </para>
         <para>
-	      Please note that this chapter will only cover the table linking external <abbrev>MIDI</abbrev> Events to Hydrogen's <abbrev>MIDI</abbrev> Actions. For all other parameters of the <abbrev>MIDI</abbrev> API you can see in the screenshot please see the tab of the Preferences mentioned above.
+	      Please note that this chapter will only cover the table linking external <abbrev>MIDI</abbrev> Events to Hydrogen's <abbrev>MIDI</abbrev> Actions. For all other parameters of the <abbrev>MIDI</abbrev> API please see the <link linkend="chpt.preferences.midi_tab">MIDI System </link> tab of the Preferences.
         </para>
       </note>
 
-      <sect1 id="chpt.midi.events">
-        <title>MIDI Events</title>
+      <sect1 id="chpt.midi.actions">
+        <title>MIDI Actions</title>
 
+      <informalfigure id="midi_actions">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/Midi_Actions.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </informalfigure>                
 
-        <para>An Event is an incoming <abbrev>MIDI</abbrev> message, coming from e.g. a <abbrev>MIDI</abbrev> controller or 
-        an external sequencer.</para>
-        <para>If you look at the Events list in <link linkend="chpt.preferences.midi_tab">MIDI System</link> tab of the Preferences, you will see that there are 3 types of Events
-        available (as described in the <abbrev>MIDI</abbrev> standard): </para>
+      <para>
+	    TODO: update image
+      </para>
 
-        
-        <itemizedlist mark="opencircle">
+      <para>An <abbrev>MIDI</abbrev> <emphasis role="bold">Event</emphasis> is an incoming <abbrev>MIDI</abbrev> message, originating from e.g. a <abbrev>MIDI</abbrev> controller or an external sequencer. A <abbrev>MIDI</abbrev> <emphasis role="bold">Action</emphasis> is a function built into Hydrogen that can be used to react to a specific <abbrev>MIDI</abbrev> Event. Binding an Event to an Action can be done using the <link linkend="chpt.preferences.midi_tab">MIDI System</link> tab of the Preferences.
+      </para>
 
-         <listitem><para>
-	         <emphasis role="bold">NOTE</emphasis>: an input coming from a regular black/white key of a keyboard or a drumpad.
-	       </para></listitem>
-	     
-         <listitem><para>
-	         <emphasis role="bold">CC</emphasis>: controller commands coming from faders or rotary controllers.
-	       </para></listitem>
-	     
-         <listitem><para>
-	         <emphasis role="bold">MMC_x</emphasis>: <ulink url="http://en.wikipedia.org/wiki/MIDI_Machine_Control">
-	         machine control events</ulink> coming from play/stop... buttons on a controller.
-	       </para></listitem>
-	     
-        </itemizedlist>
-        
-        
-       <para>
-       The Param. (parameter) value to the right of the Event is the identifier of the note/button/controller
-       that is linked to this Action.  This parameter can be entered manually, or automatically by 
-       using the <abbrev>MIDI</abbrev> learn function (see <xref linkend="chpt.preferences.midi_tab"/>).
-       </para>
+      <para>
+	    You can also define <abbrev>MIDI</abbrev> bindings by simply pressing the
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/rec.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        button left of the Event-Action binding line. 
+        A popup will inform you that Hydrogen is waiting for your input.  Press/hit/turn 
+        the key/pad/knob on your <abbrev>MIDI</abbrev> keyboard (or controller) that you want to link to 
+        this action.  The popup will close and the <emphasis role="bold">Event Param.</emphasis> value will now show the 
+        <abbrev>MIDI</abbrev> note value of the key you pressed.  Once this is done you can select an Action 
+        from the action drop-down list.
+      </para>
+      
+      <tip>
+	    <para>
+	      You can also define a binding without the 
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/rec.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject> button by setting the <emphasis role="bold">Event Param.</emphasis> manually to the desired <abbrev>MIDI</abbrev> note.
+        </para>
+      </tip>
 
-       <para>
-	     TODO: I don't get the use of the Param on first read and I might not be the only one.
-       </para>
+      <para>
+        The <emphasis role="bold">Action Param.</emphasis> column to the right of the table specifies the input parameter to the Action (see the corresponding <link linkend="chpt.midi.actions.actions">Actions reference</link> for details).
+      </para>
+      
+        <sect2 id="chpt.midi.actions.events">
+	      <title>Events</title>
+          
+          <para>
+            Three types of <abbrev>MIDI</abbrev> Events are available (as described in the <abbrev>MIDI</abbrev> standard):
+          </para>
+          
+          <itemizedlist mark="opencircle">
 
-       <para>
-	     TODO: also cover the Action and the corresponding Param. column 
-       </para>
+            <listitem><para>
+	          <emphasis role="bold">NOTE</emphasis>: an input coming from a regular black/white key of a keyboard or a drumpad.
+	        </para></listitem>
+	        
+            <listitem><para>
+	          <emphasis role="bold">CC</emphasis>: controller commands coming from faders or rotary controllers.
+	        </para></listitem>
+	        
+            <listitem><para>
+	          <emphasis role="bold">MMC_x</emphasis>: <ulink url="http://en.wikipedia.org/wiki/MIDI_Machine_Control">
+	          machine control events</ulink> coming from buttons, like 'play' or 'stop',  on a controller.
+	        </para></listitem>
+	        
+          </itemizedlist>
+          
 
-       <para>
-	     TODO: describe the record button
-       </para>
-       
-       </sect1>
-       <sect1 id="chpt.midi.learnable">
-         <title>MIDI-learnable Widgets</title>
+        </sect2>
+       <sect2 id="chpt.midi.actions.actions">
+	     <title>Actions</title>
          
-         <para>Apart from the <abbrev>MIDI</abbrev> Actions a lot of GUI elements, such as faders or knobs, can also be controlled via <abbrev>MIDI</abbrev> messages. To configure an element to listen for incoming events, press <keycap>Shift</keycap> while left-clicking it. 
-         A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
-         a key or turn/move a controller on your <abbrev>MIDI</abbrev> device.
-         </para>
+         <note>
+           <para>
+             Some of the <abbrev>MIDI</abbrev> Actions require that the <emphasis role="bold">Action Param.</emphasis> is configured.  This parameter usually references a specific channel, instrument, FXsend...  Keep in mind that its value is <emphasis>zero-based</emphasis>. So, if you want to reference channel 1 you 
+         have to enter <option>0</option> in the <emphasis role="bold">Action Param.</emphasis> field (<option>1</option> for channel 2, <option>2</option> for channel 3, and so on).
+           </para>
+         </note>
+
+         <itemizedlist mark="opencircle">
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">&#60;&#60;_PREVIOUS_BAR</emphasis>:
+               moves the playhead to the previous pattern/bar.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">&#62;&#62;_NEXT_BAR</emphasis>:
+               moves the playhead to the next pattern/bar.
+             </para>
+           </listitem>
+           
+           <listitem><para>
+	         <emphasis role="bold">BEATCOUNTER</emphasis>: calculates the average
+             time passing between successive encounters of this commands and uses
+             it to set the current tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.
+	       </para></listitem>
+
+           <listitem id="chpt.midi.actions.actions.bpm_cc_relative" xreflabel="BPM_CC_RELATIVE">
+             <para>
+	           <emphasis role="bold">BPM_CC_RELATIVE</emphasis>: changes the tempo relative to the current tempo, using a controller. Using the <emphasis role="bold">Action Param</emphasis> you can specify by how much the current tempo will change. If the incoming Event is <option>-1</option> (negative), the tempo will be increased and if it's <option>1</option> (positive), it will be increased.
+               <note>
+                 <para>
+                   This Action will have no effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                   and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
+	             </para>
+               </note>
+	         </para>
+           </listitem>
+
+	       
+           <listitem><para>
+	         <emphasis role="bold">BPM_DECR</emphasis>: decreases the current tempo
+             by the supplied value.
+           </para>
+           <note>
+             <para>
+               This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
+               or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
+	         </para>
+           </note>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">BPM_FINE_CC_RELATIVE</emphasis>:
+               as <xref linkend="chpt.midi.actions.actions.bpm_cc_relative" /> but with changes 100 times smaller than the value specified in <emphasis role="bold">Action Param</emphasis>.
+               <note>
+                 <para>
+                   This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
+                   or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
+	             </para>
+               </note>
+             </para>
+           </listitem>
+           
+           <listitem><para>
+	         <emphasis role="bold">BPM_INCR</emphasis>: increases the current tempo
+             by the supplied value.
+           </para>
+           <note>
+             <para>
+               This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
+               or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
+	         </para>
+           </note>
+           </listitem>
+	       
+           <listitem><para>
+             <emphasis role="bold">EFFECTx_LEVEL_ABSOLUTE</emphasis>:
+                          changes the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume level of an FX</link> <option>x</option> provided as an integer between <option>0</option> and <option>127</option>. The value you enter in the <emphasis role="bold">Action Param</emphasis> determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> the Action will be applied to.
+           </para></listitem>
+
+           <listitem><para>
+             <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis>:
+             <warning>
+	           <para>
+	             Not implemented yet.
+               </para>
+             </warning>
+           </para></listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE</emphasis>:
+               for a value of <option>0</option> it sets the <link linkend="chpt.instrument_editor.filter">Filter Cutoff</link> of the
+                 instrument strip specified using the <emphasis role="bold">Action Param</emphasis> to <option>0</option>. For all other
+                 values it sets the cutoff to the provided number divided by
+                 127.0.
+             </para>
+           </listitem>
+	       
+           <listitem id="chpt.midi.actions.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
+	         <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>: sets the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link> to the value provided by the <abbrev>MIDI</abbrev> event times 1.5 and divided by 127.
+	       </para></listitem>
+	       
+           <listitem id="chpt.midi.actions.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
+	         <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis>: changes the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link>, relative
+	         to its current setting. For a value of <option>0</option> it sets the volume of
+             the master fader to 0. For a value of <option>1</option> it increases its
+             volume by 0.05 and for all other values it decreases it by
+             0.05. (<option>-1</option>: -0.05 , <option>0</option>: 0 ,<option>1</option>: +0.05)
+	       </para></listitem>
+	       
+           <listitem><para>
+             <emphasis role="bold">MUTE</emphasis>: <link linkend="def.mute">mutes</link> the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">MUTE_TOGGLE</emphasis>: toggles the <link linkend="def.mute">muting</link> of the
+             <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> to the absolute value - from <option>0</option> to <option>127</option> - that the linked controller sends to Hydrogen.
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">PAN_RELATIVE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> relative to the current value. For a
+             value of <option>1</option> it increase the pan by 0.05. For all other values
+             it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>1</option>: +0.05).
+	       </para></listitem>
+
+           <listitem id="chpt.midi.actions.actions.pause" xreflabel="PAUSE"><para>
+	         <emphasis role="bold">PAUSE</emphasis>: pauses playback.
+	       </para></listitem>
+	       
+           <listitem id="chpt.midi.actions.actions.play" xreflabel="PLAY"><para>
+	         <emphasis role="bold">PLAY</emphasis>: starts playback.
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis>: works the same as
+             <xref linkend="chpt.midi.actions.actions.play"/> if the
+             playback has not started yet and same as. 
+             <xref linkend="chpt.midi.actions.actions.pause"/> otherwise. (The playhead will not return
+	         to the start of the song, but will stay at its current position).
+	       </para></listitem>
+	       
+           <listitem><para>
+             <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis>: works the same as <xref linkend="chpt.midi.actions.actions.play"/> if the
+             playback has not started yet and same as.
+             <xref linkend="chpt.midi.actions.actions.stop"/> otherwise.
+	       </para></listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>:
+               opens the song in the current <link linkend="chpt.playlist_editor">playlist</link> corresponding to the song number specified in <emphasis role="bold">Action Param</emphasis>.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">PLAYLIST_PREV_SONG</emphasis>:
+               opens the previous song in the current <link linkend="chpt.playlist_editor">playlist</link>.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">PLAYLIST_SONG</emphasis>:
+               opens the next song in the current <link linkend="chpt.playlist_editor">playlist</link>.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">RECORD/STROBE_TOGGLE</emphasis>:
+               toggles recording (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>
+                 in the main toolbar).
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">RECORD_EXIT</emphasis>:
+               deactivates recording.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">RECORD_READY</emphasis>:
+               toggles recording (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>
+                 in the main toolbar) if the playback has not started yet.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">RECORD_STROBE</emphasis>:
+               activates recording.
+             </para>
+           </listitem>
+
+           <listitem>
+	         <para>
+	           <emphasis role="bold">REDO_ACTION</emphasis>:
+               redoes the previous undone action.
+             </para>
+           </listitem>
+           
+           <listitem><para>
+             <emphasis role="bold">SELECT_AND_PLAY_PATTERN</emphasis>: works as
+             <xref linkend="chpt.midi.actions.actions.select_next_pattern"/> combined with
+             <xref linkend="chpt.midi.actions.actions.play"/>.
+	       </para></listitem>
+	       
+           <listitem id="chpt.midi.actions.actions.select_instrument" xreflabel="SELECT_INSTRUMENT">
+             <para>
+	           <emphasis role="bold">SELECT_INSTRUMENT</emphasis>:
+               selects the instrument in the drumkit corresponding to the number supplied in the incoming <abbrev>MIDI</abbrev> Event.
+	       </para></listitem>
+	       
+           <listitem id="chpt.midi.actions.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
+             <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>:
+             switches to the pattern specified in <emphasis role="bold">Action Param</emphasis>.
+
+             <note>
+	           <para>
+	             If Hydrogen is in <emphasis>Song Mode</emphasis> (TODO: link), the command will have no effect.
+               </para>
+             </note>
+           </para></listitem>
+
+           <listitem><para>
+             <emphasis role="bold">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis>:
+             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but only take effect in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Mode</link>.
+           </para></listitem>
+
+           <listitem><para>
+             <emphasis role="bold">SELECT_NEXT_PATTERN_RELATIVE</emphasis>:
+             switches <emphasis role="bold">Action Param</emphasis> patterns forward.
+
+             <note>
+	           <para>
+                 This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Mode</link>.
+               </para>
+             </note>
+           </para></listitem>
+
+           <listitem><para>
+             <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis>:
+             clears the list of patterns scheduled to be played next and adds the one specified in <emphasis role="bold">Action Param</emphasis>.
+             <note>
+	           <para>
+	             If either <emphasis>Song Mode</emphasis> or <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Mode</link> is activated, this action will have no effect.
+               </para>
+             </note>
+           </para></listitem>
+
+           <listitem id="chpt.midi.actions.actions.stop" xreflabel="STOP"><para>
+	         <emphasis role="bold">STOP</emphasis>: stops playback and moves the
+             playhead to the beginning of the song.
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">STRIP_MUTE_TOGGLE</emphasis>:
+             <link linkend="def.mute">mutes</link> the instrument specified in <emphasis role="bold">Action Param</emphasis>.
+	       </para></listitem>
+
+           <listitem><para>
+	         <emphasis role="bold">STRIP_SOLO_TOGGLE</emphasis>:
+             <link linkend="def.mute">mutes</link> the instrument specified in <emphasis role="bold">Action Param</emphasis>.
+	       </para></listitem>
+
+           <listitem><para>
+	         <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis>: see  <xref linkend="chpt.midi.actions.actions.master_volume_absolute"/>, but applies to
+	         the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> specified in <emphasis role="bold">Action Param</emphasis>.
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis>: see <xref linkend="chpt.midi.actions.actions.master_volume_relative"/>, but applies to
+	         the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> specified in <emphasis role="bold">Action Param</emphasis>.
+	       </para></listitem>
+	       
+           <listitem><para>
+	         <emphasis role="bold">TAP_TEMPO</emphasis>: another command
+             calculating the average time passing between successive encounters of
+             this commands and uses it to set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.
+	       </para></listitem>
+
+           <listitem><para>
+	         <emphasis role="bold">TOGGLE_METRONOME</emphasis>:
+             toggles the metronome.
+	       </para></listitem>
+
+           <listitem><para>
+	         <emphasis role="bold">UNDO_ACTION</emphasis>:
+             undoes the previous action.
+	       </para></listitem>
+
+           <listitem><para>
+	         <emphasis role="bold">UNMUTE</emphasis>: unmutes the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).
+	       </para></listitem>
+           
+         </itemizedlist>
+       </sect2>
+       
+     </sect1>
+     <sect1 id="chpt.midi.learnable">
+       <title>MIDI-learnable Widgets</title>
+       
+       <para>Apart from the dedicated <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> Actions</link> a lot of GUI elements, such as faders or knobs, can also be controlled via <abbrev>MIDI</abbrev> messages. To configure an element to listen for incoming <abbrev>MIDI</abbrev> Events, press <keycap>Shift</keycap> while left-clicking it. 
+       A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
+       a key or turn/move a controller on your <abbrev>MIDI</abbrev> device.
+       </para>
+
+       <note>
          <para>If the element that does not support <abbrev>MIDI</abbrev> automation, a different popup will inform you.
          </para>
-       </sect1>
-       
-      <sect1 id="chpt.midi.actions">
-        <title>Available MIDI Actions</title>
-
-        <para>
-	      TODO: list is out of date and not ordered as the one in the GUI
-        </para>
-        <note>
-          <para>
-          Note that some actions (like SELECT_NEXT_PATTERN) 
-        also require an Action Param that references the pattern you want to
-        select with this midi action.
-          </para>
-        </note>
-
-        <para>Next is a list of the available Actions: an Action describes what Hydrogen should do 
-        when a specific <abbrev>MIDI</abbrev> Event is detected.</para>
-        
-        <note><para>** Some of the <abbrev>MIDI</abbrev> Actions require that the Action Parameter is configured.  The
-        Parameter usually references a specific channel, instrument, FXsend...  Keep in mind that the 
-        Parameter value is <emphasis>zero-based</emphasis>. So if you want to reference channel 1 you 
-        have to enter '0' in the Parameter field (1 for channel 2, 2 for channel 3 ...)</para></note>
-
-
-      <itemizedlist mark="opencircle">
-      <listitem id="chpt.midi.actions.play" xreflabel="PLAY"><para>
-	      <emphasis role="bold">PLAY</emphasis> : starts playback
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.pause" xreflabel="PAUSE"><para>
-	      <emphasis role="bold">PAUSE</emphasis> : pauses playback
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.stop" xreflabel="STOP"><para>
-	    <emphasis role="bold">STOP</emphasis> : stops playback and moves the
-          playhead to the beginning of the song 
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PLAY/PAUSE_TOGGLE</emphasis> : Works the same as
-          <xref linkend="chpt.midi.actions.play"/> if the
-          playback has not started yet and same as. 
-          <xref linkend="chpt.midi.actions.pause"/> otherwise. (The playhead will not return
-	      to the start of the song, but will stay at its current position)
-	    </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">PLAY/STOP_TOGGLE</emphasis> : works the same as <xref linkend="chpt.midi.actions.play"/> if the
-                  playback has not started yet and same as.
-                  <xref linkend="chpt.midi.actions.stop"/> otherwise.
-	    </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">MUTE</emphasis> : mutes the Master output in the
-        Mixer (sequencer keeps running).
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">UNMUTE</emphasis> : unmutes the Master output in the
-        Mixer (sequencer keeps running).
-	    </para></listitem>
-	    
-      <listitem><para>
-	    <emphasis role="bold">MUTE_TOGGLE</emphasis> : toggles the muting of the
-        Master output in the Mixer (sequencer keeps running)
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">NEXT_BAR</emphasis> : moves the playhead to the next pattern/bar.
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PREVIOUS_BAR</emphasis> : moves the playhead to the previous pattern/bar.
-	    </para></listitem>
-	    
-      <listitem><para>
-	    <emphasis role="bold">BPM_INCR</emphasis> : increases the current tempo
-        by the supplied value.
-      </para>
-      <note>
-        <para>
-          Note that this command will have no
-        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
-        and <emphasis>Tempo Marker</emphasis> has been passed
-	    </para>
-      </note>
-      </listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BPM_DECR</emphasis> : decreases the current tempo
-          by the supplied value.
-        </para>
-        <note>
-          <para>
-            Note that this command will have no
-        effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
-        and <emphasis>Tempo Marker</emphasis> has been passed
-	      </para>
-        </note>
-      </listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BPM_CC_RELATIVE</emphasis> : changes the tempo relative to the current tempo, using a controller
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.master_volume_relative" xreflabel="MASTER_VOLUME_RELATIVE"><para>
-	      <emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis> : changes the Master output volume, relative
-	      to the current setting. For a value of 0 it sets the volume of
-          the master fader to 0. For a value of one 1 it increases its
-          volume by 0.05 and for all other values it decreases it by
-          0.05. (-1: -0.05 , 0: 0 , 1: +0.05)
-	    </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
-	      <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis> : sets the volume of the master fader to the 
-	      absolute value of the midi control (use with midi fader or pot)
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis> : see <xref linkend="chpt.midi.actions.master_volume_relative"/>, but applies to
-	      the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis> : see  <xref linkend="chpt.midi.actions.master_volume_absolute"/>, but applies to
-	      the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> defined in the Action Parameter **
-	    </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis> : changes the volume level of effect 'x';
-         the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
-      </para></listitem>
-	    
-      <listitem id="chpt.midi.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
-        <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis> : if Hydrogen is in <emphasis>Pattern Mode</emphasis>,
-        switches to pattern that is defined in the Action Parameter **. If
-        Hydrogen is in <emphasis>Song Mode</emphasis>, the command will have no
-        effect
-      </para></listitem>
-	    
-      <listitem><para>
-        <emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis> : works as
-        <xref linkend="chpt.midi.actions.select_next_pattern"/> combined with
-        <xref linkend="chpt.midi.actions.play"/>
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PAN_RELATIVE</emphasis> : changes the pan, relative to the current value. For a
-          value of 1 it increase the pan by 0.05. For all other values
-          it decreases it by 0.05. (-1: -0.05 , 1: +0.05);
-          the value you enter in the Action Parameter determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> this action applies to **
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">PAN_ABSOLUTE</emphasis> : changes the pan to the absolute value that the linked controller sends to Hydrogen
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">BEATCOUNTER</emphasis> : calculates the average
-          time passing between successive encounters of this commands and uses
-          it to set the current tempo using the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>.
-	    </para></listitem>
-	    
-      <listitem><para>
-	      <emphasis role="bold">TAP_TEMPO</emphasis> : another command
-          calculating the average time passing between successive encounters of
-          this commands and uses it to set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.
-	    </para></listitem>
-	    
-        <listitem id="chpt.midi.actions.select_instrument">
-          <para>
-	      <emphasis role="bold">SELECT_INSTRUMENT</emphasis> : selects a specific instrument in the drumkit
-	    </para></listitem>
-	    
-   
-      </itemizedlist>
-
-
+       </note>
      </sect1>
 
    </chapter>
@@ -4870,16 +5054,16 @@
 
        <tip>
          <para>
-           Hydrogen's port number defaults to 9000 for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's adviced to set a different default port in such cases.
+           Hydrogen's port number defaults to <option>9000</option> for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's adviced to set a different default port in such cases.
          </para>
        </tip>
        
      </sect1>
        
-     <sect1 id="chpt.osc.messages">
-       <title>Messages</title>
+     <sect1 id="chpt.osc.commands">
+       <title>Commands</title>
 
-       <sect2 id="chpt.osc.messages.syntax">
+       <sect2 id="chpt.osc.commands.syntax">
 	     <title>Syntax</title>
 
          <para>The syntax for sending the commands is</para>
@@ -4889,7 +5073,7 @@
          </screen>
 
          <para>with the supported types</para>
-         <itemizedlist>
+         <itemizedlist mark="opencircle">
            <listitem><para><emphasis role="bold">' '</emphasis>: no argument required</para></listitem>
            <listitem><para><emphasis role="bold">i</emphasis>: int32</para></listitem>
            <listitem><para><emphasis role="bold">f</emphasis>: float32</para></listitem>
@@ -4898,7 +5082,7 @@
          </itemizedlist>
          <para>Detailed description of the formats and conventions used in the
          tables below</para>
-         <itemizedlist>
+         <itemizedlist mark="opencircle">
            <listitem>
              <para><emphasis role="bold">ff</emphasis>: two types placed right after each
              other indicated that the command requires two distinct
@@ -4907,7 +5091,7 @@
            <listitem>
              <para><emphasis role="bold">' ',[f]</emphasis>: two types separated by a comma
              indicate that two versions of the command are available. To support
-             <emphasis>TouchOSC</emphasis> all commands expecting no parameter
+             <command>TouchOSC</command> all commands expecting no parameter
              are available in an alternative version requiring a float too. In
              the latter version the argument will be ignored and it is placed in
              squared brackets <emphasis>[f]</emphasis> to indicate its
@@ -4929,7 +5113,7 @@
            </listitem>
            <listitem>
              <para><emphasis role="bold">1.0</emphasis>: also in order to support
-             TouchOSC all numerical input has to be passed as type float while
+             <command>TouchOSCM</command> all numerical input has to be passed as type float while
              most of these numbers will be rounded to integers internally. For
              all true float inputs the <emphasis>range</emphasis> column uses a
              floating point representation of the limits, like 1.0 instead of 1.</para>
@@ -4946,8 +5130,8 @@
          </itemizedlist>
        </sect2>
 
-       <sect2 id="chpt.osc.messages.all_messages">
-         <title>All Messages</title>
+       <sect2 id="chpt.osc.commands.all_messages">
+         <title>All Commands</title>
          
          <table frame='all'>
            <title>All <abbrev>OSC</abbrev> Messages</title>
@@ -5071,14 +5255,15 @@
                  <entry>Decreases the current tempo by
                  <emphasis>f</emphasis>. Note that this command will have no
                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
-                 and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
+                 and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">BPM_INCR</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
                  <entry>Increases the current tempo by
-                 <emphasis>f</emphasis>. Note that this command will have no
+                 <emphasis>f</emphasis>.
+                 Note that this command will have no
                  effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
                </row>
@@ -5096,20 +5281,20 @@
                  <entry></entry>
                  <entry>Another command calculating the average time passing
                  between successive encounters of this commands and uses it to
-                 set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter">Tap Tempo</link>.</entry>
+                 set the current tempo using <link linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap Tempo</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0,1}</entry>
-                 <entry>Activates the Timeline if <emphasis>f</emphasis> is not
+                 <entry>Activates the <link linkend="chpt.song_editor.timeline">Timeline</link> if <emphasis>f</emphasis> is not
                  zero and deactivates it otherwise.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">TIMELINE_ADD_MARKER</emphasis>/</entry>
                  <entry>ff</entry>
                  <entry>[0,] [10,400]</entry>
-                 <entry>Adds a Tempo Marker to the Timeline. The first argument
+                 <entry>Adds a Tempo Marker to the <link linkend="chpt.song_editor.timeline">Timeline</link>. The first argument
                  specifies the pattern/bar to at the marker to and the second
                  its tempo.</entry>
                </row>
@@ -5118,44 +5303,41 @@
                  <entry>f</entry>
                  <entry>[0,]</entry>
                  <entry>Deletes a Tempo Marker at pattern/bar
-                 <emphasis>f</emphasis> on the Timeline.</entry>
+                 <emphasis>f</emphasis> on the <link linkend="chpt.song_editor.timeline">Timeline</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">MUTE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Mutes the <emphasis>Master</emphasis> output in the
-                 Mixer (sequencer keeps running).</entry>
+                 <entry><link linkend="def.mute">Mutes</link> the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">UNMUTE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Unmutes the <emphasis>Master</emphasis> output in the
-                 Mixer (sequencer keeps running).</entry>
+                 <entry>Unmutes the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).</entry>
                </row>
                <row id="chpt.osc.command.mute_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">MUTE_TOGGLE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Toggles the muting of the <emphasis>Master</emphasis>
-                 output in the Mixer (sequencer keeps running).</entry>
+                 <entry>Toggles the muting of the <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).</entry>
                </row>
                <row id="chpt.osc.command.master_volume_absolute" xreflabel="/Hydrogen/MASTER_VOLUME_ABSOLUTE/">
                  <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0.0,1.5]</entry>
-                 <entry>Sets the volume of the master fader.</entry>
+                 <entry>Sets the volume of the <link linkend="chpt.mixer.master_fader_strip">Master fader</link>.</entry>
                </row>
                <row id="chpt.osc.command.master_volume_relative" xreflabel="/Hydrogen/MASTER_VOLUME_RELATIVE/">
                  <entry>/Hydrogen/<emphasis role="bold">MASTER_VOLUME_RELATIVE</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{-1;0;1}</entry>
-                 <entry>Changes the Master output volume, relative
-	             to the current setting. For a value of 0 it sets the volume of
-                 the master fader to 0. For a value of one 1 it increases its
+                 <entry>Changes the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link>, relative
+	             to the current setting. For a value of <option>0</option> it sets the volume of
+                 the master fader to 0. For a value of <option>1</option> it increases its
                  volume by 0.05 and for all other values it decreases it by
-                 0.05. (-1: -0.05 , 0: 0 , 1: +0.05)</entry>
+                 0.05. (<option>-1</option>: -0.05 ,<option>0</option>: 0 ,<option>1</option>: +0.05)</entry>
                </row>
                <row id="chpt.osc.command.strip_volume_absolute">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_VOLUME_ABSOLUTE/X</emphasis>/</entry>
@@ -5189,17 +5371,17 @@
                  <entry>/Hydrogen/<emphasis role="bold">PAN_RELATIVE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{-1;1}</entry>
-                 <entry>Changes the pan of the instrument strip
+                 <entry>Changes the <link linkend="def.pan">pan</link> of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
                  <emphasis>X</emphasis>, relative to the current value. For a
-                 value of 1 it increase the pan by 0.05. For all other values
-                 it decreases it by 0.05. (-1: -0.05 , 1: +0.05)</entry>
+                 value of <option>1</option> it increase the pan by 0.05. For all other values
+                 it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>1</option>: +0.05)</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,127]</entry>
-                 <entry>For a value of 0 it sets the filter cutoff of the
-                 instrument strip <emphasis>X</emphasis> to 0. For all other
+                 <entry>For a value of <option>0</option> it sets the <link linkend="chpt.instrument_editor.filter">Filter Cutoff</link> of the
+                 <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> <emphasis>X</emphasis> to 0. For all other
                  values it sets the cutoff to the provided number divided by
                  127.0. Please note that this parameter is not displayed
                  anywhere in the Mixer but in the Instrument Rack.</entry>
@@ -5208,7 +5390,7 @@
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
-                 <entry>Toggles muting of instrument strip
+                 <entry>Toggles muting of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
                  <emphasis>X</emphasis>. Input argument will be
                  ignored.</entry>
                </row>
@@ -5216,27 +5398,27 @@
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis>/</entry>
                  <entry>f</entry>
                  <entry></entry>
-                 <entry>Toggles soloing of instrument strip
+                 <entry>Toggles soloing of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
                  <emphasis>X</emphasis>. Input argument will be
                  ignored.</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.playlist_song">
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_SONG</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
-                 <entry>Opens song <emphasis>f</emphasis> of the Playlist.</entry>
+                 <entry>Opens song <emphasis>f</emphasis> of the <link linkend="chpt.playlist_editor">Playlist</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Opens the next song in the Playlist.</entry>
+                 <entry>Opens the next song in the <link linkend="chpt.playlist_editor">Playlist</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_PREV_SONG</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Opens the previous song in the Playlist.</entry>
+                 <entry>Opens the previous song in the <link linkend="chpt.playlist_editor">Playlist</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">UNDO_ACTION</emphasis>/</entry>
@@ -5254,35 +5436,35 @@
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TRANSPORT_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated the <abbrev>JACK</abbrev> transport support for a value of 0
+                 <entry>Deactivated the <link linkend="sect.preferences.jack"><abbrev>JACK</abbrev> transport</link> support for a value of <option>0</option>
                  and activates it for all others.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated the <abbrev>JACK</abbrev> Timebase Master transport support
-                 for a value of 0 and activates it for all others.</entry>
+                 <entry>Unregisters Hydrogen as <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>
+                 for a value of <option>0</option> and registers it for all others.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">SONG_MODE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated Song Mode for a value of 0 and activates it
+                 <entry>Deactivated Song Mode (TODO: link) for a value of <option>0</option> and activates it
                  for all others.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">LOOP_MODE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated Loop Mode for a value of 0 and activates it
+                 <entry>Deactivated <link linkend="sect.main_toolbar.transport_control">looped playback</link> for a value of <option>0</option> and activates it
                  for all others.</entry>
                </row>
                <row id="chpt.osc.command.toggle_metronome">
                  <entry>/Hydrogen/<emphasis role="bold">TOGGLE_METRONOME</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Toggles the metronome.</entry>
+                 <entry>Toggles the <link linkend="sect.main_toolbar.bpm_control_and_metronome">metronome</link>.</entry>
                </row>
                <row id="chpt.osc.command.select_instrument">
                  <entry>/Hydrogen/<emphasis role="bold">SELECT_INSTRUMENT</emphasis>/</entry>
@@ -5335,12 +5517,124 @@
 	 </sect1>
    </chapter>
    
-   <chapter id="chpt.nsm">
-     <title>NSM Support</title>
-     
+   <chapter id="chpt.session_management">
+     <title>Session Management</title>
+
      <para>
-	   TODO
+       With Session Management you can easily restore complex sessions involving numerous applications including their particular state. Hydrogen does support some Session Management systems too.
      </para>
+
+     <warning>
+	   <para>
+	     All the supported Session Management protocols are Linux only. There is no (tested) support for MacOS and Windows yet.
+       </para>
+     </warning>
+     
+     <itemizedlist>
+	   <listitem>
+	     <para>
+	       <emphasis role="bold"><abbrev>NSM</abbrev></emphasis>:
+           <ulink url="http://non.tuxfamily.org/nsm/API.html">Non Session Manager (<abbrev>NSM</abbrev>)</ulink> is of 2021 the defacto standard in Session Management tools within the Linux audio community and Hydrogen does over full support and compliance to its API.
+
+           <tip>
+	         <para>
+	           We highly recommend using this protocol for Session Management.
+             </para>
+           </tip>
+         </para>
+       </listitem>
+       <listitem>
+	     <para>
+	       <emphasis role="bold"><abbrev>LASH</abbrev></emphasis>:
+           Hydrogen provides a basic support for <ulink url="http://lash.nongnu.org">LASH Audio Session Handler (<abbrev>LASH</abbrev>)</ulink>. This covers recalling the song used within the session but, unlike the NSM support, no recalling of the <abbrev>JACK</abbrev> connections and no per-session preferences.
+
+           <note>
+	         <para>
+	           You have to activate <abbrev>LASH</abbrev> support in the <link linkend="fig.preferences.general_tab">General</link> tab of the Preference dialog in order to use it.
+             </para>
+           </note>
+         </para>
+       </listitem>
+       <listitem>
+	     <para>
+	       <emphasis role="bold"><abbrev>JACK</abbrev> Session</emphasis>:
+           <ulink url="https://jackaudio.org"><abbrev>JACK</abbrev> Session</ulink> has been marked <ulink url="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html">deprecated</ulink> by the <abbrev>JACK</abbrev> project.
+           <warning>
+	         <para>
+	           Hydrogen versions &#60;= 1.1 still feature this Session Management protocol. But it will be removed in future releases.
+             </para>
+           </warning>
+         </para>
+       </listitem>
+     </itemizedlist>
+
+     <sect1 id="chpt.session_management.nsm">
+	   <title>NSM</title>
+
+       <para>
+         Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <command>Non Session Manager</command> or <command>RaySession</command>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
+       </para>
+       
+       <itemizedlist>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Replace With New Song</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.new">New</link>. Replaces the song associated with the session by an empty one.
+           </para>
+         </listitem>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Import Into Session</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
+
+             <warning>
+	           <para>
+	             In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
+               </para>
+             </warning>
+           </para>
+         </listitem>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Import Recent Info Session</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.open_recent">Open Recent</link>. Replaces the song associated with the session by one of the recently used songs.
+             <warning>
+	           <para>
+	             In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
+               </para>
+             </warning>
+           </para>
+         </listitem>
+	     <listitem>
+           <para>
+	         <emphasis role="bold">Export From Session As</emphasis>:
+             instead of <link linkend="sect.main_menu.projects.save_as">Save As</link>. Stores the song associated with the session at a location of your choice as <link linkend="chpt.file_types.h2song">.h2song</link> file.
+
+             <note>
+	           <para>
+	             In contrast to the <emphasis>Save As</emphasis> command the underlying path of the current song will not be changed. All subsequent <emphasis>Save</emphasis> actions will store the current state of the song to the file in the session folder and <emphasis role="bold">not</emphasis> to the path of the exported file.
+               </para>
+             </note>
+           </para>
+         </listitem>
+       </itemizedlist>
+
+       <note>
+         <para>
+           The <link linkend="sect.main_menu.projects.open_demo">Open Demo</link> option will be missing.
+         </para>
+       </note>
+
+       <para>
+	     Both the song and the preferences associated with the session will be stored in a session folder called <filename>Hydrogen.*</filename>. In addition, the drumkit (and its samples) used with the song will linked into the session folder as well. If the link is replaced by a folder containing a valid drumkit, this one will be used over the system and user drumkits.
+
+         <tip>
+	       <para>
+	         This allows you to create fully self sufficient backup of your Hydrogen session using <command>tar -chf</command>. These can be even ported and used to systems which do not have the required drumkits installed.
+           </para>
+         </tip>
+       </para>
+     </sect1>
    </chapter>
  </part>
  <!--
@@ -5655,7 +5949,7 @@
           slower.  This is called the Doppler Effect.  So, if you have a
           1-second sample that you turn down -12 (1 octave), your sample will
           only last for 0.5-seconds.  If you do not want this to happen you should
-          use rubberband instead (see <xref linkend="chpt.sample_editor.pitch"/>)</para>
+          use Rubber Band instead (see <xref linkend="chpt.sample_editor.pitch"/>)</para>
         </note>
 
         <para>You can hear the sample in a layer by clicking the layer id (just 
@@ -5875,7 +6169,7 @@
             <entry><keycap>Backspace</keycap></entry>
             <entry>Restart song or pattern from the beginning</entry>
           </row>
-          <row>
+          <row id="chap.shortcuts.space">
             <entry><keycap>Space</keycap></entry>
             <entry>Play / Pause</entry>
           </row>
@@ -5899,11 +6193,11 @@
             <entry><keycap>-</keycap></entry>
             <entry>Decrease tempo by 0.1 BPM</entry>
           </row>
-          <row>
+          <row id="chap.shortcuts.f5">
             <entry><keycap>F5</keycap></entry>
             <entry>Jump to previous song in playlist</entry>
           </row>
-          <row>
+          <row id="chap.shortcuts.f6">
             <entry><keycap>F6</keycap></entry>
             <entry>Jump to next song in playlist</entry>
           </row>
@@ -6273,7 +6567,38 @@
     <glossentry id="def.pan">
       <glossterm>Pan</glossterm>
       <glossdef>
-        <para>TODO</para>
+        <para>Panning allows you to change the position of both a mono and stereo sample within the stereo sound field of the resulting audio output. In other words, it controls whether the sound of e.g. the snare is coming from the left or right speaker or somewhere in between. With careful pan adjustments of the different instruments you can make you drumkit sound more natural and simulate the feeling of listening to a real kit in close distance.</para>
+
+        
+        <para>
+          The effect of <link linkend="chpt.pattern_editor.note_properties.pan">note Pan</link> depends on the <link linkend="chpt.mixer.channel_strips.pan">instrument Pan</link>
+          knob, which is set in the <link linkend="chpt.mixer.channel_strips">Mixer</link>.
+          Look to next figure to see how the <emphasis role="bold">Resultant Pan</emphasis>
+          is determined (from version 1.1):
+
+          <informalfigure id="matryoshkaPanning">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/matrioskaPanH2.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
+          
+	      This multi-pan model resembles a "matryoshka" in some way: the <emphasis>note Pan</emphasis> value moves the 
+	      <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at
+	      <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value.
+	      Some examples: 
+		  if <emphasis>instrument Pan</emphasis> is central, <emphasis>note Pan</emphasis> moves the signal in the
+		  whole stereo range (really from Left to Right);
+		  if <emphasis>instrument Pan</emphasis> is sided, <emphasis>note Pan</emphasis> moves the signal in a
+		  progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>;
+		  if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect.
+        </para>
+
+          <para>
+	        The way the <emphasis>Resultant Pan</emphasis> will be translated into the volume of each stereo channel is determined by the <link linkend="chpt.mixer.master_fader_strip.mixer_settings">Pan Law</link> in the Mixer settings.
+          </para>
+                   
       </glossdef>
     </glossentry>
     
