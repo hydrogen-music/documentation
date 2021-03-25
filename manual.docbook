@@ -1529,10 +1529,7 @@
 
         <para>Using these buttons you can <emphasis role="bold">start</emphasis> (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis> the playback, <emphasis role="bold">record</emphasis> new patterns (TODO: link to recording section), <emphasis role="bold">fast forward</emphasis> and <emphasis role="bold">rewind</emphasis> the transport position, and <emphasis role="bold">loop</emphasis> playback.</para>
 
-          <para>In addition, you can switch between Song mode and Pattern mode. When <emphasis>Song mode</emphasis> is selected Hydrogen will play 
-          the complete song. This is the sequence of patterns you have created in the <link linkend="chpt.song_editor">Song Editor</link>. When <emphasis>Pattern mode</emphasis> is selected 
-          Hydrogen will play the pattern that is currently selected, and thus displayed 
-          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. TODO: replace this paragraph by section (elsewhere) about both modes.</para>
+          <para>In addition, you can switch between <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>.</para>
 
           <tip>
             <para>
@@ -1808,13 +1805,13 @@
       </para>
 
       <para>
-	    TODO: how about having multiple patterns of different lengths in one column of the screenshot?
+	    TODO: screenshot of whole widget
       </para>
       <para>
         The Song Editor gives an overview of the whole song
         (e.g. intro, verse, bridge, chorus and so on).  Each blue
         colored square on this panel represents a playing pattern.
-        The song editor gives you complete freedom to add/remove
+        It gives you complete freedom to add/remove
         patterns to the song and to move or copy any part of your
         song.
       </para>
@@ -1845,7 +1842,22 @@
       </tip>
 
       <para>
-	    TODO: description about how to use the song ruler for navigation.
+	    TODO: image of song ruler.
+      </para>
+      
+      <para>
+	    In addition to the transport control provided in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> you can use the song ruler for navigation. This the area above the grid and right of the Main Controls. The position clicked will be rounded to the nearest pattern beginning and transport will be relocated there.
+        <note>
+	      <para>
+            Navigation in Hydrogen is always quantized. It is only possible to move forward / backwards or locate to whole patterns.
+          </para>
+        </note>
+
+        <tip>
+	      <para>
+	        You can also locate the keyboard cursor (see <xref linkend="chpt.keyboard_and_mouse" />) to a desired pattern and press <link linkend="chap.shortcuts.ctrl_space"><keycap>Ctrl</keycap> + <keycap>Space</keycap></link> to relocate to this position.
+          </para>
+        </tip>
       </para>
 
 
@@ -1894,7 +1906,7 @@
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_draw.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Select Mode (<xref
+            </imageobject></inlinemediaobject> : enables Select mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).
           </para>
           
@@ -1903,18 +1915,18 @@
         <listitem>
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_select.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Draw Mode (<xref
+            </imageobject></inlinemediaobject> : enables Draw mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).</para>
         </listitem>
 
-        <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked Mode">
+        <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked mode">
           <para><inlinemediaobject><imageobject>
             <imagedata fileref="img/btn_pattern_mode.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern Mode</emphasis> 
+            </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern mode</emphasis> 
             <inlinemediaobject><imageobject>
             <imagedata fileref="img/stacked_mode_V3.png" format="PNG"/>
             </imageobject></inlinemediaobject>
-            or to <emphasis>Stacked Mode</emphasis> (<xref
+            or to <emphasis>Stacked mode</emphasis> (<xref
             linkend="chpt.song_editor.editor_modes.stacked" />).</para>
 
         </listitem>
@@ -1925,10 +1937,10 @@
            <sect1 id="chpt.song_editor.editor_modes">
         <title>Song Editor modes</title>
         <para>
-          The Song Editor has two different interaction modes. The
-          default <emphasis role="bold">Select mode</emphasis> allows
+          The Song Editor has two different <emphasis>interaction modes</emphasis>. The
+          default <link linkend="chpt.song_editor.editor_modes.select"><emphasis role="bold">Select mode</emphasis></link> allows
           pattern blocks to be set, cleared, selected, moved and
-          copied. The <emphasis role="bold">Draw mode</emphasis>
+          copied. The <link linkend="chpt.song_editor.editor_modes.draw"><emphasis role="bold">Draw mode</emphasis></link>
           instead allows pattern sequences to be drawn freehand.
         </para>
 
@@ -1946,8 +1958,17 @@
           pattern in the current column.
         </para>
 
+        <para>
+	      In addition, there are two major <emphasis>playback modes</emphasis>, <link linkend="chpt.song_editor.editor_modes.song_mode"><emphasis role="bold">Song mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode"><emphasis role="bold">Pattern mode</emphasis></link>, with two minor submodes, <emphasis role="bold">Single Pattern mode</emphasis> (covered in the <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> section), and <link linkend="chpt.song_editor.editor_modes.stacked"><emphasis role="bold">Stacked mode</emphasis></link>. These will determine which parts of the song you will listen too during playback.
+        </para>
+        <note>
+	      <para>
+	        While Select mode, Draw mode, Single Pattern mode, and Stacked mode are activated via the <link linkend="chpt.song_editor.main_controls">Main Controls</link> of the Song Editor, Song mode and Pattern mode are activated via the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> section of the Main Toolbar.
+          </para>
+        </note>
+
         <sect2 id="chpt.song_editor.editor_modes.select">
-          <title>Select mode</title>
+          <title>Select Mode</title>
           <para>
             This mode allows
             you to select multiple patterns in the Song Editor and
@@ -2010,13 +2031,11 @@
           <para>
             Pressing <keycap>Esc</keycap> will cancel an editing operation that's in
             progress, or clear any selection.
-
-            TODO: if I'm not mistaking there are now several additional ways to cancel a selection too.
           </para>
         </sect2>
 
         <sect2 id="chpt.song_editor.editor_modes.draw">
-          <title>Draw mode</title>
+          <title>Draw Mode</title>
           <para>
             This mode allows you to insert patterns by drawing -
             holding the left button while moving the mouse - blocks on
@@ -2044,6 +2063,34 @@
             </para>
           </note>
 
+        </sect2>
+
+        <sect2 id="chpt.song_editor.editor_modes.song_mode">
+	      <title>Song Mode</title>
+          <para>
+	        When <emphasis>Song mode</emphasis> is selected Hydrogen will play the sequence of patterns you have created in the Song Editor from left to right until it reaches the end of the song.
+          </para>
+
+          <tip>
+	        <para>
+	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seemlessly to the beginning again after reaching the end of the song.
+            </para>
+          </tip>
+        </sect2>
+
+        <sect2 id="chpt.song_editor.editor_modes.pattern_mode">
+	      <title>Pattern Mode</title>
+          <para>
+	        When <emphasis>Pattern mode</emphasis> is selected 
+            Hydrogen will play the pattern that is currently selected in the Song Editor and displayed 
+          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. This usual behavior is also called <emphasis>Single Pattern mode</emphasis>.
+          </para>
+
+          <tip>
+	        <para>
+	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seemlessly to the beginning again after reaching the end of the pattern.
+            </para>
+          </tip>
         </sect2>
 
         <sect2 id="chpt.song_editor.editor_modes.stacked">
@@ -2303,7 +2350,7 @@
 
 		 <note>
 	       <para>
-			 When a Playback Track is loaded, it will be played back everytime audio transport in Hydrogen is rolling and <link linkend="sect.main_toolbar.transport_control">Song Mode</link> is activated. 
+			 When a Playback Track is loaded, it will be played back everytime audio transport in Hydrogen is rolling and <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> is activated. 
            </para>
          </note>
 
@@ -2392,11 +2439,11 @@
       
       <note>
         <para>
-          If you are editing a pattern in <emphasis role="bold">Single Pattern Mode</emphasis> you will always hear the pattern you are 
+          If you are editing a pattern in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Single Pattern mode</link> you will always hear the pattern you are 
           editing when you press playback is rolling.
         </para>
         <para>
-          If you are working in <emphasis role="bold">Stacked Pattern Mode</emphasis> you will hear the <emphasis>active</emphasis> pattern(s), 
+          If you are working in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern mode</link> you will hear the <emphasis>active</emphasis> pattern(s), 
           not necessarily the pattern you are currently editing.
           The active patterns have a small triangle next to the pattern name in the Song Editor.  (see <xref linkend="chpt.song_editor.main_controls.single_vs_stacked" /> for details).
         </para>
@@ -4726,7 +4773,7 @@
 	           <emphasis role="bold">BPM_CC_RELATIVE</emphasis>: changes the tempo relative to the current tempo, using a controller. Using the <emphasis role="bold">Action Param</emphasis> you can specify by how much the current tempo will change. If the incoming Event is <option>-1</option> (negative), the tempo will be increased and if it's <option>1</option> (positive), it will be increased.
                <note>
                  <para>
-                   This Action will have no effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                   This Action will have no effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
                    and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	             </para>
                </note>
@@ -4740,7 +4787,7 @@
            </para>
            <note>
              <para>
-               This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
+               This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
                or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	         </para>
            </note>
@@ -4752,7 +4799,7 @@
                as <xref linkend="chpt.midi.actions.actions.bpm_cc_relative" /> but with changes 100 times smaller than the value specified in <emphasis role="bold">Action Param</emphasis>.
                <note>
                  <para>
-                   This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
+                   This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
                    or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	             </para>
                </note>
@@ -4765,7 +4812,7 @@
            </para>
            <note>
              <para>
-               This Action will have no effect if Hydrogen is in <emphasis>Song Mode</emphasis>
+               This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
                or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	         </para>
            </note>
@@ -4924,14 +4971,14 @@
 
              <note>
 	           <para>
-	             If Hydrogen is in <emphasis>Song Mode</emphasis> (TODO: link), the command will have no effect.
+	             If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>, the command will have no effect.
                </para>
              </note>
            </para></listitem>
 
            <listitem><para>
              <emphasis role="bold">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis>:
-             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but only take effect in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Mode</link>.
+             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but only take effect in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked mode</link>.
            </para></listitem>
 
            <listitem><para>
@@ -4940,7 +4987,7 @@
 
              <note>
 	           <para>
-                 This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Mode</link>.
+                 This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked mode</link>.
                </para>
              </note>
            </para></listitem>
@@ -4950,7 +4997,7 @@
              clears the list of patterns scheduled to be played next and adds the one specified in <emphasis role="bold">Action Param</emphasis>.
              <note>
 	           <para>
-	             If either <emphasis>Song Mode</emphasis> or <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Mode</link> is activated, this action will have no effect.
+	             If either <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> or <link linkend="chpt.song_editor.editor_modes.stacked">Stacked mode</link> is activated, this action will have no effect.
                </para>
              </note>
            </para></listitem>
@@ -5227,9 +5274,9 @@
                  <entry>/Hydrogen/<emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
-                 <entry>If Hydrogen is in <emphasis>Pattern Mode</emphasis>,
+                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>,
                  switch to pattern <emphasis>f</emphasis>. If Hydrogen is in
-                 <emphasis>Song Mode</emphasis>, the command will have no effect.</entry>
+                 <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>, the command will have no effect.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis>/</entry>
@@ -5242,10 +5289,9 @@
                  <entry>/Hydrogen/<emphasis role="bold">RELOCATE</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
-                 <entry>If Hydrogen is in <emphasis>Song Mode</emphasis>,
+                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>,
                  locates the playhead to pattern number
-                 <emphasis>f</emphasis>. If Hydrogen is in <emphasis>Pattern
-                 Mode</emphasis>, locates the playhead to the beginning of the
+                 <emphasis>f</emphasis>. If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>, locates the playhead to the beginning of the
                  current pattern.</entry>
                </row>
                <row>
@@ -5254,7 +5300,7 @@
                  <entry></entry>
                  <entry>Decreases the current tempo by
                  <emphasis>f</emphasis>. Note that this command will have no
-                 effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
                  and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.</entry>
                </row>
                <row>
@@ -5264,7 +5310,7 @@
                  <entry>Increases the current tempo by
                  <emphasis>f</emphasis>.
                  Note that this command will have no
-                 effect if Hydrogen is both in <emphasis>Song Mode</emphasis>
+                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
                </row>
                <row>
@@ -5450,7 +5496,7 @@
                  <entry>/Hydrogen/<emphasis role="bold">SONG_MODE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated Song Mode (TODO: link) for a value of <option>0</option> and activates it
+                 <entry>Deactivated <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> for a value of <option>0</option> and activates it
                  for all others.</entry>
                </row>
                <row>
@@ -5692,7 +5738,7 @@
        <title>A New Sequence</title>
 
        <para>Once patterns are created (<xref linkend="fig.insert_patterns"/>), we
-       can copy/paste/delete them using the Select Mode (see <xref linkend="chpt.song_editor.main_controls"/>).
+       can copy/paste/delete them using the Select mode (see <xref linkend="chpt.song_editor.main_controls"/>).
        </para>
 
        <figure id="fig.insert_patterns">
@@ -6082,87 +6128,87 @@
         </thead>
         <tbody>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>N</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>N</keycap></entry>
             <entry>New Project</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>O</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>O</keycap></entry>
             <entry>Open File</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>D</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>D</keycap></entry>
             <entry>Open Demo</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>S</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>S</keycap></entry>
             <entry>Save Song</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>SHIFT</keycap> + <keycap>S</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>Shift</keycap> + <keycap>S</keycap></entry>
             <entry>Save Song as</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>P</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>P</keycap></entry>
             <entry>Export Pattern as</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>M</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>M</keycap></entry>
             <entry>Export MIDI file</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>E</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>E</keycap></entry>
             <entry>Export Song (see <xref linkend="sect.main_form.export_song"/>)</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>L</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>L</keycap></entry>
             <entry>Export LilyPond file</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>Q</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>Q</keycap></entry>
             <entry>Quit Hydrogen</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>Z</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>Z</keycap></entry>
             <entry>Undo an action</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>SHIFT</keycap> + <keycap>Z</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>Shift</keycap> + <keycap>Z</keycap></entry>
             <entry>Redo an action</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>D</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>D</keycap></entry>
             <entry>Show Director (see <xref linkend="chpt.director"/>)</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>M</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>M</keycap></entry>
             <entry>Show Mixer (see <xref linkend="chpt.mixer"/>)</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>I</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>I</keycap></entry>
             <entry>Show Instrument rack (see <xref linkend="chpt.sound_library"/>)</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>A</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>A</keycap></entry>
             <entry>Show Automation path</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>F</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>F</keycap></entry>
             <entry>Toggle fullscreen mode</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>ALT</keycap> + <keycap>I</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>Alt</keycap> + <keycap>I</keycap></entry>
             <entry>Set Input mode to Instrument</entry>
           </row>
           <row>
-            <entry><keycap>CTRL</keycap> + <keycap>ALT</keycap> + <keycap>D</keycap></entry>
+            <entry><keycap>Ctrl</keycap> + <keycap>Alt</keycap> + <keycap>D</keycap></entry>
             <entry>Set Input mode to Drumkit</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>P</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>P</keycap></entry>
             <entry>Show Preferences (see <xref linkend="chpt.preferences"/>)</entry>
           </row>
           <row>
-            <entry><keycap>ALT</keycap> + <keycap>?</keycap></entry>
+            <entry><keycap>Alt</keycap> + <keycap>?</keycap></entry>
             <entry>Show Manual</entry>
           </row>
           <row>
@@ -6173,9 +6219,9 @@
             <entry><keycap>Space</keycap></entry>
             <entry>Play / Pause</entry>
           </row>
-          <row>
-            <entry><keycap>CTRL</keycap> + <keycap>Space</keycap></entry>
-            <entry>Play / Pause at the current cursor position</entry>
+          <row id="chap.shortcuts.ctrl_space">
+            <entry><keycap>Ctrl</keycap> + <keycap>Space</keycap></entry>
+            <entry>Starts playback at the current cursor position. If playback is already rolling, it will relocate to the cursor position without pausing or stopping playback. Note that on MacOS this shortcut is bound to <keycap>Alt</keycap> + <keycap>Space</keycap>.</entry>
           </row>
           <row>
             <entry><keycap>,</keycap></entry>
