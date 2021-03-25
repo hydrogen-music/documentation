@@ -2124,11 +2124,14 @@
        <title>Sidebar</title>
 
        <para>
-	 TODO: update option list and description. update or drop image
+	 TODO: update or drop image
        </para>
 
-      <para>Right-clicking the name of a pattern will show you a menu 
-      where you can change a number of things :</para>
+       <para>
+	     The Sidebar of the Song Editor allows you to interact with and arrange the patterns of your song.
+       </para>
+      <para><emphasis>Left-clicking</emphasis> selects a pattern, <emphasis>double-clicking</emphasis> allows you to rename a pattern, <emphasis>drag-and-dropping</emphasis> allows you to rearrage the patterns, and <emphasis>right-clicking</emphasis> will show you a menu 
+      where you can change a number of things:</para>
       
      <figure id="fig.song_editor.virtualPattern.selectedMenu">
         <title>The Pattern Options menu</title>
@@ -2173,9 +2176,7 @@
         
         <listitem id="chpt.song_editor.sidebar.properties">
           <para><emphasis role="bold">Properties</emphasis>: will open a window where you can change 
-          the name of the pattern and also assign it to a certain category.
-
-          TODO: elaborate the concept of a "category".
+          the name of the pattern and also assign it to a certain category. Using the latter you can group pattern in in the <link linkend="sect.sl.patterns">Sound Library</link>.
           
            <informalfigure id="fig.pattern_properties">
             <mediaobject>
@@ -2397,8 +2398,22 @@
 	   <title>Automation Path</title>
        
        <para>
-	     TODO
+	     TODO: add image
        </para>
+
+       <para>
+	     The Automation Path allows you to control the overall <link linkend="def.velocity">velocity</link> of all notes throughout the song. It can be viewed using the shortcut <keycap>Alt</keycap> + <keycap>A</keycap> or via the <link linkend="sect.main_menu.view">View</link> option of the Main Menu.
+       </para>
+
+       <para>
+	     <emphasis>Clicking</emphasis> the graph area introduces a new point determining when and to which value the velocity will be changed. Currently only linear interpolations of the velocity between the individual points are supported. You can <emphasis>drag</emphasis> a point to move it and you can delete one by dragging another point over it and "absorbing" it.
+       </para>
+
+       <note>
+	     <para>
+	       Whether the Automation Path is hidden or shown does not affect its activation state. It is <emphasis role="bold">always active</emphasis> and can't be diabled. But in its default setting it won't alter anything. In its current implementation you have to reset the Automation Path to its original state manually in order to disable it.
+         </para>
+       </note>
        
      </sect1>
    </chapter>
