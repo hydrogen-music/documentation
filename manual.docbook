@@ -109,7 +109,7 @@
         </listitem>
         <listitem>
 	      <para>
-	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <link linkend="chpt.osc"><abbrev>OSC</abbrev></link> and <link linkend="chpt.session_management.nsm"><abbrev>NSM</abbrev></link> support
+	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <link linkend="chpt.osc"><abbrev>OSC</abbrev></link> and <link linkend="chpt.overview.session_management.nsm"><abbrev>NSM</abbrev></link> support
           </para>
         </listitem>
       </itemizedlist>
@@ -191,12 +191,12 @@
       <itemizedlist>
 	    <listitem>
 	      <para>
-	        <keycap>Ctrl</keycap> + <keycap>left click</keycap> : restore default value of knob or fader
+	        <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> : restore default value of knob or fader
           </para>
         </listitem>
         <listitem>
 	      <para>
-	        <keycap>Shift</keycap> + <keycap>left click</keycap> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>)
+	        <keycap>Shift</keycap> + <emphasis>left click</emphasis> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>)
           </para>
         </listitem>
       </itemizedlist>
@@ -346,6 +346,545 @@
         </tip>
 
       </sect1>
+
+      <sect1 id="chpt.overview.midi_mapping_and_virtual_keyboard">
+	    <title>MIDI-mapping and Virtual Keyboard</title>
+        <para>
+          in the table below you can find the link between the instrument
+          position, the <abbrev>MIDI</abbrev> note and the <abbrev>qwerty</abbrev> keyboard keys.
+        </para>
+        <para>
+	      TODO: link this to Main Menu > Options > input mode.
+          This might be better placed in a dedicated chapter like "virtual keyboard".
+        </para>
+
+        <note>
+	      <para>
+	        The name of the instrument depends on the
+            drumkit that is loaded. This list below refers to the GMkit that is loaded by default.
+          </para>
+        </note>
+
+        <para>Try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
+        drumkits goes smoothly.  You are of course free to place your instruments anywhere in your drumkit, and
+        sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
+        <para>
+          Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
+          is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
+        </para>
+
+        <informalfigure id="fig.InstrumentMapping">
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/InstrumentMapping.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+
+        <table id="chpt.pattern_editor.midi_mapping">
+	      <title><abbrev>MIDI</abbrev> Mapping</title>
+          <tgroup cols="5" align='left' colsep='1' rowsep='1'>
+	        <thead>
+	          <row>
+	            <entry>
+	              Instr. Pos.
+                </entry>
+                <entry>
+	              <abbrev>MIDI</abbrev> Note
+                </entry>
+                <entry>
+	              PC Keyboard Key
+                </entry>
+                <entry>
+	              Hydrogen GMRockKit
+                </entry>
+                <entry>
+	              GM Standard
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+	          <row>
+	            <entry></entry>
+	            <entry>35</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Bass Drum 2</entry>
+              </row>
+	          <row>
+	            <entry>1</entry>
+	            <entry>36</entry>
+	            <entry>Z</entry>
+                <entry>Kick</entry>
+                <entry>Bass Drum 1</entry>
+              </row>
+	          <row>
+	            <entry>2</entry>
+	            <entry>37</entry>
+	            <entry>S</entry>
+                <entry>Stick</entry>
+                <entry>Side Stick/Rimshot</entry>
+              </row>
+	          <row>
+	            <entry>3</entry>
+	            <entry>38</entry>
+	            <entry>X</entry>
+                <entry>Snare</entry>
+                <entry>Snare Drum 1</entry>
+              </row>
+	          <row>
+	            <entry>4</entry>
+	            <entry>39</entry>
+	            <entry>D</entry>
+                <entry>Hand Clap</entry>
+                <entry>Hand Clap</entry>
+              </row>
+	          <row>
+	            <entry>5</entry>
+	            <entry>40</entry>
+	            <entry>C</entry>
+                <entry>Snare Rimhost</entry>
+                <entry>Snare Drum 2</entry>
+              </row>
+	          <row>
+	            <entry>6</entry>
+	            <entry>41</entry>
+	            <entry>V</entry>
+                <entry>Floor Tom</entry>
+                <entry>Low Tom 2</entry>
+              </row>
+	          <row>
+	            <entry>7</entry>
+	            <entry>42</entry>
+	            <entry>G</entry>
+                <entry>Hat Closed</entry>
+                <entry>Closed Hi-hat</entry>
+              </row>
+	          <row>
+	            <entry>8</entry>
+	            <entry>43</entry>
+	            <entry>B</entry>
+                <entry>Tom 2</entry>
+                <entry>Low Tom 1</entry>
+              </row>
+	          <row>
+	            <entry>9</entry>
+	            <entry>44</entry>
+	            <entry>H</entry>
+                <entry>Hat Pedal</entry>
+                <entry>Pedal Hi-hat</entry>
+              </row>
+	          <row>
+	            <entry>10</entry>
+	            <entry>45</entry>
+	            <entry>N</entry>
+                <entry>Tom 1</entry>
+                <entry>Mid Tom 2</entry>
+              </row>
+	          <row>
+	            <entry>11</entry>
+	            <entry>46</entry>
+	            <entry>J</entry>
+                <entry>Hat Open</entry>
+                <entry>Open Hi-hat</entry>
+              </row>
+	          <row>
+	            <entry>12</entry>
+	            <entry>47</entry>
+	            <entry>M</entry>
+                <entry>Cowbell</entry>
+                <entry>Mid Tom 1</entry>
+              </row>
+	          <row>
+	            <entry>13</entry>
+	            <entry>48</entry>
+	            <entry>Q</entry>
+                <entry>Ride</entry>
+                <entry>High Tom 2</entry>
+              </row>
+	          <row>
+	            <entry>14</entry>
+	            <entry>49</entry>
+	            <entry>2</entry>
+                <entry>Crash</entry>
+                <entry>Crash Cymbal 1</entry>
+              </row>
+	          <row>
+	            <entry>15</entry>
+	            <entry>50</entry>
+	            <entry>W</entry>
+                <entry>Ride 2</entry>
+                <entry>High Tom 1</entry>
+              </row>
+	          <row>
+	            <entry>16</entry>
+	            <entry>51</entry>
+	            <entry>3</entry>
+                <entry>Splash</entry>
+                <entry>Ride Cymbal 1</entry>
+              </row>
+	          <row>
+	            <entry>17</entry>
+	            <entry>52</entry>
+	            <entry>E</entry>
+                <entry>Hat Semi-Open</entry>
+                <entry>Chinese Cymbal</entry>
+              </row>
+	          <row>
+	            <entry>18</entry>
+	            <entry>53</entry>
+	            <entry>R</entry>
+                <entry>Bell</entry>
+                <entry>Ride Bell</entry>
+              </row>
+	          <row>
+	            <entry>19</entry>
+	            <entry>54</entry>
+	            <entry>5</entry>
+                <entry></entry>
+                <entry>Tambourine</entry>
+              </row>
+	          <row>
+	            <entry>20</entry>
+	            <entry>55</entry>
+	            <entry>T</entry>
+                <entry></entry>
+                <entry>Splash Cymbal</entry>
+              </row>
+	          <row>
+	            <entry>21</entry>
+	            <entry>56</entry>
+	            <entry>6</entry>
+                <entry></entry>
+                <entry>Cowbell</entry>
+              </row>
+	          <row>
+	            <entry>22</entry>
+	            <entry>57</entry>
+	            <entry>Y</entry>
+                <entry></entry>
+                <entry>Crash Cymbal 2</entry>
+              </row>
+	          <row>
+	            <entry>23</entry>
+	            <entry>58</entry>
+	            <entry>7</entry>
+                <entry></entry>
+                <entry>Vibra Slap</entry>
+              </row>
+	          <row>
+	            <entry>24</entry>
+	            <entry>59</entry>
+	            <entry>U</entry>
+                <entry></entry>
+                <entry>Ride Cymbal 2</entry>
+              </row>
+	          <row>
+	            <entry>25</entry>
+	            <entry>60</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>High Bongo</entry>
+              </row>
+	          <row>
+	            <entry>26</entry>
+	            <entry>61</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Low Bongo</entry>
+              </row>
+	          <row>
+	            <entry>27</entry>
+	            <entry>62</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Mute High Conga</entry>
+              </row>
+	          <row>
+	            <entry>28</entry>
+	            <entry>63</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Open High Conga</entry>
+              </row>
+	          <row>
+	            <entry>29</entry>
+	            <entry>64</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Low Conga</entry>
+              </row>
+	          <row>
+	            <entry>30</entry>
+	            <entry>65</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>High Timbale</entry>
+              </row>
+	          <row>
+	            <entry>31</entry>
+	            <entry>66</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Low Timbale</entry>
+              </row>
+	          <row>
+	            <entry>32</entry>
+	            <entry>67</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>High Agogô</entry>
+              </row>
+	          <row>
+	            <entry>33</entry>
+	            <entry>68</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Low Agogô</entry>
+              </row>
+	          <row>
+	            <entry>34</entry>
+	            <entry>69</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Cabasa</entry>
+              </row>
+	          <row>
+	            <entry>35</entry>
+	            <entry>70</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Maracas</entry>
+              </row>
+	          <row>
+	            <entry>36</entry>
+	            <entry>71</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Short Whistle</entry>
+              </row>
+	          <row>
+	            <entry>37</entry>
+	            <entry>72</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Long Whistle</entry>
+              </row>
+	          <row>
+	            <entry>38</entry>
+	            <entry>73</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Short Güiro</entry>
+              </row>
+	          <row>
+	            <entry>39</entry>
+	            <entry>74</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Long Güiro</entry>
+              </row>
+	          <row>
+	            <entry>40</entry>
+	            <entry>75</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Claves</entry>
+              </row>
+	          <row>
+	            <entry>41</entry>
+	            <entry>76</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>High Wood Block</entry>
+              </row>
+	          <row>
+	            <entry>42</entry>
+	            <entry>77</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Low Wood Block</entry>
+              </row>
+	          <row>
+	            <entry>43</entry>
+	            <entry>78</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Mute Cuíca</entry>
+              </row>
+	          <row>
+	            <entry>44</entry>
+	            <entry>79</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Open Cuíca</entry>
+              </row>
+	          <row>
+	            <entry>45</entry>
+	            <entry>80</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Mute Triangle</entry>
+              </row>
+	          <row>
+	            <entry>46</entry>
+	            <entry>81</entry>
+	            <entry></entry>
+                <entry></entry>
+                <entry>Open Triangle</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        
+        <para>Here's a quick reference of the above bindings for your
+        convenience. </para>
+
+        <informalfigure id="fig.letters_keyboard">
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/tastiera.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+
+      </sect1>
+
+      <sect1 id="chpt.overview.recording">
+	    <title>Recording in Hydrogen</title>
+        <para>
+
+          by clicking the Record button 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/Rec_button.png" format="PNG"/>
+          </imageobject>
+         </inlinemediaobject>
+(see <xref linkend="sect.main_toolbar.transport_control"/>) and simply playing your pattern on your 
+        <abbrev>MIDI</abbrev> drum or your pc keyboard (see <link linkend="chpt.pattern_editor.sidebar">instrument mapping</link>).
+	      TODO
+        </para>
+      </sect1>
+      
+      <sect1 id="chpt.overview.session_management">
+        <title>Session Management</title>
+
+        <para>
+          With Session Management you can easily restore complex sessions involving numerous applications including their particular state. Hydrogen does support some Session Management systems too.
+        </para>
+
+        <warning>
+	      <para>
+	        All the supported Session Management protocols are Linux only. There is no (tested) support for MacOS and Windows yet.
+          </para>
+        </warning>
+        
+        <itemizedlist>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold"><abbrev>NSM</abbrev></emphasis>:
+              <ulink url="http://non.tuxfamily.org/nsm/API.html">Non Session Manager (<abbrev>NSM</abbrev>)</ulink> is of 2021 the defacto standard in Session Management tools within the Linux audio community and Hydrogen does over full support and compliance to its API.
+
+              <tip>
+	            <para>
+	              We highly recommend using this protocol for Session Management.
+                </para>
+              </tip>
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold"><abbrev>LASH</abbrev></emphasis>:
+              Hydrogen provides a basic support for <ulink url="http://lash.nongnu.org">LASH Audio Session Handler (<abbrev>LASH</abbrev>)</ulink>. This covers recalling the song used within the session but, unlike the NSM support, no recalling of the <abbrev>JACK</abbrev> connections and no per-session preferences.
+
+              <note>
+	            <para>
+	              You have to activate <abbrev>LASH</abbrev> support in the <link linkend="fig.preferences.general_tab">General</link> tab of the Preference dialog in order to use it.
+                </para>
+              </note>
+            </para>
+          </listitem>
+          <listitem>
+	        <para>
+	          <emphasis role="bold"><abbrev>JACK</abbrev> Session</emphasis>:
+              <ulink url="https://jackaudio.org"><abbrev>JACK</abbrev> Session</ulink> has been marked <ulink url="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html">deprecated</ulink> by the <abbrev>JACK</abbrev> project.
+              <warning>
+	            <para>
+	              Hydrogen versions &#60;= 1.1 still feature this Session Management protocol. But it will be removed in future releases.
+                </para>
+              </warning>
+            </para>
+          </listitem>
+        </itemizedlist>
+
+        <sect2 id="chpt.overview.session_management.nsm">
+	      <title>NSM</title>
+
+          <para>
+            Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <command>Non Session Manager</command> or <command>RaySession</command>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
+          </para>
+          
+          <itemizedlist>
+	        <listitem>
+              <para>
+	            <emphasis role="bold">Replace With New Song</emphasis>:
+                instead of <link linkend="sect.main_menu.projects.new">New</link>. Replaces the song associated with the session by an empty one.
+              </para>
+            </listitem>
+	        <listitem>
+              <para>
+	            <emphasis role="bold">Import Into Session</emphasis>:
+                instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
+
+                <warning>
+	              <para>
+	                In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
+                  </para>
+                </warning>
+              </para>
+            </listitem>
+	        <listitem>
+              <para>
+	            <emphasis role="bold">Import Recent Info Session</emphasis>:
+                instead of <link linkend="sect.main_menu.projects.open_recent">Open Recent</link>. Replaces the song associated with the session by one of the recently used songs.
+                <warning>
+	              <para>
+	                In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
+                  </para>
+                </warning>
+              </para>
+            </listitem>
+	        <listitem>
+              <para>
+	            <emphasis role="bold">Export From Session As</emphasis>:
+                instead of <link linkend="sect.main_menu.projects.save_as">Save As</link>. Stores the song associated with the session at a location of your choice as <link linkend="chpt.file_types.h2song">.h2song</link> file.
+
+                <note>
+	              <para>
+	                In contrast to the <emphasis>Save As</emphasis> command the underlying path of the current song will not be changed. All subsequent <emphasis>Save</emphasis> actions will store the current state of the song to the file in the session folder and <emphasis role="bold">not</emphasis> to the path of the exported file.
+                  </para>
+                </note>
+              </para>
+            </listitem>
+          </itemizedlist>
+
+          <note>
+            <para>
+              The <link linkend="sect.main_menu.projects.open_demo">Open Demo</link> option will be missing.
+            </para>
+          </note>
+
+          <para>
+	        Both the song and the preferences associated with the session will be stored in a session folder called <filename>Hydrogen.*</filename>. In addition, the drumkit (and its samples) used with the song will linked into the session folder as well. If the link is replaced by a folder containing a valid drumkit, this one will be used over the system and user drumkits.
+
+            <tip>
+	          <para>
+	            This allows you to create fully self sufficient backup of your Hydrogen session using <command>tar -chf</command>. These can be even ported and used to systems which do not have the required drumkits installed.
+              </para>
+            </tip>
+          </para>
+        </sect2>
+      </sect1>
     </chapter>
 
     <chapter id="chpt.preferences" xreflabel="Preferences">
@@ -438,7 +977,7 @@
 
               <tip>
 	            <para>
-	              You may consider using the more advanced <link linkend="chpt.session_management.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
+	              You may consider using the more advanced <link linkend="chpt.overview.session_management.nsm">NSM</link> support of Hydrogen which gives you many additional features, like restoring all <abbrev>JACK</abbrev> connections or creating a per-session configuration.
                 </para>
               </tip>
             </para>
@@ -1115,7 +1654,7 @@
 
         <note>
 	      <para>
-	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.session_management.nsm" /> for details).
+	        If you are using Hydrogen within a <abbrev>NSM</abbrev> session, some of the options below will be called and behave differently (see <xref linkend="chpt.overview.session_management.nsm" /> for details).
           </para>
         </note>
 
@@ -1897,7 +2436,7 @@
           
           <tip>
             <para>
-              You can also drag-and-drop a pattern up/down in
+              You can also <emphasis>drag-and-drop</emphasis> a pattern up/down in
               the pattern list.
             </para>
           </tip>
@@ -1978,13 +2517,13 @@
             Once you have selected a part of your song you can
             <emphasis role="bold">delete</emphasis> it by pressing
             <keycap>Delete</keycap>.  You can <emphasis
-            role="bold">move</emphasis> it by simply dragging your
+            role="bold">move</emphasis> it by simply <emphasis>dragging</emphasis> your
             selection to another location with your mouse, or by
             cutting (<keycap>Ctrl</keycap> + <keycap>x</keycap>) and
             pasting (<keycap>Ctrl</keycap> + <keycap>v</keycap>) using
             your keyboard. You can also <emphasis
             role="bold">copy</emphasis> your selection by either
-            holding <keycap>Ctrl</keycap> while dragging it to a new
+            holding <keycap>Ctrl</keycap> while <emphasis>dragging</emphasis> it to a new
             location, or by copying (<keycap>Ctrl</keycap> +
             <keycap>c</keycap>) and pasting (<keycap>Ctrl</keycap> +
             <keycap>v</keycap>) using your keyboard.
@@ -2105,7 +2644,7 @@
           <para>
             Stacked mode will play multiple patterns simultaneously,
             on a loop. You can select which patterns play using
-            <keycap>Ctrl</keycap> + <keycap>left click</keycap> on the
+            <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> on the
             pattern's name. Selected patterns are all marked with a
             triangle.
           </para>
@@ -2271,7 +2810,7 @@
        </inlinemediaobject>
        button.  Once this is done
        the horizontal bar next to the button changes to a ruler with marks at every bar.
-       Now simply <keycap>left-click</keycap> this ruler at the bar you want the tempo to change and a
+       Now simply <emphasis>left-click</emphasis> this ruler at the bar you want the tempo to change and a
        window will pop up where you can enter the new tempo.
        </para>
        
@@ -2317,7 +2856,7 @@
        </para>
        
        <para>
-         To add a Tag <keycap>middle-click</keycap> on the song ruler (just below the 
+         To add a Tag <emphasis>middle-click</emphasis> on the song ruler (just below the 
          Timeline) and a window will pop up that allows you to add text for any bar.
          
          <informalfigure id="fig.add_tag">
@@ -2329,7 +2868,7 @@
          </informalfigure>
 
          Once you are done you will see a small blue <parameter>T</parameter> in the song ruler for every Tag
-         you have entered. <keycap>Middle-click</keycap> anywhere on the song ruler to edit the tags.
+         you have entered. <emphasis>Middle-click</emphasis> anywhere on the song ruler to edit the tags.
        </para>
      </sect1>
 
@@ -2373,7 +2912,7 @@
 				   <para><emphasis role="bold">Edit</emphasis>: loads an audio file.</para>
                    <tip>
 	                 <para>
-	                   As an alternative, you can load an audio file by dragging it into Hydrogen and dropping over the wave display.
+	                   As an alternative, you can load an audio file by <emphasis>dragging</emphasis> it into Hydrogen and dropping over the wave display.
                      </para>
                    </tip>
                  </listitem>
@@ -2418,8 +2957,6 @@
      </sect1>
    </chapter>
     
-
-<!--  PATTERN EDITOR  -->
     <chapter id="chpt.pattern_editor">
     
       <title>Pattern Editor</title>
@@ -2439,10 +2976,10 @@
         <para>This is where it all happens, this is where you can make music :-)</para>
         
       <para>The <emphasis>Pattern Editor</emphasis>
-      allows you to create and modify the selected pattern by adding/removing notes and tuning 
-      a number of per-note properties like velocity and pan.
+      allows you to create and modify the pattern selected in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor by adding/removing notes and tuning 
+      a number of <link linkend="chpt.pattern_editor.note_properties">per-note properties</link>, like velocity and pan.
       The Pattern Editor 
-      can be used in 2 modes : as <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> or as <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>. You can switch between these 
+      can be used in two modes: as <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> or as <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>. You can switch between these 
       two by clicking the
       <inlinemediaobject>
         <imageobject>
@@ -2455,7 +2992,7 @@
       <note>
         <para>
           If you are editing a pattern in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Single Pattern mode</link> you will always hear the pattern you are 
-          editing when you press playback is rolling.
+          editing when you playback is rolling.
         </para>
         <para>
           If you are working in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern mode</link> you will hear the <emphasis>active</emphasis> pattern(s), 
@@ -2540,22 +3077,20 @@
                 <imagedata fileref="img/lcd_res.png" format="PNG" />
               </imageobject>
               </inlinemediaobject>
-                 : this is the current grid resolution (4 through 64)
+                 : this is the current grid resolution (<option>1/4</option> through <option>1/64</option> with triplet-based resolutions marked as <option>1/8T</option>).
               </para>
 
-              <para>
-	            TODO: update
-              </para>
-              
-              <para>
-                Remember this constraint concerning the grid: if you are working
-                with a resolution of 16 you can't go back to 8 and remove an upbeat 16th note. On
-                the other hand if you are working with a resolution of 8 and you try to
-                insert a note in the middle of two bars (looking for a 16 bars precision),
-                notes will be placed in the previous or in the following 8th bar.  This
-                constraint can be removed if you disable the whole grid resolution (choose
-                "off" from the grid resolution LCD control). Now you'll be able to place
-              notes wherever you prefer.</para>
+              <note>
+                <para>
+                  If you are working
+                  with a resolution of <option>1/16</option> you can't go back to <option>8</option> and remove an upbeat 16th note. On
+                  the other hand if you are working with a resolution of <option>8</option> and you try to
+                  insert a note in the middle of two bars (looking for a <option>16</option> bars precision),
+                  notes will be placed in the previous or in the following 8th bar.  This
+                  constraint can be removed if you disable the whole grid resolution (choose
+                  <option>off</option> from the grid resolution LCD control). Now you'll be able to place
+                notes wherever you prefer.</para>
+              </note>
             </listitem>
             
             <listitem>
@@ -2622,39 +3157,52 @@
           </para>
 
           <para>
-	        TODO: include pattern and drumkit name above the instrument list and mention them in the paragraph below. + update image
+	        TODO: image of whole widget
           </para>
 
         <para>The section on the left shows you what drumkit is currently selected (GMRockKit by default) and below that you can see
         the instruments that are part of this kit.</para>
      
-        <para>Each instrument has its own set of features that are accessible by 
-        <keycap>right-clicking</keycap> the instrument.  From the context menu that pops up you can select </para>
+        <para><emphasis>Left-clicking</emphasis> the box containing the instrument name will play back a sample of the instrument. Which layer will be select depends on the horizontal position of the mouse click representing zero <link linkend="def.velocity">velocity</link> to the left and maximum velocity to the right. In addtion, each instrument has its own set of features that are accessible by 
+        <emphasis>right-clicking</emphasis> the instrument.  From the context menu that pops up you can select.</para>
 
         <itemizedlist mark="opencircle"> 
-          <listitem><para><emphasis role="bold">Delete notes</emphasis> : to remove all notes for this instrument in this pattern.  </para></listitem>
+          <listitem><para><emphasis role="bold">Delete notes</emphasis>:
+          removes all notes for this instrument in this pattern.  </para></listitem>
           <listitem id="chpt.pattern_editor.sidebar.fill_notes">
-            <para><emphasis role="bold">Fill notes</emphasis> : this allows you to fill
-          up the pattern with notes for the selected instrument.  Depending on the choice you make (fill all, fill 1/2, fill 1/4 ...)
-          notes will be placed at all, 1/2, 1/4, etc of the note positions <emphasis role="bold">that are allowed by 
-          the grid setting</emphasis>.  So be careful not to mix up the 'musical' 1/2-note and the 'fill 1/2' note.</para></listitem>
-          <listitem><para><emphasis role="bold">Randomize velocity</emphasis>
-          : automatically apply a pseudo-random velocity to each note of that
-          instrument in the pattern. The more velocity you set on the instrument,
-          the more hydrogen will hit <quote>hard</quote> on that instrument when
+            <para><emphasis role="bold">Fill notes</emphasis>: this allows you to fill
+            up the pattern with notes for the selected instrument.
+            <note>
+	          <para>
+	            Depending on the choice you make (<option>fill all</option>, <option>fill 1/2</option>, <option>fill 1/4</option> ...)
+                notes will be placed at all, 1/2, 1/4, etc of the note positions <emphasis role="bold">that are allowed by 
+                the grid setting</emphasis>.  So be careful not to mix up the 'musical' 1/2-note and the 'fill 1/2' note.
+              </para>
+            </note>
+            </para>
+          </listitem>
+          <listitem><para><emphasis role="bold">Randomize velocity</emphasis>:
+          automatically apply a pseudo-random velocity to each note of that
+          instrument in the pattern.
+          <note>
+	        <para>
+	          The more velocity you set on the instrument,
+          the more Hydrogen will hit <quote>hard</quote> on that instrument when
           played.
+            </para>
+          </note>
           </para></listitem>
 
           <listitem>
-            <para><emphasis role="bold">Select notes</emphasis> : 
+            <para><emphasis role="bold">Select notes</emphasis>:
             will select all the notes played on this instrument in the
             current pattern. They can then be copied, moved etc. in the
-            pattern editor main area.
+            Pattern Editor main area.
             </para>
           </listitem>
 
           <listitem>
-            <para><emphasis role="bold">Edit all patterns</emphasis> :
+            <para><emphasis role="bold">Edit all patterns</emphasis>:
             this section of the menu has actions which operate on
             notes played by the instrument in <emphasis>all</emphasis>
             the patterns of the song.
@@ -2662,7 +3210,7 @@
             
             <itemizedlist>
               <listitem>
-                <para><emphasis role="bold">Cut notes</emphasis> : 
+                <para><emphasis role="bold">Cut notes</emphasis>: 
                 remove <emphasis>all</emphasis> notes played on
                 this instrument, in all patterns, and keep them in the
                 clipboard.
@@ -2670,7 +3218,7 @@
               </listitem>
 
               <listitem>
-                <para><emphasis role="bold">Copy notes</emphasis> :
+                <para><emphasis role="bold">Copy notes</emphasis>:
                 copy <emphasis>all</emphasis> notes played on
                 this instrument, in all patterns, to the clipboard.
                 </para>
@@ -2684,39 +3232,41 @@
               </listitem>
               
               <listitem>
-                <para><emphasis role="bold">Delete notes</emphasis> :
+                <para><emphasis role="bold">Delete notes</emphasis>:
                 delete all the notes associated with this instrument,
                 without affecting the clipboard.
                 </para>
               </listitem>
               
             </itemizedlist>
-            
+
+            <tip>
             <para>
               These can be used together to change the instrumentation
               of a song, entirely replacing one instrument with
               another by just copy and pasting the notes to a new
               instrument.
             </para>
+            </tip>
 
           </listitem>
 
           <listitem>
-            <para><emphasis role="bold">Instrument</emphasis> :
+            <para><emphasis role="bold">Instrument</emphasis>:
             this section of the menu has actions which operate on the
             instrument as a whole:
             </para>
             <itemizedlist>
               <listitem>
                 <para><emphasis role="bold">Rename
-                instrument</emphasis> :
+                instrument</emphasis>:
                 change the name of the instrument.
                 </para>
               </listitem>
               
               <listitem>
                 <para><emphasis role="bold">Delete
-                Instrument</emphasis> : well, deletes the instrument ;-)</para>
+                Instrument</emphasis>: well, deletes the instrument ;-)</para>
               </listitem>
 
             </itemizedlist>
@@ -2738,58 +3288,27 @@
         solos it.
         </para>
         
-        <para>The order of the instruments can be rearranged by simply dragging an instrument 
-        up/down in the list and dropping it on a new position within the drumkit.  Doing so 
+        <para>The order of the instruments can be rearranged by simply <emphasis>dragging</emphasis> an instrument 
+        up/down in the list and <emphasis>dropping</emphasis> it on a new position within the drumkit.  Doing so 
         will not change the sequence of notes you have created for that instrument, nor will
-        it change anything about the song or pattern you are working on.  It <emphasis role="bold">
-        will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <emphasis role="bold"><abbrev>MIDI</abbrev> note 
-        mapping</emphasis> : in the table below you can find the link between the instrument
-        position, the <abbrev>MIDI</abbrev> note and the <abbrev>qwerty</abbrev> keyboard keys.</para>
+        it change anything about the song or pattern you are working on.</para>
 
-        <note>
+        <warning>
 	      <para>
-	        The name of the instrument depends on the
-            drumkit that is loaded. This list below refers to the GMkit that is loaded by default.
+	        It <emphasis role="bold">
+        will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard"><abbrev>MIDI</abbrev> note 
+        mapping</link>.
           </para>
-        </note>
+        </warning>
 
-        <para>
-	      TODO: since the GMKit is not offered anymore, we should update this to match the GMRockKit
-        </para>
+        <warning>
+	      <para>
+	        Rearranging the instruments will also mess up the <link linkend="sect.preferences.jack.per_instrument_outs">per-instrument</link> <abbrev>JACK</abbrev> output ports. Be sure to have your drumkit set up before starting wiring.
+          </para>
+        </warning>
 
-        <para>
-	      TODO: link this to Main Menu > Options > input mode.
-          This might be better placed in a dedicated chapter like "virtual keyboard".
-        </para>
-        
-        <para>Try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
-      drumkits goes smoothly.  You are of course free to place your instruments anywhere in your drumkit, and
-      sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
-      <para>
-      Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
-      is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
-      </para>
-
-      <informalfigure id="fig.InstrumentMapping">
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/InstrumentMapping.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-      </informalfigure>
-
-      <para>Here's a quick reference of the above bindings for your
-      convenience. </para>
-
-      <informalfigure id="fig.letters_keyboard">
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="img/tastiera.png" format="PNG" />
-          </imageobject>
-        </mediaobject>
-      </informalfigure>
-    </sect2>
-  </sect1>
+      </sect2>
+    </sect1>
 
       <sect1 id="chpt.pattern_editor.drumkit">
         <title>Drum Pattern Editor</title>
@@ -2815,15 +3334,15 @@
         <itemizedlist>
           <listitem>
             <para>
-              you can add a note by <keycap>left-clicking</keycap>, and then can 'stretch' that note by <keycap>right-click-dragging</keycap> it.
+              you can add a note by <emphasis>left-clicking</emphasis>, and then can 'stretch' that note by <emphasis>right-click-dragging</emphasis> it.
               This will change the dot into a rectangle that represents the
               duration of that note.
             </para>
           </listitem>
           <listitem>
             <para>
-              Alternatively, you can add a stop-note by
-              <keycap>Shift</keycap> + <keycap>left-clicking</keycap>. This adds a blue dot which
+              alternatively, you can add a stop-note by
+              <keycap>Shift</keycap> + <emphasis>left-clicking</emphasis>. This adds a blue dot which
               represents the end of the note.
             </para>
           </listitem>
@@ -2850,8 +3369,8 @@
         </para>
 
         <para>
-          Notes can be selected by dragging over them with the mouse (or <keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>), and can be deleted with <keycap>Delete</keycap>, or moved by
-          <keycap>dragging</keycap> (or <keycap>Return</keycap> followed by <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap> movements) the notes to a new location. This
+          Notes can be selected by <emphasis>dragging</emphasis> over them with the mouse (or <keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>), and can be deleted with <keycap>Delete</keycap>, or moved by
+          <emphasis>dragging</emphasis> (or <keycap>Return</keycap> followed by <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap> movements) the notes to a new location. This
           allows notes to be moved between different instruments, or to adjust their
           timing. Movement in the horizontal direction is constrained by the currently selected grid
           <link linkend="chpt.pattern_editor.controls.res">resolution</link>, however this can be overridden by holding down <keycap>Alt</keycap> while moving notes.
@@ -2867,20 +3386,15 @@
           the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-          <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also record your beats by clicking the Record button 
-          <inlinemediaobject>
-            <imageobject>
-              <imagedata fileref="img/Rec_button.png" format="PNG"/>
-          </imageobject>
-         </inlinemediaobject>
-        (see <xref linkend="sect.main_toolbar.transport_control"/>) and simply playing your pattern on your 
-        <abbrev>MIDI</abbrev> drum or your pc keyboard (see <link linkend="chpt.pattern_editor.sidebar">instrument mapping</link>). (TODO: there is no dedicated section/chapter on recording. But there should be one which is easily discoverable in the table of content)  This is probably 
-        a more musical way of creating a pattern, but it's up to you to decide what works best for you.
-        (Also see <xref linkend="chpt.create_song"/> for a basic
-        walk-through of how the Pattern Editor works) </para>
+          <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also <link linkend="chpt.overview.recording">record</link> your beats. This is probably 
+          a more musical way of creating a pattern, but it's up to you to decide what works best for you.
 
-        <para>
-	      TODO: verify if up-to-date
+          <tip>
+	        <para>
+	          Also see <xref linkend="chpt.create_song"/> for a basic
+              walk-through of how the Pattern Editor works.
+            </para>
+          </tip>
         </para>
       </sect1>
       
@@ -2889,9 +3403,9 @@
         <para>
 	      TODO: add image of note properties editor (velocity)
         </para>
-      <para>Clicking on an instrument or adding/removing a note next to it 
-      will select this instrument.  Once an instrument is selected the note properties 
-      for this instrument will be shown in the form of vertical lines in the bottom window.  
+      <para>Clicking on an instrument or adding/removing a note associated 
+      will select this instrument.  Once an instrument is selected all note properties 
+      of its notes will be shown in the form of vertical lines in the bottom window.  
       The lines represent the values for the selected property of each note of the selected instrument.
       You can select a different note-property from the note property drop-down list (located bottom-left).
       </para>
@@ -2901,22 +3415,19 @@
       
       <itemizedlist mark="opencircle">
         <listitem id="chpt.pattern_editor.note_properties.velocity">
-          <para><emphasis role="bold">Velocity</emphasis> : how hard the note is
-          played (the volume of the note)</para>
+          <para><emphasis role="bold"><link linkend="def.velocity">Velocity</link></emphasis>: how hard the note is
+          played (the volume of the note). This property also determines which sample of the instrument will be <link linkend="chpt.instrument_editor.layers.sample_selection">selected</link>.</para>
           <note>
             <para>
-          The color of the vertical bar will change according to the velocity value you have defined. 
-          A light shade of gray means a low velocity (low volume) and the higher you set the velocity the darker the color will be,
-          turning red when you reach the point of <link linkend="def.clipping">clipping</link>.
+              The color of the vertical bar will change according to the velocity value you have defined. 
+              A light shade of gray means a low velocity (low volume) and the higher you set the velocity the darker the color will be,
+              turning red when you reach the point of <link linkend="def.clipping">clipping</link>.
             </para>
           </note>
-          <para>
-	        TODO: link to Instrument Editor -> Layers which describes how velocity maps to different samples.
-          </para>
         </listitem>
         
         <listitem id="chpt.pattern_editor.note_properties.pan">
-          <para><emphasis role="bold">Pan</emphasis> : with this parameter you can move
+          <para><emphasis role="bold"><link linkend="def.pan">Pan</link></emphasis>: with this property you can move
            the stereo image position of the note (how loud it will be in the
           left/right output).</para>
 
@@ -2930,7 +3441,7 @@
         
         <listitem id="chpt.pattern_editor.note_properties.lead_and_lag">
           <para>
-          <emphasis role="bold">Lead/Lag</emphasis> : Lead and Lag allows a slight note
+          <emphasis role="bold">Lead/Lag</emphasis>: Lead and Lag allows a slight note
           lead or lag in respect of the actual beat. The range is ca. 5 ticks (ca. 1/10 of quarter notes) which
           equals around ca. 10 ms at a tempo of 120bpm.  Changing the lead/lag can make a huge
           difference to the way your pattern sounds and feels.  It's a groove thing ;-) 
@@ -2939,7 +3450,7 @@
         
         <listitem id="chpt.pattern_editor.note_properties.notekey">
           <para>
-          <emphasis role="bold">NoteKey</emphasis> : if you select this note parameter the 
+          <emphasis role="bold">NoteKey</emphasis>: if you select this note parameter the 
           area where you can modify the parameter will change into a 'piano keyboard'
           </para>
           <informalfigure id="fig.NoteKey">
@@ -2964,13 +3475,13 @@
         </listitem>
         <listitem>
           <para>
-            <emphasis role="bold">Probability</emphasis> : changing the
+            <emphasis role="bold">Probability</emphasis>: changing the
             Probability property of a note provides a way for Hydrogen
             to automatically create some variation in patterns. By
-            setting the probability to less than 1.0, a note may be
-            randomly skipped: a note with probability 1.0 will
+            setting the probability to less than <option>1.0</option>, a note may be
+            randomly skipped: a note with probability <option>1.0</option> will
             <emphasis>always</emphasis> be played, a note with
-            probability of 0.0 will <emphasis>never</emphasis> be
+            probability of <option>0.0</option> will <emphasis>never</emphasis> be
             played.
           </para>
         </listitem>
@@ -2978,7 +3489,7 @@
       </para>
 
       <para>
-        <keycap>Clicking</keycap> or <keycap>dragging</keycap> the value lines in the Note Properties Editor will
+        <emphasis>Clicking</emphasis> or <emphasis>dragging</emphasis> the value lines in the Note Properties Editor will
         set the property value. But often you'll want to set the properties of
         several notes at once, so there are a few ways to do this.
 
@@ -2987,7 +3498,7 @@
             <para><emphasis role="bold">Drawing with the mouse:</emphasis></para>
             <para>
               Pressing the mouse button over the first note's property, you can
-              hold down the mouse button and drag over multiple notes. This is
+              hold down the mouse button and <emphasis>drag</emphasis> over multiple notes. This is
               great for quickly creating a crescendo from a filled set of notes.
             </para>
           </listitem>
@@ -2997,8 +3508,8 @@
             </para>
             <para>
               The mouse or keyboard can be used to select multiple notes, which
-              can then be modified all together by dragging them together. This
-              can be useful for creating really consistent quiet grace notes.
+              can then be modified all together by <emphasis>dragging</emphasis> them together. This
+              can be useful for creating really consistent quiet grace notes. Alternatively, you can use the <emphasis>mouse wheel</emphasis> for a coarse adjustment or combine it with a pressed <keycap>Ctrl</keycap> key for fine adjustments.
             </para>
           </listitem>
 
@@ -3028,9 +3539,11 @@
        complete piano keyboard, so you don't have to select the octave
        first.</para>
 
-       <para>
-	     TODO: add additional information about change properties of multiple notes at a single position, what happens in the Drumkit Editor when there are multiple notes in a single position, that most (all?) of the controls - like note lengths - available in the Drumkit Editor can also be applied here.
-       </para>
+       <note>
+	     <para>
+	       When entering multiple notes in one column - as a chord - the corresponding symbol in the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> will be prepended with e.g. a <option>3x</option> to indicate the presence of three separate notes. Also, to adjust the note properties of the individual notes within a chord can be done by <emphasis>right-clicking</emphasis> on the note and <emphasis>dragging</emphasis> the mouse up or down.
+         </para>
+       </note>
       
       </sect1>
      
@@ -3104,12 +3617,12 @@
           via any other channel.</para>
        </warning>
 
-       <para>To <emphasis role="bold">load a drumkit</emphasis> via the Sound Library, right-click the drumkit and select
+       <para>To <emphasis role="bold">load a drumkit</emphasis> via the Sound Library, <emphasis>right-click</emphasis> the drumkit and select
        <parameter>Load</parameter>.  This will replace your current drumkit
        with the one that you selected.  To <emphasis role="bold">load a single instrument</emphasis> from that
-       kit, left-click the <option>&#x25B6;</option> to the left of the
+       kit, <emphasis>left-click</emphasis> the <option>&#x25B6;</option> to the left of the
        drumkit's name to show all the instruments.  With your left mouse
-       button, click and drag the instrument into your current kit.  The
+       button, <emphasis>click</emphasis> and <emphasis>drag</emphasis> the instrument into your current kit.  The
        instrument will be added to the drumkit that you currently have
        loaded.
        </para>
@@ -3138,7 +3651,7 @@
         </note>
         </para>
         <para>Before you save a pattern, be
-        sure to give it a title and a category. This can be done by right-clicking on the pattern in the Sidebar of the Song Editor, selecting
+        sure to give it a title and a category. This can be done by <emphasis>right-clicking</emphasis> on the pattern in the Sidebar of the Song Editor, selecting
         <link linkend="chpt.song_editor.sidebar.properties">Properties</link> and entering the details.
         You can use one of the categories already
         provided, or create your own categories by simply typing in a category
@@ -3486,7 +3999,7 @@
                 <imagedata fileref="img/btn_dropdown_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
-            you find a list of all components available in the current drumkit and can select them via a left click. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one.
+            you find a list of all components available in the current drumkit and can select them via a <emphasis>left click</emphasis>. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one.
           </para>
 
           <warning>
@@ -3536,7 +4049,7 @@
           </para>
 
           <para>
-	        Above the layer listing you find boxes in different shades of grey indicating which range of note <link linkend="def.velocity">velocity</link> will trigger which sample (left: 0 velocity, right: maximum velocity). Left clicking on any of these boxes will play back the sound of associated sample modulated by the velocity corresponding to the horizontal position of the mouse cursor.
+	        Above the layer listing you find boxes in different shades of grey indicating which range of note <link linkend="def.velocity">velocity</link> will trigger which sample (left: 0 velocity, right: maximum velocity). <emphasis>Left-clicking</emphasis> on any of these boxes will play back the sound of associated sample modulated by the velocity corresponding to the horizontal position of the mouse cursor.
 
             <tip>
 	          <para>
@@ -3546,7 +4059,7 @@
           </para>
 
           <para>
-	        You might have already noticed in the picture above or for shipped drumkits in the Hydrogen GUI that a layer row contains a light blue rectangle that those not quite fill the whole row. This rectangle indicates the range in velocity the associated sample should be triggered. This way you can separate samples for soft hits, regular hits, and so on for each instrument (component). Whenever two rectangles do overlap a triggered note with a velocity within this shared range will consult the <link linkend="chpt.instrument_editor.layers.sample_selection">Sample Selection</link> to determine which sample will be played back. You can adjust the velocity ranges of each layer by left clicking the left or right end of the light blue rectangles and dragging it to the desired position.
+	        You might have already noticed in the picture above or for shipped drumkits in the Hydrogen GUI that a layer row contains a light blue rectangle that those not quite fill the whole row. This rectangle indicates the range in velocity the associated sample should be triggered. This way you can separate samples for soft hits, regular hits, and so on for each instrument (component). Whenever two rectangles do overlap a triggered note with a velocity within this shared range will consult the <link linkend="chpt.instrument_editor.layers.sample_selection">Sample Selection</link> to determine which sample will be played back. You can adjust the velocity ranges of each layer by <emphasis>left-clicking</emphasis> the left or right end of the light blue rectangles and <emphasis>dragging</emphasis> it to the desired position.
           </para>
 
           <note>
@@ -3687,7 +4200,7 @@
           </para>
           
           <para>
-            In the <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop, and loop point for the sample by dragging the 
+            In the <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop, and loop point for the sample by <emphasis>dragging</emphasis> the 
             the 3 markers:
             <itemizedlist>
               <listitem id="chpt.sample_editor.wave_display.start_marker">
@@ -3766,7 +4279,7 @@
 
           <note>
 	        <para>
-	          These values will change if you drag the markers,
+	          These values will change if you <emphasis>drag</emphasis> the markers,
           but you can also fine-tune the marker position by using the up/down arrows of the spinboxes, 
           the up/down keys on your keyboard, or by using your mouse scroll wheel while hovering
           above the spinboxes.
@@ -3907,12 +4420,12 @@
             </step>
             <step>
               <para>
-	            Left clicking in the Envelope Editor will add a point to the selected envelope or allows you to drag an existing one.
+	            <emphasis>Left-clicking</emphasis> in the Envelope Editor will add a point to the selected envelope or allows you to <emphasis>drag</emphasis> an existing one.
               </para>
             </step>
             <step>
               <para>
-	          Right-clicking will delete a point.   
+	          <emphasis>Right-clicking</emphasis> will delete a point.   
               </para>
             </step>
             <step>
@@ -4505,7 +5018,7 @@
 
          <note>
 	       <para>
-	         When playback reaches the end of one song the next one won't be automatically selected and played! You can select an arbitrary song in the playlist using double left clicking, by pressing the hotkeys <link linkend="chap.shortcuts.f5"><keycap>F5</keycap></link> and <link linkend="chap.shortcuts.f6"><keycap>F6</keycap></link>, or the corresponding <link linkend="chpt.osc.command.playlist_song">OSC</link> commands.
+	         When playback reaches the end of one song the next one won't be automatically selected and played! You can select an arbitrary song in the playlist using double <emphasis>left-clicking</emphasis>, by pressing the hotkeys <link linkend="chap.shortcuts.f5"><keycap>F5</keycap></link> and <link linkend="chap.shortcuts.f6"><keycap>F6</keycap></link>, or the corresponding <link linkend="chpt.osc.command.playlist_song">OSC</link> commands.
            </para>
            <para>
 	         Also note that selecting a song won't start playback automatically.
@@ -5069,7 +5582,7 @@
      <sect1 id="chpt.midi.learnable">
        <title>MIDI-learnable Widgets</title>
        
-       <para>Apart from the dedicated <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> Actions</link> a lot of GUI elements, such as faders or knobs, can also be controlled via <abbrev>MIDI</abbrev> messages. To configure an element to listen for incoming <abbrev>MIDI</abbrev> Events, press <keycap>Shift</keycap> while left-clicking it. 
+       <para>Apart from the dedicated <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> Actions</link> a lot of GUI elements, such as faders or knobs, can also be controlled via <abbrev>MIDI</abbrev> messages. To configure an element to listen for incoming <abbrev>MIDI</abbrev> Events, press <keycap>Shift</keycap> while <emphasis>left-clicking</emphasis> it. 
        A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
        a key or turn/move a controller on your <abbrev>MIDI</abbrev> device.
        </para>
@@ -5577,132 +6090,8 @@
        </sect2>
 	 </sect1>
    </chapter>
-   
-   <chapter id="chpt.session_management">
-     <title>Session Management</title>
+  </part>
 
-     <para>
-       With Session Management you can easily restore complex sessions involving numerous applications including their particular state. Hydrogen does support some Session Management systems too.
-     </para>
-
-     <warning>
-	   <para>
-	     All the supported Session Management protocols are Linux only. There is no (tested) support for MacOS and Windows yet.
-       </para>
-     </warning>
-     
-     <itemizedlist>
-	   <listitem>
-	     <para>
-	       <emphasis role="bold"><abbrev>NSM</abbrev></emphasis>:
-           <ulink url="http://non.tuxfamily.org/nsm/API.html">Non Session Manager (<abbrev>NSM</abbrev>)</ulink> is of 2021 the defacto standard in Session Management tools within the Linux audio community and Hydrogen does over full support and compliance to its API.
-
-           <tip>
-	         <para>
-	           We highly recommend using this protocol for Session Management.
-             </para>
-           </tip>
-         </para>
-       </listitem>
-       <listitem>
-	     <para>
-	       <emphasis role="bold"><abbrev>LASH</abbrev></emphasis>:
-           Hydrogen provides a basic support for <ulink url="http://lash.nongnu.org">LASH Audio Session Handler (<abbrev>LASH</abbrev>)</ulink>. This covers recalling the song used within the session but, unlike the NSM support, no recalling of the <abbrev>JACK</abbrev> connections and no per-session preferences.
-
-           <note>
-	         <para>
-	           You have to activate <abbrev>LASH</abbrev> support in the <link linkend="fig.preferences.general_tab">General</link> tab of the Preference dialog in order to use it.
-             </para>
-           </note>
-         </para>
-       </listitem>
-       <listitem>
-	     <para>
-	       <emphasis role="bold"><abbrev>JACK</abbrev> Session</emphasis>:
-           <ulink url="https://jackaudio.org"><abbrev>JACK</abbrev> Session</ulink> has been marked <ulink url="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html">deprecated</ulink> by the <abbrev>JACK</abbrev> project.
-           <warning>
-	         <para>
-	           Hydrogen versions &#60;= 1.1 still feature this Session Management protocol. But it will be removed in future releases.
-             </para>
-           </warning>
-         </para>
-       </listitem>
-     </itemizedlist>
-
-     <sect1 id="chpt.session_management.nsm">
-	   <title>NSM</title>
-
-       <para>
-         Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <command>Non Session Manager</command> or <command>RaySession</command>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
-       </para>
-       
-       <itemizedlist>
-	     <listitem>
-           <para>
-	         <emphasis role="bold">Replace With New Song</emphasis>:
-             instead of <link linkend="sect.main_menu.projects.new">New</link>. Replaces the song associated with the session by an empty one.
-           </para>
-         </listitem>
-	     <listitem>
-           <para>
-	         <emphasis role="bold">Import Into Session</emphasis>:
-             instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
-
-             <warning>
-	           <para>
-	             In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
-               </para>
-             </warning>
-           </para>
-         </listitem>
-	     <listitem>
-           <para>
-	         <emphasis role="bold">Import Recent Info Session</emphasis>:
-             instead of <link linkend="sect.main_menu.projects.open_recent">Open Recent</link>. Replaces the song associated with the session by one of the recently used songs.
-             <warning>
-	           <para>
-	             In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
-               </para>
-             </warning>
-           </para>
-         </listitem>
-	     <listitem>
-           <para>
-	         <emphasis role="bold">Export From Session As</emphasis>:
-             instead of <link linkend="sect.main_menu.projects.save_as">Save As</link>. Stores the song associated with the session at a location of your choice as <link linkend="chpt.file_types.h2song">.h2song</link> file.
-
-             <note>
-	           <para>
-	             In contrast to the <emphasis>Save As</emphasis> command the underlying path of the current song will not be changed. All subsequent <emphasis>Save</emphasis> actions will store the current state of the song to the file in the session folder and <emphasis role="bold">not</emphasis> to the path of the exported file.
-               </para>
-             </note>
-           </para>
-         </listitem>
-       </itemizedlist>
-
-       <note>
-         <para>
-           The <link linkend="sect.main_menu.projects.open_demo">Open Demo</link> option will be missing.
-         </para>
-       </note>
-
-       <para>
-	     Both the song and the preferences associated with the session will be stored in a session folder called <filename>Hydrogen.*</filename>. In addition, the drumkit (and its samples) used with the song will linked into the session folder as well. If the link is replaced by a folder containing a valid drumkit, this one will be used over the system and user drumkits.
-
-         <tip>
-	       <para>
-	         This allows you to create fully self sufficient backup of your Hydrogen session using <command>tar -chf</command>. These can be even ported and used to systems which do not have the required drumkits installed.
-           </para>
-         </tip>
-       </para>
-     </sect1>
-   </chapter>
- </part>
- <!--
-     ##################
-     # THIRD CHAPTER  #
-     ##################
- -->
  <part id="part.demos">
    <title>Examples</title>
    <chapter id="chpt.create_song">
@@ -5727,7 +6116,7 @@
        <para>We'll start from the empty song with an empty pattern created when
        Hydrogen starts up: "pattern" mode should be selected by default. Now
        let's click on the <quote>Play</quote>button, and while the pattern is playing
-       let's add notes by left_mouse_clicking in the grid of the Song Editor 
+       let's add notes by <emphasis>left-clicking</emphasis> in the grid of the Song Editor 
        (<xref linkend="fig.pattern_editor.2"/>). Adjust the grid resolution and BPM
        speed if needed. Remember some constraints of the grid: if you are
        working with a resolution of 16 you can't go back to 8 and remove a
@@ -5865,7 +6254,7 @@
           </menuchoice>
 
           .  This will give you a bank of 32 blank instruments.  To delete
-          instruments, right-click on on each instrument and select
+          instruments, <emphasis>right-click</emphasis> on on each instrument and select
           "<guimenuitem>Delete Instrument</guimenuitem>".  To add more instruments,
           select
 
@@ -5879,7 +6268,7 @@
 
           <step>
           <para>Select an instrument to start editing it.  This is done by
-          left-clicking on the name of the instrument in the instrument list (at
+          <emphasis>left-clicking</emphasis> on the name of the instrument in the instrument list (at
           the left).  You will notice that the name of the instrument in the
           Instrument Editor matches the one that you clicked.</para>
           </step>
@@ -5963,7 +6352,7 @@
         trigger the instrument.  This is because you need to set the
         <emphasis>velocity</emphasis> ranges for the layers.  Move your mouse to
         the sides of the light blue rectangles and you see that you get a
-        left-right drag cursor.  Now drag the sample to the left or right (like
+        <emphasis>left-right drag</emphasis> cursor.  Now <emphasis>drag</emphasis> the sample to the left or right (like
         a curtain).  You will now see Layer 2 appear.</para>
 
         <para>The velocity setting for the layer is 0-velocity on the left, and
