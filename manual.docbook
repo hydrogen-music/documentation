@@ -22,6 +22,14 @@
         <firstname>Sebastian</firstname>
         <surname>Moors</surname>
       </author>
+      <author>
+	    <firstname>Colin</firstname>
+        <surname>Evans</surname>
+      </author>
+      <author>
+	    <firstname>Philipp</firstname>
+        <surname>Müller</surname>
+      </author>
     </authorgroup>
 
     <subtitle>2021-03-04</subtitle>
@@ -1807,7 +1815,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <para><emphasis role="bold">New</emphasis>: creates a new and empty <link linkend="chpt.overview.drumkits">drumkit</link> by clearing all the instruments of the current one.
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.drumkits.open">
 	        <para>
 	          <emphasis role="bold">Open</emphasis>:
               opens one of the registered drumkits and replaces the currently loaded one.
@@ -1839,7 +1847,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </note>
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_form.export_drumkit">
             <para><emphasis role="bold">Export</emphasis>: compress and stores all instruments samples and settings of any drumkit (not just the current one) into a folder of your choice as <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file.
 
             <note>
@@ -6151,39 +6159,54 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
  <part id="part.demos">
    <title>Examples</title>
-   <chapter id="chpt.create_song">
-     <title>A New Song</title>
+
+    <chapter id="chpt.create_song">
+      <title>A New Song</title>
+      
+      <para>
+        This chapter provides a quick-and-dirty walkthrough to Hydrogen. Refer to the
+      tutorials and the technical <xref linkend="part.using_hydrogen" /> of this document for a more detailed overview.
+      </para>
+  
      <sect1 id="sect.song_vs_pattern">
-       <title>"Song" Mode and "Pattern" Mode</title>
+       <title>Song Mode and Pattern Mode</title>
 
-       <para>This section is a quick-and-dirty walkthrough to Hydrogen. Refer to the
-       tutorial for a more detailed overview.</para>
-
-       <para>Hydrogen has 2 main modes: "Pattern" mode and "Song" mode (refer to
-       <xref linkend="chpt.main_toolbar"/> for the buttons that activate each mode). When
-       "Pattern" mode is activated the current pattern is continuously repeated.
+       <para>Hydrogen has two main modes: <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> and <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>. When
+       <emphasis>Pattern mode</emphasis> is activated the current pattern is continuously repeated.
        This mode is very well suited to tweak your pattern until it's just right, since the 
        pattern you are working on is constantly repeated. This way you can immediately 
-       hear the changes you have made. In "Song" mode the whole song is played.  
+       hear the changes you have made. In <emphasis>Song mode</emphasis> the whole song is played.  
        This is useful when putting together the patterns to create the structure of the song.</para>
      </sect1>
 
      <sect1 id="sect.create_pattern">
        <title>A New Pattern</title>
        <para>We'll start from the empty song with an empty pattern created when
-       Hydrogen starts up: "pattern" mode should be selected by default. Now
-       let's click on the <quote>Play</quote>button, and while the pattern is playing
-       let's add notes by <emphasis>left-clicking</emphasis> in the grid of the Song Editor 
-       (<xref linkend="fig.pattern_editor.2"/>). Adjust the grid resolution and BPM
-       speed if needed. Remember some constraints of the grid: if you are
-       working with a resolution of 16 you can't go back to 8 and remove a
-       16th note; same thing happens if you are working with a resolution of
-       8 and you try to insert a note in the middle of two bars (looking for
-       a 16 bars precision): they will be placed on the previous or on the
-       following 8th bar (unless you choose <quote>off</quote> from the Grid Resolution LCD in which case
-       you're free to place notes wherever you prefer). <emphasis role="bold">Be
-       sure to select the correct pattern in the Song Editor before adding notes
-       in the Pattern Editor!</emphasis></para>
+       Hydrogen starts up: <emphasis>Pattern mode</emphasis> should be selected by default. Now
+       let's click on the
+       <inlinemediaobject>
+         <imageobject>
+           <imagedata fileref="img/btn_play_off.png" format="PNG"/>
+         </imageobject>
+       </inlinemediaobject>
+button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link>, and while the pattern is playing
+       let's add notes by <emphasis>left-clicking</emphasis> in the grid of the <link linkend="chpt.pattern_editor">Pattern Editor</link> 
+       (see <xref linkend="fig.pattern_editor.2"/>). Adjust the <link linkend="chpt.pattern_editor.controls.res">grid resolution</link> and <link linkend="sect.main_toolbar.bpm_control_and_metronome">tempo</link> if needed.
+
+       <note>
+	     <para>
+           Remember some constraints of the grid: if you are
+           working with a resolution of <option>1/16</option>, you can't go back to <option>1/8</option> and remove a
+           16th note; same thing happens if you are working with a resolution of
+           <option>1/8</option> and you try to insert a note in the middle of two bars (looking for
+           a 16 bars precision): they will be placed on the previous or on the
+           following 8th bar (unless you choose <option>off</option> from the Grid Resolution LCD in which case
+           you're free to place notes wherever you prefer). <emphasis role="bold">Be
+           sure to select the correct pattern in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor before adding notes
+           in the Pattern Editor!</emphasis>
+         </para>
+       </note>
+       </para>
 
        <figure id="fig.pattern_editor.2">
          <title>The Pattern Editor</title>
@@ -6199,7 +6222,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <title>A New Sequence</title>
 
        <para>Once patterns are created (<xref linkend="fig.insert_patterns"/>), we
-       can copy/paste/delete them using the Select mode (see <xref linkend="chpt.song_editor.main_controls"/>).
+       can copy/paste/delete them using the <link linkend="chpt.song_editor.editor_modes.select">Select mode</link>.
        </para>
 
        <figure id="fig.insert_patterns">
@@ -6215,13 +6238,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      <sect1 id="sect.create_song.adjust_mixer">
        <title>Adjust from the Mixer</title>
 
-       <para>Of course we can always use the mixer window, either when creating
+       <para>Of course we can always use the <link linkend="chpt.mixer">Mixer</link> window, either when creating
        or playing patterns.</para>
 
-       <para>The Mixer frame (<xref linkend="fig.mixer.2"/>) is made of 32
-       independent tracks, each of these is bound to an instrument, plus a
-       "Master Output" control and a "FX" button to show and hide the 
-       effects panel.
+       <para>The Mixer (see <xref linkend="fig.mixer.2"/>) is made of a number
+       independent <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, each of these is bound to an instrument, plus a
+       <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> and a 
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="img/showFX_on.png" format="PNG" />
+          </imageobject>
+          </inlinemediaobject>
+          button to show and hide the 
+       <link linkend="sect.fx_rack_LADSPA">FX Plugin Rack</link>.
        Every line features 3 buttons (
 
        <inlinemediaobject>
@@ -6242,15 +6271,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </imageobject>
        </inlinemediaobject>
 
-       ), pan adjust (
-
-       <inlinemediaobject>
-         <imageobject>
-           <imagedata fileref="img/MixerPan.png" format="PNG" />
-         </imageobject>
-       </inlinemediaobject>
-
-       ), current maximum peak, volume fader and name of the track. Clicking on
+       ), current maximum peak, FX volume control knobs, volume fader, and name of the track. Clicking on
 
        <inlinemediaobject>
          <imageobject>
@@ -6258,7 +6279,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </imageobject>
        </inlinemediaobject>
 
-       will play the selected instrument, cutting the others. The "Mute" button
+       will play the selected instrument, cutting the others. The Mute button
 
        <inlinemediaobject>
          <imageobject>
@@ -6266,12 +6287,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </imageobject>
        </inlinemediaobject>
 
-       , simply mute <emphasis>that</emphasis> instrument. The maximum peak
+       , simply <link linkend="def.mute">mute</link> <emphasis>that</emphasis> instrument. The maximum peak
        indicates the maximum volume reached from the instrument.   The peak must
-       be in a range of 0.0 and 1.0 (in <xref linkend="fig.mixer.2"/> you can
-       see a few volumes too loud).  Peaks outside that range will get distorted 
-       (especially with <abbrev>OSS</abbrev> audio driver). Keep an eye on each vu-meter and
+       be in a range of <option>0.0</option> and <option>1.0</option> (in <xref linkend="fig.mixer.2"/> you can
+       see a few volumes too loud). For a full description of the Mixer and its elements please see <xref linkend="chpt.mixer" />.
+
+       <tip>
+	     <para>
+	       Peaks outside that range will get distorted 
+       (especially with <abbrev>OSS</abbrev> audio driver). Keep an eye on each VU meter and
        if distortion appears, turn the volume down for that instrument.
+         </para>
+       </tip>
        </para>
 
        <figure id="fig.mixer.2">
@@ -6286,56 +6313,53 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
    </chapter>
    <chapter id="chpt.examples.drumkit">
 	 <title>Create a New Drumkit</title>
-     <para>TODO: make consistent</para>
      
       <sect1 id="chpt.examples.drumkit.new_kit">
        <title>Creating a New Drumkit</title>
-       <para>In the next paragraphs we will show you how to create a complete drumkit.  
-       Keeping <link linkend="chpt.overview.drumkits">design of a drumkit</link>
+       <para>In this chapter we will show you how to create a complete drumkit. Be sure to have a look at the <link linkend="chpt.overview.drumkits">conceptional design of a drumkit</link> first.
+       Keeping this in mind
        we will use a top-down approach, so we will start at the Drumkit level and work our way 
-       down to the samples.</para> 
+       down to the <link linkend="def.sample">samples</link>.</para> 
         
-       <para>Creating a new drumkit with Hydrogen is done with the Instrument
-       Editor.  You can load samples, set envelope
-       parameters, set the gain, and other advanced features like <link linkend="chpt.instrument_editor.gain_and_mute_group">Mute Groups</link>, a low-pass resonance filter, and pitch randomization.</para>
+       <para>Creating a <link linkend="sect.main_menu.drumkits.new">new drumkit</link> with Hydrogen is done with the <link linkend="chpt.instrument_editor">Instrument
+       Editor</link>.  You can load samples, set envelope
+       parameters, set the gain, and other advanced features like mute groups, a low-pass resonance filter, and pitch randomization.</para>
 
-       <para>TIP : Instead of creating your own drumkit, you can also use or download
-       existing drumkits using the <xref linkend="chpt.sound_library"/>.</para>
+       <tip>
+         <para>
+           Instead of creating your own drumkit, you can also <link linkend="sect.main_menu.drumkits.open">open</link> or <link linkend="sect.main_form.online_import_drumkit">download</link> an existing one.
+         </para>
+       </tip>
 
-        <para>Lets make a  brand new drum kit :</para>
-        <procedure>
-          <step><para>select
-          <menuchoice>
-            <guimenu>Instruments</guimenu>
-            <guimenuitem>"Clear All"</guimenuitem>
-          </menuchoice>
-
-          .  This will give you a bank of 32 blank instruments.  To delete
-          instruments, <emphasis>right-click</emphasis> on on each instrument and select
-          "<guimenuitem>Delete Instrument</guimenuitem>".  To add more instruments,
-          select
-
-          <menuchoice>
-            <guimenu>Instruments</guimenu>
-            <guimenuitem>"Add instrument"</guimenuitem>
-          </menuchoice>
-          .</para>
-          </step>
+       <para>Lets make a brand new drum kit:</para>
+       <procedure>
+         <step><para>in the <link linkend="chpt.main_menu">Main Menu</link> select
+         <menuchoice>
+           <guimenu>Drumkits</guimenu>
+           <guimenuitem>New</guimenuitem>
+           </menuchoice>. This will give you a single blank instruments. To add more instruments,
+           select
+           <menuchoice>
+             <guimenu>Instruments</guimenu>
+             <guimenuitem>Add instrument</guimenuitem>
+             </menuchoice> and to delete one, <emphasis>right-click</emphasis> a instrument and select
+             <emphasis>Delete Instrument</emphasis>.  
+           </para>
+         </step>
 
 
-          <step>
-          <para>Select an instrument to start editing it.  This is done by
-          <emphasis>left-clicking</emphasis> on the name of the instrument in the instrument list (at
-          the left).  You will notice that the name of the instrument in the
-          Instrument Editor matches the one that you clicked.</para>
-          </step>
+         <step>
+           <para>Select an instrument to start editing it.  This is done by
+           <emphasis>left-clicking</emphasis> on the name of the instrument in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link>.  You will notice that the name of the instrument in the
+           Instrument Editor matches the one that you clicked.</para>
+         </step>
          
           <step>
-          <para>Once you have your drum kit working the way you want, select
+          <para>Once you have your drumkit working the way you want, select
 
           <menuchoice>
-            <guimenuitem>Instruments</guimenuitem>
-            <guimenuitem>"Save library"</guimenuitem>
+            <guimenuitem>Drumkits</guimenuitem>
+            <guimenuitem>Save As</guimenuitem>
           </menuchoice>
 
           .  You will be prompted for the name of the kit to save.  If you wish to
@@ -6350,15 +6374,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </step>
 
          <step>
-          <para>To export a drumkit (for sharing with others), it must first be
-          loaded into your Sound Library.  Then, select
+          <para>In order to share your drumkit with others, you have to export it using
 
           <menuchoice>
-            <guimenuitem>Instruments</guimenuitem>
-            <guimenuitem>"Export library"</guimenuitem>
+            <guimenuitem>Drumkits</guimenuitem>
+            <guimenuitem>Export</guimenuitem>
           </menuchoice>
 
-          from the menu.  Select the drum kit that you wish to export, and give it
+          from the <link linkend="chpt.main_menu">Main Menu</link>.  Select the drum kit that you wish to export, and give it
           a file name to save it to.</para>
           </step>
         </procedure>
@@ -6368,9 +6391,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="chpt.examples.drumkit.new_instrument">
         <title>Creating a New Instrument</title>
         
-        <para>For each instrument in a drum kit, you can load several samples
+        <para>For each instrument in a drum kit, you can load several <link linkend="def.sample">samples</link>
         and set different synthesizer parameters.  This section will step you
-        through how to create a new instrument and load the samples.</para>
+        through how to create a new instrument and load the samples. For details about the individual parameters please refer to <xref linkend="chpt.instrument_editor.general" />.</para>
 
         <para>To begin creating an instrument, select
         <menuchoice>
@@ -6381,28 +6404,39 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>Now, you need two samples.  Any .WAV or .FLAC file will do.
         Hydrogen provides several in the <filename
-        class="directory">data/drumkits</filename> directory.</para>
+        class="directory">data/drumkits</filename> folder in the Hydrogen data
+        directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).</para>
 
-        <para>In the instrument editor, click on <guibutton>Layers</guibutton>.
+        <para>In the Instrument Editor, click on <link linkend="chpt.instrument_editor.layers">Layers</link>.
         You can layer several samples into the instrument.  Which one is played
-        depends on the velocity of the incoming note.  Click <guibutton>Load
-        Layer</guibutton> and point the <guimenu>Audio File Browser</guimenu> to
+        depends on the <link linkend="def.velocity">velocity</link> of the incoming note.  Click 
+       <inlinemediaobject>
+         <imageobject>
+           <imagedata fileref="img/loadLayer_off.png" format="PNG"/>
+         </imageobject>
+       </inlinemediaobject> and point the <emphasis>Audio File Browser</emphasis> to
         your sample.
         </para>
         <note>
           <para>
-            The <guimenu>Audio File Browser</guimenu> will
-        allow you to preview the sample before you load it.  It will also allow
-        you to load more than one sample at a time.  But for now, only load
-        one.
+            The <emphasis>Audio File Browser</emphasis> will
+            allow you to preview the sample before you load it.  It will also allow
+            you to load more than one sample at a time.  But for now, only load
+            one.
           </para>
         </note>
 
         <para>After you load the sample, you'll see that there is now a
         <guilabel>1</guilabel> at the top, and the topmost rectangle has turned
         light blue.  To load a second sample, click the slot just below it, and
-        then click <guibutton>Load Layer</guibutton> to bring in another
-        sample.</para>
+        then click
+       <inlinemediaobject>
+         <imageobject>
+           <imagedata fileref="img/loadLayer_off.png" format="PNG"/>
+         </imageobject>
+       </inlinemediaobject>
+       to bring in another sample.
+        </para>
 
         <para>After bringing in both samples, you'll probably notice that only
         the <emphasis>first</emphasis> sample is being played whenever you
@@ -6414,54 +6448,56 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>The velocity setting for the layer is 0-velocity on the left, and
         full velocity on the right.  Set up Layer 1 to sound for soft notes, and
-        Layer 2 to sound for hard notes (i.e. Layer 1 on the left and Layer 2
-        on the right).</para>
+        Layer 2 to sound for hard notes, i.e. Layer 1 on the left and Layer 2
+        on the right (see <link linkend="chpt.instrument_editor.layers.sample_selection">Sample Selection</link> for further infos).</para>
 
-        <para>Now, in the pattern area, set up a simple pattern that plays this
-        instrument.  Adjust the velocity settings on each note so that you can
-        get the different samples to sound.  Now set the pattern to loop and
-        notice how your different samples are getting triggered.  (To learn
+        <para>Now, in the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link>, set up a simple pattern that plays this
+        instrument.  Adjust the velocity settings on each note in the <link linkend="chpt.pattern_editor.note_properties">Note Properties Editor</link> so that you can
+        get the different samples to sound.  Now, set the playback to <link linkend="sect.main_toolbar.transport_control">loop</link> and
+        notice how your different samples are getting triggered. To learn
         about editing a pattern, see <xref
-        linkend="chpt.pattern_editor"/>)</para>
+        linkend="chpt.pattern_editor"/>.</para>
 
         <para>For each layer, you can set the <guibutton>Gain</guibutton> and
         the <guibutton>Pitch</guibutton>.  The pitch also has a
         <guibutton>Fine</guibutton> adjustment.</para>
 
-        <para>Use the <guibutton>Gain</guibutton> adjustment to control how loud
-        the sample will play.  This is necessary because it's extremely
+        <para>Use the <link linkend="chpt.instrument_editor.gain_and_mute_group">Gain</link> adjustment to control how loud
+        the sample will be played. This is necessary because it's extremely
         difficult to get a set of samples that all sound at about the same
         volume.  By adjusting here, the samples that were recorded too quietly
         can be turned up to match your loud samples (that had to be turned
         down).
-        <!--
-            TODO what is the difference between gain and volume here? 
-        -->
         </para>
 
         <warning>
           <para>It is very easy to set the <guibutton>Gain</guibutton> too high,
           causing your sample to <link linkend="def.clipping">clip</link>.  Remember to test the gain with
-          full-velocity notes.  If you clip your signal here, it will only get
+          full-velocity using the
+       <inlinemediaobject>
+         <imageobject>
+           <imagedata fileref="img/MixerPlayTest.png" format="PNG"/>
+         </imageobject>
+       </inlinemediaobject>
+       button in the corresponding Instrument Channel Strip.  If you clip your signal here, it will only get
           worse as Hydrogen processes it.</para>
         </warning>
 
         <para>The pitch of the sample can be modified with the pitch controls.
         The <guibutton>Pitch</guibutton> knob adjust the pitch in musical
-        half-steps.  (So, -12 is down 1 octave).  The pitch on the right adjusts
+        half-steps.  (So, <option>-12</option> is down 1 octave).  The pitch on the right adjusts
         the pitch &plusmn;50 cents.  (One half-step is 100 cents.)</para>
 
         <note>
           <para>The pitch is adjusted by playing the sample back faster or
           slower.  This is called the Doppler Effect.  So, if you have a
-          1-second sample that you turn down -12 (1 octave), your sample will
+          1-second sample that you turn down <option>12</option> (1 octave), your sample will
           only last for 0.5-seconds.  If you do not want this to happen you should
           use Rubber Band instead (see <xref linkend="chpt.sample_editor.pitch"/>)</para>
         </note>
 
         <para>You can hear the sample in a layer by clicking the layer id (just 
-        below the 'General' and 'Layers' buttons) and the 'Delete Layer' button 
-        will delete the currently selected layer.</para>
+        below the 'General' and 'Layers' buttons).</para>
       </sect1>
 
       <sect1 id="chpt.instrument_editor.tips">
@@ -6481,8 +6517,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>If things sound bad and distorted, start by turning down the gain
         setting on the layer... especially if it's larger than 1.0.  Then turn
-        down the instrument gain.  Then any gain on a LADSPA effect.  Then the
-        fader on the mixer.  Then the master output fader.</para>
+        down the instrument gain.  Then any gain on a <abbrev>LADSPA</abbrev> effect.  Then the
+        fader on the Mixer.  Then the master output fader.</para>
 
         <para><emphasis role="bold">Test samples at full velocity.</emphasis>
         Your sample will be played louder if the velocity is higher.  So, if you
