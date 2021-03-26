@@ -5699,6 +5699,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            Hydrogen's port number defaults to <option>9000</option> for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's advised to set a different default port in such cases.
          </para>
        </tip>
+
+       <warning>
+	     <para>
+	       <command>oscsend</command> should only be used for sparse interactive testing and control via a command-line. Using it in scripts is not recommended since every time it sends a command it will registers a new client at the <abbrev>OSC</abbrev> server. If the <emphasis role="bold">Enable <abbrev>OSC</abbrev> feedback</emphasis> option in the <link linkend="chpt.preferences.osc_tab"><abbrev>OSC</abbrev></link> tab of the Preferences dialog is checked, Hydrogen will send its current state to all registered clients causing it to become slower and slower with every <command>oscsend</command> command sent. Soon you will experience visual lags. When unchecking this option, however, using <command>oscsend</command> is fine.
+         </para>
+       </warning>
        
      </sect1>
        
