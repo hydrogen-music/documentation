@@ -910,6 +910,27 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
         </sect2>
       </sect1>
+
+      <sect1 id="chpt.overview.cli">
+	    <title>Command-line Options</title>
+
+        <para>
+	      After <link linkend="chpt.download">installing</link> Hydrogen on your system you can invoke it from the command-line with a number of different options.
+      <screen>
+        <command>-h, --help                  Displays this help.</command>
+        <command>-v, --version               Displays version information.</command>
+        <command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
+        <command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
+        <command>-n, --nosplash              Hide splash screen</command>
+        <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
+        <command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
+        <command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
+        <command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
+        <command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
+      </screen>
+
+        </para>
+      </sect1>
     </chapter>
 
     <chapter id="chpt.preferences" xreflabel="Preferences">
