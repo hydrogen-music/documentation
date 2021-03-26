@@ -349,37 +349,28 @@
 
       <sect1 id="chpt.overview.midi_mapping_and_virtual_keyboard">
 	    <title>MIDI-mapping and Virtual Keyboard</title>
+
         <para>
-          in the table below you can find the link between the instrument
-          position, the <abbrev>MIDI</abbrev> note and the <abbrev>qwerty</abbrev> keyboard keys.
+	      Instead of playing back programmed patterns Hydrogen can also be used synthesize drum sounds for incoming <abbrev>MIDI</abbrev> or keyboard events.
         </para>
+
         <para>
-	      TODO: link this to Main Menu > Options > input mode.
-          This might be better placed in a dedicated chapter like "virtual keyboard".
+	      Using the <emphasis role="bold">Input mode</emphasis> in the <link linkend="sect.main_menu.options">Options</link> tab of the Main Menu you can choose between two different ways to emulate sound. <option>Drumkit</option> maps different <abbrev>MIDI</abbrev> events and keyboard inputs to different instruments of the current drumkit while <option>Instrument</option> maps them to pitch-shifted samples of the instrument currently selected in the <link linkend="chpt.song_editor">Song Editor</link>. You can think of these modes as input versions of both the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.
+        </para>
+
+        <para>
+	      Which <emphasis role="bold"><abbrev>MIDI</abbrev> input</emphasis> maps to which instrument is depending of the <link linkend="chpt.instrument_editor.midi_out_settings">Note</link> parameter in the Instrument Editor set for in each particular drumkit. An example for the <emphasis>GMRockKit</emphasis> is shown in the <link linkend="chpt.pattern_editor.midi_mapping">table</link> below.
         </para>
 
         <note>
-	      <para>
-	        The name of the instrument depends on the
-            drumkit that is loaded. This list below refers to the GMkit that is loaded by default.
+          <para>
+	        In order to process incoming <abbrev>MIDI</abbrev> messages, you have to enable the <emphasis role="bold">Use output note as input</emphasis> option and set up the overall <abbrev>MIDI</abbrev> support in the <link linkend="chpt.preferences.midi_tab"><abbrev>MIDI</abbrev> system</link> tab of the Preferences dialog first.
           </para>
         </note>
 
-        <para>Try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
-        drumkits goes smoothly.  You are of course free to place your instruments anywhere in your drumkit, and
-        sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
         <para>
-          Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
-          is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
+	      Alternatively you can use the <emphasis role="bold">Virtual keyboard</emphasis> provided in Hydrogen. It maps a number of keys of your computer keyboard to incoming note and allows you to use it as a traditional <abbrev>MIDI</abbrev> keyboard. The mapping is shown in the <link linkend="chpt.pattern_editor.midi_mapping">table</link> as well as in <link linkend="fig.letters_keyboard">figure</link> below.
         </para>
-
-        <informalfigure id="fig.InstrumentMapping">
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/InstrumentMapping.png" format="PNG" />
-            </imageobject>
-          </mediaobject>
-        </informalfigure>
 
         <table id="chpt.pattern_editor.midi_mapping">
 	      <title><abbrev>MIDI</abbrev> Mapping</title>
@@ -737,8 +728,25 @@
           </tgroup>
         </table>
         
-        <para>Here's a quick reference of the above bindings for your
-        convenience. </para>
+        <note>
+	      <para>
+	        The names of the instruments depend on the
+            drumkit that is loaded. This table below refers to the GMRockKit that is shipped with Hydrogen and loaded by default.
+          </para>
+        </note>
+
+        <para>When adjusting the mapping or creating your own custom drumkit try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
+        drumkits goes smoothly.  You are of course free to place your instruments anywhere in your drumkit, and
+        sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
+
+        <note>
+          <para>
+            Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
+            is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
+          </para>
+        </note>
+        
+        <para>For a better visualization you can also find the mapping notes to your PC's keyboard key in the figure below.</para>
 
         <informalfigure id="fig.letters_keyboard">
           <mediaobject>
@@ -747,23 +755,40 @@
             </imageobject>
           </mediaobject>
         </informalfigure>
-
       </sect1>
 
       <sect1 id="chpt.overview.recording">
 	    <title>Recording in Hydrogen</title>
-        <para>
 
-          by clicking the Record button 
+        <para>
+          In addition to manually program pattern using mouse and keyboard you can also record one or multiple pattern. You can do so using an external <abbrev>MIDI</abbrev> device, like an e-drum, or use the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> provided by Hydrogen.
+        </para>
+
+        <para>
+          In order to start recording, first activate the record button 
           <inlinemediaobject>
             <imageobject>
               <imagedata fileref="img/Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
-(see <xref linkend="sect.main_toolbar.transport_control"/>) and simply playing your pattern on your 
-        <abbrev>MIDI</abbrev> drum or your pc keyboard (see <link linkend="chpt.pattern_editor.sidebar">instrument mapping</link>).
-	      TODO
+in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> and afterwards press the 
+          <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="img/btn_play_off.png" format="PNG"/>
+          </imageobject>
+          </inlinemediaobject>
+          button located right next to it (like in a classical tape recorder). 
         </para>
+
+        <para>
+	      Using the playback mode of the <link linkend="chpt.song_editor">Song Editor</link> you can choose between the following two scenarios. When in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> all inserted notes will be added to pattern currently selected in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. When, on the other hand, in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> the input notes will be added to the active pattern (the one the playhead is located in and is currently used for playback). If several patterns are selected in a single row, the input notes will only be added to the pattern at the bottom.
+        </para>
+
+        <note>
+	      <para>
+	        The incoming notes will be added in a non-destructive way. This means when adding two notes at the same position, you will have two notes being played back at once (with double the volume of a single one).
+          </para>
+        </note>
       </sect1>
       
       <sect1 id="chpt.overview.session_management">
@@ -1911,13 +1936,9 @@
             in your drumkit. If you set it to <option>Instrument</option> the keys of your <abbrev>MIDI</abbrev>
             keyboard will trigger the instrument that is currently selected.
             The pitch of the instrument will follow the key you press on your keyboard.
-            This feature is mainly used for non-drum instruments.
+            This feature is mainly used for non-drum instruments (see <xref linkend="chpt.overview.midi_mapping_and_virtual_keyboard" /> for details).
             An example: if you use a sample of a piano for one of your instruments, you will be able to 'play'
             that piano instrument using your keyboard just like you are playing a piano synth.</para>
-
-            <para>
-	          TODO: link to list/image of virtual keyboard mappings in Pattern Editor > Sidebar.
-            </para>
 
           </listitem>
           
@@ -2066,7 +2087,7 @@
           </inlinemediaobject>
         </para>
 
-        <para>Using these buttons you can <emphasis role="bold">start</emphasis> (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis> the playback, <emphasis role="bold">record</emphasis> new patterns (TODO: link to recording section), <emphasis role="bold">fast forward</emphasis> and <emphasis role="bold">rewind</emphasis> the transport position, and <emphasis role="bold">loop</emphasis> playback.</para>
+        <para>Using these buttons you can <emphasis role="bold">start</emphasis> (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis> the playback, <emphasis role="bold">record</emphasis> new patterns (see <xref linkend="chpt.overview.recording" /> for details), <emphasis role="bold">fast forward</emphasis> and <emphasis role="bold">rewind</emphasis> the transport position, and <emphasis role="bold">loop</emphasis> playback.</para>
 
           <para>In addition, you can switch between <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>.</para>
 
@@ -3118,8 +3139,8 @@
                 <imagedata fileref="img/btn_quant_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject> : enables/disables quantization.
-            When enabled, beats recorded from MIDI or from the
-            computer keyboard will automatically respect the grid
+            When enabled, beats <link linkend="chpt.overview.recording">recorded</link> from MIDI or from the
+            <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> will automatically respect the grid
             resolution currently applied, just like notes inserted by
             clicking. </para>
             
@@ -3936,6 +3957,11 @@
           This way you can use Hydrogen as a pure sequencer for other apps, or combine the 
           internal Hydrogen sampler with multiple external apps/devices.</para>
 
+          <note>
+	        <para>
+	          By enabling <emphasis role="bold">Use output note as input</emphasis> in the <link linkend="chpt.preferences.midi_tab"><abbrev>MIDI</abbrev> system</link> tab of the Preferences dialog the number specified in the <emphasis role="bold">Note</emphasis> field will also be used to associate the current instrument with the corresponding incoming <abbrev>MIDI</abbrev> messages.
+            </para>
+          </note>
         </sect2>
         <sect2 id="chpt.instrument_editor.HH_pressure_group">
           <title>Hi-Hat Pressure Group</title>
@@ -4502,7 +4528,7 @@
 
               <note>
 	            <para>
-	              If the <link linkend="sect.main_menu.options.input_mode">Input mode</link> is set to <option>Instrument</option>, incoming <abbrev>MIDI</abbrev> events and virtual keyboard keys will trigger only (pitch shifted) sounds of the currently selected instrument.
+	              If the <link linkend="sect.main_menu.options.input_mode">Input mode</link> is set to <option>Instrument</option>, incoming <abbrev>MIDI</abbrev> events and <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard keys</link> will trigger only (pitch shifted) sounds of the currently selected instrument.
                 </para>
               </note>
 
@@ -4988,7 +5014,7 @@
 
      <tip>
 	   <para>
-	     This comes in very handy when you are recording a song, or
+	     This comes in very handy when you are <link linkend="chpt.overview.recording">recording</link> a song, or
          if you are using Hydrogen live on stage.
        </para>
      </tip>
@@ -5447,7 +5473,7 @@
            <listitem>
 	         <para>
 	           <emphasis role="bold">RECORD/STROBE_TOGGLE</emphasis>:
-               toggles recording (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>
+               toggles <link linkend="chpt.overview.recording">recording</link> (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>
                  in the main toolbar).
              </para>
            </listitem>
@@ -5455,14 +5481,14 @@
            <listitem>
 	         <para>
 	           <emphasis role="bold">RECORD_EXIT</emphasis>:
-               deactivates recording.
+               deactivates <link linkend="chpt.overview.recording">recording</link>.
              </para>
            </listitem>
 
            <listitem>
 	         <para>
 	           <emphasis role="bold">RECORD_READY</emphasis>:
-               toggles recording (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>
+               toggles <link linkend="chpt.overview.recording">recording</link> (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>
                  in the main toolbar) if the playback has not started yet.
              </para>
            </listitem>
@@ -5470,7 +5496,7 @@
            <listitem>
 	         <para>
 	           <emphasis role="bold">RECORD_STROBE</emphasis>:
-               activates recording.
+               activates <link linkend="chpt.overview.recording">recording</link>.
              </para>
            </listitem>
 
@@ -5764,27 +5790,25 @@
                  <entry>/Hydrogen/<emphasis role="bold">RECORD_READY</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Toggles recording (same as pressing the record button
-                 in the main toolbar) if the playback has not started yet.</entry>
+                 <entry>Toggles <link linkend="chpt.overview.recording">recording</link> (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>) if the playback has not started yet.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">RECORD_STROBE_TOGGLE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Toggles recording (same as pressing the record button
-                 in the main toolbar).</entry>
+                 <entry>Toggles <link linkend="chpt.overview.recording">recording</link> (same as pressing the <link linkend="sect.main_toolbar.transport_control">record button</link>).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">RECORD_STROBE</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Activates recording.</entry>
+                 <entry>Activates <link linkend="chpt.overview.recording">recording</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">RECORD_EXIT</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Deactivates recording.</entry>
+                 <entry>Deactivates <link linkend="chpt.overview.recording">recording</link>.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">NEXT_BAR</emphasis>/</entry>
@@ -6581,19 +6605,19 @@
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>D</keycap></entry>
-            <entry>Show Director (see <xref linkend="chpt.director"/>)</entry>
+            <entry>Show <link linkend="chpt.director">Director</link></entry>
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>M</keycap></entry>
-            <entry>Show Mixer (see <xref linkend="chpt.mixer"/>)</entry>
+            <entry>Show <link linkend="chpt.mixer">Mixer</link></entry>
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>I</keycap></entry>
-            <entry>Show Instrument rack (see <xref linkend="chpt.sound_library"/>)</entry>
+            <entry>Show <link linkend="chpt.sound_library">Instrument Rack</link></entry>
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>A</keycap></entry>
-            <entry>Show Automation path</entry>
+            <entry>Show <link linkend="sect.song_editor.automation_path">Automation Path</link></entry>
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>F</keycap></entry>
@@ -6601,15 +6625,15 @@
           </row>
           <row>
             <entry><keycap>Ctrl</keycap> + <keycap>Alt</keycap> + <keycap>I</keycap></entry>
-            <entry>Set Input mode to Instrument</entry>
+            <entry>Set <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">Input mode</link> to <option>Instrument</option></entry>
           </row>
           <row>
             <entry><keycap>Ctrl</keycap> + <keycap>Alt</keycap> + <keycap>D</keycap></entry>
-            <entry>Set Input mode to Drumkit</entry>
+            <entry>Set <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">Input mode</link> to <option>Drumkit</option></entry>
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>P</keycap></entry>
-            <entry>Show Preferences (see <xref linkend="chpt.preferences"/>)</entry>
+            <entry>Show <link linkend="chpt.preferences">Preferences</link></entry>
           </row>
           <row>
             <entry><keycap>Alt</keycap> + <keycap>?</keycap></entry>
@@ -6645,11 +6669,11 @@
           </row>
           <row id="chap.shortcuts.f5">
             <entry><keycap>F5</keycap></entry>
-            <entry>Jump to previous song in playlist</entry>
+            <entry>Jump to previous song in <link linkend="chpt.playlist_editor">playlist</link></entry>
           </row>
           <row id="chap.shortcuts.f6">
             <entry><keycap>F6</keycap></entry>
-            <entry>Jump to next song in playlist</entry>
+            <entry>Jump to next song in <link linkend="chpt.playlist_editor">playlist</link></entry>
           </row>
           <row>
             <entry><keycap>F9</keycap></entry>
