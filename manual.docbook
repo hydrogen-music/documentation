@@ -4078,6 +4078,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             you can open the <link linkend="chpt.sample_editor">Sample Editor</link> to customize the sample loaded to the currently selected layer.
           </para>
 
+          <tip>
+	        <para>
+	          Alternatively you can also <emphasis>double-click</emphasis> the wave display to open the <link linkend="chpt.sample_editor">Sample Editor</link>.
+            </para>
+          </tip>
+
+          <note>
+	        <para>
+	          When loading a sample it will per-default have its active area set to the whole velocity range. By checking the <emphasis role="bold">Set auto velocity</emphasis> option all layers will be assigned an equally sized velocity range corresponding to their layer number (the top-most layer will have a range starting a zero velocity and the bottom-most one that ends at maximum velocity). Note however that this option will overwrite all existing velocity ranges.
+            </para>
+          </note>
+
           <para>
 	        Above the layer listing you find boxes in different shades of grey indicating which range of note <link linkend="def.velocity">velocity</link> will trigger which sample (left: 0 velocity, right: maximum velocity). <emphasis>Left-clicking</emphasis> on any of these boxes will play back the sound of associated sample modulated by the velocity corresponding to the horizontal position of the mouse cursor.
 
