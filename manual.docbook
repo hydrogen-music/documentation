@@ -94,11 +94,11 @@
         </listitem>
         <listitem>
           <para><emphasis role="bold">Flac</emphasis>: at <ulink url="http://flac.sf.net">http://flac.sf.net</ulink> (only if you
-          wish to use flac samples)</para>
+          wish to use Flac samples)</para>
         </listitem>
         <listitem>
-          <para><emphasis role="bold">ladspa</emphasis>: at <ulink url="http://www.ladspa.org">http://www.ladspa.org</ulink> (only if you wish
-          to use ladspa effects)</para>
+          <para><emphasis role="bold">LADSPA</emphasis>: at <ulink url="http://www.ladspa.org">http://www.ladspa.org</ulink> (only if you wish
+          to use <abbrev>LADSPA</abbrev> effects)</para>
         </listitem>
         <listitem>
           <para><emphasis role="bold">liblrdf</emphasis>: at <ulink url="http://sf.net/projects/lrdf">http://sf.net/projects/lrdf</ulink> (only if you wish to use lrdf to categorise effects)</para>
@@ -168,7 +168,7 @@
         </screen>
         
         <note>
-          <para>For further details about the installation process please have a look the <filename>INSTALL.txt</filename> file (located in the top level dir once you downloaded the sources).</para>
+          <para>For further details about the installation process please have a look the <filename>INSTALL.txt</filename> file (located in the top level directory once you downloaded the sources).</para>
         </note>
     </chapter>
 
@@ -290,7 +290,7 @@
         </figure>
 
         <para>
-	      TODO: update image (and adding the gimp session as well in order for future maintainance to only replace the background image
+	      TODO: update image (and adding the gimp session as well in order for future maintenance to only replace the background image
         </para>
 
         <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
@@ -808,7 +808,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <listitem>
 	        <para>
 	          <emphasis role="bold"><abbrev>NSM</abbrev></emphasis>:
-              <ulink url="http://non.tuxfamily.org/nsm/API.html">Non Session Manager (<abbrev>NSM</abbrev>)</ulink> is of 2021 the defacto standard in Session Management tools within the Linux audio community and Hydrogen does over full support and compliance to its API.
+              <ulink url="http://non.tuxfamily.org/nsm/API.html">Non Session Manager (<abbrev>NSM</abbrev>)</ulink> is of 2021 the de facto standard in Session Management tools within the Linux audio community and Hydrogen does over full support and compliance to its API.
 
               <tip>
 	            <para>
@@ -943,7 +943,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Language</emphasis>:
-              chooses one of the translations Hydrogen is avaiable in.            
+              chooses one of the translations Hydrogen is available in.            
               <note>
 	            <para>
 	              For this setting to take effect you have to restart Hydrogen.
@@ -1009,7 +1009,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </listitem>
 	      <listitem>
 	        <para>
-	          <emphasis role="bold">Beat counter drift componensation in 1/10 ms</emphasis>:
+	          <emphasis role="bold">Beat counter drift compensation in 1/10 ms</emphasis>:
               allows you to compensate for system latency. The provided number will be added to each consecutive triggering of the <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link>. The allowed range is from <option>-200</option> to <option>200</option>.
 
               <tip>
@@ -1328,7 +1328,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <tip>
 	            <para>
-	              Some <abbrev>JACK</abbrev> clients are not well written or have fallen into despair. As a result Hydrogen could receive nuissance signals messing up its playback. If you encounter weird jumps in the transport position and/or Hydrogen is out of sync after relocating the transport position, you might try to uncheck this option.
+	              Some <abbrev>JACK</abbrev> clients are not well written or have fallen into despair. As a result Hydrogen could receive nuisance signals messing up its playback. If you encounter weird jumps in the transport position and/or Hydrogen is out of sync after relocating the transport position, you might try to uncheck this option.
                 </para>
               </tip>
               
@@ -1419,7 +1419,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               specifies whether Hydrogen will respond to the <emphasis>note-off</emphasis> <abbrev>MIDI</abbrev> message.
               <note>
 	            <para>
-                  This makes better use of the drumkit samples used in Hydrogen when working with certain external <abbrev>MIDI</abbrev> devices. But it may also discrd <emphasis>Cymbal choke</emphasis> messages in some e-drums.
+                  This makes better use of the drumkit samples used in Hydrogen when working with certain external <abbrev>MIDI</abbrev> devices. But it may also discard <emphasis>Cymbal choke</emphasis> messages in some e-drums.
                 </para>
               </note>
             </para>
@@ -1427,7 +1427,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Enable <abbrev>MIDI</abbrev> feedback</emphasis>:
-              specifies whether Hydrogen will send a message about updated values everytime a certain parameter is changed. These parameters are
+              specifies whether Hydrogen will send a message about updated values every time a certain parameter is changed. These parameters are
               <itemizedlist>
 	            <listitem>
 	              <para>
@@ -2056,7 +2056,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             You can open a new issue to communicate a bug here (first search if there exists already an issue about it).</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Donate</emphasis>: make a donation to developers/mantainers.</para>
+            <para><emphasis role="bold">Donate</emphasis>: make a donation to developers/maintainers.</para>
           </listitem>
         </itemizedlist>
       </sect1>
@@ -2326,7 +2326,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <note>
 	        <para>
-	          The support of <abbrev>JACK</abbrev> Timebase can disabled in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences. This can be useful in the presence of a fault Master broadcasting nuissance information.
+	          The support of <abbrev>JACK</abbrev> Timebase can disabled in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences. This can be useful in the presence of a fault Master broadcasting nuisance information.
             </para>
           </note>
       </sect1>
@@ -2637,7 +2637,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <tip>
 	        <para>
-	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seemlessly to the beginning again after reaching the end of the song.
+	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seamlessly to the beginning again after reaching the end of the song.
             </para>
           </tip>
         </sect2>
@@ -2652,7 +2652,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <tip>
 	        <para>
-	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seemlessly to the beginning again after reaching the end of the pattern.
+	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seamlessly to the beginning again after reaching the end of the pattern.
             </para>
           </tip>
         </sect2>
@@ -2694,7 +2694,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <para>
 	     The Sidebar of the Song Editor allows you to interact with and arrange the patterns of your song.
        </para>
-      <para><emphasis>Left-clicking</emphasis> selects a pattern, <emphasis>double-clicking</emphasis> allows you to rename a pattern, <emphasis>drag-and-dropping</emphasis> allows you to rearrage the patterns, and <emphasis>right-clicking</emphasis> will show you a menu 
+      <para><emphasis>Left-clicking</emphasis> selects a pattern, <emphasis>double-clicking</emphasis> allows you to rename a pattern, <emphasis>drag-and-dropping</emphasis> allows you to rearrange the patterns, and <emphasis>right-clicking</emphasis> will show you a menu 
       where you can change a number of things:</para>
       
      <figure id="fig.song_editor.virtualPattern.selectedMenu">
@@ -2915,7 +2915,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
 		 <note>
 	       <para>
-			 When a Playback Track is loaded, it will be played back everytime audio transport in Hydrogen is rolling and <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> is activated. 
+			 When a Playback Track is loaded, it will be played back every time audio transport in Hydrogen is rolling and <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> is activated. 
            </para>
          </note>
 
@@ -2952,7 +2952,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          
          <note>
 	       <para>
-	         In its current implementation the Playback Track does hide the song ruler used for navigation. It is therefore adviced to hide the Playback Track again once you are done setting the sound file and adjusting its volume.
+	         In its current implementation the Playback Track does hide the song ruler used for navigation. It is therefore advised to hide the Playback Track again once you are done setting the sound file and adjusting its volume.
            </para>
          </note>
          
@@ -2975,7 +2975,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
        <note>
 	     <para>
-	       Whether the Automation Path is hidden or shown does not affect its activation state. It is <emphasis role="bold">always active</emphasis> and can't be diabled. But in its default setting it won't alter anything. In its current implementation you have to reset the Automation Path to its original state manually in order to disable it.
+	       Whether the Automation Path is hidden or shown does not affect its activation state. It is <emphasis role="bold">always active</emphasis> and can't be disabled. But in its default setting it won't alter anything. In its current implementation you have to reset the Automation Path to its original state manually in order to disable it.
          </para>
        </note>
        
@@ -3163,7 +3163,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 <imagedata fileref="img/btn_drum_piano_on.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
-              : switchs between <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.</para>
+              : switches between <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.</para>
             </listitem>
 
           </itemizedlist>
@@ -3188,7 +3188,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>The section on the left shows you what drumkit is currently selected (GMRockKit by default) and below that you can see
         the instruments that are part of this kit.</para>
      
-        <para><emphasis>Left-clicking</emphasis> the box containing the instrument name will play back a sample of the instrument. Which layer will be select depends on the horizontal position of the mouse click representing zero <link linkend="def.velocity">velocity</link> to the left and maximum velocity to the right. In addtion, each instrument has its own set of features that are accessible by 
+        <para><emphasis>Left-clicking</emphasis> the box containing the instrument name will play back a sample of the instrument. Which layer will be select depends on the horizontal position of the mouse click representing zero <link linkend="def.velocity">velocity</link> to the left and maximum velocity to the right. In addition, each instrument has its own set of features that are accessible by 
         <emphasis>right-clicking</emphasis> the instrument.  From the context menu that pops up you can select.</para>
 
         <itemizedlist mark="opencircle"> 
@@ -3768,7 +3768,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             the number of <link linkend="def.sample">audio samples</link>.  This means
             that the time changes depending on the sample rate of your sound
             card.  The max time for each of them is 100,000 audio samples
-            (typ. 2.27 sec at 44.1 kHz).</para>
+            (type. 2.27 sec at 44.1 kHz).</para>
           </note>
 
           <para>If the <link linkend="def.sample">sample</link> is shorter than the times that you specify, the
@@ -4047,7 +4047,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
 
           <para>
-	        Next you find a listing of all layers of the current component in the selected instrument. The wave form of the sample loaded to the currently selected layer (the one enclosed by a red rectable) is displayed below.
+	        Next you find a listing of all layers of the current component in the selected instrument. The wave form of the sample loaded to the currently selected layer (the one enclosed by a red rectangle) is displayed below.
           </para>
 
           <note>
@@ -4140,7 +4140,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </listitem>
             <listitem>
               <para><option>Round Robin</option>:
-              will cycle through the different samples one after another as notea in the same velocity range are played.
+              will cycle through the different samples one after another as note a in the same velocity range are played.
               </para> 
             </listitem>
             <listitem>
@@ -4357,7 +4357,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <note>
             <para>
-              These options are only avaiable if Rubber Band support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
+              These options are only available if Rubber Band support was either compiled into Hydrogen or was properly configures in the <link linkend="chpt.preferences.general_tab">General</link> tab of the Preferences.
   After installing Rubber Band you should check if the path to the <command>rubberband cli</command> is 
   configured correctly (see <xref linkend="chpt.preferences.general_tab"/>). If neither is the case, all associated widgets will be disabled.
             </para>
@@ -4368,7 +4368,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           
           <itemizedlist mark="opencircle">
             <listitem><para><emphasis role="bold">Sample length to beat</emphasis>:
-            speficies the length of the resulting sample (after Rubber Band was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
+            specifies the length of the resulting sample (after Rubber Band was applied to it). After choosing a value other than <option>off</option> the length ratio between the original and the resulting sample will be displayed to the right of the combo box under <emphasis role="bold">new sample length</emphasis>. To ease the process of finding a proper value, the checkbox will be highlighted <emphasis>green</emphasis> if the length is more or less the same, <emphasis>yellow</emphasis> if there are larger changes, and <emphasis>red</emphasis> if there are significant changes.
 
             <tip>
 	          <para>
@@ -4550,7 +4550,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <tip>
 	            <para>
-	              An instrument can be selected by interacting with its Instrument Channel Strip in the Mixer, by interacing with its associated row in the Pattern Editor, or by the corresponding <link linkend="chpt.midi.actions.actions.select_instrument"><abbrev>MIDI</abbrev></link> or <link linkend="chpt.osc.command.select_instrument"><abbrev>OSC</abbrev> command.</link>
+	              An instrument can be selected by interacting with its Instrument Channel Strip in the Mixer, by interacting with its associated row in the Pattern Editor, or by the corresponding <link linkend="chpt.midi.actions.actions.select_instrument"><abbrev>MIDI</abbrev></link> or <link linkend="chpt.osc.command.select_instrument"><abbrev>OSC</abbrev> command.</link>
                 </para>
               </tip>
           </para>
@@ -4864,7 +4864,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             The higher you turn this knob, the more the timing will be randomized.
             </para>
             <note><para>Notes are displaced in time
-            but the pattern durations or BPM do not change.</para>
+            but the pattern duration or BPM do not change.</para>
             </note>
             
           </listitem>
@@ -4878,7 +4878,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <note>
 	      <para>
-	        In technical terms both for the <emphasis role="bold">Velocity</emphasis> and the <emphasis role="bold">Timing</emphasis> a random number will be sampled indepedently and identically distributed from a Gaussian distribution. The associated knobs provide a linear scaling of the variance of the underlying distribution.
+	        In technical terms both for the <emphasis role="bold">Velocity</emphasis> and the <emphasis role="bold">Timing</emphasis> a random number will be sampled independently and identically distributed from a Gaussian distribution. The associated knobs provide a linear scaling of the variance of the underlying distribution.
           </para>
         </note>
         
@@ -4983,7 +4983,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           The Pan Law is something you should choose <emphasis>before</emphasis> starting the mix and keep untouched.
           Hydrogen sets the <emphasis>ratio Balance Law</emphasis> by default because it was the only available law
           until version 1.0 (so old songs and drumkits will sound the same).
-          The setting is saved in the songfile but not in preferences, 
+          The setting is saved in the song file but not in preferences, 
           so it is NOT remembered when you create a new song.
         </para>
         <note>
@@ -5078,7 +5078,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
          <note>
 	       <para>
-	         While focussing the Playlist Editor instead of the main UI the usual <link linkend="chap.shortcuts">shortcuts</link> of Hydrogen, like <link linkend="chap.shortcuts.space"><keycap>Space</keycap></link> for starting/pausing playback, won't work.
+	         While focusing the Playlist Editor instead of the main UI the usual <link linkend="chap.shortcuts">shortcuts</link> of Hydrogen, like <link linkend="chap.shortcuts.space"><keycap>Space</keycap></link> for starting/pausing playback, won't work.
            </para>
          </note>
 
@@ -5667,7 +5667,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
        <tip>
          <para>
-           Hydrogen's port number defaults to <option>9000</option> for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's adviced to set a different default port in such cases.
+           Hydrogen's port number defaults to <option>9000</option> for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's advised to set a different default port in such cases.
          </para>
        </tip>
        
@@ -5726,7 +5726,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </listitem>
            <listitem>
              <para><emphasis role="bold">1.0</emphasis>: also in order to support
-             <command>TouchOSCM</command> all numerical input has to be passed as type float while
+             <command>TouchOSC</command> all numerical input has to be passed as type float while
              most of these numbers will be rounded to integers internally. For
              all true float inputs the <emphasis>range</emphasis> column uses a
              floating point representation of the limits, like 1.0 instead of 1.</para>
@@ -6421,7 +6421,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <warning>
           <para>It is very easy to set the <guibutton>Gain</guibutton> too high,
           causing your sample to <link linkend="def.clipping">clip</link>.  Remember to test the gain with
-          full-velocity notes.  If you clip your sigknal here, it will only get
+          full-velocity notes.  If you clip your signal here, it will only get
           worse as Hydrogen processes it.</para>
         </warning>
 
@@ -6869,7 +6869,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     </glossentry>
 
     <glossentry id="def.dc-offsety">
-      <glossterm>DC-offsety</glossterm>
+      <glossterm>DC-offset</glossterm>
       <glossdef>
         <para>DC offset, or DC coefficient is the mean value of the waveform.</para>
         <para>DC offset is usually undesirable. For example, in audio processing, a 
@@ -7155,7 +7155,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <glossterm>Sample</glossterm>
       <glossdef>
         <para>A short recording of a sound, typically between .1 and 3.0 seconds
-        long. Each time a note is triggered within Hydrogen the corresponding sample will be played back (after applying all customizations and effects).</para>
+        long. Each time a note is triggered within Hydrogen the corresponding sample will be played back (after applying all customization and effects).</para>
       </glossdef>
     </glossentry>
 
