@@ -1820,6 +1820,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export</emphasis>: compress and stores all instruments samples and settings of any drumkit (not just the current one) into a folder of your choice as <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file.
+
+            <note>
+	          <para>
+	            For compatibility reasons you can also export your drumkit in a format used in older versions ( &#60;= 0.9.6 ) of Hydrogen. By doing so you need to select a single <link linkend="def.component">component</link> to export since this functionality was not supported back than.
+              </para>
+            </note>
             </para>
           </listitem>
           <listitem id="sect.main_form.import_drumkit">
