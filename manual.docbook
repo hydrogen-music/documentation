@@ -2056,8 +2056,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </sect1>
     </chapter>
 
-
-<!--   MAIN TOOLBAR  -->
     <chapter id="chpt.main_toolbar">
       <title>Main Toolbar</title>
       
@@ -4823,10 +4821,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         </para>
 
-       <para>
-	     TODO: mutes the whole output or all of Hydrogen? Is Sample Editor -> Play still working? Or the previews?
-       </para>
-       
       <sect2 id="chpt.mixer.master_fader_strip.humanization">
         <title>Humanization</title>
 
@@ -6510,7 +6504,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 <part id="appendix">
   <title>Appendix</title>
   
-<!-- FILETYPES -->
     <chapter id="chpt.file_types">
       <title>Used Filetypes</title>
 
