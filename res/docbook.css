@@ -371,6 +371,11 @@ pre code {
   margin: inherit;
 }
 
+pre.screen {
+  display: block;
+  overflow-x: scroll;
+}
+
 .userinput {
   font-weight: bold;
 }
