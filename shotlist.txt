@@ -5,7 +5,7 @@ slot MainForm setMainWindowSize 800 600
 # TODO: could be tabbed or non-tabbed. Resolve via preferences?
 # TODO: segmented and annotated diagrams... via inkscape or by grabbing components
 # separately and annotating with imagemagick or similar. Or just in the widget grabber?
-grab MainForm MainUI.png
+grab MainForm as MainUI.png
 
 
 # Grab the Song Editor
@@ -15,56 +15,62 @@ grab SongEditorPanel
 slot MainForm showPreferencesDialog
 
   slot PreferencesTabs setCurrentWidget GeneralTab
-  grab PreferencesDialog PreferencesGeneral_V3.png
+  grab PreferencesDialog as PreferencesGeneral_V3.png
 
   slot PreferencesTabs setCurrentWidget AudioSystemTab
-  grab PreferencesDialog PreferencesAudioSystem_V3.png
+  grab PreferencesDialog as PreferencesAudioSystem_V3.png
 
   slot PreferencesTabs setCurrentWidget MIDISystemTab
-  grab PreferencesDialog PreferencesMidiSystem_V2.png
+  grab PreferencesDialog as MidiSystem_V2.png
 
   slot PreferencesTabs setCurrentWidget OSCTab
-  grab PreferencesDialog PreferencesOSC.png
+  grab PreferencesDialog as PreferencesOSC.png
 
   slot PreferencesTabs setCurrentWidget AppearanceTab
-  grab PreferencesDialog PreferencesAppearance_V2.png
+  grab PreferencesDialog as PreferencesAppearance_V2.png
 
   slot PreferencesDialog close
 
 
 slot MainForm action_file_export
-  grab ExportSongDialog Export_song.png
+  grab ExportSongDialog as Export_song.png
   slot ExportSongDialog close
 
   
 slot MainForm action_instruments_onlineImportLibrary
-  grab SoundLibraryImportDialog Sound_Library_import.png
+  grab SoundLibraryImportDialog as Sound_Library_import.png
   slot SoundLibraryImportDialog close
 
   
 slot MainForm action_debug_showAudioEngineInfo
-  grab AudioEngineInfoForm AudioEngineInfoDialog.png
+  grab AudioEngineInfoForm as AudioEngineInfoDialog.png
   slot AudioEngineInfoForm close
 
 
-# Main UI control panels
-grab PlayerControl MainToolbar_V2.png
-grab ControlsPanel background_Control_V2.png
-grab BeatCounter MeasureSettings.png
-grab BeatCounterOnOff btn_bc_off.png
-grab BPM background_BPM.png
-
-# TODO: There's no discrete parent for the jack and midi/cpu widgets
-# to grab them individually, so these don't correspond exactly to
-# what's currently in the manual.
-grab JackPanel Jack.png
-grab CpuLoadWidget CPU.png
-grab MidiActivityWidget Midi.png
-grab LcdBackground LCDBackground.png
+# Main Toolbar
+grab PlayerControl as MainToolbar_V2.png
+grab ControlsPanel as background_Control_V2.png
+grab BeatCounter as MeasureSettings.png
+grab BeatCounterOnOff as btn_bc_off.png
+grab BPM as background_BPM.png
+grab JackPanel as MidiIN_CPU.png size -1 26
+grab JackPanel as JackTrans_Master.png offset 0 23
+grab LcdBackground as mixer-instrrack_btn.png
 
 # Song Editor
-grab SongEditorPanel
-# dump
+slot MainForm setMainWindowSize 800 800
+grab SongEditorPanel as EnablePlaybackTrack.png
+                        # TODO: should rename this
+grab SongEditorBackPanel as bg_topPanel.png offset 0 23
+
+grab SongEditorBackPanel as btn_clear_off.png offset 6 30 size 54 13
+grab SongEditorBackPanel as btn_new_on.png offset 64 30 size 19 13
+grab SongEditorBackPanel as btn_updown.png offset 89 30 size 35  13
+grab SongEditorBackPanel as btn_select.png offset 128 30 size 18  13
+grab SongEditorBackPanel as btn_draw.png offset 146 30 size 18  13
+slot SongEditorPanel setModeActionBtn true
+grab SongEditorBackPanel as btn_pattern_mode.png offset 169 30 size 18 13
+slot SongEditorPanel setModeActionBtn false
+grab SongEditorBackPanel as btn_stacked_mode.png offset 169 30 size 18 13
 
 FIN
-
