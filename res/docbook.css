@@ -141,7 +141,6 @@
   --on-js-controls-color: var(--on-surface-color);
 
   --line-height: 1.75rem;
-  --image-max-height: 35rem; // Make the image at most 20 lines high
 }
 
 /* These choices are inspired by the material design system. Someone
@@ -372,6 +371,11 @@ pre code {
   padding: inherit;
   font-size: inherit;
   margin: inherit;
+}
+
+pre.screen {
+  display: block;
+  overflow-x: scroll;
 }
 
 .userinput {
@@ -1847,55 +1851,10 @@ body {
   grid-column-start: 2;
 }
 
-/* ============================================================ */
-/* For progressive reveals in chunked content. */
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Hydrogen custom //////////////////////
+//////////////////////////////////////////////////////////////////////
 
-
-.reveal {
-  display: none;
-}
-
-ul.reveal,
-ol.reveal {
-  display: block;
-}
-
-.reveal > li {
-  display: none;
-}
-
-.reveal > li:first-child {
-  display: list-item;
-}
-
-.noreveal {
-  display: inherit;
-}
-
-.speaker-notes .reveal {
-  display: inherit;
-  background-color: #ffeeee;
-}
-
-.speaker-notes ul.reveal,
-.speaker-notes ol.reveal {
-  display: block;
-  background-color: #ffeeee;
-}
-
-.speaker-notes .reveal > li {
-  display: list-item;
-  background-color: #ffeeee;
-}
-
-.speaker-notes li.reveal {
-  display: list-item;
-  background-color: #ffeeee;
-}
-
-.speaker-notes .transitory {
-  display: none;
-}
 
 abbr {
   font-family: var(--mono-family);
@@ -1903,21 +1862,24 @@ abbr {
   letter-spacing: 1px;
 }
 
-.figure img {
+img {
   max-width: 100%;
-  max-height: var(--image-max-height);
   transition: 0.3s;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.mediaobject {
+.inlinemediaobject > img {
+  max-height: 1.75rem;
+}
+
+.figure-contents > .mediaobject {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.mediaobject:active {
+.figure-contents > .mediaobject:active, .informalfigure:active, .inlinemediaobject:active {
   background-color: rgba(0,0,0,0.9);
   top: 0;
   left: 0;
@@ -1927,14 +1889,38 @@ abbr {
   height: 100vh;
 }
 
-.mediaobject > img:active {
+.figure-contents > .mediaobject > img {
+  max-height: 31.5rem;
+
+}
+
+.figure-contents > .mediaobject > img:active, .informalfigure > img:active, .inlinemediaobject > img:active {
   width: auto;
   height: auto;
   margin: auto;
-  max-height: 90%;
-  max-width: 90%;
+  max-height: 95%;
+  max-width: 95%;
 }
 
+.informalfigure {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.inlinemediaobject:active {
+  display: flex;
+  align-items: center;
+}
+
+.informalfigure:active, .inlinemediaobject:active {
+  justify-content: center;
+}
+
+.informalfigure > img {
+  max-height: 8.75rem;
+  max-width: 70%;
+}
 /* ============================================================ */
 
 @media screen and (max-width: 1199px) {
