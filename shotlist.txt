@@ -1,11 +1,10 @@
 # Shot list: screenshots for Hydrogen manual
 
-slot MainForm setMainWindowSize 800 600
+slot MainForm setMainWindowSize 960 600
 
-# TODO: could be tabbed or non-tabbed. Resolve via preferences?
-# TODO: segmented and annotated diagrams... via inkscape or by grabbing components
-# separately and annotating with imagemagick or similar. Or just in the widget grabber?
-grab MainForm as MainUI.png
+# slot MainForm update_instrument_checkbox false
+# slot MainForm action_window_showInstrumentRack
+grab MainForm as GUI_Sections_Background.png
 
 
 # Grab the Song Editor
@@ -72,5 +71,12 @@ slot SongEditorPanel setModeActionBtn true
 grab SongEditorBackPanel as btn_pattern_mode.png offset 169 30 size 18 13
 slot SongEditorPanel setModeActionBtn false
 grab SongEditorBackPanel as btn_stacked_mode.png offset 169 30 size 18 13
+
+# Pattern Options Menu
+
+# TODO: we can grab the menu, and grab the widget, but since they're
+# separate windows we can't grab the menu 'in situ' over the
+# widget. Showing the menu in situ is desirable since that shows the
+# user *where* it comes from too.
 
 FIN
