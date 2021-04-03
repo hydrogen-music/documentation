@@ -1863,6 +1863,8 @@ abbr {
 }
 
 img {
+  width: auto;
+  height: auto;
   max-width: 100%;
   transition: 0.3s;
   cursor: pointer;
@@ -1874,19 +1876,10 @@ img {
 }
 
 .figure-contents > .mediaobject {
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.figure-contents > .mediaobject:active, .informalfigure:active, .inlinemediaobject:active {
-  background-color: rgba(0,0,0,0.9);
-  top: 0;
-  left: 0;
-  z-index: 1;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
 }
 
 .figure-contents > .mediaobject > img {
@@ -1894,12 +1887,8 @@ img {
 
 }
 
-.figure-contents > .mediaobject > img:active, .informalfigure > img:active, .inlinemediaobject > img:active {
-  width: auto;
-  height: auto;
-  margin: auto;
-  max-height: 95%;
-  max-width: 95%;
+.figure-contents > .mediaobject > img, .informalfigure > img, .inlinemediaobject > img {
+    padding: 0em;
 }
 
 .informalfigure {
@@ -1908,14 +1897,6 @@ img {
   justify-content: start;
 }
 
-.inlinemediaobject:active {
-  display: flex;
-  align-items: center;
-}
-
-.informalfigure:active, .inlinemediaobject:active {
-  justify-content: center;
-}
 
 .informalfigure > img {
   max-height: 8.75rem;
