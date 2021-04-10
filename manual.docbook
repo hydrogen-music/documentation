@@ -442,7 +442,7 @@
 	            <entry>5</entry>
 	            <entry>40</entry>
 	            <entry>C</entry>
-                <entry>Snare Rimhost</entry>
+                <entry>Snare Rimshot</entry>
                 <entry>Snare Drum 2</entry>
               </row>
 	          <row>
@@ -1967,7 +1967,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>Options</title>
         <itemizedlist>
           <listitem id="sect.main_menu.options.input_mode">
-            <para><emphasis role="bold">Input mode</emphasis>: when set to <option>Drumset</option> the keys on your <abbrev>MIDI</abbrev> keyboard will map to the instruments
+            <para><emphasis role="bold">Input mode</emphasis>: when set to <option>Drumkit</option> the keys on your <abbrev>MIDI</abbrev> keyboard will map to the instruments
             in your drumkit. If you set it to <option>Instrument</option> the keys of your <abbrev>MIDI</abbrev>
             keyboard will trigger the instrument that is currently selected.
             The pitch of the instrument will follow the key you press on your keyboard.
@@ -6455,7 +6455,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para>The velocity setting for the layer is 0-velocity on the left, and
         full velocity on the right.  Set up Layer 1 to sound for soft notes, and
         Layer 2 to sound for hard notes, i.e. Layer 1 on the left and Layer 2
-        on the right (see <link linkend="chpt.instrument_editor.layers.sample_selection">Sample Selection</link> for further infos).</para>
+        on the right (see <link linkend="chpt.instrument_editor.layers.sample_selection">Sample Selection</link> for further info).</para>
 
         <para>Now, in the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link>, set up a simple pattern that plays this
         instrument.  Adjust the velocity settings on each note in the <link linkend="chpt.pattern_editor.note_properties">Note Properties Editor</link> so that you can
@@ -6586,10 +6586,10 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
   <title>Appendix</title>
   
     <chapter id="chpt.file_types">
-      <title>Used Filetypes</title>
+      <title>Used File Types</title>
 
       <para>Before working with Hydrogen, please familiarize with these
-      filetypes:</para>
+      file types:</para>
 
       <itemizedlist>
         <listitem id="chpt.file_types.h2pattern">
@@ -6923,7 +6923,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
     <glossentry id="def.decay">
       <glossterm>Decay</glossterm>
       <glossdef>
-        <para>After the <link linkend="def.attack">attack</link>phase, this is the amount
+        <para>After the <link linkend="def.attack">attack</link> phase, this is the amount
         of <emphasis>time</emphasis> for the volume of a note to decrease from full
         <link linkend="def.velocity">velocity</link> to the <link linkend="def.sustain">sustain</link> level.</para>
 
