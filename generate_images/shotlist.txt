@@ -215,7 +215,21 @@ grab MixerMuteButton as btn_mute_on.png
 grab MixerSoloButton as btn_solo_on.png
 grab Rotary as mixer_rotary.png
 grab Knob as mixer_knob.png
-grab as showFX_on.png
+
+# TODO: LADSPA effects. These screenshots screenshots are a pain
+# because windows are in non-default states.
+
+# TODO: add red square to this one
+grab Mixer offset 703 0 size 0 71 as mixerSettingsButton.png
+slot Mixer openMixerSettingsDialog
+grab MixerSettingsDialog as mixerSettingsDialog.png
+slot MixerSettingsDialog close
+
+slot MainForm action_window_show_DirectorWidget
+grab Director as screenshot-director.png
+
+# TODO: Midi actions. Shot shows configured actions and drop down
+# menus. Hm.
 
 FIN
 

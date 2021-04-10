@@ -22,6 +22,10 @@ echo "Generating tabbed layout images"
 echo "Generating single pane layout images"
 "$H2" -n --layout single -t shotlist.txt "$DEMO" 2>&1 | out
 
+# Specific song stuff
+echo "Generating misc images"
+"$H2" -n --layout single -t shotlist-misc.txt ./Misc.h2song 2>&1 | out
+
 # Generate images from SVG
 echo "Generating compound images with inkscape"
 (

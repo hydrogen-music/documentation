@@ -1,0 +1,13 @@
+# Shotlist for "example"
+
+
+slot MainForm setMainWindowSize 1100 800
+
+slot DrumPatternEditor setCurrentInstrument 8
+grab PatternEditorPanel as PatternEditor.png
+
+slot MainForm setMainWindowSize 1100 1000
+
+grab SongEditorPanel as SongEditor.png size 390 230
+FIN
+
