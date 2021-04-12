@@ -2223,7 +2223,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </imageobject>
           </inlinemediaobject>
           ).  Count off
-          the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
+          the band 1-2-3-4 (while tapping the <keycap>,</keycap> key) and everyone
           starts on 1.</para>
 
           <para>Another example: Same situation, but the song doesn't require
@@ -3837,7 +3837,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <para>Hydrogen provides more <emphasis role="bold"><link linkend="def.mutegroup">Mute Groups</link></emphasis> than you know what to do with
           (over 256).  A Mute Group is a grouping of instruments which's playback is
-          mutually exclusive &mdash; only one instrument of the group may be playing at a
+          mutually exclusive - only one instrument of the group may be playing at a
           time.  If one is playing and another instrument in the group is
           triggered, the former will immediately be silence (<link linkend="def.mute">muted</link>) and the latter starts playing.  This is useful, especially, for instruments like
           hi-hats where the opened and closed sound are incorporated into the drumkit as different
@@ -3955,8 +3955,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <note>
                 <para>
-                  The pitch change is fairly small, almost always between &plusmn;1 half-steps
-                  &times; value.  Using this sparingly can help your sequences to sound
+                  The pitch change is fairly small, almost always between &#177;1 half-steps
+                  &#10761; value.  Using this sparingly can help your sequences to sound
                   more like a real drummer.	              
                 </para>
               </note>
@@ -6492,7 +6492,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para>The pitch of the sample can be modified with the pitch controls.
         The <guibutton>Pitch</guibutton> knob adjust the pitch in musical
         half-steps.  (So, <option>-12</option> is down 1 octave).  The pitch on the right adjusts
-        the pitch &plusmn;50 cents.  (One half-step is 100 cents.)</para>
+        the pitch &#177;50 cents.  (One half-step is 100 cents.)</para>
 
         <note>
           <para>The pitch is adjusted by playing the sample back faster or
@@ -6516,9 +6516,9 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para><emphasis role="bold">Turn down the gain.</emphasis> Every gain
         knob (i.e. an amplifier), this is a <emphasis>gain stage</emphasis>.  
         With every gain stage you have, it's
-        easy to overdrive your signal &mdash; which means the signal gets
+        easy to overdrive your signal - which means the signal gets
         distorted by <link linkend="def.clipping">clipping</link>.  In addition, if you have two samples that, by
-        themselves, peg your meters &mdash; what do you think happens when you
+        themselves, peg your meters - what do you think happens when you
         combine them?  That's right, you overdrive the signal again.</para>
 
         <para>If things sound bad and distorted, start by turning down the gain
@@ -6549,7 +6549,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 
         <para><emphasis role="bold">The ADSR will not be longer than your
         sample.</emphasis> If you have a short sample, it doesn't matter how
-        long you set the attack and delay &mdash; the sample will stop playing
+        long you set the attack and delay - the sample will stop playing
         at the end.</para>
 
         <para><emphasis role="bold">Things change with the sample
@@ -7037,7 +7037,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         time will play.</para>
 
         <para>Suppose you have a sample of a floor tom being struck softly.  If
-        you simply play the sample louder &mdash; it will
+        you simply play the sample louder - it will
         <emphasis>not</emphasis> sound the same as a real tom that has been
         struck very hard.  If you wish to mimic this in your instrument, you can
         load one sample for soft playing, and a different sample for loud
@@ -7076,7 +7076,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para>This is typically used in hi-hats, where there's a different
         instrument (sample) for when the hi-hat is open or closed.  With a real
         hi-hat, the sound of the open hi-hat will stop as soon as you close it.
-        However, if you use two samples &mdash; the open sound will continue
+        However, if you use two samples - the open sound will continue
         even after you have triggered the closed sound.  By placing both
         instruments in the same mute group (group #1, for example)... triggering
         closed sound will immediately stop the open sound (and vice
