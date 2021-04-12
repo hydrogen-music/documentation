@@ -1,0 +1,9 @@
+# Shot list: screenshots for Hydrogen manual
+
+slot MainForm setMainWindowSize 960 600
+
+
+slot TabbedInterface setCurrentWidget SouthPanel
+grab MainForm as GUI_Sections_Tabbed_Background.png
+
+FIN
