@@ -56,9 +56,13 @@ manual_%.mo: manual_%.po
 	`cat $< | sed 's/, fuzzy//g' > $<.bak`
 	$(MSGFMT) --check -o $@ $<.bak
 
-# tutorial_%.docbook: tutorial_%.po $(TUTORIAL_MASTER)
-# 	$(PO2XML) $(TUTORIAL_MASTER) $< > $@
+tutorial_%.dbk: tutorial_%.mo tutorial_%.po $(TUTORIAL_MASTER)
+	$(ITSTOOL) -m $< -o $@ --lang $* $(TUTORIAL_MASTER)
 
-#tutorial_%.po: $(TUTORIAL_MASTER)
-#	$(XML2POT) -u $@ $^
+tutorial_%.po: $(TUTORIAL_MASTER)
+	$(ITSTOOL) -o tutorial.pot $<
+	$(MSGMERGE) -U $@ tutorial.pot --backup=simple --no-wrap --verbose
 
+tutorial_%.mo: tutorial_%.po
+	`cat $< | sed 's/, fuzzy//g' > $<.bak`
+	$(MSGFMT) --check -o $@ $<.bak

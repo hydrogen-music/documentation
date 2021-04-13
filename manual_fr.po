@@ -1667,7 +1667,7 @@ msgstr ""
 #: manual.docbook:1059
 #, fuzzy
 msgid "<emphasis role=\"bold\">Beat counter start offset in ms</emphasis>: sets the time between the Beat Counter's last input stroke and when the song starts playing. Its allowed range is from <option>-500</option> to <option>500</option>. <_:note-1/>"
-msgstr "<emphasis role=\"bold\"><guilabel>Début en ms du compteur de battement</guilabel></emphasis> &mdash; ajuste le temps entre la dernière impulsion entrée du Compteur de Pulsation et le moment où le morceau démarre (si le départ automatique est activé)."
+msgstr "<emphasis role=\"bold\"><guilabel>Début en ms du compteur de battement</guilabel></emphasis> - ajuste le temps entre la dernière impulsion entrée du Compteur de Pulsation et le moment où le morceau démarre (si le départ automatique est activé)."
 
 #. (itstool) path: listitem/para
 #: manual.docbook:1079
@@ -2829,7 +2829,7 @@ msgstr "Le bouton en bas à droite contrôle une fonctionnalité de démarrage a
 #: manual.docbook:2216
 #, fuzzy
 msgid "For example: Suppose you have a live band, Hydrogen, and a softsynth that is controlled by <command>Seq24</command>)... and you want them all to start at the same time. Set the beat type to 1/4 and the number of beats to 4. Enable auto-start (button shows <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ). Count off the band 1-2-3-4 (while tapping the <keycap>,</keycap> key) and everyone starts on 1."
-msgstr "Par exemple : Supposons que vous ayez un groupe live, Hydrogen et un synthétiseur (qui est contrôlé par Seq24)... et que vous voulez qu'il démarre tous en même temps. Paramétrez le type de pulsation à 1/4 et le nombre de pulsation à 4. Activer le démarrage automatique (le bouton affiche <guilabel>P</guilabel>). Décomptez 1-2-3-4 (en tapant sur la touche virgule) &mdash; et tout le monde démarrera sur 1."
+msgstr "Par exemple : Supposons que vous ayez un groupe live, Hydrogen et un synthétiseur (qui est contrôlé par Seq24)... et que vous voulez qu'il démarre tous en même temps. Paramétrez le type de pulsation à 1/4 et le nombre de pulsation à 4. Activer le démarrage automatique (le bouton affiche <guilabel>P</guilabel>). Décomptez 1-2-3-4 (en tapant sur la touche virgule) - et tout le monde démarrera sur 1."
 
 #. (itstool) path: sect2/para
 #: manual.docbook:2229
@@ -3178,7 +3178,7 @@ msgstr ""
 #: manual.docbook:2516
 #, fuzzy
 msgid "<inlinemediaobject><imageobject> <imagedata fileref=\"img/btn_pattern_mode.png\" format=\"PNG\"/> </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern mode</emphasis> <inlinemediaobject><imageobject> <imagedata fileref=\"img/stacked_mode_V3.png\" format=\"PNG\"/> </imageobject></inlinemediaobject> or to <emphasis>Stacked mode</emphasis> (<xref linkend=\"chpt.song_editor.editor_modes.stacked\"/>)."
-msgstr "<informalfigure id=\"fig.InstrumentMapping\"> <mediaobject> <imageobject> <imagedata fileref=\"img/InstrumentMapping.png\" format=\"PNG\"/> </imageobject> </mediaobject> </informalfigure> <para>Voici une référence rapide des bindings du dessus pour votre convenance. </para> <informalfigure id=\"fig.letters_keyboard\"> <mediaobject> <imageobject> <imagedata fileref=\"img/tastiera.png\"format=\"PNG\"/> </imageobject> </mediaobject> </informalfigure>"
+msgstr ""
 
 #. (itstool) path: sect1/title
 #: manual.docbook:2531
@@ -8253,8 +8253,8 @@ msgstr ""
 #~ msgid "Some of the settings to adjust the BeatCounter's latency compensation, are located on the General tab of the Preferences Dialog (see <xref linkend=\"sect.preferences.general_tab\"/> ). Here you will finde two spinboxes:"
 #~ msgstr "Certains des paramètres pour ajuster la compensation de latence du Compteur de Pulsation sont placés dans l'Onglet Général du dialogue des Préférences (voir <xref linkend=\"sect.preferences.general_tab\"/> ). Ici, vous trouverez deux boites défilantes :"
 
-#~ msgid "<emphasis role=\"bold\"><guilabel>Beat counter drift compensation in 1/10ms</guilabel></emphasis> &mdash; adjust to compensate for latency between the keyboard and the program."
-#~ msgstr "<emphasis role=\"bold\"><guilabel>Compensation en 1/10ms de la dérive du compteur</guilabel></emphasis> &mdash; ajustement pour compenser la latence entre les clavier et le programme."
+#~ msgid "<emphasis role=\"bold\"><guilabel>Beat counter drift compensation in 1/10ms</guilabel></emphasis> - adjust to compensate for latency between the keyboard and the program."
+#~ msgstr "<emphasis role=\"bold\"><guilabel>Compensation en 1/10ms de la dérive du compteur</guilabel></emphasis> - ajustement pour compenser la latence entre les clavier et le programme."
 
 #~ msgid "The Song Editor comes with 7 buttons:"
 #~ msgstr "L'Éditeur de morceau vient avec 7 boutons :"
