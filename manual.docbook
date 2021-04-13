@@ -3465,7 +3465,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </para>
 
       <para>
-      The following note properties are available: 
+        The following note properties are available: 
+      </para>
       
       <itemizedlist mark="opencircle">
         <listitem id="chpt.pattern_editor.note_properties.velocity">
@@ -3540,7 +3541,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
         </listitem>
       </itemizedlist>
-      </para>
 
       <para>
         <emphasis>Clicking</emphasis> or <emphasis>dragging</emphasis> the value lines in the Note Properties Editor will
