@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2021-04-12 21:25+0200\n"
+"POT-Creation-Date: 2021-04-13 16:07+0200\n"
 "PO-Revision-Date: 2011-02-21 23:28+0100\n"
 "Last-Translator: Humbert Olivier <humbert.olivier.1@free.fr>\n"
 "Language-Team: FR <humbert.olivier.1@free.fr>\n"
@@ -49,13 +49,11 @@ msgstr "<firstname>Sebastian</firstname> <surname>Moors</surname>"
 
 #. (itstool) path: authorgroup/author
 #: manual.docbook:25
-#, fuzzy
 msgid "<firstname>Colin</firstname> <surname>Evans</surname>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
 #: manual.docbook:29
-#, fuzzy
 msgid "<firstname>Philipp</firstname> <surname>Müller</surname>"
 msgstr ""
 
@@ -1392,7 +1390,6 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:775
-#, fuzzy
 msgid "In order to start recording, first activate the record button <inlinemediaobject> <imageobject> <imagedata fileref=\"img/Rec_button.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> in the <link linkend=\"sect.main_toolbar.transport_control\">Main Toolbar</link> and afterwards press the <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button located right next to it (like in a classical tape recorder)."
 msgstr ""
 
@@ -1892,7 +1889,6 @@ msgstr ""
 
 #. (itstool) path: note/para
 #: manual.docbook:1289
-#, fuzzy
 msgid "For this option to take effect the <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_jack_transport_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button has to be activated and the <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_jack_master_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button deactivated in the <link linkend=\"sect.main_toolbar.jack_control\">Main Toolbar</link> (next to having a <abbrev>JACK</abbrev> TBM application)."
 msgstr ""
 
@@ -4021,7 +4017,6 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: manual.docbook:3330
-#, fuzzy
 msgid "The <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_mute_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button <link linkend=\"def.mute\">mutes</link> the instrument and <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_solo_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> solos it."
 msgstr ""
 
