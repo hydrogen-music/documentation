@@ -26,13 +26,13 @@ MSGFMT = msgfmt
 XMLTO = xmlto
 XMLLINT = xmllint
 
-all: *.html
+all: *.html clean
 
 clean:
-	-rm -f manual_* tutorial_*
+	-rm -f *.mo *_validated *.dbk *.bak
 
 %.html: %.dbk %.dbk_validated
-	LL=$$(echo -n $< | sed 's/.*_\(..\)\.docbook/\1/') ; \
+	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
 	$(XMLTO) html-nochunks $(XMLTO_OPTS) \
 		--stringparam l10n.gentext.language=$$LL \
 		$<
@@ -46,14 +46,15 @@ clean:
 	cp -f $^ $@
 
 manual_%.dbk: manual_%.mo manual_%.po $(MANUAL_MASTER)
-	$(ITSTOOL) -m $< -o $@ $(MANUAL_MASTER)
+	$(ITSTOOL) -m $< -o $@ --lang $* $(MANUAL_MASTER)
 
 manual_%.po: $(MANUAL_MASTER)
 	$(ITSTOOL) -o manual.pot $<
-	$(MSGMERGE) -U $@ manual.pot --backup=simple --no-wrap
+	$(MSGMERGE) -U $@ manual.pot --backup=simple --no-wrap --verbose
 
 manual_%.mo: manual_%.po
-	$(MSGFMT) -o $@ $<
+	`cat $< | sed 's/, fuzzy//g' > $<.bak`
+	$(MSGFMT) --check -o $@ $<.bak
 
 # tutorial_%.docbook: tutorial_%.po $(TUTORIAL_MASTER)
 # 	$(PO2XML) $(TUTORIAL_MASTER) $< > $@
