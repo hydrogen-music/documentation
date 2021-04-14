@@ -139,6 +139,8 @@
   --js-controls-header-separator-border-style: 1px solid var(--popup-annotation-border-color);
   --js-controls-color: var(--surface-color);
   --on-js-controls-color: var(--on-surface-color);
+
+  --line-height: 1.75rem;
 }
 
 /* These choices are inspired by the material design system. Someone
@@ -198,7 +200,7 @@ html {
   background-color: var(--background-color);
   height: 100%;
   width: 100%;
-  line-height: 1.75rem;
+  line-height: var(--line-height);
   font-size: 13.5pt;
   scroll-padding-top: 40px;
 }
@@ -1849,55 +1851,10 @@ body {
   grid-column-start: 2;
 }
 
-/* ============================================================ */
-/* For progressive reveals in chunked content. */
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Hydrogen custom //////////////////////
+//////////////////////////////////////////////////////////////////////
 
-
-.reveal {
-  display: none;
-}
-
-ul.reveal,
-ol.reveal {
-  display: block;
-}
-
-.reveal > li {
-  display: none;
-}
-
-.reveal > li:first-child {
-  display: list-item;
-}
-
-.noreveal {
-  display: inherit;
-}
-
-.speaker-notes .reveal {
-  display: inherit;
-  background-color: #ffeeee;
-}
-
-.speaker-notes ul.reveal,
-.speaker-notes ol.reveal {
-  display: block;
-  background-color: #ffeeee;
-}
-
-.speaker-notes .reveal > li {
-  display: list-item;
-  background-color: #ffeeee;
-}
-
-.speaker-notes li.reveal {
-  display: list-item;
-  background-color: #ffeeee;
-}
-
-.speaker-notes .transitory {
-  display: none;
-}
 
 abbr {
   font-family: var(--mono-family);
@@ -1905,6 +1862,46 @@ abbr {
   letter-spacing: 1px;
 }
 
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.inlinemediaobject > img {
+  max-height: 1.75rem;
+}
+
+.figure-contents > .mediaobject {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figure-contents > .mediaobject > img {
+  max-height: 31.5rem;
+
+}
+
+.figure-contents > .mediaobject > img, .informalfigure > img, .inlinemediaobject > img {
+    padding: 0em;
+}
+
+.informalfigure {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.informalfigure > img {
+  max-height: 8.75rem;
+  max-width: 70%;
+}
 /* ============================================================ */
 
 @media screen and (max-width: 1199px) {
