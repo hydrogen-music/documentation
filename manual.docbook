@@ -1673,9 +1673,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <chapter id="chpt.main_menu">
       <title>Main Menu</title>
 
-      <para>
-	    TODO: add picture of the main menu
-      </para>
+      <figure id="fig.main_menu">
+        <title>The Main Menu</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/MainMenu.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
 
       <sect1 id="sect.main_menu.projects">
         <title>Projects</title>
@@ -2397,9 +2402,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </para>
       </tip>
 
-      <para>
-	    TODO: image of song ruler.
-      </para>
+      <informalfigure id="fig.song_editor.song_ruler">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/SongRuler.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </informalfigure>
       
       <para>
 	    In addition to the transport control provided in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> you can use the song ruler for navigation. This the area above the grid and right of the Main Controls. The position clicked will be rounded to the nearest pattern beginning and transport will be relocated there.
@@ -2948,10 +2957,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      
      <sect1 id="sect.song_editor.automation_path">
 	   <title>Automation Path</title>
+
        
-       <para>
-	     TODO: add image
-       </para>
+      <figure id="fig.automation_path">
+        <title>The Automation Path Widget</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/AutomationPath.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
 
        <para>
 	     The Automation Path allows you to control the overall <link linkend="def.velocity">velocity</link> of all notes throughout the song. It can be viewed using the shortcut <keycap>Alt</keycap> + <keycap>A</keycap> or via the <link linkend="sect.main_menu.view">View</link> option of the Main Menu.
@@ -3397,9 +3412,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       
       <sect1 id="chpt.pattern_editor.note_properties">
         <title>Note Properties Editor</title>
-        <para>
-	      TODO: add image of note properties editor (velocity)
-        </para>
+        
+        <figure id="fig.note_properties_ruler">
+          <title>The Note Properties Ruler set to Velocity</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/NotePropertiesRuler.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </figure>
+
       <para>Clicking on an instrument or adding/removing a note associated 
       will select this instrument.  Once an instrument is selected all note properties 
       of its notes will be shown in the form of vertical lines in the bottom window.  
@@ -3985,10 +4007,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         
         <sect2 id="chpt.instrument_editor.layers.components">
           <title>Components</title>
-          
-          <para>
-            TODO: add image showing corresponding part
-          </para>
+
+          <informalfigure id="fig.instrument_editor.layers.components">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/InstrumentEditorLayersComponents.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
 
           <para>
 	        Right below the <option>General</option> and <option>Layers</option> button you find the name of the currently selected <link linkend="def.component">component</link>. In the drop down menu accessible by pressing
@@ -4010,9 +4036,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect2 id="chpt.instrument_editor.layers.layers">
           <title>Layers</title>
 
-          <para>
-            TODO: add image showing corresponding part
-          </para>
+          <informalfigure id="fig.instrument_editor.layers.layers">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/InstrumentEditorLayersLayers.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
 
           <para>
 	        Next you find a listing of all layers of the current component in the selected instrument. The wave form of the sample loaded to the currently selected layer (the one enclosed by a red rectangle) is displayed below.
@@ -4082,9 +4112,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect2 id="chpt.instrument_editor.layers.sample_selection">
           <title>Sample Selection</title>
 
-          <para>
-            TODO: add image showing corresponding part
-          </para>
+          <informalfigure id="fig.instrument_editor.layers.sample_selection">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/InstrumentEditorLayersSampleSelection.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
 
           <para>
             Having a set of samples containing different sample versions of similar sound for the same note velocity is a good way to make your drumkit sound more natural. After all, drummers for example never hit the drum set twice the exact same way.
@@ -4122,9 +4156,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect2 id="chpt.instrument_editor.layers.controls">
           <title>Controls</title>
 
-          <para>
-            TODO: add image showing corresponding part
-          </para>
+          <informalfigure id="fig.instrument_editor.layers.controls">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/InstrumentEditorLayersControls.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
 
           <itemizedlist>
 	        <listitem id="chpt.instrument_editor.layers.controls.layer_gain">
@@ -4201,9 +4239,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect1 id="chpt.sample_editor.wave_display">
           <title>Wave Display and Region Editing</title>
 
-          <para>
-	        TODO: screenshot of corresponding part
-          </para>
+          <informalfigure id="fig.sample_editor.wave_display">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/SampleEditor_Wave.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
           
           <para>
             In the <emphasis role="bold">larger (left) wave display</emphasis> you can see the wave form of the sample you are about to edit. In there you can set the start, stop, and loop point for the sample by <emphasis>dragging</emphasis> the 
@@ -4313,9 +4355,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect1 id="chpt.sample_editor.pitch">
         <title>Pitch Shifting</title>
 
-          <para>
-	        TODO: screenshot of corresponding part
-          </para>
+          <informalfigure id="fig.sample_editor.pitch_shift">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/SampleEditor_PitchShift.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
 
           <para>This section of the Sample Editor allows you to use <emphasis role="bold">Rubber Band</emphasis> - a tool that can change the tempo of a sample without changing the sample's pitch (and vice versa) - to tweak your sample.</para>
 
@@ -4377,9 +4423,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect1 id="chpt.sample_editor.playback_and_envelope_editor">
           <title>Playback and Envelope Editor</title>
 
-          <para>
-	        TODO: screenshot of corresponding part
-          </para>
+          <informalfigure id="fig.sample_editor.envelope">
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/SampleEditor_Envelope.png" format="PNG" />
+              </imageobject>
+            </mediaobject>
+          </informalfigure>
 
           <para>
 	        The bottom part of the Sample Editor features some basic controls and the Envelope Editor.
@@ -4468,9 +4518,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <sect1 id="chpt.mixer.channel_strips">
       <title>Instrument Channel Strips</title>
 
-      <para>
-	    TODO: add image showing corresponding part of Mixer
-      </para>
+      <informalfigure id="fig.mixer.channel_strip">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/MixerInstrumentStrip.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </informalfigure>
 
       <itemizedlist>
 	    <listitem>
@@ -4601,9 +4655,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <sect1 id="chpt.mixer.component_strips">
       <title>Component Channel Strips</title>
 
-      <para>
-	    TODO: add image showing corresponding part of Mixer
-      </para>
+      <informalfigure id="fig.mixer.component_strip">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/MixerComponentStrip.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </informalfigure>
 
       <para>
       Right of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> there additional strips corresponding to the instrument <link linkend="def.component">components</link>.
@@ -4651,9 +4709,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <sect1 id="sect.fx_rack_LADSPA">
       <title>FX Rack and LADSPA Plugins</title>
       
-      <para>
-	    TODO: add image showing corresponding part of Mixer
-      </para>
+      <informalfigure id="fig.mixer.fx_strip">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/MixerFXStrip.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </informalfigure>
 
       <para>
       The FX Rack can be accessed by clicking the
@@ -4766,10 +4828,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      
     <sect1 id="chpt.mixer.master_fader_strip">
       <title>Master Fader Strip</title>
-      
-      <para>
-	    TODO: add image showing corresponding part of Mixer
-      </para>
+
+      <informalfigure id="fig.mixer.master_strip">
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/MixerMasterStrip.png" format="PNG" />
+          </imageobject>
+        </mediaobject>
+      </informalfigure>
 
        <para>
        
@@ -5000,10 +5066,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
    <chapter id="chpt.playlist_editor">
      <title>Playlist Editor</title>
          
-     <para>
-	   TODO: add image
-     </para>
-     <sect1 id="chpt.playlist_editor.main_window">
+     <figure id="fig.playlist_editor">
+       <title>The Playlist Editor with Demo Songs loaded</title>
+       <mediaobject>
+         <imageobject>
+           <imagedata fileref="img/PlaylistEditor.png" format="PNG"/>
+         </imageobject>
+       </mediaobject>
+     </figure>
+
+      <sect1 id="chpt.playlist_editor.main_window">
 	   <title>Main Window</title>
 
        <sect2 id="chpt.playlist_editor.main_window.song_list">
@@ -5031,10 +5103,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
        <sect2 id="chpt.playlist_editor.main_window.controls">
 	     <title>Controls</title>
-         
-         <para>
-	       TODO: add image
-         </para>
+
+         <informalfigure id="fig.playlist_editor.controls">
+           <mediaobject>
+             <imageobject>
+               <imagedata fileref="img/PlaylistEditorControls.png" format="PNG"/>
+             </imageobject>
+           </mediaobject>
+         </informalfigure>
 
          <para>
 	       At the bottom of the widget you find a couple of <emphasis role="bold">buttons</emphasis> you already know from the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> in the Main Toolbar. They do have the same purposes of starting, pausing, and stopping the playback as well as moving the transport position backwards or forwards by one pattern.
