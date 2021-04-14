@@ -292,14 +292,10 @@
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/GUI_Sections_0.9.5_v2.png" format="PNG"/>
+              <imagedata fileref="generated_en/GUI_Sections_0.9.5_v2.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
-
-        <para>
-	      TODO: update image (and adding the gimp session as well in order for future maintenance to only replace the background image
-        </para>
 
         <para>The Main UI comes in 2 flavors : the (classic) Single Pane mode (ideal for
         large- and medium size screens), and the Tabbed mode (optimized for netbook screen 
@@ -324,7 +320,7 @@
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/MainUI_tabbed.png" format="PNG"/>
+              <imagedata fileref="generated_en/MainUI_tabbed.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -959,14 +955,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The General Tab</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/PreferencesGeneral_V3.png" format="PNG"/>
+              <imagedata fileref="generated_en/PreferencesGeneral_V3.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
-
-        <para>
-	      TODO: update image
-        </para>
 
         <itemizedlist>
 	      <listitem>
@@ -1137,14 +1129,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The Audio System Tab</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/PreferencesAudioSystem_V3.png" format="PNG"/>
+              <imagedata fileref="generated_en/PreferencesAudioSystem_V3.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
-
-        <para>
-	      TODO: update image
-        </para>
 
         <itemizedlist>
 	      <listitem>
@@ -1408,14 +1396,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The MIDI System Tab</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/PreferencesMidiSystem_V2.png" format="PNG"/>
+              <imagedata fileref="generated_en/MidiSystem_V2.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
-
-        <para>
-	      TODO: update image
-        </para>
 
         <itemizedlist>
 	      <listitem>
@@ -1509,15 +1493,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The OSC Tab</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/PreferencesOSC.png" format="PNG"/>
+              <imagedata fileref="generated_en/PreferencesOSC.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
 
-        <para>
-	      TODO: update image
-        </para>
-        
         <para>The <abbrev>OSC</abbrev> tab (<xref linkend="fig.preferences.osc_tab"/>) let's
         you modify all options associated with <abbrev>OSC</abbrev> (Open Sound Control) (see
         chapter <link linkend="chpt.osc">OSC API</link> for details).
@@ -1590,14 +1570,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The Appearance Tab</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/PreferencesAppearance_V2.png" format="PNG"/>
+              <imagedata fileref="generated_en/PreferencesAppearance_V2.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
-
-        <para>
-	      TODO: update image
-        </para>
 
         <para>The Appearance tab let's you modify Hydrogen's look 
         and feel.
@@ -1875,7 +1851,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 <title>Import Drumkit</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="img/Sound_Library_import.png" format="PNG" />
+                    <imagedata fileref="generated_en/Sound_Library_import.png" format="PNG" />
                   </imageobject>
                 </mediaobject>
               </figure>
@@ -2007,7 +1983,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <title>The Audio Engine View</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="img/AudioEngineInfoDialog.png" format="PNG"/>
+                  <imagedata fileref="generated_en/AudioEngineInfoDialog.png" format="PNG"/>
                 </imageobject>
               </mediaobject>
             </figure>
@@ -2099,7 +2075,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MainToolbar_V2.png" format="PNG"/>
+            <imagedata fileref="generated_en/MainToolbar_V2.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -2115,7 +2091,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
           <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/background_Control_V2.png" format="PNG"/>
+              <imagedata fileref="generated_en/background_Control_V2.png" format="PNG"/>
             </imageobject>
           </inlinemediaobject>
         </para>
@@ -2129,8 +2105,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	          When using the <link linkend="chpt.keyboard_and_mouse">Keyboard</link> to navigate in the <link linkend="chpt.song_editor">Song Editor</link> and <link linkend="chpt.pattern_editor">Pattern Editor</link> the shortcut <keycap>Ctrl</keycap> + <keycap>Space</keycap> (or <keycap>Alt</keycap> + <keycap>Space</keycap> on MacOS) will change the mode to the one corresponding to the editor. In addition, it will move the current transport position to either the note (Pattern Editor) or the pattern (Song Editor) focused by the cursor and starts the playback.
             </para>
           </tip>
-
-          <para>TODO: update image</para>
       </sect1>
 
       <sect1 id="sect.main_toolbar.tap_tempo_beat_counter">
@@ -2138,7 +2112,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
           <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/MeasureSettings.png" format="PNG"/>
+              <imagedata fileref="generated_en/MeasureSettings.png" format="PNG"/>
             </imageobject>
           </inlinemediaobject>
         </para>
@@ -2171,7 +2145,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           visible.  To see the Beat Counter widget click the 
           <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/btn_bc_off.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           button or simply press <keycap>,</keycap>.</para>
@@ -2251,13 +2225,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
           <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/background_BPM.png" format="PNG"/>
+              <imagedata fileref="generated_en/background_BPM.png" format="PNG"/>
             </imageobject>
           </inlinemediaobject>
-        </para>
-
-        <para>
-	      TODO: update image: Rubber Band button is missing
         </para>
 
         <para>Set the speed of the song in the range from <option>10</option> to <option>400</option> bpm (beats per minute).
@@ -2300,7 +2270,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
           <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/MidiIN_CPU.png" format="PNG"/>
+              <imagedata fileref="generated_en/MidiIN_CPU.png" format="PNG"/>
             </imageobject>
           </inlinemediaobject>
         </para>
@@ -2320,7 +2290,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
           <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/JackTrans_Master.png" format="PNG"/>
+              <imagedata fileref="generated_en/JackTrans_Master.png" format="PNG"/>
             </imageobject>
           </inlinemediaobject>
         </para>
@@ -2365,13 +2335,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/mixer-instrrack_btn.png" format="PNG"/>
+                <imagedata fileref="generated_en/mixer-instrrack_btn.png" format="PNG"/>
               </imageobject>
             </inlinemediaobject>
-          </para>
-
-          <para>
-	        TODO: update image
           </para>
 
           <para>
@@ -2391,15 +2357,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Song Editor</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/EnablePlaybackTrack.png" format="PNG" />
+            <imagedata fileref="generated_en/EnablePlaybackTrack.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
       </para>
 
-      <para>
-	    TODO: screenshot of whole widget
-      </para>
       <para>
         The Song Editor gives an overview of the whole song
         (e.g. intro, verse, bridge, chorus and so on).  Each blue
@@ -2459,7 +2422,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <para>
         <inlinemediaobject>
           <imageobject>
-            <imagedata fileref="img/bg_topPanel.png" format="PNG"/>
+            <imagedata fileref="generated_en/bg_topPanel.png" format="PNG"/>
           </imageobject>
         </inlinemediaobject>
       </para>
@@ -2468,7 +2431,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <listitem>
           <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_clear_off.png" format="PNG"/>
+            <imagedata fileref="generated_en/btn_clear_off.png" format="PNG"/>
             </imageobject></inlinemediaobject> : deletes all patterns
             (asks for confirmation!).
           </para>
@@ -2476,14 +2439,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <listitem>
           <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_new_on.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_new_on.png" format="PNG" />
             </imageobject></inlinemediaobject> : creates a new pattern (and asks for a name).
           </para>
         </listitem>
 
         <listitem>
           <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_updown.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_updown.png" format="PNG" />
             </imageobject></inlinemediaobject> : moves currently selected pattern
             up or down.
           </para>
@@ -2498,7 +2461,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <listitem>
           <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_draw.png" format="PNG"/>
+            <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
             </imageobject></inlinemediaobject> : enables Select mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).
           </para>
@@ -2507,17 +2470,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <listitem>
           <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_select.png" format="PNG"/>
+            <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
             </imageobject></inlinemediaobject> : enables Draw mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).</para>
         </listitem>
 
         <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked mode">
           <para><inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_pattern_mode.png" format="PNG"/>
+            <imagedata fileref="generated_en/btn_pattern_mode.png" format="PNG"/>
             </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern mode</emphasis> 
             <inlinemediaobject><imageobject>
-            <imagedata fileref="img/stacked_mode_V3.png" format="PNG"/>
+            <imagedata fileref="img/btn_stacked_mode.png" format="PNG"/>
             </imageobject></inlinemediaobject>
             or to <emphasis>Stacked mode</emphasis> (<xref
             linkend="chpt.song_editor.editor_modes.stacked" />).</para>
@@ -2717,10 +2680,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <title>Sidebar</title>
 
        <para>
-	 TODO: update or drop image
-       </para>
-
-       <para>
 	     The Sidebar of the Song Editor allows you to interact with and arrange the patterns of your song.
        </para>
       <para><emphasis>Left-clicking</emphasis> selects a pattern, <emphasis>double-clicking</emphasis> allows you to rename a pattern, <emphasis>drag-and-dropping</emphasis> allows you to rearrange the patterns, and <emphasis>right-clicking</emphasis> will show you a menu 
@@ -2731,7 +2690,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/Virtual_patterns_menu.png" format="PNG"/>
+            <imagedata fileref="generated_en/Virtual_patterns_menu.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -2760,7 +2719,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            <informalfigure id="fig.fill_clear_pattern">
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/fill_clear_pattern.png" format="PNG" />
+                <imagedata fileref="generated_en/fill_clear_pattern.png" format="PNG" />
               </imageobject>
             </mediaobject>
             </informalfigure>
@@ -2774,7 +2733,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            <informalfigure id="fig.pattern_properties">
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/pattern_properties.png" format="PNG" />
+                <imagedata fileref="generated_en/pattern_properties.png" format="PNG" />
               </imageobject>
             </mediaobject>
             </informalfigure>
@@ -2841,7 +2800,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <informalfigure id="fig.tempo_bar">
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/tempo_bar.png" format="PNG" />
+             <imagedata fileref="generated_en/tempo_bar.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </informalfigure>
@@ -2853,13 +2812,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <para>To add a Tempo Marker you first need to show the Timeline by clicking the
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_viewTL_off.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_viewTL_off.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
        button at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_bpm_off.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_bpm_off.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
        button.  Once this is done
@@ -2879,7 +2838,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <informalfigure id="fig.add_tempo_change">
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/add_tempo_change.png" format="PNG" />
+             <imagedata fileref="generated_en/add_tempo_change.png" format="PNG" />
            </imageobject>
          </mediaobject>
          </informalfigure>
@@ -2916,7 +2875,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          <informalfigure id="fig.add_tag">
            <mediaobject>
              <imageobject>
-               <imagedata fileref="img/add_tag.png" format="PNG" />
+               <imagedata fileref="generated_en/add_tag.png" format="PNG" />
              </imageobject>
            </mediaobject>
          </informalfigure>
@@ -2932,7 +2891,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	   <informalfigure id="fig.playbackTrack">
 		 <mediaobject>
 		   <imageobject>
-			 <imagedata fileref="img/PlaybackTrack.png" format="PNG" />
+			 <imagedata fileref="generated_en/PlaybackTrack.png" format="PNG" />
 		   </imageobject>
 		 </mediaobject>
 	   </informalfigure>
@@ -3018,15 +2977,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          <title>Pattern Editor in Drum Mode</title>
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/PatternEditor_DrumMode.png" format="PNG" />
+             <imagedata fileref="generated_en/PatternEditor_DrumMode.png" format="PNG" />
            </imageobject>
          </mediaobject>
         </figure>
 
-        <para>
-	      TODO: update image. the 'RES' display has changed.
-        </para>
-        
         <para>This is where it all happens, this is where you can make music :-)</para>
         
       <para>The <emphasis>Pattern Editor</emphasis>
@@ -3037,7 +2992,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       two by clicking the
       <inlinemediaobject>
         <imageobject>
-          <imagedata fileref="img/btn_drum_piano_off.png" format="PNG" />
+          <imagedata fileref="generated_en/btn_drum_piano_off.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
       button (located on the top-right of the Pattern Editor).
@@ -3065,14 +3020,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <title>Pattern Editor Controls</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/PatternEditorControls.png" format="PNG" />
+                <imagedata fileref="generated_en/PatternEditorControls.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </figure>
-
-          <para>
-	        TODO: update image (RES has changed)
-          </para>
 
           <para>The top part of the Pattern Editor contains a number of controls applying to both the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>:</para>
           
@@ -3081,7 +3032,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
                 <inlinemediaobject>
                   <imageobject>
-                    <imagedata fileref="img/lcd_size.png" format="PNG" />
+                    <imagedata fileref="generated_en/lcd_size.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
                 
@@ -3116,7 +3067,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 <informalfigure id="fig.DenominatorWarningIcon">
                   <mediaobject>
                     <imageobject>
-                      <imagedata fileref="img/DenominatorWarningIcon.png" format="PNG" />
+                      <imagedata fileref="generated_en/DenominatorWarningIcon.png" format="PNG" />
                     </imageobject>
                   </mediaobject>
                 </informalfigure>
@@ -3128,7 +3079,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/lcd_res.png" format="PNG" />
+                <imagedata fileref="generated_en/lcd_res.png" format="PNG" />
               </imageobject>
               </inlinemediaobject>
                  : this is the current grid resolution (<option>1/4</option> through <option>1/64</option> with triplet-based resolutions marked as <option>1/8T</option>).
@@ -3151,7 +3102,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
                 <inlinemediaobject>
                   <imageobject>
-                    <imagedata fileref="img/btn_hear.png" format="PNG" />
+                    <imagedata fileref="generated_en/btn_hear.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
                 : when enabled Hydrogen 
@@ -3169,7 +3120,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_quant_off.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_quant_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject> : enables/disables quantization.
             When enabled, beats <link linkend="chpt.overview.recording">recorded</link> from MIDI or from the
@@ -3183,13 +3134,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_drum_piano_off.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_drum_piano_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject> / 
             
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_drum_piano_on.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_drum_piano_on.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
               : switches between <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.</para>
@@ -3205,13 +3156,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject id="ifig.pattern_editor_instrument">
               <imageobject>
-                <imagedata fileref="img/PatternEditorInstr_V2.png" format="PNG" />
+                <imagedata fileref="generated_en/PatternEditorInstr_V2.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
-          </para>
-
-          <para>
-	        TODO: image of whole widget
           </para>
 
         <para>The section on the left shows you what drumkit is currently selected (GMRockKit by default) and below that you can see
@@ -3330,13 +3277,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>The
         <inlinemediaobject>
           <imageobject>
-            <imagedata fileref="img/btn_mute_off.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button <link linkend="def.mute">mutes</link> the instrument and 
         <inlinemediaobject>
           <imageobject>
-            <imagedata fileref="img/btn_solo_off.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_solo_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         solos it.
@@ -3371,7 +3318,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          <title>Pattern Editor in Drum Mode</title>
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/PatternEditor_DrumMode.png" format="PNG" />
+             <imagedata fileref="generated_en/PatternEditor_DrumMode.png" format="PNG" />
            </imageobject>
          </mediaobject>
         </figure>
@@ -3405,15 +3352,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <informalfigure id="fig.NoteOff_NoteLength">
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/NoteOff_NoteLength.png" format="PNG" />
+                <imagedata fileref="generated_en/NoteOff_NoteLength.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
           (Figure above, from left>right : a 'normal' note, a note in 'note length' mode, a note in 'note off' mode)
-        </para>
-
-        <para>
-          TODO: image needs update
         </para>
 
         <para>
@@ -3510,7 +3453,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <informalfigure id="fig.NoteKey">
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/NoteKey.png" format="PNG" />
+                <imagedata fileref="generated_en/NoteKey.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -3579,7 +3522,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          <title>Pattern Editor in Piano Mode</title>
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/PatternEditor_PianoMode.png" format="PNG" />
+             <imagedata fileref="generated_en/PatternEditor_PianoMode.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </figure>
@@ -3610,15 +3553,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Soundlibrary</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/SoundLibrary.png" format="PNG" />
+            <imagedata fileref="generated_en/SoundLibrary.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
 
-      <para>
-	    TODO: update image
-      </para>
-      
       <para>The Sound Library helps you manage your drumkits,
       favourite patterns, and favourite songs. When making new songs or drum
       kits, it allows you to reuse and mix instruments and patterns from other kits and songs.
@@ -3722,7 +3661,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Instrument editor General view</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/Instrument_General.png" format="PNG" />
+            <imagedata fileref="generated_en/Instrument_General.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -3750,7 +3689,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/instrument_editor_envelope.png" format="PNG" />
+              <imagedata fileref="generated_en/instrument_editor_envelope.png" format="PNG" />
             </imageobject>
             </inlinemediaobject>
           </para>
@@ -3815,7 +3754,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/instrument_editor_mute_group.png" format="PNG" />
+                <imagedata fileref="generated_en/instrument_editor_mute_group.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           </para>
@@ -3900,7 +3839,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/instrument_editor_filter.png" format="PNG" />
+                <imagedata fileref="generated_en/instrument_editor_filter.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           </para>
@@ -3939,7 +3878,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/instrument_editor_pitch.png" format="PNG" />
+                <imagedata fileref="generated_en/instrument_editor_pitch.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           </para>
@@ -3971,7 +3910,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/instrument_editor_midi_out.png" format="PNG" />
+                <imagedata fileref="generated_en/instrument_editor_midi_out.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           </para>
@@ -4002,7 +3941,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/instrument_editor_hihat_pressure_group.png" format="PNG" />
+                <imagedata fileref="generated_en/instrument_editor_hihat_pressure_group.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           </para>
@@ -4036,7 +3975,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Instrument Editor Layers View</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/Instrument_Layers.png" format="PNG" />
+            <imagedata fileref="generated_en/Instrument_Layers.png" format="PNG" />
           </imageobject>
         </mediaobject>
         </figure>
@@ -4089,19 +4028,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             Using
               <inlinemediaobject>
                 <imageobject>
-                  <imagedata fileref="img/loadLayer_off.png" format="PNG" />
+                  <imagedata fileref="generated_en/loadLayer_off.png" format="PNG" />
                 </imageobject>
               </inlinemediaobject>
             you can load a sample into the currently selected layer, using
               <inlinemediaobject>
                 <imageobject>
-                  <imagedata fileref="img/deleteLayer_off.png" format="PNG" />
+                  <imagedata fileref="generated_en/deleteLayer_off.png" format="PNG" />
                 </imageobject>
               </inlinemediaobject>
             you can delete the current layer, and using
               <inlinemediaobject>
                 <imageobject>
-                  <imagedata fileref="img/editLayer_off.png" format="PNG" />
+                  <imagedata fileref="generated_en/editLayer_off.png" format="PNG" />
                 </imageobject>
               </inlinemediaobject>
             you can open the <link linkend="chpt.sample_editor">Sample Editor</link> to customize the sample loaded to the currently selected layer.
@@ -4233,20 +4172,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The Sample Editor</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/SampleEditor_V5.png" format="PNG" />
+              <imagedata fileref="generated_en/SampleEditor_V5.png" format="PNG" />
             </imageobject>
           </mediaobject>
         </figure>
-
-        <para>
-	      TODO: since there will be screenshots of the corresponding parts in the individual subsections, we can drop the numbers displayed in rectangles to the right of the image.
-        </para>
 
         <para>The Sample Editor allows you to tweak and manipulate your
         samples. It can be accessed by selecting a layer in the <link linkend="chpt.instrument_editor.layers">Instrument Editor</link> and clicking the
         <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="img/editLayer_off.png" format="PNG" />
+              <imagedata fileref="generated_en/editLayer_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
            button. It will really speed up the creation of a drumkit since
@@ -4517,7 +4452,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/Mixer.png" format="PNG" />
+            <imagedata fileref="generated_en/Mixer.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -4542,7 +4477,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_play_on_mixer.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> : lets you trigger the instrument at maximum velocity.
           </para>
@@ -4556,7 +4491,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/led_trigger_on.png" format="PNG" />
+                <imagedata fileref="generated_en/led_trigger_on.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> :
               lights up whenever this instrument is triggered, e.g. by a note in a pattern or an external <abbrev>MIDI</abbrev> controller).
@@ -4566,7 +4501,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/item_selected.png" format="PNG" />
+                <imagedata fileref="generated_en/item_selected.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> :
               shows whether the instrument is currently selected (in both the Mixer and the Pattern Editor).
@@ -4588,7 +4523,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_mute_on.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> : <link linkend="def.mute">mutes</link> all sounds related to the instrument (including the preview sound you hear when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> of the Pattern Editor).
           </para>
@@ -4602,7 +4537,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_solo_on.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> : solos the instrument.
           </para>
@@ -4616,7 +4551,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/mixer_rotary.png" format="PNG" />
+                <imagedata fileref="generated_en/mixer_rotary.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> : sets a pan value affecting all note played using this instrument.
           </para>
@@ -4630,7 +4565,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/mixer_knob.png" format="PNG" />
+                <imagedata fileref="generated_en/mixer_knob.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> :
               the four pre-fader FX send knobs that determine how much of this instrument will be sent to
@@ -4685,7 +4620,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_mute_on.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> : <link linkend="def.mute">mutes</link> the instrument.
           </para>
@@ -4694,7 +4629,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <para>
             <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="img/btn_solo_on.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
               </imageobject>
               </inlinemediaobject> : solos the instrument.
           </para>
@@ -4921,7 +4856,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <informalfigure id="mixerSettingsButton">
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/mixerSettingsButton.png" format="PNG" />
+              <imagedata fileref="generated_en/mixerSettingsButton.png" format="PNG" />
             </imageobject>
           </mediaobject>
         </informalfigure>
@@ -4932,7 +4867,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <informalfigure id="mixerSettingsDialog">
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/mixerSettingsDialog.png" format="PNG" />
+                <imagedata fileref="generated_en/mixerSettingsDialog.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -5036,7 +4971,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <informalfigure id="fig.director">
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/screenshot-director.png" format="PNG" />
+             <imagedata fileref="generated_en/screenshot-director.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </informalfigure>
@@ -5263,14 +5198,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <informalfigure id="midi_actions">
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/Midi_Actions.png" format="PNG" />
+            <imagedata fileref="img/MidiSystem_V2.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </informalfigure>                
-
-      <para>
-	    TODO: update image
-      </para>
 
       <para>An <abbrev>MIDI</abbrev> <emphasis role="bold">Event</emphasis> is an incoming <abbrev>MIDI</abbrev> message, originating from e.g. a <abbrev>MIDI</abbrev> controller or an external sequencer. A <abbrev>MIDI</abbrev> <emphasis role="bold">Action</emphasis> is a function built into Hydrogen that can be used to react to a specific <abbrev>MIDI</abbrev> Event. Binding an Event to an Action can be done using the <link linkend="chpt.preferences.midi_tab">MIDI System</link> tab of the Preferences.
       </para>
@@ -6218,7 +6149,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
          <title>The Pattern Editor</title>
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/PatternEditor.png" format="PNG" />
+             <imagedata fileref="generated_en/PatternEditor.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </figure>
@@ -6235,7 +6166,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
          <title>Inserting Patterns in the Song Sequence</title>
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/SongEditor.png" format="PNG" />
+             <imagedata fileref="generated_en/SongEditor.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </figure>
@@ -6261,19 +6192,19 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_play_on_mixer.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_play_on_mixer.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_solo_on.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_mute_on.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
@@ -6281,7 +6212,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_solo_on.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
@@ -6289,7 +6220,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/btn_mute_on.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
@@ -6311,7 +6242,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
          <title>The Mixer</title>
          <mediaobject>
            <imageobject>
-             <imagedata fileref="img/Mixer.png" format="PNG" />
+             <imagedata fileref="generated_en/Mixer.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </figure>
@@ -6418,7 +6349,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         depends on the <link linkend="def.velocity">velocity</link> of the incoming note.  Click 
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/loadLayer_off.png" format="PNG"/>
+           <imagedata fileref="generated_en/loadLayer_off.png" format="PNG"/>
          </imageobject>
        </inlinemediaobject> and point the <emphasis>Audio File Browser</emphasis> to
         your sample.
@@ -6438,7 +6369,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         then click
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/loadLayer_off.png" format="PNG"/>
+           <imagedata fileref="generated_en/loadLayer_off.png" format="PNG"/>
          </imageobject>
        </inlinemediaobject>
        to bring in another sample.
@@ -6482,7 +6413,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
           full-velocity using the
        <inlinemediaobject>
          <imageobject>
-           <imagedata fileref="img/MixerPlayTest.png" format="PNG"/>
+           <imagedata fileref="img/btn_play_on_mixer.png" format="PNG"/>
          </imageobject>
        </inlinemediaobject>
        button in the corresponding Instrument Channel Strip.  If you clip your signal here, it will only get
