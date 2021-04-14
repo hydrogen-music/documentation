@@ -83,7 +83,8 @@ clean:
 	cp -f $^ $@
 
 manual_%.docbook: manual_%.po $(MANUAL_MASTER)
-	$(PO2XML) $(MANUAL_MASTER) $< > $@
+	LL=$$(echo -n $@ | sed 's/.*_\(..\)\.docbook/\1/') ; \
+	$(PO2XML) $(MANUAL_MASTER) $< | sed "s%fileref=\"generated_en/%fileref=\"generated_$$LL/%g" > $@
 
 #manual_%.po: $(MANUAL_MASTER)
 #	$(XML2POT) -u $@ $^
