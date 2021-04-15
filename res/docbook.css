@@ -1872,7 +1872,7 @@ img {
 }
 
 .inlinemediaobject > img {
-  max-height: 1.75rem;
+  max-height: 1rem;
 }
 
 .figure-contents > .mediaobject {
@@ -1886,19 +1886,21 @@ img {
   max-height: 31.5rem;
 
 }
-
-.figure-contents > .mediaobject > img, .informalfigure > img, .inlinemediaobject > img {
+.informalfigure > .mediaobject > img {
+    padding: 0em;
+}
+.figure-contents > .mediaobject > img, .inlinemediaobject > img {
     padding: 0em;
 }
 
-.informalfigure {
+.informalfigure > .mediaobject {
   display: flex;
   align-items: center;
   justify-content: start;
 }
 
 
-.informalfigure > img {
+.informalfigure > .mediaobject > img {
   max-height: 8.75rem;
   max-width: 70%;
 }
