@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Příloha %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="Kapitola %n. %t"/>
-<l:template name="part" text="Část %n. %t"/>
+<l:template name="part" text="Část %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -482,12 +482,12 @@
 <l:template name="variablelist" text="%t"/>
 <l:template name="varlistentry" text="%n"/>
 <l:template name="warning" text="%t"/>
-<l:template name="olink.document.citation" text="v %o"/>
+<l:template name="olink.document.citation" text="v %o"/>
 <l:template name="olink.page.citation" text=" (strana %p)"/>
 <l:template name="page.citation" text=" [%p]"/>
 <l:template name="page" text="(strana %p)"/>
-<l:template name="docname" text=" v %o"/>
-<l:template name="docnamelong" text=" v dokumentu nazvaném %o"/>
+<l:template name="docname" text=" v %o"/>
+<l:template name="docnamelong" text=" v dokumentu nazvaném %o"/>
 <l:template name="pageabbrev" text="(str. %p)"/>
 <l:template name="Page" text="Strana %p"/>
 <l:template name="topic" text="%t" lang="en"/>
@@ -563,7 +563,7 @@
 <l:template name="MsgLevel" text="Úroveň: "/>
 <l:template name="MsgOrig" text="Původ: "/>
 </l:context>
-<l:context name="datetime"><l:template name="format" text="d. B Y"/>
+<l:context name="datetime"><l:template name="format" text="d. B Y"/>
 </l:context>
 <l:context name="termdef"><l:template name="prefix" text="[Definice: "/>
 <l:template name="suffix" text="]"/>

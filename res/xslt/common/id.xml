@@ -311,9 +311,9 @@
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="Prosedur %n. %t"/>
+<l:template name="procedure.formal" text="Prosedur %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="produksi %n"/>
+<l:template name="productionset.formal" text="produksi %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Lampiran %n. %t"/>
-<l:template name="article/appendix" text="%n. %t"/>
+<l:template name="article/appendix" text="%n. %t"/>
 <l:template name="bridgehead" text="%t"/>
 <l:template name="chapter" text="Bab %n. %t"/>
-<l:template name="part" text="Bagian %n. %t"/>
+<l:template name="part" text="Bagian %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="Jawab: %n"/>
+<l:template name="answer" text="Jawab: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="Tanya: %n"/>
+<l:template name="qandaentry" text="Tanya: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="Tanya: %n"/>
+<l:template name="question" text="Tanya: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="bagian bernama “%t”"/>
 <l:template name="simplesect" text="bagian bernama “%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="Jawab: %n"/>
-<l:template name="appendix" text="Lampiran %n"/>
-<l:template name="bridgehead" text="Bagian %n"/>
-<l:template name="chapter" text="Bab %n"/>
-<l:template name="equation" text="Persamaan %n"/>
-<l:template name="example" text="Contoh %n"/>
-<l:template name="figure" text="Gambar %n"/>
-<l:template name="part" text="Bagian %n"/>
-<l:template name="procedure" text="Prosedur %n"/>
-<l:template name="productionset" text="produksi %n"/>
-<l:template name="qandadiv" text="Tanya dan Jawab %n"/>
-<l:template name="qandaentry" text="Tanya: %n"/>
-<l:template name="question" text="Tanya: %n"/>
-<l:template name="sect1" text="Bagian %n"/>
-<l:template name="sect2" text="Bagian %n"/>
-<l:template name="sect3" text="Bagian %n"/>
-<l:template name="sect4" text="Bagian %n"/>
-<l:template name="sect5" text="Bagian %n"/>
-<l:template name="section" text="Bagian %n"/>
-<l:template name="table" text="Tabel %n"/>
+<l:context name="xref-number"><l:template name="answer" text="Jawab: %n"/>
+<l:template name="appendix" text="Lampiran %n"/>
+<l:template name="bridgehead" text="Bagian %n"/>
+<l:template name="chapter" text="Bab %n"/>
+<l:template name="equation" text="Persamaan %n"/>
+<l:template name="example" text="Contoh %n"/>
+<l:template name="figure" text="Gambar %n"/>
+<l:template name="part" text="Bagian %n"/>
+<l:template name="procedure" text="Prosedur %n"/>
+<l:template name="productionset" text="produksi %n"/>
+<l:template name="qandadiv" text="Tanya dan Jawab %n"/>
+<l:template name="qandaentry" text="Tanya: %n"/>
+<l:template name="question" text="Tanya: %n"/>
+<l:template name="sect1" text="Bagian %n"/>
+<l:template name="sect2" text="Bagian %n"/>
+<l:template name="sect3" text="Bagian %n"/>
+<l:template name="sect4" text="Bagian %n"/>
+<l:template name="sect5" text="Bagian %n"/>
+<l:template name="section" text="Bagian %n"/>
+<l:template name="table" text="Tabel %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Lampiran %n, %t"/>
-<l:template name="bridgehead" text="Bagian %n, “%t”"/>
-<l:template name="chapter" text="Bab %n, %t"/>
-<l:template name="equation" text="Persamaan %n, “%t”"/>
-<l:template name="example" text="Contoh %n, “%t”"/>
-<l:template name="figure" text="Gambar %n, “%t”"/>
-<l:template name="part" text="Bagian %n, “%t”"/>
-<l:template name="procedure" text="Prosedur %n, “%t”"/>
-<l:template name="productionset" text="produksi %n, “%t”"/>
-<l:template name="qandadiv" text="Tanya dan Jawab %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Lampiran %n, %t"/>
+<l:template name="bridgehead" text="Bagian %n, “%t”"/>
+<l:template name="chapter" text="Bab %n, %t"/>
+<l:template name="equation" text="Persamaan %n, “%t”"/>
+<l:template name="example" text="Contoh %n, “%t”"/>
+<l:template name="figure" text="Gambar %n, “%t”"/>
+<l:template name="part" text="Bagian %n, “%t”"/>
+<l:template name="procedure" text="Prosedur %n, “%t”"/>
+<l:template name="productionset" text="produksi %n, “%t”"/>
+<l:template name="qandadiv" text="Tanya dan Jawab %n, “%t”"/>
 <l:template name="refsect1" text="bagian bernama “%t”"/>
 <l:template name="refsect2" text="bagian bernama “%t”"/>
 <l:template name="refsect3" text="bagian bernama “%t”"/>
 <l:template name="refsection" text="bagian bernama “%t”"/>
-<l:template name="sect1" text="Bagian %n, “%t”"/>
-<l:template name="sect2" text="Bagian %n, “%t”"/>
-<l:template name="sect3" text="Bagian %n, “%t”"/>
-<l:template name="sect4" text="Bagian %n, “%t”"/>
-<l:template name="sect5" text="Bagian %n, “%t”"/>
-<l:template name="section" text="Bagian %n, “%t”"/>
+<l:template name="sect1" text="Bagian %n, “%t”"/>
+<l:template name="sect2" text="Bagian %n, “%t”"/>
+<l:template name="sect3" text="Bagian %n, “%t”"/>
+<l:template name="sect4" text="Bagian %n, “%t”"/>
+<l:template name="sect5" text="Bagian %n, “%t”"/>
+<l:template name="section" text="Bagian %n, “%t”"/>
 <l:template name="simplesect" text="bagian bernama “%t”"/>
-<l:template name="table" text="Tabel %n, “%t”"/>
+<l:template name="table" text="Tabel %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" dan "/>

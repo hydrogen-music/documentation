@@ -311,9 +311,9 @@
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="Eljárás %n. %t"/>
+<l:template name="procedure.formal" text="Eljárás %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="Elemcsoport %n"/>
+<l:template name="productionset.formal" text="Elemcsoport %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -361,7 +361,7 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="%n. függelék - %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%t"/>
 <l:template name="chapter" text="%n. fejezet - %t"/>
 <l:template name="part" text="%n. rész - %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="V: %n"/>
+<l:template name="answer" text="V: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="K: %n"/>
+<l:template name="qandaentry" text="K: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="K: %n"/>
+<l:template name="question" text="K: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,37 +507,37 @@
 <l:template name="section" text="„%t”"/>
 <l:template name="simplesect" text="„%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="V: %n"/>
+<l:context name="xref-number"><l:template name="answer" text="V: %n"/>
 <l:template name="appendix" text="%n. függelék"/>
-<l:template name="bridgehead" text="Szakasz %n"/>
+<l:template name="bridgehead" text="Szakasz %n"/>
 <l:template name="chapter" text="%n. fejezet"/>
-<l:template name="equation" text="Egyenlet %n"/>
+<l:template name="equation" text="Egyenlet %n"/>
 <l:template name="example" text="%n. példa"/>
 <l:template name="figure" text="%n. ábra"/>
 <l:template name="part" text="%n. rész"/>
-<l:template name="procedure" text="Eljárás %n"/>
-<l:template name="productionset" text="Elemcsoport %n"/>
-<l:template name="qandadiv" text="K és V %n"/>
-<l:template name="qandaentry" text="K: %n"/>
-<l:template name="question" text="K: %n"/>
+<l:template name="procedure" text="Eljárás %n"/>
+<l:template name="productionset" text="Elemcsoport %n"/>
+<l:template name="qandadiv" text="K és V %n"/>
+<l:template name="qandaentry" text="K: %n"/>
+<l:template name="question" text="K: %n"/>
 <l:template name="sect1" text="%n. szakasz"/>
 <l:template name="sect2" text="%n. szakasz"/>
 <l:template name="sect3" text="%n. szakasz"/>
 <l:template name="sect4" text="%n. szakasz"/>
 <l:template name="sect5" text="%n. szakasz"/>
 <l:template name="section" text="%n. szakasz"/>
-<l:template name="table" text="Táblázat %n"/>
+<l:template name="table" text="Táblázat %n"/>
 </l:context>
 <l:context name="xref-number-and-title"><l:template name="appendix" text="%n. függelék - %t"/>
-<l:template name="bridgehead" text="Szakasz %n, „%t”"/>
+<l:template name="bridgehead" text="Szakasz %n, „%t”"/>
 <l:template name="chapter" text="%n. fejezet - %t"/>
-<l:template name="equation" text="Egyenlet %n, „%t”"/>
+<l:template name="equation" text="Egyenlet %n, „%t”"/>
 <l:template name="example" text="%n. példa - %t"/>
 <l:template name="figure" text="%n. ábra - %t"/>
 <l:template name="part" text="%n. rész - %t"/>
-<l:template name="procedure" text="Eljárás %n, „%t”"/>
-<l:template name="productionset" text="Elemcsoport %n, „%t”"/>
-<l:template name="qandadiv" text="K és V %n, „%t”"/>
+<l:template name="procedure" text="Eljárás %n, „%t”"/>
+<l:template name="productionset" text="Elemcsoport %n, „%t”"/>
+<l:template name="qandadiv" text="K és V %n, „%t”"/>
 <l:template name="refsect1" text="„%t”"/>
 <l:template name="refsect2" text="„%t”"/>
 <l:template name="refsect3" text="„%t”"/>

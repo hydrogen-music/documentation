@@ -99,7 +99,7 @@
 <refsect1><title>Description</title>
     
 <para>The <function>log.message</function> template is a utility
-    template for logging/emitting formatted messages – that is,
+    template for logging/emitting formatted messages – that is,
     notes and warnings, along with a given log “level” and an
     identifier for the “source” that the message relates to.</para>
 

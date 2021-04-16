@@ -68,7 +68,7 @@
     elements in an intelligent and user-configurable way. The basic
     mechanism used in the XPath expressions throughout this stylesheet
     is to select the relevant metadata from the *info element that is
-    closest to the actual <tag>refentry</tag> – either on the
+    closest to the actual <tag>refentry</tag> – either on the
     <tag>refentry</tag> itself, or on its nearest ancestor.</para>
 
 
@@ -371,7 +371,7 @@
 <para>In practice, there are many pages that simply have a version
     number in the "source" field. So, it looks like what we have is a
     two-part field,
-    <replaceable>Name</replaceable> <replaceable>Version</replaceable>,
+    <replaceable>Name</replaceable> <replaceable>Version</replaceable>,
     where:
     
 <variablelist>
@@ -456,7 +456,7 @@
 <refsect1><title>Description</title>
     
 <para>A "source name" is one part of a (potentially) two-part
-    <replaceable>Name</replaceable> <replaceable>Version</replaceable>
+    <replaceable>Name</replaceable> <replaceable>Version</replaceable>
     source field. For more details, see the documentation for the
     <function>get.refentry.source</function> template.</para>
 
@@ -515,7 +515,7 @@
 <refsect1><title>Description</title>
     
 <para>A "version" is one part of a (potentially) two-part
-    <replaceable>Name</replaceable> <replaceable>Version</replaceable>
+    <replaceable>Name</replaceable> <replaceable>Version</replaceable>
     source field. For more details, see the documentation for the
     <function>get.refentry.source</function> template.</para>
 

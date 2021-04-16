@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Eranskina %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="Atala %n. %t"/>
-<l:template name="part" text="Zatia %n. %t"/>
+<l:template name="part" text="Zatia %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="E: %n"/>
+<l:template name="answer" text="E: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="Galdera %n"/>
+<l:template name="qandaentry" text="Galdera %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="Galdera %n"/>
+<l:template name="question" text="Galdera %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="honela deritzon atala “%t”"/>
 <l:template name="simplesect" text="honela deritzon atala “%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="E: %n"/>
-<l:template name="appendix" text="Eranskina %n"/>
-<l:template name="bridgehead" text="Atala %n"/>
-<l:template name="chapter" text="Atala %n"/>
-<l:template name="equation" text="Ekuazioa %n"/>
-<l:template name="example" text="Adibidea %n"/>
-<l:template name="figure" text="Irudia %n"/>
-<l:template name="part" text="Zatia %n"/>
-<l:template name="procedure" text="Prozedura %n"/>
-<l:template name="productionset" text="Ekoizpena %n"/>
-<l:template name="qandadiv" text="Galdera eta E %n"/>
-<l:template name="qandaentry" text="Galdera %n"/>
-<l:template name="question" text="Galdera %n"/>
-<l:template name="sect1" text="Atala %n"/>
-<l:template name="sect2" text="Atala %n"/>
-<l:template name="sect3" text="Atala %n"/>
-<l:template name="sect4" text="Atala %n"/>
-<l:template name="sect5" text="Atala %n"/>
-<l:template name="section" text="Atala %n"/>
-<l:template name="table" text="Taula %n"/>
+<l:context name="xref-number"><l:template name="answer" text="E: %n"/>
+<l:template name="appendix" text="Eranskina %n"/>
+<l:template name="bridgehead" text="Atala %n"/>
+<l:template name="chapter" text="Atala %n"/>
+<l:template name="equation" text="Ekuazioa %n"/>
+<l:template name="example" text="Adibidea %n"/>
+<l:template name="figure" text="Irudia %n"/>
+<l:template name="part" text="Zatia %n"/>
+<l:template name="procedure" text="Prozedura %n"/>
+<l:template name="productionset" text="Ekoizpena %n"/>
+<l:template name="qandadiv" text="Galdera eta E %n"/>
+<l:template name="qandaentry" text="Galdera %n"/>
+<l:template name="question" text="Galdera %n"/>
+<l:template name="sect1" text="Atala %n"/>
+<l:template name="sect2" text="Atala %n"/>
+<l:template name="sect3" text="Atala %n"/>
+<l:template name="sect4" text="Atala %n"/>
+<l:template name="sect5" text="Atala %n"/>
+<l:template name="section" text="Atala %n"/>
+<l:template name="table" text="Taula %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Eranskina %n, %t"/>
-<l:template name="bridgehead" text="Atala %n, “%t”"/>
-<l:template name="chapter" text="Atala %n, %t"/>
-<l:template name="equation" text="Ekuazioa %n, “%t”"/>
-<l:template name="example" text="Adibidea %n, “%t”"/>
-<l:template name="figure" text="Irudia %n, “%t”"/>
-<l:template name="part" text="Zatia %n, “%t”"/>
-<l:template name="procedure" text="Prozedura %n, “%t”"/>
-<l:template name="productionset" text="Ekoizpena %n, “%t”"/>
-<l:template name="qandadiv" text="Galdera eta E %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Eranskina %n, %t"/>
+<l:template name="bridgehead" text="Atala %n, “%t”"/>
+<l:template name="chapter" text="Atala %n, %t"/>
+<l:template name="equation" text="Ekuazioa %n, “%t”"/>
+<l:template name="example" text="Adibidea %n, “%t”"/>
+<l:template name="figure" text="Irudia %n, “%t”"/>
+<l:template name="part" text="Zatia %n, “%t”"/>
+<l:template name="procedure" text="Prozedura %n, “%t”"/>
+<l:template name="productionset" text="Ekoizpena %n, “%t”"/>
+<l:template name="qandadiv" text="Galdera eta E %n, “%t”"/>
 <l:template name="refsect1" text="honela deritzon atala “%t”"/>
 <l:template name="refsect2" text="honela deritzon atala “%t”"/>
 <l:template name="refsect3" text="honela deritzon atala “%t”"/>
 <l:template name="refsection" text="honela deritzon atala “%t”"/>
-<l:template name="sect1" text="Atala %n, “%t”"/>
-<l:template name="sect2" text="Atala %n, “%t”"/>
-<l:template name="sect3" text="Atala %n, “%t”"/>
-<l:template name="sect4" text="Atala %n, “%t”"/>
-<l:template name="sect5" text="Atala %n, “%t”"/>
-<l:template name="section" text="Atala %n, “%t”"/>
+<l:template name="sect1" text="Atala %n, “%t”"/>
+<l:template name="sect2" text="Atala %n, “%t”"/>
+<l:template name="sect3" text="Atala %n, “%t”"/>
+<l:template name="sect4" text="Atala %n, “%t”"/>
+<l:template name="sect5" text="Atala %n, “%t”"/>
+<l:template name="section" text="Atala %n, “%t”"/>
 <l:template name="simplesect" text="honela deritzon atala “%t”"/>
-<l:template name="table" text="Taula %n, “%t”"/>
+<l:template name="table" text="Taula %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" eta "/>

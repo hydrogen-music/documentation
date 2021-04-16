@@ -311,9 +311,9 @@
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="Procedure %n. %t"/>
+<l:template name="procedure.formal" text="Procedure %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="Productie %n"/>
+<l:template name="productionset.formal" text="Productie %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Bijlage %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="Hoofdstuk %n. %t"/>
-<l:template name="part" text="Deel %n. %t"/>
+<l:template name="part" text="Deel %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="Antwoord: %n"/>
+<l:template name="answer" text="Antwoord: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="Vraag: %n"/>
+<l:template name="qandaentry" text="Vraag: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="Vraag: %n"/>
+<l:template name="question" text="Vraag: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="de paragraaf met de naam “%t”"/>
 <l:template name="simplesect" text="de paragraaf met de naam “%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="Antwoord: %n"/>
-<l:template name="appendix" text="Bijlage %n"/>
-<l:template name="bridgehead" text="Paragraaf %n"/>
-<l:template name="chapter" text="Hoofdstuk %n"/>
-<l:template name="equation" text="Vergelijking %n"/>
-<l:template name="example" text="Voorbeeld %n"/>
-<l:template name="figure" text="Afbeelding %n"/>
-<l:template name="part" text="Deel %n"/>
-<l:template name="procedure" text="Procedure %n"/>
-<l:template name="productionset" text="Productie %n"/>
-<l:template name="qandadiv" text="Vraag en antwoord %n"/>
-<l:template name="qandaentry" text="Vraag: %n"/>
-<l:template name="question" text="Vraag: %n"/>
-<l:template name="sect1" text="Paragraaf %n"/>
-<l:template name="sect2" text="Paragraaf %n"/>
-<l:template name="sect3" text="Paragraaf %n"/>
-<l:template name="sect4" text="Paragraaf %n"/>
-<l:template name="sect5" text="Paragraaf %n"/>
-<l:template name="section" text="Paragraaf %n"/>
-<l:template name="table" text="Tabel %n"/>
+<l:context name="xref-number"><l:template name="answer" text="Antwoord: %n"/>
+<l:template name="appendix" text="Bijlage %n"/>
+<l:template name="bridgehead" text="Paragraaf %n"/>
+<l:template name="chapter" text="Hoofdstuk %n"/>
+<l:template name="equation" text="Vergelijking %n"/>
+<l:template name="example" text="Voorbeeld %n"/>
+<l:template name="figure" text="Afbeelding %n"/>
+<l:template name="part" text="Deel %n"/>
+<l:template name="procedure" text="Procedure %n"/>
+<l:template name="productionset" text="Productie %n"/>
+<l:template name="qandadiv" text="Vraag en antwoord %n"/>
+<l:template name="qandaentry" text="Vraag: %n"/>
+<l:template name="question" text="Vraag: %n"/>
+<l:template name="sect1" text="Paragraaf %n"/>
+<l:template name="sect2" text="Paragraaf %n"/>
+<l:template name="sect3" text="Paragraaf %n"/>
+<l:template name="sect4" text="Paragraaf %n"/>
+<l:template name="sect5" text="Paragraaf %n"/>
+<l:template name="section" text="Paragraaf %n"/>
+<l:template name="table" text="Tabel %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Bijlage %n, %t"/>
-<l:template name="bridgehead" text="Paragraaf %n, “%t”"/>
-<l:template name="chapter" text="Hoofdstuk %n, %t"/>
-<l:template name="equation" text="Vergelijking %n, “%t”"/>
-<l:template name="example" text="Voorbeeld %n, “%t”"/>
-<l:template name="figure" text="Afbeelding %n, “%t”"/>
-<l:template name="part" text="Deel %n, “%t”"/>
-<l:template name="procedure" text="Procedure %n, “%t”"/>
-<l:template name="productionset" text="Productie %n, “%t”"/>
-<l:template name="qandadiv" text="Vraag en antwoord %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Bijlage %n, %t"/>
+<l:template name="bridgehead" text="Paragraaf %n, “%t”"/>
+<l:template name="chapter" text="Hoofdstuk %n, %t"/>
+<l:template name="equation" text="Vergelijking %n, “%t”"/>
+<l:template name="example" text="Voorbeeld %n, “%t”"/>
+<l:template name="figure" text="Afbeelding %n, “%t”"/>
+<l:template name="part" text="Deel %n, “%t”"/>
+<l:template name="procedure" text="Procedure %n, “%t”"/>
+<l:template name="productionset" text="Productie %n, “%t”"/>
+<l:template name="qandadiv" text="Vraag en antwoord %n, “%t”"/>
 <l:template name="refsect1" text="de paragraaf met de naam “%t”"/>
 <l:template name="refsect2" text="de paragraaf met de naam “%t”"/>
 <l:template name="refsect3" text="de paragraaf met de naam “%t”"/>
 <l:template name="refsection" text="de paragraaf met de naam “%t”"/>
-<l:template name="sect1" text="Paragraaf %n, “%t”"/>
-<l:template name="sect2" text="Paragraaf %n, “%t”"/>
-<l:template name="sect3" text="Paragraaf %n, “%t”"/>
-<l:template name="sect4" text="Paragraaf %n, “%t”"/>
-<l:template name="sect5" text="Paragraaf %n, “%t”"/>
-<l:template name="section" text="Paragraaf %n, “%t”"/>
+<l:template name="sect1" text="Paragraaf %n, “%t”"/>
+<l:template name="sect2" text="Paragraaf %n, “%t”"/>
+<l:template name="sect3" text="Paragraaf %n, “%t”"/>
+<l:template name="sect4" text="Paragraaf %n, “%t”"/>
+<l:template name="sect5" text="Paragraaf %n, “%t”"/>
+<l:template name="section" text="Paragraaf %n, “%t”"/>
 <l:template name="simplesect" text="de paragraaf met de naam “%t”"/>
-<l:template name="table" text="Tabel %n, “%t”"/>
+<l:template name="table" text="Tabel %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" en "/>

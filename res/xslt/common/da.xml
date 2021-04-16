@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Appendiks %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="Kapitel %n. %t"/>
-<l:template name="part" text="Del %n. %t"/>
+<l:template name="part" text="Del %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="“%t”"/>
 <l:template name="simplesect" text="“%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="Svar: %n"/>
-<l:template name="appendix" text="Appendiks %n"/>
-<l:template name="bridgehead" text="Afsnit %n"/>
-<l:template name="chapter" text="Kapitel %n"/>
-<l:template name="equation" text="Ligning %n"/>
-<l:template name="example" text="Eksempel %n"/>
-<l:template name="figure" text="Figur %n"/>
-<l:template name="part" text="Del %n"/>
-<l:template name="procedure" text="Procedure %n"/>
-<l:template name="productionset" text="Produktion %n"/>
-<l:template name="qandadiv" text="Spørgsmål og Svar %n"/>
-<l:template name="qandaentry" text="Spørgsmål: %n"/>
-<l:template name="question" text="Spørgsmål: %n"/>
-<l:template name="sect1" text="Afsnit %n"/>
-<l:template name="sect2" text="Afsnit %n"/>
-<l:template name="sect3" text="Afsnit %n"/>
-<l:template name="sect4" text="Afsnit %n"/>
-<l:template name="sect5" text="Afsnit %n"/>
-<l:template name="section" text="Afsnit %n"/>
-<l:template name="table" text="Tabel %n"/>
+<l:context name="xref-number"><l:template name="answer" text="Svar: %n"/>
+<l:template name="appendix" text="Appendiks %n"/>
+<l:template name="bridgehead" text="Afsnit %n"/>
+<l:template name="chapter" text="Kapitel %n"/>
+<l:template name="equation" text="Ligning %n"/>
+<l:template name="example" text="Eksempel %n"/>
+<l:template name="figure" text="Figur %n"/>
+<l:template name="part" text="Del %n"/>
+<l:template name="procedure" text="Procedure %n"/>
+<l:template name="productionset" text="Produktion %n"/>
+<l:template name="qandadiv" text="Spørgsmål og Svar %n"/>
+<l:template name="qandaentry" text="Spørgsmål: %n"/>
+<l:template name="question" text="Spørgsmål: %n"/>
+<l:template name="sect1" text="Afsnit %n"/>
+<l:template name="sect2" text="Afsnit %n"/>
+<l:template name="sect3" text="Afsnit %n"/>
+<l:template name="sect4" text="Afsnit %n"/>
+<l:template name="sect5" text="Afsnit %n"/>
+<l:template name="section" text="Afsnit %n"/>
+<l:template name="table" text="Tabel %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Appendiks %n, %t"/>
-<l:template name="bridgehead" text="Afsnit %n, “%t”"/>
-<l:template name="chapter" text="Kapitel %n, %t"/>
-<l:template name="equation" text="Ligning %n, “%t”"/>
-<l:template name="example" text="Eksempel %n, “%t”"/>
-<l:template name="figure" text="Figur %n, “%t”"/>
-<l:template name="part" text="Del %n, “%t”"/>
-<l:template name="procedure" text="Procedure %n, “%t”"/>
-<l:template name="productionset" text="Produktion %n, “%t”"/>
-<l:template name="qandadiv" text="Spørgsmål og Svar %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Appendiks %n, %t"/>
+<l:template name="bridgehead" text="Afsnit %n, “%t”"/>
+<l:template name="chapter" text="Kapitel %n, %t"/>
+<l:template name="equation" text="Ligning %n, “%t”"/>
+<l:template name="example" text="Eksempel %n, “%t”"/>
+<l:template name="figure" text="Figur %n, “%t”"/>
+<l:template name="part" text="Del %n, “%t”"/>
+<l:template name="procedure" text="Procedure %n, “%t”"/>
+<l:template name="productionset" text="Produktion %n, “%t”"/>
+<l:template name="qandadiv" text="Spørgsmål og Svar %n, “%t”"/>
 <l:template name="refsect1" text="afsnittet der hedder “%t”"/>
 <l:template name="refsect2" text="afsnittet der hedder “%t”"/>
 <l:template name="refsect3" text="afsnittet der hedder “%t”"/>
 <l:template name="refsection" text="afsnittet der hedder “%t”"/>
-<l:template name="sect1" text="Afsnit %n, “%t”"/>
-<l:template name="sect2" text="Afsnit %n, “%t”"/>
-<l:template name="sect3" text="Afsnit %n, “%t”"/>
-<l:template name="sect4" text="Afsnit %n, “%t”"/>
-<l:template name="sect5" text="Afsnit %n, “%t”"/>
-<l:template name="section" text="Afsnit %n, “%t”"/>
+<l:template name="sect1" text="Afsnit %n, “%t”"/>
+<l:template name="sect2" text="Afsnit %n, “%t”"/>
+<l:template name="sect3" text="Afsnit %n, “%t”"/>
+<l:template name="sect4" text="Afsnit %n, “%t”"/>
+<l:template name="sect5" text="Afsnit %n, “%t”"/>
+<l:template name="section" text="Afsnit %n, “%t”"/>
 <l:template name="simplesect" text="afsnittet der hedder “%t”"/>
-<l:template name="table" text="Tabel %n, “%t”"/>
+<l:template name="table" text="Tabel %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=",  "/>
 <l:template name="sep2" text=" og "/>

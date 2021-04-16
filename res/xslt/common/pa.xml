@@ -265,7 +265,7 @@
 <l:context name="title"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
 <l:template name="answer" text="%t"/>
-<l:template name="appendix" text="ਅੰਤਿਕਾ %n. %t"/>
+<l:template name="appendix" text="ਅੰਤਿਕਾ %n. %t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
 <l:template name="bibliodiv" text="%t"/>
@@ -279,12 +279,12 @@
 <l:template name="book" text="%t"/>
 <l:template name="calloutlist" text="%t"/>
 <l:template name="caution" text="%t"/>
-<l:template name="chapter" text="ਅਧਿਆਇ %n. %t"/>
+<l:template name="chapter" text="ਅਧਿਆਇ %n. %t"/>
 <l:template name="colophon" text="%t"/>
 <l:template name="dedication" text="%t"/>
-<l:template name="equation" text="ਸਮੀਕਰਨ %n. %t"/>
-<l:template name="example" text="ਉਦਾਹਰਨ %n. %t"/>
-<l:template name="figure" text="ਚਿੱਤਰ %n. %t"/>
+<l:template name="equation" text="ਸਮੀਕਰਨ %n. %t"/>
+<l:template name="example" text="ਉਦਾਹਰਨ %n. %t"/>
+<l:template name="figure" text="ਚਿੱਤਰ %n. %t"/>
 <l:template name="foil" text="%t"/>
 <l:template name="foilgroup" text="%t"/>
 <l:template name="formalpara" text="%t"/>
@@ -307,13 +307,13 @@
 <l:template name="msgsub" text="%t"/>
 <l:template name="note" text="%t"/>
 <l:template name="orderedlist" text="%t"/>
-<l:template name="part" text="ਭਾਗ %n. %t"/>
+<l:template name="part" text="ਭਾਗ %n. %t"/>
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="ਤਰੀਕਾ %n. %t"/>
+<l:template name="procedure.formal" text="ਤਰੀਕਾ %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="ਉਤਪਾਦਨ %n"/>
+<l:template name="productionset.formal" text="ਉਤਪਾਦਨ %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -332,7 +332,7 @@
 <l:template name="setindex" text="%t"/>
 <l:template name="sidebar" text="%t"/>
 <l:template name="step" text="%t"/>
-<l:template name="table" text="ਸਾਰਣੀ %n. %t"/>
+<l:template name="table" text="ਸਾਰਣੀ %n. %t"/>
 <l:template name="task" text="%t"/>
 <l:template name="tasksummary" text="%t" lang="en"/>
 <l:template name="taskprerequisites" text="%t" lang="en"/>
@@ -360,17 +360,17 @@
 <l:template name="drama" text="%t" lang="en"/>
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
-<l:context name="title-numbered"><l:template name="appendix" text="ਅੰਤਿਕਾ %n. %t"/>
-<l:template name="article/appendix" text="%n. %t"/>
-<l:template name="bridgehead" text="%n. %t"/>
-<l:template name="chapter" text="ਅਧਿਆਇ %n. %t"/>
-<l:template name="part" text="ਭਾਗ %n. %t"/>
-<l:template name="sect1" text="%n. %t"/>
-<l:template name="sect2" text="%n. %t"/>
-<l:template name="sect3" text="%n. %t"/>
-<l:template name="sect4" text="%n. %t"/>
-<l:template name="sect5" text="%n. %t"/>
-<l:template name="section" text="%n. %t"/>
+<l:context name="title-numbered"><l:template name="appendix" text="ਅੰਤਿਕਾ %n. %t"/>
+<l:template name="article/appendix" text="%n. %t"/>
+<l:template name="bridgehead" text="%n. %t"/>
+<l:template name="chapter" text="ਅਧਿਆਇ %n. %t"/>
+<l:template name="part" text="ਭਾਗ %n. %t"/>
+<l:template name="sect1" text="%n. %t"/>
+<l:template name="sect2" text="%n. %t"/>
+<l:template name="sect3" text="%n. %t"/>
+<l:template name="sect4" text="%n. %t"/>
+<l:template name="sect5" text="%n. %t"/>
+<l:template name="section" text="%n. %t"/>
 <l:template name="simplesect" text="%t"/>
 <l:template name="topic" text="%t" lang="en"/>
 </l:context>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="A: %n"/>
+<l:template name="answer" text="A: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="Q: %n"/>
+<l:template name="qandaentry" text="Q: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="Q: %n"/>
+<l:template name="question" text="Q: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
 <l:template name="simplesect" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="A: %n"/>
-<l:template name="appendix" text="ਅੰਤਿਕਾ %n"/>
-<l:template name="bridgehead" text="ਹਿੱਸਾ %n"/>
-<l:template name="chapter" text="ਅਧਿਆਇ %n"/>
-<l:template name="equation" text="ਸਮੀਕਰਨ %n"/>
-<l:template name="example" text="ਉਦਾਹਰਨ %n"/>
-<l:template name="figure" text="ਚਿੱਤਰ %n"/>
-<l:template name="part" text="ਭਾਗ %n"/>
-<l:template name="procedure" text="ਤਰੀਕਾ %n"/>
-<l:template name="productionset" text="ਉਤਪਾਦਨ %n"/>
-<l:template name="qandadiv" text="Q &amp; A %n"/>
-<l:template name="qandaentry" text="Q: %n"/>
-<l:template name="question" text="Q: %n"/>
-<l:template name="sect1" text="ਹਿੱਸਾ %n"/>
-<l:template name="sect2" text="ਹਿੱਸਾ %n"/>
-<l:template name="sect3" text="ਹਿੱਸਾ %n"/>
-<l:template name="sect4" text="ਹਿੱਸਾ %n"/>
-<l:template name="sect5" text="ਹਿੱਸਾ %n"/>
-<l:template name="section" text="ਹਿੱਸਾ %n"/>
-<l:template name="table" text="ਸਾਰਣੀ %n"/>
+<l:context name="xref-number"><l:template name="answer" text="A: %n"/>
+<l:template name="appendix" text="ਅੰਤਿਕਾ %n"/>
+<l:template name="bridgehead" text="ਹਿੱਸਾ %n"/>
+<l:template name="chapter" text="ਅਧਿਆਇ %n"/>
+<l:template name="equation" text="ਸਮੀਕਰਨ %n"/>
+<l:template name="example" text="ਉਦਾਹਰਨ %n"/>
+<l:template name="figure" text="ਚਿੱਤਰ %n"/>
+<l:template name="part" text="ਭਾਗ %n"/>
+<l:template name="procedure" text="ਤਰੀਕਾ %n"/>
+<l:template name="productionset" text="ਉਤਪਾਦਨ %n"/>
+<l:template name="qandadiv" text="Q &amp; A %n"/>
+<l:template name="qandaentry" text="Q: %n"/>
+<l:template name="question" text="Q: %n"/>
+<l:template name="sect1" text="ਹਿੱਸਾ %n"/>
+<l:template name="sect2" text="ਹਿੱਸਾ %n"/>
+<l:template name="sect3" text="ਹਿੱਸਾ %n"/>
+<l:template name="sect4" text="ਹਿੱਸਾ %n"/>
+<l:template name="sect5" text="ਹਿੱਸਾ %n"/>
+<l:template name="section" text="ਹਿੱਸਾ %n"/>
+<l:template name="table" text="ਸਾਰਣੀ %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="ਅੰਤਿਕਾ %n, %t"/>
-<l:template name="bridgehead" text="ਹਿੱਸਾ %n, “%t”"/>
-<l:template name="chapter" text="ਅਧਿਆਇ %n, %t"/>
-<l:template name="equation" text="ਸਮੀਕਰਨ %n, “%t”"/>
-<l:template name="example" text="ਉਦਾਹਰਨ %n, “%t”"/>
-<l:template name="figure" text="ਚਿੱਤਰ %n, “%t”"/>
-<l:template name="part" text="ਭਾਗ %n, “%t”"/>
-<l:template name="procedure" text="ਤਰੀਕਾ %n, “%t”"/>
-<l:template name="productionset" text="ਉਤਪਾਦਨ %n, “%t”"/>
-<l:template name="qandadiv" text="Q &amp; A %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="ਅੰਤਿਕਾ %n, %t"/>
+<l:template name="bridgehead" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="chapter" text="ਅਧਿਆਇ %n, %t"/>
+<l:template name="equation" text="ਸਮੀਕਰਨ %n, “%t”"/>
+<l:template name="example" text="ਉਦਾਹਰਨ %n, “%t”"/>
+<l:template name="figure" text="ਚਿੱਤਰ %n, “%t”"/>
+<l:template name="part" text="ਭਾਗ %n, “%t”"/>
+<l:template name="procedure" text="ਤਰੀਕਾ %n, “%t”"/>
+<l:template name="productionset" text="ਉਤਪਾਦਨ %n, “%t”"/>
+<l:template name="qandadiv" text="Q &amp; A %n, “%t”"/>
 <l:template name="refsect1" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
 <l:template name="refsect2" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
 <l:template name="refsect3" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
 <l:template name="refsection" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
-<l:template name="sect1" text="ਹਿੱਸਾ %n, “%t”"/>
-<l:template name="sect2" text="ਹਿੱਸਾ %n, “%t”"/>
-<l:template name="sect3" text="ਹਿੱਸਾ %n, “%t”"/>
-<l:template name="sect4" text="ਹਿੱਸਾ %n, “%t”"/>
-<l:template name="sect5" text="ਹਿੱਸਾ %n, “%t”"/>
-<l:template name="section" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="sect1" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="sect2" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="sect3" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="sect4" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="sect5" text="ਹਿੱਸਾ %n, “%t”"/>
+<l:template name="section" text="ਹਿੱਸਾ %n, “%t”"/>
 <l:template name="simplesect" text="ਭਾਗ ਕਹਿੰਦੇ ਨੇ “%t”"/>
-<l:template name="table" text="ਸਾਰਣੀ %n, “%t”"/>
+<l:template name="table" text="ਸਾਰਣੀ %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" ਅਤੇ "/>

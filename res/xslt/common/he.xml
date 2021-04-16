@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="נספח %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="פרק %n. %t"/>
-<l:template name="part" text="חלק %n. %t"/>
+<l:template name="part" text="חלק %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="ת: %n"/>
+<l:template name="answer" text="ת: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="ש: %n"/>
+<l:template name="qandaentry" text="ש: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="ש: %n"/>
+<l:template name="question" text="ש: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="הסעיף שנקרא “%t”"/>
 <l:template name="simplesect" text="הסעיף שנקרא “%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="ת: %n"/>
-<l:template name="appendix" text="נספח %n"/>
-<l:template name="bridgehead" text="סעיף %n"/>
-<l:template name="chapter" text="פרק %n"/>
-<l:template name="equation" text="משוואה %n"/>
-<l:template name="example" text="דוגמה %n"/>
-<l:template name="figure" text="איור %n"/>
-<l:template name="part" text="חלק %n"/>
-<l:template name="procedure" text="הליך %n"/>
-<l:template name="productionset" text="ייצור %n"/>
-<l:template name="qandadiv" text="ת ו ש %n"/>
-<l:template name="qandaentry" text="ש: %n"/>
-<l:template name="question" text="ש: %n"/>
-<l:template name="sect1" text="סעיף %n"/>
-<l:template name="sect2" text="סעיף %n"/>
-<l:template name="sect3" text="סעיף %n"/>
-<l:template name="sect4" text="סעיף %n"/>
-<l:template name="sect5" text="סעיף %n"/>
-<l:template name="section" text="סעיף %n"/>
-<l:template name="table" text="טבלה %n"/>
+<l:context name="xref-number"><l:template name="answer" text="ת: %n"/>
+<l:template name="appendix" text="נספח %n"/>
+<l:template name="bridgehead" text="סעיף %n"/>
+<l:template name="chapter" text="פרק %n"/>
+<l:template name="equation" text="משוואה %n"/>
+<l:template name="example" text="דוגמה %n"/>
+<l:template name="figure" text="איור %n"/>
+<l:template name="part" text="חלק %n"/>
+<l:template name="procedure" text="הליך %n"/>
+<l:template name="productionset" text="ייצור %n"/>
+<l:template name="qandadiv" text="ת ו ש %n"/>
+<l:template name="qandaentry" text="ש: %n"/>
+<l:template name="question" text="ש: %n"/>
+<l:template name="sect1" text="סעיף %n"/>
+<l:template name="sect2" text="סעיף %n"/>
+<l:template name="sect3" text="סעיף %n"/>
+<l:template name="sect4" text="סעיף %n"/>
+<l:template name="sect5" text="סעיף %n"/>
+<l:template name="section" text="סעיף %n"/>
+<l:template name="table" text="טבלה %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="נספח %n, %t"/>
-<l:template name="bridgehead" text="סעיף %n, “%t”"/>
-<l:template name="chapter" text="פרק %n, %t"/>
-<l:template name="equation" text="משוואה %n, “%t”"/>
-<l:template name="example" text="דוגמה %n, “%t”"/>
-<l:template name="figure" text="איור %n, “%t”"/>
-<l:template name="part" text="חלק %n, “%t”"/>
-<l:template name="procedure" text="הליך %n, “%t”"/>
-<l:template name="productionset" text="ייצור %n, “%t”"/>
-<l:template name="qandadiv" text="ת ו ש %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="נספח %n, %t"/>
+<l:template name="bridgehead" text="סעיף %n, “%t”"/>
+<l:template name="chapter" text="פרק %n, %t"/>
+<l:template name="equation" text="משוואה %n, “%t”"/>
+<l:template name="example" text="דוגמה %n, “%t”"/>
+<l:template name="figure" text="איור %n, “%t”"/>
+<l:template name="part" text="חלק %n, “%t”"/>
+<l:template name="procedure" text="הליך %n, “%t”"/>
+<l:template name="productionset" text="ייצור %n, “%t”"/>
+<l:template name="qandadiv" text="ת ו ש %n, “%t”"/>
 <l:template name="refsect1" text="הסעיף שנקרא “%t”"/>
 <l:template name="refsect2" text="הסעיף שנקרא “%t”"/>
 <l:template name="refsect3" text="הסעיף שנקרא “%t”"/>
 <l:template name="refsection" text="הסעיף שנקרא “%t”"/>
-<l:template name="sect1" text="סעיף %n, “%t”"/>
-<l:template name="sect2" text="סעיף %n, “%t”"/>
-<l:template name="sect3" text="סעיף %n, “%t”"/>
-<l:template name="sect4" text="סעיף %n, “%t”"/>
-<l:template name="sect5" text="סעיף %n, “%t”"/>
-<l:template name="section" text="סעיף %n, “%t”"/>
+<l:template name="sect1" text="סעיף %n, “%t”"/>
+<l:template name="sect2" text="סעיף %n, “%t”"/>
+<l:template name="sect3" text="סעיף %n, “%t”"/>
+<l:template name="sect4" text="סעיף %n, “%t”"/>
+<l:template name="sect5" text="סעיף %n, “%t”"/>
+<l:template name="section" text="סעיף %n, “%t”"/>
 <l:template name="simplesect" text="הסעיף שנקרא “%t”"/>
-<l:template name="table" text="טבלה %n, “%t”"/>
+<l:template name="table" text="טבלה %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" ו "/>

@@ -265,7 +265,7 @@
 <l:context name="title"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
 <l:template name="answer" text="%t"/>
-<l:template name="appendix" text="Phụ lục %n. %t"/>
+<l:template name="appendix" text="Phụ lục %n. %t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
 <l:template name="bibliodiv" text="%t"/>
@@ -279,12 +279,12 @@
 <l:template name="book" text="%t"/>
 <l:template name="calloutlist" text="%t"/>
 <l:template name="caution" text="%t"/>
-<l:template name="chapter" text="Chương %n. %t"/>
+<l:template name="chapter" text="Chương %n. %t"/>
 <l:template name="colophon" text="%t"/>
 <l:template name="dedication" text="%t"/>
-<l:template name="equation" text="Phương trình %n. %t"/>
-<l:template name="example" text="Ví dụ %n. %t"/>
-<l:template name="figure" text="Hình %n. %t"/>
+<l:template name="equation" text="Phương trình %n. %t"/>
+<l:template name="example" text="Ví dụ %n. %t"/>
+<l:template name="figure" text="Hình %n. %t"/>
 <l:template name="foil" text="%t" lang="en"/>
 <l:template name="foilgroup" text="%t" lang="en"/>
 <l:template name="formalpara" text="%t"/>
@@ -307,13 +307,13 @@
 <l:template name="msgsub" text="%t"/>
 <l:template name="note" text="%t"/>
 <l:template name="orderedlist" text="%t"/>
-<l:template name="part" text="Phần %n. %t"/>
+<l:template name="part" text="Phần %n. %t"/>
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="Thủ tục %n. %t"/>
+<l:template name="procedure.formal" text="Thủ tục %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="Sản phẩm %n"/>
+<l:template name="productionset.formal" text="Sản phẩm %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -332,7 +332,7 @@
 <l:template name="setindex" text="%t"/>
 <l:template name="sidebar" text="%t"/>
 <l:template name="step" text="%t"/>
-<l:template name="table" text="Bảng %n. %t"/>
+<l:template name="table" text="Bảng %n. %t"/>
 <l:template name="task" text="%t" lang="en"/>
 <l:template name="tasksummary" text="%t" lang="en"/>
 <l:template name="taskprerequisites" text="%t" lang="en"/>
@@ -360,17 +360,17 @@
 <l:template name="drama" text="%t" lang="en"/>
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
-<l:context name="title-numbered"><l:template name="appendix" text="Phụ lục %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
-<l:template name="bridgehead" text="%n. %t"/>
-<l:template name="chapter" text="Chương %n. %t"/>
-<l:template name="part" text="Phần %n. %t"/>
-<l:template name="sect1" text="%n. %t"/>
-<l:template name="sect2" text="%n. %t"/>
-<l:template name="sect3" text="%n. %t"/>
-<l:template name="sect4" text="%n. %t"/>
-<l:template name="sect5" text="%n. %t"/>
-<l:template name="section" text="%n. %t"/>
+<l:context name="title-numbered"><l:template name="appendix" text="Phụ lục %n. %t"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="bridgehead" text="%n. %t"/>
+<l:template name="chapter" text="Chương %n. %t"/>
+<l:template name="part" text="Phần %n. %t"/>
+<l:template name="sect1" text="%n. %t"/>
+<l:template name="sect2" text="%n. %t"/>
+<l:template name="sect3" text="%n. %t"/>
+<l:template name="sect4" text="%n. %t"/>
+<l:template name="sect5" text="%n. %t"/>
+<l:template name="section" text="%n. %t"/>
 <l:template name="simplesect" text="%t"/>
 <l:template name="topic" text="%t" lang="en"/>
 </l:context>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="Đ: %n"/>
+<l:template name="answer" text="Đ: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="H: %n"/>
+<l:template name="qandaentry" text="H: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="H: %n"/>
+<l:template name="question" text="H: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="phần “%t”"/>
 <l:template name="simplesect" text="phần “%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="Đ: %n"/>
-<l:template name="appendix" text="Phụ lục %n"/>
-<l:template name="bridgehead" text="Phần %n"/>
-<l:template name="chapter" text="Chương %n"/>
-<l:template name="equation" text="Phương trình %n"/>
-<l:template name="example" text="Ví dụ %n"/>
-<l:template name="figure" text="Hình %n"/>
-<l:template name="part" text="Phần %n"/>
-<l:template name="procedure" text="Thủ tục %n"/>
-<l:template name="productionset" text="Sản phẩm %n"/>
-<l:template name="qandadiv" text="H và Đ %n"/>
-<l:template name="qandaentry" text="H: %n"/>
-<l:template name="question" text="H: %n"/>
-<l:template name="sect1" text="Phần %n"/>
-<l:template name="sect2" text="Phần %n"/>
-<l:template name="sect3" text="Phần %n"/>
-<l:template name="sect4" text="Phần %n"/>
-<l:template name="sect5" text="Phần %n"/>
-<l:template name="section" text="Phần %n"/>
-<l:template name="table" text="Bảng %n"/>
+<l:context name="xref-number"><l:template name="answer" text="Đ: %n"/>
+<l:template name="appendix" text="Phụ lục %n"/>
+<l:template name="bridgehead" text="Phần %n"/>
+<l:template name="chapter" text="Chương %n"/>
+<l:template name="equation" text="Phương trình %n"/>
+<l:template name="example" text="Ví dụ %n"/>
+<l:template name="figure" text="Hình %n"/>
+<l:template name="part" text="Phần %n"/>
+<l:template name="procedure" text="Thủ tục %n"/>
+<l:template name="productionset" text="Sản phẩm %n"/>
+<l:template name="qandadiv" text="H và Đ %n"/>
+<l:template name="qandaentry" text="H: %n"/>
+<l:template name="question" text="H: %n"/>
+<l:template name="sect1" text="Phần %n"/>
+<l:template name="sect2" text="Phần %n"/>
+<l:template name="sect3" text="Phần %n"/>
+<l:template name="sect4" text="Phần %n"/>
+<l:template name="sect5" text="Phần %n"/>
+<l:template name="section" text="Phần %n"/>
+<l:template name="table" text="Bảng %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Phụ lục %n, %t"/>
-<l:template name="bridgehead" text="Phần %n, “%t”"/>
-<l:template name="chapter" text="Chương %n, %t"/>
-<l:template name="equation" text="Phương trình %n, “%t”"/>
-<l:template name="example" text="Ví dụ %n, “%t”"/>
-<l:template name="figure" text="Hình %n, “%t”"/>
-<l:template name="part" text="Phần %n, “%t”"/>
-<l:template name="procedure" text="Thủ tục %n, “%t”"/>
-<l:template name="productionset" text="Sản phẩm %n, “%t”"/>
-<l:template name="qandadiv" text="H và Đ %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Phụ lục %n, %t"/>
+<l:template name="bridgehead" text="Phần %n, “%t”"/>
+<l:template name="chapter" text="Chương %n, %t"/>
+<l:template name="equation" text="Phương trình %n, “%t”"/>
+<l:template name="example" text="Ví dụ %n, “%t”"/>
+<l:template name="figure" text="Hình %n, “%t”"/>
+<l:template name="part" text="Phần %n, “%t”"/>
+<l:template name="procedure" text="Thủ tục %n, “%t”"/>
+<l:template name="productionset" text="Sản phẩm %n, “%t”"/>
+<l:template name="qandadiv" text="H và Đ %n, “%t”"/>
 <l:template name="refsect1" text="phần “%t”"/>
 <l:template name="refsect2" text="phần “%t”"/>
 <l:template name="refsect3" text="phần “%t”"/>
 <l:template name="refsection" text="phần “%t”"/>
-<l:template name="sect1" text="Phần %n, “%t”"/>
-<l:template name="sect2" text="Phần %n, “%t”"/>
-<l:template name="sect3" text="Phần %n, “%t”"/>
-<l:template name="sect4" text="Phần %n, “%t”"/>
-<l:template name="sect5" text="Phần %n, “%t”"/>
-<l:template name="section" text="Phần %n, “%t”"/>
+<l:template name="sect1" text="Phần %n, “%t”"/>
+<l:template name="sect2" text="Phần %n, “%t”"/>
+<l:template name="sect3" text="Phần %n, “%t”"/>
+<l:template name="sect4" text="Phần %n, “%t”"/>
+<l:template name="sect5" text="Phần %n, “%t”"/>
+<l:template name="section" text="Phần %n, “%t”"/>
 <l:template name="simplesect" text="phần “%t”"/>
-<l:template name="table" text="Bảng %n, “%t”"/>
+<l:template name="table" text="Bảng %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" và "/>

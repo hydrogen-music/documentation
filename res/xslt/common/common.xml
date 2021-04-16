@@ -529,7 +529,7 @@ unchanged.</para>
 
     
 <para>It currently works by evaluating a processing instruction
-    (PI) of the form &lt;?dbchoice choice="foo"?&gt; :
+    (PI) of the form &lt;?dbchoice choice="foo"?&gt; :
     
 <itemizedlist>
       <listitem>

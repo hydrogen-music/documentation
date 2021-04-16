@@ -313,7 +313,7 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="procedure.formal" text="Гүйцэтгэл %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="Бүтээгдэхүүн %n"/>
+<l:template name="productionset.formal" text="Бүтээгдэхүүн %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Хавсралт %n. %t"/>
-<l:template name="article/appendix" text="%n. %t"/>
-<l:template name="bridgehead" text="%n. %t"/>
+<l:template name="article/appendix" text="%n. %t"/>
+<l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="Бүлэг %n. %t"/>
-<l:template name="part" text="хэсэг %n. %t"/>
+<l:template name="part" text="хэсэг %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="Х: %n"/>
+<l:template name="answer" text="Х: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,7 +465,7 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="А: %n"/>
+<l:template name="qandaentry" text="А: %n"/>
 <l:template name="qandaset" text="%t"/>
 <l:template name="question" text="А: %n"/>
 <l:template name="reference" text="%t"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="«%t»"/>
 <l:template name="simplesect" text="«%t»"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="Х: %n"/>
-<l:template name="appendix" text="Хавсралт %n"/>
-<l:template name="bridgehead" text="Хэсэг %n"/>
-<l:template name="chapter" text="Бүлэг %n"/>
-<l:template name="equation" text="Тэгшитгэл %n"/>
-<l:template name="example" text="Жишээ %n"/>
-<l:template name="figure" text="Зураг %n"/>
-<l:template name="part" text="хэсэг %n"/>
-<l:template name="procedure" text="Гүйцэтгэл %n"/>
-<l:template name="productionset" text="Бүтээгдэхүүн %n"/>
-<l:template name="qandadiv" text="А ба Х %n"/>
-<l:template name="qandaentry" text="А: %n"/>
-<l:template name="question" text="А: %n"/>
-<l:template name="sect1" text="Хэсэг %n"/>
-<l:template name="sect2" text="Хэсэг %n"/>
-<l:template name="sect3" text="Хэсэг %n"/>
-<l:template name="sect4" text="Хэсэг %n"/>
-<l:template name="sect5" text="Хэсэг %n"/>
-<l:template name="section" text="Хэсэг %n"/>
-<l:template name="table" text="Хүснэгт %n"/>
+<l:context name="xref-number"><l:template name="answer" text="Х: %n"/>
+<l:template name="appendix" text="Хавсралт %n"/>
+<l:template name="bridgehead" text="Хэсэг %n"/>
+<l:template name="chapter" text="Бүлэг %n"/>
+<l:template name="equation" text="Тэгшитгэл %n"/>
+<l:template name="example" text="Жишээ %n"/>
+<l:template name="figure" text="Зураг %n"/>
+<l:template name="part" text="хэсэг %n"/>
+<l:template name="procedure" text="Гүйцэтгэл %n"/>
+<l:template name="productionset" text="Бүтээгдэхүүн %n"/>
+<l:template name="qandadiv" text="А ба Х %n"/>
+<l:template name="qandaentry" text="А: %n"/>
+<l:template name="question" text="А: %n"/>
+<l:template name="sect1" text="Хэсэг %n"/>
+<l:template name="sect2" text="Хэсэг %n"/>
+<l:template name="sect3" text="Хэсэг %n"/>
+<l:template name="sect4" text="Хэсэг %n"/>
+<l:template name="sect5" text="Хэсэг %n"/>
+<l:template name="section" text="Хэсэг %n"/>
+<l:template name="table" text="Хүснэгт %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Хавсралт %n, %t"/>
-<l:template name="bridgehead" text="Хэсэг %n, «%t»"/>
-<l:template name="chapter" text="Бүлэг %n, %t"/>
-<l:template name="equation" text="Тэгшитгэл %n, «%t»"/>
-<l:template name="example" text="Жишээ %n, «%t»"/>
-<l:template name="figure" text="Зураг %n, «%t»"/>
-<l:template name="part" text="хэсэг %n, «%t»"/>
-<l:template name="procedure" text="Гүйцэтгэл %n, «%t»"/>
-<l:template name="productionset" text="Бүтээгдэхүүн %n, «%t»"/>
-<l:template name="qandadiv" text="А ба Х %n, «%t»"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Хавсралт %n, %t"/>
+<l:template name="bridgehead" text="Хэсэг %n, «%t»"/>
+<l:template name="chapter" text="Бүлэг %n, %t"/>
+<l:template name="equation" text="Тэгшитгэл %n, «%t»"/>
+<l:template name="example" text="Жишээ %n, «%t»"/>
+<l:template name="figure" text="Зураг %n, «%t»"/>
+<l:template name="part" text="хэсэг %n, «%t»"/>
+<l:template name="procedure" text="Гүйцэтгэл %n, «%t»"/>
+<l:template name="productionset" text="Бүтээгдэхүүн %n, «%t»"/>
+<l:template name="qandadiv" text="А ба Х %n, «%t»"/>
 <l:template name="refsect1" text="Хэсгийн нэр «%t»"/>
 <l:template name="refsect2" text="Хэсгийн нэр «%t»"/>
 <l:template name="refsect3" text="Хэсгийн нэр «%t»"/>
 <l:template name="refsection" text="Хэсгийн нэр «%t»"/>
-<l:template name="sect1" text="Хэсэг %n, «%t»"/>
-<l:template name="sect2" text="Хэсэг %n, «%t»"/>
-<l:template name="sect3" text="Хэсэг %n, «%t»"/>
-<l:template name="sect4" text="Хэсэг %n, «%t»"/>
-<l:template name="sect5" text="Хэсэг %n, «%t»"/>
-<l:template name="section" text="Хэсэг %n, «%t»"/>
+<l:template name="sect1" text="Хэсэг %n, «%t»"/>
+<l:template name="sect2" text="Хэсэг %n, «%t»"/>
+<l:template name="sect3" text="Хэсэг %n, «%t»"/>
+<l:template name="sect4" text="Хэсэг %n, «%t»"/>
+<l:template name="sect5" text="Хэсэг %n, «%t»"/>
+<l:template name="section" text="Хэсэг %n, «%t»"/>
 <l:template name="simplesect" text="Хэсгийн нэр «%t»"/>
-<l:template name="table" text="Хүснэгт %n, «%t»"/>
+<l:template name="table" text="Хүснэгт %n, «%t»"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" ба "/>

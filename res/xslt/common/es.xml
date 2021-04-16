@@ -239,8 +239,8 @@
 <l:template name="left" text="←"/>
 <l:template name="meta" text="Meta"/>
 <l:template name="option" text="⌥"/>
-<l:template name="pagedown" text="Av Pág"/>
-<l:template name="pageup" text="Re Pág"/>
+<l:template name="pagedown" text="Av Pág"/>
+<l:template name="pageup" text="Re Pág"/>
 <l:template name="right" text="→"/>
 <l:template name="shift" text="⇧"/>
 <l:template name="space" text="Espacio"/>
@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="Apéndice %n. %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n. %t"/>
 <l:template name="chapter" text="Capítulo %n. %t"/>
-<l:template name="part" text="Parte %n. %t"/>
+<l:template name="part" text="Parte %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="R: %n"/>
+<l:template name="answer" text="R: %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="P: %n"/>
+<l:template name="qandaentry" text="P: %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="P: %n"/>
+<l:template name="question" text="P: %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,49 +507,49 @@
 <l:template name="section" text="“%t”"/>
 <l:template name="simplesect" text="“%t”"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="R: %n"/>
-<l:template name="appendix" text="Apéndice %n"/>
-<l:template name="bridgehead" text="Sección %n"/>
-<l:template name="chapter" text="Capítulo %n"/>
-<l:template name="equation" text="Ecuación %n"/>
-<l:template name="example" text="Ejemplo %n"/>
-<l:template name="figure" text="Figura %n"/>
-<l:template name="part" text="Parte %n"/>
-<l:template name="procedure" text="Procedimiento %n"/>
-<l:template name="productionset" text="Producción %n"/>
-<l:template name="qandadiv" text="P y R %n"/>
-<l:template name="qandaentry" text="P: %n"/>
-<l:template name="question" text="P: %n"/>
-<l:template name="sect1" text="Sección %n"/>
-<l:template name="sect2" text="Sección %n"/>
-<l:template name="sect3" text="Sección %n"/>
-<l:template name="sect4" text="Sección %n"/>
-<l:template name="sect5" text="Sección %n"/>
-<l:template name="section" text="Sección %n"/>
-<l:template name="table" text="Tabla %n"/>
+<l:context name="xref-number"><l:template name="answer" text="R: %n"/>
+<l:template name="appendix" text="Apéndice %n"/>
+<l:template name="bridgehead" text="Sección %n"/>
+<l:template name="chapter" text="Capítulo %n"/>
+<l:template name="equation" text="Ecuación %n"/>
+<l:template name="example" text="Ejemplo %n"/>
+<l:template name="figure" text="Figura %n"/>
+<l:template name="part" text="Parte %n"/>
+<l:template name="procedure" text="Procedimiento %n"/>
+<l:template name="productionset" text="Producción %n"/>
+<l:template name="qandadiv" text="P y R %n"/>
+<l:template name="qandaentry" text="P: %n"/>
+<l:template name="question" text="P: %n"/>
+<l:template name="sect1" text="Sección %n"/>
+<l:template name="sect2" text="Sección %n"/>
+<l:template name="sect3" text="Sección %n"/>
+<l:template name="sect4" text="Sección %n"/>
+<l:template name="sect5" text="Sección %n"/>
+<l:template name="section" text="Sección %n"/>
+<l:template name="table" text="Tabla %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Apéndice %n, %t"/>
-<l:template name="bridgehead" text="Sección %n, “%t”"/>
-<l:template name="chapter" text="Capítulo %n, %t"/>
-<l:template name="equation" text="Ecuación %n, “%t”"/>
-<l:template name="example" text="Ejemplo %n, “%t”"/>
-<l:template name="figure" text="Figura %n, “%t”"/>
-<l:template name="part" text="Parte %n, “%t”"/>
-<l:template name="procedure" text="Procedimiento %n, “%t”"/>
-<l:template name="productionset" text="Producción %n, “%t”"/>
-<l:template name="qandadiv" text="P y R %n, “%t”"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Apéndice %n, %t"/>
+<l:template name="bridgehead" text="Sección %n, “%t”"/>
+<l:template name="chapter" text="Capítulo %n, %t"/>
+<l:template name="equation" text="Ecuación %n, “%t”"/>
+<l:template name="example" text="Ejemplo %n, “%t”"/>
+<l:template name="figure" text="Figura %n, “%t”"/>
+<l:template name="part" text="Parte %n, “%t”"/>
+<l:template name="procedure" text="Procedimiento %n, “%t”"/>
+<l:template name="productionset" text="Producción %n, “%t”"/>
+<l:template name="qandadiv" text="P y R %n, “%t”"/>
 <l:template name="refsect1" text="sección llamada “%t”"/>
 <l:template name="refsect2" text="sección llamada “%t”"/>
 <l:template name="refsect3" text="sección llamada “%t”"/>
 <l:template name="refsection" text="sección llamada “%t”"/>
-<l:template name="sect1" text="Sección %n, “%t”"/>
-<l:template name="sect2" text="Sección %n, “%t”"/>
-<l:template name="sect3" text="Sección %n, “%t”"/>
-<l:template name="sect4" text="Sección %n, “%t”"/>
-<l:template name="sect5" text="Sección %n, “%t”"/>
-<l:template name="section" text="Sección %n, “%t”"/>
+<l:template name="sect1" text="Sección %n, “%t”"/>
+<l:template name="sect2" text="Sección %n, “%t”"/>
+<l:template name="sect3" text="Sección %n, “%t”"/>
+<l:template name="sect4" text="Sección %n, “%t”"/>
+<l:template name="sect5" text="Sección %n, “%t”"/>
+<l:template name="section" text="Sección %n, “%t”"/>
 <l:template name="simplesect" text="sección llamada “%t”"/>
-<l:template name="table" text="Tabla %n, “%t”"/>
+<l:template name="table" text="Tabla %n, “%t”"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" y "/>

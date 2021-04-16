@@ -31,8 +31,8 @@
 <l:gentext key="abstract" text="Résumé"/>
 <l:gentext key="Acknowledgements" text="Remerciements"/>
 <l:gentext key="acknowledgements" text="Remerciements"/>
-<l:gentext key="Answer" text="R :"/>
-<l:gentext key="answer" text="R :"/>
+<l:gentext key="Answer" text="R :"/>
+<l:gentext key="answer" text="R :"/>
 <l:gentext key="Appendix" text="Annexe"/>
 <l:gentext key="appendix" text="annexe"/>
 <l:gentext key="Article" text="Article"/>
@@ -107,8 +107,8 @@
 <l:gentext key="Qandadiv" text="Q &amp; R"/>
 <l:gentext key="qandadiv" text="Q &amp; R"/>
 <l:gentext key="QandASet" text="Questions fréquemment posées"/>
-<l:gentext key="Question" text="Q :"/>
-<l:gentext key="question" text="Q :"/>
+<l:gentext key="Question" text="Q :"/>
+<l:gentext key="question" text="Q :"/>
 <l:gentext key="RefEntry" text=""/>
 <l:gentext key="refentry" text=""/>
 <l:gentext key="Reference" text="Référence"/>
@@ -169,8 +169,8 @@
 <l:gentext key="Notes" text="Notes"/>
 <l:gentext key="Pgs" text="Pages"/>
 <l:gentext key="pgs" text="Pages"/>
-<l:gentext key="Revisedby" text="Revu et corrigé par : "/>
-<l:gentext key="revisedby" text="Revu et corrigé par : "/>
+<l:gentext key="Revisedby" text="Revu et corrigé par : "/>
+<l:gentext key="revisedby" text="Revu et corrigé par : "/>
 <l:gentext key="TableNotes" text="Remarques"/>
 <l:gentext key="tablenotes" text="Remarques"/>
 <l:gentext key="TableofContents" text="Table des matières"/>
@@ -215,8 +215,8 @@
 <l:gentext key="uppercase.alpha" text="ABCDEFGHIJKLMNOPQRSTUVWXYZÂÊÎÔÛËÏÜÀÈÙÉÇÆŒ"/>
 <l:gentext key="normalize.sort.input" text="AaÀàÁáÂâÃãÄäÅåĀāĂăĄąǍǎǞǟǠǡǺǻȀȁȂȃȦȧḀḁẚẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặBbƀƁɓƂƃḂḃḄḅḆḇCcÇçĆćĈĉĊċČčƇƈɕḈḉDdĎďĐđƊɗƋƌǅǲȡɖḊḋḌḍḎḏḐḑḒḓEeÈèÉéÊêËëĒēĔĕĖėĘęĚěȄȅȆȇȨȩḔḕḖḗḘḙḚḛḜḝẸẹẺẻẼẽẾếỀềỂểỄễỆệFfƑƒḞḟGgĜĝĞğĠġĢģƓɠǤǥǦǧǴǵḠḡHhĤĥĦħȞȟɦḢḣḤḥḦḧḨḩḪḫẖIiÌìÍíÎîÏïĨĩĪīĬĭĮįİƗɨǏǐȈȉȊȋḬḭḮḯỈỉỊịJjĴĵǰʝKkĶķƘƙǨǩḰḱḲḳḴḵLlĹĺĻļĽľĿŀŁłƚǈȴɫɬɭḶḷḸḹḺḻḼḽMmɱḾḿṀṁṂṃNnÑñŃńŅņŇňƝɲƞȠǋǸǹȵɳṄṅṆṇṈṉṊṋOoÒòÓóÔôÕõÖöØøŌōŎŏŐőƟƠơǑǒǪǫǬǭǾǿȌȍȎȏȪȫȬȭȮȯȰȱṌṍṎṏṐṑṒṓỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợPpƤƥṔṕṖṗQqʠRrŔŕŖŗŘřȐȑȒȓɼɽɾṘṙṚṛṜṝṞṟSsŚśŜŝŞşŠšȘșʂṠṡṢṣṤṥṦṧṨṩTtŢţŤťŦŧƫƬƭƮʈȚțȶṪṫṬṭṮṯṰṱẗUuÙùÚúÛûÜüŨũŪūŬŭŮůŰűŲųƯưǓǔǕǖǗǘǙǚǛǜȔȕȖȗṲṳṴṵṶṷṸṹṺṻỤụỦủỨứỪừỬửỮữỰựVvƲʋṼṽṾṿWwŴŵẀẁẂẃẄẅẆẇẈẉẘXxẊẋẌẍYyÝýÿŸŶŷƳƴȲȳẎẏẙỲỳỴỵỶỷỸỹZzŹźŻżŽžƵƶȤȥʐʑẐẑẒẓẔẕẕ"/>
 <l:gentext key="normalize.sort.output" text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEFFFFFFGGGGGGGGGGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIJJJJJJKKKKKKKKKKKKKKLLLLLLLLLLLLLLLLLLLLLLLLLLMMMMMMMMMNNNNNNNNNNNNNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPPPPPPPPQQQRRRRRRRRRRRRRRRRRRRRRRRSSSSSSSSSSSSSSSSSSSSSSSTTTTTTTTTTTTTTTTTTTTTTTTTUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUVVVVVVVVWWWWWWWWWWWWWWWXXXXXXYYYYYYYYYYYYYYYYYYYYYYYZZZZZZZZZZZZZZZZZZZZZ"/>
-<l:dingbat key="startquote" text="« "/>
-<l:dingbat key="endquote" text=" »"/>
+<l:dingbat key="startquote" text="« "/>
+<l:dingbat key="endquote" text=" »"/>
 <l:dingbat key="nestedstartquote" text="“"/>
 <l:dingbat key="nestedendquote" text="”"/>
 <l:dingbat key="singlestartquote" text="‹"/>
@@ -265,7 +265,7 @@
 <l:context name="title"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t"/>
 <l:template name="answer" text="%t"/>
-<l:template name="appendix" text="Annexe %n. %t"/>
+<l:template name="appendix" text="Annexe %n. %t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
 <l:template name="bibliodiv" text="%t"/>
@@ -279,12 +279,12 @@
 <l:template name="book" text="%t"/>
 <l:template name="calloutlist" text="%t"/>
 <l:template name="caution" text="%t"/>
-<l:template name="chapter" text="Chapitre %n. %t"/>
+<l:template name="chapter" text="Chapitre %n. %t"/>
 <l:template name="colophon" text="%t"/>
 <l:template name="dedication" text="%t"/>
-<l:template name="equation" text="Équation %n. %t"/>
-<l:template name="example" text="Exemple %n. %t"/>
-<l:template name="figure" text="Figure %n. %t"/>
+<l:template name="equation" text="Équation %n. %t"/>
+<l:template name="example" text="Exemple %n. %t"/>
+<l:template name="figure" text="Figure %n. %t"/>
 <l:template name="foil" text="%t"/>
 <l:template name="foilgroup" text="%t"/>
 <l:template name="formalpara" text="%t"/>
@@ -311,9 +311,9 @@
 <l:template name="partintro" text="%t"/>
 <l:template name="preface" text="%t"/>
 <l:template name="procedure" text="%t"/>
-<l:template name="procedure.formal" text="Procédure %n. %t"/>
+<l:template name="procedure.formal" text="Procédure %n. %t"/>
 <l:template name="productionset" text="%t"/>
-<l:template name="productionset.formal" text="Production %n"/>
+<l:template name="productionset.formal" text="Production %n"/>
 <l:template name="qandadiv" text="%t"/>
 <l:template name="qandaentry" text="%t"/>
 <l:template name="qandaset" text="%t"/>
@@ -332,7 +332,7 @@
 <l:template name="setindex" text="%t"/>
 <l:template name="sidebar" text="%t"/>
 <l:template name="step" text="%t"/>
-<l:template name="table" text="Tableau %n. %t"/>
+<l:template name="table" text="Tableau %n. %t"/>
 <l:template name="task" text="%t"/>
 <l:template name="tasksummary" text="%t"/>
 <l:template name="taskprerequisites" text="%t"/>
@@ -360,17 +360,17 @@
 <l:template name="drama" text="%t" lang="en"/>
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
-<l:context name="title-numbered"><l:template name="appendix" text="Annexe %n. %t"/>
-<l:template name="article/appendix" text="%n. %t"/>
-<l:template name="bridgehead" text="%n. %t"/>
-<l:template name="chapter" text="Chapitre %n. %t"/>
-<l:template name="part" text="Partie %n. %t"/>
-<l:template name="sect1" text="%n. %t"/>
-<l:template name="sect2" text="%n. %t"/>
-<l:template name="sect3" text="%n. %t"/>
-<l:template name="sect4" text="%n. %t"/>
-<l:template name="sect5" text="%n. %t"/>
-<l:template name="section" text="%n. %t"/>
+<l:context name="title-numbered"><l:template name="appendix" text="Annexe %n. %t"/>
+<l:template name="article/appendix" text="%n. %t"/>
+<l:template name="bridgehead" text="%n. %t"/>
+<l:template name="chapter" text="Chapitre %n. %t"/>
+<l:template name="part" text="Partie %n. %t"/>
+<l:template name="sect1" text="%n. %t"/>
+<l:template name="sect2" text="%n. %t"/>
+<l:template name="sect3" text="%n. %t"/>
+<l:template name="sect4" text="%n. %t"/>
+<l:template name="sect5" text="%n. %t"/>
+<l:template name="section" text="%n. %t"/>
 <l:template name="simplesect" text="%t"/>
 <l:template name="topic" text="%t" lang="en"/>
 </l:context>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t"/>
-<l:template name="answer" text="R : %n"/>
+<l:template name="answer" text="R : %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="Q : %n"/>
+<l:template name="qandaentry" text="Q : %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="Q : %n"/>
+<l:template name="question" text="Q : %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -494,62 +494,62 @@
 <l:template name="dialogue" text="%t" lang="en"/>
 <l:template name="drama" text="%t" lang="en"/>
 <l:template name="poetry" text="%t" lang="en"/>
-<l:template name="bridgehead" text="la section intitulée « %t »"/>
-<l:template name="refsection" text="la section intitulée « %t »"/>
-<l:template name="refsect1" text="la section intitulée « %t »"/>
-<l:template name="refsect2" text="la section intitulée « %t »"/>
-<l:template name="refsect3" text="la section intitulée « %t »"/>
-<l:template name="sect1" text="la section intitulée « %t »"/>
-<l:template name="sect2" text="la section intitulée « %t »"/>
-<l:template name="sect3" text="la section intitulée « %t »"/>
-<l:template name="sect4" text="la section intitulée « %t »"/>
-<l:template name="sect5" text="la section intitulée « %t »"/>
-<l:template name="section" text="la section intitulée « %t »"/>
-<l:template name="simplesect" text="la section intitulée « %t »"/>
+<l:template name="bridgehead" text="la section intitulée « %t »"/>
+<l:template name="refsection" text="la section intitulée « %t »"/>
+<l:template name="refsect1" text="la section intitulée « %t »"/>
+<l:template name="refsect2" text="la section intitulée « %t »"/>
+<l:template name="refsect3" text="la section intitulée « %t »"/>
+<l:template name="sect1" text="la section intitulée « %t »"/>
+<l:template name="sect2" text="la section intitulée « %t »"/>
+<l:template name="sect3" text="la section intitulée « %t »"/>
+<l:template name="sect4" text="la section intitulée « %t »"/>
+<l:template name="sect5" text="la section intitulée « %t »"/>
+<l:template name="section" text="la section intitulée « %t »"/>
+<l:template name="simplesect" text="la section intitulée « %t »"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="R : %n"/>
-<l:template name="appendix" text="Annexe %n"/>
-<l:template name="bridgehead" text="Section %n"/>
-<l:template name="chapter" text="Chapitre %n"/>
-<l:template name="equation" text="Équation %n"/>
-<l:template name="example" text="Exemple %n"/>
-<l:template name="figure" text="Figure %n"/>
-<l:template name="part" text="Partie %n"/>
-<l:template name="procedure" text="Procédure %n"/>
-<l:template name="productionset" text="Production %n"/>
-<l:template name="qandadiv" text="Q &amp; R %n"/>
-<l:template name="qandaentry" text="Q : %n"/>
-<l:template name="question" text="Q : %n"/>
-<l:template name="sect1" text="Section %n"/>
-<l:template name="sect2" text="Section %n"/>
-<l:template name="sect3" text="Section %n"/>
-<l:template name="sect4" text="Section %n"/>
-<l:template name="sect5" text="Section %n"/>
-<l:template name="section" text="Section %n"/>
-<l:template name="table" text="Tableau %n"/>
+<l:context name="xref-number"><l:template name="answer" text="R : %n"/>
+<l:template name="appendix" text="Annexe %n"/>
+<l:template name="bridgehead" text="Section %n"/>
+<l:template name="chapter" text="Chapitre %n"/>
+<l:template name="equation" text="Équation %n"/>
+<l:template name="example" text="Exemple %n"/>
+<l:template name="figure" text="Figure %n"/>
+<l:template name="part" text="Partie %n"/>
+<l:template name="procedure" text="Procédure %n"/>
+<l:template name="productionset" text="Production %n"/>
+<l:template name="qandadiv" text="Q &amp; R %n"/>
+<l:template name="qandaentry" text="Q : %n"/>
+<l:template name="question" text="Q : %n"/>
+<l:template name="sect1" text="Section %n"/>
+<l:template name="sect2" text="Section %n"/>
+<l:template name="sect3" text="Section %n"/>
+<l:template name="sect4" text="Section %n"/>
+<l:template name="sect5" text="Section %n"/>
+<l:template name="section" text="Section %n"/>
+<l:template name="table" text="Tableau %n"/>
 </l:context>
-<l:context name="xref-number-and-title"><l:template name="appendix" text="Annexe %n, %t"/>
-<l:template name="bridgehead" text="Section %n, « %t »"/>
-<l:template name="chapter" text="Chapitre %n, %t"/>
-<l:template name="equation" text="Équation %n, « %t »"/>
-<l:template name="example" text="Exemple %n, « %t »"/>
-<l:template name="figure" text="Figure %n, « %t »"/>
-<l:template name="part" text="Partie %n, « %t »"/>
-<l:template name="procedure" text="Procédure %n, « %t »"/>
-<l:template name="productionset" text="Production %n, « %t »"/>
-<l:template name="qandadiv" text="Q &amp; R %n, « %t »"/>
-<l:template name="refsect1" text="la section intitulée « %t »"/>
-<l:template name="refsect2" text="la section intitulée « %t »"/>
-<l:template name="refsect3" text="la section intitulée « %t »"/>
-<l:template name="refsection" text="la section intitulée « %t »"/>
-<l:template name="sect1" text="Section %n, « %t »"/>
-<l:template name="sect2" text="Section %n, « %t »"/>
-<l:template name="sect3" text="Section %n, « %t »"/>
-<l:template name="sect4" text="Section %n, « %t »"/>
-<l:template name="sect5" text="Section %n, « %t »"/>
-<l:template name="section" text="Section %n, « %t »"/>
-<l:template name="simplesect" text="la section intitulée « %t »"/>
-<l:template name="table" text="Tableau %n, « %t »"/>
+<l:context name="xref-number-and-title"><l:template name="appendix" text="Annexe %n, %t"/>
+<l:template name="bridgehead" text="Section %n, « %t »"/>
+<l:template name="chapter" text="Chapitre %n, %t"/>
+<l:template name="equation" text="Équation %n, « %t »"/>
+<l:template name="example" text="Exemple %n, « %t »"/>
+<l:template name="figure" text="Figure %n, « %t »"/>
+<l:template name="part" text="Partie %n, « %t »"/>
+<l:template name="procedure" text="Procédure %n, « %t »"/>
+<l:template name="productionset" text="Production %n, « %t »"/>
+<l:template name="qandadiv" text="Q &amp; R %n, « %t »"/>
+<l:template name="refsect1" text="la section intitulée « %t »"/>
+<l:template name="refsect2" text="la section intitulée « %t »"/>
+<l:template name="refsect3" text="la section intitulée « %t »"/>
+<l:template name="refsection" text="la section intitulée « %t »"/>
+<l:template name="sect1" text="Section %n, « %t »"/>
+<l:template name="sect2" text="Section %n, « %t »"/>
+<l:template name="sect3" text="Section %n, « %t »"/>
+<l:template name="sect4" text="Section %n, « %t »"/>
+<l:template name="sect5" text="Section %n, « %t »"/>
+<l:template name="section" text="Section %n, « %t »"/>
+<l:template name="simplesect" text="la section intitulée « %t »"/>
+<l:template name="table" text="Tableau %n, « %t »"/>
 </l:context>
 <l:context name="authorgroup"><l:template name="sep" text=", "/>
 <l:template name="sep2" text=" et "/>
@@ -565,7 +565,7 @@
 </l:context>
 <l:context name="datetime"><l:template name="format" text="d/m/Y"/>
 </l:context>
-<l:context name="termdef"><l:template name="prefix" text="[Définition : "/>
+<l:context name="termdef"><l:template name="prefix" text="[Définition : "/>
 <l:template name="suffix" text="]"/>
 </l:context>
 <l:context name="datetime-full"><l:template name="January" text="janvier"/>

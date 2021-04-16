@@ -361,10 +361,10 @@
 <l:template name="poetry" text="%t" lang="en"/>
 </l:context>
 <l:context name="title-numbered"><l:template name="appendix" text="付録%n %t"/>
-<l:template name="article/appendix" text="%n. %t" lang="en"/>
+<l:template name="article/appendix" text="%n. %t" lang="en"/>
 <l:template name="bridgehead" text="%n %t"/>
 <l:template name="chapter" text="第%n章 %t"/>
-<l:template name="part" text="パート %n. %t"/>
+<l:template name="part" text="パート %n. %t"/>
 <l:template name="sect1" text="%n. %t"/>
 <l:template name="sect2" text="%n. %t"/>
 <l:template name="sect3" text="%n. %t"/>
@@ -420,7 +420,7 @@
 </l:context>
 <l:context name="xref"><l:template name="abstract" text="%t"/>
 <l:template name="acknowledgements" text="%t" lang="en"/>
-<l:template name="answer" text="答： %n"/>
+<l:template name="answer" text="答： %n"/>
 <l:template name="appendix" text="%t"/>
 <l:template name="article" text="%t"/>
 <l:template name="authorblurb" text="%t"/>
@@ -465,9 +465,9 @@
 <l:template name="procedure" text="%t"/>
 <l:template name="productionset" text="%t"/>
 <l:template name="qandadiv" text="%t"/>
-<l:template name="qandaentry" text="問： %n"/>
+<l:template name="qandaentry" text="問： %n"/>
 <l:template name="qandaset" text="%t"/>
-<l:template name="question" text="問： %n"/>
+<l:template name="question" text="問： %n"/>
 <l:template name="reference" text="%t"/>
 <l:template name="refsynopsisdiv" text="%t"/>
 <l:template name="screenshot" text="%t" lang="en"/>
@@ -507,26 +507,26 @@
 <l:template name="section" text="「%t」"/>
 <l:template name="simplesect" text="「%t」"/>
 </l:context>
-<l:context name="xref-number"><l:template name="answer" text="答： %n"/>
+<l:context name="xref-number"><l:template name="answer" text="答： %n"/>
 <l:template name="appendix" text="付録%n"/>
-<l:template name="bridgehead" text="項 %n"/>
+<l:template name="bridgehead" text="項 %n"/>
 <l:template name="chapter" text="第%n章"/>
-<l:template name="equation" text="式 %n"/>
-<l:template name="example" text="例 %n"/>
-<l:template name="figure" text="図 %n"/>
-<l:template name="part" text="パート %n"/>
-<l:template name="procedure" text="手順 %n"/>
-<l:template name="productionset" text="プロダクション %n"/>
-<l:template name="qandadiv" text="質問と答え %n"/>
-<l:template name="qandaentry" text="問： %n"/>
-<l:template name="question" text="問： %n"/>
+<l:template name="equation" text="式 %n"/>
+<l:template name="example" text="例 %n"/>
+<l:template name="figure" text="図 %n"/>
+<l:template name="part" text="パート %n"/>
+<l:template name="procedure" text="手順 %n"/>
+<l:template name="productionset" text="プロダクション %n"/>
+<l:template name="qandadiv" text="質問と答え %n"/>
+<l:template name="qandaentry" text="問： %n"/>
+<l:template name="question" text="問： %n"/>
 <l:template name="sect1" text="%n"/>
 <l:template name="sect2" text="%n"/>
 <l:template name="sect3" text="%n"/>
 <l:template name="sect4" text="%n"/>
 <l:template name="sect5" text="%n"/>
 <l:template name="section" text="%n"/>
-<l:template name="table" text="表 %n"/>
+<l:template name="table" text="表 %n"/>
 </l:context>
 <l:context name="xref-number-and-title"><l:template name="appendix" text="付録%n %t"/>
 <l:template name="bridgehead" text="%n項「%t」"/>
