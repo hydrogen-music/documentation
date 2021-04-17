@@ -4,7 +4,7 @@ Hydrogen Documentation
 Contents:
 
 1. Overview
-2. Tools, Supported Platforms, and Releases
+2. Installation and Usage
 3. Translators
 4. Documentors
 5. Developers
@@ -14,9 +14,9 @@ Contents:
 # 1. Overview
 
 
-Hydrogen documentation is maintained in DocBook 4.0 (XML) and
+Hydrogen documentation is maintained in `DocBook 4.5` (XML) and
 translated to HTML before release.  Different translations are managed
-through GNU gettext PO files.  When the documentation is generated,
+through `GNU gettext` PO files.  When the documentation is generated,
 the PO files and the master documentation are merged to create the doc
 for that specific language.
 
@@ -27,89 +27,82 @@ and Developers.  A section is devoted to each one, individually.
 This document assumes that you don't know much, and tries to give you
 pointers to the stuff you need to know.
 
-# 2. Tools, Supported Platforms, and Releases
+# 2. Installation and Usage
 
-The following tools are used to maintain and process the
-documentation.  Depending on what you're working on, you may not need
-all (or any) of these.
+The following tools you must install in order to maintain and process the
+documentation (on Debian-based systems).
 
-    xml2pot - Creates the translation templates (*.pot) based on the
-    original DocBook source.[1]
+``` bash
+sudo apt install itstool gettext xmlto libxml2-utils make
+```
 
-    po2xml - Merges the master DocBook source with a translation file
-    (*.po) to create a translated DocBook file.[1]
+To update the resulting HTML files after changing a master
+document (manual.docbook and tutorial.docbook) or a translation
+(*.po), you just have to enter
 
-    xmlto - Converts DocBook files to HTML.  (Note that xmlto can
-    convert DocBook to much more than just HTML.)[2]
+``` bash
+make
+```
 
-    xmllint - Used to validate the DocBook files against the DocBook
-    DTD.[3]
+## 2.1. Detailed description
 
-    make - GNU's make utility.
+The toolchain consists of the following programs:
 
-With the exception of xml2pot and po2xml, these tools are all very
-easy to install on Linux, being a part of the core toolchains for KDE,
-Gnome, Debian, etc.  However, these tools are not as easy to set up on
-non-Linux platforms.  Furthermore, it is undesirable to add these to
-the list of build dependencies for Hydrogen.
+    [itstool](http://itstool.org/index.html) - Uses the rules of the
+	W3C Internationalization Tag Set (ITS) to create the translation
+	templates (*.pot) based on the 
+    original DocBook source and merges the compiled *.mo files with
+	the original to produce the translated DocBook files.
+	
+	`msgmerge`, `msginit`, `msgfmt` - Are part of the
+	[gettext](https://www.gnu.org/software/gettext/manual/gettext.html) 
+	internationalization
+	framework and used to update, initialize, and compile the
+    *.po translation files.
 
-The po2xml and xml2pot tools are part of the 'poxml' package.  This is
-a part of the KDE SDK.  However, the KDE3 version of poxml does not
-work with our docbook sources.  The reason is a faulty implementation
-of poxml.  The KDE4 version of poxml corrects these issues, and is the
-only version known to work.
+    [xmlto](https://pagure.io/xmlto/) - Converts DocBook files to
+	HTML.  (Note that `xmlto` is part of libxml2 and can convert
+	DocBook to much more than just HTML.)
 
-Therefore, these files will be processed before making a release of
-Hydrogen, and the generated HTML output will become a part of the
-distribution.
+    [xmllint](http://xmlsoft.org/) - Used to validate the DocBook
+	files against the DocBook DTD.
 
-[1] xml2po and po2xml are part of poxml, which is in the KDE SDK.
-    http://www.kde.org/.  You must use the KDE4 version.
-    
-[2] xmlto is a convenient front-end to an XSLT processor.
-    http://cyberelk.net/tim/software/xmlto/
-    
-[3] xmllint is part of libxml2 http://xmlsoft.org/
+    `make` - GNU's make utility.
 
 # 3. Translators
 
 To translate documentation for Hydrogen you will need:
 
-* To understand XML, and enough DocBook to be dangerous.
-
 * A PO-file editor.  (Note that a text editor works fine, but a
-      translation assistant like KBabel is better.)
-
+      translation assistant like `poedit` is better.)
 * To be able to read and understand English.
 
-If you don't have all the tools listed in Section 2, that's OK.  Ask
-the Hydrogen Developer list and someone there can process files for
-you.
+If you don't have all the tools listed in Section 2 or do not know how
+to install them on your particular system, that's OK.  Ask the
+[Hydrogen Developer
+list](https://sourceforge.net/projects/hydrogen/lists/hydrogen-devel)
+and someone there can process files for you.
 
-To make a new translation of the Hydrogen manual or tutorial, simply
-copy the template and get started:
+To make a new translation of the Hydrogen manual or tutorial, you
+should use the following command
 
-    $ cp manual.pot manual_ja.po
+``` bash
+msginit -l LL -i manual.pot -o manual_LL.po
+```
 
-Note that the _ZZ is added, and ZZ is the IANA abbreviation code for
+Note that the `_LL` is added to the translation template, and `LL` is
+the IANA abbreviation code for
 that language.  (E.g. 'ja' is for 'Japanese.')  The registry for the
 codes is located here:
 
     http://www.iana.org/assignments/language-subtag-registry
 
-If a translation already exists, but needs to be updated, you can
-update the .po file like this:
+All translation files (.po) will be updated and converted to .html
+files as soon as one of the master documents - manual.docbook or
+tutorial.docbook - is touched and the `make` command is executed.
 
-    $ touch manual.docbook
-    $ make manual_es.po
-
-You can either see the changes using 'diff' or your translation
-editor.
-
-When you want to check your translation (and view it in HTML), this
-can be done like this:
-
-    $ make manual_ja.html
+You can either see the changes using the commandline tool `diff`, the
+graphical program `meld`, or your favorite translation editor.
 
 NOTICE:  Before creating the HTML file, the document will be
 validated.  If the document does not validate, you will have to alter
@@ -120,6 +113,17 @@ RULES AND GUIDELINES FOR TRANSLATING:
 
 * No new content.  New content must be first added to the master
       (English) manual, and then translated to all the other manuals.
+	  
+* All content enclosed by angle brackets must not be translated. E.g.
+
+``` xml
+      "<title>Hydrogen Tutorial</title>
+```
+	will be translated to
+
+``` xml
+      "<title>Tutoriel de Hydrogen</title>
+```
 
 * Maintain the DocBook XML structure as closely as possible.  Do
       not add sections, divide paragraphs, or alter the markup
@@ -141,20 +145,18 @@ RULES AND GUIDELINES FOR TRANSLATING:
 
 # 4. Documentors
 
-The master Hydrogen Manual and Tutorial are in English.  All new
-content and major revisions shall be done there first.  In order to
-work on the documentation, you will need:
+The master documents - manual.docbook and tutorial.docbook - are in
+English.  All new content and major revisions shall be done there
+first.  In order to work on the documentation, you will need:
 
-* To know and understand XML and DocBook well.
+* To know and understand [DocBook](https://tdg.docbook.org/tdg/4.5/docbook.html) well.
 
 * To know and understand Hydrogen well enough to *ask*
       *questions*.
 
 * An XML editor (note: any text editor will do).
 
-* An XML validator (e.g. xmllint, xsltproc, Xalan)
-
-* A way to create PNG images.  (e.g. GIMP, PhotoShop)
+* A way to create images.  (e.g. Inkscape, GIMP, PhotoShop)
 
 What you write is pretty much your own style.  Please *do* keep the
 text interesting to read by using wit and a more familiar
@@ -177,19 +179,18 @@ your documents validate (see Section 6 below).  Some guidelines:
 * Use double-quotes for all attributes.
           Good:   ```<foo id="bar"/>```
           Bad:    ```<foo id='bar'/>```
-          Reason:  po2xml chokes on them.
 
-* Please make good use of ```<xref>``` tags for internal links within
-      the document.
+* Please make good use of ```<link>``` and ```<xref>``` tags for
+      internal links within the document.
 
-* Since we're using ```<xref>```'s -- if you change an id=".."
-      attribute, make sure that you change all its references, too.
-      If you create a broken link, the document won't validate.
+* Since we're using ```<link>``` and ```<xref>```'s -- if you change
+      an id=".."  attribute, make sure that you change all its
+      references, too.  If you create a broken link, the document
+      won't validate.
 
-* Do not make reference to specific section numbers, figure
-      numbers, or titles (e.g. "See section 2.1.3 The Menu Bar").
-      Instead, use ```<xref>``` tags so that this text will be generated for
-      you.
+* Do not make reference to specific section numbers, figure numbers,
+      or titles (e.g. "See section 2.1.3 The Menu Bar").  Instead, use
+      ```<xref>``` tags so that this text will be generated for you.
 
 * For italics, you do not need to set the role="italic" attribute,
       since that is the default.  To get boldface, you must use
@@ -215,50 +216,39 @@ your documents validate (see Section 6 below).  Some guidelines:
 # 5. Developers
 -------------
 
-Since we don't want to add xmlto, poxml, xmllint, and the DocBook
-DTD's to our normal build requirements: All HTML files need to be
-generated and committed before releasing.  After the release, the
-generated HTML files can (and should) be deleted.  Do not commit the
-generated DocBook documents.
+Since we don't want to add `xmlto`, `itstool`, `xmllint`, `msgmerge`,
+`msgfmt`, and the DocBook DTD's to our normal build requirements: All
+HTML files need to be generated and committed before releasing.  After
+the release, the generated HTML files can (and should) be deleted.  Do
+not commit the generated DocBook documents.
 
 If you are preparing a Hydrogen release, you must have all the tools
 listed above so that you can process the documents.  You may also need
 to understand DocBook enough to help a translator with validation
 issues.  (See Section 6 below.)
 
-The reason for doing it this way is that (as of this writing) xmlto,
-poxml, xmllint, and DocBook are not very portable across Linux, Mac,
-and Windows.  Nor or they even very portable across different Linux
-distributions.  However, the tools are fairly stable on Debian/Ubuntu
--- which most of the current developers are using.
+The reason for doing it this way is that the tools are not very
+portable across Linux, Mac, and Windows.  Nor or they even very
+portable across different Linux distributions.  However, the tools are
+fairly stable on Debian/Ubuntu -- which most of the current developers
+are using.
 
 # 6. XML and Validation
 ---------------------
 
-You've probably written HTML before, and found it pretty easy.  HTML
-is an application of something bigger called SGML.  However, SGML very
-difficult to implement reliably.  ("Best viewed on Netscape
-Navigator(TM)!!")  Because of this, XML was developed as a replacement
-to SGML.  To read more about XML, check out the Wikipedia article:
+DocBook is a specific flavor of XML and in case you already have read
+or written HTML code in recent years - since its port to XHTML - you
+can get started with DocBook in no time. To read more about XML, check
+out the Wikipedia article:
 
     http://en.wikipedia.org/wiki/XML
 
-It's very much like HTML except that:
+Some basics:
 
-* The tags are case sensitive.  ```<IMG>``` and ```<img>``` are the same in
-      HTML, but in XML they are considered different.
+* The tags are case sensitive.  ```<IMG>``` and ```<img>``` are not the same.
 
-* Closing tags are not optional.  In HTML you could start a
-      paragraph with a ```<P>```, and then start a new one by putting
-      another <P>.  The closing tag ```</P>``` is implied.  In XML, you must
-      include the closing tag:
-
-          <p> "Knock, knock."</p>
-          <p>"Who's there?"</p>
-          
-
-* Empty tags are like this:  <br/>.  (In HTML they didn't have the
-      forward slash.)
+* Closing tags are not optional.
+* Empty tags are like this:  <br/>.
 
 If a document follows all the rules of XML, it is called
 "Well-Formed."  For example, the following is a well-formed XML
@@ -312,10 +302,10 @@ the data -- but they probably won't process it *right*.
 # 7. Additional DocBook Authoring Restrictions
 -------------------------------------
 
-It has been found that poxml is assuming some things about the
-document structure that are not specified in any DTD.  (This is at
-least true for the KDE3 version of poxml.)  Thus, in order to get our
-files to work with poxml, we have to add the following restrictions:
+It has been found that the toolchain is assuming some things about the
+document structure that are not specified in any DTD. Thus, in order
+to get our files to work with poxml, we have to add the following
+restrictions:
 
 * ```<para>``` may not contain an ```<itemizedlist>```
 

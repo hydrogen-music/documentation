@@ -1,641 +1,532 @@
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-03-14 22:30+0000\n"
+"POT-Creation-Date: 2021-04-13 17:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Tag: title
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+
+#. (itstool) path: bookinfo/title
 #: tutorial.docbook:7
-#, no-c-format
 msgid "Hydrogen Tutorial"
 msgstr ""
 
-#. Tag: author
+#. (itstool) path: authorgroup/author
 #: tutorial.docbook:9
-#, no-c-format
 msgid "<firstname>Antonio</firstname> <surname>Piraino</surname>"
 msgstr ""
 
-#. Tag: author
+#. (itstool) path: authorgroup/author
 #: tutorial.docbook:13
-#, no-c-format
 msgid "<firstname>Sebastian</firstname> <surname>Moors</surname>"
 msgstr ""
 
-#. Tag: date
+#. (itstool) path: bookinfo/date
 #: tutorial.docbook:19
-#, no-c-format
 msgid "10/May/2017"
 msgstr ""
 
-#. Tag: para
-#: tutorial.docbook:22
-#, no-c-format
-msgid ""
-"You've just downloaded the latest version of Hydrogen and have it installed "
-"successfully. Hydrogen may come in handy for the these tasks:"
-msgstr ""
-
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:24
-#, no-c-format
-msgid ""
-"It can be used as an advanced \"click\" machine helping you practicing (in "
-"speed, precision and rudiments) drums, maybe with a custom pattern you wrote."
+msgid "It can be used as an advanced \"click\" machine helping you practicing (in speed, precision and rudiments) drums, maybe with a custom pattern you wrote."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:25
-#, no-c-format
-msgid ""
-"You want to learn how to properly play a song: you can \"write it down\" "
-"inside Hydrogen (or just a few difficult parts of it). Doing the effort of "
-"finding, splitting and reproducing the different parts of the songs will "
-"improve your understanding of it. Also, using Hydrogen with your songs will "
-"ensure that in future a quick glance at the songfile you have created will "
-"bring the song up immediately to mind."
+msgid "You want to learn how to properly play a song: you can \"write it down\" inside Hydrogen (or just a few difficult parts of it). Doing the effort of finding, splitting and reproducing the different parts of the songs will improve your understanding of it. Also, using Hydrogen with your songs will ensure that in future a quick glance at the songfile you have created will bring the song up immediately to mind."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:26
-#, no-c-format
-msgid ""
-"You can use Hydrogen with in combination with other software (Ardour, ...)"
+msgid "You can use Hydrogen with in combination with other software (Ardour, ...)"
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: abstract/para
+#: tutorial.docbook:22
+msgid "You've just downloaded the latest version of Hydrogen and have it installed successfully. Hydrogen may come in handy for the these tasks: <_:itemizedlist-1/>"
+msgstr ""
+
+#. (itstool) path: chapter/title
 #: tutorial.docbook:34
-#, no-c-format
 msgid "Let's start"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: chapter/para
 #: tutorial.docbook:35
-#, no-c-format
 msgid "Before starting make sure you have a few things:"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:38
-#, no-c-format
-msgid ""
-"The song to study on: either an audio-cd or (better) an .ogg or .mp3 for "
-"optimal flexibility."
+msgid "The song to study on: either an audio-cd or (better) an .ogg or .mp3 for optimal flexibility."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:39
-#, no-c-format
-msgid ""
-"Optionally a rough layout of the song on paper: it may be useful to count "
-"bars and different parts of the song that eventually will get into Hydrogen."
+msgid "Optionally a rough layout of the song on paper: it may be useful to count bars and different parts of the song that eventually will get into Hydrogen."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: chapter/para
 #: tutorial.docbook:42
-#, no-c-format
 msgid "The song we will work on has the following structure:"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:45
-#, no-c-format
 msgid "<emphasis role=\"bold\">Intro:</emphasis> 4 bars"
 msgstr ""
 
-#. Tag: para
-#: tutorial.docbook:46 tutorial.docbook:48
-#, no-c-format
+#. (itstool) path: listitem/para
+#: tutorial.docbook:46
+#: tutorial.docbook:48
 msgid "<emphasis role=\"bold\">Verse:</emphasis> 8 bars"
 msgstr ""
 
-#. Tag: para
-#: tutorial.docbook:47 tutorial.docbook:49 tutorial.docbook:54
-#, no-c-format
+#. (itstool) path: listitem/para
+#: tutorial.docbook:47
+#: tutorial.docbook:49
+#: tutorial.docbook:54
 msgid "<emphasis role=\"bold\">Bridge:</emphasis> 8 bars"
 msgstr ""
 
-#. Tag: para
-#: tutorial.docbook:50 tutorial.docbook:55 tutorial.docbook:56
+#. (itstool) path: listitem/para
+#: tutorial.docbook:50
+#: tutorial.docbook:55
+#: tutorial.docbook:56
 #: tutorial.docbook:57
-#, no-c-format
 msgid "<emphasis role=\"bold\">Chorus:</emphasis> 8 bars"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:51
-#, no-c-format
 msgid "<emphasis role=\"bold\">Riff:</emphasis> 4 bars"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:52
-#, no-c-format
 msgid "<emphasis role=\"bold\">Verse (with guitar):</emphasis> 8 bars"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:53
-#, no-c-format
 msgid "<emphasis role=\"bold\">Verse (with voice):</emphasis> 8 bars"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:58
-#, no-c-format
 msgid "<emphasis role=\"bold\">Final Riff:</emphasis> 4 bars"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: chapter/para
 #: tutorial.docbook:61
-#, no-c-format
-msgid ""
-"Looking at this scheme we can see that some pattern repeats, so we'll use "
-"this symbols in Hydrogen's Song Editor:"
+msgid "Looking at this scheme we can see that some pattern repeats, so we'll use this symbols in Hydrogen's Song Editor:"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:64
-#, no-c-format
-msgid "Verse -> A"
+msgid "Verse -&gt; A"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:65
-#, no-c-format
-msgid "Bridge -> B"
+msgid "Bridge -&gt; B"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:66
-#, no-c-format
-msgid "Chorus -> C"
+msgid "Chorus -&gt; C"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: chapter/para
 #: tutorial.docbook:68
-#, no-c-format
-msgid ""
-"And to save up words on explanations we'll use two common TLA (Three Letters "
-"Acronym ^_^):"
+msgid "And to save up words on explanations we'll use two common TLA (Three Letters Acronym ^_^):"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:70
-#, no-c-format
 msgid "LMB: left mouse button"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:71
-#, no-c-format
 msgid "RMB: right mouse button"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: chapter/para
 #: tutorial.docbook:74
-#, no-c-format
-msgid ""
-"Well, now unplug your phone and launch Hydrogen from the shell: let's get to "
-"work!"
+msgid "Well, now unplug your phone and launch Hydrogen from the shell: let's get to work!"
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: sect1/title
 #: tutorial.docbook:77
-#, no-c-format
 msgid "Intro"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:78
-#, no-c-format
-msgid ""
-"The base pattern (Fig. 1 and 2) is 4 bars long (divided in 2 different bars, "
-"each repeated 2 times, so it's [2a*2]+[2b*2]) and lasts for the whole song, "
-"from the beginning to the end, riff included; most of the time (intro and "
-"riff excluded) this base pattern is repeated 2 times to reach the commonly "
-"used 8 bars for each part of the song (A,B,C). Before starting let's set the "
-"speed to 98bpm (HINT HINT you can find out by yourself the speed of the song "
-"while playing it with your favourite media player and following the rhythm "
-"by clicking repeatedly the backslash key in Hydrogen) and from the menu "
-"<quote>Grid Resolution</quote> let's set '16'. To create a new pattern "
-"select the instrument <quote>Closed HH</quote>, click on RMB and choose "
-"<quote>Fill Notes</quote>: the first two bars will be filled up. Then insert "
-"manually the beats on Snare Jazz and Kick as indicated in the 2 pictures "
-"below and there we have the base pattern for our song. Note how the beats on "
-"the hi-hat have different 'hardness': beats falling on the beginning of the "
-"bar are set at [0.78], the others at [0.50] (you can check that on the lower "
-"stat bar of Hydrogen), in order to give groove the song."
+msgid "The base pattern (Fig. 1 and 2) is 4 bars long (divided in 2 different bars, each repeated 2 times, so it's [2a*2]+[2b*2]) and lasts for the whole song, from the beginning to the end, riff included; most of the time (intro and riff excluded) this base pattern is repeated 2 times to reach the commonly used 8 bars for each part of the song (A,B,C). Before starting let's set the speed to 98bpm (HINT HINT you can find out by yourself the speed of the song while playing it with your favourite media player and following the rhythm by clicking repeatedly the backslash key in Hydrogen) and from the menu <quote>Grid Resolution</quote> let's set '16'. To create a new pattern select the instrument <quote>Closed HH</quote>, click on RMB and choose <quote>Fill Notes</quote>: the first two bars will be filled up. Then insert manually the beats on Snare Jazz and Kick as indicated in the 2 pictures below and there we have the base pattern for our song. Note how the beats on the hi-hat have different 'hardness': beats falling on the beginning of the bar are set at [0.78], the others at [0.50] (you can check that on the lower stat bar of Hydrogen), in order to give groove the song."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:83
+msgctxt "_"
+msgid "external ref='img_tutorial/PatternBase1.png' md5='57bc11be8a08f1c21f341d939c026330'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:86
-#, no-c-format
 msgid "<emphasis role=\"bold\">Fig. 1</emphasis> Base pattern, first bar."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:96
+msgctxt "_"
+msgid "external ref='img_tutorial/PatternBase2.png' md5='8b995d46d2b5834358bb3d66caff3bff'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:99
-#, no-c-format
 msgid "<emphasis role=\"bold\">Fig. 2</emphasis> Base pattern, second bar."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:106
-#, no-c-format
-msgid ""
-"Before we start writing down verses there are 4 intro bars, all equals to "
-"each other, except for the last one which at the end has an open hi-hat. We "
-"should do then:"
+msgid "Before we start writing down verses there are 4 intro bars, all equals to each other, except for the last one which at the end has an open hi-hat. We should do then:"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:109
-#, no-c-format
-msgid ""
-"Rename the first pattern in the Song Editor with RMB click on the name "
-"<quote>Empty Pattern</quote> and change it to <quote>intro_a</quote>, for "
-"example."
+msgid "Rename the first pattern in the Song Editor with RMB click on the name <quote>Empty Pattern</quote> and change it to <quote>intro_a</quote>, for example."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:110
-#, no-c-format
-msgid ""
-"Add two 'X' near the first one (which represent the second and the third bar)"
+msgid "Add two 'X' near the first one (which represent the second and the third bar)"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:111
-#, no-c-format
 msgid "Create in Pattern Editor the base pattern (Fig. 1)"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:115
-#, no-c-format
 msgid "For the fourth bar we'll instead open the hi-hat (Fig. 3):"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:118
-#, no-c-format
-msgid ""
-"RMB in Song Editor on the newly created pattern, choose <quote>copy</quote>, "
-"then choose a name (ex. <quote>intro_b</quote>) and automagically you will "
-"have a new one right under."
+msgid "RMB in Song Editor on the newly created pattern, choose <quote>copy</quote>, then choose a name (ex. <quote>intro_b</quote>) and automagically you will have a new one right under."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:119
-#, no-c-format
 msgid "Select the pattern you've just created (IMPORTANT!)"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:120
-#, no-c-format
-msgid ""
-"Delete the last 2 beats of <quote>Closed HH</quote> and move them on "
-"<quote>Open HH</quote>."
+msgid "Delete the last 2 beats of <quote>Closed HH</quote> and move them on <quote>Open HH</quote>."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:121
-#, no-c-format
-msgid ""
-"Select '32' from <quote>Grid Resolution</quote> and add another 2 beats "
-"right near the previous ones."
+msgid "Select '32' from <quote>Grid Resolution</quote> and add another 2 beats right near the previous ones."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: listitem/para
 #: tutorial.docbook:122
-#, no-c-format
-msgid ""
-"Adjust the hardness of these 4 beats so that the first is [0.78] while the "
-"other 3 [0.20] to simulate a longer opening."
+msgid "Adjust the hardness of these 4 beats so that the first is [0.78] while the other 3 [0.20] to simulate a longer opening."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:128
+msgctxt "_"
+msgid "external ref='img_tutorial/Intro4th.png' md5='10704cd372cd73ef373f7458590629c3'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:131
-#, no-c-format
 msgid "<emphasis role=\"bold\">Fig. 3</emphasis> Intro detail, fourth bar."
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: sect1/title
 #: tutorial.docbook:140
-#, no-c-format
 msgid "First verse"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:141
-#, no-c-format
-msgid ""
-"Since we have written the base pattern, now we should already know the "
-"basis. To create the first verse we just have to copy from the Song Editor "
-"the pattern <quote>intro_a</quote> and rename, say, to <quote>A-B-C_1</"
-"quote>, because it is the first bar of the verse that eventually will also "
-"fit for the bridge (B) and the chorus (C). <emphasis role=\"bold\">Pay "
-"attention</emphasis>, why can't we just add 2 more 'X' next to this pattern? "
-"Because in the first bar there is a <quote>Crash</quote> beat which ends the "
-"previous intro, therefore the two bars are not completely equal; you have to "
-"copy the pattern <quote>A-B-C_1</quote> and rename it to <quote>A-B-C_2</"
-"quote>, cutting the <quote>Crash</quote> beat cited before."
+msgid "Since we have written the base pattern, now we should already know the basis. To create the first verse we just have to copy from the Song Editor the pattern <quote>intro_a</quote> and rename, say, to <quote>A-B-C_1</quote>, because it is the first bar of the verse that eventually will also fit for the bridge (B) and the chorus (C). <emphasis role=\"bold\">Pay attention</emphasis>, why can't we just add 2 more 'X' next to this pattern? Because in the first bar there is a <quote>Crash</quote> beat which ends the previous intro, therefore the two bars are not completely equal; you have to copy the pattern <quote>A-B-C_1</quote> and rename it to <quote>A-B-C_2</quote>, cutting the <quote>Crash</quote> beat cited before."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:143
-#, no-c-format
-msgid ""
-"Same thing for the following 2 bars: just copy into the Song Editor the "
-"pattern in Fig. 2, rename it according to the previous ones and add two "
-"'X' (because they're identical), you should reach number '8' as shown in "
-"Fig. 4."
+msgid "Same thing for the following 2 bars: just copy into the Song Editor the pattern in Fig. 2, rename it according to the previous ones and add two 'X' (because they're identical), you should reach number '8' as shown in Fig. 4."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:144
-#, no-c-format
-msgid ""
-"The 4 remaining bars of the verse are more or less the same of what we've "
-"just written, so why redo everything from scratch? Bars number 5,6,7 are "
-"virtually identical to the previous ones so we just have to add 2 crosses to "
-"pattern <quote>A-B-C_2</quote> and one to <quote>A-B-C_3+4</quote> taking "
-"care of renaming the patterns logically (so to understand how the song moves "
-"around the Song Editor), while in the eighth bar there is a fill which "
-"closes the verse. We have to copy+paste in a new line a pattern already "
-"written (ex. <quote>A-B-C_3+4</quote>), rename it to <quote>A-B-C_8</quote> "
-"and modify it as in Fig. 4. Note how in this case too the three <quote>Snare "
-"Jazz</quote> beats on fourth bar have hardness properly tuned with [0.10], "
-"[0.20] and [0.78]; you can't see it in the picture but also the two final "
-"beats of <quote>Tom Mid</quote> are both 'touched' to [0.50], after all it's "
-"only just a small fill, better not beat hard on the drums :)"
+msgid "The 4 remaining bars of the verse are more or less the same of what we've just written, so why redo everything from scratch? Bars number 5,6,7 are virtually identical to the previous ones so we just have to add 2 crosses to pattern <quote>A-B-C_2</quote> and one to <quote>A-B-C_3+4</quote> taking care of renaming the patterns logically (so to understand how the song moves around the Song Editor), while in the eighth bar there is a fill which closes the verse. We have to copy+paste in a new line a pattern already written (ex. <quote>A-B-C_3+4</quote>), rename it to <quote>A-B-C_8</quote> and modify it as in Fig. 4. Note how in this case too the three <quote>Snare Jazz</quote> beats on fourth bar have hardness properly tuned with [0.10], [0.20] and [0.78]; you can't see it in the picture but also the two final beats of <quote>Tom Mid</quote> are both 'touched' to [0.50], after all it's only just a small fill, better not beat hard on the drums :)"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:149
+msgctxt "_"
+msgid "external ref='img_tutorial/Verse8th.png' md5='74975f1153e2f11dd1c3f6a5be3fa004'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:152
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 4</emphasis> Eighth bar of the first verse."
+msgid "<emphasis role=\"bold\">Fig. 4</emphasis> Eighth bar of the first verse."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:159
-#, no-c-format
 msgid "The result in the Song Editor should be something like Fig. 5."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:164
+msgctxt "_"
+msgid "external ref='img_tutorial/VerseAll.png' md5='29a321be72cbe5a395c00acf5a9b9db4'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:167
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 5</emphasis> Intro and first verse in the Song "
-"Editor."
+msgid "<emphasis role=\"bold\">Fig. 5</emphasis> Intro and first verse in the Song Editor."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:174
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">WARNING!</emphasis> if you reached this point "
-"without saving your work, NOW is the good time to do that. A simple [CTRL+S] "
-"followed by the name of the songfile and you'll be ok. If you want to add "
-"some more infos, LMB on 'S' button of the Song Editor and change the fields "
-"as you like: these infos will be shown upon opening of the file."
+msgid "<emphasis role=\"bold\">WARNING!</emphasis> if you reached this point without saving your work, NOW is the good time to do that. A simple [CTRL+S] followed by the name of the songfile and you'll be ok. If you want to add some more infos, LMB on 'S' button of the Song Editor and change the fields as you like: these infos will be shown upon opening of the file."
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: sect1/title
 #: tutorial.docbook:179
-#, no-c-format
 msgid "Bridge and following"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:180
-#, no-c-format
-msgid ""
-"Now that we're done with the first verse you should have an idea of how the "
-"whole thing works: the first bridge is made of the same 8 bars (4+4) with a "
-"slight change at the end of the fourth, which forces us to create a 'custom' "
-"fourth bar while the others are easily added with our friendly little cross "
-"('X')."
+msgid "Now that we're done with the first verse you should have an idea of how the whole thing works: the first bridge is made of the same 8 bars (4+4) with a slight change at the end of the fourth, which forces us to create a 'custom' fourth bar while the others are easily added with our friendly little cross ('X')."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:182
-#, no-c-format
-msgid ""
-"Let's take the latest pattern created as sample (<quote>A-B-C_8</quote>), "
-"let's copy and rename it to <quote>Bridge1_4</quote> (i.e. fourth bar of "
-"first bridge) and modify it as in Fig. 6. We have quickly completed the "
-"bridge! The Song Editor now should appear as follows in Fig. 7. Looking "
-"closely one should ask why the fifth bar of the bridge (17th bar of the "
-"whole song) isn't assigned to the pattern <quote>A-B-C_1</quote>; the answer "
-"is that the pattern has also a <quote>Crash</quote> which is not present in "
-"<quote>A-B-C_2+5+6</quote>."
+msgid "Let's take the latest pattern created as sample (<quote>A-B-C_8</quote>), let's copy and rename it to <quote>Bridge1_4</quote> (i.e. fourth bar of first bridge) and modify it as in Fig. 6. We have quickly completed the bridge! The Song Editor now should appear as follows in Fig. 7. Looking closely one should ask why the fifth bar of the bridge (17th bar of the whole song) isn't assigned to the pattern <quote>A-B-C_1</quote>; the answer is that the pattern has also a <quote>Crash</quote> which is not present in <quote>A-B-C_2+5+6</quote>."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:187
+msgctxt "_"
+msgid "external ref='img_tutorial/Bridge1_4th.png' md5='d76bf26f0877e843a19d62221b4a64a0'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:190
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 6</emphasis> Fourth bar of the first bridge."
+msgid "<emphasis role=\"bold\">Fig. 6</emphasis> Fourth bar of the first bridge."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:200
+msgctxt "_"
+msgid "external ref='img_tutorial/VerseBridge.png' md5='b6bb73a2f8aa6ed0dfeb4cdcf6dcd0f8'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:203
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 7</emphasis> The Song Editor with the first "
-"bridge."
+msgid "<emphasis role=\"bold\">Fig. 7</emphasis> The Song Editor with the first bridge."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:210
-#, no-c-format
-msgid ""
-"Now we can build up quickly the remaining parts of the song: after this "
-"bridge there is another verse, then a bridge and a chorus, which are mostly "
-"the same so we just need to create different pattern in a few cases (along "
-"with this guide you will find the song file with the whole song). Of course "
-"one can write as many lines in the Song Editor as the bars in the song but a "
-"whole song would become difficult to follow, plus the songfile would be "
-"bigger."
+msgid "Now we can build up quickly the remaining parts of the song: after this bridge there is another verse, then a bridge and a chorus, which are mostly the same so we just need to create different pattern in a few cases (along with this guide you will find the song file with the whole song). Of course one can write as many lines in the Song Editor as the bars in the song but a whole song would become difficult to follow, plus the songfile would be bigger."
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: sect1/title
 #: tutorial.docbook:215
-#, no-c-format
 msgid "The Riff"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:216
-#, no-c-format
-msgid ""
-"Around half song there are two riffs: each one is 2 bars long but actually "
-"the pattern is the same, just the other instruments play something that we "
-"will see in the last riff of this song (where drums too play the pattern of "
-"the riff)."
+msgid "Around half song there are two riffs: each one is 2 bars long but actually the pattern is the same, just the other instruments play something that we will see in the last riff of this song (where drums too play the pattern of the riff)."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:218
-#, no-c-format
-msgid ""
-"In this riff the drums play the same pattern we already know for one bar "
-"(see Fig. 1) while in the second bar only beats two times (Fig. 8), then the "
-"pattern again and then again two beats with a small final fill (Fig. 9); "
-"again the open hi-hat is done with beats of different intensity: [0.78] and "
-"[0.20]."
+msgid "In this riff the drums play the same pattern we already know for one bar (see Fig. 1) while in the second bar only beats two times (Fig. 8), then the pattern again and then again two beats with a small final fill (Fig. 9); again the open hi-hat is done with beats of different intensity: [0.78] and [0.20]."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:223
+msgctxt "_"
+msgid "external ref='img_tutorial/Riff1b.png' md5='a0dfe506859200cca819066bc32c26d2'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:226
-#, no-c-format
 msgid "<emphasis role=\"bold\">Fig. 8</emphasis> Second bar of the riff."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:235
+msgctxt "_"
+msgid "external ref='img_tutorial/Riff1c.png' md5='9dc5e97d6e7c98ba70ca66977780a830'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:238
-#, no-c-format
 msgid "<emphasis role=\"bold\">Fig. 9</emphasis> Fourth bar of the riff."
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: sect1/title
 #: tutorial.docbook:247
-#, no-c-format
 msgid "The second half of the song"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:248
-#, no-c-format
-msgid ""
-"After the riff we have half job done. We just have to write down two verses, "
-"one bridge, a chorus repeated 3 times and the same riff at the end."
+msgid "After the riff we have half job done. We just have to write down two verses, one bridge, a chorus repeated 3 times and the same riff at the end."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:250
-#, no-c-format
-msgid ""
-"The second part of the song is slightly different from the previous one "
-"because we have a few hi-hat opening during the verses and every 4 bars "
-"there's a small fill almost everytime: it's easier to start from scratch a "
-"new set of pattern (i.e. <quote>A-B-C-*</quote>) in the Song Editor copying "
-"them with a suffix like '_hh' to show the presence of the <quote>Open HH</"
-"quote>. As noted in the introduction of this guide, Jeff Porcaro puts much "
-"of his skills playing the song and this makes the difference between a song "
-"played from a raw and \"cold\" transcription on paper (or on Hydrogen): "
-"therefore the following parts of the song will try to be faithful to the "
-"original piece, but another 'ear' could give another written layout of the "
-"same part: after all this doesn't matter so much since we are showing how a "
-"program works, not to play like Porcaro :)"
+msgid "The second part of the song is slightly different from the previous one because we have a few hi-hat opening during the verses and every 4 bars there's a small fill almost everytime: it's easier to start from scratch a new set of pattern (i.e. <quote>A-B-C-*</quote>) in the Song Editor copying them with a suffix like '_hh' to show the presence of the <quote>Open HH</quote>. As noted in the introduction of this guide, Jeff Porcaro puts much of his skills playing the song and this makes the difference between a song played from a raw and \"cold\" transcription on paper (or on Hydrogen): therefore the following parts of the song will try to be faithful to the original piece, but another 'ear' could give another written layout of the same part: after all this doesn't matter so much since we are showing how a program works, not to play like Porcaro :)"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:252
-#, no-c-format
-msgid ""
-"In Fig. 10 here is how is the section in the Song Editor of the two verses "
-"and the bridge following the first riff; as you can see the first bars "
-"(48-50 according to the Song Editor's enumeration) are already written "
-"before while the others (51-71) are new. Moreover there a few pattern 'ad "
-"hoc' identified by <quote>A-B-C-3a_hh</quote> (Fig. 11 to see an example) "
-"and <quote>A-B-C-4a_hh</quote> since both have a few changes not present in "
-"any pattern written up to now."
+msgid "In Fig. 10 here is how is the section in the Song Editor of the two verses and the bridge following the first riff; as you can see the first bars (48-50 according to the Song Editor's enumeration) are already written before while the others (51-71) are new. Moreover there a few pattern 'ad hoc' identified by <quote>A-B-C-3a_hh</quote> (Fig. 11 to see an example) and <quote>A-B-C-4a_hh</quote> since both have a few changes not present in any pattern written up to now."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:257
+msgctxt "_"
+msgid "external ref='img_tutorial/VerseBridge_hh.png' md5='d392c5c292141e361391476539077d0d'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:260
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 10</emphasis> Third and fourth bars in the Song "
-"Editor."
+msgid "<emphasis role=\"bold\">Fig. 10</emphasis> Third and fourth bars in the Song Editor."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:270
+msgctxt "_"
+msgid "external ref='img_tutorial/Bridge3_3a_hh.png' md5='cad449c21b89bd3057870c7c2ebee93b'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:273
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 11</emphasis> Seventh bar of the third bridge."
+msgid "<emphasis role=\"bold\">Fig. 11</emphasis> Seventh bar of the third bridge."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:280
-#, no-c-format
-msgid ""
-"After the third bridge we repeat the chorus: the first time the "
-"<quote>Stick</quote> is used instead of the <quote>Snare Jazz</quote> and we "
-"don't play the <quote>Kick</quote> (even if it may sound the opposite since "
-"the bass guitar does play here, so we have put the same the kick beats "
-"softly at [0.50]), while the second and third time the chorus goes on there "
-"are a few bars different, as shown from patterns <quote>C3_*</quote>. In "
-"Fig. 12 the pattern <quote>C3_6+7 &amp; C4_3</quote> (slightly "
-"different ...) which criptycally identify the sixth and seventh bar of the "
-"third chorus AND the third bar of the fourth chorus: if you think this is "
-"confusing, you may find out your own method :-)"
+msgid "After the third bridge we repeat the chorus: the first time the <quote>Stick</quote> is used instead of the <quote>Snare Jazz</quote> and we don't play the <quote>Kick</quote> (even if it may sound the opposite since the bass guitar does play here, so we have put the same the kick beats softly at [0.50]), while the second and third time the chorus goes on there are a few bars different, as shown from patterns <quote>C3_*</quote>. In Fig. 12 the pattern <quote>C3_6+7 &amp; C4_3</quote> (slightly different ...) which criptycally identify the sixth and seventh bar of the third chorus AND the third bar of the fourth chorus: if you think this is confusing, you may find out your own method :-)"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:285
+msgctxt "_"
+msgid "external ref='img_tutorial/C3_6+7.png' md5='b4392c09a1f4aa20f588bbb6c1eed8fd'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:288
-#, no-c-format
-msgid ""
-"<emphasis role=\"bold\">Fig. 12</emphasis> Pattern <quote>C3_6+7 &amp; C4_3</"
-"quote>."
+msgid "<emphasis role=\"bold\">Fig. 12</emphasis> Pattern <quote>C3_6+7 &amp; C4_3</quote>."
 msgstr ""
 
-#. Tag: title
+#. (itstool) path: sect1/title
 #: tutorial.docbook:298
-#, no-c-format
 msgid "The Final riff"
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:299
-#, no-c-format
-msgid ""
-"The song ends repeating a slightly different riff we have met before: the "
-"first 2 bars are the same (i.e. pattern + 2 beats), while the in third bar "
-"the drum plays actually with the other instruments (Fig. 13) to finally end "
-"as always."
+msgid "The song ends repeating a slightly different riff we have met before: the first 2 bars are the same (i.e. pattern + 2 beats), while the in third bar the drum plays actually with the other instruments (Fig. 13) to finally end as always."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: tutorial.docbook:304
+msgctxt "_"
+msgid "external ref='img_tutorial/Riff1d.png' md5='e9410cbca7b77aa4606fe6b6a2c87450'"
+msgstr ""
+
+#. (itstool) path: caption/para
 #: tutorial.docbook:307
-#, no-c-format
 msgid "<emphasis role=\"bold\">Fig. 13</emphasis> The final riff."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:314
-#, no-c-format
-msgid ""
-"And this is the end. The goal of this little tutorial is giving a quick "
-"overview of the most common functions of Hydrogen: this piece of software "
-"can also run for other purposes, like an advanced 'click' played with the "
-"drum, or to loop playing some part of a song difficult to catch; however, as "
-"in other things, analyzing the song itself helps the comprehension and here "
-"too, Hydrogen can be helpful reducing the time needed to write down a "
-"pattern and tune it."
+msgid "And this is the end. The goal of this little tutorial is giving a quick overview of the most common functions of Hydrogen: this piece of software can also run for other purposes, like an advanced 'click' played with the drum, or to loop playing some part of a song difficult to catch; however, as in other things, analyzing the song itself helps the comprehension and here too, Hydrogen can be helpful reducing the time needed to write down a pattern and tune it."
 msgstr ""
 
-#. Tag: para
+#. (itstool) path: sect1/para
 #: tutorial.docbook:316
-#, no-c-format
-msgid ""
-"For comments, suggestions, corrections, you can use the Hydrogen mailing "
-"lists (hydrogen.sf.net)"
+msgid "For comments, suggestions, corrections, you can use the Hydrogen mailing lists (hydrogen.sf.net)"
 msgstr ""
+
