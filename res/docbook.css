@@ -512,8 +512,8 @@ h6 { font-weight: 400;
 
 .titlepage .abstract {
   text-align: left;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 5%;
+  margin-right: 5%;
   border: 1px solid var(--hydrogen-color-black);
   padding-left: 1em;
   padding-right: 1em;
