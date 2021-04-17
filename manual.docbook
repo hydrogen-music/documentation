@@ -65,13 +65,13 @@
         <command>git</command> repository with
       </para>
       <screen>
-        <prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
+<prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
       </screen>
       <para>
         A certain release can be fetched with
       </para>
       <screen>
-        <prompt>$</prompt><command> git checkout tags/1.0.0</command>
+<prompt>$</prompt><command> git checkout tags/1.0.0</command>
       </screen>
         
       <para>Compiling Hydrogen depends on the following libraries (among others):</para>
@@ -127,52 +127,51 @@
       with:</para>
 
       <screen>
-        <prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools         \
-	qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
-	libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
-	libpulse-dev libcppunit-dev liblrdf-dev                 \
-	liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
-      </screen>
+<prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools           \
+    qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
+    libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
+    libpulse-dev libcppunit-dev liblrdf-dev                 \
+    liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
+</screen>
 
         <para>Compiling with <command>cmake</command> can be done easily by using the <filename>build.sh</filename> script. Go to the directory where the <command>git</command> repository
         was cloned and run the <filename>build.sh</filename> script without any arguments to display the help :</para>
 
         <screen>
-           <prompt>$</prompt> <command>./build.sh</command>
+<prompt>$</prompt> <command>./build.sh</command>
         </screen>
       
         <para>The help is now displayed (and is self-explanatory) :
         </para>
       
         <screen>
-          <command>   r[m]     => all built, temp and cache files</command>
-          <command>   c[lean]  => remove cache files</command>
-          <command>   m[ake]   => launch the build process</command>
-          <command>   mm       => launch the build process using ccache</command>
-          <command>   mt       => launch the build process with clang tidy checks enabled</command>
-          <command>   d[oc]    => build html documentation</command>
-          <command>   g[raph]  => draw a dependencies graph</command>
-          <command>   h[elp]   => show the build options</command>
-          <command>   x|exec   => execute hydrogen</command>
-          <command>   t[ests]  => execute tests</command>
-          <command>   p[kg]    => build source package</command>
-          <command>   z        => build using ccache and run from tree</command>
-
+<command>   r[m]     => all built, temp and cache files</command>
+<command>   c[lean]  => remove cache files</command>
+<command>   m[ake]   => launch the build process</command>
+<command>   mm       => launch the build process using ccache</command>
+<command>   mt       => launch the build process with clang tidy checks enabled</command>
+<command>   d[oc]    => build html documentation</command>
+<command>   g[raph]  => draw a dependencies graph</command>
+<command>   h[elp]   => show the build options</command>
+<command>   x|exec   => execute hydrogen</command>
+<command>   t[ests]  => execute tests</command>
+<command>   p[kg]    => build source package</command>
+<command>   z        => build using ccache and run from tree</command>
         </screen>
 
         <para>To build Hydrogen and execute the result, run the build script with the <parameter>m</parameter> option
         </para>
       
         <screen>
-           <prompt>$</prompt> <command>./build.sh m x</command>
+<prompt>$</prompt> <command>./build.sh m x</command>
         </screen>              
 
         <para>and to install it permanently on your computer, change into the <filename>build</filename> folder and use the <command>make</command> command.
         </para>
 
         <screen>
-          <prompt>$</prompt> <command>cd build</command>
-          <prompt>$</prompt> <command>sudo make install</command>
+<prompt>$</prompt> <command>cd build</command>
+<prompt>$</prompt> <command>sudo make install</command>
         </screen>
         
         <note>
@@ -938,16 +937,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
 	      After <link linkend="chpt.download">installing</link> Hydrogen on your system you can invoke it from the command-line with a number of different options.
       <screen>
-        <command>-h, --help                  Displays this help.</command>
-        <command>-v, --version               Displays version information.</command>
-        <command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
-        <command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
-        <command>-n, --nosplash              Hide splash screen</command>
-        <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
-        <command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
-        <command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
-        <command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
-        <command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
+<command>-h, --help                  Displays this help.</command>
+<command>-v, --version               Displays version information.</command>
+<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
+<command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
+<command>-n, --nosplash              Hide splash screen</command>
+<command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
+<command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
+<command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
+<command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
+<command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
       </screen>
 
         </para>
@@ -6248,7 +6247,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <command>oscsend</command>.</para>
 
        <screen>
-         <prompt>$</prompt> <command>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</command>
+<prompt>$</prompt> <command>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</command>
        </screen>
 
        <note>
@@ -6282,7 +6281,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          <para>The syntax for sending the commands is</para>
 
          <screen>
-           <prompt>$</prompt> <command>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</command>
+<prompt>$</prompt> <command>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</command>
          </screen>
 
          <para>with the supported types</para>

@@ -931,6 +931,8 @@ pre.screen {
   line-height: 1.25em;
   background-color: var(--verbatim-even-background-color);
   padding-top: 1.25em;
+  padding-left: 2%;
+  max-width: 100%;
 }
 
 /* Adapted from https://stackoverflow.com/questions/41306797/html-how-to-add-line-numbers-to-a-source-code-block */
@@ -970,7 +972,7 @@ pre span.ln {
 pre {
   display: table;
   table-layout: fixed;
-  width: 100%; /* anything but auto, otherwise fixed layout not guaranteed */
+  /* width: 100%; /* anything but auto, otherwise fixed layout not guaranteed */ */
   white-space: pre;
 }
 

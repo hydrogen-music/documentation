@@ -11,13 +11,29 @@
       </p></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="chpt.compilation"></a>Chapter 2. Build</h2></div></div></div><p>
         If you want to compile Hydrogen yourself, you can download the latest source files directly from our
         <span class="command"><strong>git</strong></span> repository with
-      </p><pre class="screen">
-<code class="prompt">$</code><span class="command"><strong> git clone git://github.com/hydrogen-music/hydrogen.git</strong></span>
-      </pre><p>
+      </p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+        <code class="prompt">$</code><span class="command"><strong> git clone git://github.com/hydrogen-music/hydrogen.git</strong></span>
+      </pre>
+  schni
+<p>
         A certain release can be fetched with
-      </p><pre class="screen">
-<code class="prompt">$</code><span class="command"><strong> git checkout tags/1.0.0</strong></span>
-      </pre><p>Compiling Hydrogen depends on the following libraries (among others):</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: opencircle; "><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>Qt 5</strong></span>: at <a class="ulink" href="http://www.qt.io" target="_top">http://www.qt.io</a></p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>libsndfile</strong></span>: at <a class="ulink" href="http://www.mega-nerd.com/libsndfile/" target="_top">http://www.mega-nerd.com/libsndfile/</a></p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong><abbr class="abbrev">ALSA</abbr></strong></span>: (&gt;= 1.x) at <a class="ulink" href="http://www.alsa-project.org" target="_top">http://www.alsa-project.org</a>
+      </p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+        <code class="prompt">$</code><span class="command"><strong> git checkout tags/1.0.0</strong></span>
+      </pre>
+  schni
+<p>Compiling Hydrogen depends on the following libraries (among others):</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: opencircle; "><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>Qt 5</strong></span>: at <a class="ulink" href="http://www.qt.io" target="_top">http://www.qt.io</a></p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>libsndfile</strong></span>: at <a class="ulink" href="http://www.mega-nerd.com/libsndfile/" target="_top">http://www.mega-nerd.com/libsndfile/</a></p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong><abbr class="abbrev">ALSA</abbr></strong></span>: (&gt;= 1.x) at <a class="ulink" href="http://www.alsa-project.org" target="_top">http://www.alsa-project.org</a>
           (only if you wish to use <abbr class="abbrev">ALSA</abbr> as audio driver)</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>Jack Audio Connection Kit (&gt;= 0.80)</strong></span>: at 
           <a class="ulink" href="http://jackaudio.org/" target="_top">http://jackaudio.org/</a>
           (only if you wish to use <abbr class="abbrev">JACK</abbr> as audio driver)</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>PortAudio</strong></span>: at <a class="ulink" href="http://www.portaudio.com" target="_top">http://www.portaudio.com</a>
@@ -29,37 +45,77 @@
 	        <span class="bold"><strong>liblo</strong></span>: at <a class="ulink" href="http://liblo.sourceforge.net/" target="_top">http://liblo.sourceforge.net/</a> for <a class="link" href="#chpt.osc" title="Chapter 17. OSC API"><abbr class="abbrev">OSC</abbr></a> and <a class="link" href="#chpt.overview.session_management.nsm" title="4.5.1. NSM"><abbr class="abbrev">NSM</abbr></a> support
           </p></li></ul></div><p>Please install them with your distribution's package manager. If
       you're running a Debian-based system, you can install the libraries
-      with:</p><pre class="screen">
-<code class="prompt">$</code> <span class="command"><strong>apt-get install qtbase5-dev qtbase5-dev-tools           \
-    qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
-    libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
-    libpulse-dev libcppunit-dev liblrdf-dev                 \
-    liblash-compat-dev librubberband-dev libjack-jackd2-dev</strong></span>
-</pre><p>Compiling with <span class="command"><strong>cmake</strong></span> can be done easily by using the <code class="filename">build.sh</code> script. Go to the directory where the <span class="command"><strong>git</strong></span> repository
-        was cloned and run the <code class="filename">build.sh</code> script without any arguments to display the help :</p><pre class="screen">
+      with:</p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen"><code class="prompt">$</code> <span class="command"><strong>apt-get install qtbase5-dev qtbase5-dev-tools         \
+qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
+libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
+libpulse-dev libcppunit-dev liblrdf-dev                 \
+liblash-compat-dev librubberband-dev libjack-jackd2-dev</strong></span>
+</pre>
+  schni
+<p>Compiling with <span class="command"><strong>cmake</strong></span> can be done easily by using the <code class="filename">build.sh</code> script. Go to the directory where the <span class="command"><strong>git</strong></span> repository
+        was cloned and run the <code class="filename">build.sh</code> script without any arguments to display the help :</p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
 <code class="prompt">$</code> <span class="command"><strong>./build.sh</strong></span>
-        </pre><p>The help is now displayed (and is self-explanatory) :
-        </p><pre class="screen">
-<span class="command"><strong>   r[m]     =&gt; all built, temp and cache files</strong></span>
-<span class="command"><strong>   c[lean]  =&gt; remove cache files</strong></span>
-<span class="command"><strong>   m[ake]   =&gt; launch the build process</strong></span>
-<span class="command"><strong>   mm       =&gt; launch the build process using ccache</strong></span>
-<span class="command"><strong>   mt       =&gt; launch the build process with clang tidy checks enabled</strong></span>
-<span class="command"><strong>   d[oc]    =&gt; build html documentation</strong></span>
-<span class="command"><strong>   g[raph]  =&gt; draw a dependencies graph</strong></span>
-<span class="command"><strong>   h[elp]   =&gt; show the build options</strong></span>
-<span class="command"><strong>   x|exec   =&gt; execute hydrogen</strong></span>
-<span class="command"><strong>   t[ests]  =&gt; execute tests</strong></span>
-<span class="command"><strong>   p[kg]    =&gt; build source package</strong></span>
-<span class="command"><strong>   z        =&gt; build using ccache and run from tree</strong></span>
-        </pre><p>To build Hydrogen and execute the result, run the build script with the <em class="parameter"><code>m</code></em> option
-        </p><pre class="screen">
-<code class="prompt">$</code> <span class="command"><strong>./build.sh m x</strong></span>
-        </pre><p>and to install it permanently on your computer, change into the <code class="filename">build</code> folder and use the <span class="command"><strong>make</strong></span> command.
-        </p><pre class="screen">
-<code class="prompt">$</code> <span class="command"><strong>cd build</strong></span>
-<code class="prompt">$</code> <span class="command"><strong>sudo make install</strong></span>
-        </pre><div class="note" style="margin-left: 5%;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="img/admonitions/note.svg"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For further details about the installation process please have a look the <code class="filename">INSTALL.txt</code> file (located in the top level directory once you downloaded the sources).</p></td></tr></table></div></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="chpt.keyboard_and_mouse"></a>Chapter 3. Keyboard and Mouse</h2></div></div></div><p>
+        </pre>
+  schni
+<p>The help is now displayed (and is self-explanatory) :
+        </p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+          <span class="command"><strong>   r[m]     =&gt; all built, temp and cache files</strong></span>
+          <span class="command"><strong>   c[lean]  =&gt; remove cache files</strong></span>
+          <span class="command"><strong>   m[ake]   =&gt; launch the build process</strong></span>
+          <span class="command"><strong>   mm       =&gt; launch the build process using ccache</strong></span>
+          <span class="command"><strong>   mt       =&gt; launch the build process with clang tidy checks enabled</strong></span>
+          <span class="command"><strong>   d[oc]    =&gt; build html documentation</strong></span>
+          <span class="command"><strong>   g[raph]  =&gt; draw a dependencies graph</strong></span>
+          <span class="command"><strong>   h[elp]   =&gt; show the build options</strong></span>
+          <span class="command"><strong>   x|exec   =&gt; execute hydrogen</strong></span>
+          <span class="command"><strong>   t[ests]  =&gt; execute tests</strong></span>
+          <span class="command"><strong>   p[kg]    =&gt; build source package</strong></span>
+          <span class="command"><strong>   z        =&gt; build using ccache and run from tree</strong></span>
+
+        </pre>
+  schni
+<p>To build Hydrogen and execute the result, run the build script with the <em class="parameter"><code>m</code></em> option
+        </p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+           <code class="prompt">$</code> <span class="command"><strong>./build.sh m x</strong></span>
+        </pre>
+  schni
+<p>and to install it permanently on your computer, change into the <code class="filename">build</code> folder and use the <span class="command"><strong>make</strong></span> command.
+        </p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+          <code class="prompt">$</code> <span class="command"><strong>cd build</strong></span>
+          <code class="prompt">$</code> <span class="command"><strong>sudo make install</strong></span>
+        </pre>
+  schni
+<div class="note" style="margin-left: 5%;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="img/admonitions/note.svg"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For further details about the installation process please have a look the <code class="filename">INSTALL.txt</code> file (located in the top level directory once you downloaded the sources).</p></td></tr></table></div></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="chpt.keyboard_and_mouse"></a>Chapter 3. Keyboard and Mouse</h2></div></div></div><p>
         The Hydrogen user interface is designed so that it can be
         used entirely with the mouse, with the exception of text entry.
       </p><p>
@@ -233,18 +289,26 @@ in the <a class="link" href="#sect.main_toolbar.transport_control" title="7.1. T
               </p></td></tr></table></div><p>
           </p></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="chpt.overview.cli"></a>4.6. Command-line Options</h2></div></div></div><p>
 	      After <a class="link" href="#chpt.download" title="Chapter 1. Download">installing</a> Hydrogen on your system you can invoke it from the command-line with a number of different options.
+      
+  bla
+  
+  blub
+  
+	  hermel
       </p><pre class="screen">
-<span class="command"><strong>-h, --help                  Displays this help.</strong></span>
-<span class="command"><strong>-v, --version               Displays version information.</strong></span>
-<span class="command"><strong>-d, --driver &lt;Audiodriver&gt;  Use the selected audio driver (jack, alsa, oss)</strong></span>
-<span class="command"><strong>-i, --install &lt;File&gt;        Install a drumkit (*.h2drumkit)</strong></span>
-<span class="command"><strong>-n, --nosplash              Hide splash screen</strong></span>
-<span class="command"><strong>-p, --playlist &lt;File&gt;       Load a playlist (*.h2playlist) at startup</strong></span>
-<span class="command"><strong>-P, --data &lt;Path&gt;           Use an alternate system data path</strong></span>
-<span class="command"><strong>-s, --song &lt;File&gt;           Load a song (*.h2song) at startup</strong></span>
-<span class="command"><strong>-k, --kit &lt;DrumkitName&gt;     Load a drumkit at startup</strong></span>
-<span class="command"><strong>-V, --verbose &lt;Level&gt;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</strong></span>
+        <span class="command"><strong>-h, --help                  Displays this help.</strong></span>
+        <span class="command"><strong>-v, --version               Displays version information.</strong></span>
+        <span class="command"><strong>-d, --driver &lt;Audiodriver&gt;  Use the selected audio driver (jack, alsa, oss)</strong></span>
+        <span class="command"><strong>-i, --install &lt;File&gt;        Install a drumkit (*.h2drumkit)</strong></span>
+        <span class="command"><strong>-n, --nosplash              Hide splash screen</strong></span>
+        <span class="command"><strong>-p, --playlist &lt;File&gt;       Load a playlist (*.h2playlist) at startup</strong></span>
+        <span class="command"><strong>-P, --data &lt;Path&gt;           Use an alternate system data path</strong></span>
+        <span class="command"><strong>-s, --song &lt;File&gt;           Load a song (*.h2song) at startup</strong></span>
+        <span class="command"><strong>-k, --kit &lt;DrumkitName&gt;     Load a drumkit at startup</strong></span>
+        <span class="command"><strong>-V, --verbose &lt;Level&gt;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</strong></span>
       </pre><p>
+  schni
+
 
         </p></div></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="chpt.preferences"></a>Chapter 5. Preferences</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="#chpt.preferences.general_tab">5.1. General</a></span></dt><dt><span class="sect1"><a href="#chpt.preferences.audio_tab">5.2. Audio System</a></span></dt><dt><span class="sect1"><a href="#chpt.preferences.midi_tab">5.3. MIDI System</a></span></dt><dt><span class="sect1"><a href="#chpt.preferences.osc_tab">5.4. OSC</a></span></dt><dt><span class="sect1"><a href="#chpt.preferences.appearance_tab">5.5. Appearance</a></span></dt></dl></div><p>Via this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <em class="parameter"><code>Options</code></em> element in the <a class="link" href="#chpt.main_menu" title="Chapter 6. Main Menu">Main Menu</a>.</p><div class="note" style="margin-left: 5%;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="img/admonitions/note.svg"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
 	      All changes done in the Preferences Dialog - if not noted otherwise via a popup - will take effect when clicking the <span class="bold"><strong>Ok</strong></span> button at the bottom of the window.
@@ -2061,9 +2125,17 @@ in the <a class="link" href="#sect.main_toolbar.transport_control" title="7.1. T
        to control it using various devices, like hardware <abbr class="abbrev">OSC</abbr> controllers,
        smartphones, tablets, or any PC. For Linux-based systems you can use or
        test these interactions using the command line program
-       <span class="command"><strong>oscsend</strong></span>.</p><pre class="screen">
-<code class="prompt">$</code> <span class="command"><strong>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</strong></span>
-       </pre><div class="note" style="margin-left: 5%;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="img/admonitions/note.svg"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+       <span class="command"><strong>oscsend</strong></span>.</p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+         <code class="prompt">$</code> <span class="command"><strong>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</strong></span>
+       </pre>
+  schni
+<div class="note" style="margin-left: 5%;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="img/admonitions/note.svg"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
 	       To enable <abbr class="abbrev">OSC</abbr> support in Hydrogen, open the <a class="link" href="#chpt.preferences.osc_tab" title="5.4. OSC">OSC</a> tab in the Preferences dialog. Make sure that the "Enable <abbr class="abbrev">OSC</abbr>
 	       support" checkbox is activated, otherwise Hydrogen will not listen for
 	       incoming <abbr class="abbrev">OSC</abbr> messages.
@@ -2071,9 +2143,17 @@ in the <a class="link" href="#sect.main_toolbar.transport_control" title="7.1. T
            Hydrogen's port number defaults to <code class="option">9000</code> for historical reasons. Since this is also the number used in the coding examples provided by <span class="command"><strong>liblo</strong></span> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's advised to set a different default port in such cases.
          </p></td></tr></table></div><div class="warning" style="margin-left: 5%;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="img/admonitions/warning.svg"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p>
 	       <span class="command"><strong>oscsend</strong></span> should only be used for sparse interactive testing and control via a command-line. Using it in scripts is not recommended since every time it sends a command it will registers a new client at the <abbr class="abbrev">OSC</abbr> server. If the <span class="bold"><strong>Enable <abbr class="abbrev">OSC</abbr> feedback</strong></span> option in the <a class="link" href="#chpt.preferences.osc_tab" title="5.4. OSC"><abbr class="abbrev">OSC</abbr></a> tab of the Preferences dialog is checked, Hydrogen will send its current state to all registered clients causing it to become slower and slower with every <span class="command"><strong>oscsend</strong></span> command sent. Soon you will experience visual lags. When unchecking this option, however, using <span class="command"><strong>oscsend</strong></span> is fine.
-         </p></td></tr></table></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="chpt.osc.commands"></a>17.2. Commands</h2></div></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="chpt.osc.commands.syntax"></a>17.2.1. Syntax</h3></div></div></div><p>The syntax for sending the commands is</p><pre class="screen">
-<code class="prompt">$</code> <span class="command"><strong>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</strong></span>
-         </pre><p>with the supported types</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: opencircle; "><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>' '</strong></span>: no argument required</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>i</strong></span>: int32</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>f</strong></span>: float32</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>s</strong></span>: <abbr class="abbrev">OSC</abbr>-string (ASCII)</p></li></ul></div><p>Detailed description of the formats and conventions used in the
+         </p></td></tr></table></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="chpt.osc.commands"></a>17.2. Commands</h2></div></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="chpt.osc.commands.syntax"></a>17.2.1. Syntax</h3></div></div></div><p>The syntax for sending the commands is</p>
+  bla
+  
+  blub
+  
+	  hermel
+      <pre class="screen">
+           <code class="prompt">$</code> <span class="command"><strong>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</strong></span>
+         </pre>
+  schni
+<p>with the supported types</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: opencircle; "><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>' '</strong></span>: no argument required</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>i</strong></span>: int32</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>f</strong></span>: float32</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>s</strong></span>: <abbr class="abbrev">OSC</abbr>-string (ASCII)</p></li></ul></div><p>Detailed description of the formats and conventions used in the
          tables below</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: opencircle; "><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>ff</strong></span>: two types placed right after each
              other indicated that the command requires two distinct
              arguments.</p></li><li class="listitem" style="list-style-type: circle"><p><span class="bold"><strong>' ',[f]</strong></span>: two types separated by a comma

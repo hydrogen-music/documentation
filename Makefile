@@ -36,6 +36,7 @@ clean:
 	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
 	$(XMLTO) html-nochunks $(XMLTO_OPTS) \
 		--stringparam l10n.gentext.language=$$LL \
+		-x res/xslt/html/docbook.xsl \
 		$<
 
 %.dbk_validated: %.dbk

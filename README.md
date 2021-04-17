@@ -180,6 +180,10 @@ your documents validate (see Section 6 below).  Some guidelines:
           Good:   ```<foo id="bar"/>```
           Bad:    ```<foo id='bar'/>```
 
+* Please do not indent any elements that go into the ```<screen>```
+  tag or at least do so with care. All white spaces will show up in
+  the resulting HTML file as well.
+
 * Please make good use of ```<link>``` and ```<xref>``` tags for
       internal links within the document.
 
