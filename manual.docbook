@@ -49,7 +49,7 @@
 
       <para>
         You can download Hydrogen from 
-        <ulink url="http://www.hydrogen-music.org/hcms/node/21">http://www.hydrogen-music.org</ulink>.  
+        <ulink url="http://www.hydrogen-music.org">http://www.hydrogen-music.org</ulink>.  
         On the <emphasis>Downloads</emphasis> page you can find several binaries (installers) for MacOS and Windows.
       </para>
       <para>
@@ -754,6 +754,12 @@
 
         <informalfigure id="fig.letters_keyboard">
           <mediaobject>
+            <textobject>
+              <phrase>
+                Picture illustrating the mapping of Hydrogen's virtual keyboard to
+                the layout of the computers' keyboard.
+              </phrase>
+            </textobject>
             <imageobject>
               <imagedata fileref="img/tastiera.png" format="PNG" />
             </imageobject>
@@ -771,12 +777,23 @@
         <para>
           In order to start recording, first activate the record button 
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey record button with a red circle in its center.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
 in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> and afterwards press the 
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey play and pause button containing two vertical black lines
+              (left) and a black triangle (right) pointing to the right.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/btn_play_off.png" format="PNG"/>
           </imageobject>
@@ -1057,6 +1074,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	            <para>
 	              The Beat Counter has to be set to <emphasis role="bold">Set <abbrev>BPM</abbrev> and play</emphasis> - 
                   <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing a "P".
+            </phrase>
+          </textobject>
                     <imageobject>
                       <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
                     </imageobject>
@@ -1108,6 +1130,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	            <para>
                   If Rubber Band is installed and configured correctly, you will see an extra button
                   <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey vertical button containing the characters "R", "U", and "B"
+              in adjacent lines.
+            </phrase>
+          </textobject>
                     <imageobject>
                       <imagedata fileref="img/rubber_off.png" format="PNG" />
                     </imageobject>
@@ -1277,12 +1305,22 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
                 For this option to take effect the
                 <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the text "J.TRANS".
+            </phrase>
+          </textobject>
                   <imageobject>
                     <imagedata fileref="img/btn_jack_transport_off.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
                 button has to be activated and the
                 <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the text "J.MASTER".
+            </phrase>
+          </textobject>
                   <imageobject>
                     <imagedata fileref="img/btn_jack_master_off.png" format="PNG" />
                   </imageobject>
@@ -1879,6 +1917,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     
        <informalfigure id="fig.downloading_soundlibrary">
          <mediaobject>
+          <textobject>
+            <phrase>
+              Widget with progress bar popping up during the download of a drumit.
+            </phrase>
+          </textobject>
            <imageobject>
              <imagedata fileref="img/Downloading_SoundLibrary.png" format="PNG" />
            </imageobject>
@@ -2095,6 +2138,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <informalfigure id="fig.main_toolbar.transport_control">
           <mediaobject>
+          <textobject>
+            <phrase>
+              Part of the Main Toolbar responsible for the transport
+              control. From left to right: rewind, record, pause and play, stop,
+              fast forward, and loop button.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/background_Control_V2.png" format="PNG"/>
             </imageobject>
@@ -2117,6 +2167,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <informalfigure id="fig.main_toolbar.beat_counter">
           <mediaobject>
+          <textobject>
+            <phrase>
+              Part of the Main Toolbar responsible for the tempo settings using
+              the Beat Counter. In the center there is a LCD displaying to the
+              left the beat type and to the right on top the current mode of the
+              Beat Counter and the value of the Countdown Counter below. To the
+              left and right of the LCD there are buttons to decrease or
+              increase the beat type (left) and Countdown Counter value (right).
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/MeasureSettings.png" format="PNG"/>
             </imageobject>
@@ -2150,6 +2210,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>The Beat Counter is essentially a Tap Tempo on steroids.  By default the Beat Counter widget is not
           visible.  To see the Beat Counter widget click the 
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey vertical button containing the characters "B" and "C" in
+              adjacent rows.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/btn_bc_off.png" format="PNG" />
             </imageobject>
@@ -2171,12 +2237,22 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>The button in the bottom right-hand controls the auto-start
           feature, and it toggles between 
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a "S".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           and
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing a "P".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
             </imageobject>
@@ -2187,6 +2263,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on
           the next beat.  When it shows
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a "S".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
               </imageobject>
@@ -2198,12 +2279,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           at the same time.  Set the beat type to 1/4 and the number of beats to
           4.  Enable auto-start (button shows
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing a "P".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           ).  Count off
-          the band 1-2-3-4 (while tapping the comma key) &mdash; and everyone
+          the band 1-2-3-4 (while tapping the <keycap>,</keycap> key) and everyone
           starts on 1.</para>
 
           <para>Another example: Same situation, but the song doesn't require
@@ -2231,6 +2317,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <informalfigure id="fig.main_toolbar.bpm_control_and_metronome">
           <mediaobject>
+          <textobject>
+            <phrase>
+              Part of the Main Toolbar responsible for the tempo settings. To
+              the left there are on top two buttons for decreasing and
+              increasing the tempo and below one to activate the metronome. To
+              the right and covering most of the area is a LCD showing the
+              current BPM. At the far right there is a tall button activating
+              the recalculation of samples processed by Rubber Band at tempo changes. 
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/background_BPM.png" format="PNG"/>
             </imageobject>
@@ -2248,6 +2344,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <para>In addition you can use
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button for toggling the metronome. It contains a non-filled
+              black triangle pointing to the left (left), a black dot (middle),
+              and a black closing bracket ")" (right).
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/btn_metronome_off.png" format="PNG" />
             </imageobject>
@@ -2263,6 +2366,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
 	      If either Rubber Band support is compiled into your current version of Hydrogen or correctly configured in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences, you will also find the
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey vertical button containing the characters "R", "U", and "B"
+              in adjacent lines.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/rubber_off.png" format="PNG" />
             </imageobject>
@@ -2277,6 +2386,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <informalfigure id="fig.main_toolbar.cpu_usage_midi_in">
           <mediaobject>
+          <textobject>
+            <phrase>
+              A block horizontal line in the upper part will contain a meter
+              showing the load of the CPU. Below a small LED-like symbol next to
+              the text "MIDI-IN" will indicated when there is
+              <abbrev>MIDI</abbrev> input.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/MidiIN_CPU.png" format="PNG"/>
             </imageobject>
@@ -2298,6 +2415,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         
         <informalfigure id="fig..main_toolbar.jack_control">
           <mediaobject>
+          <textobject>
+            <phrase>
+              Part of the Main Toolbar responsible for the <abbrev>JACK</abbrev>
+              configuration. The left button is titled "J.TRANS" and the right
+              one "J.MASTER".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/JackTrans_Master.png" format="PNG"/>
             </imageobject>
@@ -2307,6 +2431,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>Clicking
         
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the text "J.TRANS".
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/btn_jack_transport_off.png" format="PNG" />
           </imageobject>
@@ -2317,6 +2446,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           Using
           
           <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the text "J.MASTER".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/btn_jack_master_off.png" format="PNG" />
             </imageobject>
@@ -2344,6 +2478,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.main_toolbar.gui_state">
             <mediaobject>
+          <textobject>
+            <phrase>
+              In the upper part there are two buttons. The smaller one to the left
+              is titled "Mixer" and the larger one "Instrument rack". Below
+              there is a large blue LCD showing the default message of Hydrogen
+              after startup "Hydrogen Ready.".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/mixer-instrrack_btn.png" format="PNG"/>
               </imageobject>
@@ -2409,6 +2551,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
       <informalfigure id="fig.song_editor.song_ruler">
         <mediaobject>
+          <textobject>
+            <phrase>
+              Picture of a part of the Song Ruler used for naviagation. It
+              indicates the position of certains bars by their number - "1",
+              "5", "9", "13", "17". All remaining bars are indicated with a
+              vertical line - "|". In addition, light-blue colored "T"s indicate
+              the presence of a Tag.
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/SongRuler.png" format="PNG" />
           </imageobject>
@@ -2436,6 +2587,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
        <informalfigure id="fig.song_editor.main_controls">
          <mediaobject>
+          <textobject>
+            <phrase>
+              Main Controls for the Song Editor. From left to right: larger
+              button bearing the text "CLEAR" for deleting all patterns, new
+              pattern button, two buttons to move the selected pattern down and
+              up, two buttons to activate the Draw and the Select mode, and the
+              button to switch between Single Pattern and Stacked mode.
+            </phrase>
+          </textobject>
            <imageobject>
              <imagedata fileref="generated_en/bg_topPanel.png" format="PNG"/>
            </imageobject>
@@ -2445,7 +2605,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <itemizedlist>
 
         <listitem>
-          <para><inlinemediaobject><imageobject>
+          <para><inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the text "CLEAR".
+            </phrase>
+          </textobject>
+          <imageobject>
             <imagedata fileref="generated_en/btn_clear_off.png" format="PNG"/>
             </imageobject></inlinemediaobject> : deletes all patterns
             (asks for confirmation!).
@@ -2453,14 +2619,27 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
         <listitem>
-          <para><inlinemediaobject><imageobject>
+          <para><inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a plus sign.
+            </phrase>
+          </textobject>
+          <imageobject>
             <imagedata fileref="generated_en/btn_new_on.png" format="PNG" />
             </imageobject></inlinemediaobject> : creates a new pattern (and asks for a name).
           </para>
         </listitem>
 
         <listitem>
-          <para><inlinemediaobject><imageobject>
+          <para><inlinemediaobject>
+          <textobject>
+            <phrase>
+              Two grey button horizontally aligned. The left contains a black
+              arrow tip pointing downwards and the right one one pointing upwards.
+            </phrase>
+          </textobject>
+          <imageobject>
             <imagedata fileref="generated_en/btn_updown.png" format="PNG" />
             </imageobject></inlinemediaobject> : moves currently selected pattern
             up or down.
@@ -2475,7 +2654,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
         <listitem>
-          <para><inlinemediaobject><imageobject>
+          <para><inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black brush.
+            </phrase>
+          </textobject>
+          <imageobject>
             <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
             </imageobject></inlinemediaobject> : enables Select mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).
@@ -2484,18 +2669,37 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
         <listitem>
-          <para><inlinemediaobject><imageobject>
+          <para><inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing four black horizontal dots in the lower
+              part joined by three black vertical dots at the right bottom corner.
+            </phrase>
+          </textobject>
+          <imageobject>
             <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
             </imageobject></inlinemediaobject> : enables Draw mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).</para>
         </listitem>
 
         <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked mode">
-          <para><inlinemediaobject><imageobject>
+          <para><inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button with a horizontal black line.
+            </phrase>
+          </textobject>
+          <imageobject>
             <imagedata fileref="generated_en/btn_pattern_mode.png" format="PNG"/>
             </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern mode</emphasis> 
-            <inlinemediaobject><imageobject>
-            <imagedata fileref="img/btn_stacked_mode.png" format="PNG"/>
+            <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button with three horizontal black lines stacked vertically.
+            </phrase>
+          </textobject>
+          <imageobject>
+            <imagedata fileref="generated_en/btn_stacked_mode.png" format="PNG"/>
             </imageobject></inlinemediaobject>
             or to <emphasis>Stacked mode</emphasis> (<xref
             linkend="chpt.song_editor.editor_modes.stacked" />).</para>
@@ -2733,6 +2937,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           part of the song with the selected pattern by entering the start- and end bar.
            <informalfigure id="fig.fill_clear_pattern">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Dialog appearing when filling or clearing a pattern. To the left
+              either "Fill" or "Clear" (below) can be checked and to the right
+              the numerical text input form "From" and "To" (below) indicate the
+              range of the operation. At the bottom there are "Cancel" (left)
+              and "OK" (right) buttons.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/fill_clear_pattern.png" format="PNG" />
               </imageobject>
@@ -2748,6 +2961,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <figure id="fig.pattern_properties">
             <title>The Dialog to Change the Pattern Properties</title>
             <mediaobject>
+          <textobject>
+            <phrase>
+              Dialog appearing when changing the properties of a pattern. At the
+              top text input one specifies the "New Pattern Name". In the larger
+              one below the "Pattern description". Underneath one can select the
+              "Pattern category". At the bottom there are "Cancel" (left)
+              and "OK" (right) buttons.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/pattern_properties.png" format="PNG" />
               </imageobject>
@@ -2815,6 +3037,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
        <informalfigure id="fig.tempo_bar">
          <mediaobject>
+          <textobject>
+            <phrase>
+              Picture showing the Timeline above the Song Ruler.
+            </phrase>
+          </textobject>
            <imageobject>
              <imagedata fileref="generated_en/tempo_bar.png" format="PNG" />
            </imageobject>
@@ -2827,12 +3054,22 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        done by adding <emphasis>Tempo Markers</emphasis> to your song.</para>
        <para>To add a Tempo Marker you first need to show the Timeline by clicking the
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "P".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_viewTL_off.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
        button at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "BPM".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_bpm_off.png" format="PNG" />
          </imageobject>
@@ -2853,6 +3090,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          
         <informalfigure id="fig.add_tempo_change">
          <mediaobject>
+          <textobject>
+            <phrase>
+              Dialog for entering/altering a BPM Marker. In the two text inputs
+              in at the upper half of the dialog one can specify the "BPM" (top)
+              and the "Bar" (below). Underneath there is a large button titled
+              "Delete BPM Marker". At the bottom there are "Cancel" (left)
+              and "OK" (right) buttons.
+            </phrase>
+          </textobject>
            <imageobject>
              <imagedata fileref="generated_en/add_tempo_change.png" format="PNG" />
            </imageobject>
@@ -2871,6 +3117,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
        <informalfigure id="fig.tag_bar">
          <mediaobject>
+          <textobject>
+            <phrase>
+              Excerpt of the Song Ruler containing several Tags marked with
+              light-blue "T"s.
+            </phrase>
+          </textobject>
            <imageobject>
              <imagedata fileref="img/tag_bar.png" format="PNG" />
            </imageobject>
@@ -2907,6 +3159,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
 	   <informalfigure id="fig.playbackTrack">
 		 <mediaobject>
+          <textobject>
+            <phrase>
+              Figure showing the Playback track ontop of the Song Editor. At the
+              left side there are several controls: the upper half consists of a
+              larger fader and an "EDIT" (middle) and "MUTE" (right) button. The
+              lower half contains the Main Controls of the Song Editor. The
+              right half is made up by an dark-blue area may will contain the
+              waveform of the Playback track but is empty in this example.
+            </phrase>
+          </textobject>
 		   <imageobject>
 			 <imagedata fileref="generated_en/PlaybackTrack.png" format="PNG" />
 		   </imageobject>
@@ -2927,8 +3189,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 		 <para>
 		   To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "T".
+            </phrase>
+          </textobject>
               <imageobject>
-                <imagedata fileref="img/btn_viewPL_off.png" format="PNG" />
+                <imagedata fileref="img/btn_viewTL_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
             button left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
@@ -3014,6 +3281,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       can be used in two modes: as <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> or as <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>. You can switch between these 
       two by clicking the
       <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a small piano illustration with three white
+              and two black keys.
+            </phrase>
+          </textobject>
         <imageobject>
           <imagedata fileref="generated_en/btn_drum_piano_off.png" format="PNG" />
         </imageobject>
@@ -3054,6 +3327,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <listitem id="chpt.pattern_editor.controls.size">
               <para>
                 <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue LCD showing "4/4" and titled "SIZE".
+            </phrase>
+          </textobject>
                   <imageobject>
                     <imagedata fileref="generated_en/lcd_size.png" format="PNG" />
                   </imageobject>
@@ -3066,6 +3344,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               </para>
               <informalfigure id="fig.PatternSizeDialog">
                 <mediaobject>
+          <textobject>
+            <phrase>
+              Dialog for entering the "New Pattern length (beats/note value)"
+              via a Text input in the middle. At the bottom there are "Cancel" (right)
+              and "OK" (left) buttons.
+            </phrase>
+          </textobject>
                   <imageobject>
                     <imagedata fileref="img/PatternSizeDialog.png" format="PNG" />
                   </imageobject>
@@ -3089,6 +3374,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 </para>
                 <informalfigure id="fig.DenominatorWarningIcon">
                   <mediaobject>
+          <textobject>
+            <phrase>
+              A yellow upright triangle containing a exclamation mark is shown
+              to the right of the "SIZE" LCD.
+            </phrase>
+          </textobject>
                     <imageobject>
                       <imagedata fileref="generated_en/DenominatorWarningIcon.png" format="PNG" />
                     </imageobject>
@@ -3101,6 +3392,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <listitem id="chpt.pattern_editor.controls.res">
               <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue LCD showing "1/16" and titled "RES".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/lcd_res.png" format="PNG" />
               </imageobject>
@@ -3124,6 +3420,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <listitem>
               <para>
                 <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing a black speaker symbol.
+            </phrase>
+          </textobject>
                   <imageobject>
                     <imagedata fileref="generated_en/btn_hear.png" format="PNG" />
                   </imageobject>
@@ -3142,6 +3443,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <listitem>
               <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button showing a black 2 by 3 grid.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_quant_off.png" format="PNG" />
               </imageobject>
@@ -3156,10 +3462,22 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <listitem id="chpt.pattern_editor.controls.input">
               <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a small piano illustration with three white
+              and two black keys.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_drum_piano_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject> /  <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button with a quasi-3D display a a cylinder with black
+              outlines, blue sides, and a white top.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_drum_piano_on.png" format="PNG" />
               </imageobject>
@@ -3297,12 +3615,22 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         
         <para>The
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "M".
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button <link linkend="def.mute">mutes</link> the instrument and 
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "S".
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="generated_en/btn_solo_off.png" format="PNG" />
           </imageobject>
@@ -3372,6 +3700,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
           <informalfigure id="fig.NoteOff_NoteLength">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Three notes are displayed in one line of the Pattern Editor. The
+              one to the left is marked with a black circle. The one in the middle
+              by a black circle from which a black triangle expands over two grid
+              cells, and the left one is represented by a blue circle.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/NoteOff_NoteLength.png" format="PNG" />
               </imageobject>
@@ -3436,7 +3772,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </para>
 
       <para>
-      The following note properties are available: 
+        The following note properties are available: 
+      </para>
       
       <itemizedlist mark="opencircle">
         <listitem id="chpt.pattern_editor.note_properties.velocity">
@@ -3512,7 +3849,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
         </listitem>
       </itemizedlist>
-      </para>
 
       <para>
         <emphasis>Clicking</emphasis> or <emphasis>dragging</emphasis> the value lines in the Note Properties Editor will
@@ -3717,6 +4053,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           
           <informalfigure id="fig.instrument_editor.envelope_parameters">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Four rotaries are displayed. From left to right: "ATTACK",
+              "DECAY", "SUSTAIN", and "RELEASE".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/instrument_editor_envelope.png" format="PNG"/>
               </imageobject>
@@ -3782,6 +4124,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.gain_and_mute_group">
             <mediaobject>
+          <textobject>
+            <phrase>
+              In the upper half there is a LCD displaying "1.00" (left) next to
+              a rotary titled "GAIN" (middle) and a LCD with corresponding
+              decrease and increase buttons (right) titled "MUTE GROUP". In the
+              lower part there are two checkboxes: "AUTO-STOP-NOTE" (left) and
+              "APPLY-VELOCITY" (right).
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/instrument_editor_mute_group.png" format="PNG"/>
               </imageobject>
@@ -3805,7 +4156,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <para>Hydrogen provides more <emphasis role="bold"><link linkend="def.mutegroup">Mute Groups</link></emphasis> than you know what to do with
           (over 256).  A Mute Group is a grouping of instruments which's playback is
-          mutually exclusive &mdash; only one instrument of the group may be playing at a
+          mutually exclusive - only one instrument of the group may be playing at a
           time.  If one is playing and another instrument in the group is
           triggered, the former will immediately be silence (<link linkend="def.mute">muted</link>) and the latter starts playing.  This is useful, especially, for instruments like
           hi-hats where the opened and closed sound are incorporated into the drumkit as different
@@ -3867,6 +4218,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.filter">
             <mediaobject>
+          <textobject>
+            <phrase>
+              From left to right: a button titled "BYP", a rotary titled
+              "CUTOFF", and another one titled "RESONANCE".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/instrument_editor_filter.png" format="PNG"/>
               </imageobject>
@@ -3906,6 +4263,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.pitch_shift_parameters">
             <mediaobject>
+          <textobject>
+            <phrase>
+              From left to right: a LCD displaying the total pitch and three
+              rotaries titled "PITCH", "FINE",  and "RANDOM".
+
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/instrument_editor_pitch.png" format="PNG"/>
               </imageobject>
@@ -3923,8 +4287,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <note>
                 <para>
-                  The pitch change is fairly small, almost always between &plusmn;1 half-steps
-                  &times; value.  Using this sparingly can help your sequences to sound
+                  The pitch change is fairly small, almost always between &#177;1 half-steps
+                  &#10761; value.  Using this sparingly can help your sequences to sound
                   more like a real drummer.	              
                 </para>
               </note>
@@ -3938,6 +4302,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.midi_out_settings">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Two LCDs with corresponding decrease and increase buttons. The
+              left one is titled "CHANNEL" and the right one "NOTE".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/instrument_editor_midi_out.png" format="PNG"/>
               </imageobject>
@@ -3969,6 +4339,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.HH_pressure_group">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Three LCDs with corresponding decrease and increase buttons titled
+              "HH PRESS. GRP", "MIN. RANGE", and "MAX RANGE" (from left to right).
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/instrument_editor_hihat_pressure_group.png" format="PNG"/>
               </imageobject>
@@ -4017,6 +4393,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.layers.components">
             <mediaobject>
+          <textobject>
+            <phrase>
+              In the center you can find the name of the Drumkit component and
+              at the right end a button to open a context menu.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="img/InstrumentEditorLayersComponents.png" format="PNG" />
               </imageobject>
@@ -4026,6 +4408,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
 	        Right below the <option>General</option> and <option>Layers</option> button you find the name of the currently selected <link linkend="def.component">component</link>. In the drop down menu accessible by pressing
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button with a black filled triangle pointing downwards.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="img/btn_dropdown_off.png" format="PNG" />
               </imageobject>
@@ -4065,18 +4452,33 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para>
             Using
               <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "LOAD LAYER".
+            </phrase>
+          </textobject>
                 <imageobject>
                   <imagedata fileref="generated_en/loadLayer_off.png" format="PNG" />
                 </imageobject>
               </inlinemediaobject>
             you can load a sample into the currently selected layer, using
               <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "DELETE LAYER".
+            </phrase>
+          </textobject>
                 <imageobject>
                   <imagedata fileref="generated_en/deleteLayer_off.png" format="PNG" />
                 </imageobject>
               </inlinemediaobject>
             you can delete the current layer, and using
               <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "EDIT LAYER".
+            </phrase>
+          </textobject>
                 <imageobject>
                   <imagedata fileref="generated_en/editLayer_off.png" format="PNG" />
                 </imageobject>
@@ -4122,6 +4524,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.layers.sample_selection">
             <mediaobject>
+          <textobject>
+            <phrase>
+              A LCD titled "SAMPLE SEL." with a button to open display the
+              different choices to the right.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="img/InstrumentEditorLayersSampleSelection.png" format="PNG" />
               </imageobject>
@@ -4166,6 +4574,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="fig.instrument_editor.layers.controls">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Four rotaries with corresponding LCDs: "L. GAIN" (top left),
+              "C. VOLUME" (top right), "PITCH" (bottom left), and "FINE" (bottom right).
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="img/InstrumentEditorLayersControls.png" format="PNG" />
               </imageobject>
@@ -4226,6 +4640,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>The Sample Editor allows you to tweak and manipulate your
         samples. It can be accessed by selecting a layer in the <link linkend="chpt.instrument_editor.layers">Instrument Editor</link> and clicking the
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "EDIT LAYER".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/editLayer_off.png" format="PNG" />
             </imageobject>
@@ -4401,6 +4820,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	          <para>
 	            The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using Rubber Band again. When <link linkend="sect.main_form.export_song">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the 
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey vertical button containing the characters "R", "U", and "B"
+              in adjacent lines.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="img/rubber_off.png" format="PNG" />
               </imageobject>
@@ -4542,6 +4967,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem>
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button with a filled black triangle pointing to the right.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_play_on_mixer.png" format="PNG" />
               </imageobject>
@@ -4556,6 +4986,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem>
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Vertical, grey LED-like object.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/led_trigger_on.png" format="PNG" />
               </imageobject>
@@ -4566,6 +5001,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem>
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Horizontal, blue LED-like object.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/item_selected.png" format="PNG" />
               </imageobject>
@@ -4588,6 +5028,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem id="chpt.mixer.channel_strips.mute">
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "M".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
               </imageobject>
@@ -4602,6 +5047,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem id="chpt.mixer.channel_strips.solo">
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "S".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
               </imageobject>
@@ -4616,6 +5066,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem id="chpt.mixer.channel_strips.pan">
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey rotary widget with black background. On the widget there is a
+              centered black circle and a black vertical line extending from the
+              topmost point of the circle to its center.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/mixer_rotary.png" format="PNG" />
               </imageobject>
@@ -4630,6 +5087,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem id="chpt.mixer.channel_strips.fx_volume">
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey and round widget containing a grey and centered circle as
+              well as a short grey line to indicate the position.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/mixer_knob.png" format="PNG" />
               </imageobject>
@@ -4690,6 +5153,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem id="chpt.mixer.component_strips.mute">
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "M".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
               </imageobject>
@@ -4699,6 +5167,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <listitem id="chpt.mixer.component_strips.solo">
 	      <para>
             <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "S".
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
               </imageobject>
@@ -4735,6 +5208,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       The FX Rack can be accessed by clicking the
 
       <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing the black characters "FX".
+            </phrase>
+          </textobject>
         <imageobject>
           <imagedata fileref="img/showFX_on.png" format="PNG" />
         </imageobject>
@@ -4788,6 +5266,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       
 
       <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "EDIT".
+            </phrase>
+          </textobject>
         <imageobject>
           <imagedata fileref="img/edit_off.png" format="PNG" />
         </imageobject>
@@ -4812,6 +5295,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        
         <informalfigure id="figLADSPA_FX_Properties">
          <mediaobject>
+          <textobject>
+            <phrase>
+              Example widget to alter the properties of a LADSPA FX. At the top
+              left the name of the FX is displayed and at the top left two
+              buttons - "Select FX" and "Deactive" - are shown. In the remainder
+              there are several vertical strips stacked horizontally with each
+              one carrying: an LCD displaying the current value (top), the name
+              of the parameter (left), and a fader with included meter (right).
+            </phrase>
+          </textobject>
            <imageobject>
              <imagedata fileref="img/LADSPA_FX_Properties.png" format="PNG" />
            </imageobject>
@@ -4823,6 +5316,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       enable/disable the effect click the <emphasis role="bold">Deactivate</emphasis> button (or the Bypass (
 
       <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Redish button containing the black characters "BYP".
+            </phrase>
+          </textobject>
         <imageobject>
           <imagedata fileref="img/bypass_over.png" format="PNG" />
         </imageobject>
@@ -4860,6 +5358,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <para>
 	     Using the fader you can control the volume of the resulting audio output of Hydrogen which is the sum of all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, the <link linkend="chpt.song_editor.playbackTrack">Playback Track</link>, and the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Metronome</link>. The
          <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "MUTE".
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="img/master_mute_off.png" format="PNG" />
             </imageobject>
@@ -4869,6 +5372,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>On the bottom-right of the Master section the
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing the black characters "FX".
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/showFX_on.png" format="PNG" />
           </imageobject>
@@ -4876,6 +5384,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         button will show or hide the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>, and the
         
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing the black characters "PEAK".
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/showPeaks_on.png" format="PNG" />
           </imageobject>
@@ -4936,6 +5449,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <informalfigure id="mixerSettingsButton">
           <mediaobject>
+          <textobject>
+            <phrase>
+              Button holding the cog symbol right of the "Master" title of the
+              Master Fader Strip.
+            </phrase>
+          </textobject>
             <imageobject>
               <imagedata fileref="generated_en/mixerSettingsButton.png" format="PNG" />
             </imageobject>
@@ -4947,6 +5466,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <informalfigure id="mixerSettingsDialog">
             <mediaobject>
+          <textobject>
+            <phrase>
+              Dialog to "Select Pan Law" with a large dropdown menu in the
+              middle, a text input title "db SPL Center Componensation" below,
+              and the "Cancel" (left) and "OK" (right) buttons at the bottom.
+            </phrase>
+          </textobject>
               <imageobject>
                 <imagedata fileref="generated_en/mixerSettingsDialog.png" format="PNG" />
               </imageobject>
@@ -5122,6 +5648,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
          <informalfigure id="fig.playlist_editor.controls">
            <mediaobject>
+          <textobject>
+            <phrase>
+              From left to right: rewind, play and pause, stop, and fast forward.
+            </phrase>
+          </textobject>
              <imageobject>
                <imagedata fileref="img/PlaylistEditorControls.png" format="PNG"/>
              </imageobject>
@@ -5302,6 +5833,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <para>
 	    You can also define <abbrev>MIDI</abbrev> bindings by simply pressing the
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Red circle.
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/rec.png" format="PNG" />
           </imageobject>
@@ -5318,6 +5854,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	    <para>
 	      You can also define a binding without the 
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Red circle.
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/rec.png" format="PNG" />
           </imageobject>
@@ -6215,6 +6756,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        Hydrogen starts up: <emphasis>Pattern mode</emphasis> should be selected by default. Now
        let's click on the
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey play and pause button containing two vertical black lines
+              (left) and a black triangle (right) pointing to the right.
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="img/btn_play_off.png" format="PNG"/>
          </imageobject>
@@ -6275,6 +6822,11 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
        independent <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, each of these is bound to an instrument, plus a
        <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> and a 
         <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Blue button containing the black characters "FX".
+            </phrase>
+          </textobject>
           <imageobject>
             <imagedata fileref="img/showFX_on.png" format="PNG" />
           </imageobject>
@@ -6284,18 +6836,33 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
        Every line features 3 buttons (
 
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button with a filled black triangle pointing to the right.
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_play_on_mixer.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "S".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
 
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "M".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
          </imageobject>
@@ -6304,6 +6871,11 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
        ), current maximum peak, FX volume control knobs, volume fader, and name of the track. Clicking on
 
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "S".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_solo_on.png" format="PNG" />
          </imageobject>
@@ -6312,6 +6884,11 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
        will play the selected instrument, cutting the others. The Mute button
 
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing a black "M".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
          </imageobject>
@@ -6441,6 +7018,11 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         You can layer several samples into the instrument.  Which one is played
         depends on the <link linkend="def.velocity">velocity</link> of the incoming note.  Click 
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "LOAD LAYER".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/loadLayer_off.png" format="PNG"/>
          </imageobject>
@@ -6461,6 +7043,11 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         light blue.  To load a second sample, click the slot just below it, and
         then click
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button containing the black characters "LOAD LAYER".
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/loadLayer_off.png" format="PNG"/>
          </imageobject>
@@ -6505,6 +7092,11 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
           causing your sample to <link linkend="def.clipping">clip</link>.  Remember to test the gain with
           full-velocity using the
        <inlinemediaobject>
+          <textobject>
+            <phrase>
+              Grey button with a filled black triangle pointing to the right.
+            </phrase>
+          </textobject>
          <imageobject>
            <imagedata fileref="generated_en/btn_play_on_mixer.png" format="PNG"/>
          </imageobject>
@@ -6516,7 +7108,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para>The pitch of the sample can be modified with the pitch controls.
         The <guibutton>Pitch</guibutton> knob adjust the pitch in musical
         half-steps.  (So, <option>-12</option> is down 1 octave).  The pitch on the right adjusts
-        the pitch &plusmn;50 cents.  (One half-step is 100 cents.)</para>
+        the pitch &#177;50 cents.  (One half-step is 100 cents.)</para>
 
         <note>
           <para>The pitch is adjusted by playing the sample back faster or
@@ -6540,9 +7132,9 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para><emphasis role="bold">Turn down the gain.</emphasis> Every gain
         knob (i.e. an amplifier), this is a <emphasis>gain stage</emphasis>.  
         With every gain stage you have, it's
-        easy to overdrive your signal &mdash; which means the signal gets
+        easy to overdrive your signal - which means the signal gets
         distorted by <link linkend="def.clipping">clipping</link>.  In addition, if you have two samples that, by
-        themselves, peg your meters &mdash; what do you think happens when you
+        themselves, peg your meters - what do you think happens when you
         combine them?  That's right, you overdrive the signal again.</para>
 
         <para>If things sound bad and distorted, start by turning down the gain
@@ -6573,7 +7165,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 
         <para><emphasis role="bold">The ADSR will not be longer than your
         sample.</emphasis> If you have a short sample, it doesn't matter how
-        long you set the attack and delay &mdash; the sample will stop playing
+        long you set the attack and delay - the sample will stop playing
         at the end.</para>
 
         <para><emphasis role="bold">Things change with the sample
@@ -7061,7 +7653,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         time will play.</para>
 
         <para>Suppose you have a sample of a floor tom being struck softly.  If
-        you simply play the sample louder &mdash; it will
+        you simply play the sample louder - it will
         <emphasis>not</emphasis> sound the same as a real tom that has been
         struck very hard.  If you wish to mimic this in your instrument, you can
         load one sample for soft playing, and a different sample for loud
@@ -7100,7 +7692,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <para>This is typically used in hi-hats, where there's a different
         instrument (sample) for when the hi-hat is open or closed.  With a real
         hi-hat, the sound of the open hi-hat will stop as soon as you close it.
-        However, if you use two samples &mdash; the open sound will continue
+        However, if you use two samples - the open sound will continue
         even after you have triggered the closed sound.  By placing both
         instruments in the same mute group (group #1, for example)... triggering
         closed sound will immediately stop the open sound (and vice
