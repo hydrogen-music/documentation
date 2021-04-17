@@ -18,6 +18,7 @@ XMLTO_OPTS = --stringparam section.autolabel=1 \
 	--stringparam admon.graphics.extension=.svg \
 	--stringparam admon.graphics=1 \
 	--stringparam admon.graphics.path=img/admonitions/ \
+	--stringparam admon.style="'margin-left: 5%;'" \
 	-m res/styling.xsd
 
 ITSTOOL = itstool

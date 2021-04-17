@@ -753,6 +753,7 @@ th.char {
 }
 
 .note, .warning, .info, .caution, .tip {
+  margin-left: 5%;
   border-radius: 0.5rem;
   min-height: 3rem;
   padding-top: 0;
@@ -760,7 +761,7 @@ th.char {
   margin-top: 1rem;
   margin-right: 4px;
   display: table;
-  width: 100%;
+  width: 95%;
 }
 
 .note > div, .warning > div, .info > div, .caution > div, .tip > div {
