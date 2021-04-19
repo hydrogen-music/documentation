@@ -1776,12 +1776,12 @@ body {
   padding-top: 6em;
 }
 
-.book > .dedication > .titlepage,
+.dedication > .titlepage,
 .article > .dedication > .titlepage,
-.book .chapter > .titlepage,
-.book .preface > .titlepage,
-.book .appendix > .titlepage,
-.book .part > .titlepage {
+.chapter > .titlepage,
+.preface > .titlepage,
+.appendix > .titlepage,
+.part > .titlepage {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 0.25rem solid var(--border-color);
@@ -1907,6 +1907,20 @@ img {
   max-height: 8.75rem;
   max-width: 70%;
 }
+
+.navheader tbody, .navfooter tbody {
+  color: var(--hydrogen-color-blue-dark);
+  font-weight: bold;
+}
+.navheader tbody a, .navfooter tbody a {
+  color: var(--on-background-color);
+  font-weight: normal;
+}
+.navheader hr {
+  color: var(--hydrogen-color-blue-dark);
+}
+  
+
 /* ============================================================ */
 
 @media screen and (max-width: 1199px) {
