@@ -866,7 +866,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <title>NSM</title>
 
           <para>
-            Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <command>Non Session Manager</command> or <command>RaySession</command>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
+            Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <ulink url="https://github.com/Houston4444/RaySession">RaySession</ulink>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
           </para>
           
           <itemizedlist>
@@ -880,12 +880,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
 	            <emphasis role="bold">Import Into Session</emphasis>:
                 instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
-
-                <warning>
-	              <para>
-	                In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
-                  </para>
-                </warning>
               </para>
             </listitem>
 	        <listitem>
