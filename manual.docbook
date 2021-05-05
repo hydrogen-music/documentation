@@ -65,13 +65,13 @@
         <command>git</command> repository with
       </para>
       <screen>
-        <prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
+<prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
       </screen>
       <para>
         A certain release can be fetched with
       </para>
       <screen>
-        <prompt>$</prompt><command> git checkout tags/1.0.0</command>
+<prompt>$</prompt><command> git checkout tags/1.0.0</command>
       </screen>
         
       <para>Compiling Hydrogen depends on the following libraries (among others):</para>
@@ -127,52 +127,51 @@
       with:</para>
 
       <screen>
-        <prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools         \
-	qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
-	libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
-	libpulse-dev libcppunit-dev liblrdf-dev                 \
-	liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
-      </screen>
+<prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools           \
+    qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
+    libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
+    libpulse-dev libcppunit-dev liblrdf-dev                 \
+    liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
+</screen>
 
         <para>Compiling with <command>cmake</command> can be done easily by using the <filename>build.sh</filename> script. Go to the directory where the <command>git</command> repository
         was cloned and run the <filename>build.sh</filename> script without any arguments to display the help :</para>
 
         <screen>
-           <prompt>$</prompt> <command>./build.sh</command>
+<prompt>$</prompt> <command>./build.sh</command>
         </screen>
       
         <para>The help is now displayed (and is self-explanatory) :
         </para>
       
         <screen>
-          <command>   r[m]     => all built, temp and cache files</command>
-          <command>   c[lean]  => remove cache files</command>
-          <command>   m[ake]   => launch the build process</command>
-          <command>   mm       => launch the build process using ccache</command>
-          <command>   mt       => launch the build process with clang tidy checks enabled</command>
-          <command>   d[oc]    => build html documentation</command>
-          <command>   g[raph]  => draw a dependencies graph</command>
-          <command>   h[elp]   => show the build options</command>
-          <command>   x|exec   => execute hydrogen</command>
-          <command>   t[ests]  => execute tests</command>
-          <command>   p[kg]    => build source package</command>
-          <command>   z        => build using ccache and run from tree</command>
-
+<command>   r[m]     => all built, temp and cache files</command>
+<command>   c[lean]  => remove cache files</command>
+<command>   m[ake]   => launch the build process</command>
+<command>   mm       => launch the build process using ccache</command>
+<command>   mt       => launch the build process with clang tidy checks enabled</command>
+<command>   d[oc]    => build html documentation</command>
+<command>   g[raph]  => draw a dependencies graph</command>
+<command>   h[elp]   => show the build options</command>
+<command>   x|exec   => execute hydrogen</command>
+<command>   t[ests]  => execute tests</command>
+<command>   p[kg]    => build source package</command>
+<command>   z        => build using ccache and run from tree</command>
         </screen>
 
         <para>To build Hydrogen and execute the result, run the build script with the <parameter>m</parameter> option
         </para>
       
         <screen>
-           <prompt>$</prompt> <command>./build.sh m x</command>
+<prompt>$</prompt> <command>./build.sh m x</command>
         </screen>              
 
         <para>and to install it permanently on your computer, change into the <filename>build</filename> folder and use the <command>make</command> command.
         </para>
 
         <screen>
-          <prompt>$</prompt> <command>cd build</command>
-          <prompt>$</prompt> <command>sudo make install</command>
+<prompt>$</prompt> <command>cd build</command>
+<prompt>$</prompt> <command>sudo make install</command>
         </screen>
         
         <note>
@@ -761,7 +760,7 @@
               </phrase>
             </textobject>
             <imageobject>
-              <imagedata fileref="img/tastiera.png" format="PNG" />
+              <imagedata fileref="tastiera.png" format="PNG" />
             </imageobject>
           </mediaobject>
         </informalfigure>
@@ -783,7 +782,7 @@
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/Rec_button.png" format="PNG"/>
+              <imagedata fileref="Rec_button.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
 in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> and afterwards press the 
@@ -795,7 +794,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/btn_play_off.png" format="PNG"/>
+              <imagedata fileref="btn_play_off.png" format="PNG"/>
           </imageobject>
           </inlinemediaobject>
           button located right next to it (like in a classical tape recorder). 
@@ -867,7 +866,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <title>NSM</title>
 
           <para>
-            Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <command>Non Session Manager</command> or <command>RaySession</command>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
+            Hydrogen will be under session management if you start it via a <abbrev>NSM</abbrev> server application, like <ulink url="https://github.com/Houston4444/RaySession">RaySession</ulink>. You can easily check whether Hydrogen is aware of the session by checking out the <option>Project</option> option of the <link linkend="chpt.main_menu">Main Menu</link> as some action will have changed in order to comply to the <abbrev>NSM</abbrev> API.
           </para>
           
           <itemizedlist>
@@ -881,12 +880,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para>
 	            <emphasis role="bold">Import Into Session</emphasis>:
                 instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
-
-                <warning>
-	              <para>
-	                In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
-                  </para>
-                </warning>
               </para>
             </listitem>
 	        <listitem>
@@ -938,16 +931,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <para>
 	      After <link linkend="chpt.download">installing</link> Hydrogen on your system you can invoke it from the command-line with a number of different options.
       <screen>
-        <command>-h, --help                  Displays this help.</command>
-        <command>-v, --version               Displays version information.</command>
-        <command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
-        <command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
-        <command>-n, --nosplash              Hide splash screen</command>
-        <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
-        <command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
-        <command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
-        <command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
-        <command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
+<command>-h, --help                  Displays this help.</command>
+<command>-v, --version               Displays version information.</command>
+<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
+<command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
+<command>-n, --nosplash              Hide splash screen</command>
+<command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
+<command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
+<command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
+<command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
+<command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
       </screen>
 
         </para>
@@ -1080,7 +1073,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                     <imageobject>
-                      <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+                      <imagedata fileref="btn_set_play_on.png" format="PNG" />
                     </imageobject>
                   </inlinemediaobject>
           should be displayed in the bottom right corner - for this setting to take effect.
@@ -1137,7 +1130,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                     <imageobject>
-                      <imagedata fileref="img/rubber_off.png" format="PNG" />
+                      <imagedata fileref="rubber_off.png" format="PNG" />
                     </imageobject>
                   </inlinemediaobject>
           button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link>. You can use this behavior to verify your configuration.
@@ -1311,7 +1304,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="img/btn_jack_transport_off.png" format="PNG" />
+                    <imagedata fileref="btn_jack_transport_off.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
                 button has to be activated and the
@@ -1322,7 +1315,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="img/btn_jack_master_off.png" format="PNG" />
+                    <imagedata fileref="btn_jack_master_off.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>                
                 button deactivated in the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link> (next to
@@ -1715,7 +1708,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Main Menu</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MainMenu.png" format="PNG"/>
+            <imagedata fileref="MainMenu.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -1923,7 +1916,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
            <imageobject>
-             <imagedata fileref="img/Downloading_SoundLibrary.png" format="PNG" />
+             <imagedata fileref="Downloading_SoundLibrary.png" format="PNG" />
            </imageobject>
          </mediaobject>
         </informalfigure>
@@ -2243,7 +2236,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
+              <imagedata fileref="btn_set_play_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           and
@@ -2254,7 +2247,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+              <imagedata fileref="btn_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           .  When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and
@@ -2269,7 +2262,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/btn_set_play_off.png" format="PNG" />
+                <imagedata fileref="btn_set_play_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           (for <emphasis>Set BPM</emphasis>), the auto-start is disabled.</para>
@@ -2285,7 +2278,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/btn_set_play_on.png" format="PNG" />
+              <imagedata fileref="btn_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           ).  Count off
@@ -2352,7 +2345,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/btn_metronome_off.png" format="PNG" />
+              <imagedata fileref="btn_metronome_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           to toggle the metronome.</para>
@@ -2373,7 +2366,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/rubber_off.png" format="PNG" />
+              <imagedata fileref="rubber_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
@@ -2437,7 +2430,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/btn_jack_transport_off.png" format="PNG" />
+            <imagedata fileref="btn_jack_transport_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore.
@@ -2452,7 +2445,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/btn_jack_master_off.png" format="PNG" />
+              <imagedata fileref="btn_jack_master_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
@@ -2561,7 +2554,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/SongRuler.png" format="PNG" />
+            <imagedata fileref="SongRuler.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </informalfigure>
@@ -3124,7 +3117,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
            <imageobject>
-             <imagedata fileref="img/tag_bar.png" format="PNG" />
+             <imagedata fileref="tag_bar.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </informalfigure>
@@ -3195,7 +3188,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/btn_viewTL_off.png" format="PNG" />
+                <imagedata fileref="btn_viewTL_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
             button left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
@@ -3238,7 +3231,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Automation Path Widget</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/AutomationPath.png" format="PNG"/>
+            <imagedata fileref="AutomationPath.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -3352,7 +3345,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="img/PatternSizeDialog.png" format="PNG" />
+                    <imagedata fileref="PatternSizeDialog.png" format="PNG" />
                   </imageobject>
                 </mediaobject>
               </informalfigure>                
@@ -3759,7 +3752,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The Note Properties Ruler set to Velocity</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/NotePropertiesRuler.png" format="PNG"/>
+              <imagedata fileref="NotePropertiesRuler.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -4400,7 +4393,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/InstrumentEditorLayersComponents.png" format="PNG" />
+                <imagedata fileref="InstrumentEditorLayersComponents.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4414,7 +4407,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/btn_dropdown_off.png" format="PNG" />
+                <imagedata fileref="btn_dropdown_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
             you find a list of all components available in the current drumkit and can select them via a <emphasis>left click</emphasis>. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one.
@@ -4434,7 +4427,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <title>The Layer Section of the Instrument Editor</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/InstrumentEditorLayersLayers.png" format="PNG" />
+                <imagedata fileref="InstrumentEditorLayersLayers.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </figure>
@@ -4531,7 +4524,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/InstrumentEditorLayersSampleSelection.png" format="PNG" />
+                <imagedata fileref="InstrumentEditorLayersSampleSelection.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4581,7 +4574,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/InstrumentEditorLayersControls.png" format="PNG" />
+                <imagedata fileref="InstrumentEditorLayersControls.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4827,7 +4820,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="img/rubber_off.png" format="PNG" />
+                <imagedata fileref="rubber_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly.
@@ -4958,7 +4951,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Instrument Channel Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MixerInstrumentStrip.png" format="PNG" />
+            <imagedata fileref="MixerInstrumentStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5134,7 +5127,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Component Channel Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MixerComponentStrip.png" format="PNG" />
+            <imagedata fileref="MixerComponentStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5199,7 +5192,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The FX Rack in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MixerFXStrip.png" format="PNG" />
+            <imagedata fileref="MixerFXStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5214,7 +5207,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="img/showFX_on.png" format="PNG" />
+          <imagedata fileref="showFX_on.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
 
@@ -5272,7 +5265,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="img/edit_off.png" format="PNG" />
+          <imagedata fileref="edit_off.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
 
@@ -5284,7 +5277,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>Select an Effect</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MixerFXSelect.png" format="PNG" />
+            <imagedata fileref="MixerFXSelect.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5306,7 +5299,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
            <imageobject>
-             <imagedata fileref="img/LADSPA_FX_Properties.png" format="PNG" />
+             <imagedata fileref="LADSPA_FX_Properties.png" format="PNG" />
            </imageobject>
          </mediaobject>
          </informalfigure>
@@ -5322,7 +5315,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="img/bypass_over.png" format="PNG" />
+          <imagedata fileref="bypass_over.png" format="PNG" />
         </imageobject>
         </inlinemediaobject>)
 
@@ -5345,7 +5338,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Master Fader Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="img/MixerMasterStrip.png" format="PNG" />
+            <imagedata fileref="MixerMasterStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5364,7 +5357,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="img/master_mute_off.png" format="PNG" />
+              <imagedata fileref="master_mute_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           button <link linkend="def.mute">mutes</link> the whole output.
@@ -5378,7 +5371,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/showFX_on.png" format="PNG" />
+            <imagedata fileref="showFX_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>      
         button will show or hide the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>, and the
@@ -5390,7 +5383,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/showPeaks_on.png" format="PNG" />
+            <imagedata fileref="showPeaks_on.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>       
         button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
@@ -5612,7 +5605,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <title>The Playlist Editor with Demo Songs loaded</title>
        <mediaobject>
          <imageobject>
-           <imagedata fileref="img/PlaylistEditor.png" format="PNG"/>
+           <imagedata fileref="PlaylistEditor.png" format="PNG"/>
          </imageobject>
        </mediaobject>
      </figure>
@@ -5654,7 +5647,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
              <imageobject>
-               <imagedata fileref="img/PlaylistEditorControls.png" format="PNG"/>
+               <imagedata fileref="PlaylistEditorControls.png" format="PNG"/>
              </imageobject>
            </mediaobject>
          </informalfigure>
@@ -5839,7 +5832,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/rec.png" format="PNG" />
+            <imagedata fileref="rec.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button left of the Event-Action binding line. 
@@ -5860,7 +5853,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/rec.png" format="PNG" />
+            <imagedata fileref="rec.png" format="PNG" />
           </imageobject>
         </inlinemediaobject> button by setting the <emphasis role="bold">Event Param.</emphasis> manually to the desired <abbrev>MIDI</abbrev> note.
         </para>
@@ -6248,7 +6241,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        <command>oscsend</command>.</para>
 
        <screen>
-         <prompt>$</prompt> <command>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</command>
+<prompt>$</prompt> <command>oscsend localhost 9000 /Hydrogen/NEW_SONG s /tmp/new.h2song</command>
        </screen>
 
        <note>
@@ -6282,7 +6275,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          <para>The syntax for sending the commands is</para>
 
          <screen>
-           <prompt>$</prompt> <command>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</command>
+<prompt>$</prompt> <command>oscsend localhost OSC_PORT_NUMBER COMMAND_URL COMMAND_TYPE COMMAND_ARGUMENT</command>
          </screen>
 
          <para>with the supported types</para>
@@ -6763,7 +6756,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="img/btn_play_off.png" format="PNG"/>
+           <imagedata fileref="btn_play_off.png" format="PNG"/>
          </imageobject>
        </inlinemediaobject>
 button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link>, and while the pattern is playing
@@ -6828,7 +6821,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="img/showFX_on.png" format="PNG" />
+            <imagedata fileref="showFX_on.png" format="PNG" />
           </imageobject>
           </inlinemediaobject>
           button to show and hide the 
@@ -7744,7 +7737,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
             <title>Visualization of the Interaction of the Different Pan Parameters</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="img/matrioskaPanH2.png" format="PNG" />
+                <imagedata fileref="matrioskaPanH2.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </figure>

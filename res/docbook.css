@@ -512,8 +512,8 @@ h6 { font-weight: 400;
 
 .titlepage .abstract {
   text-align: left;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 5%;
+  margin-right: 5%;
   border: 1px solid var(--hydrogen-color-black);
   padding-left: 1em;
   padding-right: 1em;
@@ -753,6 +753,7 @@ th.char {
 }
 
 .note, .warning, .info, .caution, .tip {
+  margin-left: 5%;
   border-radius: 0.5rem;
   min-height: 3rem;
   padding-top: 0;
@@ -760,7 +761,7 @@ th.char {
   margin-top: 1rem;
   margin-right: 4px;
   display: table;
-  width: 100%;
+  width: 95%;
 }
 
 .note > div, .warning > div, .info > div, .caution > div, .tip > div {
@@ -930,6 +931,8 @@ pre.screen {
   line-height: 1.25em;
   background-color: var(--verbatim-even-background-color);
   padding-top: 1.25em;
+  padding-left: 2%;
+  max-width: 100%;
 }
 
 /* Adapted from https://stackoverflow.com/questions/41306797/html-how-to-add-line-numbers-to-a-source-code-block */
@@ -969,7 +972,7 @@ pre span.ln {
 pre {
   display: table;
   table-layout: fixed;
-  width: 100%; /* anything but auto, otherwise fixed layout not guaranteed */
+  /* width: 100%; /* anything but auto, otherwise fixed layout not guaranteed */ */
   white-space: pre;
 }
 
@@ -1773,12 +1776,12 @@ body {
   padding-top: 6em;
 }
 
-.book > .dedication > .titlepage,
+.dedication > .titlepage,
 .article > .dedication > .titlepage,
-.book .chapter > .titlepage,
-.book .preface > .titlepage,
-.book .appendix > .titlepage,
-.book .part > .titlepage {
+.chapter > .titlepage,
+.preface > .titlepage,
+.appendix > .titlepage,
+.part > .titlepage {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 0.25rem solid var(--border-color);
@@ -1904,6 +1907,20 @@ img {
   max-height: 8.75rem;
   max-width: 70%;
 }
+
+.navheader tbody, .navfooter tbody {
+  color: var(--hydrogen-color-blue-dark);
+  font-weight: bold;
+}
+.navheader tbody a, .navfooter tbody a {
+  color: var(--on-background-color);
+  font-weight: normal;
+}
+.navheader hr {
+  color: var(--hydrogen-color-blue-dark);
+}
+  
+
 /* ============================================================ */
 
 @media screen and (max-width: 1199px) {
