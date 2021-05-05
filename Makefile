@@ -12,14 +12,13 @@ MANUAL_MASTER = manual.docbook
 TUTORIAL_MASTER = tutorial.docbook
 
 XMLTO_OPTS = --stringparam section.autolabel=1 \
+	--stringparam use.is.as.filename=1 \
 	--stringparam toc.max.depth=3 \
 	--stringparam xref.with.number.and.title=0 \
 	--stringparam section.label.includes.component.label=1 \
 	--stringparam admon.graphics.extension=.svg \
 	--stringparam admon.graphics=1 \
-	--stringparam admon.graphics.path=img/admonitions/ \
-	--stringparam admon.style="'margin-left: 5%;'" \
-	-m res/styling.xsd
+	--stringparam admon.style="'margin-left: 5%;'"
 
 ITSTOOL = itstool
 MSGMERGE = msgmerge
@@ -36,7 +35,20 @@ clean:
 	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
 	$(XMLTO) html-nochunks $(XMLTO_OPTS) \
 		--stringparam l10n.gentext.language=$$LL \
+		--stringparam html.stylesheet='res/docbook.css' \
+		--stringparam html.script='res/docbook.js' \
+		--stringparam img.src.path=img/ \
+		--stringparam admon.graphics.path=img/admonitions/ \
 		-x res/xslt/html/docbook.xsl \
+		$<
+	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
+	$(XMLTO) html -o $*_chunked $(XMLTO_OPTS) \
+		--stringparam l10n.gentext.language=$$LL \
+		--stringparam html.stylesheet='../res/docbook.css' \
+		--stringparam html.script='../res/docbook.js' \
+		--stringparam img.src.path=../img/ \
+		--stringparam admon.graphics.path=../img/admonitions/ \
+		-x res/xslt/html/chunk.xsl \
 		$<
 
 %.dbk_validated: %.dbk

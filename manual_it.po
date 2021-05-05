@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2021-04-17 23:01+0200\n"
+"POT-Creation-Date: 2021-05-05 12:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -377,7 +377,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:294
 msgctxt "_"
-msgid "external ref='generated_en/GUI_Sections_0.9.5_v2.png' md5='3a48afe570301756154eeee8da95c427'"
+msgid "external ref='generated_en/GUI_Sections_0.9.5_v2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -407,7 +407,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:322
 msgctxt "_"
-msgid "external ref='generated_en/MainUI_tabbed.png' md5='8611e20ca4e74013f36e811f24bea8b6'"
+msgid "external ref='generated_en/MainUI_tabbed.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -1342,12 +1342,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:763
 msgctxt "_"
-msgid "external ref='img/tastiera.png' md5='344cc621fc42d367ff50ec3b01017b04'"
+msgid "external ref='tastiera.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:755
-msgid "<textobject> <phrase> Picture illustrating the mapping of Hydrogen's virtual keyboard to the layout of the computers' keyboard. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/tastiera.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Picture illustrating the mapping of Hydrogen's virtual keyboard to the layout of the computers' keyboard. </phrase> </textobject> <imageobject> <imagedata fileref=\"tastiera.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -1367,7 +1367,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:785
 msgctxt "_"
-msgid "external ref='img/Rec_button.png' md5='21e4b8d7fd5a53b207b5b3875c9f49d0'"
+msgid "external ref='Rec_button.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -1377,12 +1377,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:797 manual.docbook:6765
 msgctxt "_"
-msgid "external ref='img/btn_play_off.png' md5='5d22ba3609e85f143aa992c25d469a0c'"
+msgid "external ref='btn_play_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:776
-msgid "In order to start recording, first activate the record button <inlinemediaobject> <textobject> <phrase> Grey record button with a red circle in its center. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/Rec_button.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> in the <link linkend=\"sect.main_toolbar.transport_control\">Main Toolbar</link> and afterwards press the <inlinemediaobject> <textobject> <phrase> Grey play and pause button containing two vertical black lines (left) and a black triangle (right) pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button located right next to it (like in a classical tape recorder)."
+msgid "In order to start recording, first activate the record button <inlinemediaobject> <textobject> <phrase> Grey record button with a red circle in its center. </phrase> </textobject> <imageobject> <imagedata fileref=\"Rec_button.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> in the <link linkend=\"sect.main_toolbar.transport_control\">Main Toolbar</link> and afterwards press the <inlinemediaobject> <textobject> <phrase> Grey play and pause button containing two vertical black lines (left) and a black triangle (right) pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button located right next to it (like in a classical tape recorder)."
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -1556,7 +1556,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:974
 msgctxt "_"
-msgid "external ref='generated_en/PreferencesGeneral_V3.png' md5='5072a7d28184e7dfa40f353cd62ad5ac'"
+msgid "external ref='generated_en/PreferencesGeneral_V3.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
@@ -1636,12 +1636,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1082 manual.docbook:2256 manual.docbook:2287
 msgctxt "_"
-msgid "external ref='img/btn_set_play_on.png' md5='d3694f8445c2fef7b30834a60d1bffa6'"
+msgid "external ref='btn_set_play_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
 #: manual.docbook:1073
-msgid "The Beat Counter has to be set to <emphasis role=\"bold\">Set <abbrev>BPM</abbrev> and play</emphasis> - <inlinemediaobject> <textobject> <phrase> Blue button containing a \"P\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> should be displayed in the bottom right corner - for this setting to take effect."
+msgid "The Beat Counter has to be set to <emphasis role=\"bold\">Set <abbrev>BPM</abbrev> and play</emphasis> - <inlinemediaobject> <textobject> <phrase> Blue button containing a \"P\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> should be displayed in the bottom right corner - for this setting to take effect."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -1676,12 +1676,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1139 manual.docbook:2375 manual.docbook:4829
 msgctxt "_"
-msgid "external ref='img/rubber_off.png' md5='4af1c3110fbd8772a724f7f85fa22441'"
+msgid "external ref='rubber_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: tip/para
 #: manual.docbook:1129
-msgid "If Rubber Band is installed and configured correctly, you will see an extra button <inlinemediaobject> <textobject> <phrase> Grey vertical button containing the characters \"R\", \"U\", and \"B\" in adjacent lines. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/rubber_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">Main Toolbar</link>. You can use this behavior to verify your configuration."
+msgid "If Rubber Band is installed and configured correctly, you will see an extra button <inlinemediaobject> <textobject> <phrase> Grey vertical button containing the characters \"R\", \"U\", and \"B\" in adjacent lines. </phrase> </textobject> <imageobject> <imagedata fileref=\"rubber_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">Main Toolbar</link>. You can use this behavior to verify your configuration."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -1708,7 +1708,7 @@ msgstr "Audio engine info"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1159
 msgctxt "_"
-msgid "external ref='generated_en/PreferencesAudioSystem_V3.png' md5='1da93face38cf7a71c6f231474ba617c'"
+msgid "external ref='generated_en/PreferencesAudioSystem_V3.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -1854,7 +1854,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1313 manual.docbook:2439
 msgctxt "_"
-msgid "external ref='img/btn_jack_transport_off.png' md5='c1264187019da8004254528045d35060'"
+msgid "external ref='btn_jack_transport_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -1864,12 +1864,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1324 manual.docbook:2454
 msgctxt "_"
-msgid "external ref='img/btn_jack_master_off.png' md5='5108a24ccc5d260fab40e9d2ebab5c9d'"
+msgid "external ref='btn_jack_master_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
 #: manual.docbook:1304
-msgid "For this option to take effect the <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.TRANS\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_jack_transport_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button has to be activated and the <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.MASTER\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_jack_master_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button deactivated in the <link linkend=\"sect.main_toolbar.jack_control\">Main Toolbar</link> (next to having a <abbrev>JACK</abbrev> TBM application)."
+msgid "For this option to take effect the <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.TRANS\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_jack_transport_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button has to be activated and the <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.MASTER\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_jack_master_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button deactivated in the <link linkend=\"sect.main_toolbar.jack_control\">Main Toolbar</link> (next to having a <abbrev>JACK</abbrev> TBM application)."
 msgstr ""
 
 #. (itstool) path: tip/para
@@ -1949,7 +1949,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1436 manual.docbook:5824
 msgctxt "_"
-msgid "external ref='generated_en/MidiSystem_V2.png' md5='f57c80dc6c151d1bea2e52adc6d91fbd'"
+msgid "external ref='generated_en/MidiSystem_V2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -2039,7 +2039,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1533
 msgctxt "_"
-msgid "external ref='generated_en/PreferencesOSC.png' md5='b60b4ce044e7028b914e1bb0ea397231'"
+msgid "external ref='generated_en/PreferencesOSC.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
@@ -2129,7 +2129,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1610
 msgctxt "_"
-msgid "external ref='generated_en/PreferencesAppearance_V2.png' md5='c122a1346ebdd01399742c5fdbfd0bde'"
+msgid "external ref='generated_en/PreferencesAppearance_V2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -2216,7 +2216,7 @@ msgstr "Menu"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1717
 msgctxt "_"
-msgid "external ref='img/MainMenu.png' md5='d0db6cc4eca29a57da78c89bcba53d93'"
+msgid "external ref='MainMenu.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -2428,7 +2428,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1896
 msgctxt "_"
-msgid "external ref='generated_en/Sound_Library_import.png' md5='39e25a7470e1945225be994be6afbc9f'"
+msgid "external ref='generated_en/Sound_Library_import.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -2448,12 +2448,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:1925
 msgctxt "_"
-msgid "external ref='img/Downloading_SoundLibrary.png' md5='fc4254b7389fd8d265636ef82b587087'"
+msgid "external ref='Downloading_SoundLibrary.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:1918
-msgid "<textobject> <phrase> Widget with progress bar popping up during the download of a drumit. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/Downloading_SoundLibrary.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Widget with progress bar popping up during the download of a drumit. </phrase> </textobject> <imageobject> <imagedata fileref=\"Downloading_SoundLibrary.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -2580,7 +2580,7 @@ msgstr "Audio engine info"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2033
 msgctxt "_"
-msgid "external ref='generated_en/AudioEngineInfoDialog.png' md5='c7d64d740b8a0d1bef5cab6a757c7cb3'"
+msgid "external ref='generated_en/AudioEngineInfoDialog.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
@@ -2679,7 +2679,7 @@ msgstr "La toolbar principale"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2125
 msgctxt "_"
-msgid "external ref='generated_en/MainToolbar_V2.png' md5='19ace9972b0ecf3a6d1f9e5b0c4135ea'"
+msgid "external ref='generated_en/MainToolbar_V2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -2700,7 +2700,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2148
 msgctxt "_"
-msgid "external ref='generated_en/background_Control_V2.png' md5='1ec0ada27f9da8dadfc40ac1bc65ee59'"
+msgid "external ref='generated_en/background_Control_V2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -2735,7 +2735,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2180
 msgctxt "_"
-msgid "external ref='generated_en/MeasureSettings.png' md5='2c8d4cc3a85b5feb32727d2dc400d7c3'"
+msgid "external ref='generated_en/MeasureSettings.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -2780,7 +2780,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2219
 msgctxt "_"
-msgid "external ref='generated_en/btn_bc_off.png' md5='04409450bba1f7542a8990aa74cb388a'"
+msgid "external ref='generated_en/btn_bc_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -2800,17 +2800,17 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2245 manual.docbook:2271
 msgctxt "_"
-msgid "external ref='img/btn_set_play_off.png' md5='9c3360bb8c942b605411af2736ae251f'"
+msgid "external ref='btn_set_play_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
 #: manual.docbook:2236
-msgid "The button in the bottom right-hand controls the auto-start feature, and it toggles between <inlinemediaobject> <textobject> <phrase> Grey button containing a \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_set_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> and <inlinemediaobject> <textobject> <phrase> Blue button containing a \"P\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> . When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and automatically start to play after you tap the right number of beats (if it's not already playing, of course). This way, if you have the Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on the next beat. When it shows <inlinemediaobject> <textobject> <phrase> Grey button containing a \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_set_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> (for <emphasis>Set BPM</emphasis>), the auto-start is disabled."
+msgid "The button in the bottom right-hand controls the auto-start feature, and it toggles between <inlinemediaobject> <textobject> <phrase> Grey button containing a \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_set_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> and <inlinemediaobject> <textobject> <phrase> Blue button containing a \"P\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> . When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and automatically start to play after you tap the right number of beats (if it's not already playing, of course). This way, if you have the Beat Counter set up for 4/4, you can tap 1-2-3-4, and start playing on the next beat. When it shows <inlinemediaobject> <textobject> <phrase> Grey button containing a \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_set_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> (for <emphasis>Set BPM</emphasis>), the auto-start is disabled."
 msgstr ""
 
 #. (itstool) path: sect2/para
 #: manual.docbook:2276
-msgid "For example: Suppose you have a live band, Hydrogen, and a softsynth that is controlled by <command>Seq24</command>)... and you want them all to start at the same time. Set the beat type to 1/4 and the number of beats to 4. Enable auto-start (button shows <inlinemediaobject> <textobject> <phrase> Blue button containing a \"P\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ). Count off the band 1-2-3-4 (while tapping the <keycap>,</keycap> key) and everyone starts on 1."
+msgid "For example: Suppose you have a live band, Hydrogen, and a softsynth that is controlled by <command>Seq24</command>)... and you want them all to start at the same time. Set the beat type to 1/4 and the number of beats to 4. Enable auto-start (button shows <inlinemediaobject> <textobject> <phrase> Blue button containing a \"P\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_set_play_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ). Count off the band 1-2-3-4 (while tapping the <keycap>,</keycap> key) and everyone starts on 1."
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -2840,7 +2840,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2330
 msgctxt "_"
-msgid "external ref='generated_en/background_BPM.png' md5='5f5bee77c2d67039618fab7eb28d6269'"
+msgid "external ref='generated_en/background_BPM.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -2865,12 +2865,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2354
 msgctxt "_"
-msgid "external ref='img/btn_metronome_off.png' md5='55fc2e5806c898a4cc96227860b18034'"
+msgid "external ref='btn_metronome_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:2344
-msgid "In addition you can use <inlinemediaobject> <textobject> <phrase> Grey button for toggling the metronome. It contains a non-filled black triangle pointing to the left (left), a black dot (middle), and a black closing bracket \")\" (right). </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_metronome_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> to toggle the metronome."
+msgid "In addition you can use <inlinemediaobject> <textobject> <phrase> Grey button for toggling the metronome. It contains a non-filled black triangle pointing to the left (left), a black dot (middle), and a black closing bracket \")\" (right). </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_metronome_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> to toggle the metronome."
 msgstr ""
 
 #. (itstool) path: tip/para
@@ -2880,7 +2880,7 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:2365
-msgid "If either Rubber Band support is compiled into your current version of Hydrogen or correctly configured in the <link linkend=\"chpt.preferences.general_tab\">General tab</link> of the Preferences, you will also find the <inlinemediaobject> <textobject> <phrase> Grey vertical button containing the characters \"R\", \"U\", and \"B\" in adjacent lines. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/rubber_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend=\"chpt.sample_editor.pitch\"/> for details."
+msgid "If either Rubber Band support is compiled into your current version of Hydrogen or correctly configured in the <link linkend=\"chpt.preferences.general_tab\">General tab</link> of the Preferences, you will also find the <inlinemediaobject> <textobject> <phrase> Grey vertical button containing the characters \"R\", \"U\", and \"B\" in adjacent lines. </phrase> </textobject> <imageobject> <imagedata fileref=\"rubber_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend=\"chpt.sample_editor.pitch\"/> for details."
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -2895,7 +2895,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2397
 msgctxt "_"
-msgid "external ref='generated_en/MidiIN_CPU.png' md5='c2e021efc19e170671b2092572aa47a2'"
+msgid "external ref='generated_en/MidiIN_CPU.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -2925,7 +2925,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2425
 msgctxt "_"
-msgid "external ref='generated_en/JackTrans_Master.png' md5='5679c850212647d44e4cd7d3d0496c6a'"
+msgid "external ref='generated_en/JackTrans_Master.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -2935,12 +2935,12 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:2430
-msgid "Clicking <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.TRANS\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_jack_transport_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore."
+msgid "Clicking <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.TRANS\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_jack_transport_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore."
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:2444
-msgid "Using <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.MASTER\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_jack_master_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev> clients. Else it will either act as <emphasis>slave</emphasis> in the presence of another Timebase Master, like <command>Ardour</command>, or as a stand-alone client in the absence of a Master."
+msgid "Using <inlinemediaobject> <textobject> <phrase> Grey button containing the text \"J.MASTER\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_jack_master_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev> clients. Else it will either act as <emphasis>slave</emphasis> in the presence of another Timebase Master, like <command>Ardour</command>, or as a stand-alone client in the absence of a Master."
 msgstr ""
 
 #. (itstool) path: tip/para
@@ -2965,7 +2965,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2489
 msgctxt "_"
-msgid "external ref='generated_en/mixer-instrrack_btn.png' md5='8e9e804a41500082df2434e15102e218'"
+msgid "external ref='generated_en/mixer-instrrack_btn.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3001,7 +3001,7 @@ msgstr "Song Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2511
 msgctxt "_"
-msgid "external ref='generated_en/EnablePlaybackTrack.png' md5='a82ad146c9450cfaf17899d7d0d052ec'"
+msgid "external ref='generated_en/EnablePlaybackTrack.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -3037,12 +3037,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2563
 msgctxt "_"
-msgid "external ref='img/SongRuler.png' md5='2f6fbb7ac18d5dbe13cd0b7ab4d0f72a'"
+msgid "external ref='SongRuler.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:2552
-msgid "<textobject> <phrase> Picture of a part of the Song Ruler used for naviagation. It indicates the position of certains bars by their number - \"1\", \"5\", \"9\", \"13\", \"17\". All remaining bars are indicated with a vertical line - \"|\". In addition, light-blue colored \"T\"s indicate the presence of a Tag. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/SongRuler.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Picture of a part of the Song Ruler used for naviagation. It indicates the position of certains bars by their number - \"1\", \"5\", \"9\", \"13\", \"17\". All remaining bars are indicated with a vertical line - \"|\". In addition, light-blue colored \"T\"s indicate the presence of a Tag. </phrase> </textobject> <imageobject> <imagedata fileref=\"SongRuler.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: note/para
@@ -3072,7 +3072,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2599
 msgctxt "_"
-msgid "external ref='generated_en/bg_topPanel.png' md5='8ea38acc364694851f0a1da74f5ccd63'"
+msgid "external ref='generated_en/bg_topPanel.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3087,7 +3087,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2614
 msgctxt "_"
-msgid "external ref='generated_en/btn_clear_off.png' md5='ae4fcb3a7be16ec4e8202add627c5434'"
+msgid "external ref='generated_en/btn_clear_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3102,7 +3102,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2628
 msgctxt "_"
-msgid "external ref='generated_en/btn_new_on.png' md5='4b54062c734ee4aed38ff33fcf587595'"
+msgid "external ref='generated_en/btn_new_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3117,7 +3117,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2642
 msgctxt "_"
-msgid "external ref='generated_en/btn_updown.png' md5='92d343a074d0b9910b726aecda3bb042'"
+msgid "external ref='generated_en/btn_updown.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3137,7 +3137,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2663
 msgctxt "_"
-msgid "external ref='generated_en/btn_draw.png' md5='b8550d5b732ef301d6482b162bc3e7ef'"
+msgid "external ref='generated_en/btn_draw.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3152,7 +3152,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2679
 msgctxt "_"
-msgid "external ref='generated_en/btn_select.png' md5='0eb66ee7be2f3b7eda0a95a2959d9ca6'"
+msgid "external ref='generated_en/btn_select.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3167,7 +3167,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2692
 msgctxt "_"
-msgid "external ref='generated_en/btn_pattern_mode.png' md5='8a4d35031159c7e5b5d6e494d842b7bd'"
+msgid "external ref='generated_en/btn_pattern_mode.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -3177,7 +3177,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2701
 msgctxt "_"
-msgid "external ref='generated_en/btn_stacked_mode.png' md5='7cc5cd563387e719ed1a7c68fcb5739b'"
+msgid "external ref='generated_en/btn_stacked_mode.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3377,7 +3377,7 @@ msgstr "Pattern Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2911
 msgctxt "_"
-msgid "external ref='generated_en/Virtual_patterns_menu.png' md5='8dec485a0ad51a0493fec01ccbc814a5'"
+msgid "external ref='generated_en/Virtual_patterns_menu.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3404,7 +3404,7 @@ msgstr "<emphasis role=\"bold\">[Backspace]</emphasis> = Ricomincia la canzone o
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2949
 msgctxt "_"
-msgid "external ref='generated_en/fill_clear_pattern.png' md5='1426839c35a4d3a33b57062883f12d74'"
+msgid "external ref='generated_en/fill_clear_pattern.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3434,7 +3434,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:2973
 msgctxt "_"
-msgid "external ref='generated_en/pattern_properties.png' md5='fa5d2555da3bb269ec8f2406bfccfc2d'"
+msgid "external ref='generated_en/pattern_properties.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: figure/mediaobject
@@ -3496,7 +3496,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3045
 msgctxt "_"
-msgid "external ref='generated_en/tempo_bar.png' md5='57d0559a29212dc60c5b1c1615a6330c'"
+msgid "external ref='generated_en/tempo_bar.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3516,7 +3516,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3062
 msgctxt "_"
-msgid "external ref='generated_en/btn_viewTL_off.png' md5='9b02d90327338b8d035f57b5a02b5567'"
+msgid "external ref='generated_en/btn_viewTL_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -3526,7 +3526,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3073
 msgctxt "_"
-msgid "external ref='generated_en/btn_bpm_off.png' md5='8f7b9815b9f1945c5bd579a2fd3d5ec8'"
+msgid "external ref='generated_en/btn_bpm_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -3546,7 +3546,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3102
 msgctxt "_"
-msgid "external ref='generated_en/add_tempo_change.png' md5='1d1019ac5a0c23d5497b9db0ce96714c'"
+msgid "external ref='generated_en/add_tempo_change.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3571,12 +3571,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3126
 msgctxt "_"
-msgid "external ref='img/tag_bar.png' md5='f807e826276099785dd8c46e9436ae20'"
+msgid "external ref='tag_bar.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:3118
-msgid "<textobject> <phrase> Excerpt of the Song Ruler containing several Tags marked with light-blue \"T\"s. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/tag_bar.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Excerpt of the Song Ruler containing several Tags marked with light-blue \"T\"s. </phrase> </textobject> <imageobject> <imagedata fileref=\"tag_bar.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -3596,7 +3596,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3146
 msgctxt "_"
-msgid "external ref='generated_en/add_tag.png' md5='e739615ae8f687b519b726c407882eeb'"
+msgid "external ref='generated_en/add_tag.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -3616,7 +3616,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3172
 msgctxt "_"
-msgid "external ref='generated_en/PlaybackTrack.png' md5='3b1e0f19b68818ee221b890c7d69fdd0'"
+msgid "external ref='generated_en/PlaybackTrack.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3641,12 +3641,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3197
 msgctxt "_"
-msgid "external ref='img/btn_viewTL_off.png' md5='4294e5c6223716aad49a8328206176d4'"
+msgid "external ref='btn_viewTL_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:3188
-msgid "To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"T\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_viewTL_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button left to the scroll bar at the bottom of the Song Editor or via the <link linkend=\"sect.main_menu.view\">View</link> element of the Main Menu."
+msgid "To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"T\". </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_viewTL_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button left to the scroll bar at the bottom of the Song Editor or via the <link linkend=\"sect.main_menu.view\">View</link> element of the Main Menu."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3697,7 +3697,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3240
 msgctxt "_"
-msgid "external ref='img/AutomationPath.png' md5='57a0ec7233c2c5134a3da11514130825'"
+msgid "external ref='AutomationPath.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -3733,7 +3733,7 @@ msgstr "Pattern Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3269 manual.docbook:3669
 msgctxt "_"
-msgid "external ref='generated_en/PatternEditor_DrumMode.png' md5='5136f656c680d4d25f59ff6cab70731d'"
+msgid "external ref='generated_en/PatternEditor_DrumMode.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -3748,7 +3748,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3290 manual.docbook:3471
 msgctxt "_"
-msgid "external ref='generated_en/btn_drum_piano_off.png' md5='50e1dedc2d864b907fcd89ceec22953c'"
+msgid "external ref='generated_en/btn_drum_piano_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -3784,7 +3784,7 @@ msgstr "Pattern Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3318
 msgctxt "_"
-msgid "external ref='generated_en/PatternEditorControls.png' md5='a491e95bee4f5a8a6e57a4e51397e783'"
+msgid "external ref='generated_en/PatternEditorControls.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -3799,7 +3799,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3335
 msgctxt "_"
-msgid "external ref='generated_en/lcd_size.png' md5='5af35039c0915ed92ad6f24d009062b4'"
+msgid "external ref='generated_en/lcd_size.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3819,12 +3819,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3354
 msgctxt "_"
-msgid "external ref='img/PatternSizeDialog.png' md5='84cde1542afe73feed8af83c187df5d7'"
+msgid "external ref='PatternSizeDialog.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:3345
-msgid "<textobject> <phrase> Dialog for entering the \"New Pattern length (beats/note value)\" via a Text input in the middle. At the bottom there are \"Cancel\" (right) and \"OK\" (left) buttons. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/PatternSizeDialog.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Dialog for entering the \"New Pattern length (beats/note value)\" via a Text input in the middle. At the bottom there are \"Cancel\" (right) and \"OK\" (left) buttons. </phrase> </textobject> <imageobject> <imagedata fileref=\"PatternSizeDialog.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3849,7 +3849,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3383
 msgctxt "_"
-msgid "external ref='generated_en/DenominatorWarningIcon.png' md5='99f0f0e4bf50233e4865ff29d92aad8f'"
+msgid "external ref='generated_en/DenominatorWarningIcon.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -3864,7 +3864,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3400
 msgctxt "_"
-msgid "external ref='generated_en/lcd_res.png' md5='daa56c133937264c93a72fde606863c5'"
+msgid "external ref='generated_en/lcd_res.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3884,7 +3884,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3428
 msgctxt "_"
-msgid "external ref='generated_en/btn_hear.png' md5='877172490d05a21a74aff27475f19482'"
+msgid "external ref='generated_en/btn_hear.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3904,7 +3904,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3451
 msgctxt "_"
-msgid "external ref='generated_en/btn_quant_off.png' md5='37700f06db07f383871f481084d1c875'"
+msgid "external ref='generated_en/btn_quant_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3919,7 +3919,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3481
 msgctxt "_"
-msgid "external ref='generated_en/btn_drum_piano_on.png' md5='beb6e9e3da055eba1c395aeeee5624b0'"
+msgid "external ref='generated_en/btn_drum_piano_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -3940,7 +3940,7 @@ msgstr "Pattern Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3497
 msgctxt "_"
-msgid "external ref='generated_en/PatternEditorInstr_V2.png' md5='66ef31d1181b28c7b956d94b545878a8'"
+msgid "external ref='generated_en/PatternEditorInstr_V2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -4041,7 +4041,7 @@ msgstr "<emphasis role=\"bold\">Fig. 8</emphasis> Carica un drumkit. Scegliere f
 #: manual.docbook:3623 manual.docbook:5036 manual.docbook:5161
 #: manual.docbook:6866 manual.docbook:6892
 msgctxt "_"
-msgid "external ref='generated_en/btn_mute_on.png' md5='f1c0e1d7d0b6d558eb61b6215c683d6e'"
+msgid "external ref='generated_en/btn_mute_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -4051,7 +4051,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3634
 msgctxt "_"
-msgid "external ref='generated_en/btn_solo_off.png' md5='d3c0a5362a1033fc6174e12407aebd1f'"
+msgid "external ref='generated_en/btn_solo_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -4107,7 +4107,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3711
 msgctxt "_"
-msgid "external ref='generated_en/NoteOff_NoteLength.png' md5='9b70ffbdee95b246478582c39735e697'"
+msgid "external ref='generated_en/NoteOff_NoteLength.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4169,7 +4169,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3761
 msgctxt "_"
-msgid "external ref='img/NotePropertiesRuler.png' md5='8fd57ba4418fc587c0ef383fad9bdcca'"
+msgid "external ref='NotePropertiesRuler.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -4224,7 +4224,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3821
 msgctxt "_"
-msgid "external ref='generated_en/NoteKey.png' md5='8e19686d8fe0d0fd6f307f63e26b2b4f'"
+msgid "external ref='generated_en/NoteKey.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -4288,7 +4288,7 @@ msgstr "Pattern Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3889
 msgctxt "_"
-msgid "external ref='generated_en/PatternEditor_PianoMode.png' md5='80336fa999457d5c3ab6bc8522015776'"
+msgid "external ref='generated_en/PatternEditor_PianoMode.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -4330,7 +4330,7 @@ msgstr "Song Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:3920
 msgctxt "_"
-msgid "external ref='generated_en/SoundLibrary.png' md5='5ee5b8034d3691ab9f3ba1f81749a2d7'"
+msgid "external ref='generated_en/SoundLibrary.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -4437,7 +4437,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4028
 msgctxt "_"
-msgid "external ref='generated_en/Instrument_General.png' md5='1c659ff4d9f877ae77fc0e829733ec17'"
+msgid "external ref='generated_en/Instrument_General.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -4467,7 +4467,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4062
 msgctxt "_"
-msgid "external ref='generated_en/instrument_editor_envelope.png' md5='c9b1cf7425256ccbcdf6e6f8587600ca'"
+msgid "external ref='generated_en/instrument_editor_envelope.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4522,7 +4522,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4136
 msgctxt "_"
-msgid "external ref='generated_en/instrument_editor_mute_group.png' md5='dcaf9a6840510623bc55df8ea2c89325'"
+msgid "external ref='generated_en/instrument_editor_mute_group.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4597,7 +4597,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4227
 msgctxt "_"
-msgid "external ref='generated_en/instrument_editor_filter.png' md5='0fa21c2c613d94d89b051fe442a897e1'"
+msgid "external ref='generated_en/instrument_editor_filter.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4627,7 +4627,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4273
 msgctxt "_"
-msgid "external ref='generated_en/instrument_editor_pitch.png' md5='2ce648ae655059f6664ba41c01158668'"
+msgid "external ref='generated_en/instrument_editor_pitch.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4662,7 +4662,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4311
 msgctxt "_"
-msgid "external ref='generated_en/instrument_editor_midi_out.png' md5='10b438a7473e911b09d593794a7f1901'"
+msgid "external ref='generated_en/instrument_editor_midi_out.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4697,7 +4697,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4348
 msgctxt "_"
-msgid "external ref='generated_en/instrument_editor_hihat_pressure_group.png' md5='6893409e38809da4d0b6d518ad919b15'"
+msgid "external ref='generated_en/instrument_editor_hihat_pressure_group.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -4743,7 +4743,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4382
 msgctxt "_"
-msgid "external ref='generated_en/Instrument_Layers.png' md5='3846805161b3ed5792058f7cf48cb2ac'"
+msgid "external ref='generated_en/Instrument_Layers.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -4763,12 +4763,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4402
 msgctxt "_"
-msgid "external ref='img/InstrumentEditorLayersComponents.png' md5='116bc97c3fdf5bed06019ec88f47bc3e'"
+msgid "external ref='InstrumentEditorLayersComponents.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:4394
-msgid "<textobject> <phrase> In the center you can find the name of the Drumkit component and at the right end a button to open a context menu. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/InstrumentEditorLayersComponents.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> In the center you can find the name of the Drumkit component and at the right end a button to open a context menu. </phrase> </textobject> <imageobject> <imagedata fileref=\"InstrumentEditorLayersComponents.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -4778,12 +4778,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4416
 msgctxt "_"
-msgid "external ref='img/btn_dropdown_off.png' md5='51f65ba335fa3b5b06d9c195764418af'"
+msgid "external ref='btn_dropdown_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
 #: manual.docbook:4407
-msgid "Right below the <option>General</option> and <option>Layers</option> button you find the name of the currently selected <link linkend=\"def.component\">component</link>. In the drop down menu accessible by pressing <inlinemediaobject> <textobject> <phrase> Grey button with a black filled triangle pointing downwards. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_dropdown_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> you find a list of all components available in the current drumkit and can select them via a <emphasis>left click</emphasis>. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one."
+msgid "Right below the <option>General</option> and <option>Layers</option> button you find the name of the currently selected <link linkend=\"def.component\">component</link>. In the drop down menu accessible by pressing <inlinemediaobject> <textobject> <phrase> Grey button with a black filled triangle pointing downwards. </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_dropdown_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> you find a list of all components available in the current drumkit and can select them via a <emphasis>left click</emphasis>. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one."
 msgstr ""
 
 #. (itstool) path: warning/para
@@ -4803,7 +4803,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4436
 msgctxt "_"
-msgid "external ref='img/InstrumentEditorLayersLayers.png' md5='88e1cd028f2cf6ea6270048a91943a65'"
+msgid "external ref='InstrumentEditorLayersLayers.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -4823,7 +4823,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4460 manual.docbook:7026 manual.docbook:7051
 msgctxt "_"
-msgid "external ref='generated_en/loadLayer_off.png' md5='66347065d44659c155d3a82f5a1d4366'"
+msgid "external ref='generated_en/loadLayer_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -4833,7 +4833,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4471
 msgctxt "_"
-msgid "external ref='generated_en/deleteLayer_off.png' md5='2a9f9afe245e147739e8195668997088'"
+msgid "external ref='generated_en/deleteLayer_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -4843,7 +4843,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4482 manual.docbook:4648
 msgctxt "_"
-msgid "external ref='generated_en/editLayer_off.png' md5='bf9a3426f12d614877d16fdd88be0ba6'"
+msgid "external ref='generated_en/editLayer_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -4893,12 +4893,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4533
 msgctxt "_"
-msgid "external ref='img/InstrumentEditorLayersSampleSelection.png' md5='277f4e033a01cada19ac74bbea4e9f23'"
+msgid "external ref='InstrumentEditorLayersSampleSelection.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:4525
-msgid "<textobject> <phrase> A LCD titled \"SAMPLE SEL.\" with a button to open display the different choices to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/InstrumentEditorLayersSampleSelection.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> A LCD titled \"SAMPLE SEL.\" with a button to open display the different choices to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"InstrumentEditorLayersSampleSelection.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -4938,12 +4938,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4583
 msgctxt "_"
-msgid "external ref='img/InstrumentEditorLayersControls.png' md5='23af0cfc4c001777b7267008d060c310'"
+msgid "external ref='InstrumentEditorLayersControls.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:4575
-msgid "<textobject> <phrase> Four rotaries with corresponding LCDs: \"L. GAIN\" (top left), \"C. VOLUME\" (top right), \"PITCH\" (bottom left), and \"FINE\" (bottom right). </phrase> </textobject> <imageobject> <imagedata fileref=\"img/InstrumentEditorLayersControls.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Four rotaries with corresponding LCDs: \"L. GAIN\" (top left), \"C. VOLUME\" (top right), \"PITCH\" (bottom left), and \"FINE\" (bottom right). </phrase> </textobject> <imageobject> <imagedata fileref=\"InstrumentEditorLayersControls.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -4990,7 +4990,7 @@ msgstr "Song Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4634
 msgctxt "_"
-msgid "external ref='generated_en/SampleEditor_V5.png' md5='b91bf9388c10b1084c43afe932525686'"
+msgid "external ref='generated_en/SampleEditor_V5.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -5020,7 +5020,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4672
 msgctxt "_"
-msgid "external ref='generated_en/SampleEditor_Wave.png' md5='79d932cc42416613724b49665edafecd'"
+msgid "external ref='generated_en/SampleEditor_Wave.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5131,7 +5131,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4789
 msgctxt "_"
-msgid "external ref='generated_en/SampleEditor_PitchShift.png' md5='9b0e53b5337bd67534bd8890cf4c18c8'"
+msgid "external ref='generated_en/SampleEditor_PitchShift.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -5156,7 +5156,7 @@ msgstr ""
 
 #. (itstool) path: note/para
 #: manual.docbook:4819
-msgid "The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using Rubber Band again. When <link linkend=\"sect.main_form.export_song\">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the <inlinemediaobject> <textobject> <phrase> Grey vertical button containing the characters \"R\", \"U\", and \"B\" in adjacent lines. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/rubber_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly."
+msgid "The beat length does dependent on the current tempo of the song. If it is changed, the samples need to be recalculated using Rubber Band again. When <link linkend=\"sect.main_form.export_song\">exporting a song</link> all required recalculations will be done automatically. But while using standard playback the <inlinemediaobject> <textobject> <phrase> Grey vertical button containing the characters \"R\", \"U\", and \"B\" in adjacent lines. </phrase> </textobject> <imageobject> <imagedata fileref=\"rubber_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5196,7 +5196,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4864
 msgctxt "_"
-msgid "external ref='generated_en/SampleEditor_Envelope.png' md5='dc7183d8123d5a26f36d8996b1d761e0'"
+msgid "external ref='generated_en/SampleEditor_Envelope.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -5274,7 +5274,7 @@ msgstr "Mixer"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4940 manual.docbook:6914
 msgctxt "_"
-msgid "external ref='generated_en/Mixer.png' md5='45445f564c4daba76ea19b172f462d2a'"
+msgid "external ref='generated_en/Mixer.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -5304,7 +5304,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4960
 msgctxt "_"
-msgid "external ref='img/MixerInstrumentStrip.png' md5='eb97a316a9312de1b36933fdde130e2a'"
+msgid "external ref='MixerInstrumentStrip.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -5314,7 +5314,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4975 manual.docbook:6844 manual.docbook:7100
 msgctxt "_"
-msgid "external ref='generated_en/btn_play_on_mixer.png' md5='42524bb86518faf8e847f658451f2753'"
+msgid "external ref='generated_en/btn_play_on_mixer.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5334,7 +5334,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:4994
 msgctxt "_"
-msgid "external ref='generated_en/led_trigger_on.png' md5='bd11e31456ff6a4a282589db8a511140'"
+msgid "external ref='generated_en/led_trigger_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5349,7 +5349,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5009
 msgctxt "_"
-msgid "external ref='generated_en/item_selected.png' md5='106d658b0427ec839b4ca98dd49937eb'"
+msgid "external ref='generated_en/item_selected.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
@@ -5385,7 +5385,7 @@ msgstr ""
 #: manual.docbook:5055 manual.docbook:5175 manual.docbook:6855
 #: manual.docbook:6879
 msgctxt "_"
-msgid "external ref='generated_en/btn_solo_on.png' md5='d3c0a5362a1033fc6174e12407aebd1f'"
+msgid "external ref='generated_en/btn_solo_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5405,7 +5405,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5076
 msgctxt "_"
-msgid "external ref='generated_en/mixer_rotary.png' md5='67f4cf502c0a993a3d55530e05e7b925'"
+msgid "external ref='generated_en/mixer_rotary.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5425,7 +5425,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5096
 msgctxt "_"
-msgid "external ref='generated_en/mixer_knob.png' md5='ebf4c2417000164edda1863910101f0b'"
+msgid "external ref='generated_en/mixer_knob.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -5470,7 +5470,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5136
 msgctxt "_"
-msgid "external ref='img/MixerComponentStrip.png' md5='cd9cf0e81509283aea2d97d306a22107'"
+msgid "external ref='MixerComponentStrip.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -5511,7 +5511,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5201
 msgctxt "_"
-msgid "external ref='img/MixerFXStrip.png' md5='d77984abc55c41633dcab77e20a8bec0'"
+msgid "external ref='MixerFXStrip.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -5521,12 +5521,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5216 manual.docbook:5380 manual.docbook:6830
 msgctxt "_"
-msgid "external ref='img/showFX_on.png' md5='faaad6e9491dac7d3478b96e87b1ecc5'"
+msgid "external ref='showFX_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5206
-msgid "The FX Rack can be accessed by clicking the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/showFX_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"chpt.mixer.master_fader_strip\">Master Fader Strip</link>)."
+msgid "The FX Rack can be accessed by clicking the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"showFX_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"chpt.mixer.master_fader_strip\">Master Fader Strip</link>)."
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -5586,12 +5586,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5274
 msgctxt "_"
-msgid "external ref='img/edit_off.png' md5='125b96a529eb2984de90da816a21f2ef'"
+msgid "external ref='edit_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5264
-msgid "Once you have installed some plugins you can select one by clicking the <inlinemediaobject> <textobject> <phrase> Grey button containing the black characters \"EDIT\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/edit_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button."
+msgid "Once you have installed some plugins you can select one by clicking the <inlinemediaobject> <textobject> <phrase> Grey button containing the black characters \"EDIT\". </phrase> </textobject> <imageobject> <imagedata fileref=\"edit_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button."
 msgstr ""
 
 #. (itstool) path: figure/title
@@ -5606,7 +5606,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5286
 msgctxt "_"
-msgid "external ref='img/MixerFXSelect.png' md5='d21233583479b7309fc704f9693d97b7'"
+msgid "external ref='MixerFXSelect.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -5616,12 +5616,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5308
 msgctxt "_"
-msgid "external ref='img/LADSPA_FX_Properties.png' md5='704fc0cf7facf4f82b0757e6c81bfa9e'"
+msgid "external ref='LADSPA_FX_Properties.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:5296
-msgid "<textobject> <phrase> Example widget to alter the properties of a LADSPA FX. At the top left the name of the FX is displayed and at the top left two buttons - \"Select FX\" and \"Deactive\" - are shown. In the remainder there are several vertical strips stacked horizontally with each one carrying: an LCD displaying the current value (top), the name of the parameter (left), and a fader with included meter (right). </phrase> </textobject> <imageobject> <imagedata fileref=\"img/LADSPA_FX_Properties.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> Example widget to alter the properties of a LADSPA FX. At the top left the name of the FX is displayed and at the top left two buttons - \"Select FX\" and \"Deactive\" - are shown. In the remainder there are several vertical strips stacked horizontally with each one carrying: an LCD displaying the current value (top), the name of the parameter (left), and a fader with included meter (right). </phrase> </textobject> <imageobject> <imagedata fileref=\"LADSPA_FX_Properties.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -5631,7 +5631,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5324
 msgctxt "_"
-msgid "external ref='img/bypass_over.png' md5='de70b2610957f2c6d494b5951193eb8f'"
+msgid "external ref='bypass_over.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: tip/para
@@ -5641,7 +5641,7 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5280
-msgid "Now the FX selector window will pop up : <_:figure-1/> Once you have selected a plugin you will immediately have access to its parameters: <_:informalfigure-2/> You can select another plugin by clicking the <emphasis role=\"bold\">Select FX</emphasis> button. If you quickly want to enable/disable the effect click the <emphasis role=\"bold\">Deactivate</emphasis> button (or the Bypass ( <inlinemediaobject> <textobject> <phrase> Redish button containing the black characters \"BYP\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/bypass_over.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>) button in the FX Rack). <_:tip-3/>"
+msgid "Now the FX selector window will pop up : <_:figure-1/> Once you have selected a plugin you will immediately have access to its parameters: <_:informalfigure-2/> You can select another plugin by clicking the <emphasis role=\"bold\">Select FX</emphasis> button. If you quickly want to enable/disable the effect click the <emphasis role=\"bold\">Deactivate</emphasis> button (or the Bypass ( <inlinemediaobject> <textobject> <phrase> Redish button containing the black characters \"BYP\". </phrase> </textobject> <imageobject> <imagedata fileref=\"bypass_over.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject>) button in the FX Rack). <_:tip-3/>"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -5666,7 +5666,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5347
 msgctxt "_"
-msgid "external ref='img/MixerMasterStrip.png' md5='31393663b772c8b6d8614f2181b0e999'"
+msgid "external ref='MixerMasterStrip.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -5681,12 +5681,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5366
 msgctxt "_"
-msgid "external ref='img/master_mute_off.png' md5='c310589cbb20cfcffc3d016e6935e022'"
+msgid "external ref='master_mute_off.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5357
-msgid "Using the fader you can control the volume of the resulting audio output of Hydrogen which is the sum of all the individual <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>, the <link linkend=\"chpt.song_editor.playbackTrack\">Playback Track</link>, and the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">Metronome</link>. The <inlinemediaobject> <textobject> <phrase> Grey button containing the black characters \"MUTE\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/master_mute_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button <link linkend=\"def.mute\">mutes</link> the whole output."
+msgid "Using the fader you can control the volume of the resulting audio output of Hydrogen which is the sum of all the individual <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>, the <link linkend=\"chpt.song_editor.playbackTrack\">Playback Track</link>, and the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">Metronome</link>. The <inlinemediaobject> <textobject> <phrase> Grey button containing the black characters \"MUTE\". </phrase> </textobject> <imageobject> <imagedata fileref=\"master_mute_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button <link linkend=\"def.mute\">mutes</link> the whole output."
 msgstr ""
 
 #. (itstool) path: imageobject/imagedata
@@ -5696,12 +5696,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5392
 msgctxt "_"
-msgid "external ref='img/showPeaks_on.png' md5='4475949f7c1f11157b8cfb623022e27b'"
+msgid "external ref='showPeaks_on.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5372
-msgid "On the bottom-right of the Master section the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/showFX_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will show or hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Rack</link>, and the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"PEAK\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/showPeaks_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link> and <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link>."
+msgid "On the bottom-right of the Master section the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"showFX_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will show or hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Rack</link>, and the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"PEAK\". </phrase> </textobject> <imageobject> <imagedata fileref=\"showPeaks_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link> and <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -5761,7 +5761,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5458
 msgctxt "_"
-msgid "external ref='generated_en/mixerSettingsButton.png' md5='67cb0590bbf394c8fd5b3a3f405a25f5'"
+msgid "external ref='generated_en/mixerSettingsButton.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -5776,7 +5776,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5476
 msgctxt "_"
-msgid "external ref='generated_en/mixerSettingsDialog.png' md5='0ef81682361b5af0ab28011d73464f6c'"
+msgid "external ref='generated_en/mixerSettingsDialog.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
@@ -5882,7 +5882,7 @@ msgstr "Mixer"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5581
 msgctxt "_"
-msgid "external ref='generated_en/screenshot-director.png' md5='ddab3b64f7d02f4e6429ae0e13aaf983'"
+msgid "external ref='generated_en/screenshot-director.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: chapter/para
@@ -5918,7 +5918,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5614
 msgctxt "_"
-msgid "external ref='img/PlaylistEditor.png' md5='0b5f7b45f0d56ace8c53064f3792c4ff'"
+msgid "external ref='PlaylistEditor.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -5960,12 +5960,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5656
 msgctxt "_"
-msgid "external ref='img/PlaylistEditorControls.png' md5='5f8f7127af9b7e4c682e541aab7636ea'"
+msgid "external ref='PlaylistEditorControls.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: informalfigure/mediaobject
 #: manual.docbook:5649
-msgid "<textobject> <phrase> From left to right: rewind, play and pause, stop, and fast forward. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/PlaylistEditorControls.png\" format=\"PNG\"/> </imageobject>"
+msgid "<textobject> <phrase> From left to right: rewind, play and pause, stop, and fast forward. </phrase> </textobject> <imageobject> <imagedata fileref=\"PlaylistEditorControls.png\" format=\"PNG\"/> </imageobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -6123,17 +6123,17 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5841 manual.docbook:5862
 msgctxt "_"
-msgid "external ref='img/rec.png' md5='4256277cfa68efdb41cbbcd9ae1fa116'"
+msgid "external ref='rec.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5832
-msgid "You can also define <abbrev>MIDI</abbrev> bindings by simply pressing the <inlinemediaobject> <textobject> <phrase> Red circle. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/rec.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button left of the Event-Action binding line. A popup will inform you that Hydrogen is waiting for your input. Press/hit/turn the key/pad/knob on your <abbrev>MIDI</abbrev> keyboard (or controller) that you want to link to this action. The popup will close and the <emphasis role=\"bold\">Event Param.</emphasis> value will now show the <abbrev>MIDI</abbrev> note value of the key you pressed. Once this is done you can select an Action from the action drop-down list."
+msgid "You can also define <abbrev>MIDI</abbrev> bindings by simply pressing the <inlinemediaobject> <textobject> <phrase> Red circle. </phrase> </textobject> <imageobject> <imagedata fileref=\"rec.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button left of the Event-Action binding line. A popup will inform you that Hydrogen is waiting for your input. Press/hit/turn the key/pad/knob on your <abbrev>MIDI</abbrev> keyboard (or controller) that you want to link to this action. The popup will close and the <emphasis role=\"bold\">Event Param.</emphasis> value will now show the <abbrev>MIDI</abbrev> note value of the key you pressed. Once this is done you can select an Action from the action drop-down list."
 msgstr ""
 
 #. (itstool) path: tip/para
 #: manual.docbook:5853
-msgid "You can also define a binding without the <inlinemediaobject> <textobject> <phrase> Red circle. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/rec.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button by setting the <emphasis role=\"bold\">Event Param.</emphasis> manually to the desired <abbrev>MIDI</abbrev> note."
+msgid "You can also define a binding without the <inlinemediaobject> <textobject> <phrase> Red circle. </phrase> </textobject> <imageobject> <imagedata fileref=\"rec.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button by setting the <emphasis role=\"bold\">Event Param.</emphasis> manually to the desired <abbrev>MIDI</abbrev> note."
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -7271,7 +7271,7 @@ msgstr "Partiremo da una canzone vuota con un pattern vuoto creato di default da
 
 #. (itstool) path: sect1/para
 #: manual.docbook:6754
-msgid "We'll start from the empty song with an empty pattern created when Hydrogen starts up: <emphasis>Pattern mode</emphasis> should be selected by default. Now let's click on the <inlinemediaobject> <textobject> <phrase> Grey play and pause button containing two vertical black lines (left) and a black triangle (right) pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"img/btn_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.transport_control\">Main Toolbar</link>, and while the pattern is playing let's add notes by <emphasis>left-clicking</emphasis> in the grid of the <link linkend=\"chpt.pattern_editor\">Pattern Editor</link> (see <xref linkend=\"fig.pattern_editor.2\"/>). Adjust the <link linkend=\"chpt.pattern_editor.controls.res\">grid resolution</link> and <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">tempo</link> if needed. <_:note-1/>"
+msgid "We'll start from the empty song with an empty pattern created when Hydrogen starts up: <emphasis>Pattern mode</emphasis> should be selected by default. Now let's click on the <inlinemediaobject> <textobject> <phrase> Grey play and pause button containing two vertical black lines (left) and a black triangle (right) pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"btn_play_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.transport_control\">Main Toolbar</link>, and while the pattern is playing let's add notes by <emphasis>left-clicking</emphasis> in the grid of the <link linkend=\"chpt.pattern_editor\">Pattern Editor</link> (see <xref linkend=\"fig.pattern_editor.2\"/>). Adjust the <link linkend=\"chpt.pattern_editor.controls.res\">grid resolution</link> and <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">tempo</link> if needed. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: figure/title
@@ -7287,7 +7287,7 @@ msgstr "Pattern Editor"
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:6791
 msgctxt "_"
-msgid "external ref='generated_en/PatternEditor.png' md5='7f9b5aa7c144e4c3104017ce5fcc0ee7'"
+msgid "external ref='generated_en/PatternEditor.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -7314,7 +7314,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:6808
 msgctxt "_"
-msgid "external ref='generated_en/SongEditor.png' md5='af6d57845fa39b40cfa580bf62879e72'"
+msgid "external ref='generated_en/SongEditor.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -7336,7 +7336,7 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:6820
-msgid "The Mixer (see <xref linkend=\"fig.mixer.2\"/>) is made of a number independent <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>, each of these is bound to an instrument, plus a <link linkend=\"chpt.mixer.master_fader_strip\">Master Fader Strip</link> and a <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"img/showFX_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button to show and hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Plugin Rack</link>. Every line features 3 buttons ( <inlinemediaobject> <textobject> <phrase> Grey button with a filled black triangle pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_play_on_mixer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"M\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ), current maximum peak, FX volume control knobs, volume fader, and name of the track. Clicking on <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> will play the selected instrument, cutting the others. The Mute button <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"M\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> , simply <link linkend=\"def.mute\">mute</link> <emphasis>that</emphasis> instrument. The maximum peak indicates the maximum volume reached from the instrument. The peak must be in a range of <option>0.0</option> and <option>1.0</option> (in <xref linkend=\"fig.mixer.2\"/> you can see a few volumes too loud). For a full description of the Mixer and its elements please see <xref linkend=\"chpt.mixer\"/>. <_:tip-1/>"
+msgid "The Mixer (see <xref linkend=\"fig.mixer.2\"/>) is made of a number independent <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>, each of these is bound to an instrument, plus a <link linkend=\"chpt.mixer.master_fader_strip\">Master Fader Strip</link> and a <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"showFX_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button to show and hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Plugin Rack</link>. Every line features 3 buttons ( <inlinemediaobject> <textobject> <phrase> Grey button with a filled black triangle pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_play_on_mixer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"M\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ), current maximum peak, FX volume control knobs, volume fader, and name of the track. Clicking on <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> will play the selected instrument, cutting the others. The Mute button <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"M\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> , simply <link linkend=\"def.mute\">mute</link> <emphasis>that</emphasis> instrument. The maximum peak indicates the maximum volume reached from the instrument. The peak must be in a range of <option>0.0</option> and <option>1.0</option> (in <xref linkend=\"fig.mixer.2\"/> you can see a few volumes too loud). For a full description of the Mixer and its elements please see <xref linkend=\"chpt.mixer\"/>. <_:tip-1/>"
 msgstr ""
 
 #. (itstool) path: chapter/title
@@ -8228,7 +8228,7 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:7746
 msgctxt "_"
-msgid "external ref='img/matrioskaPanH2.png' md5='cf558ea6f4eb3f7c167422add4e5365b'"
+msgid "external ref='matrioskaPanH2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: glossdef/para
