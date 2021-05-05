@@ -48,26 +48,26 @@ make
 
 The toolchain consists of the following programs:
 
-    [itstool](http://itstool.org/index.html) - Uses the rules of the
+- [itstool](http://itstool.org/index.html) - Uses the rules of the
 	W3C Internationalization Tag Set (ITS) to create the translation
 	templates (*.pot) based on the 
     original DocBook source and merges the compiled *.mo files with
 	the original to produce the translated DocBook files.
 	
-	`msgmerge`, `msginit`, `msgfmt` - Are part of the
+- `msgmerge`, `msginit`, `msgfmt` - Are part of the
 	[gettext](https://www.gnu.org/software/gettext/manual/gettext.html) 
 	internationalization
 	framework and used to update, initialize, and compile the
     *.po translation files.
 
-    [xmlto](https://pagure.io/xmlto/) - Converts DocBook files to
+- [xmlto](https://pagure.io/xmlto/) - Converts DocBook files to
 	HTML.  (Note that `xmlto` is part of libxml2 and can convert
 	DocBook to much more than just HTML.)
 
-    [xmllint](http://xmlsoft.org/) - Used to validate the DocBook
+- [xmllint](http://xmlsoft.org/) - Used to validate the DocBook
 	files against the DocBook DTD.
 
-    `make` - GNU's make utility.
+- `make` - GNU's make utility.
 
 # 3. Translators
 
@@ -95,7 +95,7 @@ the IANA abbreviation code for
 that language.  (E.g. 'ja' is for 'Japanese.')  The registry for the
 codes is located here:
 
-    http://www.iana.org/assignments/language-subtag-registry
+http://www.iana.org/assignments/language-subtag-registry
 
 All translation files (.po) will be updated and converted to .html
 files as soon as one of the master documents - manual.docbook or
@@ -116,14 +116,15 @@ RULES AND GUIDELINES FOR TRANSLATING:
 	  
 * All content enclosed by angle brackets must not be translated. E.g.
 
-``` xml
-      "<title>Hydrogen Tutorial</title>
-```
-	will be translated to
+  ``` xml
+  <title>Hydrogen Tutorial</title>
+  ```
 
-``` xml
-      "<title>Tutoriel de Hydrogen</title>
-```
+  will be translated to
+
+  ``` xml
+  <title>Tutoriel de Hydrogen</title>
+  ```
 
 * Maintain the DocBook XML structure as closely as possible.  Do
       not add sections, divide paragraphs, or alter the markup
@@ -164,12 +165,14 @@ conversational style.  If you are using an English pun or expression
 that is intended to convey humor, please mark it so that the
 translator gets the joke:
 
-    <!-- TRANSLATORS: "Have your squash and eat it, too." This
-    combines a well-known cliche ("Have your cake and eat it, too.")
-    and a pun on the word "squash."  In English, "squash" is a
-    vegetable (and not a very popular one) and "squash" is also a verb
-    meaning "to flatten in a destructive way."  For example: "I
-    squashed the bug to kill it." -->
+``` xml
+<!-- TRANSLATORS: "Have your squash and eat it, too." This
+combines a well-known cliche ("Have your cake and eat it, too.")
+and a pun on the word "squash."  In English, "squash" is a
+vegetable (and not a very popular one) and "squash" is also a verb
+meaning "to flatten in a destructive way."  For example: "I
+squashed the bug to kill it." -->
+```
 
 (Ahem, don't ask me how I came up with that one.....)
 
@@ -177,8 +180,14 @@ Before submitting (or committing) your changes, please make sure that
 your documents validate (see Section 6 below).  Some guidelines:
 
 * Use double-quotes for all attributes.
-          Good:   ```<foo id="bar"/>```
-          Bad:    ```<foo id='bar'/>```
+  * Good:
+    ```xml
+	<foo id="bar"/>
+	```
+  * Bad:
+    ```xml
+	<foo id='bar'/>
+	```
 
 * Please do not indent any elements that go into the ```<screen>```
   tag or at least do so with care. All white spaces will show up in
@@ -199,13 +208,25 @@ your documents validate (see Section 6 below).  Some guidelines:
 * For italics, you do not need to set the role="italic" attribute,
       since that is the default.  To get boldface, you must use
       role="bold".
-          Example:  ```<emphasis role="bold">really</emphasis>```
-          Bad:      ```<emphasis rold="italic">might</emphasis>```
+   * Example:
+     ```xml
+	 <emphasis role="bold">really</emphasis>
+	 ```
+   * Bad:
+     ```xml
+	 <emphasis rold="italic">might</emphasis>
+	 ```
 
 * For web links, don't write the URL twice.  The processor will do
       that for you, and it makes it more readable.
-          Good:     ```<ulink url="http://www.google.com"/>```
-          Bad:      ```<ulink url="http://www.google.com">http://www.google.com</ulink>```
+   * Good:
+     ```xml
+	 <ulink url="http://www.google.com"/>
+	 ```
+   * Bad:
+     ```xml
+	 <ulink url="http://www.google.com">http://www.google.com</ulink>
+	 ```
 
 * Don't worry about typesetting in the DocBook documents.  That's
       what XSL and CSS stylesheets are for.  Get the content done, and
@@ -245,30 +266,35 @@ or written HTML code in recent years - since its port to XHTML - you
 can get started with DocBook in no time. To read more about XML, check
 out the Wikipedia article:
 
-    http://en.wikipedia.org/wiki/XML
+http://en.wikipedia.org/wiki/XML
 
 Some basics:
 
 * The tags are case sensitive.  ```<IMG>``` and ```<img>``` are not the same.
 
 * Closing tags are not optional.
-* Empty tags are like this:  <br/>.
+* Empty tags are like this: `<br/>`
 
 If a document follows all the rules of XML, it is called
 "Well-Formed."  For example, the following is a well-formed XML
 document:
 
-    <?xml version='1.0' encoding='UTF-8'?>
-    <ijustmadethistagup>
-       <because>It's</because><ok/> to <make it="up">as</make>
-       you go</ijustmadethistagup>
+``` xml
+<?xml version='1.0' encoding='UTF-8'?>
+<ijustmadethistagup>
+   <because>It's</because><ok/> to <make it="up">as</make>
+   you go</ijustmadethistagup>
+
+```
 
 But the following is *NOT* a well-formed XML document:
 
-    <?xml version='1.0' encoding='UTF-8'?>
-    <ijustmadethistagup>
-       <because>It's <ok/> to <make it=up>as</make>
-       you go</ijustmadethistagup>
+``` xml
+<?xml version='1.0' encoding='UTF-8'?>
+<ijustmadethistagup>
+   <because>It's <ok/> to <make it=up>as</make>
+   you go</ijustmadethistagup>
+```
 
 (Can you find the errors?  If you get stumped, feed it to a
 validator.)
@@ -278,17 +304,21 @@ While it's imperative that documents be well-formed, many documents
 For example, in HTML you should only have paragraphs inside of the
 body:
 
-    <body>
-       <p>I am the very model of a modern
-        major general.</p>
-    </body>
+``` xml
+<body>
+   <p>I am the very model of a modern
+    major general.</p>
+</body>
+```
 
 But, if I do this, it will still be well-formed XML:
 
-    <p>
-       <body>I am the <happy>very</happy> model of a modern
-        major general.</body>
-    </p>
+``` xml
+<p>
+   <body>I am the <happy>very</happy> model of a modern
+    major general.</body>
+</p>
+```
 
 It is not, however, a Valid HTML document.  The W3C published a DTD
 (Document Type Definition) for HTML that clearly specifies that the
@@ -315,52 +345,65 @@ restrictions:
 
 * The 'msgid' string inside the .po file may not contain an empty
     element.  So, if you have some text that includes
-    ```<ulink url="http://www.foo.bar"/>```, you will need to convert
-    it to ```<ulink url="http://www.foo.bar">http://www.foo.bar</ulink>```
+    ```xml
+	<ulink url="http://www.foo.bar"/>
+	```
+	you will need to convert it to 
+	```xml
+	<ulink url="http://www.foo.bar">http://www.foo.bar</ulink>
+	```
 
-* You must use double quotes (") for attributes, not single ('),
+* You must use double quotes `"` for attributes, not single `'`,
     even though BOTH are OK in XML.
 
-* The manual may not have '>', it must always be ```&gt;```.
+* The manual may not contain `>`, it must always be ```&gt;```.
 
 * Avoid embedding a lot of structured markup inside a paragraph.
     For example:
-        ```
-       <para>Install hydrogen like this:
-         <screen>
-           <prompt>$</prompt> <command>apt-get hydrogen</command>
-         </screen>
-       </para>
-       ```
+    ```xml
+    <para>Install hydrogen like this:
+      <screen>
+        <prompt>$</prompt> <command>apt-get hydrogen</command>
+      </screen>
+    </para>
+    ```
 
     This makes things a little funky in the PO files.  Also, it
     doesn't really make sense to embed a ```<screen>``` (like HTML ```<pre>```)
     inside of a ```<para>```.  Instead, do it like this:
+	```xml
+    <para>Install hydrogen like this:</para>
+    <screen>
+      <prompt>$</prompt> <command>apt-get hydrogen</command>
+    </screen>
     ```
-       <para>Install hydrogen like this:</para>
-       <screen>
-         <prompt>$</prompt> <command>apt-get hydrogen</command>
-       </screen>
-       ```
 
     However, if you *really* need to, go ahead and try it.  Just
     be sure to test that it will match the strings for translation.
 
 * If you change indentation... in tags... be careful how that
     affects the .po files.  For example, if you had:
-
-        <foo><bar>bat</bar><baz>zap</baz></foo>
+	
+	```xml
+    <foo><bar>bat</bar><baz>zap</baz></foo>
+	```
 
     But change it to:
 
-        
-        <foo>
-          <bar>bat</bar>
-          <baz>zap</baz>
-        </foo>
-        
+    ```xml
+    <foo>
+      <bar>bat</bar>
+      <baz>zap</baz>
+    </foo>
+	```
 
     You will need to add spaces in the .po files like this:
 
-    Before: ```<foo><bar>bat</bar><baz>zap</baz></foo>```
-    After:  ```<foo> <bar>bat</bar> <baz>zap</baz> </foo```
+  * Before: 
+    ```xml
+	<foo><bar>bat</bar><baz>zap</baz></foo>
+	```
+  * After:
+    ```xml
+	<foo> <bar>bat</bar> <baz>zap</baz> </foo>
+	```
