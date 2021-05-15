@@ -55,11 +55,29 @@
       <para>
 	    Due to the variety of distributions we do not provide packages for Linux. If you do not find Hydrogen in the repository of your distribution, please ask the people behind it to include Hydrogen.
       </para>
+
+      <warning>
+        <para>
+          From <emphasis role="bold">MacOS Big Sur</emphasis> onwards you may
+          require some extra steps to run Hydrogen on you computer. <ulink url="https://github.com/hydrogen-music/hydrogen/wiki/Running-Hydrogen-on-macOS">This
+          page</ulink>
+          of the Hydrogen Wiki will guide you through this process step by step.
+        </para>
+      </warning>
     </chapter>
 
     <chapter id="chpt.compilation">
       <title>Build</title>
 
+      <tip>
+        <para>
+          The instructions provided in this section are for Linux only. If you
+          intent to build Hydrogen on macOS, check out the corresponding <ulink
+          url="https://github.com/hydrogen-music/hydrogen/wiki/Building-Hydrogen-from-Source-(macOS)">wiki page</ulink>
+          for tips or guides.
+        </para>
+      </tip>
+      
       <para>
         If you want to compile Hydrogen yourself, you can download the latest source files directly from our
         <command>git</command> repository with
