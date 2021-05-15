@@ -1,97 +1,82 @@
 ###
 ### must have the following commandline tools:
 ###
-### xml2po  (Debian package: poxml)
-### po2xml  (Debian package: poxml)
-### xmlto   (Debian package: xmlto)
-### xmllint (Debian package: libxml2-utils)
+### itstool  (Debian package: itstool)
+### msgfmt   (Debian package: gettext)
+### msgmerge (Debian package: gettext)	
+### xmlto    (Debian package: xmlto)
+### xmllint  (Debian package: libxml2-utils)
 ###
 
 MANUAL_MASTER = manual.docbook
 TUTORIAL_MASTER = tutorial.docbook
 
-ALL_MASTERS = $(MANUAL_MASTER) $(TUTORIAL_MASTER)
-
-ALL_MANUALS = manual_en.html \
-	manual_es.html \
-	manual_fr.html \
-	manual_it.html \
-	manual_ca.html \
-	manual_nl.html
-
-
-ALL_DOCBOOKS = manual_en.docbook \
-	manual_es.docbook \
-	manual_fr.docbook \
-	manual_it.docbook \
-	manual_ca.docbook \
-	manual_nl.docbook
-
-ALL_DOCBOOKS_VALIDATED = manual_en.docbook_validated \
-	manual_es.docbook_validated \
-	manual_fr.docbook_validated  \
-	manual_it.docbook_validated \
-	manual_ca.docbook_validated \
-	manual_nl.docbook_validated 
-
-ALL_TUTORIALS = tutorial_en.html \
-	tutorial_fr.html \
-	tutorial_it.html
-
-ALL_POT_FILES = manual_en.pot tutorial_en.pot
-
 XMLTO_OPTS = --stringparam section.autolabel=1 \
+	--stringparam use.is.as.filename=1 \
 	--stringparam toc.max.depth=3 \
 	--stringparam xref.with.number.and.title=0 \
 	--stringparam section.label.includes.component.label=1 \
 	--stringparam admon.graphics.extension=.svg \
 	--stringparam admon.graphics=1 \
-	--stringparam admon.graphics.path=img/admonitions/ \
-	-m res/styling.xsd
+	--stringparam admon.style="'margin-left: 5%;'"
 
-XML2POT = xml2pot
+ITSTOOL = itstool
+MSGMERGE = msgmerge
+MSGFMT = msgfmt
 XMLTO = xmlto
 XMLLINT = xmllint
-PO2XML = po2xml
 
-all: all_manuals all_tutorials all_pot_files
-
-all_manuals: $(ALL_MANUALS)
-
-all_tutorials: $(ALL_TUTORIALS)
-
-## Explicit build to avoid circular dependency
-all_pot_files: $(ALL_MASTERS)
-	$(XML2POT) manual.docbook   > manual.pot
-	$(XML2POT) tutorial.docbook > tutorial.pot
+all: *.html clean
 
 clean:
-	-rm -f $(ALL_MANUALS) $(ALL_TUTORIALS) $(ALL_DOCBOOKS) $(ALL_DOCBOOKS_VALIDATED)
+	-rm -f *.mo *_validated *.dbk *.bak
 
-%.html: %.docbook %.docbook_validated
-	LL=$$(echo -n $< | sed 's/.*_\(..\)\.docbook/\1/') ; \
+%.html: %.dbk %.dbk_validated
+	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
 	$(XMLTO) html-nochunks $(XMLTO_OPTS) \
 		--stringparam l10n.gentext.language=$$LL \
+		--stringparam html.stylesheet='res/docbook.css' \
+		--stringparam html.script='res/docbook.js' \
+		--stringparam img.src.path=img/ \
+		--stringparam admon.graphics.path=img/admonitions/ \
+		-x res/xslt/html/docbook.xsl \
+		$<
+	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
+	$(XMLTO) html -o $*_chunked $(XMLTO_OPTS) \
+		--stringparam l10n.gentext.language=$$LL \
+		--stringparam html.stylesheet='../res/docbook.css' \
+		--stringparam html.script='../res/docbook.js' \
+		--stringparam img.src.path=../img/ \
+		--stringparam admon.graphics.path=../img/admonitions/ \
+		-x res/xslt/html/chunk.xsl \
 		$<
 
-%.docbook_validated: %.docbook
+%.dbk_validated: %.dbk
 	$(XMLLINT) --noout --valid $^
 	touch $@
 
 ## Special rule for master manual and tutorial
-%_en.docbook: %.docbook
+%_en.dbk: %.docbook
 	cp -f $^ $@
 
-manual_%.docbook: manual_%.po $(MANUAL_MASTER)
-	LL=$$(echo -n $@ | sed 's/.*_\(..\)\.docbook/\1/') ; \
-	$(PO2XML) $(MANUAL_MASTER) $< | sed "s%fileref=\"generated_en/%fileref=\"generated_$$LL/%g" > $@
+manual_%.dbk: manual_%.mo manual_%.po $(MANUAL_MASTER)
+	$(ITSTOOL) -m $< -o $@ --lang $* $(MANUAL_MASTER)
 
-#manual_%.po: $(MANUAL_MASTER)
-#	$(XML2POT) -u $@ $^
+manual_%.po: $(MANUAL_MASTER)
+	$(ITSTOOL) -o manual.pot $<
+	$(MSGMERGE) -U $@ manual.pot --backup=simple --no-wrap --verbose
 
-tutorial_%.docbook: tutorial_%.po $(TUTORIAL_MASTER)
-	$(PO2XML) $(TUTORIAL_MASTER) $< > $@
+manual_%.mo: manual_%.po
+	`cat $< | sed 's/, fuzzy//g' > $<.bak`
+	$(MSGFMT) --check -o $@ $<.bak
 
-#tutorial_%.po: $(TUTORIAL_MASTER)
-#	$(XML2POT) -u $@ $^
+tutorial_%.dbk: tutorial_%.mo tutorial_%.po $(TUTORIAL_MASTER)
+	$(ITSTOOL) -m $< -o $@ --lang $* $(TUTORIAL_MASTER)
 
+tutorial_%.po: $(TUTORIAL_MASTER)
+	$(ITSTOOL) -o tutorial.pot $<
+	$(MSGMERGE) -U $@ tutorial.pot --backup=simple --no-wrap --verbose
+
+tutorial_%.mo: tutorial_%.po
+	`cat $< | sed 's/, fuzzy//g' > $<.bak`
+	$(MSGFMT) --check -o $@ $<.bak

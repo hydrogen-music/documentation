@@ -61,9 +61,9 @@
 		<para>Looking at this scheme we can see that some pattern repeats, so we'll use this symbols in Hydrogen's Song Editor:</para>
 		
 		<itemizedlist>
-		<listitem><para>Verse -> A</para></listitem>
-		<listitem><para>Bridge -> B</para></listitem>
-		<listitem><para>Chorus -> C</para></listitem>
+		<listitem><para>Verse -&#62; A</para></listitem>
+		<listitem><para>Bridge -&#62; B</para></listitem>
+		<listitem><para>Chorus -&#62; C</para></listitem>
 		</itemizedlist>
 		<para>And to save up words on explanations we'll use two common TLA (Three Letters Acronym ^_^):</para>
 		<itemizedlist>
