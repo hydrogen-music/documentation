@@ -72,7 +72,7 @@
       <tip>
         <para>
           The instructions provided in this section are for Linux only. If you
-          intent to build Hydrogen on macOS, check out the corresponding <ulink
+          intend to build Hydrogen on macOS, check out the corresponding <ulink
           url="https://github.com/hydrogen-music/hydrogen/wiki/Building-Hydrogen-from-Source-(macOS)">wiki page</ulink>
           for tips or guides.
         </para>
