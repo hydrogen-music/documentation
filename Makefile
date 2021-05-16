@@ -18,7 +18,8 @@ XMLTO_OPTS = --stringparam section.autolabel=1 \
 	--stringparam section.label.includes.component.label=1 \
 	--stringparam admon.graphics.extension=.svg \
 	--stringparam admon.graphics=1 \
-	--stringparam admon.style="'margin-left: 5%;'"
+	--stringparam admon.style="'margin-left: 5%;'" \
+	--stringparam ulink.target="_blank"
 
 ITSTOOL = itstool
 MSGMERGE = msgmerge
