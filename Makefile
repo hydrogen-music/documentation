@@ -31,8 +31,14 @@ all: *.html clean
 clean:
 	-rm -f *.mo *_validated *.dbk *.bak
 
+# Derive language from filename (and extension)
+define LANGUAGE =
+$$(echo -n $(1) | sed 's/.*_\(..\)\.$(2)/\1/')
+endef
+
 %.html: %.dbk %.dbk_validated
-	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
+	sed -i "s%generated_en/%generated_$(call LANGUAGE,$<,dbk)/%g" $<
+	LL=$(call LANGUAGE,$<,dbk) ; \
 	$(XMLTO) html-nochunks $(XMLTO_OPTS) \
 		--stringparam l10n.gentext.language=$$LL \
 		--stringparam html.stylesheet='res/docbook.css' \
@@ -41,7 +47,7 @@ clean:
 		--stringparam admon.graphics.path=img/admonitions/ \
 		-x res/xslt/html/docbook.xsl \
 		$<
-	LL=$$(echo -n $< | sed 's/.*_\(..\)\.dbk/\1/') ; \
+	LL=$(call LANGUAGE,$<,dbk) ; \
 	$(XMLTO) html -o $*_chunked $(XMLTO_OPTS) \
 		--stringparam l10n.gentext.language=$$LL \
 		--stringparam html.stylesheet='../res/docbook.css' \
