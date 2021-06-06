@@ -6225,8 +6225,25 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      <sect1 id="chpt.midi.learnable">
        <title>MIDI-learnable Widgets</title>
        
-       <para>Apart from the dedicated <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> Actions</link> a lot of GUI elements, such as faders or knobs, can also be controlled via <abbrev>MIDI</abbrev> messages. To configure an element to listen for incoming <abbrev>MIDI</abbrev> Events, press <keycap>Shift</keycap> while <emphasis>left-clicking</emphasis> it. 
-       A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press
+       <para><abbrev>MIDI</abbrev> Events can be mapped to Actions in the dedicated table at the bottom of the <link linkend="chpt.midi.actions"><abbrev>MIDI</abbrev> tab</link> of the Preferences Dialog. For more convenient handling some of these Actions are associated with GUI elements and can directly be mapped to <abbrev>MIDI</abbrev> Events by pressing <keycap>Shift</keycap> while <emphasis>left-clicking</emphasis> the widget.
+       </para>
+       <para>Such elements are:</para>
+       <itemizedlist>
+         <listitem>
+           <para>the <link linkend="chpt.mixer.component_strips.fader_and_lcd">volume faders</link> in the Instrument Channel Strips</para>
+         </listitem>
+         <listitem>
+           <para>the <link linkend="chpt.mixer.channel_strips.fx_volume">FX volume knobs</link> in the Instrument Channel Strips</para>
+         </listitem>
+         <listitem>
+           <para>the <link linkend="chpt.mixer.channel_strips.pan">pan rotaries</link> in the Instrument Channel Strips</para>
+         </listitem>
+         <listitem>
+           <para>the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> in the Mixer</para>
+         </listitem>
+       </itemizedlist>
+
+       <para>A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press 
        a key or turn/move a controller on your <abbrev>MIDI</abbrev> device.
        </para>
 
