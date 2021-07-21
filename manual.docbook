@@ -5441,6 +5441,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <listitem>
             <para><emphasis role="bold">Swing</emphasis>: this knob will add a certain amount of swing to the song. Swing (a slight time delay) is applied to upbeat 16th-notes,
             and not to 8th-notes as it happens in traditional Jazz.</para>
+            <para>This means for instance when setting the <link linkend="chpt.pattern_editor.controls.res">resolution</link> of a pattern to <option>1/16</option> every second note will be affected. If set to <option>1/32</option> instead, every third out of four consecutive notes will be affected. For smaller resolution the swing won't have any effect.</para>
+
+            <note>
+              <para>Please also notice that the amount of lag depends on the current speed as well. The slower the song, the larger is the offset introduced (it scales with 1/tempo).
+              </para>
+            </note>
+
           </listitem>
           
         </itemizedlist>
