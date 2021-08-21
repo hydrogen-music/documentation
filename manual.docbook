@@ -1229,7 +1229,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <listitem>
                 <para><option>PortAudio</option>: An open-source
-                multi platform audio driver.</para>
+                multi platform audio driver interface layer.</para>
               </listitem>
 
               <listitem>
@@ -1244,6 +1244,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           </listitem>
 
+
+          <listitem>
+            <para>
+              <emphasis role="bold">Host API</emphasis> (PortAudio only): some
+              systems (notably Windows) have more than one native
+              way for applications to interact with audio hardware (APIs), and not all audio
+              devices are supported by all APIs. If you don't find
+              your sound device in the device list, try changing the
+              Host API setting.
+            </para>
+          </listitem>
+
           <listitem>
 	        <para>
 	          <emphasis role="bold">Device</emphasis>:
@@ -1253,8 +1265,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <listitem>
 	        <para>
 	          <emphasis role="bold">Buffer size</emphasis>:
-              specifies the size of the batch of time Hydrogen will process in one run. Supported values are from <option>100</option> to <option>5000</option>.
-            </para>
+              specifies the size of the batch of time Hydrogen will
+              process in one run. Supported values are from
+              <option>100</option> to <option>5000</option>, although
+              this can vary depending on audio system and sound
+              device.
+                </para>
+                <para>
+                  In general, selecting a smaller buffer size will
+                  allow the audio system to reduce latency (the lag
+                  between hitting a key and the sound being played),
+                  but can lead to increased likelihood of audio
+                  glitches.
+                </para>
           </listitem>
           <listitem>
 	        <para>
@@ -1816,7 +1839,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </warning>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Quit</emphasis>: exists Hydrogen.</para>
+            <para><emphasis role="bold">Quit</emphasis>: exits Hydrogen.</para>
           </listitem>
         </itemizedlist>
       </sect1>
