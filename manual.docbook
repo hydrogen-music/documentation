@@ -376,39 +376,36 @@
         </para>
 
         <para>
-	      Using the <emphasis role="bold">Input mode</emphasis> in the <link linkend="sect.main_menu.options">Options</link> tab of the Main Menu you can choose between two different ways to emulate sound. <option>Drumkit</option> maps different <abbrev>MIDI</abbrev> events and keyboard inputs to different instruments of the current drumkit while <option>Instrument</option> maps them to pitch-shifted samples of the instrument currently selected in the <link linkend="chpt.song_editor">Song Editor</link>. You can think of these modes as input versions of both the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.
+	      Using the <emphasis role="bold">Input mode</emphasis> in the <link linkend="sect.main_menu.options">Options</link> tab of the Main Menu you can choose between two different ways to emulate sound. <option>Drumkit</option> maps different <abbrev>MIDI</abbrev> notes or virtual keyboard strokes to different instruments of the current drumkit. <option>Instrument</option>, on the other hand, maps them to pitch-shifted samples of the instrument currently selected in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. You can think of these modes as input versions of both <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>.
         </para>
 
         <para>
-	      Which <emphasis role="bold"><abbrev>MIDI</abbrev> input</emphasis> maps to which instrument is depending of the <link linkend="chpt.instrument_editor.midi_out_settings">Note</link> parameter in the Instrument Editor set for in each particular drumkit. An example for the <emphasis>GMRockKit</emphasis> is shown in the <link linkend="chpt.pattern_editor.midi_mapping">table</link> below.
+	      Which <emphasis role="bold"><abbrev>MIDI</abbrev> note</emphasis> maps to which instrument (with Input mode set to Drumkit) is depending on the <link linkend="chpt.instrument_editor.midi_out_settings">Note</link> parameter in the Instrument Editor set for in each particular drumkit. An example for the <emphasis>GMRockKit</emphasis> is shown in the <link linkend="chpt.pattern_editor.midi_mapping">table</link> below.
         </para>
 
         <note>
           <para>
-	        In order to process incoming <abbrev>MIDI</abbrev> messages, you have to enable the <emphasis role="bold">Use output note as input</emphasis> option and set up the overall <abbrev>MIDI</abbrev> support in the <link linkend="chpt.preferences.midi_tab"><abbrev>MIDI</abbrev> system</link> tab of the Preferences dialog first.
+	        In order to process incoming <abbrev>MIDI</abbrev> messages, you have to set up the overall <abbrev>MIDI</abbrev> support in the <link linkend="chpt.preferences.midi_tab"><abbrev>MIDI</abbrev> system</link> tab of the Preferences dialog first.
           </para>
         </note>
 
         <para>
-	      Alternatively you can use the <emphasis role="bold">Virtual keyboard</emphasis> provided in Hydrogen. It maps a number of keys of your computer keyboard to incoming note and allows you to use it as a traditional <abbrev>MIDI</abbrev> keyboard. The mapping is shown in the <link linkend="chpt.pattern_editor.midi_mapping">table</link> as well as in <link linkend="fig.letters_keyboard">figure</link> below.
+	      Alternatively you can use the <emphasis role="bold">Virtual keyboard</emphasis> provided in Hydrogen. In Drumkit mode it maps a number of keys of your computer keyboard to different instruments in the drumkit depending on their position shown in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. In Instrument mode the corresponding instrument number + 36 is used as note key for the currently selected instrument. The mapping is shown for the GMRockKit in <link linkend="chpt.pattern_editor.midi_mapping">table</link> as well as in general in the <link linkend="fig.letters_keyboard">figure</link> below.
         </para>
 
         <table id="chpt.pattern_editor.midi_mapping">
 	      <title><abbrev>MIDI</abbrev> Mapping</title>
-          <tgroup cols="5" align='left' colsep='1' rowsep='1'>
+          <tgroup cols="4" align='center' colsep='1' rowsep='1'>
 	        <thead>
 	          <row>
-	            <entry>
-	              Instr. Pos.
+                <entry>
+	              Hydrogen GMRockKit
+                </entry>
+                <entry>
+	              Virtual Key
                 </entry>
                 <entry>
 	              <abbrev>MIDI</abbrev> Note
-                </entry>
-                <entry>
-	              PC Keyboard Key
-                </entry>
-                <entry>
-	              Hydrogen GMRockKit
                 </entry>
                 <entry>
 	              GM Standard
@@ -418,356 +415,307 @@
             <tbody>
 	          <row>
 	            <entry></entry>
-	            <entry>35</entry>
-	            <entry></entry>
                 <entry></entry>
+	            <entry>35</entry>
                 <entry>Bass Drum 2</entry>
               </row>
 	          <row>
-	            <entry>1</entry>
-	            <entry>36</entry>
-	            <entry>Z</entry>
                 <entry>Kick</entry>
+	            <entry>Z</entry>
+	            <entry>36</entry>
                 <entry>Bass Drum 1</entry>
               </row>
 	          <row>
-	            <entry>2</entry>
-	            <entry>37</entry>
-	            <entry>S</entry>
                 <entry>Stick</entry>
+	            <entry>S</entry>
+	            <entry>37</entry>
                 <entry>Side Stick/Rimshot</entry>
               </row>
 	          <row>
-	            <entry>3</entry>
-	            <entry>38</entry>
-	            <entry>X</entry>
                 <entry>Snare</entry>
+	            <entry>X</entry>
+	            <entry>38</entry>
                 <entry>Snare Drum 1</entry>
               </row>
 	          <row>
-	            <entry>4</entry>
-	            <entry>39</entry>
-	            <entry>D</entry>
                 <entry>Hand Clap</entry>
+	            <entry>D</entry>
+	            <entry>39</entry>
                 <entry>Hand Clap</entry>
               </row>
 	          <row>
-	            <entry>5</entry>
-	            <entry>40</entry>
-	            <entry>C</entry>
                 <entry>Snare Rimshot</entry>
+	            <entry>C</entry>
+	            <entry>40</entry>
                 <entry>Snare Drum 2</entry>
               </row>
 	          <row>
-	            <entry>6</entry>
-	            <entry>41</entry>
-	            <entry>V</entry>
                 <entry>Floor Tom</entry>
+	            <entry>V</entry>
+	            <entry>41</entry>
                 <entry>Low Tom 2</entry>
               </row>
 	          <row>
-	            <entry>7</entry>
-	            <entry>42</entry>
-	            <entry>G</entry>
                 <entry>Hat Closed</entry>
+	            <entry>G</entry>
+	            <entry>42</entry>
                 <entry>Closed Hi-hat</entry>
               </row>
 	          <row>
-	            <entry>8</entry>
-	            <entry>43</entry>
-	            <entry>B</entry>
                 <entry>Tom 2</entry>
+	            <entry>B</entry>
+	            <entry>43</entry>
                 <entry>Low Tom 1</entry>
               </row>
 	          <row>
-	            <entry>9</entry>
-	            <entry>44</entry>
-	            <entry>H</entry>
                 <entry>Hat Pedal</entry>
+	            <entry>H</entry>
+	            <entry>44</entry>
                 <entry>Pedal Hi-hat</entry>
               </row>
 	          <row>
-	            <entry>10</entry>
-	            <entry>45</entry>
-	            <entry>N</entry>
                 <entry>Tom 1</entry>
+	            <entry>N</entry>
+	            <entry>45</entry>
                 <entry>Mid Tom 2</entry>
               </row>
 	          <row>
-	            <entry>11</entry>
-	            <entry>46</entry>
-	            <entry>J</entry>
                 <entry>Hat Open</entry>
+	            <entry>J</entry>
+	            <entry>46</entry>
                 <entry>Open Hi-hat</entry>
               </row>
 	          <row>
-	            <entry>12</entry>
+	            <entry></entry>
+                <entry></entry>
 	            <entry>47</entry>
-	            <entry>M</entry>
-                <entry>Cowbell</entry>
                 <entry>Mid Tom 1</entry>
               </row>
 	          <row>
-	            <entry>13</entry>
+	            <entry></entry>
+                <entry></entry>
 	            <entry>48</entry>
-	            <entry>Q</entry>
-                <entry>Ride</entry>
                 <entry>High Tom 2</entry>
               </row>
 	          <row>
-	            <entry>14</entry>
-	            <entry>49</entry>
-	            <entry>2</entry>
                 <entry>Crash</entry>
+	            <entry>2</entry>
+	            <entry>49</entry>
                 <entry>Crash Cymbal 1</entry>
               </row>
 	          <row>
-	            <entry>15</entry>
+	            <entry></entry>
+                <entry></entry>
 	            <entry>50</entry>
-	            <entry>W</entry>
-                <entry>Ride 2</entry>
                 <entry>High Tom 1</entry>
               </row>
 	          <row>
-	            <entry>16</entry>
+                <entry>Ride</entry>
+	            <entry>Q</entry>
 	            <entry>51</entry>
-	            <entry>3</entry>
-                <entry>Splash</entry>
                 <entry>Ride Cymbal 1</entry>
               </row>
 	          <row>
-	            <entry>17</entry>
-	            <entry>52</entry>
-	            <entry>E</entry>
                 <entry>Hat Semi-Open</entry>
+	            <entry>E</entry>
+	            <entry>52</entry>
                 <entry>Chinese Cymbal</entry>
               </row>
 	          <row>
-	            <entry>18</entry>
-	            <entry>53</entry>
-	            <entry>R</entry>
                 <entry>Bell</entry>
+	            <entry>R</entry>
+	            <entry>53</entry>
                 <entry>Ride Bell</entry>
               </row>
 	          <row>
-	            <entry>19</entry>
-	            <entry>54</entry>
-	            <entry>5</entry>
+	            <entry></entry>
                 <entry></entry>
+	            <entry>54</entry>
                 <entry>Tambourine</entry>
               </row>
 	          <row>
-	            <entry>20</entry>
+                <entry>Splash</entry>
+	            <entry>3</entry>
 	            <entry>55</entry>
-	            <entry>T</entry>
-                <entry></entry>
                 <entry>Splash Cymbal</entry>
               </row>
 	          <row>
-	            <entry>21</entry>
+                <entry>Cowbell</entry>
+	            <entry>M</entry>
 	            <entry>56</entry>
-	            <entry>6</entry>
-                <entry></entry>
                 <entry>Cowbell</entry>
               </row>
 	          <row>
-	            <entry>22</entry>
-	            <entry>57</entry>
-	            <entry>Y</entry>
+	            <entry></entry>
                 <entry></entry>
+	            <entry>57</entry>
                 <entry>Crash Cymbal 2</entry>
               </row>
 	          <row>
-	            <entry>23</entry>
-	            <entry>58</entry>
-	            <entry>7</entry>
+	            <entry></entry>
                 <entry></entry>
+	            <entry>58</entry>
                 <entry>Vibra Slap</entry>
               </row>
 	          <row>
-	            <entry>24</entry>
+                <entry>Ride 2</entry>
+	            <entry>W</entry>
 	            <entry>59</entry>
-	            <entry>U</entry>
-                <entry></entry>
                 <entry>Ride Cymbal 2</entry>
               </row>
 	          <row>
-	            <entry>25</entry>
-	            <entry>60</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>60</entry>
                 <entry>High Bongo</entry>
               </row>
 	          <row>
-	            <entry>26</entry>
-	            <entry>61</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>61</entry>
                 <entry>Low Bongo</entry>
               </row>
 	          <row>
-	            <entry>27</entry>
-	            <entry>62</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>62</entry>
                 <entry>Mute High Conga</entry>
               </row>
 	          <row>
-	            <entry>28</entry>
-	            <entry>63</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>63</entry>
                 <entry>Open High Conga</entry>
               </row>
 	          <row>
-	            <entry>29</entry>
-	            <entry>64</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>64</entry>
                 <entry>Low Conga</entry>
               </row>
 	          <row>
-	            <entry>30</entry>
-	            <entry>65</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>65</entry>
                 <entry>High Timbale</entry>
               </row>
 	          <row>
-	            <entry>31</entry>
-	            <entry>66</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>66</entry>
                 <entry>Low Timbale</entry>
               </row>
 	          <row>
-	            <entry>32</entry>
-	            <entry>67</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>67</entry>
                 <entry>High Agogô</entry>
               </row>
 	          <row>
-	            <entry>33</entry>
-	            <entry>68</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>68</entry>
                 <entry>Low Agogô</entry>
               </row>
 	          <row>
-	            <entry>34</entry>
-	            <entry>69</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>69</entry>
                 <entry>Cabasa</entry>
               </row>
 	          <row>
-	            <entry>35</entry>
-	            <entry>70</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>70</entry>
                 <entry>Maracas</entry>
               </row>
 	          <row>
-	            <entry>36</entry>
-	            <entry>71</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>71</entry>
                 <entry>Short Whistle</entry>
               </row>
 	          <row>
-	            <entry>37</entry>
-	            <entry>72</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>72</entry>
                 <entry>Long Whistle</entry>
               </row>
 	          <row>
-	            <entry>38</entry>
-	            <entry>73</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>73</entry>
                 <entry>Short Güiro</entry>
               </row>
 	          <row>
-	            <entry>39</entry>
-	            <entry>74</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>74</entry>
                 <entry>Long Güiro</entry>
               </row>
 	          <row>
-	            <entry>40</entry>
-	            <entry>75</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>75</entry>
                 <entry>Claves</entry>
               </row>
 	          <row>
-	            <entry>41</entry>
-	            <entry>76</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>76</entry>
                 <entry>High Wood Block</entry>
               </row>
 	          <row>
-	            <entry>42</entry>
-	            <entry>77</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>77</entry>
                 <entry>Low Wood Block</entry>
               </row>
 	          <row>
-	            <entry>43</entry>
-	            <entry>78</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>78</entry>
                 <entry>Mute Cuíca</entry>
               </row>
 	          <row>
-	            <entry>44</entry>
-	            <entry>79</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>79</entry>
                 <entry>Open Cuíca</entry>
               </row>
 	          <row>
-	            <entry>45</entry>
-	            <entry>80</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>80</entry>
                 <entry>Mute Triangle</entry>
               </row>
 	          <row>
-	            <entry>46</entry>
-	            <entry>81</entry>
 	            <entry></entry>
                 <entry></entry>
+	            <entry>81</entry>
                 <entry>Open Triangle</entry>
+              </row>
+	          <row>
+                <entry>Hat Semi-Open</entry>
+	            <entry>E</entry>
+	            <entry>82</entry>
+                <entry></entry>
               </row>
             </tbody>
           </tgroup>
         </table>
-        
+
         <note>
-	      <para>
-	        The names of the instruments depend on the
-            drumkit that is loaded. This table below refers to the GMRockKit that is shipped with Hydrogen and loaded by default.
+          <para>
+	        This table refers to the GMRockKit that is shipped with Hydrogen and loaded by default. For all other drumkits the order of instruments and thus their mapping to virtual keys as well as the assigned MIDI notes might differ.
           </para>
         </note>
 
         <para>When adjusting the mapping or creating your own custom drumkit try to follow the <emphasis role="bold">General <abbrev>MIDI</abbrev> (GM)</emphasis> standard as accurately as possible.  This will ensure that switching between 
         drumkits goes smoothly.  You are of course free to place your instruments anywhere in your drumkit, and
         sometimes it isn't even possible to follow the GM standard, but it makes life a lot easier if you do.</para>
-
-        <note>
-          <para>
-            Keep in mind that it is the <emphasis>position</emphasis> of the instrument (within the loaded drumkit) that 
-            is linked to a <abbrev>MIDI</abbrev>-note/keyboard-key and <emphasis>not the name</emphasis> of the instrument.
-          </para>
-        </note>
         
-        <para>For a better visualization you can also find the mapping notes to your PC's keyboard key in the figure below.</para>
+        <para>For a better visualization you can also find the mapping of instrument positions (red numbers) to your PC's keyboard keys in the figure below.</para>
 
         <informalfigure id="fig.letters_keyboard">
           <mediaobject>
@@ -778,10 +726,17 @@
               </phrase>
             </textobject>
             <imageobject>
-              <imagedata fileref="tastiera.png" format="PNG" />
+              <imagedata fileref="virtual_keyboard.png" format="PNG" width="100%"/>
             </imageobject>
           </mediaobject>
         </informalfigure>
+
+        <note>
+          <para>
+            When using German or French keyboard layout/local the overall mapping is still the same.
+          </para>
+        </note>
+
       </sect1>
 
       <sect1 id="chpt.overview.recording">
