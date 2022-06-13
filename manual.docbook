@@ -2945,7 +2945,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         
         <listitem id="chpt.song_editor.sidebar.properties">
           <para><emphasis role="bold">Properties</emphasis>: will open a window where you can change 
-          the name of the pattern and also assign it to a certain category. Using the latter you can group pattern in in the <link linkend="sect.sl.patterns">Sound Library</link>.
+          the name of the pattern and also assign it to a certain category. Using the latter you can group pattern in the <link linkend="sect.sl.patterns">Sound Library</link>.
           </para>
           <figure id="fig.pattern_properties">
             <title>The Dialog to Change the Pattern Properties</title>
@@ -3150,7 +3150,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 		 <mediaobject>
           <textobject>
             <phrase>
-              Figure showing the Playback track ontop of the Song Editor. At the
+              Figure showing the Playback track on top of the Song Editor. At the
               left side there are several controls: the upper half consists of a
               larger fader and an "EDIT" (middle) and "MUTE" (right) button. The
               lower half contains the Main Controls of the Song Editor. The
@@ -3463,7 +3463,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </inlinemediaobject> /  <inlinemediaobject>
           <textobject>
             <phrase>
-              Blue button with a quasi-3D display a a cylinder with black
+              Blue button with a quasi-3D display a cylinder with black
               outlines, blue sides, and a white top.
             </phrase>
           </textobject>
@@ -5288,7 +5288,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <phrase>
               Example widget to alter the properties of a LADSPA FX. At the top
               left the name of the FX is displayed and at the top left two
-              buttons - "Select FX" and "Deactive" - are shown. In the remainder
+              buttons - "Select FX" and "Deactivate" - are shown. In the remainder
               there are several vertical strips stacked horizontally with each
               one carrying: an LCD displaying the current value (top), the name
               of the parameter (left), and a fader with included meter (right).
@@ -5779,7 +5779,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	       <listitem>
 	         <para>
 	           <emphasis role="bold">Create a new Script</emphasis>:
-               creates a new and empty <command>.sh</command> scrip at a location of your choice.
+               creates a new and empty <command>.sh</command> script at a location of your choice.
 
                <note>
 	             <para>
