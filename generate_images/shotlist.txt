@@ -5,7 +5,7 @@ slot MainForm setMainWindowSize 960 600
 # Set up default view: timeline, drum pattern editor and velocity editor
 slot PatternEditorPanel showDrumEditor
 slot MainForm action_window_showTimeline
-slot PropertiesCombo select 0
+slot PropertiesCombo setCurrentIndex 0
 grab MainForm as GUI_Sections_Background.png
 
 
@@ -68,9 +68,9 @@ grab SongEditorBackPanel as btn_new_on.png offset 64 30 size 19 13
 grab SongEditorBackPanel as btn_updown.png offset 89 30 size 35  13
 grab SongEditorBackPanel as btn_select.png offset 128 30 size 18  13
 grab SongEditorBackPanel as btn_draw.png offset 146 30 size 18  13
-slot SongEditorPanel setModeActionBtn true
+slot SongEditorPanel activateStackedMode false
 grab SongEditorBackPanel as btn_pattern_mode.png offset 169 30 size 18 13
-slot SongEditorPanel setModeActionBtn false
+slot SongEditorPanel activateStackedMode true
 grab SongEditorBackPanel as btn_stacked_mode.png offset 169 30 size 18 13
 
 # Pattern Options Menu
@@ -91,13 +91,13 @@ slot SongEditorPatternList patternPopup_properties
   grab PatternPropertiesDialog as pattern_properties.png
   slot PatternPropertiesDialog close
 
-slot SongEditorPanel showHideTimeLine true
+slot SongEditorPanel showHideTimeline true
 grab SongEditorPanel offset 131 4 size 368 43 as tempo_bar.png
 
-slot SongEditorPanel showHideTimeLine false
+slot SongEditorPanel showHideTimeline false
 grab TimeLineToggleBtn as btn_bpm_off.png
 
-grab ViewPlaybackToggleBtn as btn_viewTL_off.png
+grab ViewPlaybackBtn as btn_viewTL_off.png
 
 
 slot SongEditorPositionRuler showBpmWidget 3
@@ -148,7 +148,7 @@ grab SoloButton as btn_solo_off.png
 
 # TODO: illustration of note lengths and stop notes
 
-slot PropertiesCombo select 3
+slot PropertiesCombo setCurrentIndex 3
 grab PatternEditorPanel as NoteKey.png offset 0 228
 
 
@@ -157,7 +157,7 @@ grab PatternEditorPanel as NoteKey.png offset 0 228
 
 slot MainForm setMainWindowSize 960 800
 
-slot PropertiesCombo select 0
+slot PropertiesCombo setCurrentIndex 0
 slot PatternEditorPanel showPianoRollEditor
 
 grab PatternEditorPanel as PatternEditor_PianoMode.png
@@ -167,13 +167,13 @@ grab PatternEditorPanel as PatternEditor_PianoMode.png
 
 slot MainForm setMainWindowSize 800 600
 
-slot InstrumentRack on_showSoundLibraryBtnClicked
+slot InstrumentRack showSoundLibrary true
 grab InstrumentRack as SoundLibrary.png
 
-slot InstrumentRack on_showInstrumentEditorBtnClicked
+slot InstrumentRack showSoundLibrary false
 grab InstrumentRack as Instrument_General.png
 
-slot InstrumentEditor showInstrument
+slot InstrumentEditor showLayers false
 
 # Subsections of instrument rack
 grab InstrumentRack offset 27 102 size 242 46 as instrument_editor_envelope.png
@@ -183,7 +183,7 @@ grab InstrumentRack offset  6 258 size 280 48 as instrument_editor_pitch.png
 grab InstrumentRack offset  6 305 size 280 46 as instrument_editor_midi_out.png
 grab InstrumentRack offset  6 352 size 280 45 as instrument_editor_hihat_pressure_group.png
 
-slot InstrumentEditor showLayers
+slot InstrumentEditor showLayers true
 # grab InstrumentEditor as Instrument_Layers.png
 grab LayerProperties as Instrument_Layers.png
 
@@ -205,6 +205,8 @@ slot SampleEditor close
 
 
 # Mixer
+slot Mixer show
+slot Mixer updateMixer
 grab Mixer
 
 grab PlaySampleButton as btn_play_on_mixer.png
@@ -213,8 +215,8 @@ grab TriggerSampleLED as led_trigger_on.png
 grab MixerLine as item_selected.png offset 37 1 size 15 11
 grab MixerMuteButton as btn_mute_on.png
 grab MixerSoloButton as btn_solo_on.png
-grab Rotary as mixer_rotary.png
-grab Knob as mixer_knob.png
+grab PanRotary as mixer_rotary.png
+grab FXRotary as mixer_knob.png
 
 # TODO: LADSPA effects. These screenshots screenshots are a pain
 # because windows are in non-default states.
