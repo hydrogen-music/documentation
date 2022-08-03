@@ -20,7 +20,7 @@ echo "Generating tabbed layout images"
 "$H2" -n --layout tabbed -t shotlist-tabbed.txt "$DEMO" 2>&1 | out
 
 echo "Generating single pane layout images"
-"$H2" -n --layout single -t shotlist.txt "$DEMO" 2>&1 | out
+"$H2" -n --layout single -d jack -t shotlist.txt "$DEMO" 2>&1 | out
 
 # Specific song stuff
 echo "Generating misc images"

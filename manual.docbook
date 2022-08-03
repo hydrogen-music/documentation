@@ -755,7 +755,7 @@
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="Rec_button.png" format="PNG"/>
+              <imagedata fileref="generated_en/playerControlRecordButton.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
 in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> and afterwards press the 
@@ -767,7 +767,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_play_off.png" format="PNG"/>
+              <imagedata fileref="generated_en/playerControlPlayButton.png" format="PNG"/>
           </imageobject>
           </inlinemediaobject>
           button located right next to it (like in a classical tape recorder). 
@@ -1046,7 +1046,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                     <imageobject>
-                      <imagedata fileref="btn_set_play_on.png" format="PNG" />
+                      <imagedata fileref="generated_en/btn_bc_set_play_on.png" format="PNG" />
                     </imageobject>
                   </inlinemediaobject>
           should be displayed in the bottom right corner - for this setting to take effect.
@@ -1103,7 +1103,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                     <imageobject>
-                      <imagedata fileref="rubber_off.png" format="PNG" />
+                      <imagedata fileref="generated_en/playerControlRubberbandButton.png" format="PNG" />
                     </imageobject>
                   </inlinemediaobject>
           button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link>. You can use this behavior to verify your configuration.
@@ -1300,7 +1300,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="btn_jack_transport_off.png" format="PNG" />
+                    <imagedata fileref="generated_en/playerControlJackTransportButton.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
                 button has to be activated and the
@@ -1311,7 +1311,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="btn_jack_master_off.png" format="PNG" />
+                    <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>                
                 button deactivated in the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link> (next to
@@ -1704,7 +1704,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Main Menu</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MainMenu.png" format="PNG"/>
+            <imagedata fileref="generated_en/MainMenu.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -2232,7 +2232,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_set_play_off.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_set_play_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           and
@@ -2243,7 +2243,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_set_play_on.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           .  When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and
@@ -2258,7 +2258,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="btn_set_play_off.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_bc_set_play_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           (for <emphasis>Set BPM</emphasis>), the auto-start is disabled.</para>
@@ -2274,7 +2274,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_set_play_on.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           ).  Count off
@@ -2341,7 +2341,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_metronome_off.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_metronome_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           to toggle the metronome.</para>
@@ -2362,7 +2362,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="rubber_off.png" format="PNG" />
+              <imagedata fileref="generated_en/playerControlRubberbandButton.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
@@ -2426,7 +2426,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="btn_jack_transport_off.png" format="PNG" />
+            <imagedata fileref="generated_en/playerControlJackTransportButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore.
@@ -2441,7 +2441,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_jack_master_off.png" format="PNG" />
+              <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
@@ -2498,7 +2498,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Song Editor</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="generated_en/EnablePlaybackTrack.png" format="PNG" />
+            <imagedata fileref="generated_en/songEditorBackground.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -2550,7 +2550,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="SongRuler.png" format="PNG" />
+            <imagedata fileref="generated_en/songEditorPositionRuler.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </informalfigure>
@@ -2643,16 +2643,30 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
         <listitem>
-          <para><inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing a black brush.
-            </phrase>
-          </textobject>
-          <imageobject>
-            <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Select mode (<xref
-            linkend="chpt.song_editor.editor_modes.select" />).
+          <para>
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button containing a black brush.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+            : enables Select mode (<xref
+            linkend="chpt.song_editor.editor_modes.select" />) : 
+            
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button with pointer and dashed rectangle.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
           </para>
           
         </listitem>
@@ -2666,7 +2680,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
+            <imagedata fileref="generated_en/btn_lock.png" format="PNG"/>
             </imageobject></inlinemediaobject> : enables Draw mode (<xref
             linkend="chpt.song_editor.editor_modes.select" />).</para>
         </listitem>
@@ -3032,7 +3046,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
            <imageobject>
-             <imagedata fileref="generated_en/tempo_bar.png" format="PNG" />
+             <imagedata fileref="generated_en/songEditorTimeline.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </informalfigure>
@@ -3049,7 +3063,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="generated_en/btn_viewTL_off.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_view_playbackTrack.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
        button at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the
@@ -3060,7 +3074,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="generated_en/btn_bpm_off.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_view_timeline.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
        button.  Once this is done
@@ -3102,22 +3116,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      </sect1>
      
      <sect1 id="chpt.song_editor.tag">
-       <title>Tags</title>       
+       <title>Tags</title>
 
-       <informalfigure id="fig.tag_bar">
-         <mediaobject>
-          <textobject>
-            <phrase>
-              Excerpt of the Song Ruler containing several Tags marked with
-              light-blue "T"s.
-            </phrase>
-          </textobject>
-           <imageobject>
-             <imagedata fileref="tag_bar.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-       </informalfigure>
-       
        <para>
          In addition to altering the tempo when the song switches from e.g. the intro into a verse, 
          it is also very handy to have a clear indication of more general changes or special events in the song. For this purpose you can also add <emphasis>Tags</emphasis> to the song.
@@ -3176,18 +3176,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </note>
 
 		 <para>
-		   To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the
-            <inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing a black "T".
-            </phrase>
-          </textobject>
+		   To add a playback track to your song, you need to enable the playback
+           track view. This can be done by either pressing
+           <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="btn_viewTL_off.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_view_playbackTrack.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
-            button left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
+            left of the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
          </para>
 
          <para>
@@ -3227,7 +3223,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Automation Path Widget</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="AutomationPath.png" format="PNG"/>
+            <imagedata fileref="generated_en/songEditorAutomationPathView.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -3329,23 +3325,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                : lets you choose the length of the pattern (in note values).
               </para>
               <para>
-                It will open a dialog to enter the new size as text, in the standard music fractional notation:                  
-              </para>
-              <informalfigure id="fig.PatternSizeDialog">
-                <mediaobject>
-          <textobject>
-            <phrase>
-              Dialog for entering the "New Pattern length (beats/note value)"
-              via a Text input in the middle. At the bottom there are "Cancel" (right)
-              and "OK" (left) buttons.
-            </phrase>
-          </textobject>
-                  <imageobject>
-                    <imagedata fileref="PatternSizeDialog.png" format="PNG" />
-                  </imageobject>
-                </mediaobject>
-              </informalfigure>                
-              <para>
                 Type <keycap>/</keycap> to separate numerator and denominator.
               </para>
               <para>
@@ -3361,19 +3340,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                   You can use unsupported denominators, but the size will be approximated almost all the times,
                   hence a warning icon will appear:               
                 </para>
-                <informalfigure id="fig.DenominatorWarningIcon">
-                  <mediaobject>
-          <textobject>
-            <phrase>
-              A yellow upright triangle containing a exclamation mark is shown
-              to the right of the "SIZE" LCD.
-            </phrase>
-          </textobject>
-                    <imageobject>
-                      <imagedata fileref="generated_en/DenominatorWarningIcon.png" format="PNG" />
-                    </imageobject>
-                  </mediaobject>
-                </informalfigure>
               </note>
               
             </listitem>
@@ -3610,7 +3576,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_instrument_line_mute_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button <link linkend="def.mute">mutes</link> the instrument and 
@@ -3621,7 +3587,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="generated_en/btn_solo_off.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_instrument_line_solo_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         solos it.
@@ -3748,7 +3714,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The Note Properties Ruler set to Velocity</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="NotePropertiesRuler.png" format="PNG"/>
+              <imagedata fileref="generated_en/notePropertiesRuler.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -4389,7 +4355,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersComponents.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorComponentName.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4403,7 +4369,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="btn_dropdown_off.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorComponentDropDown.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
             you find a list of all components available in the current drumkit and can select them via a <emphasis>left click</emphasis>. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one.
@@ -4423,7 +4389,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <title>The Layer Section of the Instrument Editor</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersLayers.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorLayers.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </figure>
@@ -4520,7 +4486,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersSampleSelection.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorSampleSelection.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4570,7 +4536,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersControls.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorControls.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4816,7 +4782,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="rubber_off.png" format="PNG" />
+                <imagedata fileref="generated_en/playerControlRubberbandButton.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly.
@@ -4947,7 +4913,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Instrument Channel Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerInstrumentStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerLineStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5123,7 +5089,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Component Channel Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerComponentStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/componentMixerLineStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5188,7 +5154,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The FX Rack in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerFXStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerFXRack.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5203,7 +5169,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="showFX_on.png" format="PNG" />
+          <imagedata fileref="generated_en/mixerShowFXButton.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
 
@@ -5261,7 +5227,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="edit_off.png" format="PNG" />
+          <imagedata fileref="generated_en/mixerFXEditButton.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
 
@@ -5311,7 +5277,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="bypass_over.png" format="PNG" />
+          <imagedata fileref="generated_en/mixerFXEditButton.png" format="PNG" />
         </imageobject>
         </inlinemediaobject>)
 
@@ -5334,7 +5300,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Master Fader Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerMasterStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/masterMixerLine.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5353,7 +5319,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="master_mute_off.png" format="PNG" />
+              <imagedata fileref="generated_en/mixerMasterMuteButton.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           button <link linkend="def.mute">mutes</link> the whole output.
@@ -5367,7 +5333,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="showFX_on.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowFXButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>      
         button will show or hide the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>, and the
@@ -5379,7 +5345,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="showPeaks_on.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowPeakButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>       
         button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
@@ -5441,24 +5407,21 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect2 id="chpt.mixer.master_fader_strip.mixer_settings">
         <title>Mixer Settings</title>
         
-        <para>In the upper right corner of Master Fader Strip there is a small "cog" icon button:</para>
+        <para>Clicking the
 
-        <informalfigure id="mixerSettingsButton">
-          <mediaobject>
+        <inlinemediaobject id="mixerSettingsButton">
           <textobject>
             <phrase>
               Button holding the cog symbol right of the "Master" title of the
               Master Fader Strip.
             </phrase>
           </textobject>
-            <imageobject>
-              <imagedata fileref="generated_en/mixerSettingsButton.png" format="PNG" />
-            </imageobject>
-          </mediaobject>
-        </informalfigure>
-        <para>
+          <imageobject>
+            <imagedata fileref="generated_en/mixerSettingsButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
 
-          Click it to open the Mixer Settings window:
+          button in the upper right corner of Master Fader Strip opens the Mixer Settings window:
 
           <informalfigure id="mixerSettingsDialog">
             <mediaobject>
@@ -5835,7 +5798,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="rec.png" format="PNG" />
+            <imagedata fileref="generated_en/midiSenseButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button left of the Event-Action binding line. 
@@ -5856,7 +5819,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="rec.png" format="PNG" />
+            <imagedata fileref="generated_en/midiSenseButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject> button by setting the <emphasis role="bold">Event Param.</emphasis> manually to the desired <abbrev>MIDI</abbrev> note.
         </para>
@@ -6776,7 +6739,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="btn_play_off.png" format="PNG"/>
+           <imagedata fileref="generated_en/playerControlPlayButton.png" format="PNG"/>
          </imageobject>
        </inlinemediaobject>
 button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link>, and while the pattern is playing
@@ -6841,7 +6804,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="showFX_on.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowFXButton.png" format="PNG" />
           </imageobject>
           </inlinemediaobject>
           button to show and hide the 
