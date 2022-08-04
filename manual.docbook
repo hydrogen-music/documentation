@@ -4560,7 +4560,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 </tip>
               </para>
             </listitem>
-            <listitem>
+            <listitem id="chpt.instrument_editor.layers.controls.pitch">
 	          <para>
 	            <emphasis role="bold">Pitch</emphasis>:
                 adjusts the pitch of the currently selected layer and the associated sample in quantized steps of half-tones from <option>-24</option> to <option>+24</option>.
@@ -5937,18 +5937,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </note>
            </listitem>
 	       
-           <listitem><para>
-             <emphasis role="bold">EFFECTx_LEVEL_ABSOLUTE</emphasis>:
-                          changes the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume level of an FX</link> <option>x</option> provided as an integer between <option>0</option> and <option>127</option>. The value you enter in the <emphasis role="bold">Action Param</emphasis> determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> the Action will be applied to.
+           <listitem id="chpt.midi.actions.actions.effect_level_absolute" xreflabel="EFFECT_LEVEL_ABSOLUTE">
+             <para>
+             <emphasis role="bold">EFFECT_LEVEL_ABSOLUTE</emphasis>:
+                          changes the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume level of an FX</link>. Parameter 1 determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> and Parameter 2 specifies the FX the Action will be applied to.
            </para></listitem>
 
            <listitem><para>
-             <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis>:
-             <warning>
-	           <para>
-	             Not implemented yet.
-               </para>
-             </warning>
+             <emphasis role="bold">EFFECT_LEVEL_RELATIVE</emphasis>:
+             same as <xref linkend="chpt.midi.actions.actions.effect_level_absolute"/> but instead mapping the incoming values directly to the FX volume <option>1</option> will increase and all other values will decrease it by 5%.
            </para></listitem>
 
            <listitem>
@@ -5960,6 +5957,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  127.0.
              </para>
            </listitem>
+
+           <listitem><para>
+             <emphasis role="bold">GAIN_LEVEL_ABSOLUTE</emphasis>:
+	         sets the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">Layer Gain</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
+           </para></listitem>
 	       
            <listitem id="chpt.midi.actions.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
 	         <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>: sets the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link> to the value provided by the <abbrev>MIDI</abbrev> event times 1.5 and divided by 127.
@@ -5982,8 +5984,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
              <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).
 	       </para></listitem>
 	       
+           <listitem id="chpt.midi.actions.actions.pan_absolute" xreflabel="PAN_ABSOLUTE"><para>
+	         <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> to the absolute value that the linked controller sends to Hydrogen. Incoming values from <option>0</option> to <option>127</option> will be mapped to pan values between -1 and 1.
+	       </para></listitem>
+	       
            <listitem><para>
-	         <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> to the absolute value - from <option>0</option> to <option>127</option> - that the linked controller sends to Hydrogen.
+	         <emphasis role="bold">PAN_ABSOLUTE_SYM</emphasis>: same as <xref linkend="chpt.midi.actions.actions.pan_absolute"/> but supports incoming values from <option>-127</option> to <option>127</option> will be mapped.
 	       </para></listitem>
 	       
            <listitem><para>
@@ -5993,6 +5999,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	       </para></listitem>
 
            <listitem id="chpt.midi.actions.actions.pause" xreflabel="PAUSE"><para>
+	         <emphasis role="bold">PAUSE</emphasis>: pauses playback.
+	       </para></listitem>
+
+           <listitem id="chpt.midi.actions.actions.pitch_level_absolute" xreflabel="PITCH_LEVEL_ABSOLUTE"><para>
+             <emphasis role="bold">PITCH_LEVEL_ABSOLUTE</emphasis>:
+	         sets the <link linkend="chpt.instrument_editor.layers.controls.pitch">Layer Pitch</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
 	         <emphasis role="bold">PAUSE</emphasis>: pauses playback.
 	       </para></listitem>
 	       
@@ -6419,7 +6431,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>, the command will have no effect.</entry>
                </row>
                <row>
-                 <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis>/</entry>
+                 <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_PATTERN</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
                  <entry>Works as <xref linkend="chpt.osc.command.select_next_pattern"/>
@@ -6433,6 +6445,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  locates the playhead to pattern number
                  <emphasis>f</emphasis>. If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>, locates the playhead to the beginning of the
                  current pattern.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">BPM</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry></entry>
+                 <entry>Sets the current tempo to
+                 <emphasis>f</emphasis>. Note that this command will have no
+                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+                 and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">BPM_DECR</emphasis>/</entry>
@@ -6574,18 +6595,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                </row>
                <row id="chpt.osc.command.strip_mute_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis>/</entry>
-                 <entry>f</entry>
+                 <entry>'',[f]</entry>
                  <entry></entry>
                  <entry>Toggles muting of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
-                 <emphasis>X</emphasis>. Input argument will be
+                 <emphasis>X</emphasis>. Optional input argument will be
                  ignored.</entry>
                </row>
                <row id="chpt.osc.command.strip_solo_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis>/</entry>
-                 <entry>f</entry>
+                 <entry>'',[f]</entry>
                  <entry></entry>
                  <entry>Toggles soloing of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
-                 <emphasis>X</emphasis>. Input argument will be
+                 <emphasis>X</emphasis>. Optional input argument will be
                  ignored.</entry>
                </row>
                <row id="chpt.osc.command.playlist_song">
@@ -6695,6 +6716,55 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>' ',[f]</entry>
                  <entry></entry>
                  <entry>Exits Hydrogen.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">NEW_PATTERN</emphasis>/</entry>
+                 <entry>s</entry>
+                 <entry></entry>
+                 <entry>Creates an empty pattern of name <emphasis>s</emphasis>.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">OPEN_PATTERN</emphasis>/</entry>
+                 <entry>s</entry>
+                 <entry></entry>
+                 <entry>Opens an existing pattern at the absolute
+                 path <emphasis>s</emphasis>.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">REMOVE_PATTERN</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry></entry>
+                 <entry>Removes pattern number <emphasis>f</emphasis>. </entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">SONG_EDITOR_TOGGLE_GRID_CELL</emphasis>/</entry>
+                 <entry>ff</entry>
+                 <entry></entry>
+                 <entry>Toggles a pattern in the pattern grid of the <link linkend="chpt.song_editor">Song Editor</link>. The first argument will be used as column and the second as row.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">LOAD_DRUMKIT</emphasis>/</entry>
+                 <entry>s,sf</entry>
+                 <entry></entry>
+                 <entry>Loads a drumkit into the current song. <emphasis>s</emphasis> can be either the name of a drumkit already present in the <link linkend="chpt.sound_library">Sound Library Editor</link> or an absolute path pointing to an extracted drumkit folder (containing both <filename>drumkit.xml</filename> file as well as all required samples). The second argument is optional and specifies whether (<option>0</option>) or not (any other value) instruments of the old kit should be kept in case newly loaded one has less and there are note present for that particular instrument in a pattern.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">EXTRACT_DRUMKIT</emphasis>/</entry>
+                 <entry>s,ss</entry>
+                 <entry></entry>
+                 <entry>Inflates a <link linkend="chpt.file_types.h2drumkit">compressed drumkit</link> found at the absolute path <emphasis>s</emphasis> (first argument). The second argument specifies the target path to extract the kit to. It's optional and if omitted the kit will be extracted into Hydrogen's user drumkit folder.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">VALIDATE_DRUMKIT</emphasis>/</entry>
+                 <entry>s</entry>
+                 <entry></entry>
+                 <entry>Validates a <link linkend="chpt.file_types.h2drumkit">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis>.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">UPGRADE_DRUMKIT</emphasis>/</entry>
+                 <entry>s,ss</entry>
+                 <entry></entry>
+                 <entry>Upgrades a <link linkend="chpt.file_types.h2drumkit">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis> to the latest drumkit format. The second argument specifies the target path to upgraded kit will be stored in. It's optional and if omitted the kit will be upgraded inplace.</entry>
                </row>
              </tbody>
            </tgroup>
