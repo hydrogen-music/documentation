@@ -1835,13 +1835,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               </note>
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.drumkits.properties">
 	        <para>
 	          <emphasis role="bold">Properties</emphasis>:
               sets general properties of the drumkit such as its name, author, license, general information, image, and image license.
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.drumkits.save">
             <para><emphasis role="bold">Save</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples).
             </para>
           </listitem>
@@ -7246,6 +7246,117 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 </part>
 <part id="appendix">
   <title>Appendix</title>
+  
+    <chapter id="chpt.license">
+      <title>Licensing</title>
+        <warning>
+          <para>
+            No one of us is a lawyer and all information found in this section should be taken with a grain of salt and come with no warranty. But we try our best to condense information we found online.
+          </para>
+        </warning>
+
+      <para>
+        When <link linkend="sect.main_form.export_song">exporting a song</link> or <link linkend="sect.main_menu.drumkits.save_as">saving</link> or <link linkend="sect.main_form.export_drumkit">exporting</link> a drumkit you are reusing and/or redistributing licensed sound samples. Thus you are legally obliged to comply with every license hold by the samples you used.
+      </para>
+      <para>
+        In this chapter we cover how Hydrogen can help you handle and manage the licenses involved and what the most common ones do imply.
+      </para>
+
+      <note>
+	    <para>
+	      Our custom data types <link linkend="chpt.file_types.h2pattern">.h2pattern</link>, <link linkend="chpt.file_types.h2song">.h2song</link>, and <link linkend="chpt.file_types.h2playlist">.h2playlist</link> do not contain any samples and are not affected by the issues described in this chapter.
+        </para>
+      </note>
+
+      <sect1 id="chpt.license.parsing">
+        <title>License Parsing</title>
+        
+        <para>
+          Hydrogen does display some info dialogs in case any of the used samples holds a copyleft license, like <xref linkend="chpt.license.common_licenses.CC_BY_SA"/> or <xref linkend="chpt.license.common_licenses.GPL"/>, holds one that require an attribution of the copyright holder (as CC BY* licenses do), or you are mixing different licenses during drumkit saving or export. But all this is only possible if the licenses of the involved drumkits are correctly parsed (and are one of the supported <link linkend="chpt.license.common_licenses">common licenses</link>).
+        </para>
+        <para>
+          You can access and alter the license of the drumkit used in the current song via <link linkend="sect.main_menu.drumkits.properties">Drumkits > Properties</link> in the main menu or the license of a stock kit via the <link linkend="chpt.sound_library.drumkits">Sound Library</link>. In addition, you can view all licenses of the contained samples which is especially helpful when mixing instruments of different drumkits in the current song.
+        </para>
+
+        <figure id="fig.license.parsing.drumkit.properties">
+          <title>Dialog to view and alter the Properties of a Drumkit</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="generated_en/soundLibraryPropertiesDialog.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <note>
+          <para>
+            Samples loaded directly into Hydrogen using the <link linkend="chpt.instrument_editor.layers.layers">Layer section of the Instrument Editor</link> are not associated to any drumkit until you <link linkend="sect.main_menu.drumkits.save">save</link> it and will be handled as if they are unlicensed. Please take extra care of checking which licenses they are distributed with and what implication their presence has for your song/drumkit.
+          </para>
+        </note>
+      </sect1>
+
+      <sect1 id="chpt.license.common_licenses">
+        <title>Common Licenses</title>
+
+        <para>
+          By default all copyrights of your creative work belongs to you - its creator. But you are obliged to comply with the licenses of the samples you used to create it. In this section you find a list and some short description of the licenses most commonly encountered in Hydrogen drumkits.
+        </para>
+        <para>
+        Also, you are free to abstain from some or all rights by licensing your work with e.g. one of the licenses provided by Creative Commons (CC). This allows other people to reuse it more easily and in a legally secure way and helps the audio community to prosper.
+        </para>
+        
+        <table frame='all'>
+          <title>Common Licenses</title>
+          <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+            <colspec colname='cName'/>
+            <colspec colname='cDescription'/>
+            <thead>
+              <row>
+                <entry>Name</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row id="chpt.license.common_licenses.CC0" xreflabel="CC0">
+                <entry><ulink url="https://creativecommons.org/publicdomain/zero/1.0/">CC0</ulink></entry>
+                <entry>The creator choose to give up her copyright and you are free to use, modify, distribute etc. the samples.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY" xreflabel="CC BY">
+                <entry><ulink url="https://creativecommons.org/licenses/by/4.0/">CC BY</ulink></entry>
+                <entry>You are free to use, modify, distribute etc. the samples but you are obliged to give attribution to the creator. This can be done in e.g. the info property of the new drumkit or in the liner notes of the song you created by reusing the samples.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_NC" xreflabel="CC BY-NC">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY"/> but you are in addition only allowed to use the result for noncommercial purposes.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_SA" xreflabel="CC BY-SA">
+                <entry><ulink url="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY"/> but you are obliged to license your work as CC BY-SA as well. This means <emphasis>you have to give the general public permission to modify, redistribute, reuse, and sell it without being able to require them to give royalty to you</emphasis>.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_NC_SA" xreflabel="CC BY-NC-SA">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY_SA"/> but you are in addition only allowed to use the result for noncommercial purposes.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_ND" xreflabel="CC BY-ND">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY"/> but you are not allowed to alter the material and can only use or distribute them in unadapted form.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_NC_ND" xreflabel="CC BY-NC-ND">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY_ND"/> but you are in addition only allowed to use the result for noncommercial purposes.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.GPL" xreflabel="GPL">
+                <entry><ulink url="https://www.gnu.org/licenses/gpl-3.0.html">GPL</ulink></entry>
+                <entry>License similar to <xref linkend="chpt.license.common_licenses.CC_BY_SA"/> but targeted on usage with software instead of creative content. It is discouraged to license your newly created drumkit using this license since it's not clear whether it actually can be legally applied to audio samples. Instead, it's recommanded to stick to the Creative Commons (CC) ones covered above. However, most of the drumkits available in Hydrogen <emphasis>are</emphasis> licensed as GPL and require you to adopt this license too in case you reuse their samples. It's a bit of an unpleasant situation but grew naturally. Most importantly, <emphasis>this license also obliges you to make your product (drumkit/music) available for free!</emphasis></entry>
+              </row>
+              <row id="chpt.license.common_licenses.AllRightsReserved" xreflabel="All rights reserved">
+                <entry>All rights reserved</entry>
+                <entry>You are not allowed to modify, reuse, or distribute the samples without asking the copyright holder for permission first.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect1>
+    </chapter>
   
     <chapter id="chpt.file_types">
       <title>Used File Types</title>

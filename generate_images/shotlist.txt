@@ -272,6 +272,10 @@ slot MixerSettingsDialog close
 slot MainForm action_window_show_DirectorWidget
 grab Director as screenshot-director.png
 
+slot MainForm action_banks_properties
+grab SoundLibraryPropertiesDialog as soundLibraryPropertiesDialog.png
+slot SoundLibraryPropertiesDialog close
+
 # TODO: Midi actions. Shot shows configured actions and drop down
 # menus. Hm.
 
