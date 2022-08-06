@@ -786,6 +786,24 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	        The incoming notes will be added in a non-destructive way. This means when adding two notes at the same position, you will have two notes being played back at once (with double the volume of a single one).
           </para>
         </note>
+
+        <informalfigure id="fig.overview.recording.punch_in">
+          <mediaobject>
+            <textobject>
+              <phrase>
+                Song ruler with a red rectangle indicating the punch in area.
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="punch_in.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+
+        <para>
+          You can also limit patterns new notes will be recorded to by defining a continuous <emphasis role="bold">punch in</emphasis> area via right click and dragging the cursor to the right in the ruler of the <link linkend="chpt.song_editor">Song Editor</link>.
+        </para>
+        
       </sect1>
       
       <sect1 id="chpt.overview.session_management">
