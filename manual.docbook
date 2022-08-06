@@ -5191,10 +5191,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </imageobject>
       </inlinemediaobject>
 
-      button in the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>).
+      button in the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>.
       </para>
-      <para>It has 4 bays where you can load a <abbrev>LADSPA</abbrev> effect plugin, but before
-        you can load any plugins these must be installed on system-level.</para>
+      <para>It has 4 slots where you can load a <abbrev>LADSPA</abbrev> effect plugin already installed on your system.</para>
         <para>There are dozens of plugins available for download from various sources:
 
       <itemizedlist>
@@ -5224,18 +5223,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
       </itemizedlist>
-      </para>
-      
-      <warning>
-        <title>Plugins Kill</title>
-        <para>A badly designed <abbrev>LADSPA</abbrev> plugin is capable of
-        hanging, crashing, freezing, screeching, overflowing buffers, and even
-        phoning home.  If you start having issues with Hydrogen, disable your
-        plugins and see if things improve.  Some plugins are not designed for
-        real-time use, and some are just plain better than others.</para>
-      </warning>
+        </para>
 
-      <para>Once you have installed some plugins you can select one by clicking the
+        <note>
+          <para>
+            Linux Audio Developer's Simple Plugin API (<abbrev>LADSPA</abbrev>) is the only plugin format supported by Hydrogen and it is tailored to be used on Linux platforms. On <emphasis role="bold">macOS</emphasis> it's rather easy to get the plugins running as most of their code works on this platform too without any changes. On <emphasis role="bold">Windows</emphasis>, however, things are not that straight forward. As of 2022 there are no packages, bundles, or other applications shipping LADSPA plugins for Windows usable within Hydrogen and you have to compile them from source too. But in contrast to Linux and macOS your have to adopt the codebase first (which is most easily done for the <abbrev>CMT</abbrev> plugins). So, it's possible to use plugins under Windows but, unfortunately, not feasible at all.
+          </para>
+        </note>
+
+      <para>You can select a plugin using the FX selector opened by clicking the
       
 
       <inlinemediaobject>
@@ -5250,8 +5246,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </inlinemediaobject>
 
       button.
-      </para>
-      <para>Now the FX selector window will pop up :
       
       <figure id="fig.select_effect">
         <title>Select an Effect</title>
@@ -5263,7 +5257,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </figure>
       
       Once you have selected a plugin you will immediately have access 
-      to its parameters:
+      to its parameters.
       
        
         <informalfigure id="figLADSPA_FX_Properties">
@@ -5283,6 +5277,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </imageobject>
          </mediaobject>
          </informalfigure>
+      
+      <warning>
+        <title>Plugins Kill</title>
+        <para>A badly designed <abbrev>LADSPA</abbrev> plugin is capable of
+        hanging, crashing, freezing, screeching, overflowing buffers, and even
+        phoning home.  If you start having issues with Hydrogen, disable your
+        plugins and see if things improve.  Some plugins are not designed for
+        real-time use and some are just plain better than others.</para>
+      </warning>
 
 
       You can select another plugin by clicking the <emphasis role="bold">Select FX</emphasis> button. If you quickly want to 
@@ -5307,7 +5310,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </tip></para>
       
       <para>After you have selected the FX and tweaked it's parameters you can use the 
-      <emphasis role="bold">Return</emphasis> knob to increase/decrease how much of this FX will be returned to the master output.</para>
+      <emphasis role="bold">Return</emphasis> knob in the FX Rack of the mixer to increase/decrease how much of this FX will be added to the master output.
+      </para>
+
+      <para>
+        The FX itself lives in an <emphasis>aux</emphasis> channel. This means its not directly added into the signal path of any instrument line but a copy of the audio output of each of them can be send to the FX for processing instead. The amount of signal - 0 per default - send by each can be controlled using the <link linkend="chpt.mixer.channel_strips.fx_volume">pre-fader FX knobs</link> in the corresponding instrument channel strip. The top left one refers to the top-most FX, the top right one to the second FX and so on. This means, in order to get an all wet signal (none of the original signal but just the processed one enters the mix) of an instrument, you have to ramp up the pre-fader FX knob and set the line's fader to 0.
+      </para>
+
+      <note>
+        <para>
+          Since the FX signal lives in an aux channel it is neither affected by <link linkend="chpt.instrument_editor.gain_and_mute_group">Auto-Stop-Note</link> nor <link linkend="chpt.instrument_editor.gain_and_mute_group">Mute Groups</link>.
+        </para>
+      </note>
 
     </sect1>
      
