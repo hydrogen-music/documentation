@@ -343,7 +343,7 @@
         </figure>
       </sect1>
       
-      <sect1 id="chpt.overview.drumkits">
+      <sect1 id="chpt.overview.drumkits" xreflabel="Drumkit Concept">
         <title>Drumkit Concept</title>
         
         <para>Let's start with a little history on the concept of Drumkits within in Hydrogen. It began as a
@@ -365,6 +365,10 @@
 	        In case you are not familiar with the world of sound synthesis, you can check out the <link linkend="glossary">Glossary</link> for a number of useful definitions.
           </para>
         </tip>
+
+        <para>
+          Drumkits can most easily be loaded by right-clicking their name in the <link linkend="chpt.sound_library">Sound Library</link>. Once loaded its name will be displayed in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. All changes done to the kit, like altering parameters and adding or removing samples or instruments, are stored in the current song. They need to be <link linkend="sect.main_menu.drumkits.save">saved</link> to the drumkit in case you want them to persist and to be applicable to other songs as well. The actions available in the <link linkend="sect.main_menu.drumkits">Drumkits</link> section of the main menu do act on the kit associated with the current song. All options available through the Sound Library on the other hand soley apply to the stock kits. So, reloading the current drumkit will overwrite your local changes in the song using the default parameters stored in the kit's <filename>drumkit.xml</filename> file and altering the current kit's properties via the Sound Library does only affect the stock kit and <emphasis>not</emphasis> the one associated with your current song.
+        </para>
 
       </sect1>
 
@@ -1838,11 +1842,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <listitem id="sect.main_menu.drumkits.properties">
 	        <para>
 	          <emphasis role="bold">Properties</emphasis>:
-              sets general properties of the drumkit such as its name, author, license, general information, image, and image license.
+              sets general properties of the drumkit associated with the current song, such as name, author, <link linkend="chpt.license">license</link>, general information, image, and image license.
             </para>
           </listitem>
           <listitem id="sect.main_menu.drumkits.save">
-            <para><emphasis role="bold">Save</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples).
+            <para><emphasis role="bold">Save</emphasis>: saves all settings of the drumkit associated with the current (including those of their instruments and sound samples).
+
+            <tip>
+              <para>
+                See <xref linkend="chpt.overview.drumkits"/> and <xref linkend="chpt.license"/> for further information.
+              </para>
+            </tip>
             </para>
           </listitem>
           <listitem id="sect.main_menu.drumkits.save_as">
@@ -1853,6 +1863,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	            The new drumkit will be a physical copy of the old one and is stored into the <filename>$HOME/.hydrogen/data/drumkits/</filename> folder.
               </para>
             </note>
+            
+            <tip>
+              <para>
+                See <xref linkend="chpt.overview.drumkits"/> and <xref linkend="chpt.license"/> for further information.
+              </para>
+            </tip>
             </para>
           </listitem>
           <listitem id="sect.main_form.export_drumkit">
@@ -3878,9 +3894,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </mediaobject>
       </figure>
 
-      <para>The Sound Library helps you manage your drumkits,
-      favourite patterns, and favourite songs. When making new songs or drum
-      kits, it allows you to reuse and mix instruments and patterns from other kits and songs.
+      <para>The Sound Library helps you manage your <link linkend="chpt.overview.drumkits">drumkits</link>,
+      favourite patterns, and favourite songs. When making new songs or drumkits, it allows you to reuse and mix instruments as well as patterns from other kits and songs.
       </para>
 
       <para>
@@ -3890,20 +3905,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="chpt.sound_library.drumkits">
         <title>Drumkits</title>
 
-        <para>The list of drumkits comprises both the kits present at system level and the ones at user level.</para>
+        <para>The list of <link linkend="chpt.overview.drumkits">drumkits</link> comprises kits present at both system and user level as well as those loaded via <link linkend="chpt.overview.cli">command-line option</link> or <link linkend="chpt.osc.command.load_drumkit">OSC command</link>.</para>
         <para>
           The <emphasis role="bold">System drumkits</emphasis> are those installed with your package manager or when <link linkend="chpt.compilation">compiling</link> Hydrogen manually. Their location is determined by the compile-time prefix. On
         Unix-like operating systems, this is usually <filename
         role="directory">/usr/share/hydrogen/data/drumkits</filename>, or
         possibly <filename
         role="directory">/usr/local/share/hydrogen/data/drumkits</filename>.
-        These kits are available to all users on the system, and you usually have no write access to them.</para>
-
-        <tip>
-	      <para>
-	        You can still modify those kids by saving a tweaked version as a user level kit.
-          </para>
-        </tip>
+        These kits are available to all users on the system and you usually have no write access to them which is why only a have read access to the kit's properties and can not delete it. If you want to change one of these kits you have to load it via right click and <link linkend="sect.main_menu.drumkits.save_as">save</link> it first. This will add a modified copy on user level.</para>
 
         <para>The <emphasis role="bold">User drumkits</emphasis> are those which you can manage yourself. They
         are stored in the Hydrogen data
@@ -3913,17 +3922,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </para>
 
         <warning>
-          <para>If you are using Hydrogen for commercial purposes, (creating songs and 
-          selling these online or in any other way) you need to pay special attention to the
-          license type of the drumkit(s) you are using.
-          </para>
-          <para>
-            If the exact license is not available for a drumkit, do <emphasis role="bold">not</emphasis> assume that it is a <ulink url="https://creativecommons.org/about/cclicenses/">Creative Commons (CC)</ulink> or
-            other open and free license.
-          </para>
-          <para>
-            Even if the kit is CC licensed you should always check with the author before using 
-            the kit in your songs.
+          <para>If you are using Hydrogen for creating songs or drumkits or redistribute existing ones you need to pay special attention to the
+          <link linkend="chpt.license">licenses</link> of the drumkit(s) you are using.
           </para>
           <para>DISCLAIMER : Hydrogen is not responsible for the drumkits that are 
           made available for download by our users, either via the <ulink url="hydrogen-music.org">hydrogen-music.org</ulink> or
@@ -6742,7 +6742,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry></entry>
                  <entry>Toggles a pattern in the pattern grid of the <link linkend="chpt.song_editor">Song Editor</link>. The first argument will be used as column and the second as row.</entry>
                </row>
-               <row>
+               <row id="chpt.osc.command.load_drumkit">
                  <entry>/Hydrogen/<emphasis role="bold">LOAD_DRUMKIT</emphasis>/</entry>
                  <entry>s,sf</entry>
                  <entry></entry>
@@ -7247,7 +7247,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 <part id="appendix">
   <title>Appendix</title>
   
-    <chapter id="chpt.license">
+    <chapter id="chpt.license" xreflabel="Licensing">
       <title>Licensing</title>
         <warning>
           <para>
@@ -7267,6 +7267,13 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 	      Our custom data types <link linkend="chpt.file_types.h2pattern">.h2pattern</link>, <link linkend="chpt.file_types.h2song">.h2song</link>, and <link linkend="chpt.file_types.h2playlist">.h2playlist</link> do not contain any samples and are not affected by the issues described in this chapter.
         </para>
       </note>
+
+      <warning>
+        <para>
+          If the exact license is not available for a drumkit, do <emphasis role="bold">not</emphasis> assume that it is a <ulink url="https://creativecommons.org/about/cclicenses/">Creative Commons (CC)</ulink> or
+          other open and free license.
+        </para>
+      </warning>
 
       <sect1 id="chpt.license.parsing">
         <title>License Parsing</title>
