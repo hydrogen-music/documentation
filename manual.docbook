@@ -205,91 +205,100 @@
       </para>
 
       <para>
-        Most actions are performed with the left mouse button, and
-        implement what should be the most obvious behaviour for any
-        control. The right mouse button may sometimes perform an
-        alternate action, or bring up a context menu. Some common
-        controls also have alternate actions accessed by clicking
-        while holding a modifier key:
+        Most actions are performed with the left mouse button (or mouse wheel)
+        and implement what should be the most obvious behaviour for any
+        control. The right mouse button may sometimes perform an alternate
+        action or brings up a context menu. Some common controls also have
+        alternate actions accessed by clicking while holding a modifier key:
       </para>
 
       <itemizedlist>
 	    <listitem>
 	      <para>
-	        <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> : restore default value of knob or fader
+	        <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> : restore default value of knob or fader.
           </para>
         </listitem>
         <listitem>
 	      <para>
-	        <keycap>Shift</keycap> + <emphasis>left click</emphasis> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>)
+	        <keycap>Shift</keycap> + <emphasis>left click</emphasis> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>).
+          </para>
+        </listitem>
+        <listitem>
+	      <para>
+	        <keycap>Shift</keycap> + <emphasis>mouse wheel</emphasis>|<keycap>↑</keycap>|<keycap>↓</keycap> : change values of rotaries and faders at a faster pace.
           </para>
         </listitem>
       </itemizedlist>
 
       <para>
-        Some controls will also respond to scroll wheel events for
-        convenience.
-      </para>
-      
-      <para>
-        The keyboard can also be used for navigating and editing in
-        the <link linkend="chpt.pattern_editor">Pattern</link> and <link linkend="chpt.song_editor">Song Editors</link>, using a combination of 
-        <itemizedlist>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> : move the
-              keyboard input cursor's position, or adjust values under
-              the cursor.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> :
-              can be used to make selections of notes or pattern
-              groups as if the mouse had been dragged over them.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Enter</keycap> and <keycap>Return</keycap></emphasis> : generally
-              performs the same action as a mouse click, but can also
-              start or end a move (or copy) of items in the same way
-              a mouse drag would.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Tab</keycap> and <keycap>Shift</keycap> + <keycap>Tab</keycap></emphasis> : move
-              between the Pattern, Song and Note Property Editor.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Delete</keycap></emphasis> :
-              delete notes or patterns.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Esc</keycap></emphasis> :
-              cancels an ongoing selection, move or copy.
-            </para>
-          </listitem>
-        </itemizedlist>
+        All rotaries and faders can also set by using the keyboard. First, you have to click the widget for it to get focussed. This will be indicated by a highlighting (orange per default). Now, you can enter numerical input via your keyboard. All numbers and dots are concatenated. If you want to reset your input or start a different one you can either press <keycap>ESC</keycap> or wait a couple of seconds.
       </para>
 
-      <note>
-	    <para>
-          The keyboard input cursor is hidden from view until one of
-          the above keys is pressed. This keeps the display clear and
-          uncluttered when using the mouse. You can alter this default behavior in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences.
-	      
+      <sect1>
+        <title>
+          Keyboard usage in Editors
+        </title>
+        
+        <para>
+          The keyboard can also be used for navigating and editing in
+          the <link linkend="chpt.pattern_editor">Pattern</link> and <link linkend="chpt.song_editor">Song Editors</link>, using a combination of 
+          <itemizedlist>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> : move the
+                keyboard input cursor's position, or adjust values under
+                the cursor.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> :
+                can be used to make selections of notes or pattern
+                groups as if the mouse had been dragged over them.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Enter</keycap> and <keycap>Return</keycap></emphasis> : generally
+                performs the same action as a mouse click, but can also
+                start or end a move (or copy) of items in the same way
+                a mouse drag would.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Tab</keycap> and <keycap>Shift</keycap> + <keycap>Tab</keycap></emphasis> : move
+                between the Pattern, Song and Note Property Editor.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Delete</keycap></emphasis> :
+                delete notes or patterns.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Esc</keycap></emphasis> :
+                cancels an ongoing selection, move or copy.
+              </para>
+            </listitem>
+          </itemizedlist>
         </para>
-      </note>
-      <para>
-        Most other keys on the keyboard can be used to play
-        <link linkend="def.sample">samples</link> and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
-      </para>
+
+        <note>
+	      <para>
+            The keyboard input cursor is hidden from view until one of
+            the above keys is pressed. This keeps the display clear and
+            uncluttered when using the mouse. You can alter this default behavior in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences.
+	        
+          </para>
+        </note>
+        <para>
+          Most other keys on the keyboard can be used to play
+          <link linkend="def.sample">samples</link> and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
+        </para>
+      </sect1>
     </chapter>
 
 
@@ -321,7 +330,7 @@
 
         <tip>
 	      <para>
-	        You can switch between these two modes in the <link linkend="chpt.preferences.appearance_tab">Appearance</link> tab of the Preferences.
+	        You can switch between these two modes in the <link linkend="chpt.preferences.appearance_tab.interface">Interface</link> tab of the Appearance tab in the Preferences.
           </para>
         </tip>
 
@@ -747,7 +756,7 @@
 	    <title>Recording in Hydrogen</title>
 
         <para>
-          In addition to manually program pattern using mouse and keyboard you can also record one or multiple pattern. You can do so using an external <abbrev>MIDI</abbrev> device, like an e-drum, or use the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> provided by Hydrogen.
+          In addition to manually program pattern using mouse and keyboard you can also record one or multiple patterns. You can do so using an external <abbrev>MIDI</abbrev> device, like an e-drum, or use the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> provided by Hydrogen.
         </para>
 
         <para>
@@ -783,7 +792,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <note>
 	      <para>
-	        The incoming notes will be added in a non-destructive way. This means when adding two notes at the same position, you will have two notes being played back at once (with double the volume of a single one).
+	        The incoming notes will be added in a non-destructive way. This means when attempting to add a notes at a position already containing one of equal pitch, the new note will be discarded and the old one kept.
           </para>
         </note>
 
@@ -844,17 +853,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               </note>
             </para>
           </listitem>
-          <listitem>
-	        <para>
-	          <emphasis role="bold"><abbrev>JACK</abbrev> Session</emphasis>:
-              <ulink url="https://jackaudio.org"><abbrev>JACK</abbrev> Session</ulink> has been marked <ulink url="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html">deprecated</ulink> by the <abbrev>JACK</abbrev> project.
-              <warning>
-	            <para>
-	              Hydrogen versions &#60;= 1.1 still feature this Session Management protocol. But it will be removed in future releases.
-                </para>
-              </warning>
-            </para>
-          </listitem>
         </itemizedlist>
 
         <sect2 id="chpt.overview.session_management.nsm">
@@ -867,30 +865,25 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <itemizedlist>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Replace With New Song</emphasis>:
+	            <emphasis role="bold">Replace With New Song</emphasis>
                 instead of <link linkend="sect.main_menu.projects.new">New</link>. Replaces the song associated with the session by an empty one.
               </para>
             </listitem>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Import Into Session</emphasis>:
+	            <emphasis role="bold">Import Into Session</emphasis>
                 instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
               </para>
             </listitem>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Import Recent Info Session</emphasis>:
+	            <emphasis role="bold">Import Recent Info Session</emphasis>
                 instead of <link linkend="sect.main_menu.projects.open_recent">Open Recent</link>. Replaces the song associated with the session by one of the recently used songs.
-                <warning>
-	              <para>
-	                In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
-                  </para>
-                </warning>
               </para>
             </listitem>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Export From Session As</emphasis>:
+	            <emphasis role="bold">Export From Session As</emphasis>
                 instead of <link linkend="sect.main_menu.projects.save_as">Save As</link>. Stores the song associated with the session at a location of your choice as <link linkend="chpt.file_types.h2song">.h2song</link> file.
 
                 <note>
@@ -902,20 +895,20 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </listitem>
           </itemizedlist>
 
-          <note>
-            <para>
-              The <link linkend="sect.main_menu.projects.open_demo">Open Demo</link> option will be missing.
-            </para>
-          </note>
-
           <para>
 	        Both the song and the preferences associated with the session will be stored in a session folder called <filename>Hydrogen.*</filename>. In addition, the drumkit (and its samples) used with the song will linked into the session folder as well. If the link is replaced by a folder containing a valid drumkit, this one will be used over the system and user drumkits.
 
             <tip>
 	          <para>
-	            This allows you to create fully self sufficient backup of your Hydrogen session using <command>tar -chf</command>. These can be even ported and used to systems which do not have the required drumkits installed.
+	            This allows you to create fully self sufficient backups of your Hydrogen session using <command>tar -chf</command>. These can even be ported and used on systems which do not have the required drumkits installed.
               </para>
             </tip>
+
+            <warning>
+              <para>
+                Note that only the stock <link linkend="chpt.overview.drumkits">drumkit</link> loaded last will be linked in the session folder. In case you only alter instrument parameters or delete instruments or samples this will work perfectly fine. But as soon as you add instruments from other drumkits or external samples, the linked drumkit folder won't contain all samples required by your current song anymore. You need to <link linkend="sect.main_menu.drumkits.save">saved</link> the kit (or create a new one) in order to ensure consistency.
+              </para>
+            </warning>
           </para>
         </sect2>
       </sect1>
@@ -928,7 +921,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <screen>
 <command>-h, --help                  Displays this help.</command>
 <command>-v, --version               Displays version information.</command>
-<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
+<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, pulseaudio, auto)</command>
 <command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
 <command>-n, --nosplash              Hide splash screen</command>
 <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
@@ -938,6 +931,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 <command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
       </screen>
 
+      <note>
+        <para>
+          Which audio drivers are supported depends on both your platform and it's installed packages. Your local help message will display all available options.
+        </para>
+      </note>
+      
         </para>
       </sect1>
     </chapter>
@@ -945,13 +944,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <chapter id="chpt.preferences" xreflabel="Preferences">
       <title>Preferences</title>
 
-      <para>Via this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
-
-      <note>
-	    <para>
-	      All changes done in the Preferences Dialog - if not noted otherwise via a popup - will take effect when clicking the <emphasis role="bold">Ok</emphasis> button at the bottom of the window.
-        </para>
-      </note>
+      <para>Using this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
       
       <sect1 id="chpt.preferences.general_tab">
         <title>General</title>
@@ -1005,7 +998,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Use relative paths for playlist</emphasis>:
-              specifies whether the path names in the stored <link linkend="chpt.file_types.h2playlist">.h2playlist</link> file will contain absolute paths or a path relative to the <filename role="directory">playlist</filename> folder in the Hydrogen data
+              specifies whether the paths stored in a <link linkend="chpt.file_types.h2playlist">.h2playlist</link> file will be absolute or relative to the <filename role="directory">playlist</filename> folder in the Hydrogen data
               directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).
 
               <tip>
@@ -1095,6 +1088,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </para>
             
           </listitem>
+	      <listitem>
+	        <para>
+	          <emphasis role="bold">Numbers of autosaves per hour</emphasis>:
+              sets how often Hydrogen will generate a backup of your current song in case it contains any unsaved modifications. In case there is an autosave file with a more recent timestamp next to a song, Hydrogen will ask you upon opening whether to restore the unsaved changes or to load the raw song.
+
+              <note>
+                <para>
+                  These autosave files will be hidden and contain an additional suffix "autosave". E.g. if your current song is called <filename>example.h2song</filename> the backup will be stored in <filename>.example.autosave.h2song</filename> within the same directory. But you do not need to be careful when chosing a song name. Hydrogen will take care of finding a filename for the backup not existing yet.
+                </para>
+              </note>
+            </para>
+            
+          </listitem>
           <listitem>
 	        <para>
 	          <emphasis role="bold">Path to the Rubberband command-line utility</emphasis>:
@@ -1163,7 +1169,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <listitem>
                 <para><option>Auto</option>: Hydrogen will try a
-                number of different drivers in a predetermined order, choose the
+                number of different drivers in a predetermined, OS-dependent order, choose the
                 first working one, and display the result.
 
                 <tip>
@@ -1298,8 +1304,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             Timebase master (TBM), it will use the provided measure and
             tempo information instead of the local one of either the <link linkend="sect.main_toolbar.bpm_control_and_metronome">song's
             tempo</link> or the Tempo Markers
-            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>.  But due to
-            limitations in the current implementation, Hydrogen can not set
+            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>. But due to
+            fundamental design choices within Hydrogen, it can not set
             both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
             combinations. You have two options here. Either drop all measure
             changes in the TBM and work with tempo changes only to support
@@ -1607,7 +1613,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <note>
           <para>If the chosen <abbrev>OSC</abbrev> port is already occupied, Hydrogen will pick
           an alternative one on startup and displays it via a popup as well as
-          in the <abbrev>OSC</abbrev> tab of the Preferences.
+          in the <abbrev>OSC</abbrev> tab of the Preferences Dialog.
           </para>
         </note>
       </sect1>
@@ -1615,106 +1621,249 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="chpt.preferences.appearance_tab">
         <title>Appearance</title>
 
-        <figure id="fig.preferences.appearance_tab">
-          <title>The Appearance Tab</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="generated_en/PreferencesAppearance_V2.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-
-        <para>The Appearance tab let's you modify Hydrogen's look 
-        and feel.
+        <para>
+          The settings available in the <emphasis>Appearance</emphasis> tab let you modify the look of Hydrogen and are treated differently than the ones found in other tabs. While the latter are stored in the <filename>hydrogen.conf</filename> file in Hydrogen's data folder, the appearance is stored in <link linkend="chpt.file_types.h2theme">.h2theme</link> files in the dedicated <filename role="directory">theme</filename> subfolder. The idea is that while the remaining settings are tailored to your local setup, a theme is something that is easily portable. E.g. you can create a custom dark theme and share it with the Hydrogen community without them having to adopt it to their local setup.
         </para>
 
-        <itemizedlist>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Application font</emphasis>:
-              specifies both the font family and point size of the application font used for the grid in <link linkend="chpt.pattern_editor">Pattern Editor</link> and <link linkend="chpt.song_editor">Song Editor</link> as well as for the pattern names in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor.
+        <para>
+          This can be done using the
+          <inlinemediaobject>
+            <textobject>
+              <phrase>
+                Grey record button with label "Export Theme".
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="generated_en/preferencesExportThemeButton.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
 
-              <note>
-	            <para>
-	              In order for this setting to take effect, Hydrogen has to be restarted.
-                </para>
-              </note>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Style</emphasis>:
-              specifies a certain look of GUI elements like menus, scrollbars, and dialog windows.
+          and
+          
+          <inlinemediaobject>
+            <textobject>
+              <phrase>
+                Grey record button with label "Import Theme".
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="generated_en/preferencesImportThemeButton.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+          
+          buttons. All changes applied to a theme (unless indicated otherwise in the dialog) will take effect immediately. If you are satisfied with the result, accept the dialog by clicking the OK button to save it. If you, however, want to reset all options to their state encountered when opening the dialog or importing last theme, hit the 
+          
+          <inlinemediaobject>
+            <textobject>
+              <phrase>
+                Grey record button with label "Reset Appearance Tab".
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="generated_en/preferencesResetThemeButton.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
 
-              <tip>
-	            <para>
-	              Using this option you might can make Hydrogen integrate with you operating system better.
-                </para>
-              </tip>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Mixer font</emphasis>:
-              specifies both the font family and point size of the mixer font used for the instrument names in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and the component names in the <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
+          button or close the dialog.
+        </para>
 
-              <note>
-	            <para>
-	              In order for this setting to take effect, Hydrogen has to be restarted.
-                </para>
-              </note>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Meters falloff speed</emphasis>:
-              specifies for how fast the update of the maximum value of the audio signal will be shown in the LCD displays of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>, and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> before its replacement with a more recent value will take place.
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Default interface layout</emphasis>:
-              specifies whether the GUI of Hydrogen will be arranged in Single Pane mode or Tabbed mode (see <link linkend="chpt.overview.gui">Main User Interface</link> for details).
-              <note>
-	            <para>
-	              In order for this setting to take effect, Hydrogen has to be restarted.
-                </para>
-              </note>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">High-resolution display scaling</emphasis>:
-              specifies whether the underlying bitmap graphics of the GUI should be scaled to larger sizes by Qt in order for Hydrogen to look nice with your system's resolution settings.
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Coloring method for Song Editor elements</emphasis>:
-              determines the coloring of the boxes indicating the presence of a pattern in the <link linkend="chpt.song_editor">Song editor</link>. The available options are:
+        <sect2 id="chpt.preferences.appearance_tab.interface">
+          <title>Interface</title>
+
+          <figure id="fig.preferences.appearance_tab.interface">
+            <title>The Interface Tab</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/preferencesInterfaceTab.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          
+          <para>
+            The <emphasis>Interface</emphasis> tab covers the overall appearance of Hydrogen.
+          </para>
+
+          <itemizedlist>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Style</emphasis>:
+                specifies a certain look of GUI elements, like menus, scrollbars, and dialog windows.
+
+                <tip>
+	              <para>
+	                Using this option you might be able to better integrate Hydrogen into your operating system.
+                  </para>
+                </tip>
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Meters falloff speed</emphasis>:
+                specifies how fast the visual update of the peak values shown in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>, and <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> will be done.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Default interface layout</emphasis>:
+                specifies whether the GUI of Hydrogen will be arranged in <link linkend="fig.UI_overview">Single Pane mode</link> or <link linkend="fig.tabbed_UI_overview">Tabbed mode</link> (see <link linkend="chpt.overview.gui">Main User Interface</link> for details).
+                <note>
+	              <para>
+	                In order for this setting to take effect, Hydrogen has to be restarted.
+                  </para>
+                </note>
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">High-resolution display scaling</emphasis>:
+                specifies whether the underlying bitmap graphics of the GUI should be scaled to larger sizes by Qt in order for Hydrogen to look nice with your system's resolution settings.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Icon color</emphasis>:
+                while the color of all button labels can be set in the <link linkend="chpt.preferences.appearance_tab.colors">Colors</link> tab, the icons hold the color used in the corresponding <abbrev>SVG</abbrev> file and can not be altered freely. To still allow you changing the overall colors conveniently, Hydrogen is shipped with all icons available in either <option>Black</option> and <option>White</option> color.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Coloring method for Song Editor elements</emphasis>:
+                determines the coloring of the grid boxes indicating the presence of a pattern in the <link linkend="chpt.song_editor">Song Editor</link>. The options available are:
+              </para>
               <itemizedlist>
 	            <listitem>
 	              <para>
 	                <option>Automatic</option>:
-                    Uses as much colors as there are patterns in the song.
+                    uses as many colors as there are patterns in the song.
                   </para>
                 </listitem>
 	            <listitem>
 	              <para>
-	                <option>Steps</option>:
-                    Uses a certain number <parameter>n</parameter> of colors you have to enter via a second input widget. After coloring the first <parameter>n</parameter> patterns with different colors the same set of colors will be used for the next <parameter>n</parameter> patterns and so on.
-                  </para>
-                </listitem>
-	            <listitem>
-	              <para>
-	                <option>Fixed</option>:
-                    Colors all patterns using a single color determined via its hue in a separate input widget.
+	                <option>Custom</option>:
+                    uses a certain number of colors in a repeated way.
                   </para>
                 </listitem>
               </itemizedlist>
-            </para>
-          </listitem>
-        </itemizedlist>
+
+              <para>
+                By chosing <option>Custom</option> two more settings will become available:
+              </para>
+              
+              <itemizedlist>
+	            <listitem>
+	              <para>
+	                <emphasis role="bold">Number of colors in Song Editor</emphasis>:
+                    how many different colors should be used.
+                  </para>
+                </listitem>
+	            <listitem>
+	              <para>
+	                <emphasis role="bold">Selected colors</emphasis>:
+                    a list of color buttons. Clicking one will open a dialog allowing you to change its color.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </sect2>
+        
+        <sect2 id="chpt.preferences.appearance_tab.colors">
+          <title>Colors</title>
+
+          <figure id="fig.preferences.appearance_tab.colors">
+            <title>The Colors Tab</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/preferencesColorsTab.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+
+          <para>
+            The <emphasis>Colors</emphasis> tab exposes most of the colors used within Hydrogen.
+          </para>
+
+          <para>
+            You can select a color by clicking its name in the tree you find on the left side. It is grouping the individual colors into
+            
+            <itemizedlist>
+              <listitem>
+                <para>
+                  <emphasis role="bold">General</emphasis>:
+                  basic Qt colors. Most of them are used in many parts of the GUI. But some of them might be not used at all. So, don't worry in case altering one of these does not result in visual changes.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis role="bold">Widgets</emphasis>:
+                  colors in small and interactive elements of the GUI, like buttons or combo boxes.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis role="bold">Song Editor</emphasis>:
+                  colors specific to the <link linkend="chpt.song_editor">Song Editor</link>.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis role="bold">Pattern Editor</emphasis>:
+                  colors specific to the <link linkend="chpt.pattern_editor">Pattern Editor</link>.
+                </para>
+              </listitem>
+            </itemizedlist>
+          </para>
+
+          <para>
+            Once selected you can change a color by either clicking the large colored rectangle in the upper right part of the tab (which opens a color dialog) or by using the spinboxes and sliders in the lower right part. The latter represent the colors components according to the <abbrev>RGB</abbrev> as well as the <abbrev>HSV</abbrev> color model.
+          </para>
+          
+        </sect2>
+
+        <sect2 id="chpt.preferences.appearance_tab.font">
+          <title>Font</title>
+
+          <figure id="fig.preferences.appearance_tab.font">
+            <title>The Font Tab</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/preferencesFontTab.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+
+          <para>The <emphasis>Font</emphasis> tab contains all options affecting strings, characters, and numbers displayed in the GUI.
+          </para>
+
+          <itemizedlist>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Application font</emphasis>:
+                specifies the font family used for headings, larger labels, and most parts of the dialogs and popups.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Item font</emphasis>:
+                specifies the font family used for smaller elements, like the name of patterns in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor or the name of the samples in the <link linkend="chpt.instrument_editor.layers">Layers view</link> of the Instrument Editor.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Widget font</emphasis>:
+                specifies the font family used for small and interactive elements of the GUI, like buttons.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Font size</emphasis>:
+                accessibility option to increase or decrease the overall font size of Hydrogen.
+              </para>
+            </listitem>
+          </itemizedlist>
+          
+        </sect2>
+        
       </sect1>
 
     </chapter>
@@ -2568,7 +2717,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </para>
       <tip>
 	    <para>
-	      Instead of having the same color for all patterns you can set different colors schemes in the <link linkend="chpt.preferences.appearance_tab">Appearance tab</link> in the Preferences.
+	      Instead of having the same color for all patterns you can set different ones in the <link linkend="chpt.preferences.appearance_tab.interface">Interface</link> tab in the Appearance tab of the Preferences.
         </para>
       </tip>
 
@@ -5081,7 +5230,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
           <tip>
 	        <para>
-	          You can adjust the falloff speed of the peak values in the LCD display via the <link linkend="fig.preferences.appearance_tab">Appearance</link> tab in the Preferences.
+	          You can adjust the falloff speed of the peak values in the LCD display in the <link linkend="fig.preferences.appearance_tab.interface">Interface</link> tab of the Appearance tab in the Preferences.
             </para>
           </tip>
         </listitem>
@@ -5158,7 +5307,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
           <tip>
 	        <para>
-	          You can adjust the falloff speed of the peak values in the LCD display via the <link linkend="fig.preferences.appearance_tab">Appearance</link> tab in the Preferences.
+	          You can adjust the falloff speed of the peak values in the LCD display in the <link linkend="fig.preferences.appearance_tab.interface">Interface</link> tab of the Appearance tab in the Preferences.
             </para>
           </tip>
         </listitem>
@@ -7407,22 +7556,23 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <listitem id="chpt.file_types.h2pattern">
           <para><emphasis role="bold">*.h2pattern</emphasis>: <abbrev>XML</abbrev> file
           describing a single pattern. Patterns are group of beats and are
-          managed in the pattern editor.</para>
+          managed in the <link linkend="chpt.pattern_editor">Pattern Editor</link>.</para>
         </listitem>
         <listitem id="chpt.file_types.h2song">
           <para><emphasis role="bold">*.h2song</emphasis>: <abbrev>XML</abbrev> file describing
-          the whole song (or sequence). Songs are group of patterns with their
-          properties and are manager using the song editor</para>
+          the whole song (or sequence). Songs are groups of patterns managed using the <link linkend="chpt.song_editor">Song Editor</link>, groups of instruments comprising the current drumkit and managed via the <link linkend="chpt.instrument_editor">Instrument Editor</link>, as well as all states not already covered by the <link linkend="chpt.preferences">Preferences</link>.
+          </para>
         </listitem>
         <listitem id="chpt.file_types.h2playlist">
           <para><emphasis role="bold">*.h2playlist</emphasis>: <abbrev>XML</abbrev> file
           describing a playlist. A Playlist is a (ordered) group of songs.</para>
         </listitem>
         <listitem id="chpt.file_types.h2drumkit">
-          <para><emphasis role="bold">*.h2drumkit</emphasis>: a compressed and
-          archived folder containing all sound samples composing a drumkit and a
-          description <abbrev>XML</abbrev> file. Drumkits are basically group of sound
-          samples.</para>
+          <para><emphasis role="bold">*.h2drumkit</emphasis>: a compressed folder containing all sound samples composing a drumkit and the
+          description <abbrev>XML</abbrev> file <filename>drumkit.xml</filename> storing the kit's structure and parameters.</para>
+        </listitem>
+        <listitem id="chpt.file_types.h2theme">
+          <para><emphasis role="bold">*.h2theme</emphasis>: <abbrev>XML</abbrev> file describing all preferences available in the <link linkend="chpt.preferences.appearance_tab">Appearance</link> tab of the <link linkend="chpt.preferences">Preferences</link>.</para>
         </listitem>
       </itemizedlist>
     </chapter>

@@ -37,7 +37,16 @@ slot MainForm showPreferencesDialog
   grab PreferencesDialog as PreferencesOSC.png
 
   slot PreferencesTabs setCurrentWidget AppearanceTab
-  grab PreferencesDialog as PreferencesAppearance_V2.png
+  slot AppearanceTabTabs setCurrentWidget AppearanceInterfaceTab
+  grab PreferencesDialog as preferencesInterfaceTab.png
+  slot AppearanceTabTabs setCurrentWidget AppearanceColorTab
+  grab PreferencesDialog as preferencesColorsTab.png
+  slot AppearanceTabTabs setCurrentWidget AppearanceFontTab
+  grab PreferencesDialog as preferencesFontTab.png
+
+  grab exportThemeButton as preferencesExportThemeButton.png
+  grab importThemeButton as preferencesImportThemeButton.png
+  grab resetThemeButton as preferencesResetThemeButton.png
 
   slot PreferencesDialog close
 
