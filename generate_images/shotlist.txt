@@ -77,8 +77,14 @@ grab BeatCounterSetPlayButton as btn_bc_set_play_on.png
 grab BPM as background_BPM.png
 grab JackPanel as JackTrans_Master.png offset 0 23 size -1 18
 grab MetronomeButton as btn_metronome_off.png
-grab PlayerControlRecordButton as playerControlRecordButton.png
+grab PlayerControlRewindButton as playerControlRewindButton.png
+grab PlayerControlRecordButton as playerControlRecordButton.png	
 grab PlayerControlPlayButton as playerControlPlayButton.png
+grab PlayerControlStopButton as playerControlStopButton.png
+grab PlayerControlForwardButton as playerControlForwardButton.png
+grab PlayerControlLoopButton as playerControlLoopButton.png
+grab PlayerControlPatternModeButton as playerControlPatternModeButton.png
+grab PlayerControlSongModeButton as playerControlSongModeButton.png
 grab PlayerControlRubberbandButton as playerControlRubberbandButton.png
 grab PlayerControlJackTransportButton as playerControlJackTransportButton.png
 grab PlayerControlJackMasterButton as playerControlJackMasterButton.png
@@ -110,6 +116,11 @@ grab SongEditorBackPanel as btn_pattern_mode.png offset 168 25 size 25 21
 slot SongEditorPanel activateStackedMode true
 grab SongEditorBackPanel as btn_new_on.png offset 64 25 size 25 21
 grab SongEditorBackPanel as btn_updown.png offset 90 25 size 25 21
+grab TimelineBtn as songEditorTimelineButton.png
+
+grab SongEditorPlaybackTrackFader as songEditorPlaybackTrackFader.png
+grab SongEditorPlaybackTrackMuteButton as songEditorPlaybackTrackMuteButton.png
+grab SongEditorPlaybackTrackEditButton as songEditorPlaybackTrackEditButton.png
 
 # Pattern Options Menu
 # This is a bit tricky because the popup is its own toplevel window so

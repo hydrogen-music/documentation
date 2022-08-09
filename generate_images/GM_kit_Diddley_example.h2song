@@ -15,7 +15,7 @@
  <playbackTrackVolume>0</playbackTrackVolume>
  <action_mode>0</action_mode>
  <isPatternEditorLocked>false</isPatternEditorLocked>
- <isTimelineActivated>false</isTimelineActivated>
+ <isTimelineActivated>true</isTimelineActivated>
  <mode>song</mode>
  <pan_law_type>LINEAR_CONST_K_NORM</pan_law_type>
  <pan_law_k_norm>1.33333</pan_law_k_norm>
@@ -4639,7 +4639,16 @@
    <volume>0</volume>
   </fx>
  </ladspa>
- <BPMTimeLine/>
+ <BPMTimeLine>
+  <newBPM>
+   <BAR>6</BAR>
+   <BPM>100</BPM>
+  </newBPM>
+  <newBPM>
+   <BAR>16</BAR>
+   <BPM>180</BPM>
+  </newBPM>
+ </BPMTimeLine>
  <timeLineTag>
   <newTAG>
    <BAR>0</BAR>
