@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 13:41+0200\n"
+"POT-Creation-Date: 2022-08-10 13:25+0200\n"
 "PO-Revision-Date: 2022-08-09 13:28+0200\n"
 "Last-Translator: Daryl O'Hara <darylohara@gmail.com>\n"
 "Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
@@ -1234,7 +1234,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:783 manual.docbook:2347 manual.docbook:7232
+#: manual.docbook:783 manual.docbook:2347 manual.docbook:7237
 msgctxt "_"
 msgid "external ref='generated_en/playerControlPlayButton.png' md5='__failed__'"
 msgstr ""
@@ -5005,7 +5005,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:4822 manual.docbook:7493 manual.docbook:7518
+#: manual.docbook:4822 manual.docbook:7498 manual.docbook:7523
 msgctxt "_"
 msgid "external ref='generated_en/loadLayer_off.png' md5='__failed__'"
 msgstr ""
@@ -5447,7 +5447,7 @@ msgid "Mixer"
 msgstr "Mezclador"
 
 #. (itstool) path: figure/title
-#: manual.docbook:5299 manual.docbook:7378
+#: manual.docbook:5299 manual.docbook:7383
 msgid "The Mixer"
 msgstr "El Mezclador"
 
@@ -5456,7 +5456,7 @@ msgstr "El Mezclador"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:5302 manual.docbook:7381
+#: manual.docbook:5302 manual.docbook:7386
 msgctxt "_"
 msgid "external ref='generated_en/Mixer.png' md5='__failed__'"
 msgstr ""
@@ -5498,7 +5498,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:5337 manual.docbook:7311 manual.docbook:7567
+#: manual.docbook:5337 manual.docbook:7316 manual.docbook:7572
 msgctxt "_"
 msgid "external ref='generated_en/btn_play_on_mixer.png' md5='__failed__'"
 msgstr ""
@@ -5558,8 +5558,8 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:5398 manual.docbook:5523 manual.docbook:7333
-#: manual.docbook:7359
+#: manual.docbook:5398 manual.docbook:5523 manual.docbook:7338
+#: manual.docbook:7364
 msgctxt "_"
 msgid "external ref='generated_en/btn_mute_on.png' md5='__failed__'"
 msgstr ""
@@ -5579,8 +5579,8 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:5417 manual.docbook:5537 manual.docbook:7322
-#: manual.docbook:7346
+#: manual.docbook:5417 manual.docbook:5537 manual.docbook:7327
+#: manual.docbook:7351
 msgctxt "_"
 msgid "external ref='generated_en/btn_solo_on.png' md5='__failed__'"
 msgstr ""
@@ -5716,7 +5716,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:5578 manual.docbook:5756 manual.docbook:7297
+#: manual.docbook:5578 manual.docbook:5756 manual.docbook:7302
 msgctxt "_"
 msgid "external ref='generated_en/mixerShowFXButton.png' md5='__failed__'"
 msgstr ""
@@ -5853,7 +5853,7 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5704
-msgid "The FX itself lives in an <emphasis>aux</emphasis> channel. This means its not directly added into the signal path of any instrument line but a copy of the audio output of each of them can be send to the FX for processing instead. The amount of signal - 0 per default - send by each can be controlled using the <link linkend=\"chpt.mixer.channel_strips.fx_volume\">pre-fader FX knobs</link> in the corresponding instrument channel strip. The top left one refers to the top-most FX, the top right one to the second FX and so on. This means, in order to get an all wet signal (none of the original signal but just the processed one enters the mix) of an instrument, you have to ramp up the pre-fader FX knob and set the line's fader to 0."
+msgid "The FX itself lives in an <emphasis>aux</emphasis> channel. This means it's not directly added into the signal path of any instrument line but a copy of the audio output of each of them is sent to the FX for processing instead. The amount of signal - 0 per default - send by each can be controlled using the <link linkend=\"chpt.mixer.channel_strips.fx_volume\">pre-fader FX knobs</link> in the corresponding instrument channel strip. The top left one refers to the top-most FX, the top right one to the second FX and so on. This means, in order to get an all wet signal (none of the original signal but just the processed one enters the mix) of an instrument, you have to ramp up the pre-fader FX knob and set the line's fader to 0."
 msgstr ""
 
 #. (itstool) path: note/para
@@ -6364,7 +6364,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: manual.docbook:6255
-msgid "Three types of <abbrev>MIDI</abbrev> Events are available (as described in the <abbrev>MIDI</abbrev> standard):"
+msgid "Four types of <abbrev>MIDI</abbrev> Events are available (as described in the <abbrev>MIDI</abbrev> standard):"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -6383,345 +6383,350 @@ msgstr "<emphasis role=\"bold\">Proyectos</emphasis>: este menú ofrece funcione
 msgid "<emphasis role=\"bold\">MMC_x</emphasis>: <ulink url=\"http://en.wikipedia.org/wiki/MIDI_Machine_Control\"> machine control events</ulink> coming from buttons, like 'play' or 'stop', on a controller."
 msgstr ""
 
+#. (itstool) path: listitem/para
+#: manual.docbook:6274
+msgid "<emphasis role=\"bold\">PROGRAM_CHANGE</emphasis>: usually intended to change the sound of instruments or to select different sound banks."
+msgstr ""
+
 #. (itstool) path: sect2/title
-#: manual.docbook:6279
+#: manual.docbook:6284
 msgid "Actions"
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6282
-msgid "Some of the <abbrev>MIDI</abbrev> Actions require that the <emphasis role=\"bold\">Action Param.</emphasis> is configured. This parameter usually references a specific channel, instrument, FXsend... Keep in mind that its value is <emphasis>zero-based</emphasis>. So, if you want to reference channel 1 you have to enter <option>0</option> in the <emphasis role=\"bold\">Action Param.</emphasis> field (<option>1</option> for channel 2, <option>2</option> for channel 3, and so on)."
+#: manual.docbook:6287
+msgid "Some of the <abbrev>MIDI</abbrev> Actions require that their <emphasis role=\"bold\">Action Param.</emphasis> to be configured. These parameter usually references a specific channel, instrument, FXsend... Keep in mind that their values are <emphasis>zero-based</emphasis>. So, if you want to reference channel 1 you have to enter <option>0</option> in the <emphasis role=\"bold\">Action Param.</emphasis> field (<option>1</option> for channel 2, <option>2</option> for channel 3, and so on)."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6291
+#: manual.docbook:6296
 msgid "<emphasis role=\"bold\">&lt;&lt;_PREVIOUS_BAR</emphasis>: moves the playhead to the previous pattern/bar."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6298
+#: manual.docbook:6303
 #, fuzzy
 msgid "<emphasis role=\"bold\">&gt;&gt;_NEXT_BAR</emphasis>: moves the playhead to the next pattern/bar."
 msgstr "<emphasis role=\"bold\">ALSA</emphasis>: los drivers estándares de Linux ampliamente adoptados"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6304
+#: manual.docbook:6309
 msgid "<emphasis role=\"bold\">BEATCOUNTER</emphasis>: calculates the average time passing between successive encounters of this commands and uses it to set the current tempo using the <link linkend=\"sect.main_toolbar.tap_tempo_beat_counter.beat_counter\">Beat Counter</link>."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6314
+#: manual.docbook:6319
 msgid "This Action will have no effect if Hydrogen is both in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> and the <link linkend=\"chpt.song_editor.timeline\">Timeline</link> is activated."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6311
+#: manual.docbook:6316
 msgid "<emphasis role=\"bold\">BPM_CC_RELATIVE</emphasis>: changes the tempo relative to the current tempo, using a controller. Using the <emphasis role=\"bold\">Action Param</emphasis> you can specify by how much the current tempo will change. If the incoming Event is <option>-1</option> (negative), the tempo will be increased and if it's <option>1</option> (positive), it will be increased. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6323
+#: manual.docbook:6328
 msgid "<emphasis role=\"bold\">BPM_DECR</emphasis>: decreases the current tempo by the supplied value."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6328 manual.docbook:6340 manual.docbook:6353
+#: manual.docbook:6333 manual.docbook:6345 manual.docbook:6358
 msgid "This Action will have no effect if Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> or <link linkend=\"chpt.song_editor.timeline\">Timeline</link> is activated."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6336
+#: manual.docbook:6341
 msgid "<emphasis role=\"bold\">BPM_FINE_CC_RELATIVE</emphasis>: as <xref linkend=\"chpt.midi.actions.actions.bpm_cc_relative\"/> but with changes 100 times smaller than the value specified in <emphasis role=\"bold\">Action Param</emphasis>. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6348
+#: manual.docbook:6353
 msgid "<emphasis role=\"bold\">BPM_INCR</emphasis>: increases the current tempo by the supplied value."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6361
+#: manual.docbook:6366
 msgid "<emphasis role=\"bold\">EFFECT_LEVEL_ABSOLUTE</emphasis>: changes the <link linkend=\"chpt.mixer.channel_strips.fx_volume\">volume level of an FX</link>. Parameter 1 determines the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> and Parameter 2 specifies the FX the Action will be applied to."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6366
+#: manual.docbook:6371
 msgid "<emphasis role=\"bold\">EFFECT_LEVEL_RELATIVE</emphasis>: same as <xref linkend=\"chpt.midi.actions.actions.effect_level_absolute\"/> but instead mapping the incoming values directly to the FX volume <option>1</option> will increase and all other values will decrease it by 5%."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6372
+#: manual.docbook:6377
 msgid "<emphasis role=\"bold\">FILTER_CUTOFF_LEVEL_ABSOLUTE</emphasis>: for a value of <option>0</option> it sets the <link linkend=\"chpt.instrument_editor.filter\">Filter Cutoff</link> of the instrument strip specified using the <emphasis role=\"bold\">Action Param</emphasis> to <option>0</option>. For all other values it sets the cutoff to the provided number divided by 127.0."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6381
+#: manual.docbook:6386
 msgid "<emphasis role=\"bold\">GAIN_LEVEL_ABSOLUTE</emphasis>: sets the <link linkend=\"chpt.instrument_editor.layers.controls.layer_gain\">Layer Gain</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6386
+#: manual.docbook:6391
 msgid "<emphasis role=\"bold\">MASTER_VOLUME_ABSOLUTE</emphasis>: sets the <link linkend=\"chpt.mixer.master_fader_strip\">Master output volume</link> to the value provided by the <abbrev>MIDI</abbrev> event times 1.5 and divided by 127."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6390
+#: manual.docbook:6395
 msgid "<emphasis role=\"bold\">MASTER_VOLUME_RELATIVE</emphasis>: changes the <link linkend=\"chpt.mixer.master_fader_strip\">Master output volume</link>, relative to its current setting. For a value of <option>0</option> it sets the volume of the master fader to 0. For a value of <option>1</option> it increases its volume by 0.05 and for all other values it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>0</option>: 0 ,<option>1</option>: +0.05)"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6398
+#: manual.docbook:6403
 msgid "<emphasis role=\"bold\">MUTE</emphasis>: <link linkend=\"def.mute\">mutes</link> the <link linkend=\"chpt.mixer.master_fader_strip\">Master output</link> (sequencer keeps running)."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6402
+#: manual.docbook:6407
 msgid "<emphasis role=\"bold\">MUTE_TOGGLE</emphasis>: toggles the <link linkend=\"def.mute\">muting</link> of the <link linkend=\"chpt.mixer.master_fader_strip\">Master output</link> (sequencer keeps running)."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6407
+#: manual.docbook:6412
 msgid "<emphasis role=\"bold\">PAN_ABSOLUTE</emphasis>: changes the <link linkend=\"def.pan\">pan</link> of an <link linkend=\"chpt.mixer.channel_strips.pan\">instrument</link> determined by the <emphasis role=\"bold\">Action Param</emphasis> to the absolute value that the linked controller sends to Hydrogen. Incoming values from <option>0</option> to <option>127</option> will be mapped to pan values between -1 and 1."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6411
+#: manual.docbook:6416
 msgid "<emphasis role=\"bold\">PAN_ABSOLUTE_SYM</emphasis>: same as <xref linkend=\"chpt.midi.actions.actions.pan_absolute\"/> but supports incoming values from <option>-127</option> to <option>127</option> will be mapped."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6415
+#: manual.docbook:6420
 msgid "<emphasis role=\"bold\">PAN_RELATIVE</emphasis>: changes the <link linkend=\"def.pan\">pan</link> of an <link linkend=\"chpt.mixer.channel_strips.pan\">instrument</link> determined by the <emphasis role=\"bold\">Action Param</emphasis> relative to the current value. For a value of <option>1</option> it increase the pan by 0.05. For all other values it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>1</option>: +0.05)."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6421
+#: manual.docbook:6426
 #, fuzzy
 msgid "<emphasis role=\"bold\">PAUSE</emphasis>: pauses playback."
 msgstr "<emphasis role=\"bold\">[CTRL + S]</emphasis> = Guardar Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6425
+#: manual.docbook:6430
 msgid "<emphasis role=\"bold\">PITCH_LEVEL_ABSOLUTE</emphasis>: sets the <link linkend=\"chpt.instrument_editor.layers.controls.pitch\">Layer Pitch</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer. <emphasis role=\"bold\">PAUSE</emphasis>: pauses playback."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6431
+#: manual.docbook:6436
 #, fuzzy
 msgid "<emphasis role=\"bold\">PLAY</emphasis>: starts playback."
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6435
+#: manual.docbook:6440
 msgid "<emphasis role=\"bold\">PLAY/PAUSE_TOGGLE</emphasis>: works the same as <xref linkend=\"chpt.midi.actions.actions.play\"/> if the playback has not started yet and same as. <xref linkend=\"chpt.midi.actions.actions.pause\"/> otherwise. (The playhead will not return to the start of the song, but will stay at its current position)."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6443
+#: manual.docbook:6448
 msgid "<emphasis role=\"bold\">PLAY/STOP_TOGGLE</emphasis>: works the same as <xref linkend=\"chpt.midi.actions.actions.play\"/> if the playback has not started yet and same as. <xref linkend=\"chpt.midi.actions.actions.stop\"/> otherwise."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6450
+#: manual.docbook:6455
 msgid "<emphasis role=\"bold\">PLAYLIST_NEXT_SONG</emphasis>: opens the song in the current <link linkend=\"chpt.playlist_editor\">playlist</link> corresponding to the song number specified in <emphasis role=\"bold\">Action Param</emphasis>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6457
+#: manual.docbook:6462
 msgid "<emphasis role=\"bold\">PLAYLIST_PREV_SONG</emphasis>: opens the previous song in the current <link linkend=\"chpt.playlist_editor\">playlist</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6464
+#: manual.docbook:6469
 msgid "<emphasis role=\"bold\">PLAYLIST_SONG</emphasis>: opens the next song in the current <link linkend=\"chpt.playlist_editor\">playlist</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6471
+#: manual.docbook:6476
 msgid "<emphasis role=\"bold\">RECORD/STROBE_TOGGLE</emphasis>: toggles <link linkend=\"chpt.overview.recording\">recording</link> (same as pressing the <link linkend=\"sect.main_toolbar.transport_control\">record button</link> in the main toolbar)."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6479
+#: manual.docbook:6484
 msgid "<emphasis role=\"bold\">RECORD_EXIT</emphasis>: deactivates <link linkend=\"chpt.overview.recording\">recording</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6486
+#: manual.docbook:6491
 msgid "<emphasis role=\"bold\">RECORD_READY</emphasis>: toggles <link linkend=\"chpt.overview.recording\">recording</link> (same as pressing the <link linkend=\"sect.main_toolbar.transport_control\">record button</link> in the main toolbar) if the playback has not started yet."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6494
+#: manual.docbook:6499
 msgid "<emphasis role=\"bold\">RECORD_STROBE</emphasis>: activates <link linkend=\"chpt.overview.recording\">recording</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6501
+#: manual.docbook:6506
 #, fuzzy
 msgid "<emphasis role=\"bold\">REDO_ACTION</emphasis>: redoes the previous undone action."
 msgstr "<emphasis role=\"bold\">Proyectos</emphasis>: este menú ofrece funciones relacionados con archivos."
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6507
+#: manual.docbook:6512
 msgid "<emphasis role=\"bold\">SELECT_AND_PLAY_PATTERN</emphasis>: works as <xref linkend=\"chpt.midi.actions.actions.select_next_pattern\"/> combined with <xref linkend=\"chpt.midi.actions.actions.play\"/>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6514
+#: manual.docbook:6519
 msgid "<emphasis role=\"bold\">SELECT_INSTRUMENT</emphasis>: selects the instrument in the drumkit corresponding to the number supplied in the incoming <abbrev>MIDI</abbrev> Event."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6524
+#: manual.docbook:6529
 msgid "If Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link>, the command will have no effect."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6519
+#: manual.docbook:6524
 msgid "<emphasis role=\"bold\">SELECT_NEXT_PATTERN</emphasis>: switches to the pattern specified in <emphasis role=\"bold\">Action Param</emphasis>. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6530
+#: manual.docbook:6535
 msgid "<emphasis role=\"bold\">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis>: like <xref linkend=\"chpt.midi.actions.actions.select_next_pattern\"/> but only take effect in <link linkend=\"chpt.song_editor.editor_modes.stacked\">Stacked Pattern Mode</link>."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6540
+#: manual.docbook:6545
 msgid "This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.stacked\">Stacked Pattern Mode</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6535
+#: manual.docbook:6540
 msgid "<emphasis role=\"bold\">SELECT_NEXT_PATTERN_RELATIVE</emphasis>: switches <emphasis role=\"bold\">Action Param</emphasis> patterns forward. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6550
+#: manual.docbook:6555
 msgid "If either <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> or <link linkend=\"chpt.song_editor.editor_modes.stacked\">Stacked Pattern Mode</link> is activated, this action will have no effect."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6546
+#: manual.docbook:6551
 msgid "<emphasis role=\"bold\">SELECT_ONLY_NEXT_PATTERN</emphasis>: clears the list of patterns scheduled to be played next and adds the one specified in <emphasis role=\"bold\">Action Param</emphasis>. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6556
+#: manual.docbook:6561
 #, fuzzy
 msgid "<emphasis role=\"bold\">STOP</emphasis>: stops playback and moves the playhead to the beginning of the song."
 msgstr "<emphasis role=\"bold\">[Retroceso]</emphasis> = Volver al principio de una canción o un patrón"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6561
+#: manual.docbook:6566
 msgid "<emphasis role=\"bold\">STRIP_MUTE_TOGGLE</emphasis>: <link linkend=\"def.mute\">mutes</link> the instrument specified in <emphasis role=\"bold\">Action Param</emphasis>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6566
+#: manual.docbook:6571
 msgid "<emphasis role=\"bold\">STRIP_SOLO_TOGGLE</emphasis>: <link linkend=\"def.mute\">mutes</link> the instrument specified in <emphasis role=\"bold\">Action Param</emphasis>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6571
+#: manual.docbook:6576
 msgid "<emphasis role=\"bold\">STRIP_VOLUME_ABSOLUTE</emphasis>: see <xref linkend=\"chpt.midi.actions.actions.master_volume_absolute\"/>, but applies to the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> specified in <emphasis role=\"bold\">Action Param</emphasis>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6576
+#: manual.docbook:6581
 msgid "<emphasis role=\"bold\">STRIP_VOLUME_RELATIVE</emphasis>: see <xref linkend=\"chpt.midi.actions.actions.master_volume_relative\"/>, but applies to the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> specified in <emphasis role=\"bold\">Action Param</emphasis>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6581
+#: manual.docbook:6586
 msgid "<emphasis role=\"bold\">TAP_TEMPO</emphasis>: another command calculating the average time passing between successive encounters of this commands and uses it to set the current tempo using <link linkend=\"sect.main_toolbar.tap_tempo_beat_counter.tap_tempo\">Tap Tempo</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6587
+#: manual.docbook:6592
 #, fuzzy
 msgid "<emphasis role=\"bold\">TOGGLE_METRONOME</emphasis>: toggles the metronome."
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6592
+#: manual.docbook:6597
 #, fuzzy
 msgid "<emphasis role=\"bold\">UNDO_ACTION</emphasis>: undoes the previous action."
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6597
+#: manual.docbook:6602
 msgid "<emphasis role=\"bold\">UNMUTE</emphasis>: unmutes the <link linkend=\"chpt.mixer.master_fader_strip\">Master output</link> (sequencer keeps running)."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:6606
+#: manual.docbook:6611
 msgid "MIDI-learnable Widgets"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:6608
+#: manual.docbook:6613
 msgid "<abbrev>MIDI</abbrev> Events can be mapped to Actions in the dedicated table at the bottom of the <link linkend=\"chpt.midi.actions\"><abbrev>MIDI</abbrev> tab</link> of the Preferences Dialog. For more convenient handling some of these Actions are associated with GUI elements and can directly be mapped to <abbrev>MIDI</abbrev> Events by pressing <keycap>Shift</keycap> while <emphasis>left-clicking</emphasis> the widget."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:6610
+#: manual.docbook:6615
 msgid "Such elements are:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6613
+#: manual.docbook:6618
 msgid "the <link linkend=\"chpt.mixer.component_strips.fader_and_lcd\">volume faders</link> in the Instrument Channel Strips"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6616
+#: manual.docbook:6621
 msgid "the <link linkend=\"chpt.mixer.channel_strips.fx_volume\">FX volume knobs</link> in the Instrument Channel Strips"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6619
+#: manual.docbook:6624
 msgid "the <link linkend=\"chpt.mixer.channel_strips.pan\">pan rotaries</link> in the Instrument Channel Strips"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6622
+#: manual.docbook:6627
 msgid "the <link linkend=\"chpt.mixer.master_fader_strip\">Master Fader Strip</link> in the Mixer"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:6626
+#: manual.docbook:6631
 msgid "A 'Waiting for <abbrev>MIDI</abbrev> input...' popup informs you that Hydrogen is now waiting for you to press a key or turn/move a controller on your <abbrev>MIDI</abbrev> device."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6631
+#: manual.docbook:6636
 msgid "If the element that does not support <abbrev>MIDI</abbrev> automation, a different popup will inform you."
 msgstr ""
 
 #. (itstool) path: chapter/title
-#: manual.docbook:6639
+#: manual.docbook:6644
 msgid "OSC API"
 msgstr ""
 
 #. (itstool) path: chapter/para
-#: manual.docbook:6640
+#: manual.docbook:6645
 msgid "Open Sound Control (<abbrev>OSC</abbrev>) is a protocol for communication among programs, computers, and hardware, like synthesizers or multimedia devices, via networking protocols such as UDP or TCP. It can be thought of as a replacement for the <abbrev>MIDI</abbrev> protocol with rich benefits, like supporting symbolic and high-resolution numerical argument data, providing an URL-style naming scheme in combination with a pattern matching language, and allowing to bundle messages for a better handling of timing and simultaneous processing."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:6650
+#: manual.docbook:6655
 msgid "Basics"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:6652
+#: manual.docbook:6657
 msgid "Hydrogen is able to receive and send <abbrev>OSC</abbrev> messages. This allows you to control it using various devices, like hardware <abbrev>OSC</abbrev> controllers, smartphones, tablets, or any PC. For Linux-based systems you can use or test these interactions using the command line program <command>oscsend</command>."
 msgstr ""
 
 #. (itstool) path: sect1/screen
-#: manual.docbook:6658
+#: manual.docbook:6663
 #, no-wrap
 msgid ""
 "\n"
@@ -6730,37 +6735,37 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:6663
+#: manual.docbook:6668
 msgid "To enable <abbrev>OSC</abbrev> support in Hydrogen, open the <link linkend=\"chpt.preferences.osc_tab\">OSC</link> tab in the Preferences dialog. Make sure that the \"Enable <abbrev>OSC</abbrev> support\" checkbox is activated, otherwise Hydrogen will not listen for incoming <abbrev>OSC</abbrev> messages."
 msgstr ""
 
 #. (itstool) path: tip/para
-#: manual.docbook:6671
+#: manual.docbook:6676
 msgid "Hydrogen's port number defaults to <option>9000</option> for historical reasons. Since this is also the number used in the coding examples provided by <command>liblo</command> package, you may encounter other applications trying to register the same port (which is not possible). In order to avoid hiccups in your audio setup, it's advised to set a different default port in such cases."
 msgstr ""
 
 #. (itstool) path: warning/para
-#: manual.docbook:6677
+#: manual.docbook:6682
 msgid "<command>oscsend</command> should only be used for sparse interactive testing and control via a command-line. Using it in scripts is not recommended since every time it sends a command it will registers a new client at the <abbrev>OSC</abbrev> server. If the <emphasis role=\"bold\">Enable <abbrev>OSC</abbrev> feedback</emphasis> option in the <link linkend=\"chpt.preferences.osc_tab\"><abbrev>OSC</abbrev></link> tab of the Preferences dialog is checked, Hydrogen will send its current state to all registered clients causing it to become slower and slower with every <command>oscsend</command> command sent. Soon you will experience visual lags. When unchecking this option, however, using <command>oscsend</command> is fine."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:6685
+#: manual.docbook:6690
 msgid "Commands"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: manual.docbook:6688
+#: manual.docbook:6693
 msgid "Syntax"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: manual.docbook:6690
+#: manual.docbook:6695
 msgid "The syntax for sending the commands is"
 msgstr ""
 
 #. (itstool) path: sect2/screen
-#: manual.docbook:6692
+#: manual.docbook:6697
 #, no-wrap
 msgid ""
 "\n"
@@ -6769,885 +6774,885 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: manual.docbook:6696
+#: manual.docbook:6701
 msgid "with the supported types"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6698
+#: manual.docbook:6703
 #, fuzzy
 msgid "<emphasis role=\"bold\">' '</emphasis>: no argument required"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6699
+#: manual.docbook:6704
 #, fuzzy
 msgid "<emphasis role=\"bold\">i</emphasis>: int32"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6700
+#: manual.docbook:6705
 #, fuzzy
 msgid "<emphasis role=\"bold\">f</emphasis>: float32"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6701
+#: manual.docbook:6706
 #, fuzzy
 msgid "<emphasis role=\"bold\">s</emphasis>: <abbrev>OSC</abbrev>-string (ASCII)"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: sect2/para
-#: manual.docbook:6704
+#: manual.docbook:6709
 msgid "Detailed description of the formats and conventions used in the tables below"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6708
+#: manual.docbook:6713
 msgid "<emphasis role=\"bold\">ff</emphasis>: two types placed right after each other indicated that the command requires two distinct arguments."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6713
+#: manual.docbook:6718
 msgid "<emphasis role=\"bold\">' ',[f]</emphasis>: two types separated by a comma indicate that two versions of the command are available. To support <command>TouchOSC</command> all commands expecting no parameter are available in an alternative version requiring a float too. In the latter version the argument will be ignored and it is placed in squared brackets <emphasis>[f]</emphasis> to indicate its inferiority compared to the non-parametric version."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6722
+#: manual.docbook:6727
 msgid "<emphasis role=\"bold\">[0,]</emphasis>: limitations in possible values of the input parameters are indicated in the <emphasis>range</emphasis> column. For continuous values squared brackets <emphasis>[LOWER_LIMIT,UPPER_LIMIT]</emphasis> are used and a limit will be left empty when it is associated with a \"natural\" boundary, like the total number of instrument or pattern."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6730
+#: manual.docbook:6735
 msgid "<emphasis role=\"bold\">{-1;0;1}</emphasis>: sets of discrete values are shown in curly brackets and separated semicolon <emphasis>{VALUE;...}</emphasis> and usually feature the most convenient input options."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6736
+#: manual.docbook:6741
 msgid "<emphasis role=\"bold\">1.0</emphasis>: also in order to support <command>TouchOSC</command> all numerical input has to be passed as type float while most of these numbers will be rounded to integers internally. For all true float inputs the <emphasis>range</emphasis> column uses a floating point representation of the limits, like 1.0 instead of 1."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:6743
+#: manual.docbook:6748
 msgid "<emphasis role=\"bold\">X</emphasis>: all commands ending with a <emphasis>/X/</emphasis> require this character to be replaced by an integer and do affect only the corresponding instrument, e.g. <command>oscsend localhost 9000 /Hydrogen/PAN_ABSOLUTE/1/ f 0.3</command>. The instrument number starts at 1 and is determined by the order of the instrument in the mixer and pattern editor."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: manual.docbook:6755
+#: manual.docbook:6760
 msgid "All Commands"
 msgstr ""
 
 #. (itstool) path: table/title
-#: manual.docbook:6758
+#: manual.docbook:6763
 msgid "All <abbrev>OSC</abbrev> Messages"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6765
+#: manual.docbook:6770
 msgid "URL"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6766
+#: manual.docbook:6771
 msgid "type"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6767
+#: manual.docbook:6772
 msgid "range"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6768
+#: manual.docbook:6773
 msgid "description"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6773
+#: manual.docbook:6778
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PLAY</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6774 manual.docbook:6780 manual.docbook:6786
-#: manual.docbook:6793 manual.docbook:6803 manual.docbook:6811
-#: manual.docbook:6817 manual.docbook:6823 manual.docbook:6829
-#: manual.docbook:6835 manual.docbook:6841 manual.docbook:6899
-#: manual.docbook:6907 manual.docbook:6937 manual.docbook:6943
-#: manual.docbook:6949 manual.docbook:7040 manual.docbook:7046
-#: manual.docbook:7052 manual.docbook:7058 manual.docbook:7092
-#: manual.docbook:7118 manual.docbook:7130 manual.docbook:7136
+#: manual.docbook:6779 manual.docbook:6785 manual.docbook:6791
+#: manual.docbook:6798 manual.docbook:6808 manual.docbook:6816
+#: manual.docbook:6822 manual.docbook:6828 manual.docbook:6834
+#: manual.docbook:6840 manual.docbook:6846 manual.docbook:6904
+#: manual.docbook:6912 manual.docbook:6942 manual.docbook:6948
+#: manual.docbook:6954 manual.docbook:7045 manual.docbook:7051
+#: manual.docbook:7057 manual.docbook:7063 manual.docbook:7097
+#: manual.docbook:7123 manual.docbook:7135 manual.docbook:7141
 msgid "' ',[f]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6776
+#: manual.docbook:6781
 msgid "Starts playback."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6779
+#: manual.docbook:6784
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PAUSE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + S]</emphasis> = Guardar Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6782
+#: manual.docbook:6787
 msgid "Stops playback."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6785
+#: manual.docbook:6790
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">STOP</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6788
+#: manual.docbook:6793
 msgid "Stops playback and moves the playhead to the beginning of the song."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6792
+#: manual.docbook:6797
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PLAY_PAUSE_TOGGLE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6795
+#: manual.docbook:6800
 msgid "Works the same as <xref linkend=\"chpt.osc.command.play\"/> if the playback has not started yet and same as. <xref linkend=\"chpt.osc.command.pause\"/> otherwise. (The playhead will not return to the start of the song, but will stay at its current position)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6802
+#: manual.docbook:6807
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PLAY_STOP_TOGGLE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6805
+#: manual.docbook:6810
 msgid "Works the same as <xref linkend=\"chpt.osc.command.play\"/> if the playback has not started yet and same as. <xref linkend=\"chpt.osc.command.stop\"/> otherwise."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6810
+#: manual.docbook:6815
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">RECORD_READY</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6813
+#: manual.docbook:6818
 msgid "Toggles <link linkend=\"chpt.overview.recording\">recording</link> (same as pressing the <link linkend=\"sect.main_toolbar.transport_control\">record button</link>) if the playback has not started yet."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6816
+#: manual.docbook:6821
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">RECORD_STROBE_TOGGLE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6819
+#: manual.docbook:6824
 msgid "Toggles <link linkend=\"chpt.overview.recording\">recording</link> (same as pressing the <link linkend=\"sect.main_toolbar.transport_control\">record button</link>)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6822
+#: manual.docbook:6827
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">RECORD_STROBE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6825
+#: manual.docbook:6830
 msgid "Activates <link linkend=\"chpt.overview.recording\">recording</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6828
+#: manual.docbook:6833
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">RECORD_EXIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6831
+#: manual.docbook:6836
 msgid "Deactivates <link linkend=\"chpt.overview.recording\">recording</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6834
+#: manual.docbook:6839
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">NEXT_BAR</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6837
+#: manual.docbook:6842
 msgid "Moves the playhead to the next pattern/bar."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6840
+#: manual.docbook:6845
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PREVIOUS_BAR</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6843
+#: manual.docbook:6848
 msgid "Moves the playhead to the previous pattern/bar."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6846
+#: manual.docbook:6851
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SELECT_NEXT_PATTERN</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6847 manual.docbook:6855 manual.docbook:6862
-#: manual.docbook:6871 manual.docbook:6880 manual.docbook:6889
-#: manual.docbook:6915 manual.docbook:6930 manual.docbook:6955
-#: manual.docbook:6961 manual.docbook:6971 manual.docbook:6982
-#: manual.docbook:6993 manual.docbook:6999 manual.docbook:7008
-#: manual.docbook:7034 manual.docbook:7064 manual.docbook:7071
-#: manual.docbook:7078 manual.docbook:7085 manual.docbook:7098
-#: manual.docbook:7155
+#: manual.docbook:6852 manual.docbook:6860 manual.docbook:6867
+#: manual.docbook:6876 manual.docbook:6885 manual.docbook:6894
+#: manual.docbook:6920 manual.docbook:6935 manual.docbook:6960
+#: manual.docbook:6966 manual.docbook:6976 manual.docbook:6987
+#: manual.docbook:6998 manual.docbook:7004 manual.docbook:7013
+#: manual.docbook:7039 manual.docbook:7069 manual.docbook:7076
+#: manual.docbook:7083 manual.docbook:7090 manual.docbook:7103
+#: manual.docbook:7160
 msgid "f"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6848 manual.docbook:6856 manual.docbook:6863
-#: manual.docbook:6931 manual.docbook:7035 manual.docbook:7099
+#: manual.docbook:6853 manual.docbook:6861 manual.docbook:6868
+#: manual.docbook:6936 manual.docbook:7040 manual.docbook:7104
 msgid "[0,]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6849
+#: manual.docbook:6854
 msgid "If Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.pattern_mode\">Pattern Mode</link>, switch to pattern <emphasis>f</emphasis>. If Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link>, the command will have no effect."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6854
+#: manual.docbook:6859
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SELECT_AND_PLAY_PATTERN</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6857
+#: manual.docbook:6862
 msgid "Works as <xref linkend=\"chpt.osc.command.select_next_pattern\"/> combined with <xref linkend=\"chpt.osc.command.play\"/>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6861
+#: manual.docbook:6866
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">RELOCATE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6864
+#: manual.docbook:6869
 msgid "If Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link>, locates the playhead to pattern number <emphasis>f</emphasis>. If Hydrogen is in <link linkend=\"chpt.song_editor.editor_modes.pattern_mode\">Pattern Mode</link>, locates the playhead to the beginning of the current pattern."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6870
+#: manual.docbook:6875
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">BPM</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6873
+#: manual.docbook:6878
 msgid "Sets the current tempo to <emphasis>f</emphasis>. Note that this command will have no effect if Hydrogen is both in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> and the <link linkend=\"chpt.song_editor.timeline\">Timeline</link> is activated."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6879
+#: manual.docbook:6884
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">BPM_DECR</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6882
+#: manual.docbook:6887
 msgid "Decreases the current tempo by <emphasis>f</emphasis>. Note that this command will have no effect if Hydrogen is both in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> and the <link linkend=\"chpt.song_editor.timeline\">Timeline</link> is activated."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6888
+#: manual.docbook:6893
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">BPM_INCR</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6891
+#: manual.docbook:6896
 msgid "Increases the current tempo by <emphasis>f</emphasis>. Note that this command will have no effect if Hydrogen is both in <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> and <emphasis>Tempo Marker</emphasis> has been passed."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6898
+#: manual.docbook:6903
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">BEATCOUNTER</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6901
+#: manual.docbook:6906
 msgid "Calculates the average time passing between successive encounters of this commands and uses it to set the current tempo using the <link linkend=\"sect.main_toolbar.tap_tempo_beat_counter.beat_counter\">Beat Counter</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6906
+#: manual.docbook:6911
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">TAP_TEMPO</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6909
+#: manual.docbook:6914
 msgid "Another command calculating the average time passing between successive encounters of this commands and uses it to set the current tempo using <link linkend=\"sect.main_toolbar.tap_tempo_beat_counter.tap_tempo\">Tap Tempo</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6914
+#: manual.docbook:6919
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">TIMELINE_ACTIVATION</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6916
+#: manual.docbook:6921
 msgid "{0,1}"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6917
+#: manual.docbook:6922
 msgid "Activates the <link linkend=\"chpt.song_editor.timeline\">Timeline</link> if <emphasis>f</emphasis> is not zero and deactivates it otherwise."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6921
+#: manual.docbook:6926
 msgid "/Hydrogen/<emphasis role=\"bold\">TIMELINE_ADD_MARKER</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6922 manual.docbook:7161
+#: manual.docbook:6927 manual.docbook:7166
 msgid "ff"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6923
+#: manual.docbook:6928
 msgid "[0,] [10,400]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6924
+#: manual.docbook:6929
 msgid "Adds a Tempo Marker to the <link linkend=\"chpt.song_editor.timeline\">Timeline</link>. The first argument specifies the pattern/bar to at the marker to and the second its tempo."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6929
+#: manual.docbook:6934
 msgid "/Hydrogen/<emphasis role=\"bold\">TIMELINE_DELETE_MARKER</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6932
+#: manual.docbook:6937
 msgid "Deletes a Tempo Marker at pattern/bar <emphasis>f</emphasis> on the <link linkend=\"chpt.song_editor.timeline\">Timeline</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6936
+#: manual.docbook:6941
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">MUTE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6939
+#: manual.docbook:6944
 msgid "<link linkend=\"def.mute\">Mutes</link> the <link linkend=\"chpt.mixer.master_fader_strip\">Master output</link> (sequencer keeps running)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6942
+#: manual.docbook:6947
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">UNMUTE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6945
+#: manual.docbook:6950
 msgid "Unmutes the <link linkend=\"chpt.mixer.master_fader_strip\">Master output</link> (sequencer keeps running)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6948
+#: manual.docbook:6953
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">MUTE_TOGGLE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6951
+#: manual.docbook:6956
 msgid "Toggles the muting of the <link linkend=\"chpt.mixer.master_fader_strip\">Master output</link> (sequencer keeps running)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6954
+#: manual.docbook:6959
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">MASTER_VOLUME_ABSOLUTE</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6956 manual.docbook:6972
+#: manual.docbook:6961 manual.docbook:6977
 msgid "[0.0,1.5]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6957
+#: manual.docbook:6962
 msgid "Sets the volume of the <link linkend=\"chpt.mixer.master_fader_strip\">Master fader</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6960
+#: manual.docbook:6965
 msgid "/Hydrogen/<emphasis role=\"bold\">MASTER_VOLUME_RELATIVE</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6962 manual.docbook:6983
+#: manual.docbook:6967 manual.docbook:6988
 msgid "{-1;0;1}"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6963
+#: manual.docbook:6968
 msgid "Changes the <link linkend=\"chpt.mixer.master_fader_strip\">Master output volume</link>, relative to the current setting. For a value of <option>0</option> it sets the volume of the master fader to 0. For a value of <option>1</option> it increases its volume by 0.05 and for all other values it decreases it by 0.05. (<option>-1</option>: -0.05 ,<option>0</option>: 0 ,<option>1</option>: +0.05)"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6970
+#: manual.docbook:6975
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">STRIP_VOLUME_ABSOLUTE/X</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6973
+#: manual.docbook:6978
 msgid "See <xref linkend=\"chpt.osc.command.master_volume_absolute\"/>, but applies to the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> provided in the <abbrev>OSC</abbrev> command path as <emphasis>X</emphasis>. Please not that this only affects <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>. Strip volume control for <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link> is not implemented yet)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6981
+#: manual.docbook:6986
 msgid "/Hydrogen/<emphasis role=\"bold\">STRIP_VOLUME_RELATIVE/X</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6984
+#: manual.docbook:6989
 msgid "See <xref linkend=\"chpt.osc.command.master_volume_relative\"/>, but applies to the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> provided in the <abbrev>OSC</abbrev> command path as <emphasis>X</emphasis>. Please not that this only affects <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>. Strip volume control for <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link> is not implemented yet)."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6992
+#: manual.docbook:6997
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PAN_ABSOLUTE/X</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:6994
+#: manual.docbook:6999
 msgid "[0.0,1.0]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6995
+#: manual.docbook:7000
 msgid "Sets the pan of instrument strip <emphasis>X</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:6998
+#: manual.docbook:7003
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PAN_RELATIVE/X</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7000
+#: manual.docbook:7005
 msgid "{-1;1}"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7001
+#: manual.docbook:7006
 msgid "Changes the <link linkend=\"def.pan\">pan</link> of the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> <emphasis>X</emphasis>, relative to the current value. For a value of <option>1</option> it increase the pan by 0.05. For all other values it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>1</option>: +0.05)"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7007
+#: manual.docbook:7012
 msgid "/Hydrogen/<emphasis role=\"bold\">FILTER_CUTOFF_LEVEL_ABSOLUTE/X</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7009
+#: manual.docbook:7014
 msgid "[0,127]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7010
+#: manual.docbook:7015
 msgid "For a value of <option>0</option> it sets the <link linkend=\"chpt.instrument_editor.filter\">Filter Cutoff</link> of the <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> <emphasis>X</emphasis> to 0. For all other values it sets the cutoff to the provided number divided by 127.0. Please note that this parameter is not displayed anywhere in the Mixer but in the Instrument Rack."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7017
+#: manual.docbook:7022
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">STRIP_MUTE_TOGGLE/X</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7018 manual.docbook:7026
+#: manual.docbook:7023 manual.docbook:7031
 msgid "'',[f]"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7020
+#: manual.docbook:7025
 msgid "Toggles muting of <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> <emphasis>X</emphasis>. Optional input argument will be ignored."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7025
+#: manual.docbook:7030
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">STRIP_SOLO_TOGGLE/X</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7028
+#: manual.docbook:7033
 msgid "Toggles soloing of <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strip</link> <emphasis>X</emphasis>. Optional input argument will be ignored."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7033
+#: manual.docbook:7038
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PLAYLIST_SONG</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7036
+#: manual.docbook:7041
 msgid "Opens song <emphasis>f</emphasis> of the <link linkend=\"chpt.playlist_editor\">Playlist</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7039
+#: manual.docbook:7044
 msgid "/Hydrogen/<emphasis role=\"bold\">PLAYLIST_NEXT_SONG</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7042
+#: manual.docbook:7047
 msgid "Opens the next song in the <link linkend=\"chpt.playlist_editor\">Playlist</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7045
+#: manual.docbook:7050
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">PLAYLIST_PREV_SONG</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7048
+#: manual.docbook:7053
 msgid "Opens the previous song in the <link linkend=\"chpt.playlist_editor\">Playlist</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7051
+#: manual.docbook:7056
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">UNDO_ACTION</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7054
+#: manual.docbook:7059
 msgid "Undoes the previous action."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7057
+#: manual.docbook:7062
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">REDO_ACTION</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7060
+#: manual.docbook:7065
 msgid "Redoes the previous undone action."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7063
+#: manual.docbook:7068
 msgid "/Hydrogen/<emphasis role=\"bold\">JACK_TRANSPORT_ACTIVATION</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7065 manual.docbook:7072 manual.docbook:7079
-#: manual.docbook:7086
+#: manual.docbook:7070 manual.docbook:7077 manual.docbook:7084
+#: manual.docbook:7091
 msgid "{0;1}"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7066
+#: manual.docbook:7071
 msgid "Deactivated the <link linkend=\"sect.preferences.jack\"><abbrev>JACK</abbrev> transport</link> support for a value of <option>0</option> and activates it for all others."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7070
+#: manual.docbook:7075
 msgid "/Hydrogen/<emphasis role=\"bold\">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7073
+#: manual.docbook:7078
 msgid "Unregisters Hydrogen as <link linkend=\"sect.preferences.jack.bbt\"><abbrev>JACK</abbrev> Timebase Master</link> for a value of <option>0</option> and registers it for all others."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7077
+#: manual.docbook:7082
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SONG_MODE_ACTIVATION</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7080
+#: manual.docbook:7085
 msgid "Deactivated <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link> for a value of <option>0</option> and activates it for all others."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7084
+#: manual.docbook:7089
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">LOOP_MODE_ACTIVATION</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7087
+#: manual.docbook:7092
 msgid "Deactivated <link linkend=\"sect.main_toolbar.transport_control\">looped playback</link> for a value of <option>0</option> and activates it for all others."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7091
+#: manual.docbook:7096
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">TOGGLE_METRONOME</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7094
+#: manual.docbook:7099
 msgid "Toggles the <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">metronome</link>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7097
+#: manual.docbook:7102
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SELECT_INSTRUMENT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7100
+#: manual.docbook:7105
 msgid "Selects a specific instrument in the drumkit."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7103
+#: manual.docbook:7108
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">NEW_SONG</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7104 manual.docbook:7111 manual.docbook:7124
-#: manual.docbook:7142 manual.docbook:7148 manual.docbook:7179
+#: manual.docbook:7109 manual.docbook:7116 manual.docbook:7129
+#: manual.docbook:7147 manual.docbook:7153 manual.docbook:7184
 msgid "s"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7106
+#: manual.docbook:7111
 msgid "Creates an empty song which will be stored at the absolute path <emphasis>s</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7110
+#: manual.docbook:7115
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">OPEN_SONG</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7113
+#: manual.docbook:7118
 msgid "Opens an existing song associated with the absolute path <emphasis>s</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7117
+#: manual.docbook:7122
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SAVE_SONG</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7120
+#: manual.docbook:7125
 msgid "Saves the current song."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7123
+#: manual.docbook:7128
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SAVE_SONG_AS</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7126
+#: manual.docbook:7131
 msgid "Saves the current song to the absolute path <emphasis>s</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7129
+#: manual.docbook:7134
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SAVE_PREFERENCES</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + S]</emphasis> = Guardar Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7132
+#: manual.docbook:7137
 #, fuzzy
 msgid "Saves the preferences."
 msgstr "Preferencias de audio"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7135
+#: manual.docbook:7140
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">QUIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7138
+#: manual.docbook:7143
 #, fuzzy
 msgid "Exits Hydrogen."
 msgstr "Utilizar Hydrogen"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7141
+#: manual.docbook:7146
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">NEW_PATTERN</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7144
+#: manual.docbook:7149
 msgid "Creates an empty pattern of name <emphasis>s</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7147
+#: manual.docbook:7152
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">OPEN_PATTERN</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7150
+#: manual.docbook:7155
 msgid "Opens an existing pattern at the absolute path <emphasis>s</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7154
+#: manual.docbook:7159
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">REMOVE_PATTERN</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7157
+#: manual.docbook:7162
 msgid "Removes pattern number <emphasis>f</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7160
+#: manual.docbook:7165
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">SONG_EDITOR_TOGGLE_GRID_CELL</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7163
+#: manual.docbook:7168
 msgid "Toggles a pattern in the pattern grid of the <link linkend=\"chpt.song_editor\">Song Editor</link>. The first argument will be used as column and the second as row."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7166
+#: manual.docbook:7171
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">LOAD_DRUMKIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7167
+#: manual.docbook:7172
 msgid "s,sf"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7169
+#: manual.docbook:7174
 msgid "Loads a drumkit into the current song. <emphasis>s</emphasis> can be either the name of a drumkit already present in the <link linkend=\"chpt.sound_library\">Sound Library Editor</link> or an absolute path pointing to an extracted drumkit folder (containing both <filename>drumkit.xml</filename> file as well as all required samples). The second argument is optional and specifies whether (<option>0</option>) or not (any other value) instruments of the old kit should be kept in case newly loaded one has less and there are note present for that particular instrument in a pattern."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7172
+#: manual.docbook:7177
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">EXTRACT_DRUMKIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7173 manual.docbook:7185
+#: manual.docbook:7178 manual.docbook:7190
 msgid "s,ss"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7175
+#: manual.docbook:7180
 msgid "Inflates a <link linkend=\"chpt.file_types.h2drumkit\">compressed drumkit</link> found at the absolute path <emphasis>s</emphasis> (first argument). The second argument specifies the target path to extract the kit to. It's optional and if omitted the kit will be extracted into Hydrogen's user drumkit folder."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7178
+#: manual.docbook:7183
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">VALIDATE_DRUMKIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7181
+#: manual.docbook:7186
 msgid "Validates a <link linkend=\"chpt.file_types.h2drumkit\">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7184
+#: manual.docbook:7189
 #, fuzzy
 msgid "/Hydrogen/<emphasis role=\"bold\">UPGRADE_DRUMKIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">[CTRL + O]</emphasis> = Abrir Archivo"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7187
+#: manual.docbook:7192
 msgid "Upgrades a <link linkend=\"chpt.file_types.h2drumkit\">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis> to the latest drumkit format. The second argument specifies the target path to upgraded kit will be stored in. It's optional and if omitted the kit will be upgraded inplace."
 msgstr ""
 
 #. (itstool) path: part/title
-#: manual.docbook:7198
+#: manual.docbook:7203
 msgid "Examples"
 msgstr ""
 
 #. (itstool) path: chapter/title
-#: manual.docbook:7201
+#: manual.docbook:7206
 msgid "A New Song"
 msgstr ""
 
 #. (itstool) path: chapter/para
-#: manual.docbook:7203
+#: manual.docbook:7208
 #, fuzzy
 msgid "This chapter provides a quick-and-dirty walkthrough to Hydrogen. Refer to the tutorials and the technical <xref linkend=\"part.using_hydrogen\"/> of this document for a more detailed overview."
 msgstr "Esto no es más que una guía rápida de Hydrogen. Consulta el tutorial para una descripción más detallada."
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7209
+#: manual.docbook:7214
 #, fuzzy
 msgid "Song Mode and Pattern Mode"
 msgstr "Modo \"Canción\" y modo \"Patrón\""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7211
+#: manual.docbook:7216
 msgid "Hydrogen has two main modes: <link linkend=\"chpt.song_editor.editor_modes.pattern_mode\">Pattern mode</link> and <link linkend=\"chpt.song_editor.editor_modes.song_mode\">Song Mode</link>. When <emphasis>Pattern Mode</emphasis> is activated the current pattern is continuously repeated. This mode is very well suited to tweak your pattern until it's just right, since the pattern you are working on is constantly repeated. This way you can immediately hear the changes you have made. In <emphasis>Song Mode</emphasis> the whole song is played. This is useful when putting together the patterns to create the structure of the song."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7220
+#: manual.docbook:7225
 #, fuzzy
 msgid "A New Pattern"
 msgstr "Un nuevo patrón"
 
 #. (itstool) path: note/para
-#: manual.docbook:7240
+#: manual.docbook:7245
 #, fuzzy
 msgid "Remember some constraints of the grid: if you are working with a resolution of <option>1/16</option>, you can't go back to <option>1/8</option> and remove a 16th note; same thing happens if you are working with a resolution of <option>1/8</option> and you try to insert a note in the middle of two bars (looking for a 16 bars precision): they will be placed on the previous or on the following 8th bar (unless you choose <option>off</option> from the Grid Resolution combo box in which case you're free to place notes wherever you prefer). <emphasis role=\"bold\">Be sure to select the correct pattern in the <link linkend=\"chpt.song_editor.sidebar\">Sidebar</link> of the Song Editor before adding notes in the Pattern Editor!</emphasis>"
 msgstr "Empezaremos con una canción vacía y un patrón vacío, como viene por defecto: ahora debemos seleccionar el modo \"Patrón\". También es posible cambiar el nombre del patrón. Ahora vamos a hacer clic en el botón de <quote>Play</quote> y mientras se reproduce el patrón vamos a añadir notas en la rejilla del Editor de Patrones (<xref linkend=\"fig.pattern_editor.2\"/>) simplemente haciendo clic izquierdo en él: ajusta la resolución de la rejilla y la velocidad de PPM si lo necesitas. Recuerda algunas limitaciones en cuanto a la rejilla: si estás trabajando con una resolución de 16 no puedes volver a una de 8 y quitar una nota de 1/16; por otro lado, si trabajas con una resolución de 8 e intentas insertar una nota entre dos barras (buscando una resolución de 1/16), las notas se colocarán en en la barra anterior o posterior en la rejilla de 1/8 (a menos que elijas <quote>off</quote> en el LCD de la Resolución de Rejilla; en este caso puedes colocar las notas donde quieras). <emphasis role=\"bold\">¡Asegúrate de seleccionar el patrón correcto en el Editor de Canciones antes de añadir notas en el Editor de Patrones!</emphasis>"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7221
+#: manual.docbook:7226
 msgid "We'll start from the empty song with an empty pattern created when Hydrogen starts up: <emphasis>Pattern Mode</emphasis> should be selected by default. Now let's click on the <inlinemediaobject> <textobject> <phrase> Grey play and pause button containing two vertical black lines (left) and a black triangle (right) pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/playerControlPlayButton.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the <link linkend=\"sect.main_toolbar.transport_control\">Main Toolbar</link>, and while the pattern is playing let's add notes by <emphasis>left-clicking</emphasis> in the grid of the <link linkend=\"chpt.pattern_editor\">Pattern Editor</link> (see <xref linkend=\"fig.pattern_editor.2\"/>). Adjust the <link linkend=\"chpt.pattern_editor.controls.res\">grid resolution</link> and <link linkend=\"sect.main_toolbar.bpm_control_and_metronome\">tempo</link> if needed. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: figure/title
-#: manual.docbook:7255
+#: manual.docbook:7260
 msgid "The Pattern Editor"
 msgstr "El Editor de Patrones"
 
@@ -7656,25 +7661,25 @@ msgstr "El Editor de Patrones"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:7258
+#: manual.docbook:7263
 msgctxt "_"
 msgid "external ref='generated_en/PatternEditor.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7265
+#: manual.docbook:7270
 #, fuzzy
 msgid "A New Sequence"
 msgstr "Una nueva secuencia"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7267
+#: manual.docbook:7272
 #, fuzzy
 msgid "Once patterns are created (<xref linkend=\"fig.insert_patterns\"/>), we can copy/paste/delete them using the <link linkend=\"chpt.song_editor.editor_modes.select\">Select Mode</link>."
 msgstr "Una vez que hemos creado los patrones (<xref linkend=\"fig.insert_patterns\"/>), podemos copiar/pegar/eliminarlos simplemente arrastrándolos con el ratón (activa 'modo selección' en el Editor de Canciones y mantén pulsado el botón izquierdo del ratón para seleccionar los que quieres mover o copiar)."
 
 #. (itstool) path: figure/title
-#: manual.docbook:7272
+#: manual.docbook:7277
 msgid "Inserting Patterns in the Song Sequence"
 msgstr ""
 
@@ -7683,303 +7688,303 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:7275
+#: manual.docbook:7280
 msgctxt "_"
 msgid "external ref='generated_en/SongEditor.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7282
+#: manual.docbook:7287
 #, fuzzy
 msgid "Adjust from the Mixer"
 msgstr "Configura desde el mezclador"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7284
+#: manual.docbook:7289
 #, fuzzy
 msgid "Of course we can always use the <link linkend=\"chpt.mixer\">Mixer</link> window, either when creating or playing patterns."
 msgstr "Por supuesto siempre podemos utilizar la ventana del mezclador, bien a la hora de crear o reproducir patrones."
 
 #. (itstool) path: tip/para
-#: manual.docbook:7369
+#: manual.docbook:7374
 msgid "Peaks outside that range will get distorted (especially with <abbrev>OSS</abbrev> audio driver). Keep an eye on each VU meter and if distortion appears, turn the volume down for that instrument."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7287
+#: manual.docbook:7292
 #, fuzzy
 msgid "The Mixer (see <xref linkend=\"fig.mixer.2\"/>) is made of a number independent <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link>, each of these is bound to an instrument, plus a <link linkend=\"chpt.mixer.master_fader_strip\">Master Fader Strip</link> and a <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/mixerShowFXButton.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button to show and hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Plugin Rack</link>. Every line features 3 buttons ( <inlinemediaobject> <textobject> <phrase> Grey button with a filled black triangle pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_play_on_mixer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"M\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ), current maximum peak, FX volume control knobs, volume fader, and name of the track. Clicking on <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"S\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> will play the selected instrument, cutting the others. The Mute button <inlinemediaobject> <textobject> <phrase> Grey button containing a black \"M\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> , simply <link linkend=\"def.mute\">mute</link> <emphasis>that</emphasis> instrument. The maximum peak indicates the maximum volume reached from the instrument. The peak must be in a range of <option>0.0</option> and <option>1.0</option> (in <xref linkend=\"fig.mixer.2\"/> you can see a few volumes too loud). For a full description of the Mixer and its elements please see <xref linkend=\"chpt.mixer\"/>. <_:tip-1/>"
 msgstr "El marco del Mezclador (<xref linkend=\"fig.mixer.2\"/>) se compone de 32 pistas individuales, cada uno de los cuales está vinculado a un instrumento, más una línea de \"Salida Master\" para ajustar la salida general del volumen y un botón \"FX\" (efectos) para configurar efectos. Cada línea tiene 3 botones ( <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_play_on_mixer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ), ajuste de paneo ( <inlinemediaobject> <imageobject> <imagedata fileref=\"img/MixerPan.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> ), pico máximo actual, fader de volumen y nombre de la pista. Haciendo clic en <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_solo_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> sonará el instrumento seleccionado, y los demás se silenciarán. El botón de \"Mute\" (silencio) <inlinemediaobject> <imageobject> <imagedata fileref=\"img/btn_mute_on.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> , simplemente silencia <emphasis>ese</emphasis> instrumento. El pico máximo indica el volumen máximo alcanzado por el instrumento; el pico debe estar en un rango entre 0.0 y 1.0 (en <xref linkend=\"fig.mixer.2\"/> puedes ver algunos volúmenes demasiado altos), de lo contrario se distorsionará, produciendo un sonido extraño (sobre todo con el driver de audio OSS), en este caso es mejor tener el volumen bajo; vigila los vúmetros."
 
 #. (itstool) path: chapter/title
-#: manual.docbook:7388
+#: manual.docbook:7393
 #, fuzzy
 msgid "Create a New Drumkit"
 msgstr "Crear un Nuevo Drumkit"
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7391
+#: manual.docbook:7396
 msgid "Creating a New Drumkit"
 msgstr "Crear un Nuevo Drumkit"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7392
+#: manual.docbook:7397
 msgid "In this chapter we will show you how to create a complete drumkit. Be sure to have a look at the <link linkend=\"chpt.overview.drumkits\">conceptional design of a drumkit</link> first. Keeping this in mind we will use a top-down approach, so we will start at the Drumkit level and work our way down to the <link linkend=\"def.sample\">samples</link>."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7397
+#: manual.docbook:7402
 #, fuzzy
 msgid "Creating a <link linkend=\"sect.main_menu.drumkits.new\">new drumkit</link> with Hydrogen is done with the <link linkend=\"chpt.instrument_editor\">Instrument Editor</link>. You can load samples, set envelope parameters, set the gain, and other advanced features like mute groups, a low-pass resonance filter, and pitch randomization."
 msgstr "La creación de un nuevo drumkit con Hydrogen se realiza con el Editor de Instrumentos. Usando el editor de instrumentos puedes cargar samples, configurar parámetros de la envolvente (envelope), configurar la ganancia (gain), y algunas funciones avanzadas más como grupos de silencio (mute groups), filtro de resonancia low-pass (low-pass resonance filter) y altura tonal aleatoria (pitch randomization)."
 
 #. (itstool) path: tip/para
-#: manual.docbook:7402
+#: manual.docbook:7407
 msgid "Instead of creating your own drumkit, you can also <link linkend=\"sect.main_menu.drumkits.open\">open</link> or <link linkend=\"sect.main_form.online_import_drumkit\">download</link> an existing one."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7407
-msgid "Lets make a brand new drum kit:"
+#: manual.docbook:7412
+msgid "Let's make a brand new drum kit:"
 msgstr ""
 
 #. (itstool) path: step/para
-#: manual.docbook:7409
+#: manual.docbook:7414
 #, fuzzy
 msgid "in the <link linkend=\"chpt.main_menu\">Main Menu</link> select <menuchoice> <guimenu>Drumkits</guimenu> <guimenuitem>New</guimenuitem> </menuchoice>. This will give you a single blank instruments. To add more instruments, select <menuchoice> <guimenu>Instruments</guimenu> <guimenuitem>Add instrument</guimenuitem> </menuchoice> and to delete one, <emphasis>right-click</emphasis> a instrument and select <emphasis>Delete Instrument</emphasis>."
 msgstr "Para empezar con un nuevo drumkit de cero, selecciona <menuchoice> <guimenu>Instrumentos</guimenu> <guimenuitem>Borrar Todos</guimenuitem> </menuchoice> . Esto te deja un banco de 32 instrumentos vacíos. Para borrar instrumentos, haz clic derecho sobre cada instrumento y selecciona <guimenuitem>Borrar Instrumento</guimenuitem>. Para añadir más instrumentos, selecciona <menuchoice> <guimenu>Instrumentos</guimenu> <guimenuitem>Añadir Instrumento</guimenuitem> </menuchoice> ."
 
 #. (itstool) path: step/para
-#: manual.docbook:7425
+#: manual.docbook:7430
 #, fuzzy
 msgid "Select an instrument to start editing it. This is done by <emphasis>left-clicking</emphasis> on the name of the instrument in the <link linkend=\"chpt.pattern_editor.sidebar\">Sidebar</link>. You will notice that the name of the instrument in the Instrument Editor matches the one that you clicked."
 msgstr "Selecciona un instrumento para empezar a editarlo. Esto se hace haciendo clic izquierdo sobre el nombre del instrumento en la lista de instrumentos (a la izquierda). Verás que el nombre del instrumento en el Editor de Instrumentos coincide con el que has seleccionado."
 
 #. (itstool) path: step/para
-#: manual.docbook:7431
+#: manual.docbook:7436
 #, fuzzy
 msgid "Once you have your drumkit working the way you want, select <menuchoice> <guimenuitem>Drumkits</guimenuitem> <guimenuitem>Save As</guimenuitem> </menuchoice> . You will be prompted for the name of the kit to save. If you wish to <emphasis>overwrite</emphasis> an existing kit, you will need to type in the same name as the kit that you want to replace."
 msgstr "Cuando el drumkit funciona tal como querías, selecciona <menuchoice> <guimenuitem>Instrumentos</guimenuitem> <guimenuitem>Guardar biblioteca</guimenuitem> </menuchoice> . Te pedirá que le des un nombre al drumkit para guardarlo. Si quieres <emphasis>sobreescribir</emphasis> un drumkit ya existente, tendrás que teclear el mismo nombre que el kit que quieres reemplazar."
 
 #. (itstool) path: step/para
-#: manual.docbook:7444
+#: manual.docbook:7449
 #, fuzzy
 msgid "Drumkits are automatically stored in the <filename class=\"directory\">data</filename> directory (i.e. <filename class=\"directory\">$HOME/.hydrogen/data/drumkits</filename>)."
 msgstr "Los drumkits se archivan automáticamente en el directorio <filename class=\"directory\">data</filename> (por ej. <filename class=\"directory\">$HOME/data/drumkits</filename>)."
 
 #. (itstool) path: step/para
-#: manual.docbook:7450
+#: manual.docbook:7455
 #, fuzzy
 msgid "In order to share your drumkit with others, you have to export it using <menuchoice> <guimenuitem>Drumkits</guimenuitem> <guimenuitem>Export</guimenuitem> </menuchoice> from the <link linkend=\"chpt.main_menu\">Main Menu</link>. Select the drum kit that you wish to export, and give it a file name to save it to."
 msgstr "Para exportar un drumkit (para compartirlo con otros), hay que cargarlo primero en la Biblioteca de Sonidos. Después, selecciona <menuchoice> <guimenuitem>Instrumentos</guimenuitem> <guimenuitem>Exportar biblioteca</guimenuitem> </menuchoice> en el menú. Selecciona el drumkit que deseas exportar y dale un nombre de archivo para guardarlo."
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7465
+#: manual.docbook:7470
 #, fuzzy
 msgid "Creating a New Instrument"
 msgstr "Crear un Nuevo Drumkit"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7467
+#: manual.docbook:7472
 #, fuzzy
 msgid "For each instrument in a drum kit, you can load several <link linkend=\"def.sample\">samples</link> and set different synthesizer parameters. This section will step you through how to create a new instrument and load the samples. For details about the individual parameters please refer to <xref linkend=\"chpt.instrument_editor.general\"/>."
 msgstr "Para cada instrumento en un drumkit, puedes cargar varios samples y configurar diferentes parámetros del sintetizador. Esta sección te ayudará paso a paso para crear un nuevo instrumento y cargar los samples."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7471
+#: manual.docbook:7476
 msgid "To begin creating an instrument, select <menuchoice> <guimenu>Instruments</guimenu> <guimenuitem>Add instrument</guimenuitem> </menuchoice>. This will give you a blank instrument to start from."
 msgstr "Para empezar a crear un instrumento, selecciona <menuchoice> <guimenu>Instrumentos</guimenu> <guimenuitem>Añadir instrumento</guimenuitem> </menuchoice>. Esto te da un instrumento en blanco para comenzar."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7478
+#: manual.docbook:7483
 #, fuzzy
 msgid "Now, you need two samples. Any .WAV or .FLAC file will do. Hydrogen provides several in the <filename class=\"directory\">data/drumkits</filename> folder in the Hydrogen data directory (usually <filename role=\"directory\">$HOME/.hydrogen/data/</filename>)."
 msgstr "Ahora, necesitas dos samples. Cualquier archivo .WAV o .FLAC servirá. Hydrogen proporciona varios en el directorio <filename class=\"directory\">data/drumkits</filename> ."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7483
+#: manual.docbook:7488
 #, fuzzy
 msgid "In the Instrument Editor, click on <link linkend=\"chpt.instrument_editor.layers\">Layers</link>. You can layer several samples into the instrument. Which one is played depends on the <link linkend=\"def.velocity\">velocity</link> of the incoming note. Click <inlinemediaobject> <textobject> <phrase> Grey button containing the black characters \"LOAD LAYER\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/loadLayer_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> and point the <emphasis>Audio File Browser</emphasis> to your sample."
 msgstr "Tras cargar el sample, verás que ahora hay un <guilabel>1</guilabel> arriba, y que el rectángulo de más arriba se ha vuelto azul claro. Para cargar un segundo sample, haz clic en la ranura justo debajo, y luego haz clic en <guibutton>Cargar Capa</guibutton> para meter otro sample."
 
 #. (itstool) path: note/para
-#: manual.docbook:7499
+#: manual.docbook:7504
 msgid "The <emphasis>Audio File Browser</emphasis> will allow you to preview the sample before you load it. It will also allow you to load more than one sample at a time. But for now, only load one."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7507
+#: manual.docbook:7512
 #, fuzzy
 msgid "After you load the sample, you'll see that there is now a <guilabel>1</guilabel> at the top, and the topmost rectangle has turned light blue. To load a second sample, click the slot just below it, and then click <inlinemediaobject> <textobject> <phrase> Grey button containing the black characters \"LOAD LAYER\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/loadLayer_off.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> to bring in another sample."
 msgstr "Tras cargar el sample, verás que ahora hay un <guilabel>1</guilabel> arriba, y que el rectángulo de más arriba se ha vuelto azul claro. Para cargar un segundo sample, haz clic en la ranura justo debajo, y luego haz clic en <guibutton>Cargar Capa</guibutton> para meter otro sample."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7524
+#: manual.docbook:7529
 #, fuzzy
 msgid "After bringing in both samples, you'll probably notice that only the <emphasis>first</emphasis> sample is being played whenever you trigger the instrument. This is because you need to set the <emphasis>velocity</emphasis> ranges for the layers. Move your mouse to the sides of the light blue rectangles and you see that you get a <emphasis>left-right drag</emphasis> cursor. Now <emphasis>drag</emphasis> the sample to the left or right (like a curtain). You will now see Layer 2 appear."
 msgstr "Tras insertar los dos samples, probablemente verás que sólo el <emphasis>primer</emphasis> sample se reproduce cuando disparas el instrumento. Esto es porque tienes que configurar los rangos de <emphasis>intensidad</emphasis> para las capas. Mueve el ratón hacia los laterales de los rectángulos azul claro y verás que sale un cursor para arrastrar hacia la derecha o la izquierda. Ahora arrastra el sample hacia la derecha o la izquierda (como una cortina). Ahora verás cómo aparece la Capa 2."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7532
+#: manual.docbook:7537
 #, fuzzy
 msgid "The velocity setting for the layer is 0-velocity on the left, and full velocity on the right. Set up Layer 1 to sound for soft notes, and Layer 2 to sound for hard notes, i.e. Layer 1 on the left and Layer 2 on the right (see <link linkend=\"chpt.instrument_editor.layers.sample_selection\">Sample Selection</link> for further info)."
 msgstr "La configuración de intensidad para la capa es intensidad-0 a la izquierda, e intensidad máxima a la derecha. Configura la Capa 1 para las notas suaves y la Capa 2 para las notas fuertes. (Por ej. la Capa 1 a la izquierda y la Capa 2 a la derecha)."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7537
+#: manual.docbook:7542
 #, fuzzy
 msgid "Now, in the <link linkend=\"chpt.pattern_editor.drumkit\">Drumkit Editor</link>, set up a simple pattern that plays this instrument. Adjust the velocity settings on each note in the <link linkend=\"chpt.pattern_editor.note_properties\">Note Properties Editor</link> so that you can get the different samples to sound. Now, set the playback to <link linkend=\"sect.main_toolbar.transport_control\">loop</link> and notice how your different samples are getting triggered. To learn about editing a pattern, see <xref linkend=\"chpt.pattern_editor\"/>."
 msgstr "Ahora, en la zona de patrones, configura un patrón simple que reproduce este instrumento. Ajusta las configuraciones de intensidad en cada nota para que puedan sonar los diferentes samples. Ahora pon el patrón en modo bucle y notarás la diferencia entre los samples. (Para aprender sobre cómo editar un patrón, consulta <xref linkend=\"chpt.pattern_editor\"/>)"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7544
+#: manual.docbook:7549
 msgid "For each layer, you can set the <guibutton>Gain</guibutton> and the <guibutton>Pitch</guibutton>. The pitch also has a <guibutton>Fine</guibutton> adjustment."
 msgstr "Para cada capa puedes configurar la <guibutton>Ganancia</guibutton> y la <guibutton>Altura tonal</guibutton>. La altura tonal también tiene un ajuste <guibutton>Fino</guibutton>."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7548
+#: manual.docbook:7553
 #, fuzzy
 msgid "Use the <link linkend=\"chpt.instrument_editor.gain_and_mute_group\">Gain</link> adjustment to control how loud the sample will be played. This is necessary because it's extremely difficult to get a set of samples that all sound at about the same volume. By adjusting here, the samples that were recorded too quietly can be turned up to match your loud samples (that had to be turned down)."
 msgstr "Usa el ajuste de <guibutton>Ganancia</guibutton> para controlar el volumen del sample. Esto es necesario porque es muy difícil tener un conjunto de samples que suenen al mismo volumen. Al ajustar esto, los samples que estaban grabados demasiado bajo se pueden subir para igualarlos a los samples altos (que has tenido que bajar)."
 
 #. (itstool) path: warning/para
-#: manual.docbook:7557
+#: manual.docbook:7562
 #, fuzzy
 msgid "It is very easy to set the <guibutton>Gain</guibutton> too high, causing your sample to <link linkend=\"def.clipping\">clip</link>. Remember to test the gain with full-velocity using the <inlinemediaobject> <textobject> <phrase> Grey button with a filled black triangle pointing to the right. </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/btn_play_on_mixer.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button in the corresponding Instrument Channel Strip. If you clip your signal here, it will only get worse as Hydrogen processes it."
 msgstr "Es muy fácil poner el mando de <guibutton>Ganancia</guibutton> demasiado alto, haciendo que el sample quede clipeado (distorsionado). Acuérdate de probar la ganancia con notas de intensidad máxima. Si aquí se te clipea la señal, seguramente empeorará según lo procesa Hydrogen."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7574
+#: manual.docbook:7579
 #, fuzzy
 msgid "The pitch of the sample can be modified with the pitch controls. The <guibutton>Pitch</guibutton> knob adjust the pitch in musical half-steps. (So, <option>-12</option> is down 1 octave). The pitch on the right adjusts the pitch ±50 cents. (One half-step is 100 cents.)"
 msgstr "La altura tonal (pitch) del sample se puede modificar con los controles correspondientes. El mando de <guibutton>Altura Tonal (Pitch)</guibutton> ajusta la altura tonal en semitonos. (Así que -12 baja 1 octava). El mando a la derecha ajusta la altura ±50 cents. (Un semitono son 100 cents.)"
 
 #. (itstool) path: note/para
-#: manual.docbook:7580
+#: manual.docbook:7585
 #, fuzzy
 msgid "The pitch is adjusted by playing the sample back faster or slower. This is called the Doppler Effect. So, if you have a 1-second sample that you turn down <option>12</option> (1 octave), your sample will only last for 0.5-seconds. If you do not want this to happen you should use Rubber Band instead (see <xref linkend=\"chpt.sample_editor.pitch\"/>)"
 msgstr "La altura se ajusta reproduciendo el sample más rápido o más despacio. Esto se llama el Efecto Doppler. Así que si tienes un sample de 1 segundo y lo bajas -12 (1 octava), tu sample sólo durará 0.5-segundoss."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7587
+#: manual.docbook:7592
 msgid "You can hear the sample in a layer by clicking the layer id (just below the 'General' and 'Layers' buttons)."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7592
+#: manual.docbook:7597
 msgid "Tips on Editing Instruments"
 msgstr "Consejos a la hora de Editar Instrumentos"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7594
+#: manual.docbook:7599
 #, fuzzy
 msgid "With all of the different parameters available to tweak, it can be difficult to set up something that sounds nice when you're done. Here are a few tips on setting up an instrument:"
 msgstr "Con todos los parámetros que hay disponibles, puede resultar difícil conseguir algo que suene bien cuando acabes. Aquí van algunos consejos para configurar un instrumento:"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7598
+#: manual.docbook:7603
 #, fuzzy
 msgid "<emphasis role=\"bold\">Turn down the gain.</emphasis> Every gain knob (i.e. an amplifier), this is a <emphasis>gain stage</emphasis>. With every gain stage you have, it's easy to overdrive your signal - which means the signal gets distorted by <link linkend=\"def.clipping\">clipping</link>. In addition, if you have two samples that, by themselves, peg your meters - what do you think happens when you combine them? That's right, you overdrive the signal again."
 msgstr "<emphasis role=\"bold\">Baja la ganancia.</emphasis> Cada vez que tienes un control de ganancia (por ej. un amplificador), esto se llama una <emphasis>etapa de potencia</emphasis>. Con cada etapa de potencia adicional que tengas, es fácil que satures la señal - lo cual significa que la señal se distorsiona debido al clipeo. Además, si tienes dos samples que, por sí solos, ya llegan al límite - ¿qué crees que pasará cuando los combines? Está claro, vuelves a saturar la señal."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7606
+#: manual.docbook:7611
 #, fuzzy
 msgid "If things sound bad and distorted, start by turning down the gain setting on the layer... especially if it's larger than 1.0. Then turn down the instrument gain. Then any gain on a <abbrev>LADSPA</abbrev> effect. Then the fader on the Mixer. Then the master output fader."
 msgstr "Si las cosas suenan mal y distorsionadas, empieza por bajar la ganancia de la capa... sobre todo si es mayor de 1.0. Luego baja la ganancia del instrumento. Luego cualquier ganancia de los efectos LADSPA. Luego el fader del mezclador. Luego el fader de la salida master."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7611
+#: manual.docbook:7616
 #, fuzzy
 msgid "<emphasis role=\"bold\">Test samples at full velocity.</emphasis> Your sample will be played louder if the velocity is higher. So, if you set everything to sound nice and full with velocity at 0.7, what will happen when you get a full velocity of 1.0? (<emphasis>Hint: <link linkend=\"def.clipping\">clipping</link>.</emphasis>)"
 msgstr "<emphasis role=\"bold\">Prueba los samples a la máxima intensidad.</emphasis> El sample sonará más alto si la intensidad es mayor. Así que si lo configuras todo para que suene bien con una intensidad de 0.7, ¿qué pasará cuando tengas una intensidad máxima de 1.0? (<emphasis>Una pista: saturación.</emphasis>)"
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7617
+#: manual.docbook:7622
 msgid "<emphasis role=\"bold\">Try to use samples that are -6 dB max.</emphasis> Visually, this means samples that peak at only 1/2 of full scale. Otherwise, turn your layer gain to about .5."
 msgstr "<emphasis role=\"bold\">Intenta usar samples con -6 dB máx.</emphasis> Visualmente, esto son samples que llegan a su pico máximo sólo a la mitad del rango completo. Si no, deja la ganancia en aproximadamente 0.5."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7622
+#: manual.docbook:7627
 #, fuzzy
 msgid "<emphasis role=\"bold\">Remove all DC offsets from the sample.</emphasis> In a sample editor, there is usually a line down the center of your sample's waveform. This is the zero-line. The beginning of your sample should be on this line. The end of your sample should also be on this line. However, if your signal is a little above or a little below this line, you will hear a click at the beginning and the end of your sample whenever it is played. If your sample editor doesn't provide any tools to fix a DC offset problem, you can eliminate the noise by putting a slight fade-in/out at the ends of your sample."
 msgstr "<emphasis role=\"bold\">Quita todas las desviaciones de CD (DC offset) del sample.</emphasis> En un editor simple de samples, normalmente hay una línea que atraviesa el centro de la onda. Esta es la línea \"cero\". El inicio de tu sample debería de estar sobre esta línea. El final del sample también debería de estar sobre esta línea. Sin embargo, si la señal está un poco por encima o debajo de esta línea, oirás un 'clic' al comienzo y al final del sample cada vez que sea reproducido. Si tu editor de samples no tiene herramientas para arreglar un problema de desviación de CD, puedes eliminarlo poniendo un ligero fundido de entrada y salida en los extremos del sample."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7632
+#: manual.docbook:7637
 #, fuzzy
 msgid "<emphasis role=\"bold\">The ADSR will not be longer than your sample.</emphasis> If you have a short sample, it doesn't matter how long you set the attack and delay - the sample will stop playing at the end."
 msgstr "<emphasis role=\"bold\">El ADSR no será más largo que tu sample.</emphasis> Si tienes un sample corto, no importa cómo configures el attack y el delay - el sample dejará de reproducirse."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7637
+#: manual.docbook:7642
 #, fuzzy
 msgid "<emphasis role=\"bold\">Things change with the sample rate.</emphasis> If you have a really nice setup with all your parameters painstakingly tweaked... things <emphasis>will</emphasis> change if you change the sample rate of your audio card. Many of Hydrogen's internal settings and parameters are based on how many samples go by, not on how many seconds go by. The sorts of things that change are: anything time-base (like attack and release) and anything frequency based (like the cutoff frequency)."
 msgstr "<emphasis role=\"bold\">Las cosas cambian con la tasa de muestreo.</emphasis> Si tienes una configuración realmente buena con todos los parámetros ajustados con esmero... las cosas <emphasis>cambiarán</emphasis> si modificas la tasa de muestreo de tu tarjeta de sonido. Muchas de las funcionalidades y los parámetros internos de Hydrogen están basados en el número de samples que procesa, y no en el número de segundos. El tipo de cosas que cambian son: cualquier cosa basada en el tiempo (como el attack y el release) y cualquier cosa basada en la frecuencia (como la frecuencia de corte)."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7646
+#: manual.docbook:7651
 #, fuzzy
 msgid "Typical samples that are used in Hydrogen are: the sound of a single drum hit, the sound of a single cymbal hit, the sound of a single cowbell hit. Whenever you put a note in the pattern (or play a note using <abbrev>MIDI</abbrev>), Hydrogen will play whatever sound you have loaded. So, to put together a drum kit you need to gather short recordings of the bass drum, each tom, each cymbal, the high hat open, the high hat closed, the snare drum (snare on), the snare drum (snare off), rim shots, etc."
 msgstr "Los samples típicos utilizados en Hydrogen son: el sonido de un golpe simple de batería, el sonido de un golpe simple de plato, el sonido de un golpe simple de cencerro. Cuando metes una nota en el patrón (o reproduces una nota usando MIDI), Hydrogen reproducirá el sonido que hayas cargado. Así que para crear un drumkit tienes que reunir grabaciones cortas del bombo, cada tom, cada plato, el hi hat abierto, el hi hat cerrado, la caja (con bordonero y sin bordonero), golpes del borde, etc."
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7657
+#: manual.docbook:7662
 msgid "However, there are no rules about what a sample can be. It's not uncommon to use Hydrogen to trigger non-drum sounds like: audio clips of people talking, a clip from a song, sound effects, audio clips from movies, and famous people speaking. Be creative!"
 msgstr "Sin embargo, no hay reglas en cuanto a qué puede ser un sample. Es común utilizar Hydrogen para disparar sonidos que no son de batería, tales como: clips de audio de personas hablando, un clip de una canción, efectos de sonido, clips de audio de películas, personas famosas hablando. ¡Se creativo!"
 
 #. (itstool) path: part/title
-#: manual.docbook:7668
+#: manual.docbook:7673
 msgid "Appendix"
 msgstr ""
 
 #. (itstool) path: chapter/title
-#: manual.docbook:7671
+#: manual.docbook:7676
 msgid "Licensing"
 msgstr ""
 
 #. (itstool) path: warning/para
-#: manual.docbook:7673
+#: manual.docbook:7678
 msgid "No one of us is a lawyer and all information found in this section should be taken with a grain of salt and come with no warranty. But we try our best to condense information we found online."
 msgstr ""
 
 #. (itstool) path: chapter/para
-#: manual.docbook:7678
+#: manual.docbook:7683
 msgid "When <link linkend=\"sect.main_form.export_song\">exporting a song</link> or <link linkend=\"sect.main_menu.drumkits.save_as\">saving</link> or <link linkend=\"sect.main_form.export_drumkit\">exporting</link> a drumkit you are reusing and/or redistributing licensed sound samples. Thus you are legally obliged to comply with every license hold by the samples you used."
 msgstr ""
 
 #. (itstool) path: chapter/para
-#: manual.docbook:7681
+#: manual.docbook:7686
 msgid "In this chapter we cover how Hydrogen can help you handle and manage the licenses involved and what the most common ones do imply."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:7686
+#: manual.docbook:7691
 msgid "Our custom data types <link linkend=\"chpt.file_types.h2pattern\">.h2pattern</link>, <link linkend=\"chpt.file_types.h2song\">.h2song</link>, and <link linkend=\"chpt.file_types.h2playlist\">.h2playlist</link> do not contain any samples and are not affected by the issues described in this chapter."
 msgstr ""
 
 #. (itstool) path: warning/para
-#: manual.docbook:7692
+#: manual.docbook:7697
 msgid "If the exact license is not available for a drumkit, do <emphasis role=\"bold\">not</emphasis> assume that it is a <ulink url=\"https://creativecommons.org/about/cclicenses/\">Creative Commons (CC)</ulink> or other open and free license."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: manual.docbook:7699
+#: manual.docbook:7704
 msgid "License Parsing"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7701
+#: manual.docbook:7706
 msgid "Hydrogen does display some info dialogs in case any of the used samples holds a copyleft license, like <xref linkend=\"chpt.license.common_licenses.CC_BY_SA\"/> or <xref linkend=\"chpt.license.common_licenses.GPL\"/>, holds one that require an attribution of the copyright holder (as CC BY* licenses do), or you are mixing different licenses during drumkit saving or export. But all this is only possible if the licenses of the involved drumkits are correctly parsed (and are one of the supported <link linkend=\"chpt.license.common_licenses\">common licenses</link>)."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7704
+#: manual.docbook:7709
 msgid "You can access and alter the license of the drumkit used in the current song via <link linkend=\"sect.main_menu.drumkits.properties\">Drumkits &gt; Properties</link> in the main menu or the license of a stock kit via the <link linkend=\"chpt.sound_library.drumkits\">Sound Library</link>. In addition, you can view all licenses of the contained samples which is especially helpful when mixing instruments of different drumkits in the current song."
 msgstr ""
 
 #. (itstool) path: figure/title
-#: manual.docbook:7709
+#: manual.docbook:7714
 msgid "Dialog to view and alter the Properties of a Drumkit"
 msgstr ""
 
@@ -7988,831 +7993,831 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:7712
+#: manual.docbook:7717
 msgctxt "_"
 msgid "external ref='generated_en/soundLibraryPropertiesDialog.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:7718
+#: manual.docbook:7723
 msgid "Samples loaded directly into Hydrogen using the <link linkend=\"chpt.instrument_editor.layers.layers\">Layer section of the Instrument Editor</link> are not associated to any drumkit until you <link linkend=\"sect.main_menu.drumkits.save\">save</link> it and will be handled as if they are unlicensed. Please take extra care of checking which licenses they are distributed with and what implication their presence has for your song/drumkit."
 msgstr ""
 
 #. (itstool) path: sect1/title
 #. (itstool) path: table/title
-#: manual.docbook:7725 manual.docbook:7735
+#: manual.docbook:7730 manual.docbook:7740
 msgid "Common Licenses"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7727
+#: manual.docbook:7732
 msgid "By default all copyrights of your creative work belongs to you - its creator. But you are obliged to comply with the licenses of the samples you used to create it. In this section you find a list and some short description of the licenses most commonly encountered in Hydrogen drumkits."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: manual.docbook:7730
+#: manual.docbook:7735
 msgid "Also, you are free to abstain from some or all rights by licensing your work with e.g. one of the licenses provided by Creative Commons (CC). This allows other people to reuse it more easily and in a legally secure way and helps the audio community to prosper."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7741
+#: manual.docbook:7746
 msgid "Name"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7742 manual.docbook:7829
+#: manual.docbook:7747 manual.docbook:7834
 msgid "Description"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7747
+#: manual.docbook:7752
 msgid "<ulink url=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7748
+#: manual.docbook:7753
 msgid "The creator choose to give up her copyright and you are free to use, modify, distribute etc. the samples."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7751
+#: manual.docbook:7756
 msgid "<ulink url=\"https://creativecommons.org/licenses/by/4.0/\">CC BY</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7752
+#: manual.docbook:7757
 msgid "You are free to use, modify, distribute etc. the samples but you are obliged to give attribution to the creator. This can be done in e.g. the info property of the new drumkit or in the liner notes of the song you created by reusing the samples."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7755
+#: manual.docbook:7760
 msgid "<ulink url=\"https://creativecommons.org/licenses/by-nc/4.0/\">CC BY-NC</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7756
+#: manual.docbook:7761
 msgid "Similar to <xref linkend=\"chpt.license.common_licenses.CC_BY\"/> but you are in addition only allowed to use the result for noncommercial purposes."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7759
+#: manual.docbook:7764
 msgid "<ulink url=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7760
+#: manual.docbook:7765
 msgid "Similar to <xref linkend=\"chpt.license.common_licenses.CC_BY\"/> but you are obliged to license your work as CC BY-SA as well. This means <emphasis>you have to give the general public permission to modify, redistribute, reuse, and sell it without being able to require them to give royalty to you</emphasis>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7763
+#: manual.docbook:7768
 msgid "<ulink url=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC BY-NC-SA</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7764
+#: manual.docbook:7769
 msgid "Similar to <xref linkend=\"chpt.license.common_licenses.CC_BY_SA\"/> but you are in addition only allowed to use the result for noncommercial purposes."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7767
+#: manual.docbook:7772
 msgid "<ulink url=\"https://creativecommons.org/licenses/by-nd/4.0/\">CC BY-ND</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7768
+#: manual.docbook:7773
 msgid "Similar to <xref linkend=\"chpt.license.common_licenses.CC_BY\"/> but you are not allowed to alter the material and can only use or distribute them in unadapted form."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7771
+#: manual.docbook:7776
 msgid "<ulink url=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY-NC-ND</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7772
+#: manual.docbook:7777
 msgid "Similar to <xref linkend=\"chpt.license.common_licenses.CC_BY_ND\"/> but you are in addition only allowed to use the result for noncommercial purposes."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7775
+#: manual.docbook:7780
 msgid "<ulink url=\"https://www.gnu.org/licenses/gpl-3.0.html\">GPL</ulink>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7776
+#: manual.docbook:7781
 msgid "License similar to <xref linkend=\"chpt.license.common_licenses.CC_BY_SA\"/> but targeted on usage with software instead of creative content. It is discouraged to license your newly created drumkit using this license since it's not clear whether it actually can be legally applied to audio samples. Instead, it's recommanded to stick to the Creative Commons (CC) ones covered above. However, most of the drumkits available in Hydrogen <emphasis>are</emphasis> licensed as GPL and require you to adopt this license too in case you reuse their samples. It's a bit of an unpleasant situation but grew naturally. Most importantly, <emphasis>this license also obliges you to make your product (drumkit/music) available for free!</emphasis>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7779
+#: manual.docbook:7784
 msgid "All rights reserved"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7780
+#: manual.docbook:7785
 msgid "You are not allowed to modify, reuse, or distribute the samples without asking the copyright holder for permission first."
 msgstr ""
 
 #. (itstool) path: chapter/title
-#: manual.docbook:7789
+#: manual.docbook:7794
 #, fuzzy
 msgid "Used File Types"
 msgstr "Tipos de Archivo"
 
 #. (itstool) path: chapter/para
-#: manual.docbook:7791
+#: manual.docbook:7796
 #, fuzzy
 msgid "Before working with Hydrogen, please familiarize with these file types:"
 msgstr "Antes de trabajar con Hydrogen, por favor familiarízate con estos archivos:"
 
 #. (itstool) path: listitem/para
-#: manual.docbook:7796
+#: manual.docbook:7801
 #, fuzzy
 msgid "<emphasis role=\"bold\">*.h2pattern</emphasis>: <abbrev>XML</abbrev> file describing a single pattern. Patterns are group of beats and are managed in the <link linkend=\"chpt.pattern_editor\">Pattern Editor</link>."
 msgstr "<emphasis role=\"bold\">*.h2pattern</emphasis>: Archivo XML que describe un sólo patrón. Los patrones son conjuntos de golpes y se gestionan en el editor de patrones."
 
 #. (itstool) path: listitem/para
-#: manual.docbook:7801
+#: manual.docbook:7806
 msgid "<emphasis role=\"bold\">*.h2song</emphasis>: <abbrev>XML</abbrev> file describing the whole song (or sequence). Songs are groups of patterns managed using the <link linkend=\"chpt.song_editor\">Song Editor</link>, groups of instruments comprising the current drumkit and managed via the <link linkend=\"chpt.instrument_editor\">Instrument Editor</link>, as well as all states not already covered by the <link linkend=\"chpt.preferences\">Preferences</link>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: manual.docbook:7806
+#: manual.docbook:7811
 #, fuzzy
 msgid "<emphasis role=\"bold\">*.h2playlist</emphasis>: <abbrev>XML</abbrev> file describing a playlist. A Playlist is a (ordered) group of songs."
 msgstr "<emphasis role=\"bold\">*.h2playlist</emphasis>: Archivo XML que describe una lista de reproducción. Una Lista de Reproducción es un conjunto de canciones."
 
 #. (itstool) path: listitem/para
-#: manual.docbook:7810
+#: manual.docbook:7815
 #, fuzzy
 msgid "<emphasis role=\"bold\">*.h2drumkit</emphasis>: a compressed folder containing all sound samples composing a drumkit and the description <abbrev>XML</abbrev> file <filename>drumkit.xml</filename> storing the kit's structure and parameters."
 msgstr "<emphasis role=\"bold\">*.h2drumkit</emphasis>: Una carpeta comprimida y archivada que contiene todos los samples de sonidos que componen un \"drumkit\" (una batería) y un archivo XML de descripción. Los drumkits son básicamente un conjunto de samples."
 
 #. (itstool) path: listitem/para
-#: manual.docbook:7814
+#: manual.docbook:7819
 #, fuzzy
 msgid "<emphasis role=\"bold\">*.h2theme</emphasis>: <abbrev>XML</abbrev> file describing all preferences available in the <link linkend=\"chpt.preferences.appearance_tab\">Appearance</link> tab of the <link linkend=\"chpt.preferences\">Preferences</link>."
 msgstr "<emphasis role=\"bold\">*.h2pattern</emphasis>: Archivo XML que describe un sólo patrón. Los patrones son conjuntos de golpes y se gestionan en el editor de patrones."
 
 #. (itstool) path: chapter/title
-#: manual.docbook:7820
+#: manual.docbook:7825
 msgid "Shortcut Lists"
 msgstr ""
 
 #. (itstool) path: table/title
-#: manual.docbook:7822
+#: manual.docbook:7827
 msgid "Shortcut Table"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7828
+#: manual.docbook:7833
 msgid "Shortcut"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7834
+#: manual.docbook:7839
 msgid "<keycap>Ctrl</keycap> + <keycap>N</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7835
+#: manual.docbook:7840
 msgid "New Project"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7838
+#: manual.docbook:7843
 msgid "<keycap>Ctrl</keycap> + <keycap>O</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7839
+#: manual.docbook:7844
 msgid "Open File"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7842
+#: manual.docbook:7847
 msgid "<keycap>Ctrl</keycap> + <keycap>D</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7843
+#: manual.docbook:7848
 msgid "Open Demo"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7846
+#: manual.docbook:7851
 msgid "<keycap>Ctrl</keycap> + <keycap>S</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7847
+#: manual.docbook:7852
 msgid "Save Song"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7850
+#: manual.docbook:7855
 msgid "<keycap>Ctrl</keycap> + <keycap>Shift</keycap> + <keycap>S</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7851
+#: manual.docbook:7856
 msgid "Save Song as"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7854
+#: manual.docbook:7859
 msgid "<keycap>Ctrl</keycap> + <keycap>P</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7855
+#: manual.docbook:7860
 msgid "Export Pattern as"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7858
+#: manual.docbook:7863
 msgid "<keycap>Ctrl</keycap> + <keycap>M</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7859
+#: manual.docbook:7864
 msgid "Export MIDI file"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7862
+#: manual.docbook:7867
 msgid "<keycap>Ctrl</keycap> + <keycap>E</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7863
+#: manual.docbook:7868
 msgid "Export Song (see <xref linkend=\"sect.main_form.export_song\"/>)"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7866
+#: manual.docbook:7871
 msgid "<keycap>Ctrl</keycap> + <keycap>L</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7867
+#: manual.docbook:7872
 msgid "Export LilyPond file"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7870
+#: manual.docbook:7875
 msgid "<keycap>Ctrl</keycap> + <keycap>Q</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7871
+#: manual.docbook:7876
 #, fuzzy
 msgid "Quit Hydrogen"
 msgstr "Utilizar Hydrogen"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7874
+#: manual.docbook:7879
 msgid "<keycap>Ctrl</keycap> + <keycap>Z</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7875
+#: manual.docbook:7880
 msgid "Undo an action"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7878
+#: manual.docbook:7883
 msgid "<keycap>Ctrl</keycap> + <keycap>Shift</keycap> + <keycap>Z</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7879
+#: manual.docbook:7884
 msgid "Redo an action"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7882
+#: manual.docbook:7887
 msgid "<keycap>Alt</keycap> + <keycap>D</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7883
+#: manual.docbook:7888
 msgid "Show <link linkend=\"chpt.director\">Director</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7886
+#: manual.docbook:7891
 msgid "<keycap>Alt</keycap> + <keycap>M</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7887
+#: manual.docbook:7892
 msgid "Show <link linkend=\"chpt.mixer\">Mixer</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7890
+#: manual.docbook:7895
 msgid "<keycap>Alt</keycap> + <keycap>I</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7891
+#: manual.docbook:7896
 msgid "Show <link linkend=\"chpt.sound_library\">Instrument Rack</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7894
+#: manual.docbook:7899
 msgid "<keycap>Alt</keycap> + <keycap>A</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7895
+#: manual.docbook:7900
 msgid "Show <link linkend=\"sect.song_editor.automation_path\">Automation Path</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7898
+#: manual.docbook:7903
 msgid "<keycap>Alt</keycap> + <keycap>F</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7899
+#: manual.docbook:7904
 msgid "Toggle fullscreen mode"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7902
+#: manual.docbook:7907
 msgid "<keycap>Ctrl</keycap> + <keycap>Alt</keycap> + <keycap>I</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7903
+#: manual.docbook:7908
 msgid "Set <link linkend=\"chpt.overview.midi_mapping_and_virtual_keyboard\">Input mode</link> to <option>Instrument</option>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7906
+#: manual.docbook:7911
 msgid "<keycap>Ctrl</keycap> + <keycap>Alt</keycap> + <keycap>D</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7907
+#: manual.docbook:7912
 msgid "Set <link linkend=\"chpt.overview.midi_mapping_and_virtual_keyboard\">Input mode</link> to <option>Drumkit</option>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7910
+#: manual.docbook:7915
 msgid "<keycap>Alt</keycap> + <keycap>P</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7911
+#: manual.docbook:7916
 msgid "Show <link linkend=\"chpt.preferences\">Preferences</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7914
+#: manual.docbook:7919
 msgid "<keycap>Alt</keycap> + <keycap>?</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7915
+#: manual.docbook:7920
 #, fuzzy
 msgid "Show Manual"
 msgstr "Manual de Hydrogen"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7918
+#: manual.docbook:7923
 msgid "<keycap>Backspace</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7919
+#: manual.docbook:7924
 #, fuzzy
 msgid "Restart song or pattern from the beginning"
 msgstr "<emphasis role=\"bold\">[Retroceso]</emphasis> = Volver al principio de una canción o un patrón"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7922
+#: manual.docbook:7927
 msgid "<keycap>Space</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7923
+#: manual.docbook:7928
 msgid "Play / Pause"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7926
+#: manual.docbook:7931
 msgid "<keycap>Ctrl</keycap> + <keycap>Space</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7927
+#: manual.docbook:7932
 msgid "Starts playback at the current cursor position. If playback is already rolling, it will relocate to the cursor position without pausing or stopping playback. Note that on MacOS this shortcut is bound to <keycap>Alt</keycap> + <keycap>Space</keycap>."
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7930
+#: manual.docbook:7935
 msgid "<keycap>,</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7931
+#: manual.docbook:7936
 msgid "Use the <link linkend=\"sect.main_toolbar.tap_tempo_beat_counter.beat_counter\">Beat Counter</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7934
+#: manual.docbook:7939
 msgid "<keycap>\\</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7935
+#: manual.docbook:7940
 msgid "Use <link linkend=\"sect.main_toolbar.tap_tempo_beat_counter.tap_tempo\">Tap Tempo</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7938
+#: manual.docbook:7943
 msgid "<keycap>+</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7939
+#: manual.docbook:7944
 msgid "Increase tempo by 0.1 BPM"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7942
+#: manual.docbook:7947
 msgid "<keycap>-</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7943
+#: manual.docbook:7948
 msgid "Decrease tempo by 0.1 BPM"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7946
+#: manual.docbook:7951
 msgid "<keycap>F5</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7947
+#: manual.docbook:7952
 msgid "Jump to previous song in <link linkend=\"chpt.playlist_editor\">playlist</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7950
+#: manual.docbook:7955
 msgid "<keycap>F6</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7951
+#: manual.docbook:7956
 msgid "Jump to next song in <link linkend=\"chpt.playlist_editor\">playlist</link>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7954
+#: manual.docbook:7959
 msgid "<keycap>F9</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7955
+#: manual.docbook:7960
 msgid "Jump to previous bar in the song"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7958
+#: manual.docbook:7963
 msgid "<keycap>F10</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7959
+#: manual.docbook:7964
 msgid "Jump to next bar in the song"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7962
+#: manual.docbook:7967
 msgid "<keycap>F12</keycap>"
 msgstr ""
 
 #. (itstool) path: row/entry
-#: manual.docbook:7963
+#: manual.docbook:7968
 msgid "Panic button (stops the song and mutes all playing sounds)"
 msgstr ""
 
 #. (itstool) path: glossary/title
-#: manual.docbook:7972
+#: manual.docbook:7977
 msgid "Glossary"
 msgstr "Glosario"
 
 #. (itstool) path: glossary/para
-#: manual.docbook:7974
+#: manual.docbook:7979
 #, fuzzy
 msgid "This is a glossary of general terms encountered when using Hydrogen, synthesizers, drums, or samplers. The definitions here provide more detail and explanation than the simplified ones in the text. For example, the text of the manual would have you believe that an ADSR is the only kind of envelope generator and could only ever control the volume. While the simplified definitions help new users start using Hydrogen quickly, they can lack the nuances presented here."
 msgstr "Esto es un glosario de términos generales que se encuentran al utilizar Hydrogen, sintetizadores, baterías o samplers. Las definiciones del texto están simplificadas, pero las definiciones aquí son más generales y están más explicadas. Por ejemplo, el texto del manual te llevaría a creer que un ADSR es el único tipo de generador de envolventes (envelope generator), y que sólo controla el volumen. Mientras que sirve para nuevos usuarios, no es del todo correcto."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:7987
+#: manual.docbook:7992
 msgid "ADSR"
 msgstr "ADSR"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:7989
+#: manual.docbook:7994
 msgid "A type of envelope generator that allows you to control the <link linkend=\"def.attack\">Attack</link>, <link linkend=\"def.decay\">Decay</link>, <link linkend=\"def.sustain\">Sustain</link>, and <link linkend=\"def.release\">Release</link> parameters. Generally, the parameters are proportional to the <link linkend=\"def.velocity\">velocity</link>."
 msgstr "Un tipo de generador de envolventes que te permite controlar los parámetros de <link linkend=\"def.attack\">Attack</link>, <link linkend=\"def.decay\">Decay</link>, <link linkend=\"def.sustain\">Sustain</link>, y <link linkend=\"def.release\">Release</link>. Generalmente, los parámetros son proporcionales a la <link linkend=\"def.velocity\">intensidad</link>."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:7997
+#: manual.docbook:8002
 #, fuzzy
 msgid "After you trigger a note, Hydrogen will start the <link linkend=\"def.attack\">attack</link> phase in which the volume of the note is increase from 0 to its full <link linkend=\"def.velocity\">velocity</link>. After reaching full velocity, the volume will <link linkend=\"def.decay\">decay</link> until it reaches the <link linkend=\"def.sustain\">sustain</link> level. When the note is <link linkend=\"def.release\">released</link>, Hydrogen reduces the volume from the sustain level back down to 0."
 msgstr "Un generador de envolventes de Attack (Ataque)/Decay (Decaimiento)/Sustain/Release. Tras disparar una nota, Hydrogen <emphasis>atacará</emphasis> la nota incrementando su volumen de 0 hasta la plena intensidad de la nota. Tras llegar a la máxima intensidad, <emphasis>decaerá</emphasis> la nota bajando el volumen hasta que alcanza el nivel del <emphasis>sustain</emphasis>. Cuando la nota se <emphasis>suelta</emphasis>, (release) Hydrogen vuelve a reducir el volumen desde el nivel de sustain hasta 0."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8006
+#: manual.docbook:8011
 msgid "In Hydrogen, the ADSR envelope generator only controls the volume (attenuation)."
 msgstr "En Hydrogen, el 'ADSR envelope generator' sólo controla el volumen (atenuación)."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8009
+#: manual.docbook:8014
 msgid "Read more about this in the Wikipedia Article <ulink url=\"http://en.wikipedia.org/wiki/ADSR_envelope\">ADSR Envelope</ulink>"
 msgstr "Lee más sobre esto en el Artículo de Wikipedia (en inglés) <ulink url=\"http://en.wikipedia.org/wiki/ADSR_envelope\">ADSR Envelope</ulink>"
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8022
+#: manual.docbook:8027
 msgid "Attack"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8024
+#: manual.docbook:8029
 #, fuzzy
 msgid "This is the first phase of an <link linkend=\"def.adsr\">ADSR</link> envelope. It represents the amount of <emphasis>time</emphasis> to increase the volume of a note from 0 (triggering) to full <link linkend=\"def.velocity\">velocity</link>."
 msgstr "Esta es la primera fase de un 'ADSR envelope', y es la cantidad de <emphasis>tiempo</emphasis> necesario para subir el parámetro de 0 a la máxima intensidad tras disparar la nota."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8033
+#: manual.docbook:8038
 msgid "Attenuation"
 msgstr "Atenuación"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8035
+#: manual.docbook:8040
 msgid "In filters and mixers, this the amount that a signal is reduced (volume)."
 msgstr "En filtros y mezcladores, esto es la reducción de la señal (volumen)."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8045
+#: manual.docbook:8050
 msgid "Band-Pass Filter"
 msgstr "Band-Pass Filter"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8047
+#: manual.docbook:8052
 #, fuzzy
 msgid "A filter that preserves a certain band of frequencies, and attenuates (silences) all others. This is often done by combining a high-pass and a low-pass filter."
 msgstr "Un filtro que conserva cierto rango de frecuencias, y atenúa (silencia) todos los demás. A menudo se hace esto combinando un filtro high-pass y otro filtro low-pass."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8060
+#: manual.docbook:8065
 msgid "Clipping"
 msgstr "Saturación (Clipping)"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8062
+#: manual.docbook:8067
 #, fuzzy
 msgid "A phenomenon that happens to a signal when its amplitude is too large for whatever is receiving it. The peaks of the signal (which are normally smooth curves) get cut off straight at the max volume (clipped). This distorts the sound and is usually undesirable."
 msgstr "Un fenómeno que afecta a una señal cuando es demasiado grande para lo que sea que lo recibe. Los picos de la señal (que normalmente son curvas redondeadas) se cortan al máximo volumen (clipeados). Esto distorsiona el sonido y normalmente no es deseable."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8067
+#: manual.docbook:8072
 msgid "An example of clipping is when you play music louder than your speaker can handle. Parts of the music sound harsh and fuzzy."
 msgstr "Un ejemplo de saturación es cuando reproduces música a un volumen mayor de lo que puede soportar el altavoz. Algunas partes de la música suenan desgarradas y borrosas."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8073
+#: manual.docbook:8078
 msgid "Component"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8075
+#: manual.docbook:8080
 msgid "A component is a part of Hydrogen's instrument model. Instrument consist of one or more components, and each component consists of one or more layers."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:8089
+#: manual.docbook:8094
 msgid "Components will be created for all instruments. So, even if you just want to have two of them in the snare you will automatically have two components in all other instruments. If you thus remove an empty component in one instrument, you will remove it for all other instruments - even if they are non-empty - too."
 msgstr ""
 
 #. (itstool) path: note/para
-#: manual.docbook:8092
+#: manual.docbook:8097
 msgid "In addition, all <link linkend=\"def.layer\">layers</link> belonging to the same component do share a common volume fader in the <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link> in the Mixer."
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8080
+#: manual.docbook:8085
 msgid "To make an example: A snare could have two components. One component includes sounds from the top side of the snare drum, and the other component includes the sounds from the bottom side of the snare drum (where the snare wires are fitted). Each component can consist of several layers (snare drum hits with different velocities). Now you can adjust the volume of the two components to build your ideal drum sound. If you want more of the attack, you can put in more of the \"top head\" component. If you want more of the snare wires, you put in more of the bottom component. <_:note-1/>"
 msgstr ""
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8101
+#: manual.docbook:8106
 msgid "Cutoff Frequency"
 msgstr "Frecuencia de Corte (Cutoff Frequency)"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8103
+#: manual.docbook:8108
 msgid "On high-pass and low-pass filters, this is the frequency that divides between those that pass, and those that are attenuated (silenced). In a high-pass resonance filter, or a low-pass resonance filter, the cutoff is also the frequency zone that gets boosted."
 msgstr "En los filtros high-pass y low-pass, esta es la frecuencia que divide entre entre aquellas que pasan, y aquellas que se atenúan (silenciadas). En un filtro de 'high-pass resonance', o uno de 'low-pass resonance', el corte es también la zona de frecuencias que se amplifican."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8108
+#: manual.docbook:8113
 msgid "For example, if you have a low-pass filter and you set the cutoff frequency high (i.e. 20kHz)... the filter will not affect the sound. All the audible frequencies will pass through undisturbed. As you lower the cutoff frequency to something like 40 Hz (the low string on a bass guitar), it sounds like someone is putting a blanket over the speaker. The higher frequencies are being attenuated above 30 Hz."
 msgstr "Por ejemplo, si tienes un filtro low-pass y configuras una frecuencia de corte alta (por ej. 20kHz)... el filtro no afectará al sonido. Todas las frecuencias audibles pasarán sin modificarse. Al bajar la frecuencia de corte a algo como 40 Hz (la cuerda gruesa de un bajo), suena como si alguien tapara el altavoz con una manta. Las frecuencias altas se están atenuando por encima de los 30 Hz."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8125
+#: manual.docbook:8130
 msgid "Decay"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8127
+#: manual.docbook:8132
 msgid "After the <link linkend=\"def.attack\">attack</link> phase, this is the amount of <emphasis>time</emphasis> for the volume of a note to decrease from full <link linkend=\"def.velocity\">velocity</link> to the <link linkend=\"def.sustain\">sustain</link> level."
 msgstr ""
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8136
+#: manual.docbook:8141
 msgid "DC-offset"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8138
+#: manual.docbook:8143
 msgid "DC offset, or DC coefficient is the mean value of the waveform."
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8139
+#: manual.docbook:8144
 msgid "DC offset is usually undesirable. For example, in audio processing, a sound that has DC offset will not be at its loudest possible volume when <link linkend=\"def.normalization\">normalized</link> (because the offset consumes headroom), and this problem can possibly extend to the mix as a whole, since a sound with DC offset and a sound without DC offset will have DC offset when mixed. It may also cause other artifacts depending on what is being done with the signal."
 msgstr ""
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8152
+#: manual.docbook:8157
 msgid "Envelope Generator"
 msgstr "Generador de la Envolvente (Envelope Generator)"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8154
+#: manual.docbook:8159
 msgid "A way to control (change) a parameter over time as a response to triggering, holding, and releasing a note."
 msgstr "Una manera de controlar (cambiar) un parámetro a lo largo del tiempo como respuesta al disparo, sostenimiento y liberación de una nota."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8160
+#: manual.docbook:8165
 msgid "Did your eyes just glaze over? Let's try again:"
 msgstr "¿Se te acaba de nublar la vista? Intentémoslo de nuevo:"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8162
+#: manual.docbook:8167
 msgid "Imagine that you're playing a note on the keyboard and you have your other hand on a knob (volume, filter cutoff, etc.). As you play the note, you twist the knob (often up, then down... or down, then up). You do the same thing on each note. That's what an envelope generator does. See also <link linkend=\"def.adsr\">ADSR</link>"
 msgstr "Imagina que estás tocando una nota en el teclado y tienes la otra mano en un mando (volumen, filtro de corte, etc.). Según tocas la nota, giras e mando (hacia arriba, luego abajo... o viceversa). Haces lo mismo con cada nota. Esto es lo que hace el 'envelope generator'. Consulta también <link linkend=\"def.adsr\">ADSR</link>"
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8173
+#: manual.docbook:8178
 msgid "Fader"
 msgstr "Fader"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8175
+#: manual.docbook:8180
 msgid "A slider control used to adjust the attenuation (volume) in a mixer. Faders always have an \"audio\" taper, which means that the attenuation amount changes on an exponential scale."
 msgstr "Un control deslizante utilizado para ajustar la atenuación (volumen) en un mezclador. Los faders siempre tienen un potenciómetro de \"audio\", lo que significa que los cambios de atenuación tienen lugar en una escala exponencial."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8182
+#: manual.docbook:8187
 msgid "Filter"
 msgstr "Filtro"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8184
+#: manual.docbook:8189
 msgid "A device that changes a sound by attenuating specific frequencies. A tone knob is an example of a simple, low-pass filter."
 msgstr "Un dispositivo que cambia un sonido atenuando frecuencias específicas. Un control de tono es un ejemplo de un filtro simple de 'low pass'."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8197
+#: manual.docbook:8202
 msgid "Gain"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8199
+#: manual.docbook:8204
 msgid "In an amplifier, this adjust how much (or how little) a signal is amplified (volume). A higher gain value is a louder signal."
 msgstr "En un amplificador, determina cuánto se amplifica una señal (volumen). A mayor valor de ganancia, más volumen."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8207
+#: manual.docbook:8212
 msgid "High-Pass Filter"
 msgstr "Filtro 'High-Pass'"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8209
+#: manual.docbook:8214
 msgid "A filter that attenuates (silences) low frequencies, but allows high frequencies to pass through."
 msgstr "Un filtro que atenúa (silencia) frecuencias bajas, pero que permite el paso de frecuencias altas."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8220
+#: manual.docbook:8225
 msgid "Instrument"
 msgstr "Instrumento"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8222
+#: manual.docbook:8227
 msgid "In Hydrogen, an instrument is a single noise-maker (like a bass drum kick, or a tom)."
 msgstr "En Hydrogen, un instrumento es un único generador de ruido (como puede ser un bombo o un tom)."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8233
+#: manual.docbook:8238
 msgid "Layer"
 msgstr "Capa"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8235
+#: manual.docbook:8240
 msgid "In an instrument you can load several different samples (each one called a <emphasis role=\"bold\">layer</emphasis>), and have a different sample play depending on the velocity of the note. Only one sample at a time will play."
 msgstr "En un instrumento, puedes cargar varios samples diferentes <emphasis role=\"bold\">capa</emphasis>), y hacer que suene un sample diferente dependiendo de la intensidad de la nota. Sólo sonará un sample a la vez."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8240
+#: manual.docbook:8245
 #, fuzzy
 msgid "Suppose you have a sample of a floor tom being struck softly. If you simply play the sample louder - it will <emphasis>not</emphasis> sound the same as a real tom that has been struck very hard. If you wish to mimic this in your instrument, you can load one sample for soft playing, and a different sample for loud playing."
 msgstr "Supón que tienes un sample de un golpe suave de timbal base. Si simplemente reproduces el sample más alto - <emphasis>no</emphasis> sonará igual que un golpe fuerte en un tom de verdad. Si quieres imitar esto en tu instrumento, puedes cargar un sample par los golpes suaves, y otro sample para los fuertes."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8252
+#: manual.docbook:8257
 msgid "Low-Pass Filter"
 msgstr "Filtro Low-Pass"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8254
+#: manual.docbook:8259
 #, fuzzy
 msgid "A filter that attenuates (silences) high frequencies, but allows low frequencies to pass through."
 msgstr "Un filtro que atenúa (silencia) frecuencias altas, pero que permite el paso de frecuencias bajas."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8265
+#: manual.docbook:8270
 msgid "Mute"
 msgstr "Silencio (Mute)"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8267
+#: manual.docbook:8272
 msgid "To make no noise. A setting on an instrument that prevents any audio output."
 msgstr "Para no hacer sonido. Una función del instrumento que evita cualquier salida de audio."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8273
+#: manual.docbook:8278
 msgid "Mute Group"
 msgstr "Grupo de Silencio (Mute Group)"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8275
+#: manual.docbook:8280
 msgid "A group of instruments (<link linkend=\"def.sample\">samples</link>) out of which only a single one can be unmuted. If another instrument from the same group is triggered, the former one will be <link linkend=\"def.mute\">muted</link> (stop playing) immediately."
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8277
+#: manual.docbook:8282
 #, fuzzy
 msgid "This is typically used in hi-hats, where there's a different instrument (sample) for when the hi-hat is open or closed. With a real hi-hat, the sound of the open hi-hat will stop as soon as you close it. However, if you use two samples - the open sound will continue even after you have triggered the closed sound. By placing both instruments in the same mute group (group #1, for example)... triggering closed sound will immediately stop the open sound (and vice versa)."
 msgstr "Esto se utiliza normalmente para los hi-hats, donde hay un instrumento (sample) diferente para cuando está abierto y cerrado. Con un hi-hat real, el sonido abierto parará en cuanto lo cierres. Sin embargo, si utilizas dos samples - el sonido de abierto continuará aún después de disparar el sonido de cerrado. Al colocar ambos instrumentos en el mismo grupo (grupo #1, por ejemplo)... al disparar el sonido de cerrado el de abierto se parará automáticamente (y vice versa)."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8291
+#: manual.docbook:8296
 msgid "Normalization"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8293
+#: manual.docbook:8298
 msgid "Normalization is the process of applying a uniform <link linkend=\"def.gain\">gain</link> to an audio signal in order to make its largest amplitude peak match a predefined value (usually 0dBFS)."
 msgstr ""
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8301
+#: manual.docbook:8306
 msgid "Octave"
 msgstr "Octava"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8303
+#: manual.docbook:8308
 msgid "A span of frequencies where the top-most frequency is exactly twice the frequency of the bottom frequency."
 msgstr "Un rango de frecuencias donde la más alta es exáctamente el doble de la más baja."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8306
+#: manual.docbook:8311
 msgid "For example, the range 20 Hz to 40 Hz is an octave. So is 120 Hz to 240 Hz, and 575 Hz to 1150 Hz. While the frequency differences are very different (20 Hz, 120 Hz, and 575 Hz, respectively), to the human ear they <emphasis>sound</emphasis> like the same distance."
 msgstr "Por ejemplo, el rango de 20 Hz a 40 Hz es una octava. Como lo es de 120 Hz a 240 Hz, y de 575 Hz a 1150 Hz. Mientras que las diferencias de frecuencia son muy variadas (20 Hz, 120 Hz, y 575 Hz, respectivamente), para el oído humano <emphasis>suenan</emphasis> como si les separara la misma distancia."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8317
+#: manual.docbook:8322
 msgid "Pan"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8319
+#: manual.docbook:8324
 msgid "Panning allows you to change the position of both a mono and stereo sample within the stereo sound field of the resulting audio output. In other words, it controls whether the sound of e.g. the snare is coming from the left or right speaker or somewhere in between. With careful pan adjustments of the different instruments you can make you drumkit sound more natural and simulate the feeling of listening to a real kit in close distance."
 msgstr ""
 
 #. (itstool) path: figure/title
-#: manual.docbook:8329
+#: manual.docbook:8334
 msgid "Visualization of the Interaction of the Different Pan Parameters"
 msgstr ""
 
@@ -8821,101 +8826,101 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: manual.docbook:8332
+#: manual.docbook:8337
 msgctxt "_"
 msgid "external ref='matrioskaPanH2.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8322
+#: manual.docbook:8327
 msgid "The effect of <link linkend=\"chpt.pattern_editor.note_properties.pan\">note Pan</link> depends on the <link linkend=\"chpt.mixer.channel_strips.pan\">instrument Pan</link> knob, which is set in the <link linkend=\"chpt.mixer.channel_strips\">Mixer</link>. Look to next figure to see how the <emphasis role=\"bold\">Resultant Pan</emphasis> is determined (from version 1.1): <_:figure-1/> This multi-pan model resembles a \"matryoshka\" in some way: the <emphasis>note Pan</emphasis> value moves the <emphasis>Resultant Pan</emphasis> in a smaller pan range centered at <emphasis>instrument Pan</emphasis>, whose extension depends on <emphasis>instrument Pan</emphasis> value. Some examples: if <emphasis>instrument Pan</emphasis> is central, <emphasis>note Pan</emphasis> moves the signal in the whole stereo range (really from Left to Right); if <emphasis>instrument Pan</emphasis> is sided, <emphasis>note Pan</emphasis> moves the signal in a progressively smaller stereo range centered at <emphasis>instrument Pan</emphasis>; if <emphasis>instrument Pan</emphasis> is HARD-sided, <emphasis>note Pan</emphasis> doesn't have any effect."
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8348
+#: manual.docbook:8353
 msgid "The way the <emphasis>Resultant Pan</emphasis> will be translated into the volume of each stereo channel is determined by the <link linkend=\"chpt.mixer.master_fader_strip.mixer_settings\">Pan Law</link> in the Mixer settings."
 msgstr ""
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8360
+#: manual.docbook:8365
 msgid "Release"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8362
+#: manual.docbook:8367
 #, fuzzy
 msgid "The amount of <emphasis>time</emphasis> to reduce the volume of a note from the <link linkend=\"def.sustain\">sustain</link> level to 0."
 msgstr "Tras soltar/liberar la nota, esto es la cantidad de <emphasis>tiempo</emphasis> necesario para reducir el parámetro del nivel de sustain a 0."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8371
+#: manual.docbook:8376
 msgid "Resonance"
 msgstr "Resonancia"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8373
+#: manual.docbook:8378
 msgid "When referring to a resonance filter, this is the parameter that determines how much of a boost (gain) to give the frequencies at the cutoff."
 msgstr "Al referirnos al filtro de resonancia, esto es el parámetro que determina cuánta ganancia se da a las frecuencias en el corte."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8382
+#: manual.docbook:8387
 msgid "Resonance Filter"
 msgstr "Filtro de Resonancia"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8384
+#: manual.docbook:8389
 msgid "A filter that gives a large boost to a very narrow range of frequencies. Typically it will be part of a high-pass or a low-pass filter, where the boosted frequencies are centered on the cut-off frequency."
 msgstr "Un filtro que amplifica un estrecho rango de frecuencias. Típicamente formará parte de un filtro high-pass o low-pass, donde las frecuencias amplificadas se centran en la frecuencia de corte."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8398
+#: manual.docbook:8403
 msgid "Roll-off"
 msgstr "Roll-off"
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8400
+#: manual.docbook:8405
 msgid "This is the amount that frequencies are attenuated (suppressed) as the frequency changes (typically measured in dB/octave)."
 msgstr "Esta es la cantidad de atenuación (supresión) aplicada a las frecuencias según cambia la frecuencia (normalmente medido en dB/octava)."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8403
+#: manual.docbook:8408
 #, fuzzy
 msgid "For example, in a low-pass filter the frequencies below the cutoff frequency are not attenuated (they pass-through with the same volume). Same with the cutoff frequency. As you go above the cutoff frequency, the frequencies that are near the cutoff frequency are not attenuated very much at all. However, the frequencies that are much higher than the cutoff are attenuated (suppressed) a lot. This is usually approximated by a straight line (on a log scale) and measured in in dB of attenuation per octave of frequency."
 msgstr "Por ejemplo, en un filtro low-pass las frecuencias or debajo de la frecuencia de corte no se atenúan (pasan con el mismo volumen). Lo mismo que con la frecuencia de corte. Al superar la frecuencia de corte, las frecuencias que se encuentran cerca de la frecuencia de corte no se atenúan mucho. Sin embargo, las frecuencias que superan mucho el de corte se atenúan (silencian) mucho. Esto normalmente se aproxima mediante una línea recta (en una escala logarítmica) y se mide en dB de atenuación por cada octava de frecuencia."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8420
+#: manual.docbook:8425
 msgid "Sample"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8422
+#: manual.docbook:8427
 msgid "A short recording of a sound, typically between .1 and 3.0 seconds long. Each time a note is triggered within Hydrogen the corresponding sample will be played back (after applying all customization and effects)."
 msgstr ""
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8428
+#: manual.docbook:8433
 msgid "Sustain"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8430
+#: manual.docbook:8435
 #, fuzzy
 msgid "The <emphasis>level</emphasis> (how loud; volume) to hold the note between the <link linkend=\"def.decay\">decay</link> and the <link linkend=\"def.release\">release</link>. It is given as percentage of the <link linkend=\"def.velocity\">velocity</link> and does not depend on time."
 msgstr "El <emphasis role=\"bold\">nivel</emphasis> (el volumen) en el que la nota se sostiene entre el sustain y el release. Es un porcentaje de la intensidad. No depende del tiempo."
 
 #. (itstool) path: glossentry/glossterm
-#: manual.docbook:8442
+#: manual.docbook:8447
 msgid "Velocity"
 msgstr ""
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8444
+#: manual.docbook:8449
 msgid "How hard you hit a note."
 msgstr "La fuerza con la que golpeas una nota."
 
 #. (itstool) path: glossdef/para
-#: manual.docbook:8446
+#: manual.docbook:8451
 #, fuzzy
 msgid "<abbrev>MIDI</abbrev> devices are required to send this information along with the note. Synthesizers use this information to adjust several parameters on the sample (typically the volume). In Hydrogen, it is only used to adjust how loud the sample is played back."
 msgstr "Los dispositivos MIDI deben enviar esta información junto con la nota. Los sintetizadores utilizan esta información para ajustar varios parámetros en el sample (normalmente el volumen). En Hydrogen, sólo se utiliza para determinar el volumen al que se reproduce el sample."

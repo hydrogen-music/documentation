@@ -6272,7 +6272,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	        </para></listitem>
             
             <listitem><para>
-	          <emphasis role="bold">PROGRAM_CHANGE</emphasis>: <ulink url="http://en.wikipedia.org/wiki/MIDI_Machine_Control">
+	          <emphasis role="bold">PROGRAM_CHANGE</emphasis>: 
 	          usually intended to change the sound of instruments or to select different sound banks.
 	        </para></listitem>
 	        

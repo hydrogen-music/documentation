@@ -98,25 +98,26 @@ grab SongEditorPositionRuler as songEditorPositionRuler.png size 640 25 offset 0
 
 grab SongEditorBackPanel as bg_topPanel.png offset 0 22
 grab SongEditorBackPanel as btn_lock.png offset 142 25 size 25 21
-# This changes to pattern mode asynchronously. We do it a number of
-# calls prior to stacked mode grabbing since it requires some time
-# to take effect in the GUI.
-slot PlayerControl activateSongMode false
-slot SongEditorPanel activateSelectMode true
 
 slot SongEditorPanel toggleAutomationAreaVisibility
 grab SongEditorAutomationPathView as songEditorAutomationPathView.png size 640 64
 slot SongEditorPanel toggleAutomationAreaVisibility
 
 grab SongEditorBackPanel as btn_clear_off.png offset 2 25 size 61 21
+slot SongEditorPanel activateSelectMode true
 grab SongEditorBackPanel as btn_select.png offset 116 25 size 25 21
 slot SongEditorPanel activateSelectMode false
 slot SongEditorPanel activateStackedMode false
+slot PlayerControl activateSongMode false
 grab SongEditorBackPanel as btn_pattern_mode.png offset 168 25 size 25 21
 slot SongEditorPanel activateStackedMode true
 grab SongEditorBackPanel as btn_new_on.png offset 64 25 size 25 21
 grab SongEditorBackPanel as btn_updown.png offset 90 25 size 25 21
 grab TimelineBtn as songEditorTimelineButton.png
+
+grab SongEditorBackPanel as btn_draw.png offset 116 25 size 25 21
+grab SongEditorBackPanel as btn_stacked_mode.png offset 168 25 size 25 21
+slot PlayerControl activateSongMode true
 
 grab SongEditorPlaybackTrackFader as songEditorPlaybackTrackFader.png
 grab SongEditorPlaybackTrackMuteButton as songEditorPlaybackTrackMuteButton.png
@@ -139,12 +140,6 @@ slot SongEditorPatternList patternPopup_fill
 slot SongEditorPatternList patternPopup_properties
   grab PatternPropertiesDialog as pattern_properties.png
   slot PatternPropertiesDialog close
-
-# We delay this one as the change to stacked mode is done
-# asynchronously and has to reach GUI.
-grab SongEditorBackPanel as btn_draw.png offset 116 25 size 25 21
-grab SongEditorBackPanel as btn_stacked_mode.png offset 168 25 size 25 21
-slot PlayerControl activateSongMode true
 
 grab TimeLineToggleBtn as btn_view_timeline.png
 slot SongEditorPanel showHideTimeline false
