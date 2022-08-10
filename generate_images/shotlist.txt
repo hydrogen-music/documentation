@@ -1,11 +1,19 @@
 # Shot list: screenshots for Hydrogen manual
 
 slot MainForm setMainWindowSize 960 600
+# We'll grab the CPU status bar widget at the very beginning in order
+# to avoid capturing red ones due to XRUNs
+grab PlayerControl as MainToolbar_V2.png
+grab JackPanel as MidiIN_CPU.png size -1 25
+
+grab LcdBackground as mixer-instrrack_btn.png
+
+grab MainMenu as MainMenu.png size 600 44
 
 # Set up default view: timeline, drum pattern editor and velocity editor
 slot PatternEditorPanel showDrumEditor
 slot MainForm action_window_showTimeline
-slot PropertiesCombo select 0
+slot PropertiesCombo setCurrentIndex 0
 grab MainForm as GUI_Sections_Background.png
 
 
@@ -23,12 +31,22 @@ slot MainForm showPreferencesDialog
 
   slot PreferencesTabs setCurrentWidget MIDISystemTab
   grab PreferencesDialog as MidiSystem_V2.png
+  grab MidiSenseButton as midiSenseButton.png
 
   slot PreferencesTabs setCurrentWidget OSCTab
   grab PreferencesDialog as PreferencesOSC.png
 
   slot PreferencesTabs setCurrentWidget AppearanceTab
-  grab PreferencesDialog as PreferencesAppearance_V2.png
+  slot AppearanceTabTabs setCurrentWidget AppearanceInterfaceTab
+  grab PreferencesDialog as preferencesInterfaceTab.png
+  slot AppearanceTabTabs setCurrentWidget AppearanceColorTab
+  grab PreferencesDialog as preferencesColorsTab.png
+  slot AppearanceTabTabs setCurrentWidget AppearanceFontTab
+  grab PreferencesDialog as preferencesFontTab.png
+
+  grab exportThemeButton as preferencesExportThemeButton.png
+  grab importThemeButton as preferencesImportThemeButton.png
+  grab resetThemeButton as preferencesResetThemeButton.png
 
   slot PreferencesDialog close
 
@@ -49,29 +67,61 @@ slot MainForm action_debug_showAudioEngineInfo
 
 
 # Main Toolbar
-grab PlayerControl as MainToolbar_V2.png
 grab ControlsPanel as background_Control_V2.png offset 164 14 size 171 24
 grab BeatCounter as MeasureSettings.png
 grab BeatCounterOnOff as btn_bc_off.png
+slot PlayerControl bcSetPlayBtnClicked
+grab BeatCounterSetPlayButton as btn_bc_set_play_off.png
+slot PlayerControl bcSetPlayBtnClicked
+grab BeatCounterSetPlayButton as btn_bc_set_play_on.png
 grab BPM as background_BPM.png
-grab JackPanel as MidiIN_CPU.png size -1 26
-grab JackPanel as JackTrans_Master.png offset 0 23
-grab LcdBackground as mixer-instrrack_btn.png
+grab JackPanel as JackTrans_Master.png offset 0 23 size -1 18
+grab MetronomeButton as btn_metronome_off.png
+grab PlayerControlRewindButton as playerControlRewindButton.png
+grab PlayerControlRecordButton as playerControlRecordButton.png	
+grab PlayerControlPlayButton as playerControlPlayButton.png
+grab PlayerControlStopButton as playerControlStopButton.png
+grab PlayerControlForwardButton as playerControlForwardButton.png
+grab PlayerControlLoopButton as playerControlLoopButton.png
+grab PlayerControlPatternModeButton as playerControlPatternModeButton.png
+grab PlayerControlSongModeButton as playerControlSongModeButton.png
+grab PlayerControlRubberbandButton as playerControlRubberbandButton.png
+grab PlayerControlJackTransportButton as playerControlJackTransportButton.png
+grab PlayerControlJackMasterButton as playerControlJackMasterButton.png
 
 # Song Editor
-grab SongEditorPanel as EnablePlaybackTrack.png size 512 0
-                        # TODO: should rename this
-grab SongEditorBackPanel as bg_topPanel.png offset 0 23
+grab SongEditorPanel as songEditorBackground.png size 512 0
 
-grab SongEditorBackPanel as btn_clear_off.png offset 6 30 size 54 13
-grab SongEditorBackPanel as btn_new_on.png offset 64 30 size 19 13
-grab SongEditorBackPanel as btn_updown.png offset 89 30 size 35  13
-grab SongEditorBackPanel as btn_select.png offset 128 30 size 18  13
-grab SongEditorBackPanel as btn_draw.png offset 146 30 size 18  13
-slot SongEditorPanel setModeActionBtn true
-grab SongEditorBackPanel as btn_pattern_mode.png offset 169 30 size 18 13
-slot SongEditorPanel setModeActionBtn false
-grab SongEditorBackPanel as btn_stacked_mode.png offset 169 30 size 18 13
+slot SongEditorPanel showHideTimeline true
+grab SongEditorPositionRuler as songEditorTimeline.png size 640 25
+grab SongEditorPositionRuler as songEditorPositionRuler.png size 640 25 offset 0 25
+
+grab SongEditorBackPanel as bg_topPanel.png offset 0 22
+grab SongEditorBackPanel as btn_lock.png offset 142 25 size 25 21
+
+slot SongEditorPanel toggleAutomationAreaVisibility
+grab SongEditorAutomationPathView as songEditorAutomationPathView.png size 640 64
+slot SongEditorPanel toggleAutomationAreaVisibility
+
+grab SongEditorBackPanel as btn_clear_off.png offset 2 25 size 61 21
+slot SongEditorPanel activateSelectMode true
+grab SongEditorBackPanel as btn_select.png offset 116 25 size 25 21
+slot SongEditorPanel activateSelectMode false
+slot SongEditorPanel activateStackedMode false
+slot PlayerControl activateSongMode false
+grab SongEditorBackPanel as btn_pattern_mode.png offset 168 25 size 25 21
+slot SongEditorPanel activateStackedMode true
+grab SongEditorBackPanel as btn_new_on.png offset 64 25 size 25 21
+grab SongEditorBackPanel as btn_updown.png offset 90 25 size 25 21
+grab TimelineBtn as songEditorTimelineButton.png
+
+grab SongEditorBackPanel as btn_draw.png offset 116 25 size 25 21
+grab SongEditorBackPanel as btn_stacked_mode.png offset 168 25 size 25 21
+slot PlayerControl activateSongMode true
+
+grab SongEditorPlaybackTrackFader as songEditorPlaybackTrackFader.png
+grab SongEditorPlaybackTrackMuteButton as songEditorPlaybackTrackMuteButton.png
+grab SongEditorPlaybackTrackEditButton as songEditorPlaybackTrackEditButton.png
 
 # Pattern Options Menu
 # This is a bit tricky because the popup is its own toplevel window so
@@ -91,13 +141,9 @@ slot SongEditorPatternList patternPopup_properties
   grab PatternPropertiesDialog as pattern_properties.png
   slot PatternPropertiesDialog close
 
-slot SongEditorPanel showHideTimeLine true
-grab SongEditorPanel offset 131 4 size 368 43 as tempo_bar.png
-
-slot SongEditorPanel showHideTimeLine false
-grab TimeLineToggleBtn as btn_bpm_off.png
-
-grab ViewPlaybackToggleBtn as btn_viewTL_off.png
+grab TimeLineToggleBtn as btn_view_timeline.png
+slot SongEditorPanel showHideTimeline false
+grab ViewPlaybackBtn as btn_view_playbackTrack.png
 
 
 slot SongEditorPositionRuler showBpmWidget 3
@@ -118,21 +164,19 @@ slot MainForm action_window_showPlaybackTrack
 slot MainForm action_window_showTimeline
 
 grab PatternEditorPanel as PatternEditor_DrumMode.png
-grab PatternEditorPanel as PatternEditorControls.png offset 180 0 size 375 22
-grab PatternEditorPanel as lcd_size.png offset 180 0 size 128 22
+grab PatternEditorPanel as PatternEditorControls.png offset 180 0 size 686 24
+grab PatternEditorPanel as lcd_size.png offset 180 0 size 156 24
 
 # TODO: This one's a problem. Just a text input dialog, so not manipulable.
 # grab PatternSizeDialog.png
 
-# TODO: Another problem, DenominatorWarningIcon.png
-
-grab PatternEditorPanel as lcd_res.png offset 308 0 size 89 22
+grab PatternEditorPanel as lcd_res.png offset 336 0 size 110 24
 
 grab HearNotesBtn as btn_hear.png
 grab QuantizeEventsBtn as btn_quant_off.png
 grab ShowDrumBtn as btn_drum_piano_off.png
 slot PatternEditorPanel showPianoRollEditor
-grab ShowDrumBtn as btn_drum_piano_on.png
+grab ShowPianoBtn as btn_drum_piano_on.png
 slot PatternEditorPanel showDrumEditor
 
 # Sidebar / instrument list
@@ -143,13 +187,14 @@ grab PatternEditorPanel as PatternEditorInstr_V2.png size 220 400
 # TODO: use this?
 grab PatternEditorFunctionPopup as PatternEditorFunctionPopup.png
 
-grab MuteButton as btn_mute_off.png
-grab SoloButton as btn_solo_off.png
+grab InstrumentLineMuteButton as btn_instrument_line_mute_off.png
+grab InstrumentLineSoloButton as btn_instrument_line_solo_off.png
 
 # TODO: illustration of note lengths and stop notes
 
-slot PropertiesCombo select 3
-grab PatternEditorPanel as NoteKey.png offset 0 228
+grab PatternEditorPanel as notePropertiesRuler.png offset 0 338
+slot PropertiesCombo setCurrentIndex 3
+grab PatternEditorPanel as NoteKey.png offset 0 224
 
 
 
@@ -157,7 +202,7 @@ grab PatternEditorPanel as NoteKey.png offset 0 228
 
 slot MainForm setMainWindowSize 960 800
 
-slot PropertiesCombo select 0
+slot PropertiesCombo setCurrentIndex 0
 slot PatternEditorPanel showPianoRollEditor
 
 grab PatternEditorPanel as PatternEditor_PianoMode.png
@@ -167,25 +212,29 @@ grab PatternEditorPanel as PatternEditor_PianoMode.png
 
 slot MainForm setMainWindowSize 800 600
 
-slot InstrumentRack on_showSoundLibraryBtnClicked
+slot InstrumentRack showSoundLibrary true
 grab InstrumentRack as SoundLibrary.png
 
-slot InstrumentRack on_showInstrumentEditorBtnClicked
+slot InstrumentRack showSoundLibrary false
 grab InstrumentRack as Instrument_General.png
 
-slot InstrumentEditor showInstrument
+slot InstrumentEditor showLayers false
 
 # Subsections of instrument rack
 grab InstrumentRack offset 27 102 size 242 46 as instrument_editor_envelope.png
-grab InstrumentRack offset  6 148 size 280 64 as instrument_editor_mute_group.png
-grab InstrumentRack offset  6 213 size 280 48 as instrument_editor_filter.png
-grab InstrumentRack offset  6 258 size 280 48 as instrument_editor_pitch.png
-grab InstrumentRack offset  6 305 size 280 46 as instrument_editor_midi_out.png
-grab InstrumentRack offset  6 352 size 280 45 as instrument_editor_hihat_pressure_group.png
+grab InstrumentRack offset  4 149 size 281 64 as instrument_editor_mute_group.png
+grab InstrumentRack offset  4 213 size 281 46 as instrument_editor_filter.png
+grab InstrumentRack offset  4 259 size 281 46 as instrument_editor_pitch.png
+grab InstrumentRack offset  4 305 size 281 46 as instrument_editor_midi_out.png
+grab InstrumentRack offset  4 351 size 281 46 as instrument_editor_hihat_pressure_group.png
 
-slot InstrumentEditor showLayers
-# grab InstrumentEditor as Instrument_Layers.png
+slot InstrumentEditor showLayers true
 grab LayerProperties as Instrument_Layers.png
+grab LayerProperties as instrumentEditorComponentName.png size 289 34
+grab InstrumentEditorComponentNameDropDown as instrumentEditorComponentDropDown.png
+grab LayerProperties as instrumentEditorLayers.png offset 0 39 size 289 265
+grab LayerProperties as instrumentEditorSampleSelection.png offset 0 426 size 289 29
+grab LayerProperties as instrumentEditorControls.png offset 0 326 size 289 107
 
 grab LoadLayerButton as loadLayer_off.png
 grab RemoveLayerButton as deleteLayer_off.png
@@ -205,7 +254,20 @@ slot SampleEditor close
 
 
 # Mixer
+slot Mixer show
+slot Mixer updateMixer
 grab Mixer
+grab MixerLine as mixerLineStrip.png
+grab ComponentMixerLine as componentMixerLineStrip.png
+grab MixerFXRack as mixerFXRack.png
+grab MasterMixerLine as masterMixerLine.png
+
+grab MixerShowFXButton as mixerShowFXButton.png
+grab MixerShowPeaksButton as mixerShowPeaksButton.png
+grab MixerFXBypassButton as mixerFXBypassButton.png
+grab MixerFXEditButton as mixerFXEditButton.png
+grab MixerMasterMuteButton as mixerMasterMuteButton.png
+grab MixerSettingsButton as mixerSettingsButton.png
 
 grab PlaySampleButton as btn_play_on_mixer.png
 grab TriggerSampleLED as led_trigger_on.png
@@ -213,20 +275,21 @@ grab TriggerSampleLED as led_trigger_on.png
 grab MixerLine as item_selected.png offset 37 1 size 15 11
 grab MixerMuteButton as btn_mute_on.png
 grab MixerSoloButton as btn_solo_on.png
-grab Rotary as mixer_rotary.png
-grab Knob as mixer_knob.png
-
+grab PanRotary as mixer_rotary.png
+grab FXRotary as mixer_knob.png
 # TODO: LADSPA effects. These screenshots screenshots are a pain
 # because windows are in non-default states.
 
-# TODO: add red square to this one
-grab Mixer offset 703 0 size 0 71 as mixerSettingsButton.png
 slot Mixer openMixerSettingsDialog
 grab MixerSettingsDialog as mixerSettingsDialog.png
 slot MixerSettingsDialog close
 
 slot MainForm action_window_show_DirectorWidget
 grab Director as screenshot-director.png
+
+slot MainForm action_banks_properties
+grab SoundLibraryPropertiesDialog as soundLibraryPropertiesDialog.png
+slot SoundLibraryPropertiesDialog close
 
 # TODO: Midi actions. Shot shows configured actions and drop down
 # menus. Hm.

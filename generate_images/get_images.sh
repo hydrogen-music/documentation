@@ -20,7 +20,7 @@ echo "Generating tabbed layout images"
 "$H2" -n --layout tabbed -t shotlist-tabbed.txt "$DEMO" 2>&1 | out
 
 echo "Generating single pane layout images"
-"$H2" -n --layout single -t shotlist.txt "$DEMO" 2>&1 | out
+"$H2" -n --layout single -d jack -t shotlist.txt "$DEMO" 2>&1 | out
 
 # Specific song stuff
 echo "Generating misc images"
@@ -33,9 +33,9 @@ echo "Generating example images"
 # Generate images from SVG
 echo "Generating compound images with inkscape"
 (
-    inkscape --export-png GUI_Sections_0.9.5_v2.png --export-dpi 192 GUI_Single_Pane.svg 
-    inkscape --export-png MainUI_tabbed.png --export-dpi 192 GUI_Tabbed.svg
-    inkscape --export-png Virtual_patterns_menu.png --export-dpi 192 PatternListMenu.svg
+    inkscape --export-type=png --export-filename=GUI_Sections_0.9.5_v2.png --export-dpi 192 GUI_Single_Pane.svg
+    inkscape --export-type=png --export-filename=MainUI_tabbed.png --export-dpi 192 GUI_Tabbed.svg
+    inkscape --export-type=png --export-filename=Virtual_patterns_menu.png --export-dpi 192 PatternListMenu.svg
 ) 2>&1 | out
 
 

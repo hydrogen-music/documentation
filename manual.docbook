@@ -107,7 +107,7 @@
         </listitem>
         <listitem>
           <para><emphasis role="bold">Jack Audio Connection Kit (&gt;= 0.80)</emphasis>: at 
-          <ulink url="http://jackaudio.org/">http://jackaudio.org/</ulink>
+          <ulink url="http://jackaudio.org">http://jackaudio.org/</ulink>
           (only if you wish to use <abbrev>JACK</abbrev> as audio driver)</para>
         </listitem>
         <listitem>
@@ -205,91 +205,100 @@
       </para>
 
       <para>
-        Most actions are performed with the left mouse button, and
-        implement what should be the most obvious behaviour for any
-        control. The right mouse button may sometimes perform an
-        alternate action, or bring up a context menu. Some common
-        controls also have alternate actions accessed by clicking
-        while holding a modifier key:
+        Most actions are performed with the left mouse button (or mouse wheel)
+        and implement what should be the most obvious behaviour for any
+        control. The right mouse button may sometimes perform an alternate
+        action or brings up a context menu. Some common controls also have
+        alternate actions accessed by clicking while holding a modifier key:
       </para>
 
       <itemizedlist>
 	    <listitem>
 	      <para>
-	        <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> : restore default value of knob or fader
+	        <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> : restore default value of knob or fader.
           </para>
         </listitem>
         <listitem>
 	      <para>
-	        <keycap>Shift</keycap> + <emphasis>left click</emphasis> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>)
+	        <keycap>Shift</keycap> + <emphasis>left click</emphasis> : bind <abbrev>MIDI</abbrev> event to <abbrev>MIDI</abbrev>-learnable widget (see <xref linkend="chpt.midi.learnable"/>).
+          </para>
+        </listitem>
+        <listitem>
+	      <para>
+	        <keycap>Shift</keycap> + <emphasis>mouse wheel</emphasis>|<keycap>↑</keycap>|<keycap>↓</keycap> : change values of rotaries and faders at a faster pace.
           </para>
         </listitem>
       </itemizedlist>
 
       <para>
-        Some controls will also respond to scroll wheel events for
-        convenience.
-      </para>
-      
-      <para>
-        The keyboard can also be used for navigating and editing in
-        the <link linkend="chpt.pattern_editor">Pattern</link> and <link linkend="chpt.song_editor">Song Editors</link>, using a combination of 
-        <itemizedlist>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> : move the
-              keyboard input cursor's position, or adjust values under
-              the cursor.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> :
-              can be used to make selections of notes or pattern
-              groups as if the mouse had been dragged over them.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Enter</keycap> and <keycap>Return</keycap></emphasis> : generally
-              performs the same action as a mouse click, but can also
-              start or end a move (or copy) of items in the same way
-              a mouse drag would.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Tab</keycap> and <keycap>Shift</keycap> + <keycap>Tab</keycap></emphasis> : move
-              between the Pattern, Song and Note Property Editor.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Delete</keycap></emphasis> :
-              delete notes or patterns.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              <emphasis role="bold"><keycap>Esc</keycap></emphasis> :
-              cancels an ongoing selection, move or copy.
-            </para>
-          </listitem>
-        </itemizedlist>
+        All rotaries and faders can also set by using the keyboard. First, you have to click the widget for it to get focussed. This will be indicated by a highlighting (orange per default). Now, you can enter numerical input via your keyboard. All numbers and dots are concatenated. If you want to reset your input or start a different one you can either press <keycap>ESC</keycap> or wait a couple of seconds.
       </para>
 
-      <note>
-	    <para>
-          The keyboard input cursor is hidden from view until one of
-          the above keys is pressed. This keeps the display clear and
-          uncluttered when using the mouse. You can alter this default behavior in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences.
-	      
+      <sect1>
+        <title>
+          Keyboard usage in Editors
+        </title>
+        
+        <para>
+          The keyboard can also be used for navigating and editing in
+          the <link linkend="chpt.pattern_editor">Pattern</link> and <link linkend="chpt.song_editor">Song Editors</link>, using a combination of 
+          <itemizedlist>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> : move the
+                keyboard input cursor's position, or adjust values under
+                the cursor.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap></emphasis> :
+                can be used to make selections of notes or pattern
+                groups as if the mouse had been dragged over them.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Enter</keycap> and <keycap>Return</keycap></emphasis> : generally
+                performs the same action as a mouse click, but can also
+                start or end a move (or copy) of items in the same way
+                a mouse drag would.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Tab</keycap> and <keycap>Shift</keycap> + <keycap>Tab</keycap></emphasis> : move
+                between the Pattern, Song and Note Property Editor.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Delete</keycap></emphasis> :
+                delete notes or patterns.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <emphasis role="bold"><keycap>Esc</keycap></emphasis> :
+                cancels an ongoing selection, move or copy.
+              </para>
+            </listitem>
+          </itemizedlist>
         </para>
-      </note>
-      <para>
-        Most other keys on the keyboard can be used to play
-        <link linkend="def.sample">samples</link> and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
-      </para>
+
+        <note>
+	      <para>
+            The keyboard input cursor is hidden from view until one of
+            the above keys is pressed. This keeps the display clear and
+            uncluttered when using the mouse. You can alter this default behavior in the <link linkend="chpt.preferences.general_tab">General tab</link> of the Preferences.
+	        
+          </para>
+        </note>
+        <para>
+          Most other keys on the keyboard can be used to play
+          <link linkend="def.sample">samples</link> and enter notes in the same way a <abbrev>MIDI</abbrev> keyboard can be.
+        </para>
+      </sect1>
     </chapter>
 
 
@@ -321,7 +330,7 @@
 
         <tip>
 	      <para>
-	        You can switch between these two modes in the <link linkend="chpt.preferences.appearance_tab">Appearance</link> tab of the Preferences.
+	        You can switch between these two modes in the <link linkend="chpt.preferences.appearance_tab.interface">Interface</link> tab of the Appearance tab in the Preferences.
           </para>
         </tip>
 
@@ -343,7 +352,7 @@
         </figure>
       </sect1>
       
-      <sect1 id="chpt.overview.drumkits">
+      <sect1 id="chpt.overview.drumkits" xreflabel="Drumkit Concept">
         <title>Drumkit Concept</title>
         
         <para>Let's start with a little history on the concept of Drumkits within in Hydrogen. It began as a
@@ -365,6 +374,10 @@
 	        In case you are not familiar with the world of sound synthesis, you can check out the <link linkend="glossary">Glossary</link> for a number of useful definitions.
           </para>
         </tip>
+
+        <para>
+          Drumkits can most easily be loaded by right-clicking their name in the <link linkend="chpt.sound_library">Sound Library</link>. Once loaded its name will be displayed in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. All changes done to the kit, like altering parameters and adding or removing samples or instruments, are stored in the current song. They need to be <link linkend="sect.main_menu.drumkits.save">saved</link> to the drumkit in case you want them to persist and to be applicable to other songs as well. The actions available in the <link linkend="sect.main_menu.drumkits">Drumkits</link> section of the main menu do act on the kit associated with the current song. All options available through the Sound Library on the other hand soley apply to the stock kits. So, reloading the current drumkit will overwrite your local changes in the song using the default parameters stored in the kit's <filename>drumkit.xml</filename> file and altering the current kit's properties via the Sound Library does only affect the stock kit and <emphasis>not</emphasis> the one associated with your current song.
+        </para>
 
       </sect1>
 
@@ -743,7 +756,7 @@
 	    <title>Recording in Hydrogen</title>
 
         <para>
-          In addition to manually program pattern using mouse and keyboard you can also record one or multiple pattern. You can do so using an external <abbrev>MIDI</abbrev> device, like an e-drum, or use the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> provided by Hydrogen.
+          In addition to manually program pattern using mouse and keyboard you can also record one or multiple patterns. You can do so using an external <abbrev>MIDI</abbrev> device, like an e-drum, or use the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> provided by Hydrogen.
         </para>
 
         <para>
@@ -755,7 +768,7 @@
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="Rec_button.png" format="PNG"/>
+              <imagedata fileref="generated_en/playerControlRecordButton.png" format="PNG"/>
           </imageobject>
          </inlinemediaobject>
 in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> and afterwards press the 
@@ -767,21 +780,45 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_play_off.png" format="PNG"/>
+              <imagedata fileref="generated_en/playerControlPlayButton.png" format="PNG"/>
           </imageobject>
           </inlinemediaobject>
           button located right next to it (like in a classical tape recorder). 
         </para>
 
         <para>
-	      Using the playback mode of the <link linkend="chpt.song_editor">Song Editor</link> you can choose between the following two scenarios. When in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> all inserted notes will be added to pattern currently selected in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. When, on the other hand, in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> the input notes will be added to the active pattern (the one the playhead is located in and is currently used for playback). If several patterns are selected in a single row, the input notes will only be added to the pattern at the bottom.
+	      Using the playback mode of the <link linkend="chpt.song_editor">Song Editor</link> you can choose between the following two scenarios. When in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> all inserted notes will be added to pattern currently selected in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. When, on the other hand, in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> the input notes will be added to the active pattern (the one the playhead is located in and is currently used for playback). If several patterns are selected in a single row, the input notes will only be added to the pattern at the bottom.
         </para>
+
+        <tip>
+          <para>
+            By <link linkend="chpt.song_editor.main_controls.pattern_editor_lock">locking</link> the Pattern Editor in Song Mode Hydrogen will automatically select the pattern recorded notes will be inserted to.
+          </para>
+        </tip>
 
         <note>
 	      <para>
-	        The incoming notes will be added in a non-destructive way. This means when adding two notes at the same position, you will have two notes being played back at once (with double the volume of a single one).
+	        The incoming notes will be added in a non-destructive way. This means when attempting to add a notes at a position already containing one of equal pitch, the new note will be discarded and the old one kept.
           </para>
         </note>
+
+        <informalfigure id="fig.overview.recording.punch_in">
+          <mediaobject>
+            <textobject>
+              <phrase>
+                Song ruler with a red rectangle indicating the punch in area.
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="punch_in.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </informalfigure>
+
+        <para>
+          You can also limit patterns new notes will be recorded to by defining a continuous <emphasis role="bold">punch in</emphasis> area via right click and dragging the cursor to the right in the ruler of the <link linkend="chpt.song_editor">Song Editor</link>.
+        </para>
+        
       </sect1>
       
       <sect1 id="chpt.overview.session_management">
@@ -822,17 +859,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               </note>
             </para>
           </listitem>
-          <listitem>
-	        <para>
-	          <emphasis role="bold"><abbrev>JACK</abbrev> Session</emphasis>:
-              <ulink url="https://jackaudio.org"><abbrev>JACK</abbrev> Session</ulink> has been marked <ulink url="https://jackaudio.org/news/2020/10/15/jack2-v1915-release-and-current-status.html">deprecated</ulink> by the <abbrev>JACK</abbrev> project.
-              <warning>
-	            <para>
-	              Hydrogen versions &#60;= 1.1 still feature this Session Management protocol. But it will be removed in future releases.
-                </para>
-              </warning>
-            </para>
-          </listitem>
         </itemizedlist>
 
         <sect2 id="chpt.overview.session_management.nsm">
@@ -845,30 +871,25 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <itemizedlist>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Replace With New Song</emphasis>:
+	            <emphasis role="bold">Replace With New Song</emphasis>
                 instead of <link linkend="sect.main_menu.projects.new">New</link>. Replaces the song associated with the session by an empty one.
               </para>
             </listitem>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Import Into Session</emphasis>:
+	            <emphasis role="bold">Import Into Session</emphasis>
                 instead of <link linkend="sect.main_menu.projects.open">Open</link>. Replaces the song associated with the session by a song of your choice.
               </para>
             </listitem>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Import Recent Info Session</emphasis>:
+	            <emphasis role="bold">Import Recent Info Session</emphasis>
                 instead of <link linkend="sect.main_menu.projects.open_recent">Open Recent</link>. Replaces the song associated with the session by one of the recently used songs.
-                <warning>
-	              <para>
-	                In Hydrogen version 1.1 the import into a session is not yet fully supported. While the selected file will be loaded and you can work with it, Hydrogen won't recall it after closing and opening the session. You need to copy the corresponding <link linkend="chpt.file_types.h2song">.h2song</link> file manually into the session folder to make your choice permanent.
-                  </para>
-                </warning>
               </para>
             </listitem>
 	        <listitem>
               <para>
-	            <emphasis role="bold">Export From Session As</emphasis>:
+	            <emphasis role="bold">Export From Session As</emphasis>
                 instead of <link linkend="sect.main_menu.projects.save_as">Save As</link>. Stores the song associated with the session at a location of your choice as <link linkend="chpt.file_types.h2song">.h2song</link> file.
 
                 <note>
@@ -880,20 +901,20 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </listitem>
           </itemizedlist>
 
-          <note>
-            <para>
-              The <link linkend="sect.main_menu.projects.open_demo">Open Demo</link> option will be missing.
-            </para>
-          </note>
-
           <para>
 	        Both the song and the preferences associated with the session will be stored in a session folder called <filename>Hydrogen.*</filename>. In addition, the drumkit (and its samples) used with the song will linked into the session folder as well. If the link is replaced by a folder containing a valid drumkit, this one will be used over the system and user drumkits.
 
             <tip>
 	          <para>
-	            This allows you to create fully self sufficient backup of your Hydrogen session using <command>tar -chf</command>. These can be even ported and used to systems which do not have the required drumkits installed.
+	            This allows you to create fully self sufficient backups of your Hydrogen session using <command>tar -chf</command>. These can even be ported and used on systems which do not have the required drumkits installed.
               </para>
             </tip>
+
+            <warning>
+              <para>
+                Note that only the stock <link linkend="chpt.overview.drumkits">drumkit</link> loaded last will be linked in the session folder. In case you only alter instrument parameters or delete instruments or samples this will work perfectly fine. But as soon as you add instruments from other drumkits or external samples, the linked drumkit folder won't contain all samples required by your current song anymore. You need to <link linkend="sect.main_menu.drumkits.save">saved</link> the kit (or create a new one) in order to ensure consistency.
+              </para>
+            </warning>
           </para>
         </sect2>
       </sect1>
@@ -906,7 +927,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <screen>
 <command>-h, --help                  Displays this help.</command>
 <command>-v, --version               Displays version information.</command>
-<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, oss)</command>
+<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, pulseaudio, auto)</command>
 <command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
 <command>-n, --nosplash              Hide splash screen</command>
 <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
@@ -916,6 +937,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 <command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
       </screen>
 
+      <note>
+        <para>
+          Which audio drivers are supported depends on both your platform and it's installed packages. Your local help message will display all available options.
+        </para>
+      </note>
+      
         </para>
       </sect1>
     </chapter>
@@ -923,13 +950,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <chapter id="chpt.preferences" xreflabel="Preferences">
       <title>Preferences</title>
 
-      <para>Via this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
-
-      <note>
-	    <para>
-	      All changes done in the Preferences Dialog - if not noted otherwise via a popup - will take effect when clicking the <emphasis role="bold">Ok</emphasis> button at the bottom of the window.
-        </para>
-      </note>
+      <para>Using this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
       
       <sect1 id="chpt.preferences.general_tab">
         <title>General</title>
@@ -983,7 +1004,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Use relative paths for playlist</emphasis>:
-              specifies whether the path names in the stored <link linkend="chpt.file_types.h2playlist">.h2playlist</link> file will contain absolute paths or a path relative to the <filename role="directory">playlist</filename> folder in the Hydrogen data
+              specifies whether the paths stored in a <link linkend="chpt.file_types.h2playlist">.h2playlist</link> file will be absolute or relative to the <filename role="directory">playlist</filename> folder in the Hydrogen data
               directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).
 
               <tip>
@@ -1046,7 +1067,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                     <imageobject>
-                      <imagedata fileref="btn_set_play_on.png" format="PNG" />
+                      <imagedata fileref="generated_en/btn_bc_set_play_on.png" format="PNG" />
                     </imageobject>
                   </inlinemediaobject>
           should be displayed in the bottom right corner - for this setting to take effect.
@@ -1068,6 +1089,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <note>
 	            <para>
 	              For this setting to take effect you have to restart Hydrogen.
+                </para>
+              </note>
+            </para>
+            
+          </listitem>
+	      <listitem id="chpt.preferences.general_tab.autosaves">
+	        <para>
+	          <emphasis role="bold">Numbers of autosaves per hour</emphasis>:
+              sets how often Hydrogen will generate a backup of your current song in case it contains any unsaved modifications. In case there is an autosave file with a more recent timestamp next to a song, Hydrogen will ask you upon opening whether to restore the unsaved changes or to load the raw song.
+
+              <note>
+                <para>
+                  These autosave files will be hidden and contain an additional suffix "autosave". E.g. if your current song is called <filename>example.h2song</filename> the backup will be stored in <filename>.example.autosave.h2song</filename> within the same directory. But you do not need to be careful when chosing a song name. Hydrogen will take care of finding a filename for the backup not existing yet.
                 </para>
               </note>
             </para>
@@ -1103,7 +1137,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                     <imageobject>
-                      <imagedata fileref="rubber_off.png" format="PNG" />
+                      <imagedata fileref="generated_en/playerControlRubberbandButton.png" format="PNG" />
                     </imageobject>
                   </inlinemediaobject>
           button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link>. You can use this behavior to verify your configuration.
@@ -1141,7 +1175,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <listitem>
                 <para><option>Auto</option>: Hydrogen will try a
-                number of different drivers in a predetermined order, choose the
+                number of different drivers in a predetermined, OS-dependent order, choose the
                 first working one, and display the result.
 
                 <tip>
@@ -1276,8 +1310,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             Timebase master (TBM), it will use the provided measure and
             tempo information instead of the local one of either the <link linkend="sect.main_toolbar.bpm_control_and_metronome">song's
             tempo</link> or the Tempo Markers
-            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>.  But due to
-            limitations in the current implementation, Hydrogen can not set
+            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>. But due to
+            fundamental design choices within Hydrogen, it can not set
             both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
             combinations. You have two options here. Either drop all measure
             changes in the TBM and work with tempo changes only to support
@@ -1300,7 +1334,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="btn_jack_transport_off.png" format="PNG" />
+                    <imagedata fileref="generated_en/playerControlJackTransportButton.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
                 button has to be activated and the
@@ -1311,7 +1345,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
                   <imageobject>
-                    <imagedata fileref="btn_jack_master_off.png" format="PNG" />
+                    <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>                
                 button deactivated in the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link> (next to
@@ -1585,7 +1619,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <note>
           <para>If the chosen <abbrev>OSC</abbrev> port is already occupied, Hydrogen will pick
           an alternative one on startup and displays it via a popup as well as
-          in the <abbrev>OSC</abbrev> tab of the Preferences.
+          in the <abbrev>OSC</abbrev> tab of the Preferences Dialog.
           </para>
         </note>
       </sect1>
@@ -1593,106 +1627,249 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="chpt.preferences.appearance_tab">
         <title>Appearance</title>
 
-        <figure id="fig.preferences.appearance_tab">
-          <title>The Appearance Tab</title>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="generated_en/PreferencesAppearance_V2.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </figure>
-
-        <para>The Appearance tab let's you modify Hydrogen's look 
-        and feel.
+        <para>
+          The settings available in the <emphasis>Appearance</emphasis> tab let you modify the look of Hydrogen and are treated differently than the ones found in other tabs. While the latter are stored in the <filename>hydrogen.conf</filename> file in Hydrogen's data folder, the appearance is stored in <link linkend="chpt.file_types.h2theme">.h2theme</link> files in the dedicated <filename role="directory">theme</filename> subfolder. The idea is that while the remaining settings are tailored to your local setup, a theme is something that is easily portable. E.g. you can create a custom dark theme and share it with the Hydrogen community without them having to adopt it to their local setup.
         </para>
 
-        <itemizedlist>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Application font</emphasis>:
-              specifies both the font family and point size of the application font used for the grid in <link linkend="chpt.pattern_editor">Pattern Editor</link> and <link linkend="chpt.song_editor">Song Editor</link> as well as for the pattern names in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor.
+        <para>
+          This can be done using the
+          <inlinemediaobject>
+            <textobject>
+              <phrase>
+                Grey record button with label "Export Theme".
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="generated_en/preferencesExportThemeButton.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
 
-              <note>
-	            <para>
-	              In order for this setting to take effect, Hydrogen has to be restarted.
-                </para>
-              </note>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Style</emphasis>:
-              specifies a certain look of GUI elements like menus, scrollbars, and dialog windows.
+          and
+          
+          <inlinemediaobject>
+            <textobject>
+              <phrase>
+                Grey record button with label "Import Theme".
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="generated_en/preferencesImportThemeButton.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
+          
+          buttons. All changes applied to a theme (unless indicated otherwise in the dialog) will take effect immediately. If you are satisfied with the result, accept the dialog by clicking the OK button to save it. If you, however, want to reset all options to their state encountered when opening the dialog or importing last theme, hit the 
+          
+          <inlinemediaobject>
+            <textobject>
+              <phrase>
+                Grey record button with label "Reset Appearance Tab".
+              </phrase>
+            </textobject>
+            <imageobject>
+              <imagedata fileref="generated_en/preferencesResetThemeButton.png" format="PNG"/>
+            </imageobject>
+          </inlinemediaobject>
 
-              <tip>
-	            <para>
-	              Using this option you might can make Hydrogen integrate with you operating system better.
-                </para>
-              </tip>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Mixer font</emphasis>:
-              specifies both the font family and point size of the mixer font used for the instrument names in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and the component names in the <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
+          button or close the dialog.
+        </para>
 
-              <note>
-	            <para>
-	              In order for this setting to take effect, Hydrogen has to be restarted.
-                </para>
-              </note>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Meters falloff speed</emphasis>:
-              specifies for how fast the update of the maximum value of the audio signal will be shown in the LCD displays of the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>, and the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> before its replacement with a more recent value will take place.
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Default interface layout</emphasis>:
-              specifies whether the GUI of Hydrogen will be arranged in Single Pane mode or Tabbed mode (see <link linkend="chpt.overview.gui">Main User Interface</link> for details).
-              <note>
-	            <para>
-	              In order for this setting to take effect, Hydrogen has to be restarted.
-                </para>
-              </note>
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">High-resolution display scaling</emphasis>:
-              specifies whether the underlying bitmap graphics of the GUI should be scaled to larger sizes by Qt in order for Hydrogen to look nice with your system's resolution settings.
-            </para>
-          </listitem>
-	      <listitem>
-	        <para>
-	          <emphasis role="bold">Coloring method for Song Editor elements</emphasis>:
-              determines the coloring of the boxes indicating the presence of a pattern in the <link linkend="chpt.song_editor">Song editor</link>. The available options are:
+        <sect2 id="chpt.preferences.appearance_tab.interface">
+          <title>Interface</title>
+
+          <figure id="fig.preferences.appearance_tab.interface">
+            <title>The Interface Tab</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/preferencesInterfaceTab.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+          
+          <para>
+            The <emphasis>Interface</emphasis> tab covers the overall appearance of Hydrogen.
+          </para>
+
+          <itemizedlist>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Style</emphasis>:
+                specifies a certain look of GUI elements, like menus, scrollbars, and dialog windows.
+
+                <tip>
+	              <para>
+	                Using this option you might be able to better integrate Hydrogen into your operating system.
+                  </para>
+                </tip>
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Meters falloff speed</emphasis>:
+                specifies how fast the visual update of the peak values shown in the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link>, <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>, and <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> will be done.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Default interface layout</emphasis>:
+                specifies whether the GUI of Hydrogen will be arranged in <link linkend="fig.UI_overview">Single Pane mode</link> or <link linkend="fig.tabbed_UI_overview">Tabbed mode</link> (see <link linkend="chpt.overview.gui">Main User Interface</link> for details).
+                <note>
+	              <para>
+	                In order for this setting to take effect, Hydrogen has to be restarted.
+                  </para>
+                </note>
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">High-resolution display scaling</emphasis>:
+                specifies whether the underlying bitmap graphics of the GUI should be scaled to larger sizes by Qt in order for Hydrogen to look nice with your system's resolution settings.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Icon color</emphasis>:
+                while the color of all button labels can be set in the <link linkend="chpt.preferences.appearance_tab.colors">Colors</link> tab, the icons hold the color used in the corresponding <abbrev>SVG</abbrev> file and can not be altered freely. To still allow you changing the overall colors conveniently, Hydrogen is shipped with all icons available in either <option>Black</option> and <option>White</option> color.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Coloring method for Song Editor elements</emphasis>:
+                determines the coloring of the grid boxes indicating the presence of a pattern in the <link linkend="chpt.song_editor">Song Editor</link>. The options available are:
+              </para>
               <itemizedlist>
 	            <listitem>
 	              <para>
 	                <option>Automatic</option>:
-                    Uses as much colors as there are patterns in the song.
+                    uses as many colors as there are patterns in the song.
                   </para>
                 </listitem>
 	            <listitem>
 	              <para>
-	                <option>Steps</option>:
-                    Uses a certain number <parameter>n</parameter> of colors you have to enter via a second input widget. After coloring the first <parameter>n</parameter> patterns with different colors the same set of colors will be used for the next <parameter>n</parameter> patterns and so on.
-                  </para>
-                </listitem>
-	            <listitem>
-	              <para>
-	                <option>Fixed</option>:
-                    Colors all patterns using a single color determined via its hue in a separate input widget.
+	                <option>Custom</option>:
+                    uses a certain number of colors in a repeated way.
                   </para>
                 </listitem>
               </itemizedlist>
-            </para>
-          </listitem>
-        </itemizedlist>
+
+              <para>
+                By chosing <option>Custom</option> two more settings will become available:
+              </para>
+              
+              <itemizedlist>
+	            <listitem>
+	              <para>
+	                <emphasis role="bold">Number of colors in Song Editor</emphasis>:
+                    how many different colors should be used.
+                  </para>
+                </listitem>
+	            <listitem>
+	              <para>
+	                <emphasis role="bold">Selected colors</emphasis>:
+                    a list of color buttons. Clicking one will open a dialog allowing you to change its color.
+                  </para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
+        </sect2>
+        
+        <sect2 id="chpt.preferences.appearance_tab.colors">
+          <title>Colors</title>
+
+          <figure id="fig.preferences.appearance_tab.colors">
+            <title>The Colors Tab</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/preferencesColorsTab.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+
+          <para>
+            The <emphasis>Colors</emphasis> tab exposes most of the colors used within Hydrogen.
+          </para>
+
+          <para>
+            You can select a color by clicking its name in the tree you find on the left side. It is grouping the individual colors into
+            
+            <itemizedlist>
+              <listitem>
+                <para>
+                  <emphasis role="bold">General</emphasis>:
+                  basic Qt colors. Most of them are used in many parts of the GUI. But some of them might be not used at all. So, don't worry in case altering one of these does not result in visual changes.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis role="bold">Widgets</emphasis>:
+                  colors in small and interactive elements of the GUI, like buttons or combo boxes.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis role="bold">Song Editor</emphasis>:
+                  colors specific to the <link linkend="chpt.song_editor">Song Editor</link>.
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis role="bold">Pattern Editor</emphasis>:
+                  colors specific to the <link linkend="chpt.pattern_editor">Pattern Editor</link>.
+                </para>
+              </listitem>
+            </itemizedlist>
+          </para>
+
+          <para>
+            Once selected you can change a color by either clicking the large colored rectangle in the upper right part of the tab (which opens a color dialog) or by using the spinboxes and sliders in the lower right part. The latter represent the colors components according to the <abbrev>RGB</abbrev> as well as the <abbrev>HSV</abbrev> color model.
+          </para>
+          
+        </sect2>
+
+        <sect2 id="chpt.preferences.appearance_tab.font">
+          <title>Font</title>
+
+          <figure id="fig.preferences.appearance_tab.font">
+            <title>The Font Tab</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/preferencesFontTab.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </figure>
+
+          <para>The <emphasis>Font</emphasis> tab contains all options affecting strings, characters, and numbers displayed in the GUI.
+          </para>
+
+          <itemizedlist>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Application font</emphasis>:
+                specifies the font family used for headings, larger labels, and most parts of the dialogs and popups.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Item font</emphasis>:
+                specifies the font family used for smaller elements, like the name of patterns in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor or the name of the samples in the <link linkend="chpt.instrument_editor.layers">Layers view</link> of the Instrument Editor.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Widget font</emphasis>:
+                specifies the font family used for small and interactive elements of the GUI, like buttons.
+              </para>
+            </listitem>
+	        <listitem>
+	          <para>
+	            <emphasis role="bold">Font size</emphasis>:
+                accessibility option to increase or decrease the overall font size of Hydrogen.
+              </para>
+            </listitem>
+          </itemizedlist>
+          
+        </sect2>
+        
       </sect1>
 
     </chapter>
@@ -1704,7 +1881,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Main Menu</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MainMenu.png" format="PNG"/>
+            <imagedata fileref="generated_en/MainMenu.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -1723,43 +1900,54 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <itemizedlist>
           <listitem id="sect.main_menu.projects.new">
             <para><emphasis role="bold">New</emphasis>: creates a new and empty song.</para>
+
+            <note>
+              <para>
+                Prior to version 1.2 of Hydrogen new songs were based on <filename>DefaultSong.h2song</filename> in Hydrogen's data folder and all <link linkend="chpt.preferences.general_tab.autosaves">backups</link> of unsaved changes were associated to it. This had the unfortunate downside that it was quite easy to loose all progress done in a new song in case you forget to change it.
+              </para>
+              <para>
+                Since 1.2 new songs are not associated with any file anymore and Hydrogen makes sure the backup file generate does not exist yet and no data gets overwritten. In addition, when working on a newly created song and closing the application without saving the changes, e.g. due to a power outage, Hydrogen is now capable of restoring these changes from the backup fill and prompts you at the beginning of the next session whether it should do so.
+              </para>
+              <para>
+                If you are used to alter the <filename>DefaultSong.h2song</filename> and use it as a template, you can still do the same by <link linkend="sect.main_menu.projects.open">opening</link> and <link linkend="sect.main_menu.projects.save_as">saving</link> it using a different name.
+              </para>
+            </note>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Show Info</emphasis>: sets general properties of the
-            song such as name, author, license, and generic notes.</para>
+            <para><emphasis role="bold">Song Properties</emphasis>: sets general properties of the
+            song such as name, author, <link linkend="chpt.license">license</link>, and generic notes.</para>
           </listitem>
           <listitem id="sect.main_menu.projects.open">
             <para><emphasis role="bold">Open</emphasis>: opens an existing song (a <link linkend="chpt.file_types.h2song">.h2song</link> file).</para>
           </listitem>
           <listitem id="sect.main_menu.projects.open_demo">
-            <para><emphasis role="bold">Open Demo</emphasis>: opens one of the demo song shipped with Hydrogen.
+            <para><emphasis role="bold">Open Demo</emphasis>: opens one of the demo songs shipped with Hydrogen.
 
             <note>
 	          <para>
-	            The demo songs are stored in <filename>$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).
+	            The demo songs are stored in <filename role="directory">$INSTALL_PATH/share/hydrogen/data/demo_songs</filename>).
               </para>
             </note>
             </para>
           </listitem>
           <listitem id="sect.main_menu.projects.open_recent">
-            <para><emphasis role="bold">Open recent</emphasis>: opens a menu showing the last used songs (ordered from most recent to least recent).</para>
+            <para><emphasis role="bold">Open Recent</emphasis>: opens a menu showing the last used songs (ordered from most recent to least recent).</para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Save</emphasis>: saves changes to current song.</para>
           </listitem>
           <listitem id="sect.main_menu.projects.save_as">
-            <para><emphasis role="bold">Save as</emphasis>: saves current song as <link linkend="chpt.file_types.h2song">.h2song</link> file to a path of your choice.
+            <para><emphasis role="bold">Save As</emphasis>: saves current song as <link linkend="chpt.file_types.h2song">.h2song</link> file to a path of your choice.
 
             <tip>
 	          <para>
-	            In order for Hydrogen to automatically list it in the <link linkend="sect.sl.songs">Songs section of the Sound Library</link>, you have to store it in 
-            <filename>$HOME/.hydrogen/data/songs/</filename>.
+	            In order for Hydrogen to automatically list it in the <link linkend="sect.sl.songs">Songs section of the Sound Library</link>, you have to store it in the <filename role="directory">songs</filename> subfolder of Hydrogen data directory (<filename role="directory">$HOME/.hydrogen/data/songs/</filename>).
               </para>
             </tip>
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Open pattern</emphasis>: opens a pattern (a <link linkend="chpt.file_types.h2pattern">.h2pattern</link> file)
+            <para><emphasis role="bold">Open Pattern</emphasis>: opens a pattern (a <link linkend="chpt.file_types.h2pattern">.h2pattern</link> file)
             belonging to the current drumkit.</para>
           </listitem>
           <listitem id="sect.main_menu.projects.export_pattern_as">
@@ -1775,19 +1963,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export MIDI file</emphasis>: exports the current song in
+            <para><emphasis role="bold">Export MIDI File</emphasis>: exports the current song in
             <abbrev>MIDI</abbrev> format.</para>
           </listitem>
           <listitem id="sect.main_form.export_song" xreflabel="Export Song">
-            <para><emphasis role="bold">Export song</emphasis>: exports the current song into an audio file.</para>
+            <para><emphasis role="bold">Export Song</emphasis>: exports the current song into an audio file.</para>
             
             <para>The <emphasis role="bold">Export mode</emphasis> option <option>Export to a single track</option> will export one stereo downmix of your song - the master output. <option>Export to separate tracks</option> will create files for each 
-              instrument/track. <option>Both</option> will create a stereo downmix + audio files for all individual
+              instrument/track. <option>Both</option> will create a stereo downmix as well as audio files for all individual
               instruments.
               </para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Export Lilypond file</emphasis>: exports the current song to LilyPond.</para>
+            <para><emphasis role="bold">Export LilyPond File</emphasis>: exports the current song to LilyPond.</para>
             <warning>
 	          <para>
             It has the following limitations: Only the <emphasis>GMRockKit</emphasis> and no triplets are supported.</para>
@@ -1830,19 +2018,25 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <note>
 	            <para>
-	              Via this option you can only load drumkits that have been already imported into Hydrogen. If you just received a new one from an external source, be sure to use the <link linkend="sect.main_form.import_drumkit">Import</link> option described below.
+	              Using this option you can only load drumkits that have been already imported into Hydrogen. If you just received a new one from an external source, be sure to use the <link linkend="sect.main_form.import_drumkit">Import</link> option described below.
                 </para>
               </note>
             </para>
           </listitem>
-          <listitem>
+          <listitem id="sect.main_menu.drumkits.properties">
 	        <para>
 	          <emphasis role="bold">Properties</emphasis>:
-              sets general properties of the drumkit such as its name, author, license, general information, image, and image license.
+              sets general properties of the drumkit associated with the current song, such as name, author, <link linkend="chpt.license">license</link>, general information, image, and image license.
             </para>
           </listitem>
-          <listitem>
-            <para><emphasis role="bold">Save</emphasis>: saves all settings of the current drumkit (including those of their instruments and sound samples).
+          <listitem id="sect.main_menu.drumkits.save">
+            <para><emphasis role="bold">Save</emphasis>: saves all settings of the drumkit associated with the current (including those of their instruments and sound samples).
+
+            <tip>
+              <para>
+                See <xref linkend="chpt.overview.drumkits"/> and <xref linkend="chpt.license"/> for further information.
+              </para>
+            </tip>
             </para>
           </listitem>
           <listitem id="sect.main_menu.drumkits.save_as">
@@ -1850,17 +2044,23 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
             <note>
 	          <para>
-	            The new drumkit will be a physical copy of the old one and is stored into the <filename>$HOME/.hydrogen/data/drumkits/</filename> folder.
+	            The new drumkit will be a physical copy of the old one and is stored into the <filename role="directory">$HOME/.hydrogen/data/drumkits/</filename> folder.
               </para>
             </note>
+            
+            <tip>
+              <para>
+                See <xref linkend="chpt.overview.drumkits"/> and <xref linkend="chpt.license"/> for further information.
+              </para>
+            </tip>
             </para>
           </listitem>
           <listitem id="sect.main_form.export_drumkit">
-            <para><emphasis role="bold">Export</emphasis>: compress and stores all instruments samples and settings of any drumkit (not just the current one) into a folder of your choice as <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file.
+            <para><emphasis role="bold">Export</emphasis>: compresses and stores all instrument samples and settings of the current drumkit into a folder of your choice as <link linkend="chpt.file_types.h2drumkit">.h2drumkit</link> file.
 
             <note>
 	          <para>
-	            For compatibility reasons you can also export your drumkit in a format used in older versions ( &#60;= 0.9.6 ) of Hydrogen. By doing so you need to select a single <link linkend="def.component">component</link> to export since this functionality was not supported back than.
+	            For compatibility reasons you can also export your drumkit in a format used in older versions ( &#60;= 0.9.6 ) of Hydrogen. By doing so you need to select a single <link linkend="def.component">component</link> to export since having multiple ones was not supported back than.
               </para>
             </note>
             </para>
@@ -1888,17 +2088,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 </mediaobject>
               </figure>
 
-              The Import window will pop up with the Internet tab selected.
-              By default the link to the drumkit list (on hydrogen-music.org) will be filled in, 
+              The Import window will pop up with the <emphasis>Internet</emphasis> tab selected.
+              By default the link to the drumkit list (on <ulink url="http://hydrogen-music.org"/>) will be filled in, 
               and after pressing the <emphasis role="bold">Update list</emphasis> button you will get a complete list of all
-              drumkits that are available for download.  In the status column you can see
+              drumkits that are available for download. In the <emphasis>Status</emphasis> column on the you can see
               if a kit is installed or not.
             </para>
 
         <para>
         If you select one of the drumkits you will see info about this kit in the right
         pane of the Import window: name, description, author and also the
-        license type.
+        <link linkend="chpt.license">license</link>.
         </para>
        <para>
          You can install a drumkit by selecting it and clicking <emphasis role="bold">Download and Install</emphasis>.
@@ -1936,7 +2136,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <para><emphasis role="bold">Add Instrument</emphasis>: adds a new instrument to the current drumkit.</para>
           </listitem>
           <listitem>
-            <para><emphasis role="bold">Clear All</emphasis>: deletes all instruments from the current drumkit.</para>
+            <para><emphasis role="bold">Clear All</emphasis>: deletes all instruments from the current drumkit leaving only an empty one.</para>
           </listitem>
           <listitem>       
             <para><emphasis role="bold">Add Component</emphasis>: adds a <link linkend="def.component">component</link> to the current drumkit.</para>
@@ -2140,9 +2340,71 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </mediaobject>
         </informalfigure>
 
-        <para>Using these buttons you can <emphasis role="bold">start</emphasis> (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis> the playback, <emphasis role="bold">record</emphasis> new patterns (see <xref linkend="chpt.overview.recording" /> for details), <emphasis role="bold">fast forward</emphasis> and <emphasis role="bold">rewind</emphasis> the transport position, and <emphasis role="bold">loop</emphasis> playback.</para>
+        <para>Using these buttons you can <emphasis role="bold">start</emphasis>
+        
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlPlayButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        
+        (also bound to <keycap>Space</keycap>, see <xref linkend="chap.shortcuts" /> for further related shortcuts) and <emphasis role="bold">stop</emphasis>
 
-          <para>In addition, you can switch between <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>.</para>
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlStopButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject> playback, <emphasis role="bold">record</emphasis>
+
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlRecordButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+
+        new patterns (see <xref linkend="chpt.overview.recording" /> for details), <emphasis role="bold">fast forward</emphasis>
+
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlForwardButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+        
+        and <emphasis role="bold">rewind</emphasis>
+
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlRewindButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+
+        transport position, and <emphasis role="bold">loop</emphasis>
+
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlLoopButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+
+        playback.</para>
+
+          <para>In addition, you can switch between <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
+
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlSongModeButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+
+          and <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link>
+
+        <inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="generated_en/playerControlPatternModeButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
+
+          .</para>
 
           <tip>
             <para>
@@ -2159,10 +2421,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <textobject>
             <phrase>
               Part of the Main Toolbar responsible for the tempo settings using
-              the Beat Counter. In the center there is a LCD displaying to the
+              the Beat Counter. In the center there is a display showing to the
               left the beat type and to the right on top the current mode of the
               Beat Counter and the value of the Countdown Counter below. To the
-              left and right of the LCD there are buttons to decrease or
+              left and right of the display there are buttons to decrease or
               increase the beat type (left) and Countdown Counter value (right).
             </phrase>
           </textobject>
@@ -2177,12 +2439,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect2 id="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">
           <title>Tap Tempo</title>
 	      
-          <para>The Tap Tempo allows you to change the tempo at any time - with playback rolling or stopped - within Hydrogen. To change the tempo, hit the
+          <para>The Tap Tempo allows you to change the tempo at any time - with transport rolling or stopped - within Hydrogen. To change the tempo, hit the
           <keycap>\</keycap> key in the tempo you want.
           </para>
 
           <para>
-            After two keystrokes the tempo will be first changed according to the time difference between the two taps. With each addition keystroke the tempo will be changed again to the rolling average value of the last up top eight hits of the <keycap>\</keycap> button. If you tap
+            After two keystrokes the tempo will be first changed according to the time difference between the two taps. With each addition keystroke the tempo will be changed again to the rolling average of the last up to eight hits of the <keycap>\</keycap> button. If you tap
           accidentally, or if you wait too long between taps, the Tap Tempo
           counter will start over.</para>
 
@@ -2232,7 +2494,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_set_play_off.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_set_play_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           and
@@ -2243,7 +2505,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_set_play_on.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           .  When it shows the latter (for <emphasis>Play</emphasis>), the song will set the new tempo and
@@ -2258,7 +2520,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="btn_set_play_off.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_bc_set_play_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           (for <emphasis>Set BPM</emphasis>), the auto-start is disabled.</para>
@@ -2274,7 +2536,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_set_play_on.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_bc_set_play_on.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           ).  Count off
@@ -2311,7 +2573,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               Part of the Main Toolbar responsible for the tempo settings. To
               the left there are on top two buttons for decreasing and
               increasing the tempo and below one to activate the metronome. To
-              the right and covering most of the area is a LCD showing the
+              the right and covering most of the area is a display showing the
               current BPM. At the far right there is a tall button activating
               the recalculation of samples processed by Rubber Band at tempo changes. 
             </phrase>
@@ -2324,24 +2586,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>Set the speed of the song in the range from <option>10</option> to <option>400</option> bpm (beats per minute).
         </para>
-        
-          <tip>
-	        <para>
-	          You can use the <emphasis>mouse wheel</emphasis> to decrease and increase the value of this widget.
-            </para>
-          </tip>
 
-          <para>In addition you can use
+          <para>You can use
           <inlinemediaobject>
           <textobject>
             <phrase>
-              Grey button for toggling the metronome. It contains a non-filled
-              black triangle pointing to the left (left), a black dot (middle),
-              and a black closing bracket ")" (right).
+              Grey button containing black outlines of a classical metronome.
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_metronome_off.png" format="PNG" />
+              <imagedata fileref="generated_en/btn_metronome_off.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           to toggle the metronome.</para>
@@ -2362,10 +2616,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="rubber_off.png" format="PNG" />
+              <imagedata fileref="generated_en/playerControlRubberbandButton.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
-          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details.
+          button next to the BPM widget. Activating it will enable recalculation of all sample pitches using Rubber Band whenever the tempo of the song will be changed (see <xref linkend="chpt.sample_editor.pitch" /> for details).
         </para>
         
       </sect1>
@@ -2389,13 +2643,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </mediaobject>
         </informalfigure>
 
-        <para>The CPU bargraph gives you an indication of the CPU load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a <abbrev>MIDI</abbrev> message.</para>
+        <para>The <abbrev>CPU</abbrev> bargraph gives you an indication of the <abbrev>CPU</abbrev> load. The <abbrev>MIDI</abbrev> led lights up every time Hydrogen receives a <abbrev>MIDI</abbrev> message.</para>
 
         <tip>
 	      <para>
-	        The <abbrev>MIDI</abbrev> settings can be adjusted in the <link linkend="chpt.preferences.midi_tab">MIDI tab</link> of the Preferences.
+	        The <abbrev>MIDI</abbrev> settings can be adjusted in the <link linkend="chpt.preferences.midi_tab"><abbrev>MIDI</abbrev> tab</link> of the Preferences.
           </para>
         </tip>
+
+        <para>
+          In case a <abbrev>XRUN</abbrev> event occurs (<abbrev>CPU</abbrev> load is so large that audio processing could not be finished in time) the outlines of the <abbrev>CPU</abbrev> bargraph will be colored red for a couple of seconds.
+        </para>
         
       </sect1>
       
@@ -2426,10 +2684,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="btn_jack_transport_off.png" format="PNG" />
+            <imagedata fileref="generated_en/playerControlJackTransportButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
-        will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the JACK server and will not be in sync with other clients anymore.
+        will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the <abbrev>JACK</abbrev> server and will not be in sync with other clients anymore.
         </para>
         <para>
           Using
@@ -2441,19 +2699,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="btn_jack_master_off.png" format="PNG" />
+              <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
-          clients. Else it will either act as <emphasis>slave</emphasis> in the presence of another
-          Timebase Master, like <command>Ardour</command>, or as a stand-alone client in the
-          absence of a Master.
+          clients. If it's registered as <abbrev>master</abbrev>, the button will appear checked (blue by default). If, however, another application, like <command>Ardour</command>, is registered as Timebase Master and Hydrogen acts as <emphasis>slave</emphasis>, the button appears checked too but is colored red. As soon as it gets unchecked (which can happen without explicit user interaction) Hydrogen works as a stand-alone <abbrev>JACK</abbrev> client.
           </para>
-          <tip>
-            <para>
-            You can check whether Hydrogen is in <emphasis>slave</emphasis> mode by hovering over the disabled <link linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat Counter</link> or <link linkend="chpt.song_editor.timeline">Timeline</link>.
-            </para>
-          </tip>
 
           <note>
 	        <para>
@@ -2471,7 +2722,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <phrase>
               In the upper part there are two buttons. The smaller one to the left
               is titled "Mixer" and the larger one "Instrument rack". Below
-              there is a large blue LCD showing the default message of Hydrogen
+              there is a large blue display showing the default message of Hydrogen
               after startup "Hydrogen Ready.".
             </phrase>
           </textobject>
@@ -2485,7 +2736,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             Toggles the <link linkend="chpt.mixer">Mixer</link> window and the Instrument Rack (containing both the <link linkend="chpt.instrument_editor">Instrument Editor</link> and the <link linkend="chpt.sound_library">Sound Library</link>).
           </para>
           <para>
-            The LCD screen below displays what Hydrogen is up to and gives an optical feedback of the parameters set in the <link linkend="chpt.mixer">Mixer</link>.
+            The line below displays status messages telling what Hydrogen is up to. Clicking it will open a popup menu showing the last 100 messages.
           </para>
         </sect1>
     </chapter>
@@ -2498,7 +2749,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Song Editor</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="generated_en/EnablePlaybackTrack.png" format="PNG" />
+            <imagedata fileref="generated_en/songEditorBackground.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -2506,7 +2757,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
       <para>
         The Song Editor gives an overview of the whole song
-        (e.g. intro, verse, bridge, chorus and so on).  Each blue
+        (e.g. intro, verse, bridge, chorus and so on).  Each
         colored square on this panel represents a playing pattern.
         It gives you complete freedom to add/remove
         patterns to the song and to move or copy any part of your
@@ -2534,7 +2785,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </para>
       <tip>
 	    <para>
-	      Instead of having the same color for all patterns you can set different colors schemes in the <link linkend="chpt.preferences.appearance_tab">Appearance tab</link> in the Preferences.
+	      You can alter the colors of the squares using the <link linkend="chpt.preferences.appearance_tab.interface">Interface</link> tab in the Appearance tab of the Preferences.
         </para>
       </tip>
 
@@ -2545,18 +2796,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               Picture of a part of the Song Ruler used for naviagation. It
               indicates the position of certains bars by their number - "1",
               "5", "9", "13", "17". All remaining bars are indicated with a
-              vertical line - "|". In addition, light-blue colored "T"s indicate
-              the presence of a Tag.
+              vertical line - "|".
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="SongRuler.png" format="PNG" />
+            <imagedata fileref="generated_en/songEditorPositionRuler.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </informalfigure>
       
       <para>
-	    In addition to the transport control provided in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> you can use the song ruler for navigation. This the area above the grid and right of the Main Controls. The position clicked will be rounded to the nearest pattern beginning and transport will be relocated there.
+	    In addition to the transport control provided in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> you can use the <emphasis role="bold">Song Ruler</emphasis> to navigatw. This is the area above the grid and right of the <link linkend="chpt.song_editor.main_controls">Main Controls</link>. The position clicked will be rounded to the nearest pattern beginning (indicated by the faint playhead shown upon hovering) and transport will be relocated there.
         <note>
 	      <para>
             Navigation in Hydrogen is always quantized. It is only possible to move forward / backwards or locate to whole patterns.
@@ -2582,7 +2832,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               button bearing the text "CLEAR" for deleting all patterns, new
               pattern button, two buttons to move the selected pattern down and
               up, two buttons to activate the Draw and the Select mode, and the
-              button to switch between Single Pattern and Stacked mode.
+              button to switch between Single Pattern Mode and Stacked Pattern Mode.
             </phrase>
           </textobject>
            <imageobject>
@@ -2624,8 +2874,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <para><inlinemediaobject>
           <textobject>
             <phrase>
-              Two grey button horizontally aligned. The left contains a black
-              arrow tip pointing downwards and the right one one pointing upwards.
+              Two grey button vertically aligned. The lower one contains a black
+              arrow tip pointing downwards and the upper one pointing upwards.
             </phrase>
           </textobject>
           <imageobject>
@@ -2643,32 +2893,64 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
         <listitem>
-          <para><inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing a black brush.
-            </phrase>
-          </textobject>
-          <imageobject>
-            <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Select mode (<xref
-            linkend="chpt.song_editor.editor_modes.select" />).
+          <para>
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button containing a black brush.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+            : indicates that Hydrogen is in <link linkend="chpt.song_editor.editor_modes.draw">Draw Mode</link> or
+            
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button with pointer and dashed rectangle.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+             : in <link linkend="chpt.song_editor.editor_modes.select">Select Mode</link>.
           </para>
           
         </listitem>
 
-        <listitem>
-          <para><inlinemediaobject>
-          <textobject>
-            <phrase>
-              Blue button containing four black horizontal dots in the lower
-              part joined by three black vertical dots at the right bottom corner.
-            </phrase>
-          </textobject>
-          <imageobject>
-            <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : enables Draw mode (<xref
-            linkend="chpt.song_editor.editor_modes.select" />).</para>
+        <listitem id="chpt.song_editor.main_controls.pattern_editor_lock">
+          <para>
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button if a black lock.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_lock.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+            : locks the <link linkend="chpt.pattern_editor">Pattern Editor</link>.
+          </para>
+
+          <para>
+            If the Pattern Editor is locked, the user won't be able to select a pattern using the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. Instead, Hydrogen will automatically select the currently playing pattern. In case there is more than one pattern present in the current row, the bottom-most one will be chosen.
+          </para>
+
+          <tip>
+            <para>
+              This becomes quite handy when <link linkend="chpt.overview.recording">recording</link> notes in Song Mode. Hydrogen will always select the pattern recorded notes will be inserted to.
+            </para>
+          </tip>
+
+          <note>
+            <para>
+              This button is only enabled in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>. In <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> recorded notes are always added to the currently selected pattern.
+            </para>
+          </note>
         </listitem>
 
         <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked mode">
@@ -2680,7 +2962,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </textobject>
           <imageobject>
             <imagedata fileref="generated_en/btn_pattern_mode.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : sets Hydrogen to <emphasis>Single Pattern mode</emphasis> 
+            </imageobject></inlinemediaobject> : indicates that Hydrogen is in <emphasis>Single Pattern Mode</emphasis> or 
             <inlinemediaobject>
           <textobject>
             <phrase>
@@ -2690,8 +2972,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <imageobject>
             <imagedata fileref="generated_en/btn_stacked_mode.png" format="PNG"/>
             </imageobject></inlinemediaobject>
-            or to <emphasis>Stacked mode</emphasis> (<xref
-            linkend="chpt.song_editor.editor_modes.stacked" />).</para>
+            : in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>.
+          </para>
+
+          <note>
+            <para>
+              These two buttons will only be enabled in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link>. In <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> playing patterns are solely determined by the grid in the Song Editor.
+            </para>
+          </note>
 
         </listitem>
       </itemizedlist>
@@ -2702,9 +2990,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>Song Editor modes</title>
         <para>
           The Song Editor has two different <emphasis>interaction modes</emphasis>. The
-          default <link linkend="chpt.song_editor.editor_modes.select"><emphasis role="bold">Select mode</emphasis></link> allows
+          default <link linkend="chpt.song_editor.editor_modes.select"><emphasis role="bold">Select Mode</emphasis></link> allows
           pattern blocks to be set, cleared, selected, moved and
-          copied. The <link linkend="chpt.song_editor.editor_modes.draw"><emphasis role="bold">Draw mode</emphasis></link>
+          copied. The <link linkend="chpt.song_editor.editor_modes.draw"><emphasis role="bold">Draw Mode</emphasis></link>
           instead allows pattern sequences to be drawn freehand.
         </para>
 
@@ -2723,18 +3011,31 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </para>
 
         <para>
-	      In addition, there are two major <emphasis>playback modes</emphasis>, <link linkend="chpt.song_editor.editor_modes.song_mode"><emphasis role="bold">Song mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode"><emphasis role="bold">Pattern mode</emphasis></link>, with two minor submodes, <emphasis role="bold">Single Pattern mode</emphasis> (covered in the <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> section), and <link linkend="chpt.song_editor.editor_modes.stacked"><emphasis role="bold">Stacked mode</emphasis></link>. These will determine which parts of the song you will listen too during playback.
+	      In addition, there are two major <emphasis>playback modes</emphasis>, <link linkend="chpt.song_editor.editor_modes.song_mode"><emphasis role="bold">Song Mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode"><emphasis role="bold">Pattern Mode</emphasis></link> (with two minor submodes <link linkend="chpt.song_editor.editor_modes.pattern_mode"> <emphasis role="bold">Single Pattern mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.stacked"><emphasis role="bold">Stacked Pattern Mode</emphasis></link>). These will determine which parts of the song you will listen to during playback.
         </para>
         <note>
 	      <para>
-	        While Select mode, Draw mode, Single Pattern mode, and Stacked mode are activated via the <link linkend="chpt.song_editor.main_controls">Main Controls</link> of the Song Editor, Song mode and Pattern mode are activated via the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> section of the Main Toolbar.
+	        While Select Mode, Draw Mode, Single Pattern Mode, and Stacked Pattern Mode are activated via the <link linkend="chpt.song_editor.main_controls">Main Controls</link> of the Song Editor, Song Mode and Pattern Mode are activated via the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> section of the Main Toolbar.
           </para>
         </note>
 
         <sect2 id="chpt.song_editor.editor_modes.select">
           <title>Select Mode</title>
           <para>
-            This mode allows
+            This mode is enabled if the
+            
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button with pointer and dashed rectangle.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_draw.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+
+            button is shown in the <link linkend="chpt.song_editor.main_controls">Controls</link> of the Song Editor and allows
             you to select multiple patterns in the Song Editor and
             delete/move/copy them.
           </para>
@@ -2801,13 +3102,26 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect2 id="chpt.song_editor.editor_modes.draw">
           <title>Draw Mode</title>
           <para>
-            This mode allows you to insert patterns by drawing -
+            This mode is enabled if the
+            
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button containing a black brush.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_select.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+
+            button is shown in the <link linkend="chpt.song_editor.main_controls">Controls</link> of the Song Editor and allows you to insert patterns by drawing -
             holding the left button while moving the mouse - blocks on
             the song canvas.
           </para>
           <para>
             Clicking a square on the song canvas will add a pattern
-            (the square will turn blue) and clicking it again will
+            (the square will turn colorful) and clicking it again will
             remove it. Holding the mouse button down will continue
             either adding or removing patterns from under the mouse
             cursor.
@@ -2832,33 +3146,96 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <sect2 id="chpt.song_editor.editor_modes.song_mode">
 	      <title>Song Mode</title>
           <para>
-	        When <emphasis>Song mode</emphasis> is selected Hydrogen will play the sequence of patterns you have created in the Song Editor from left to right until it reaches the end of the song.
+	        When <emphasis>Song Mode</emphasis>
+
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/playerControlSongModeButton.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+            
+            is selected in the <link linkend="sect.main_toolbar.transport_control">Transport Controls</link> of the Main Toolbar Hydrogen will play the sequence of patterns you have created in the Song Editor from left to right until it reaches the end of the song.
           </para>
 
           <tip>
 	        <para>
-	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seamlessly to the beginning again after reaching the end of the song.
+	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop Mode</link>
+
+              <inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="generated_en/playerControlLoopButton.png" format="PNG" />
+                </imageobject>
+              </inlinemediaobject>
+
+              in the Transport Controls, the playback will move seamlessly to the beginning again after reaching the end of the song.
             </para>
           </tip>
         </sect2>
 
         <sect2 id="chpt.song_editor.editor_modes.pattern_mode">
-	      <title>Pattern Mode</title>
+	      <title>Single Pattern Mode</title>
           <para>
-	        When <emphasis>Pattern mode</emphasis> is selected 
+	        When <emphasis>Pattern Mode</emphasis>
+
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/playerControlPatternModeButton.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+            
+            is selected in the <link linkend="sect.main_toolbar.transport_control">Transport Controls</link> of the Main Toolbar and
+
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button with a horizontal black line.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_pattern_mode.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+
+            is shown in the <link linkend="chpt.song_editor.main_controls">Controls</link> of the Song Editor
+            
             Hydrogen will play the pattern that is currently selected in the Song Editor and displayed 
-          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>. This usual behavior is also called <emphasis>Single Pattern mode</emphasis>.
+          in the <link linkend="chpt.pattern_editor">Pattern Editor</link>.
           </para>
 
-          <tip>
+          <note>
 	        <para>
-	          By enabling <link linkend="sect.main_toolbar.transport_control">Loop mode</link> in the transport control, the playback will move seamlessly to the beginning again after reaching the end of the pattern.
+	          When referring to <emphasis role="bold">Pattern Mode</emphasis> in this manual the described context works with both <emphasis>Single Pattern Mode</emphasis> and <emphasis>Stacked Pattern Mode</emphasis>.
             </para>
-          </tip>
+          </note>
         </sect2>
 
         <sect2 id="chpt.song_editor.editor_modes.stacked">
-          <title>Stacked Mode</title>
+          <title>Stacked Pattern Mode</title>
+          <para>
+	        When <emphasis>Pattern Mode</emphasis>
+
+            <inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="generated_en/playerControlPatternModeButton.png" format="PNG" />
+              </imageobject>
+            </inlinemediaobject>
+            
+            is selected in the <link linkend="sect.main_toolbar.transport_control">Transport Controls</link> of the Main Toolbar and
+
+            <inlinemediaobject>
+              <textobject>
+                <phrase>
+                  Grey button with three horizontal black lines stacked vertically.
+                </phrase>
+              </textobject>
+              <imageobject>
+                <imagedata fileref="generated_en/btn_stacked_mode.png" format="PNG"/>
+              </imageobject>
+            </inlinemediaobject>
+
+            is shown in the <link linkend="chpt.song_editor.main_controls">Controls</link> of the Song Editor <emphasis>Stacked Pattern Mode</emphasis> is used.
+          </para>
+
           <para>
             Normally when composing a pattern and editing it, you'll
             listen to that single pattern looping over and over again
@@ -2867,17 +3244,21 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             example, other instrument parts) while working on it.
           </para>
           <para>
-            Stacked mode will play multiple patterns simultaneously,
-            on a loop. You can select which patterns play using
-            <keycap>Ctrl</keycap> + <emphasis>left click</emphasis> on the
-            pattern's name. Selected patterns are all marked with a
-            triangle.
+            Stacked Pattern Mode will play multiple patterns simultaneously,
+            on a loop. You can select or unselect a pattern by
+            <keycap>Ctrl</keycap> + <emphasis>left clicking</emphasis> the
+            pattern's name or by clicking the empty triangle in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. Patterns currently playing are indicated by green triangles while those about to start and stop when playback is looped to the beginning again are indicated using yellow and red ones respectively.
           </para>
-          <note>
+
+          <tip>
             <para>
-              Hydrogen's playback mode must be set to <emphasis
-              role="bold">Pattern</emphasis> rather than
-              <emphasis role="bold">Song</emphasis> for Stacked mode to take effect.
+              You can alter the colors of the indicators in the <link linkend="chpt.preferences.appearance_tab.colors">Colors</link> tab of the Preferences.
+            </para>
+          </tip>
+          
+          <note>
+	        <para>
+	          When referring to <emphasis role="bold">Pattern Mode</emphasis> in this manual the described context works with both <emphasis>Single Pattern Mode</emphasis> and <emphasis>Stacked Pattern Mode</emphasis>.
             </para>
           </note>
         </sect2>
@@ -3032,16 +3413,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
            <imageobject>
-             <imagedata fileref="generated_en/tempo_bar.png" format="PNG" />
+             <imagedata fileref="generated_en/songEditorTimeline.png" format="PNG" />
            </imageobject>
          </mediaobject>
        </informalfigure>
         
        <para>The majority of songs consist of several parts (intro, verse, chorus ...) and
        often these parts will have a different tempo.  Hydrogen provides an easy way
-       to let you change the tempo of a song at any given moment in the song.  This is 
+       to let you change the tempo at the beginning of any column.  This is 
        done by adding <emphasis>Tempo Markers</emphasis> to your song.</para>
-       <para>To add a Tempo Marker you first need to show the Timeline by clicking the
+       <para>To add a Tempo Marker, you first need to show the Timeline by clicking the
        <inlinemediaobject>
           <textobject>
             <phrase>
@@ -3049,33 +3430,32 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="generated_en/btn_viewTL_off.png" format="PNG" />
+           <imagedata fileref="generated_en/btn_view_playbackTrack.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
        button at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu and enable it using the
        <inlinemediaobject>
           <textobject>
             <phrase>
-              Grey button containing the black characters "BPM".
+              Grey button containing the black characters "Timeline".
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="generated_en/btn_bpm_off.png" format="PNG" />
+           <imagedata fileref="generated_en/songEditorTimelineButton.png" format="PNG" />
          </imageobject>
        </inlinemediaobject>
-       button.  Once this is done
-       the horizontal bar next to the button changes to a ruler with marks at every bar.
-       Now simply <emphasis>left-click</emphasis> this ruler at the bar you want the tempo to change and a
-       window will pop up where you can enter the new tempo.
+       button.
        </para>
        
        <note>
          <para>
-         Please note that the ruler will not be available while using the <abbrev>JACK</abbrev>
-         transport in <emphasis>slave</emphasis> mode (see <xref linkend="sect.main_toolbar.jack_control" /> for details.
+         Please note that the Timeline is neither available in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> nor in the presence of a <link linkend="sect.main_toolbar.jack_control"><abbrev>JACK</abbrev> Timebase Master</link>.
          </para>
        </note>
+       
        <para>
+       Now, simply <emphasis>left-click</emphasis> this widget in the middle or upper part and a
+       window will pop up where you can enter the new tempo.
          
         <informalfigure id="fig.add_tempo_change">
          <mediaobject>
@@ -3096,38 +3476,41 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             
        Once you have entered the new tempo and clicked OK, the tempo change will 
        show up on the Timeline. If you click the Tempo Marker again you can edit 
-       the tempo, change the bar or delete it.
+       the tempo, change the bar, or delete it.
        </para>
+
+       <note>
+         <para>
+           When disabling the Timeline using the
+           
+           <inlinemediaobject>
+             <textobject>
+               <phrase>
+                 Grey button containing the black characters "Timeline".
+               </phrase>
+             </textobject>
+             <imageobject>
+               <imagedata fileref="generated_en/songEditorTimelineButton.png" format="PNG" />
+             </imageobject>
+           </inlinemediaobject>
+
+           button, the tempo resets to the previous value used before enabling the Timeline. This one will also be used for all parts of the song located prior to the first Tempo Marker. To indicate this behavior a special, faint Tempo Marker is shown at the first column that can <emphasis>not</emphasis> be removed by the user. You can, however, overwrite it with your custom tempo by clicking it and placing a regular Tempo Marker on top of it.
+         </para>
+       </note>
 
      </sect1>
      
      <sect1 id="chpt.song_editor.tag">
-       <title>Tags</title>       
+       <title>Tags</title>
 
-       <informalfigure id="fig.tag_bar">
-         <mediaobject>
-          <textobject>
-            <phrase>
-              Excerpt of the Song Ruler containing several Tags marked with
-              light-blue "T"s.
-            </phrase>
-          </textobject>
-           <imageobject>
-             <imagedata fileref="tag_bar.png" format="PNG" />
-           </imageobject>
-         </mediaobject>
-       </informalfigure>
-       
        <para>
-         In addition to altering the tempo when the song switches from e.g. the intro into a verse, 
+         In addition to altering the tempo when the song switches from e.g. intro into verse, 
          it is also very handy to have a clear indication of more general changes or special events in the song. For this purpose you can also add <emphasis>Tags</emphasis> to the song.
-         These Tags are short text messages you can add at any given 
-         moment that will be displayed whenever the song playhead passes by that Tag.
+         These Tags are short text messages you can add at the beginning of a column. They will be shown in the <link linkend="chpt.director">Director</link> whenever the playhead passes them.
        </para>
        
        <para>
-         To add a Tag <emphasis>middle-click</emphasis> on the song ruler (just below the 
-         Timeline) and a window will pop up that allows you to add text for any bar.
+         To add a Tag, you can either <emphasis>left-click</emphasis> the bottom of the <link linkend="fig.tempo_bar">Timeline</link> or <emphasis>middle-click</emphasis> Timeline or <link linkend="fig.song_editor.song_ruler">Song Ruler</link>. A dialog will pop up that allows you to add text for any bar.
          
          <figure id="fig.add_tag">
            <title>Dialog Window for Adding Tags</title>
@@ -3138,8 +3521,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </mediaobject>
          </figure>
 
-         Once you are done you will see a small blue <parameter>T</parameter> in the song ruler for every Tag
-         you have entered. <emphasis>Middle-click</emphasis> anywhere on the song ruler to edit the tags.
+         Once you are done you will see a small <parameter>T</parameter> at the bottom of the Timeline and can view its content by hovering it.
        </para>
      </sect1>
 
@@ -3171,51 +3553,74 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
 		 <note>
 	       <para>
-			 When a Playback Track is loaded, it will be played back every time audio transport in Hydrogen is rolling and <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> is activated. 
+			 When a Playback Track is loaded, it will be played back every time audio transport in Hydrogen is rolling and <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> is activated. 
            </para>
          </note>
 
 		 <para>
-		   To add a playback track to your song, you need to enable the playback track view. This can be done by either pressing the
-            <inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing a black "T".
-            </phrase>
-          </textobject>
+		   To add a playback track to your song, you need to enable the playback
+           track view. This can be done by either pressing
+           <inlinemediaobject>
               <imageobject>
-                <imagedata fileref="btn_viewTL_off.png" format="PNG" />
+                <imagedata fileref="generated_en/btn_view_playbackTrack.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
-            button left to the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
+            left of the scroll bar at the bottom of the Song Editor or via the <link linkend="sect.main_menu.view">View</link> element of the Main Menu.
          </para>
 
          <para>
 		   Left to the wave display, the controls of the Playback Track are displayed.
 
-			 <itemizedlist mark="opencircle">
+			 <itemizedlist>
 				 <listitem>
-				   <para><emphasis role="bold">Edit</emphasis>: loads an audio file.</para>
+				   <para>
+                     <inlinemediaobject>
+                       <textobject>
+                         <phrase>
+                           Grey button containing the text "Edit".
+                         </phrase>
+                       </textobject>
+                       <imageobject>
+                         <imagedata fileref="generated_en/songEditorPlaybackTrackEditButton.png" format="PNG"/>
+                       </imageobject>
+                     </inlinemediaobject>
+                   : loads an audio file.</para>
                    <tip>
 	                 <para>
-	                   As an alternative, you can load an audio file by <emphasis>dragging</emphasis> it into Hydrogen and dropping over the wave display.
+	                   As an alternative, you can load an audio file by <emphasis>dragging</emphasis> it into Hydrogen and dropping over the Playback Track.
                      </para>
                    </tip>
                  </listitem>
                  <listitem>
-				   <para><emphasis role="bold">Mute</emphasis>: <link linkend="def.mute">mutes</link> the Playback Track.</para>
+				   <para>
+                     <inlinemediaobject>
+                       <textobject>
+                         <phrase>
+                           Grey button containing the text "Mute".
+                         </phrase>
+                       </textobject>
+                       <imageobject>
+                         <imagedata fileref="generated_en/songEditorPlaybackTrackMuteButton.png" format="PNG"/>
+                       </imageobject>
+                     </inlinemediaobject>
+                   : <link linkend="def.mute">mutes</link> the Playback Track.</para>
                  </listitem>
                  <listitem>
-				   <para><emphasis role="bold">Fader</emphasis>: adjusts the volume. You can think of this fader as the mixer strip of the Playback Track. The resulting audio will be pass the <link linkend="chpt.mixer.master_fader_strip">Master section</link> of the Mixer like any other strip too.</para>
+				   <para>
+                     <inlinemediaobject>
+                       <textobject>
+                         <phrase>
+                           Horizontal fader
+                         </phrase>
+                       </textobject>
+                       <imageobject>
+                         <imagedata fileref="generated_en/songEditorPlaybackTrackFader.png" format="PNG"/>
+                       </imageobject>
+                     </inlinemediaobject>
+                   : adjusts the volume. You can think of this fader as the mixer strip of the Playback Track. The resulting audio will be passed into the <link linkend="chpt.mixer.master_fader_strip">Master section</link> of the Mixer like any other strip too.</para>
 				 </listitem>
 			 </itemizedlist>
          </para>
-         
-         <note>
-	       <para>
-	         In its current implementation the Playback Track does hide the song ruler used for navigation. It is therefore advised to hide the Playback Track again once you are done setting the sound file and adjusting its volume.
-           </para>
-         </note>
          
 	 </sect1>
      
@@ -3227,7 +3632,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Automation Path Widget</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="AutomationPath.png" format="PNG"/>
+            <imagedata fileref="generated_en/songEditorAutomationPathView.png" format="PNG"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -3280,18 +3685,32 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <imagedata fileref="generated_en/btn_drum_piano_off.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
+
+      and
+      
+      <inlinemediaobject>
+        <textobject>
+          <phrase>
+            Blue button with a quasi-3D display a cylinder with black
+            outlines, blue sides, and a white top.
+          </phrase>
+        </textobject>
+        <imageobject>
+          <imagedata fileref="generated_en/btn_drum_piano_on.png" format="PNG" />
+        </imageobject>
+      </inlinemediaobject>
+              
       button (located on the top-right of the Pattern Editor).
       </para>
       
       <note>
         <para>
-          If you are editing a pattern in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Single Pattern mode</link> you will always hear the pattern you are 
+          If you are editing a pattern in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Single Pattern Mode</link> you will always hear the pattern you are 
           editing when you playback is rolling.
         </para>
         <para>
-          If you are working in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern mode</link> you will hear the <emphasis>active</emphasis> pattern(s), 
+          If you are working in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> you will hear the <emphasis>active</emphasis> pattern(s), 
           not necessarily the pattern you are currently editing.
-          The active patterns have a small triangle next to the pattern name in the Song Editor.  (see <xref linkend="chpt.song_editor.main_controls.single_vs_stacked" /> for details).
         </para>
       </note>
       
@@ -3318,7 +3737,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 <inlinemediaobject>
           <textobject>
             <phrase>
-              Blue LCD showing "4/4" and titled "SIZE".
+              Two blue combo boxes showing "4.00" and "4" and are labeled "Size".
             </phrase>
           </textobject>
                   <imageobject>
@@ -3329,52 +3748,22 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                : lets you choose the length of the pattern (in note values).
               </para>
               <para>
-                It will open a dialog to enter the new size as text, in the standard music fractional notation:                  
-              </para>
-              <informalfigure id="fig.PatternSizeDialog">
-                <mediaobject>
-          <textobject>
-            <phrase>
-              Dialog for entering the "New Pattern length (beats/note value)"
-              via a Text input in the middle. At the bottom there are "Cancel" (right)
-              and "OK" (left) buttons.
-            </phrase>
-          </textobject>
-                  <imageobject>
-                    <imagedata fileref="PatternSizeDialog.png" format="PNG" />
-                  </imageobject>
-                </mediaobject>
-              </informalfigure>                
-              <para>
-                Type <keycap>/</keycap> to separate numerator and denominator.
-              </para>
-              <para>
-                If you enter just the numerator (e.g. <option>4</option>), the current denominator will be assumed.
-                You can enter a decimal numerator (e.g. <option>4.5/4</option>) but since Hydrogen resolution is limited,
-                some values are not supported and will be approximated.
+                The left combo box represents the numerator of your current measure. You can enter a decimal numerator, like <option>4.5/4</option>, but since resolution in Hydrogen is limited,
+                some values are not supported and can not be entered.
               </para>
               
               <note>
                 <para>
-                  Hydrogen supports (only) the following denominators: <option>1</option>, <option>2</option>, <option>3</option>, <option>4</option>, <option>6</option>, <option>8</option>, <option>12</option>, <option>16</option>, <option>24</option>, <option>32</option>, <option>48</option>, <option>64</option>, <option>96</option>, and <option>192</option>
-                  because these are the factors of the maximum resolution (192 ticks per whole note).
-                  You can use unsupported denominators, but the size will be approximated almost all the times,
-                  hence a warning icon will appear:               
+                  Hydrogen supports (only) the following denominators (right combo box): <option>1</option>, <option>2</option>, <option>3</option>, <option>4</option>, <option>6</option>, <option>8</option>, <option>12</option>, <option>16</option>, <option>24</option>, <option>32</option>, <option>48</option>, <option>64</option>, <option>96</option>, and <option>192</option>
+                  because these are the factors of the maximum resolution (192 ticks per whole note).        
                 </para>
-                <informalfigure id="fig.DenominatorWarningIcon">
-                  <mediaobject>
-          <textobject>
-            <phrase>
-              A yellow upright triangle containing a exclamation mark is shown
-              to the right of the "SIZE" LCD.
-            </phrase>
-          </textobject>
-                    <imageobject>
-                      <imagedata fileref="generated_en/DenominatorWarningIcon.png" format="PNG" />
-                    </imageobject>
-                  </mediaobject>
-                </informalfigure>
               </note>
+              
+              <tip>
+                <para>
+                  Typing <keycap>/</keycap> within the numerator (first combo box) also you to quickly jump to the denominator.
+                </para>
+              </tip>
               
             </listitem>
 
@@ -3383,7 +3772,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <inlinemediaobject>
           <textobject>
             <phrase>
-              Blue LCD showing "1/16" and titled "RES".
+              Blue display showing "1/16" and titled "RES".
             </phrase>
           </textobject>
               <imageobject>
@@ -3396,12 +3785,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <note>
                 <para>
                   If you are working
-                  with a resolution of <option>1/16</option> you can't go back to <option>8</option> and remove an upbeat 16th note. On
-                  the other hand if you are working with a resolution of <option>8</option> and you try to
-                  insert a note in the middle of two bars (looking for a <option>16</option> bars precision),
+                  with a resolution of <option>1/16</option> you can't go back to <option>1/8</option> and remove an upbeat 16th note. On
+                  the other hand, if you are working with a resolution of <option>1/8</option> and you try to
+                  insert a note in the middle of two bars (looking for a <option>1/16</option> bars precision),
                   notes will be placed in the previous or in the following 8th bar.  This
                   constraint can be removed if you disable the whole grid resolution (choose
-                  <option>off</option> from the grid resolution LCD control). Now you'll be able to place
+                  <option>off</option> from the grid resolution combo box). Now you'll be able to place
                 notes wherever you prefer.</para>
               </note>
             </listitem>
@@ -3418,7 +3807,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                     <imagedata fileref="generated_en/btn_hear.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
-                : when enabled Hydrogen 
+                : when checked Hydrogen 
                 will play back samples as they are being added to the pattern (even if transport is not rolling).
               </para>
               <note>
@@ -3441,7 +3830,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 <imagedata fileref="generated_en/btn_quant_off.png" format="PNG" />
               </imageobject>
             </inlinemediaobject> : enables/disables quantization.
-            When enabled, beats <link linkend="chpt.overview.recording">recorded</link> from MIDI or from the
+            When checked, notes <link linkend="chpt.overview.recording">recorded</link> using MIDI input or the
             <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">virtual keyboard</link> will automatically respect the grid
             resolution currently applied, just like notes inserted by
             clicking. </para>
@@ -3610,7 +3999,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="generated_en/btn_mute_on.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_instrument_line_mute_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button <link linkend="def.mute">mutes</link> the instrument and 
@@ -3621,7 +4010,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="generated_en/btn_solo_off.png" format="PNG" />
+            <imagedata fileref="generated_en/btn_instrument_line_solo_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         solos it.
@@ -3748,7 +4137,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <title>The Note Properties Ruler set to Velocity</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="NotePropertiesRuler.png" format="PNG"/>
+              <imagedata fileref="generated_en/notePropertiesRuler.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </figure>
@@ -3759,6 +4148,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       The lines represent the values for the selected property of each note of the selected instrument.
       You can select a different note-property from the note property drop-down list (located bottom-left).
       </para>
+      
+      <tip>
+        <para>
+          The color of the vertical bar will change according to the velocity value you have defined and can be customized in the <link linkend="chpt.preferences.appearance_tab.colors">Colors</link> tab of the Preferences.
+        </para>
+      </tip>
 
       <para>
         The following note properties are available: 
@@ -3768,13 +4163,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <listitem id="chpt.pattern_editor.note_properties.velocity">
           <para><emphasis role="bold"><link linkend="def.velocity">Velocity</link></emphasis>: how hard the note is
           played (the volume of the note). This property also determines which sample of the instrument will be <link linkend="chpt.instrument_editor.layers.sample_selection">selected</link>.</para>
-          <note>
-            <para>
-              The color of the vertical bar will change according to the velocity value you have defined. 
-              A light shade of gray means a low velocity (low volume) and the higher you set the velocity the darker the color will be,
-              turning red when you reach the point of <link linkend="def.clipping">clipping</link>.
-            </para>
-          </note>
         </listitem>
         
         <listitem id="chpt.pattern_editor.note_properties.pan">
@@ -3912,9 +4300,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </mediaobject>
       </figure>
 
-      <para>The Sound Library helps you manage your drumkits,
-      favourite patterns, and favourite songs. When making new songs or drum
-      kits, it allows you to reuse and mix instruments and patterns from other kits and songs.
+      <para>The Sound Library helps you manage your <link linkend="chpt.overview.drumkits">drumkits</link>,
+      favourite patterns, and favourite songs. When making new songs or drumkits, it allows you to reuse and mix instruments as well as patterns from other kits and songs.
       </para>
 
       <para>
@@ -3924,40 +4311,25 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="chpt.sound_library.drumkits">
         <title>Drumkits</title>
 
-        <para>The list of drumkits comprises both the kits present at system level and the ones at user level.</para>
+        <para>The list of <link linkend="chpt.overview.drumkits">drumkits</link> comprises kits present at both system and user level as well as those loaded via <link linkend="chpt.overview.cli">command-line option</link> or <link linkend="chpt.osc.command.load_drumkit">OSC command</link>.</para>
         <para>
           The <emphasis role="bold">System drumkits</emphasis> are those installed with your package manager or when <link linkend="chpt.compilation">compiling</link> Hydrogen manually. Their location is determined by the compile-time prefix. On
         Unix-like operating systems, this is usually <filename
         role="directory">/usr/share/hydrogen/data/drumkits</filename>, or
         possibly <filename
         role="directory">/usr/local/share/hydrogen/data/drumkits</filename>.
-        These kits are available to all users on the system, and you usually have no write access to them.</para>
-
-        <tip>
-	      <para>
-	        You can still modify those kids by saving a tweaked version as a user level kit.
-          </para>
-        </tip>
+        These kits are available to all users on the system and you usually have no write access to them which is why you only have read access to the kit's properties and can not delete them. If you want to change one of these kits you have to load it via right click and <link linkend="sect.main_menu.drumkits.save_as">save</link> it first. This will add a modified copy on user level.</para>
 
         <para>The <emphasis role="bold">User drumkits</emphasis> are those which you can manage yourself. They
         are stored in the Hydrogen data
         directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>) within the <filename role="directory">drumkits</filename>
-        folder. When you have
+        subfolder. When you have
         created a new drumkit via <link linkend="sect.main_menu.drumkits.new">New</link> in the Drumkit option of the Main Menu, you can save it using <link linkend="sect.main_menu.drumkits.save_as">Save As</link> from the same menu. In addition, you can also <link linkend="sect.main_form.online_import_drumkit">Online Import</link> a number of drumkits provided by the dev team of Hydrogen.
         </para>
 
         <warning>
-          <para>If you are using Hydrogen for commercial purposes, (creating songs and 
-          selling these online or in any other way) you need to pay special attention to the
-          license type of the drumkit(s) you are using.
-          </para>
-          <para>
-            If the exact license is not available for a drumkit, do <emphasis role="bold">not</emphasis> assume that it is a <ulink url="https://creativecommons.org/about/cclicenses/">Creative Commons (CC)</ulink> or
-            other open and free license.
-          </para>
-          <para>
-            Even if the kit is CC licensed you should always check with the author before using 
-            the kit in your songs.
+          <para>If you are using Hydrogen for creating songs or drumkits or redistribute existing ones you need to pay special attention to the
+          <link linkend="chpt.license">licenses</link> of the drumkit(s) you are using.
           </para>
           <para>DISCLAIMER : Hydrogen is not responsible for the drumkits that are 
           made available for download by our users, either via the <ulink url="hydrogen-music.org">hydrogen-music.org</ulink> or
@@ -3980,7 +4352,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>To access songs via the Sound Library, you have to put them within the Hydrogen data
         directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>) into the <filename role="directory">songs</filename>
-        folder.
+        subfolder.
         To remove them, remove the file from that folder.</para>
       </sect1>      
       
@@ -3989,7 +4361,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <para>To access patterns via the Sound Library, you have to put them within the Hydrogen data
         directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>) into the <filename role="directory">patterns</filename>
-        folder.
+        subfolder.
 
         <note>
 	      <para>
@@ -4061,32 +4433,32 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <listitem id="chpt.instrument_editor.general.attack">
               <para><emphasis role="bold"><link linkend="def.attack">Attack</link></emphasis>: the amount
               of <emphasis>time</emphasis> that the volume of the <link linkend="def.sample">sample</link> goes
-              from 0 to the full <link linkend="def.velocity">velocity</link> of the note. If the value is 0, the
+              from <option>0</option> to the full <link linkend="def.velocity">velocity</link> of the note. If the value is <option>0</option>, the
               sample will play back immediately at full velocity.  If the value is
-              1.0, the sample volume will use the maximum time available for the
+              <option>1.0</option>, the sample volume will use the maximum time available for the
               attack phase.
               </para>
             </listitem>
             <listitem id="chpt.instrument_editor.general.decay">
               <para><emphasis role="bold"><link linkend="def.decay">Decay</link></emphasis>: the amount of
               <emphasis>time</emphasis> for the volume of the <link linkend="def.sample">sample</link> to go from
-              full <link linkend="def.velocity">velocity</link> down to the sustain volume.  If the value is 0, the
+              full <link linkend="def.velocity">velocity</link> down to the sustain volume.  If the value is <option>0</option>, the
               sample will immediately skip from the full velocity to the <link linkend="def.sustain">sustain</link>
-              volume.  If the value is 1.0, the sample volume will use the
+              volume.  If the value is <option>1.0</option>, the sample volume will use the
               maximum time available for the decay parameter.</para>
             </listitem>
             <listitem>
               <para><emphasis role="bold"><link linkend="def.sustain">Sustain</link></emphasis>: the
               <emphasis>volume</emphasis> to play the note after the <link linkend="def.decay">decay</link> phase
-              is over, and until the note is released.  If set to 0, the note
-              will be silent.  If set to 1.0, the note will play at full
+              is over, and until the note is released.  If set to <option>0</option>, the note
+              will be silent.  If set to <option>1.0</option>, the note will play at full
               <link linkend="def.velocity">velocity</link>.</para>
             </listitem>
             <listitem id="chpt.instrument_editor.general.release">
               <para><emphasis role="bold"><link linkend="def.release">Release</link></emphasis>: the
               <emphasis>time</emphasis> to fade out the note from the <link linkend="def.sustain">sustain
-              volume</link> back down to 0 (silent).  If set to 0, the note will fade
-              out in the minimum amount of time (about 5 ms).  If set to 1, it
+              volume</link> back down to <option>0</option> (silent).  If set to <option>0</option>, the note will fade
+              out in the minimum amount of time (about 5 ms).  If set to <option>1</option>, it
               will fade out for the maximum time available.</para>
             </listitem>
           </itemizedlist>
@@ -4115,8 +4487,8 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <mediaobject>
           <textobject>
             <phrase>
-              In the upper half there is a LCD displaying "1.00" (left) next to
-              a rotary titled "GAIN" (middle) and a LCD with corresponding
+              In the upper half there is a display showing "1.00" (left) next to
+              a rotary titled "GAIN" (middle) and a display with corresponding
               decrease and increase buttons (right) titled "MUTE GROUP". In the
               lower part there are two checkboxes: "AUTO-STOP-NOTE" (left) and
               "APPLY-VELOCITY" (right).
@@ -4254,7 +4626,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <mediaobject>
           <textobject>
             <phrase>
-              From left to right: a LCD displaying the total pitch and three
+              From left to right: a display showing the total pitch and three
               rotaries titled "PITCH", "FINE",  and "RANDOM".
 
             </phrase>
@@ -4293,7 +4665,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <mediaobject>
           <textobject>
             <phrase>
-              Two LCDs with corresponding decrease and increase buttons. The
+              Two displays with corresponding decrease and increase buttons. The
               left one is titled "CHANNEL" and the right one "NOTE".
             </phrase>
           </textobject>
@@ -4330,7 +4702,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <mediaobject>
           <textobject>
             <phrase>
-              Three LCDs with corresponding decrease and increase buttons titled
+              Three displays with corresponding decrease and increase buttons titled
               "HH PRESS. GRP", "MIN. RANGE", and "MAX RANGE" (from left to right).
             </phrase>
           </textobject>
@@ -4389,7 +4761,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersComponents.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorComponentName.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4403,7 +4775,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="btn_dropdown_off.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorComponentDropDown.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
             you find a list of all components available in the current drumkit and can select them via a <emphasis>left click</emphasis>. Below a separator you can also find three options to <option>add</option> a new component, <option>delete</option> the current one, or <option>rename</option> the current one.
@@ -4423,7 +4795,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <title>The Layer Section of the Instrument Editor</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersLayers.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorLayers.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </figure>
@@ -4483,12 +4855,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <note>
 	        <para>
-	          When loading a sample it will per-default have its active area set to the whole velocity range. By checking the <emphasis role="bold">Set auto velocity</emphasis> option all layers will be assigned an equally sized velocity range corresponding to their layer number (the top-most layer will have a range starting a zero velocity and the bottom-most one that ends at maximum velocity). Note however that this option will overwrite all existing velocity ranges.
+	          When loading a sample it will per-default have its active area set to the whole velocity range. By checking the <emphasis role="bold">Set auto velocity</emphasis> option all layers will be assigned an equally sized velocity range corresponding to their layer number. Note, however, that this option will overwrite all existing velocity ranges.
             </para>
           </note>
 
           <para>
-	        Above the layer listing you find boxes in different shades of grey indicating which range of note <link linkend="def.velocity">velocity</link> will trigger which sample (left: 0 velocity, right: maximum velocity). <emphasis>Left-clicking</emphasis> on any of these boxes will play back the sound of associated sample modulated by the velocity corresponding to the horizontal position of the mouse cursor.
+	        Above the layer listing you find boxes in different shades of grey indicating which range of note <link linkend="def.velocity">velocity</link> will trigger which sample (left: zero velocity, right: maximum velocity). <emphasis>Left-clicking</emphasis> on any of these boxes will play back the sound of associated sample modulated by the velocity corresponding to the horizontal position of the mouse cursor.
 
             <tip>
 	          <para>
@@ -4515,12 +4887,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <mediaobject>
           <textobject>
             <phrase>
-              A LCD titled "SAMPLE SEL." with a button to open display the
+              A display titled "SAMPLE SEL." with a button to open show the
               different choices to the right.
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersSampleSelection.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorSampleSelection.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4565,12 +4937,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <mediaobject>
           <textobject>
             <phrase>
-              Four rotaries with corresponding LCDs: "L. GAIN" (top left),
+              Four rotaries with corresponding displays: "L. GAIN" (top left),
               "C. VOLUME" (top right), "PITCH" (bottom left), and "FINE" (bottom right).
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="InstrumentEditorLayersControls.png" format="PNG" />
+                <imagedata fileref="generated_en/instrumentEditorControls.png" format="PNG" />
               </imageobject>
             </mediaobject>
           </informalfigure>
@@ -4594,7 +4966,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 </tip>
               </para>
             </listitem>
-            <listitem>
+            <listitem id="chpt.instrument_editor.layers.controls.pitch">
 	          <para>
 	            <emphasis role="bold">Pitch</emphasis>:
                 adjusts the pitch of the currently selected layer and the associated sample in quantized steps of half-tones from <option>-24</option> to <option>+24</option>.
@@ -4816,7 +5188,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
               <imageobject>
-                <imagedata fileref="rubber_off.png" format="PNG" />
+                <imagedata fileref="generated_en/playerControlRubberbandButton.png" format="PNG" />
               </imageobject>
             </inlinemediaobject>
           button in the <link linkend="sect.main_toolbar.bpm_control_and_metronome">Main Toolbar</link> has to be activated to enable the recalculation of all samples on the fly.
@@ -4947,7 +5319,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Instrument Channel Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerInstrumentStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerLineStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5065,7 +5437,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <imageobject>
                 <imagedata fileref="generated_en/mixer_rotary.png" format="PNG" />
               </imageobject>
-              </inlinemediaobject> : sets a pan value affecting all note played using this instrument.
+              </inlinemediaobject> : sets a pan value affecting all notes played using this instrument.
           </para>
           <tip>
 	        <para>
@@ -5092,12 +5464,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 	    <listitem id="chpt.mixer.channel_strips.fader_and_lcd">
 	      <para>
-            <emphasis role="bold">Fader and LCD</emphasis>:
-              the fader next to the instrument's name allows you to adjust the volume of the instrument which will be applied on top of all the individual note velocities, layer gains etc. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The LCD displays shows its peak value.
+            <emphasis role="bold">Fader</emphasis>:
+              the fader next to the instrument's name allows you to adjust the volume of the instrument which will be applied on top of all the individual note velocities, layer gains etc. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The display above shows its peak value.
           </para>
           <tip>
 	        <para>
-	          You can adjust the falloff speed of the peak values in the LCD display via the <link linkend="fig.preferences.appearance_tab">Appearance</link> tab in the Preferences.
+	          You can adjust the falloff speed of the peak values in the display in the <link linkend="fig.preferences.appearance_tab.interface">Interface</link> tab of the Appearance tab in the Preferences.
             </para>
           </tip>
         </listitem>
@@ -5123,7 +5495,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Component Channel Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerComponentStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/componentMixerLineStrip.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5169,12 +5541,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 	    <listitem id="chpt.mixer.component_strips.fader_and_lcd">
 	      <para>
-            <emphasis role="bold">Fader and LCD</emphasis>:
-              the fader next to the component's name allows you to adjust the volume of all layers (of all instruments) associated with this component. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The LCD displays shows its peak value.
+            <emphasis role="bold">Fader</emphasis>:
+              the fader next to the component's name allows you to adjust the volume of all layers (of all instruments) associated with this component. In the background of the fader a volume unit (VU) meter is included representing the instrument's signal level. The displays shows its peak value.
           </para>
           <tip>
 	        <para>
-	          You can adjust the falloff speed of the peak values in the LCD display via the <link linkend="fig.preferences.appearance_tab">Appearance</link> tab in the Preferences.
+	          You can adjust the falloff speed of the peak values in the display in the <link linkend="fig.preferences.appearance_tab.interface">Interface</link> tab of the Appearance tab in the Preferences.
             </para>
           </tip>
         </listitem>
@@ -5188,7 +5560,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The FX Rack in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerFXStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerFXRack.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5203,14 +5575,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="showFX_on.png" format="PNG" />
+          <imagedata fileref="generated_en/mixerShowFXButton.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
 
-      button in the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>).
+      button in the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link>.
       </para>
-      <para>It has 4 bays where you can load a <abbrev>LADSPA</abbrev> effect plugin, but before
-        you can load any plugins these must be installed on system-level.</para>
+      <para>It has 4 slots where you can load a <abbrev>LADSPA</abbrev> effect plugin already installed on your system.</para>
         <para>There are dozens of plugins available for download from various sources:
 
       <itemizedlist>
@@ -5240,18 +5611,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </listitem>
 
       </itemizedlist>
-      </para>
-      
-      <warning>
-        <title>Plugins Kill</title>
-        <para>A badly designed <abbrev>LADSPA</abbrev> plugin is capable of
-        hanging, crashing, freezing, screeching, overflowing buffers, and even
-        phoning home.  If you start having issues with Hydrogen, disable your
-        plugins and see if things improve.  Some plugins are not designed for
-        real-time use, and some are just plain better than others.</para>
-      </warning>
+        </para>
 
-      <para>Once you have installed some plugins you can select one by clicking the
+        <note>
+          <para>
+            Linux Audio Developer's Simple Plugin API (<abbrev>LADSPA</abbrev>) is the only plugin format supported by Hydrogen and it is tailored to be used on Linux platforms. On <emphasis role="bold">macOS</emphasis> it's rather easy to get the plugins running as most of their code works on this platform too without any changes. On <emphasis role="bold">Windows</emphasis>, however, things are not that straight forward. As of 2022 there are no packages, bundles, or other applications shipping LADSPA plugins for Windows usable within Hydrogen and you have to compile them from source too. But in contrast to Linux and macOS your have to adopt the codebase first (which is most easily done for the <abbrev>CMT</abbrev> plugins). So, it's possible to use plugins under Windows but, unfortunately, not feasible at all.
+          </para>
+        </note>
+
+      <para>You can select a plugin using the FX selector opened by clicking the
       
 
       <inlinemediaobject>
@@ -5261,13 +5629,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="edit_off.png" format="PNG" />
+          <imagedata fileref="generated_en/mixerFXEditButton.png" format="PNG" />
         </imageobject>
       </inlinemediaobject>
 
       button.
-      </para>
-      <para>Now the FX selector window will pop up :
       
       <figure id="fig.select_effect">
         <title>Select an Effect</title>
@@ -5279,7 +5645,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </figure>
       
       Once you have selected a plugin you will immediately have access 
-      to its parameters:
+      to its parameters.
       
        
         <informalfigure id="figLADSPA_FX_Properties">
@@ -5290,7 +5656,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               left the name of the FX is displayed and at the top left two
               buttons - "Select FX" and "Deactivate" - are shown. In the remainder
               there are several vertical strips stacked horizontally with each
-              one carrying: an LCD displaying the current value (top), the name
+              one carrying: an display showing the current value (top), the name
               of the parameter (left), and a fader with included meter (right).
             </phrase>
           </textobject>
@@ -5299,10 +5665,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </imageobject>
          </mediaobject>
          </informalfigure>
+      
+      <warning>
+        <title>Plugins Kill</title>
+        <para>A badly designed <abbrev>LADSPA</abbrev> plugin is capable of
+        hanging, crashing, freezing, screeching, overflowing buffers, and even
+        phoning home.  If you start having issues with Hydrogen, disable your
+        plugins and see if things improve.  Some plugins are not designed for
+        real-time use and some are just plain better than others.</para>
+      </warning>
 
 
       You can select another plugin by clicking the <emphasis role="bold">Select FX</emphasis> button. If you quickly want to 
-      enable/disable the effect click the <emphasis role="bold">Deactivate</emphasis> button (or the Bypass (
+      enable/disable the effect click the <emphasis role="bold">Deactivate</emphasis> button (or the Bypass 
 
       <inlinemediaobject>
           <textobject>
@@ -5311,9 +5686,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
         <imageobject>
-          <imagedata fileref="bypass_over.png" format="PNG" />
+          <imagedata fileref="generated_en/mixerFXBypassButton.png" format="PNG" />
         </imageobject>
-        </inlinemediaobject>)
+        </inlinemediaobject>
 
         button in the FX Rack).
       <tip>
@@ -5323,7 +5698,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       </tip></para>
       
       <para>After you have selected the FX and tweaked it's parameters you can use the 
-      <emphasis role="bold">Return</emphasis> knob to increase/decrease how much of this FX will be returned to the master output.</para>
+      <emphasis role="bold">Return</emphasis> knob in the FX Rack of the mixer to increase/decrease how much of this FX will be added to the master output.
+      </para>
+
+      <para>
+        The FX itself lives in an <emphasis>aux</emphasis> channel. This means it's not directly added into the signal path of any instrument line but a copy of the audio output of each of them is sent to the FX for processing instead. The amount of signal - 0 per default - send by each can be controlled using the <link linkend="chpt.mixer.channel_strips.fx_volume">pre-fader FX knobs</link> in the corresponding instrument channel strip. The top left one refers to the top-most FX, the top right one to the second FX and so on. This means, in order to get an all wet signal (none of the original signal but just the processed one enters the mix) of an instrument, you have to ramp up the pre-fader FX knob and set the line's fader to 0.
+      </para>
+
+      <note>
+        <para>
+          Since the FX signal lives in an aux channel it is neither affected by <link linkend="chpt.instrument_editor.gain_and_mute_group">Auto-Stop-Note</link> nor <link linkend="chpt.instrument_editor.gain_and_mute_group">Mute Groups</link>.
+        </para>
+      </note>
 
     </sect1>
      
@@ -5334,7 +5720,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <title>The Master Fader Strip in the Mixer</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="MixerMasterStrip.png" format="PNG" />
+            <imagedata fileref="generated_en/masterMixerLine.png" format="PNG" />
           </imageobject>
         </mediaobject>
       </figure>
@@ -5353,7 +5739,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="master_mute_off.png" format="PNG" />
+              <imagedata fileref="generated_en/mixerMasterMuteButton.png" format="PNG" />
             </imageobject>
           </inlinemediaobject>
           button <link linkend="def.mute">mutes</link> the whole output.
@@ -5367,7 +5753,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="showFX_on.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowFXButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>      
         button will show or hide the <link linkend="sect.fx_rack_LADSPA">FX Rack</link>, and the
@@ -5379,7 +5765,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="showPeaks_on.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowPeakButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>       
         button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.
@@ -5441,24 +5827,21 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect2 id="chpt.mixer.master_fader_strip.mixer_settings">
         <title>Mixer Settings</title>
         
-        <para>In the upper right corner of Master Fader Strip there is a small "cog" icon button:</para>
+        <para>Clicking the
 
-        <informalfigure id="mixerSettingsButton">
-          <mediaobject>
+        <inlinemediaobject id="mixerSettingsButton">
           <textobject>
             <phrase>
               Button holding the cog symbol right of the "Master" title of the
               Master Fader Strip.
             </phrase>
           </textobject>
-            <imageobject>
-              <imagedata fileref="generated_en/mixerSettingsButton.png" format="PNG" />
-            </imageobject>
-          </mediaobject>
-        </informalfigure>
-        <para>
+          <imageobject>
+            <imagedata fileref="generated_en/mixerSettingsButton.png" format="PNG" />
+          </imageobject>
+        </inlinemediaobject>
 
-          Click it to open the Mixer Settings window:
+          button in the upper right corner of Master Fader Strip opens the Mixer Settings window:
 
           <informalfigure id="mixerSettingsDialog">
             <mediaobject>
@@ -5835,7 +6218,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="rec.png" format="PNG" />
+            <imagedata fileref="generated_en/midiSenseButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
         button left of the Event-Action binding line. 
@@ -5856,7 +6239,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="rec.png" format="PNG" />
+            <imagedata fileref="generated_en/midiSenseButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject> button by setting the <emphasis role="bold">Event Param.</emphasis> manually to the desired <abbrev>MIDI</abbrev> note.
         </para>
@@ -5870,7 +6253,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <title>Events</title>
           
           <para>
-            Three types of <abbrev>MIDI</abbrev> Events are available (as described in the <abbrev>MIDI</abbrev> standard):
+            Four types of <abbrev>MIDI</abbrev> Events are available (as described in the <abbrev>MIDI</abbrev> standard):
           </para>
           
           <itemizedlist mark="opencircle">
@@ -5887,6 +6270,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	          <emphasis role="bold">MMC_x</emphasis>: <ulink url="http://en.wikipedia.org/wiki/MIDI_Machine_Control">
 	          machine control events</ulink> coming from buttons, like 'play' or 'stop',  on a controller.
 	        </para></listitem>
+            
+            <listitem><para>
+	          <emphasis role="bold">PROGRAM_CHANGE</emphasis>: 
+	          usually intended to change the sound of instruments or to select different sound banks.
+	        </para></listitem>
 	        
           </itemizedlist>
           
@@ -5897,7 +6285,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          
          <note>
            <para>
-             Some of the <abbrev>MIDI</abbrev> Actions require that the <emphasis role="bold">Action Param.</emphasis> is configured.  This parameter usually references a specific channel, instrument, FXsend...  Keep in mind that its value is <emphasis>zero-based</emphasis>. So, if you want to reference channel 1 you 
+             Some of the <abbrev>MIDI</abbrev> Actions require that their <emphasis role="bold">Action Param.</emphasis> to be configured.  These parameter usually references a specific channel, instrument, FXsend...  Keep in mind that their values are <emphasis>zero-based</emphasis>. So, if you want to reference channel 1 you 
          have to enter <option>0</option> in the <emphasis role="bold">Action Param.</emphasis> field (<option>1</option> for channel 2, <option>2</option> for channel 3, and so on).
            </para>
          </note>
@@ -5929,7 +6317,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	           <emphasis role="bold">BPM_CC_RELATIVE</emphasis>: changes the tempo relative to the current tempo, using a controller. Using the <emphasis role="bold">Action Param</emphasis> you can specify by how much the current tempo will change. If the incoming Event is <option>-1</option> (negative), the tempo will be increased and if it's <option>1</option> (positive), it will be increased.
                <note>
                  <para>
-                   This Action will have no effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+                   This Action will have no effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
                    and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	             </para>
                </note>
@@ -5943,7 +6331,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </para>
            <note>
              <para>
-               This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+               This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
                or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	         </para>
            </note>
@@ -5955,7 +6343,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                as <xref linkend="chpt.midi.actions.actions.bpm_cc_relative" /> but with changes 100 times smaller than the value specified in <emphasis role="bold">Action Param</emphasis>.
                <note>
                  <para>
-                   This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+                   This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
                    or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	             </para>
                </note>
@@ -5968,24 +6356,21 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </para>
            <note>
              <para>
-               This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+               This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
                or <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.
 	         </para>
            </note>
            </listitem>
 	       
-           <listitem><para>
-             <emphasis role="bold">EFFECTx_LEVEL_ABSOLUTE</emphasis>:
-                          changes the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume level of an FX</link> <option>x</option> provided as an integer between <option>0</option> and <option>127</option>. The value you enter in the <emphasis role="bold">Action Param</emphasis> determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> the Action will be applied to.
+           <listitem id="chpt.midi.actions.actions.effect_level_absolute" xreflabel="EFFECT_LEVEL_ABSOLUTE">
+             <para>
+             <emphasis role="bold">EFFECT_LEVEL_ABSOLUTE</emphasis>:
+                          changes the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume level of an FX</link>. Parameter 1 determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> and Parameter 2 specifies the FX the Action will be applied to.
            </para></listitem>
 
            <listitem><para>
-             <emphasis role="bold">EFFECTx_LEVEL_RELATIVE</emphasis>:
-             <warning>
-	           <para>
-	             Not implemented yet.
-               </para>
-             </warning>
+             <emphasis role="bold">EFFECT_LEVEL_RELATIVE</emphasis>:
+             same as <xref linkend="chpt.midi.actions.actions.effect_level_absolute"/> but instead mapping the incoming values directly to the FX volume <option>1</option> will increase and all other values will decrease it by 5%.
            </para></listitem>
 
            <listitem>
@@ -5997,6 +6382,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  127.0.
              </para>
            </listitem>
+
+           <listitem><para>
+             <emphasis role="bold">GAIN_LEVEL_ABSOLUTE</emphasis>:
+	         sets the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">Layer Gain</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
+           </para></listitem>
 	       
            <listitem id="chpt.midi.actions.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
 	         <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>: sets the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link> to the value provided by the <abbrev>MIDI</abbrev> event times 1.5 and divided by 127.
@@ -6019,8 +6409,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
              <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).
 	       </para></listitem>
 	       
+           <listitem id="chpt.midi.actions.actions.pan_absolute" xreflabel="PAN_ABSOLUTE"><para>
+	         <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> to the absolute value that the linked controller sends to Hydrogen. Incoming values from <option>0</option> to <option>127</option> will be mapped to pan values between -1 and 1.
+	       </para></listitem>
+	       
            <listitem><para>
-	         <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> to the absolute value - from <option>0</option> to <option>127</option> - that the linked controller sends to Hydrogen.
+	         <emphasis role="bold">PAN_ABSOLUTE_SYM</emphasis>: same as <xref linkend="chpt.midi.actions.actions.pan_absolute"/> but supports incoming values from <option>-127</option> to <option>127</option> will be mapped.
 	       </para></listitem>
 	       
            <listitem><para>
@@ -6030,6 +6424,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	       </para></listitem>
 
            <listitem id="chpt.midi.actions.actions.pause" xreflabel="PAUSE"><para>
+	         <emphasis role="bold">PAUSE</emphasis>: pauses playback.
+	       </para></listitem>
+
+           <listitem id="chpt.midi.actions.actions.pitch_level_absolute" xreflabel="PITCH_LEVEL_ABSOLUTE"><para>
+             <emphasis role="bold">PITCH_LEVEL_ABSOLUTE</emphasis>:
+	         sets the <link linkend="chpt.instrument_editor.layers.controls.pitch">Layer Pitch</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
 	         <emphasis role="bold">PAUSE</emphasis>: pauses playback.
 	       </para></listitem>
 	       
@@ -6127,14 +6527,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
              <note>
 	           <para>
-	             If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>, the command will have no effect.
+	             If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.
                </para>
              </note>
            </para></listitem>
 
            <listitem><para>
              <emphasis role="bold">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis>:
-             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but only take effect in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked mode</link>.
+             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but only take effect in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>.
            </para></listitem>
 
            <listitem><para>
@@ -6143,7 +6543,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
              <note>
 	           <para>
-                 This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked mode</link>.
+                 This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>.
                </para>
              </note>
            </para></listitem>
@@ -6153,7 +6553,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
              clears the list of patterns scheduled to be played next and adds the one specified in <emphasis role="bold">Action Param</emphasis>.
              <note>
 	           <para>
-	             If either <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> or <link linkend="chpt.song_editor.editor_modes.stacked">Stacked mode</link> is activated, this action will have no effect.
+	             If either <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> or <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> is activated, this action will have no effect.
                </para>
              </note>
            </para></listitem>
@@ -6451,12 +6851,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
-                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>,
+                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link>,
                  switch to pattern <emphasis>f</emphasis>. If Hydrogen is in
-                 <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>, the command will have no effect.</entry>
+                 <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.</entry>
                </row>
                <row>
-                 <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_NEXT_PATTERN</emphasis>/</entry>
+                 <entry>/Hydrogen/<emphasis role="bold">SELECT_AND_PLAY_PATTERN</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
                  <entry>Works as <xref linkend="chpt.osc.command.select_next_pattern"/>
@@ -6466,10 +6866,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">RELOCATE</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>[0,]</entry>
-                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>,
+                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>,
                  locates the playhead to pattern number
-                 <emphasis>f</emphasis>. If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link>, locates the playhead to the beginning of the
+                 <emphasis>f</emphasis>. If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link>, locates the playhead to the beginning of the
                  current pattern.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">BPM</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry></entry>
+                 <entry>Sets the current tempo to
+                 <emphasis>f</emphasis>. Note that this command will have no
+                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
+                 and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">BPM_DECR</emphasis>/</entry>
@@ -6477,7 +6886,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry></entry>
                  <entry>Decreases the current tempo by
                  <emphasis>f</emphasis>. Note that this command will have no
-                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
                  and the <link linkend="chpt.song_editor.timeline">Timeline</link> is activated.</entry>
                </row>
                <row>
@@ -6487,7 +6896,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>Increases the current tempo by
                  <emphasis>f</emphasis>.
                  Note that this command will have no
-                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>
+                 effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
                  and <emphasis>Tempo Marker</emphasis> has been passed.</entry>
                </row>
                <row>
@@ -6611,18 +7020,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                </row>
                <row id="chpt.osc.command.strip_mute_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_MUTE_TOGGLE/X</emphasis>/</entry>
-                 <entry>f</entry>
+                 <entry>'',[f]</entry>
                  <entry></entry>
                  <entry>Toggles muting of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
-                 <emphasis>X</emphasis>. Input argument will be
+                 <emphasis>X</emphasis>. Optional input argument will be
                  ignored.</entry>
                </row>
                <row id="chpt.osc.command.strip_solo_toggle">
                  <entry>/Hydrogen/<emphasis role="bold">STRIP_SOLO_TOGGLE/X</emphasis>/</entry>
-                 <entry>f</entry>
+                 <entry>'',[f]</entry>
                  <entry></entry>
                  <entry>Toggles soloing of <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link>
-                 <emphasis>X</emphasis>. Input argument will be
+                 <emphasis>X</emphasis>. Optional input argument will be
                  ignored.</entry>
                </row>
                <row id="chpt.osc.command.playlist_song">
@@ -6673,7 +7082,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">SONG_MODE_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Deactivated <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link> for a value of <option>0</option> and activates it
+                 <entry>Deactivated <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> for a value of <option>0</option> and activates it
                  for all others.</entry>
                </row>
                <row>
@@ -6733,6 +7142,55 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry></entry>
                  <entry>Exits Hydrogen.</entry>
                </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">NEW_PATTERN</emphasis>/</entry>
+                 <entry>s</entry>
+                 <entry></entry>
+                 <entry>Creates an empty pattern of name <emphasis>s</emphasis>.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">OPEN_PATTERN</emphasis>/</entry>
+                 <entry>s</entry>
+                 <entry></entry>
+                 <entry>Opens an existing pattern at the absolute
+                 path <emphasis>s</emphasis>.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">REMOVE_PATTERN</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry></entry>
+                 <entry>Removes pattern number <emphasis>f</emphasis>. </entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">SONG_EDITOR_TOGGLE_GRID_CELL</emphasis>/</entry>
+                 <entry>ff</entry>
+                 <entry></entry>
+                 <entry>Toggles a pattern in the pattern grid of the <link linkend="chpt.song_editor">Song Editor</link>. The first argument will be used as column and the second as row.</entry>
+               </row>
+               <row id="chpt.osc.command.load_drumkit">
+                 <entry>/Hydrogen/<emphasis role="bold">LOAD_DRUMKIT</emphasis>/</entry>
+                 <entry>s,sf</entry>
+                 <entry></entry>
+                 <entry>Loads a drumkit into the current song. <emphasis>s</emphasis> can be either the name of a drumkit already present in the <link linkend="chpt.sound_library">Sound Library Editor</link> or an absolute path pointing to an extracted drumkit folder (containing both <filename>drumkit.xml</filename> file as well as all required samples). The second argument is optional and specifies whether (<option>0</option>) or not (any other value) instruments of the old kit should be kept in case newly loaded one has less and there are note present for that particular instrument in a pattern.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">EXTRACT_DRUMKIT</emphasis>/</entry>
+                 <entry>s,ss</entry>
+                 <entry></entry>
+                 <entry>Inflates a <link linkend="chpt.file_types.h2drumkit">compressed drumkit</link> found at the absolute path <emphasis>s</emphasis> (first argument). The second argument specifies the target path to extract the kit to. It's optional and if omitted the kit will be extracted into Hydrogen's user drumkit folder.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">VALIDATE_DRUMKIT</emphasis>/</entry>
+                 <entry>s</entry>
+                 <entry></entry>
+                 <entry>Validates a <link linkend="chpt.file_types.h2drumkit">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis>.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">UPGRADE_DRUMKIT</emphasis>/</entry>
+                 <entry>s,ss</entry>
+                 <entry></entry>
+                 <entry>Upgrades a <link linkend="chpt.file_types.h2drumkit">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis> to the latest drumkit format. The second argument specifies the target path to upgraded kit will be stored in. It's optional and if omitted the kit will be upgraded inplace.</entry>
+               </row>
              </tbody>
            </tgroup>
          </table>
@@ -6755,18 +7213,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      <sect1 id="sect.song_vs_pattern">
        <title>Song Mode and Pattern Mode</title>
 
-       <para>Hydrogen has two main modes: <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> and <link linkend="chpt.song_editor.editor_modes.song_mode">Song mode</link>. When
-       <emphasis>Pattern mode</emphasis> is activated the current pattern is continuously repeated.
+       <para>Hydrogen has two main modes: <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern mode</link> and <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>. When
+       <emphasis>Pattern Mode</emphasis> is activated the current pattern is continuously repeated.
        This mode is very well suited to tweak your pattern until it's just right, since the 
        pattern you are working on is constantly repeated. This way you can immediately 
-       hear the changes you have made. In <emphasis>Song mode</emphasis> the whole song is played.  
+       hear the changes you have made. In <emphasis>Song Mode</emphasis> the whole song is played.  
        This is useful when putting together the patterns to create the structure of the song.</para>
      </sect1>
 
      <sect1 id="sect.create_pattern">
        <title>A New Pattern</title>
        <para>We'll start from the empty song with an empty pattern created when
-       Hydrogen starts up: <emphasis>Pattern mode</emphasis> should be selected by default. Now
+       Hydrogen starts up: <emphasis>Pattern Mode</emphasis> should be selected by default. Now
        let's click on the
        <inlinemediaobject>
           <textobject>
@@ -6776,7 +7234,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
          <imageobject>
-           <imagedata fileref="btn_play_off.png" format="PNG"/>
+           <imagedata fileref="generated_en/playerControlPlayButton.png" format="PNG"/>
          </imageobject>
        </inlinemediaobject>
 button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link>, and while the pattern is playing
@@ -6790,7 +7248,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
            16th note; same thing happens if you are working with a resolution of
            <option>1/8</option> and you try to insert a note in the middle of two bars (looking for
            a 16 bars precision): they will be placed on the previous or on the
-           following 8th bar (unless you choose <option>off</option> from the Grid Resolution LCD in which case
+           following 8th bar (unless you choose <option>off</option> from the Grid Resolution combo box in which case
            you're free to place notes wherever you prefer). <emphasis role="bold">Be
            sure to select the correct pattern in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor before adding notes
            in the Pattern Editor!</emphasis>
@@ -6812,7 +7270,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
        <title>A New Sequence</title>
 
        <para>Once patterns are created (<xref linkend="fig.insert_patterns"/>), we
-       can copy/paste/delete them using the <link linkend="chpt.song_editor.editor_modes.select">Select mode</link>.
+       can copy/paste/delete them using the <link linkend="chpt.song_editor.editor_modes.select">Select Mode</link>.
        </para>
 
        <figure id="fig.insert_patterns">
@@ -6841,7 +7299,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="showFX_on.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowFXButton.png" format="PNG" />
           </imageobject>
           </inlinemediaobject>
           button to show and hide the 
@@ -6951,7 +7409,7 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
          </para>
        </tip>
 
-       <para>Lets make a brand new drum kit:</para>
+       <para>Let's make a brand new drum kit:</para>
        <procedure>
          <step><para>in the <link linkend="chpt.main_menu">Main Menu</link> select
          <menuchoice>
@@ -7214,6 +7672,124 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
 <part id="appendix">
   <title>Appendix</title>
   
+    <chapter id="chpt.license" xreflabel="Licensing">
+      <title>Licensing</title>
+        <warning>
+          <para>
+            No one of us is a lawyer and all information found in this section should be taken with a grain of salt and come with no warranty. But we try our best to condense information we found online.
+          </para>
+        </warning>
+
+      <para>
+        When <link linkend="sect.main_form.export_song">exporting a song</link> or <link linkend="sect.main_menu.drumkits.save_as">saving</link> or <link linkend="sect.main_form.export_drumkit">exporting</link> a drumkit you are reusing and/or redistributing licensed sound samples. Thus you are legally obliged to comply with every license hold by the samples you used.
+      </para>
+      <para>
+        In this chapter we cover how Hydrogen can help you handle and manage the licenses involved and what the most common ones do imply.
+      </para>
+
+      <note>
+	    <para>
+	      Our custom data types <link linkend="chpt.file_types.h2pattern">.h2pattern</link>, <link linkend="chpt.file_types.h2song">.h2song</link>, and <link linkend="chpt.file_types.h2playlist">.h2playlist</link> do not contain any samples and are not affected by the issues described in this chapter.
+        </para>
+      </note>
+
+      <warning>
+        <para>
+          If the exact license is not available for a drumkit, do <emphasis role="bold">not</emphasis> assume that it is a <ulink url="https://creativecommons.org/about/cclicenses/">Creative Commons (CC)</ulink> or
+          other open and free license.
+        </para>
+      </warning>
+
+      <sect1 id="chpt.license.parsing">
+        <title>License Parsing</title>
+        
+        <para>
+          Hydrogen does display some info dialogs in case any of the used samples holds a copyleft license, like <xref linkend="chpt.license.common_licenses.CC_BY_SA"/> or <xref linkend="chpt.license.common_licenses.GPL"/>, holds one that require an attribution of the copyright holder (as CC BY* licenses do), or you are mixing different licenses during drumkit saving or export. But all this is only possible if the licenses of the involved drumkits are correctly parsed (and are one of the supported <link linkend="chpt.license.common_licenses">common licenses</link>).
+        </para>
+        <para>
+          You can access and alter the license of the drumkit used in the current song via <link linkend="sect.main_menu.drumkits.properties">Drumkits > Properties</link> in the main menu or the license of a stock kit via the <link linkend="chpt.sound_library.drumkits">Sound Library</link>. In addition, you can view all licenses of the contained samples which is especially helpful when mixing instruments of different drumkits in the current song.
+        </para>
+
+        <figure id="fig.license.parsing.drumkit.properties">
+          <title>Dialog to view and alter the Properties of a Drumkit</title>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="generated_en/soundLibraryPropertiesDialog.png" format="PNG" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <note>
+          <para>
+            Samples loaded directly into Hydrogen using the <link linkend="chpt.instrument_editor.layers.layers">Layer section of the Instrument Editor</link> are not associated to any drumkit until you <link linkend="sect.main_menu.drumkits.save">save</link> it and will be handled as if they are unlicensed. Please take extra care of checking which licenses they are distributed with and what implication their presence has for your song/drumkit.
+          </para>
+        </note>
+      </sect1>
+
+      <sect1 id="chpt.license.common_licenses">
+        <title>Common Licenses</title>
+
+        <para>
+          By default all copyrights of your creative work belongs to you - its creator. But you are obliged to comply with the licenses of the samples you used to create it. In this section you find a list and some short description of the licenses most commonly encountered in Hydrogen drumkits.
+        </para>
+        <para>
+        Also, you are free to abstain from some or all rights by licensing your work with e.g. one of the licenses provided by Creative Commons (CC). This allows other people to reuse it more easily and in a legally secure way and helps the audio community to prosper.
+        </para>
+        
+        <table frame='all'>
+          <title>Common Licenses</title>
+          <tgroup cols='2' align='left' colsep='1' rowsep='1'>
+            <colspec colname='cName'/>
+            <colspec colname='cDescription'/>
+            <thead>
+              <row>
+                <entry>Name</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row id="chpt.license.common_licenses.CC0" xreflabel="CC0">
+                <entry><ulink url="https://creativecommons.org/publicdomain/zero/1.0/">CC0</ulink></entry>
+                <entry>The creator choose to give up her copyright and you are free to use, modify, distribute etc. the samples.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY" xreflabel="CC BY">
+                <entry><ulink url="https://creativecommons.org/licenses/by/4.0/">CC BY</ulink></entry>
+                <entry>You are free to use, modify, distribute etc. the samples but you are obliged to give attribution to the creator. This can be done in e.g. the info property of the new drumkit or in the liner notes of the song you created by reusing the samples.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_NC" xreflabel="CC BY-NC">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY"/> but you are in addition only allowed to use the result for noncommercial purposes.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_SA" xreflabel="CC BY-SA">
+                <entry><ulink url="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY"/> but you are obliged to license your work as CC BY-SA as well. This means <emphasis>you have to give the general public permission to modify, redistribute, reuse, and sell it without being able to require them to give royalty to you</emphasis>.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_NC_SA" xreflabel="CC BY-NC-SA">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY_SA"/> but you are in addition only allowed to use the result for noncommercial purposes.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_ND" xreflabel="CC BY-ND">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY"/> but you are not allowed to alter the material and can only use or distribute them in unadapted form.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.CC_BY_NC_ND" xreflabel="CC BY-NC-ND">
+                <entry><ulink url="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</ulink></entry>
+                <entry>Similar to <xref linkend="chpt.license.common_licenses.CC_BY_ND"/> but you are in addition only allowed to use the result for noncommercial purposes.</entry>
+              </row>
+              <row id="chpt.license.common_licenses.GPL" xreflabel="GPL">
+                <entry><ulink url="https://www.gnu.org/licenses/gpl-3.0.html">GPL</ulink></entry>
+                <entry>License similar to <xref linkend="chpt.license.common_licenses.CC_BY_SA"/> but targeted on usage with software instead of creative content. It is discouraged to license your newly created drumkit using this license since it's not clear whether it actually can be legally applied to audio samples. Instead, it's recommanded to stick to the Creative Commons (CC) ones covered above. However, most of the drumkits available in Hydrogen <emphasis>are</emphasis> licensed as GPL and require you to adopt this license too in case you reuse their samples. It's a bit of an unpleasant situation but grew naturally. Most importantly, <emphasis>this license also obliges you to make your product (drumkit/music) available for free!</emphasis></entry>
+              </row>
+              <row id="chpt.license.common_licenses.AllRightsReserved" xreflabel="All rights reserved">
+                <entry>All rights reserved</entry>
+                <entry>You are not allowed to modify, reuse, or distribute the samples without asking the copyright holder for permission first.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </sect1>
+    </chapter>
+  
     <chapter id="chpt.file_types">
       <title>Used File Types</title>
 
@@ -7224,22 +7800,23 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
         <listitem id="chpt.file_types.h2pattern">
           <para><emphasis role="bold">*.h2pattern</emphasis>: <abbrev>XML</abbrev> file
           describing a single pattern. Patterns are group of beats and are
-          managed in the pattern editor.</para>
+          managed in the <link linkend="chpt.pattern_editor">Pattern Editor</link>.</para>
         </listitem>
         <listitem id="chpt.file_types.h2song">
           <para><emphasis role="bold">*.h2song</emphasis>: <abbrev>XML</abbrev> file describing
-          the whole song (or sequence). Songs are group of patterns with their
-          properties and are manager using the song editor</para>
+          the whole song (or sequence). Songs are groups of patterns managed using the <link linkend="chpt.song_editor">Song Editor</link>, groups of instruments comprising the current drumkit and managed via the <link linkend="chpt.instrument_editor">Instrument Editor</link>, as well as all states not already covered by the <link linkend="chpt.preferences">Preferences</link>.
+          </para>
         </listitem>
         <listitem id="chpt.file_types.h2playlist">
           <para><emphasis role="bold">*.h2playlist</emphasis>: <abbrev>XML</abbrev> file
           describing a playlist. A Playlist is a (ordered) group of songs.</para>
         </listitem>
         <listitem id="chpt.file_types.h2drumkit">
-          <para><emphasis role="bold">*.h2drumkit</emphasis>: a compressed and
-          archived folder containing all sound samples composing a drumkit and a
-          description <abbrev>XML</abbrev> file. Drumkits are basically group of sound
-          samples.</para>
+          <para><emphasis role="bold">*.h2drumkit</emphasis>: a compressed folder containing all sound samples composing a drumkit and the
+          description <abbrev>XML</abbrev> file <filename>drumkit.xml</filename> storing the kit's structure and parameters.</para>
+        </listitem>
+        <listitem id="chpt.file_types.h2theme">
+          <para><emphasis role="bold">*.h2theme</emphasis>: <abbrev>XML</abbrev> file describing all preferences available in the <link linkend="chpt.preferences.appearance_tab">Appearance</link> tab of the <link linkend="chpt.preferences">Preferences</link>.</para>
         </listitem>
       </itemizedlist>
     </chapter>
