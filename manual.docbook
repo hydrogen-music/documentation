@@ -2832,7 +2832,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               button bearing the text "CLEAR" for deleting all patterns, new
               pattern button, two buttons to move the selected pattern down and
               up, two buttons to activate the Draw and the Select mode, and the
-              button to switch between Single Pattern Mode and Stacked Pattern Mode.
+              button to switch between Selected Pattern Mode and Stacked Pattern Mode.
             </phrase>
           </textobject>
            <imageobject>
@@ -2953,7 +2953,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </note>
         </listitem>
 
-        <listitem id="chpt.song_editor.main_controls.single_vs_stacked" xreflabel="Single Pattern and Stacked mode">
+        <listitem id="chpt.song_editor.main_controls.selected_vs_stacked" xreflabel="Selected and Stacked Pattern Mode">
           <para><inlinemediaobject>
           <textobject>
             <phrase>
@@ -2962,7 +2962,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </textobject>
           <imageobject>
             <imagedata fileref="generated_en/btn_pattern_mode.png" format="PNG"/>
-            </imageobject></inlinemediaobject> : indicates that Hydrogen is in <emphasis>Single Pattern Mode</emphasis> or 
+            </imageobject></inlinemediaobject> : indicates that Hydrogen is in <emphasis>Selected Pattern Mode</emphasis> or 
             <inlinemediaobject>
           <textobject>
             <phrase>
@@ -3011,11 +3011,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </para>
 
         <para>
-	      In addition, there are two major <emphasis>playback modes</emphasis>, <link linkend="chpt.song_editor.editor_modes.song_mode"><emphasis role="bold">Song Mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode"><emphasis role="bold">Pattern Mode</emphasis></link> (with two minor submodes <link linkend="chpt.song_editor.editor_modes.pattern_mode"> <emphasis role="bold">Single Pattern mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.stacked"><emphasis role="bold">Stacked Pattern Mode</emphasis></link>). These will determine which parts of the song you will listen to during playback.
+	      In addition, there are two major <emphasis>playback modes</emphasis>, <link linkend="chpt.song_editor.editor_modes.song_mode"><emphasis role="bold">Song Mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.pattern_mode"><emphasis role="bold">Pattern Mode</emphasis></link> (with two minor submodes <link linkend="chpt.song_editor.editor_modes.pattern_mode"> <emphasis role="bold">Selected Pattern mode</emphasis></link> and <link linkend="chpt.song_editor.editor_modes.stacked"><emphasis role="bold">Stacked Pattern Mode</emphasis></link>). These will determine which parts of the song you will listen to during playback.
         </para>
         <note>
 	      <para>
-	        While Select Mode, Draw Mode, Single Pattern Mode, and Stacked Pattern Mode are activated via the <link linkend="chpt.song_editor.main_controls">Main Controls</link> of the Song Editor, Song Mode and Pattern Mode are activated via the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> section of the Main Toolbar.
+	        While Select Mode, Draw Mode, Selected Pattern Mode, and Stacked Pattern Mode are activated via the <link linkend="chpt.song_editor.main_controls">Main Controls</link> of the Song Editor, Song Mode and Pattern Mode are activated via the <link linkend="sect.main_toolbar.transport_control">Transport Control</link> section of the Main Toolbar.
           </para>
         </note>
 
@@ -3173,7 +3173,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </sect2>
 
         <sect2 id="chpt.song_editor.editor_modes.pattern_mode">
-	      <title>Single Pattern Mode</title>
+	      <title>Selected Pattern Mode</title>
           <para>
 	        When <emphasis>Pattern Mode</emphasis>
 
@@ -3204,7 +3204,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
           <note>
 	        <para>
-	          When referring to <emphasis role="bold">Pattern Mode</emphasis> in this manual the described context works with both <emphasis>Single Pattern Mode</emphasis> and <emphasis>Stacked Pattern Mode</emphasis>.
+	          When referring to <emphasis role="bold">Pattern Mode</emphasis> in this manual the described context works with both <emphasis>Selected Pattern Mode</emphasis> and <emphasis>Stacked Pattern Mode</emphasis>.
             </para>
           </note>
         </sect2>
@@ -3258,7 +3258,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           
           <note>
 	        <para>
-	          When referring to <emphasis role="bold">Pattern Mode</emphasis> in this manual the described context works with both <emphasis>Single Pattern Mode</emphasis> and <emphasis>Stacked Pattern Mode</emphasis>.
+	          When referring to <emphasis role="bold">Pattern Mode</emphasis> in this manual the described context works with both <emphasis>Selected Pattern Mode</emphasis> and <emphasis>Stacked Pattern Mode</emphasis>.
             </para>
           </note>
         </sect2>
@@ -3705,7 +3705,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       
       <note>
         <para>
-          If you are editing a pattern in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Single Pattern Mode</link> you will always hear the pattern you are 
+          If you are editing a pattern in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Selected Pattern Mode</link> you will always hear the pattern you are 
           editing when you playback is rolling.
         </para>
         <para>
@@ -6550,10 +6550,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem><para>
              <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis>:
-             clears the list of patterns scheduled to be played next and adds the one specified in <emphasis role="bold">Action Param</emphasis>.
+             clears the list of patterns currently playing in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> and adds the one specified in <emphasis role="bold">Action Param</emphasis>.
+             <tip>
+               <para>
+                 By providing a number smaller than <option>0</option> or larger than the number of available patterns all playing patterns can be stopped at once without stopping playback itself.
+               </para>
+             </tip>
              <note>
-	           <para>
-	             If either <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> or <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> is activated, this action will have no effect.
+	           <para> In <link
+                 linkend="chpt.song_editor.editor_modes.pattern_mode">Selected
+                 Pattern Mode</link> this action behaves like <xref linkend="chpt.midi.actions.actions.select_next_pattern"/>. If Hydrogen is in
+                 <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.
                </para>
              </note>
            </para></listitem>
@@ -6853,6 +6860,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>[0,]</entry>
                  <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link>,
                  switch to pattern <emphasis>f</emphasis>. If Hydrogen is in
+                 <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.</entry>
+               </row>
+               <row id="chpt.osc.command.select_only_next_pattern" xreflabel="/Hydrogen/SELECT_ONLY_NEXT_PATTERN/">
+                 <entry>/Hydrogen/<emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry></entry>
+                 <entry>If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>,
+                 play back pattern <emphasis>f</emphasis> and stop all other
+                 patterns currently playing. In <link
+                 linkend="chpt.song_editor.editor_modes.pattern_mode">Selected
+                 Pattern Mode</link> this action behaves like <xref linkend="chpt.osc.command.select_next_pattern"/>. If Hydrogen is in
                  <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.</entry>
                </row>
                <row>
