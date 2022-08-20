@@ -1530,11 +1530,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	      <listitem>
 	        <para>
 	          <emphasis role="bold">Use output note as input note</emphasis>:
-              specifies whether the output <abbrev>MIDI</abbrev> note of an instrument specified in the <link linkend="chpt.instrument_editor.midi_out_settings"><abbrev>MIDI</abbrev> Out Settings</link> of the Instrument Editor should be used to map the input as well.
-
+              if checked the instrument mapped to an incoming <abbrev>MIDI</abbrev> note is determined by its <link linkend="chpt.instrument_editor.midi_out_settings"><abbrev>MIDI</abbrev> Out Settings</link> in the Instrument Editor. Otherwise, the <link linkend="chpt.overview.midi_mapping_and_virtual_keyboard">default <abbrev>MIDI mapping</abbrev></link> (based on the instrument order in the <link linkend="chpt.pattern_editor">Pattern Editor</link>) will be used.
               <note>
 	            <para>
-	              If this option is unchecked, only the currently selected instrument will used to play back the received <abbrev>MIDI</abbrev> notes.
+	              This option only takes effect if <emphasis role="bold">Input mode</emphasis> in the <link linkend="sect.main_menu.options">Options</link> tab of the Main Menu is set to <option>Drumkit</option>.
                 </para>
               </note>
             </para>
