@@ -6522,9 +6522,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	       
            <listitem id="chpt.midi.actions.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
              <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>:
-             switches to the pattern specified in <emphasis role="bold">Action Param</emphasis>.
+             selects the pattern specified in <emphasis role="bold">Action Param</emphasis>.
 
              <note>
+               <para>
+                 If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Selected Pattern Mode</link>, playback will be switched to the selected pattern immediately. If it is, instead, in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>, playback of the selected pattern will be toggled next time transport is loop again. In case the pattern was already playing, it will be stopped. If not, it will be started.
+               </para>
 	           <para>
 	             If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.
                </para>
@@ -6533,35 +6536,36 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem><para>
              <emphasis role="bold">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis>:
-             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but only take effect in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>.
+             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but the pattern to be selected is determined by the value of the <abbrev>MIDI</abbrev> message.
            </para></listitem>
 
            <listitem><para>
              <emphasis role="bold">SELECT_NEXT_PATTERN_RELATIVE</emphasis>:
-             switches <emphasis role="bold">Action Param</emphasis> patterns forward.
-
-             <note>
-	           <para>
-                 This Action does only increment the pattern number and will only take effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>.
-               </para>
-             </note>
+             like <xref linkend="chpt.midi.actions.actions.select_next_pattern" /> but the pattern to be selected is determined by the pattern number of the currently selected one plus the value specified in <emphasis role="bold">Action Param</emphasis>.
            </para></listitem>
 
-           <listitem><para>
+           <listitem id="chpt.midi.actions.actions.select_only_next_pattern" xreflabel="SELECT_ONLY_NEXT_PATTERN"><para>
              <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis>:
-             clears the list of patterns currently playing in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> and adds the one specified in <emphasis role="bold">Action Param</emphasis>.
+             selects the pattern specified in <emphasis role="bold">Action Param</emphasis>.
+
+             <note>
+               <para>
+                 If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>, only the selected pattern will be played back once the transport gets looped again. For <link linkend="chpt.song_editor.editor_modes.pattern_mode">Selected Pattern Mode</link> this action behaves as <xref linkend="chpt.midi.actions.actions.select_next_pattern" />.
+               </para>
+	           <para>
+	             If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.
+               </para>
+             </note>
              <tip>
                <para>
                  By providing a number smaller than <option>0</option> or larger than the number of available patterns all playing patterns can be stopped at once without stopping playback itself.
                </para>
              </tip>
-             <note>
-	           <para> In <link
-                 linkend="chpt.song_editor.editor_modes.pattern_mode">Selected
-                 Pattern Mode</link> this action behaves like <xref linkend="chpt.midi.actions.actions.select_next_pattern"/>. If Hydrogen is in
-                 <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.
-               </para>
-             </note>
+           </para></listitem>
+
+           <listitem><para>
+             <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN_CC_ABSOLUTE</emphasis>:
+             like <xref linkend="chpt.midi.actions.actions.select_only_next_pattern" /> but the pattern to be selected is determined by the value of the <abbrev>MIDI</abbrev> message.
            </para></listitem>
 
            <listitem id="chpt.midi.actions.actions.stop" xreflabel="STOP"><para>
