@@ -231,7 +231,7 @@
       </itemizedlist>
 
       <para>
-        All rotaries and faders can also set by using the keyboard. First, you have to click the widget for it to get focussed. This will be indicated by a highlighting (orange per default). Now, you can enter numerical input via your keyboard. All numbers and dots are concatenated. If you want to reset your input or start a different one you can either press <keycap>ESC</keycap> or wait a couple of seconds.
+        All rotaries and faders can also be set by using the keyboard. First, you have to click the widget for it to be focussed, indicated by a coloured highlight (orange per default). Now, you can enter numerical input via your keyboard. All numbers and dots are concatenated. If you want to reset your input or start a different one you can either press <keycap>ESC</keycap> or wait a couple of seconds.
       </para>
 
       <sect1>
@@ -787,7 +787,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </para>
 
         <para>
-	      Using the playback mode of the <link linkend="chpt.song_editor">Song Editor</link> you can choose between the following two scenarios. When in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> all inserted notes will be added to pattern currently selected in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. When, on the other hand, in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> the input notes will be added to the active pattern (the one the playhead is located in and is currently used for playback). If several patterns are selected in a single row, the input notes will only be added to the pattern at the bottom.
+	      Using the playback mode of the <link linkend="chpt.song_editor">Song Editor</link> you can choose between the following two scenarios. When in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> all inserted notes will be added to the pattern currently selected in the <link linkend="chpt.song_editor.sidebar">Sidebar</link> of the Song Editor. When, on the other hand, in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link> the input notes will be added to the active pattern (the one the playhead is located in and is currently used for playback). If several patterns are selected in a single row, the input notes will only be added to the pattern at the bottom.
         </para>
 
         <tip>
@@ -939,7 +939,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
       <note>
         <para>
-          Which audio drivers are supported depends on both your platform and it's installed packages. Your local help message will display all available options.
+          Which audio drivers are supported depends on both your platform and its installed packages. Your local help message will display all available options.
         </para>
       </note>
       
@@ -950,7 +950,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
     <chapter id="chpt.preferences" xreflabel="Preferences">
       <title>Preferences</title>
 
-      <para>Using this window most of the configurations and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
+      <para>Using this window most of the configuration options and customization can be altered. The Preferences Dialog can be accessed via the <parameter>Options</parameter> element in the <link linkend="chpt.main_menu">Main Menu</link>.</para>
       
       <sect1 id="chpt.preferences.general_tab">
         <title>General</title>
@@ -1728,7 +1728,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	        <listitem>
 	          <para>
 	            <emphasis role="bold">Icon color</emphasis>:
-                while the color of all button labels can be set in the <link linkend="chpt.preferences.appearance_tab.colors">Colors</link> tab, the icons hold the color used in the corresponding <abbrev>SVG</abbrev> file and can not be altered freely. To still allow you changing the overall colors conveniently, Hydrogen is shipped with all icons available in either <option>Black</option> and <option>White</option> color.
+                while the color of all button labels can be set in the <link linkend="chpt.preferences.appearance_tab.colors">Colors</link> tab, the icons hold the color used in the corresponding <abbrev>SVG</abbrev> file and can not be altered freely. To still allow you to change the overall colors conveniently, Hydrogen is shipped with all icons available in either <option>Black</option> and <option>White</option> color.
               </para>
             </listitem>
 	        <listitem>
@@ -1903,13 +1903,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
             <note>
               <para>
-                Prior to version 1.2 of Hydrogen new songs were based on <filename>DefaultSong.h2song</filename> in Hydrogen's data folder and all <link linkend="chpt.preferences.general_tab.autosaves">backups</link> of unsaved changes were associated to it. This had the unfortunate downside that it was quite easy to loose all progress done in a new song in case you forget to change it.
+                Prior to version 1.2 of Hydrogen new songs were based on <filename>DefaultSong.h2song</filename> in Hydrogen's data folder and all <link linkend="chpt.preferences.general_tab.autosaves">backups</link> of unsaved changes were associated with it. This had the unfortunate downside that it was quite easy to lose all changes made in a new song in case you forget to change it.
               </para>
               <para>
-                Since 1.2 new songs are not associated with any file anymore and Hydrogen makes sure the backup file generate does not exist yet and no data gets overwritten. In addition, when working on a newly created song and closing the application without saving the changes, e.g. due to a power outage, Hydrogen is now capable of restoring these changes from the backup fill and prompts you at the beginning of the next session whether it should do so.
+                Since 1.2 new songs are not associated with any file anymore and Hydrogen makes sure the backup file generated does not exist yet and no data gets overwritten. In addition, when working on a newly created song and closing the application without saving the changes, e.g. due to a power outage, Hydrogen is now capable of restoring these changes from the backup file and prompts you at the beginning of the next session whether it should do so.
               </para>
               <para>
-                If you are used to alter the <filename>DefaultSong.h2song</filename> and use it as a template, you can still do the same by <link linkend="sect.main_menu.projects.open">opening</link> and <link linkend="sect.main_menu.projects.save_as">saving</link> it using a different name.
+                If you are used to altering the <filename>DefaultSong.h2song</filename> and use it as a template, you can still do the same by <link linkend="sect.main_menu.projects.open">opening</link> and <link linkend="sect.main_menu.projects.save_as">saving</link> it using a different name.
               </para>
             </note>
           </listitem>
@@ -3521,7 +3521,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </mediaobject>
          </figure>
 
-         Once you are done you will see a small <parameter>T</parameter> at the bottom of the Timeline and can view its content by hovering it.
+         Once you are done you will see a small <parameter>T</parameter> at the bottom of the Timeline and can view its content by hovering over it.
        </para>
      </sect1>
 
