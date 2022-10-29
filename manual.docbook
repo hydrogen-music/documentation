@@ -4433,9 +4433,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <para><emphasis role="bold"><link linkend="def.attack">Attack</link></emphasis>: the amount
               of <emphasis>time</emphasis> that the volume of the <link linkend="def.sample">sample</link> goes
               from <option>0</option> to the full <link linkend="def.velocity">velocity</link> of the note. If the value is <option>0</option>, the
-              sample will play back immediately at full velocity.  If the value is
-              <option>1.0</option>, the sample volume will use the maximum time available for the
-              attack phase.
+              sample will play back immediately at full velocity.
               </para>
             </listitem>
             <listitem id="chpt.instrument_editor.general.decay">
@@ -4443,13 +4441,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <emphasis>time</emphasis> for the volume of the <link linkend="def.sample">sample</link> to go from
               full <link linkend="def.velocity">velocity</link> down to the sustain volume.  If the value is <option>0</option>, the
               sample will immediately skip from the full velocity to the <link linkend="def.sustain">sustain</link>
-              volume.  If the value is <option>1.0</option>, the sample volume will use the
-              maximum time available for the decay parameter.</para>
+              volume.
+              </para>
             </listitem>
             <listitem>
               <para><emphasis role="bold"><link linkend="def.sustain">Sustain</link></emphasis>: the
               <emphasis>volume</emphasis> to play the note after the <link linkend="def.decay">decay</link> phase
-              is over, and until the note is released.  If set to <option>0</option>, the note
+              is over and until the note is released.  If set to <option>0</option>, the note
               will be silent.  If set to <option>1.0</option>, the note will play at full
               <link linkend="def.velocity">velocity</link>.</para>
             </listitem>
@@ -4458,11 +4456,23 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               <emphasis>time</emphasis> to fade out the note from the <link linkend="def.sustain">sustain
               volume</link> back down to <option>0</option> (silent).  If set to <option>0</option>, the note will fade
               out in the minimum amount of time (about 5 ms).  If set to <option>1</option>, it
-              will fade out for the maximum time available.</para>
+              will fade out for the maximum time available.
+              </para>
+              <para>
+                Note, however, that
+              this only affects notes for which you set a note length smaller
+              than the underlying sample length (see <xref
+              linkend="chpt.pattern_editor.drumkit"/>). All other notes are
+              played back till the end of the sample without reaching the
+              release phase.
+              </para>
             </listitem>
           </itemizedlist>
           
           <note id="fn.adsrtimes">
+            <para>All transitions between the individual <abbrev>ADSR</abbrev>
+            phases are done using exponential functions.
+            </para>
             <para>The <link linkend="chpt.instrument_editor.general.attack">Attack</link>, <link linkend="chpt.instrument_editor.general.decay">Decay</link>, and <link linkend="chpt.instrument_editor.general.release">Release</link> parameters are all set by
             the number of <link linkend="def.sample">audio samples</link>.  This means
             that the time changes depending on the sample rate of your sound
