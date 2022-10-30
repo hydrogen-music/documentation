@@ -1289,13 +1289,37 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <itemizedlist>
               <listitem><para>note <link linkend="chpt.pattern_editor.note_properties.velocity">velocity</link> and <link linkend="chpt.pattern_editor.note_properties.pan">pan</link></para></listitem>
               <listitem><para><link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link></para></listitem>
-              <listitem><para>component <link linkend="chpt.instrument_editor.layers.controls.component_volume">gain</link> and <link linkend="chpt.mixer.component_strips.fader_and_lcd">volume</link></para></listitem>
-              <listitem><para>instrument <link linkend="chpt.instrument_editor.gain_and_mute_group">gain</link>, <link linkend="chpt.mixer.channel_strips.pan">pan</link>, and <link linkend="chpt.mixer.channel_strips.fader_and_lcd">volume</link></para></listitem>
+              <listitem><para>component <link linkend="chpt.instrument_editor.layers.controls.component_gain">gain</link> and <link linkend="chpt.mixer.component_strips.fader_and_lcd">volume</link></para></listitem>
+              <listitem><para>instrument <link
+              linkend="chpt.instrument_editor.gain_and_mute_group">gain</link>, <link
+              linkend="chpt.instrument_editor.general.sustain">sustain</link>,
+              <link linkend="chpt.mixer.channel_strips.pan">pan</link>, and
+              <link
+                  linkend="chpt.mixer.channel_strips.fader_and_lcd">volume</link></para></listitem>
+              <listitem>
+                <para>
+                  <link linkend="sect.song_editor.automation_path">automation
+                  path</link> and <link
+                  linkend="chpt.mixer.master_fader_strip">velocity humanization</link>
+                </para>
+              </listitem>
             </itemizedlist>
             <para><option>Pre-Fader</option>:</para>
             <itemizedlist>
-              <listitem><para>note <link linkend="chpt.pattern_editor.note_properties.velocity">velocity</link></para></listitem>
+              <listitem><para>note <link linkend="chpt.pattern_editor.note_properties.velocity">velocity</link> and <link linkend="chpt.pattern_editor.note_properties.pan">pan</link></para></listitem>
               <listitem><para><link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link></para></listitem>
+              <listitem>
+                <para>instrument <link
+                linkend="chpt.instrument_editor.general.sustain">sustain</link>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <link linkend="sect.song_editor.automation_path">automation
+                  path</link> and <link
+                  linkend="chpt.mixer.master_fader_strip">velocity humanization</link>
+                </para>
+              </listitem>
             </itemizedlist>
 
             <note>
@@ -4444,7 +4468,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               volume.
               </para>
             </listitem>
-            <listitem>
+            <listitem id="chpt.instrument_editor.general.sustain">
               <para><emphasis role="bold"><link linkend="def.sustain">Sustain</link></emphasis>: the
               <emphasis>volume</emphasis> to play the note after the <link linkend="def.decay">decay</link> phase
               is over and until the note is released.  If set to <option>0</option>, the note
@@ -4565,8 +4589,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </tip>
           
           <para>
-             When activated, Hydrogen will apply the note velocity to the sample gain in addition to the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link>,
-              the <link linkend="chpt.instrument_editor.gain_and_mute_group">instrument gain</link>, the <link linkend="chpt.instrument_editor.layers.controls.component_volume">component gain</link>, or the <link linkend="chpt.mixer.channel_strips.fader_and_lcd">instrument volume</link>.
+             When activated, Hydrogen will apply the note velocity to the sample
+             gain in addition to e.g. the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">layer gain</link>,
+             the <link linkend="chpt.instrument_editor.gain_and_mute_group">instrument gain</link>, the <link linkend="chpt.instrument_editor.layers.controls.component_gain">component gain</link>, or the <link linkend="chpt.mixer.channel_strips.fader_and_lcd">instrument volume</link>.
+             (A full list of all contributions can be found in <xref linkend="def.gain"/>).
               If all the <link linkend="def.layer">layer</link> samples are <link linkend="def.normalization">normalized</link>, this option should be used.
           </para>
 
@@ -4963,9 +4989,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 adds <link linkend="def.gain">Gain</link> for the currently selected layer and the associated sample.
               </para>
             </listitem>
-            <listitem id="chpt.instrument_editor.layers.controls.component_volume">
+            <listitem id="chpt.instrument_editor.layers.controls.component_gain">
 	          <para>
-	            <emphasis role="bold">Component Volume</emphasis>:
+	            <emphasis role="bold">Component Gain</emphasis>:
                 adjusts the volume of all layers within the current component with respect to the ones of the other instruments.
                 
                 <tip>
@@ -8234,6 +8260,89 @@ button in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</
       <glossdef>
         <para>In an amplifier, this adjust how much (or how little) a signal is
         amplified (volume).  A higher gain value is a louder signal.</para>
+        <para>
+          In Hydrogen there is a plethora of different ways to affect the volume
+          of the resulting sound.  Each single note rendered to audio will
+          contain contributions of
+        </para>
+
+        <itemizedlist>
+          <listitem>
+            <para>
+              Its individual <link
+              linkend="chpt.pattern_editor.note_properties">Note Velocity</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its individual <link
+              linkend="chpt.pattern_editor.note_properties.pan">Note Pan</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its <link
+              linkend="chpt.instrument_editor.layers.controls.layer_gain">Layer Gain</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The <link
+              linkend="chpt.instrument_editor.general.sustain">Sustain</link>
+              value of its instrument's <link linkend="def.adsr">ADSR</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its <link linkend="chpt.mixer.channel_strips">Instrument Pan</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its <link
+              linkend="chpt.instrument_editor.gain_and_mute_group">Instrument Gain</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its <link linkend="chpt.mixer.channel_strips">Instrument Volume</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its <link
+              linkend="chpt.instrument_editor.layers.controls.component_gain">Component Gain</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Its <link linkend="chpt.mixer.component_strips">Component Volume</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Velocity contributions by the <link linkend="sect.song_editor.automation_path">Automation
+              Path</link> when played in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              Random contributions introduced by <link
+              linkend="chpt.mixer.master_fader_strip">Velocity Humanization</link>
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              The overall <link linkend="chpt.mixer.master_fader_strip">Song Volume</link>
+            </para>
+          </listitem>
+        </itemizedlist>
+        <para>
+          Further modifications of the note's audio can be applied using the
+          <link linkend="chpt.sample_editor">Sample Editor</link>, the <link
+          linkend="chpt.instrument_editor.filter">Low-Pass Resonance
+          Filter</link>, and <link linkend="sect.fx_rack_LADSPA">FX Plugins</link>.
+        </para>
       </glossdef>
     </glossentry>
 
