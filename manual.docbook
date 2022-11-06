@@ -5377,7 +5377,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	        <para>
 	          This is quite handy for checking <link linkend="def.clipping">clipping</link>.
             </para>
-            </tip>
+          </tip>
+          <para>
+            Right-clicking the button will stop all currently playing notes of the associated instrument.
+          </para>
+          <tip>
+            <para>
+              This is especially useful when dealing with long samples and <link linkend="chpt.instrument_editor.gain_and_mute_group">Auto-Stop Note</link> is disabled.
+            </para>
+          </tip>
         </listitem>
 	    <listitem>
 	      <para>
