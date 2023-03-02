@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2022-12-19 19:39+0100\n"
+"POT-Creation-Date: 2023-03-02 21:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7399,7 +7399,7 @@ msgstr "<emphasis role=\"bold\">Fig. 3</emphasis> The Mixer"
 
 #. (itstool) path: row/entry
 #: manual.docbook:7174 manual.docbook:7181 manual.docbook:7194
-#: manual.docbook:7212 manual.docbook:7218 manual.docbook:7249
+#: manual.docbook:7212 manual.docbook:7218
 msgid "s"
 msgstr ""
 
@@ -7515,7 +7515,7 @@ msgid "/Hydrogen/<emphasis role=\"bold\">LOAD_DRUMKIT</emphasis>/"
 msgstr "<emphasis role=\"bold\">Fig. 3</emphasis> The Mixer"
 
 #. (itstool) path: row/entry
-#: manual.docbook:7237
+#: manual.docbook:7237 manual.docbook:7249
 msgid "s,sf"
 msgstr ""
 
@@ -7548,7 +7548,7 @@ msgstr "<emphasis role=\"bold\">Fig. 3</emphasis> The Mixer"
 
 #. (itstool) path: row/entry
 #: manual.docbook:7251
-msgid "Validates a <link linkend=\"chpt.file_types.h2drumkit\">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis>."
+msgid "Validates a <link linkend=\"chpt.file_types.h2drumkit\">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis> against the current drumkit format. When setting the second arguent to <option>1</option> the kit will be validated against all former drumkit definitions as well."
 msgstr ""
 
 #. (itstool) path: row/entry

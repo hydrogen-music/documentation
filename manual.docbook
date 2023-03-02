@@ -7246,9 +7246,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">VALIDATE_DRUMKIT</emphasis>/</entry>
-                 <entry>s</entry>
+                 <entry>s,sf</entry>
                  <entry></entry>
-                 <entry>Validates a <link linkend="chpt.file_types.h2drumkit">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis>.</entry>
+                 <entry>Validates a <link linkend="chpt.file_types.h2drumkit">compressed</link> or inflated drumkit found at the absolute path <emphasis>s</emphasis> against the current drumkit format. When setting the second arguent to <option>1</option> the kit will be validated against all former drumkit definitions as well.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">UPGRADE_DRUMKIT</emphasis>/</entry>
