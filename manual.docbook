@@ -4,7 +4,7 @@
 <book id="Hydrogen-manual" lang="en">
 
   <bookinfo>
-    <title>Hydrogen v1.1 Manual</title>
+    <title>Hydrogen v1.2 Manual</title>
     <authorgroup>
       <author>
         <firstname>Antonio</firstname>
@@ -32,7 +32,7 @@
       </author>
     </authorgroup>
 
-    <subtitle>2021-03-04</subtitle>
+    <subtitle>2023-03-31</subtitle>
 
     <abstract>
       <para>Hydrogen is a software synthesizer which can be used alone,
@@ -89,7 +89,7 @@
         A certain release can be fetched with
       </para>
       <screen>
-<prompt>$</prompt><command> git checkout tags/1.0.0</command>
+<prompt>$</prompt><command> git checkout tags/1.2.0</command>
       </screen>
         
       <para>Compiling Hydrogen depends on the following libraries (among others):</para>
@@ -130,10 +130,6 @@
           <para><emphasis role="bold">liblrdf</emphasis>: at <ulink url="http://sf.net/projects/lrdf">http://sf.net/projects/lrdf</ulink> (only if you wish to use lrdf to categorise effects)</para>
         </listitem>
         <listitem>
-          <para><emphasis role="bold"><abbrev>LASH</abbrev></emphasis>: at <ulink url="http://lash.nongnu.org">http://lash.nongnu.org</ulink> (only if
-          you wish to use <abbrev>LASH</abbrev>)</para>
-        </listitem>
-        <listitem>
 	      <para>
 	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <link linkend="chpt.osc"><abbrev>OSC</abbrev></link> and <link linkend="chpt.overview.session_management.nsm"><abbrev>NSM</abbrev></link> support
           </para>
@@ -148,8 +144,8 @@
 <prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools           \
     qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
     libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
-    libpulse-dev libcppunit-dev liblrdf-dev                 \
-    liblash-compat-dev librubberband-dev libjack-jackd2-dev</command>
+    libpulse-dev libcppunit-dev liblrdf0-dev                 \
+    librubberband-dev libjack-jackd2-dev</command>
 </screen>
 
         <para>Compiling with <command>cmake</command> can be done easily by using the <filename>build.sh</filename> script. Go to the directory where the <command>git</command> repository
