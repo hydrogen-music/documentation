@@ -1742,6 +1742,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	          <para>
 	            <emphasis role="bold">High-resolution display scaling</emphasis>:
                 specifies whether the underlying bitmap graphics of the GUI should be scaled to larger sizes by Qt in order for Hydrogen to look nice with your system's resolution settings.
+                <note>
+	              <para>
+	                In order for this setting to take effect, Hydrogen has to be restarted.
+                  </para>
+                </note>
               </para>
             </listitem>
 	        <listitem>
