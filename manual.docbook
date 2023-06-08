@@ -32,7 +32,7 @@
       </author>
     </authorgroup>
 
-    <subtitle>2023-03-31</subtitle>
+    <subtitle>2023-06-08</subtitle>
 
     <abstract>
       <para>Hydrogen is a software synthesizer which can be used alone,
@@ -89,7 +89,7 @@
         A certain release can be fetched with
       </para>
       <screen>
-<prompt>$</prompt><command> git checkout tags/1.2.0</command>
+<prompt>$</prompt><command> git checkout tags/1.2.1</command>
       </screen>
         
       <para>Compiling Hydrogen depends on the following libraries (among others):</para>
