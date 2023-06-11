@@ -115,6 +115,10 @@
           (only if you wish to use PortAudio as audio driver)</para>
         </listitem>
         <listitem>
+          <para><emphasis role="bold">PortMidi (&gt;= 2.0.1)</emphasis>: at <ulink url="https://github.com/PortMidi/portmidi">https://github.com/PortMidi/portmidi</ulink>
+          (only if you wish to use PortMidi as MIDI driver)</para>
+        </listitem>
+        <listitem>
           <para><emphasis role="bold">PulseAudio</emphasis>: at <ulink url="http://www.pulseaudio.org">http://www.pulseaudio.org</ulink>
           (only if you wish to use PulseAudio as audio driver)</para>
         </listitem>
