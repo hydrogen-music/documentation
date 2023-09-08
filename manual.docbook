@@ -4,7 +4,7 @@
 <book id="Hydrogen-manual" lang="en">
 
   <bookinfo>
-    <title>Hydrogen v1.2.1 Manual</title>
+    <title>Hydrogen v1.2.2 Manual</title>
     <authorgroup>
       <author>
         <firstname>Antonio</firstname>
@@ -50,151 +50,75 @@
       <para>
         You can download Hydrogen from 
         <ulink url="http://www.hydrogen-music.org">http://www.hydrogen-music.org</ulink>.  
-        On the <emphasis>Downloads</emphasis> page you can find several binaries (installers) for MacOS and Windows.
-      </para>
-      <para>
-	    Due to the variety of distributions we do not provide packages for Linux. If you do not find Hydrogen in the repository of your distribution, please ask the people behind it to include Hydrogen.
+        On the <ulink url="http://hydrogen-music.org/downloads/">Downloads</ulink>
+        page you can find several binaries (installers) for macOS, Windows, and
+        Linux. 
       </para>
 
-      <warning>
+      <note>
         <para>
           From <emphasis role="bold">MacOS Big Sur</emphasis> onwards you may
           require some extra steps to run Hydrogen on you computer. <ulink url="https://github.com/hydrogen-music/hydrogen/wiki/Running-Hydrogen-on-macOS">This
           page</ulink>
           of the Hydrogen Wiki will guide you through this process step by step.
         </para>
-      </warning>
+      </note>
     </chapter>
 
     <chapter id="chpt.compilation">
       <title>Build</title>
 
-      <tip>
-        <para>
-          The instructions provided in this section are for Linux only. If you
-          intend to build Hydrogen on macOS, check out the corresponding <ulink
-          url="https://github.com/hydrogen-music/hydrogen/wiki/Building-Hydrogen-from-Source-(macOS)">wiki page</ulink>
-          for tips or guides.
-        </para>
-      </tip>
-      
       <para>
-        If you want to compile Hydrogen yourself, you can download the latest source files directly from our
-        <command>git</command> repository with
+        As operation systems and build environments change more often and
+        totally independent from Hydrogen, all build instructions can be found
+        in our (more dynamic) Github Wiki:
       </para>
-      <screen>
-<prompt>$</prompt><command> git clone git://github.com/hydrogen-music/hydrogen.git</command>
-      </screen>
-      <para>
-        A certain release can be fetched with
-      </para>
-      <screen>
-<prompt>$</prompt><command> git checkout tags/1.2.1</command>
-      </screen>
-        
-      <para>Compiling Hydrogen depends on the following libraries (among others):</para>
-
-      <itemizedlist mark="opencircle">
+      <itemizedlist>
         <listitem>
-          <para><emphasis role="bold">Qt 5</emphasis>: at <ulink url="http://www.qt.io">http://www.qt.io</ulink></para>
+          <para>
+            <emphasis role="bold">
+              <ulink url="https://github.com/hydrogen-music/hydrogen/blob/master/INSTALL.md">
+                Linux
+              </ulink>
+            </emphasis>
+          </para>
         </listitem>
         <listitem>
-          <para><emphasis role="bold">libsndfile</emphasis>: at <ulink url="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</ulink></para>
+          <para>
+            <emphasis role="bold">
+              <ulink url="https://github.com/hydrogen-music/hydrogen/wiki/Building-Hydrogen-from-Source-(macOS)">
+                macOS
+              </ulink>
+            </emphasis>
+          </para>
         </listitem>
         <listitem>
-          <para><emphasis role="bold"><abbrev>ALSA</abbrev></emphasis>: (&gt;= 1.x) at <ulink url="http://www.alsa-project.org">http://www.alsa-project.org</ulink>
-          (only if you wish to use <abbrev>ALSA</abbrev> as audio driver)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">Jack Audio Connection Kit (&gt;= 0.80)</emphasis>: at 
-          <ulink url="http://jackaudio.org">http://jackaudio.org/</ulink>
-          (only if you wish to use <abbrev>JACK</abbrev> as audio driver)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">PortAudio</emphasis>: at <ulink url="http://www.portaudio.com">http://www.portaudio.com</ulink>
-          (only if you wish to use PortAudio as audio driver)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">PortMidi (&gt;= 2.0.1)</emphasis>: at <ulink url="https://github.com/PortMidi/portmidi">https://github.com/PortMidi/portmidi</ulink>
-          (only if you wish to use PortMidi as MIDI driver)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">PulseAudio</emphasis>: at <ulink url="http://www.pulseaudio.org">http://www.pulseaudio.org</ulink>
-          (only if you wish to use PulseAudio as audio driver)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">Flac</emphasis>: at <ulink url="http://flac.sf.net">http://flac.sf.net</ulink> (only if you
-          wish to use Flac samples)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">LADSPA</emphasis>: at <ulink url="http://www.ladspa.org">http://www.ladspa.org</ulink> (only if you wish
-          to use <abbrev>LADSPA</abbrev> effects)</para>
-        </listitem>
-        <listitem>
-          <para><emphasis role="bold">liblrdf</emphasis>: at <ulink url="http://sf.net/projects/lrdf">http://sf.net/projects/lrdf</ulink> (only if you wish to use lrdf to categorise effects)</para>
-        </listitem>
-        <listitem>
-	      <para>
-	        <emphasis role="bold">liblo</emphasis>: at <ulink url="http://liblo.sourceforge.net/"></ulink> for <link linkend="chpt.osc"><abbrev>OSC</abbrev></link> and <link linkend="chpt.overview.session_management.nsm"><abbrev>NSM</abbrev></link> support
+          <para>
+            <emphasis role="bold">
+              <ulink url="https://github.com/hydrogen-music/hydrogen/wiki/Building-Hydrogen-from-source-(Windows)">
+                Windows
+              </ulink>
+            </emphasis>
           </para>
         </listitem>
       </itemizedlist>
-
-      <para>Please install them with your distribution's package manager. If
-      you're running a Debian-based system, you can install the libraries
-      with:</para>
-
-      <screen>
-<prompt>$</prompt> <command>apt-get install qtbase5-dev qtbase5-dev-tools           \
-    qttools5-dev qttools5-dev-tools libqt5xmlpatterns5-dev  \
-    libarchive-dev libsndfile1-dev libasound2-dev liblo-dev \
-    libpulse-dev libcppunit-dev liblrdf0-dev                 \
-    librubberband-dev libjack-jackd2-dev</command>
-</screen>
-
-        <para>Compiling with <command>cmake</command> can be done easily by using the <filename>build.sh</filename> script. Go to the directory where the <command>git</command> repository
-        was cloned and run the <filename>build.sh</filename> script without any arguments to display the help :</para>
-
-        <screen>
-<prompt>$</prompt> <command>./build.sh</command>
-        </screen>
       
-        <para>The help is now displayed (and is self-explanatory) :
+      <tip>
+        <para>
+          These instructions may not be cutting-edge or might even fail on your
+          particular system and setup. That is most likely because the
+          development team uses and has access to just a small subset of
+          systems.
         </para>
-      
-        <screen>
-<command>   r[m]     => all built, temp and cache files</command>
-<command>   c[lean]  => remove cache files</command>
-<command>   m[ake]   => launch the build process</command>
-<command>   mm       => launch the build process using ccache</command>
-<command>   mt       => launch the build process with clang tidy checks enabled</command>
-<command>   d[oc]    => build html documentation</command>
-<command>   g[raph]  => draw a dependencies graph</command>
-<command>   h[elp]   => show the build options</command>
-<command>   x|exec   => execute hydrogen</command>
-<command>   t[ests]  => execute tests</command>
-<command>   p[kg]    => build source package</command>
-<command>   z        => build using ccache and run from tree</command>
-        </screen>
-
-        <para>To build Hydrogen and execute the result, run the build script with the <parameter>m</parameter> option
+        <para>
+          The <ulink
+          url="https://github.com/hydrogen-music/hydrogen/blob/master/.appveyor.yml">
+          AppVeyor build pipelines</ulink> used to create the Hydrogen releases
+          might get you back on track. But you can always use the issues or
+          discussions on Github or our mailing list to ask questions.
         </para>
-      
-        <screen>
-<prompt>$</prompt> <command>./build.sh m x</command>
-        </screen>              
+      </tip>
 
-        <para>and to install it permanently on your computer, change into the <filename>build</filename> folder and use the <command>make</command> command.
-        </para>
-
-        <screen>
-<prompt>$</prompt> <command>cd build</command>
-<prompt>$</prompt> <command>sudo make install</command>
-        </screen>
-        
-        <note>
-          <para>For further details about the installation process please have a look the <filename>INSTALL.txt</filename> file (located in the top level directory once you downloaded the sources).</para>
-        </note>
     </chapter>
 
     <chapter id="chpt.keyboard_and_mouse">
