@@ -1,6 +1,10 @@
 grab PatternEditorPanel as DenominatorWarningIcon.png offset 180 0 size 135 24
 
-grab PatternEditor as NoteOff_NoteLength.png size 237 22
+grab PatternEditor as NoteOff_NoteLength.png offset 22 0 size 215 22
 
+grab PatternEditor as NoteType_Regular.png offset 32 0 size 22 22
+grab PatternEditor as NoteType_CustomLength.png offset 58 0 size 64 22
+grab PatternEditor as NoteType_Inaccessible.png offset 129 0 size 22 22
+grab PatternEditor as NoteType_StopNote.png offset 152 0 size 22 22
 
 FIN
