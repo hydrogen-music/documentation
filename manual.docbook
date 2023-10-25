@@ -3447,14 +3447,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <note>
                 <para>
-                  If you are working
-                  with a resolution of <option>1/16</option> you can't go back to <option>1/8</option> and remove an upbeat 16th note. On
-                  the other hand, if you are working with a resolution of <option>1/8</option> and you try to
-                  insert a note in the middle of two bars (looking for a <option>1/16</option> bars precision),
-                  notes will be placed in the previous or in the following 8th bar.  This
-                  constraint can be removed if you disable the whole grid resolution (choose
-                  <option>off</option> from the grid resolution combo box). Now you'll be able to place
-                notes wherever you prefer.</para>
+                  If you are working with a resolution of <option>1/16</option>
+                  you can't go back to <option>1/8</option> and remove an upbeat
+                  16th note by clicking it. But you can still select and remove
+                  it via dragging or keyboard.</para>
               </note>
             </listitem>
             
@@ -3470,12 +3466,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                     <imagedata fileref="generated_en/btn_hear.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
-                : when checked Hydrogen 
-                will play back samples as they are being added to the pattern (even if transport is not rolling).
+                : when checked Hydrogen will play back notes as they are being
+                added to the pattern (even if transport is not rolling).
               </para>
               <note>
 	            <para>
-	              When disabled you will still hear the preview sound when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to click at the left-most position - where the preview is silent - in case you don't want to get disturbed.
+	              When disabled you will still hear the preview sound when
+	              clicking on the instrument name in the <link
+	              linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to
+	              click at the left-most position - where the preview is silent -
+	              in case you don't want to get disturbed. Or switch the currently
+	              selected instrument using <keycap>↑</keycap> and
+	              <keycap>↓</keycap>.
                 </para>
               </note>
           
@@ -3542,8 +3544,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </mediaobject>
           </figure>
 
-        <para>The section on the left shows you what drumkit is currently selected (GMRockKit by default) and below that you can see
-        the instruments that are part of this kit.</para>
+        <para>
+          The section on the left shows you which drumkit was loaded last
+        and below that you can see the instruments that are part of the current
+        song.
+        </para>
+        <note>
+          <para>
+            Keep in mind that these are not necessarily the instruments of the
+            kit associated with the displayed name! Each song has its own set of
+            instruments.
+          </para>
+        </note>
      
         <para><emphasis>Left-clicking</emphasis> the box containing the instrument name will play back a sample of the instrument. Which layer will be select depends on the horizontal position of the mouse click representing zero <link linkend="def.velocity">velocity</link> to the left and maximum velocity to the right. In addition, each instrument has its own set of features that are accessible by 
         <emphasis>right-clicking</emphasis> the instrument.  From the context menu that pops up you can select.</para>
@@ -3687,9 +3699,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <warning>
 	      <para>
-	        It <emphasis role="bold">
-        will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <link linkend="chpt.midi.note.mapping"><abbrev>MIDI</abbrev> note 
-        mapping</link>.
+	        It <emphasis role="bold"> will</emphasis>, however, have an <emphasis
+	        role="bold">impact</emphasis> on the <link
+	        linkend="chpt.midi.note.mapping"><abbrev>MIDI</abbrev> note
+	        mapping</link>.
           </para>
         </warning>
 
@@ -3715,9 +3728,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </figure>
 
 
-        <para>Right of the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> area you can see your selected pattern and add notes for any instrument. 
-        The simplest way to create a pattern is by adding notes using <link linkend="chpt.pattern_editor.sidebar.fill_notes">Fill notes</link>. Where you can add notes
-        depends on the used pattern <link linkend="chpt.pattern_editor.controls.size">size</link> and <link linkend="chpt.pattern_editor.controls.res">resolution</link>.</para>
+        <para>
+          Right of the <link
+          linkend="chpt.pattern_editor.sidebar">Sidebar</link> area you can see
+          your selected pattern. This is where you can add notes depending on
+          the used pattern <link
+          linkend="chpt.pattern_editor.controls.size">size</link> and <link
+          linkend="chpt.pattern_editor.controls.res">resolution</link>.
+        </para>
         <para>If you are using Hydrogen as a pure 'drum' you just want Hydrogen to 'hit' 
         the instrument wherever there's a 'dot' in the pattern. If you are using Hydrogen as an 'instrument', the 
         length of the note becomes very important. There are 2 ways to define the length of
@@ -3759,17 +3777,25 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </para>
 
         <para>
-          As in the Song Editor, the arrow keys can also be used to
-          move around the pattern, and notes can be placed or removed
-          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />).
+          As in the Song Editor, the arrow keys can also be used to move around
+          individual or group of notes, and notes can be placed or removed with
+          <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse"
+          />).
         </para>
 
         <para>
-          Notes can be selected by <emphasis>dragging</emphasis> over them with the mouse (or <keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>), and can be deleted with <keycap>Delete</keycap>, or moved by
-          <emphasis>dragging</emphasis> (or <keycap>Return</keycap> followed by <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap> movements) the notes to a new location. This
-          allows notes to be moved between different instruments, or to adjust their
-          timing. Movement in the horizontal direction is constrained by the currently selected grid
-          <link linkend="chpt.pattern_editor.controls.res">resolution</link>, however this can be overridden by holding down <keycap>Alt</keycap> while moving notes.
+          Notes can be selected by <emphasis>dragging</emphasis> over them with
+          the mouse (or <keycap>Shift</keycap> +
+          <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>)
+          and subsequently be deleted with <keycap>Delete</keycap> as well as be moved by
+          <emphasis>dragging</emphasis> (or <keycap>Return</keycap> followed by
+          <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>
+          movements) them to a new location. This allows notes to be moved
+          between different instruments or to adjust their timing. Movement in
+          the horizontal direction is constrained by the currently selected grid
+          <link linkend="chpt.pattern_editor.controls.res">resolution</link>.
+          However, this can be overridden by holding down <keycap>Alt</keycap>
+          while moving notes.
         </para>
           
         <para>
@@ -3782,16 +3808,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-          <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also <link linkend="chpt.overview.recording">record</link> your beats. This is probably 
+        <tip>
+          <para>So far we have only used the mouse or keyboard editing to create a pattern. But you can also <emphasis role="bold"><link linkend="chpt.overview.recording">record</link></emphasis> your beats. This is probably
           a more musical way of creating a pattern, but it's up to you to decide what works best for you.
+          </para>
+        </tip>
 
-          <tip>
+        <tip>
 	        <para>
 	          Also see <xref linkend="chpt.create_song"/> for a basic
               walk-through of how the Pattern Editor works.
-            </para>
-          </tip>
-        </para>
+          </para>
+        </tip>
       </sect1>
       
       <sect1 id="chpt.pattern_editor.note_properties">
