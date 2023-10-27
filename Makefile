@@ -27,7 +27,7 @@ MSGFMT = msgfmt
 XMLTO = xmlto
 XMLLINT = xmllint
 
-all: manual_en.html tutorial_en.html tutorial_fr.html tutorial_it.html clean_auxiliaries
+all: manual.pot manual_en.html tutorial.pot tutorial_en.html tutorial_fr.html tutorial_it.html clean_auxiliaries
 
 clean_auxiliaries:
 	-rm -f *.mo *_validated *.dbk *.bak
@@ -72,8 +72,10 @@ endef
 manual_%.dbk: manual_%.mo manual_%.po $(MANUAL_MASTER)
 	$(ITSTOOL) -m $< -o $@ --lang $* $(MANUAL_MASTER)
 
-manual_%.po: $(MANUAL_MASTER)
+manual.pot: $(MANUAL_MASTER)
 	$(ITSTOOL) -o manual.pot $<
+
+manual_%.po: manual.pot
 	$(MSGMERGE) -U $@ manual.pot --backup=simple --no-wrap --verbose
 
 manual_%.mo: manual_%.po
@@ -83,8 +85,10 @@ manual_%.mo: manual_%.po
 tutorial_%.dbk: tutorial_%.mo tutorial_%.po $(TUTORIAL_MASTER)
 	$(ITSTOOL) -m $< -o $@ --lang $* $(TUTORIAL_MASTER)
 
-tutorial_%.po: $(TUTORIAL_MASTER)
+tutorial.pot: $(TUTORIAL_MASTER)
 	$(ITSTOOL) -o tutorial.pot $<
+
+tutorial_%.po: tutorial.pot
 	$(MSGMERGE) -U $@ tutorial.pot --backup=simple --no-wrap --verbose
 
 tutorial_%.mo: tutorial_%.po
