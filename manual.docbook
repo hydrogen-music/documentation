@@ -3038,7 +3038,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </para>
         </listitem>
         
-        <listitem>
+        <listitem id="chpt.song_editor.sidebar.virtual_pattern">
           <para><emphasis role="bold">Virtual Pattern</emphasis>: will
           open the virtual pattern editor.
           </para>
@@ -3372,17 +3372,166 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           editing when you playback is rolling.
         </para>
         <para>
-          If you are working in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> you will hear the <emphasis>active</emphasis> pattern(s), 
+          If you are working in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link> you will hear the <emphasis>active</emphasis> pattern(s),
           not necessarily the pattern you are currently editing.
         </para>
       </note>
-      
-      <sect1 id="chpt.pattern_editor.general"> 
+
+      <sect1 id="chpt.pattern_editor.general">
         <title>General</title>
 
-        <sect2 id="chpt.pattern_editor.controls"> 
+        <sect2 id="chpt.pattern_editor.general.note_types">
+          <title>Note Types</title>
+          <para>
+            <informalfigure id="fig.NoteOff_NoteLength">
+              <mediaobject>
+                <textobject>
+                  <phrase>
+                    Four notes are displayed in one line of the Pattern Editor.
+                    The one to the left is rendered as black circle. The one
+                    right of it consistents of an identical black circle as well
+                    as a black triangle expands over two grid cells. The third
+                    one is a a semi-transparent circle and the right-most one is
+                    rendered as a blue circle.
+                  </phrase>
+                </textobject>
+                <imageobject>
+                  <imagedata fileref="generated_en/NoteOff_NoteLength.png" format="PNG" />
+                </imageobject>
+              </mediaobject>
+            </informalfigure>
+            There are a couple of different notes you can create and encounter
+            within the Pattern Editor. From left to right: regular, custom
+            length, inaccessible, and stop-note.
+          </para>
+
+          <itemizedlist>
+
+            <listitem id="chpt.pattern_editor.general.note_types.regular">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Solid black circle.
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/NoteType_Regular.png" format="PNG"/>
+                  </imageobject>
+                </inlinemediaobject>
+                : <emphasis role="bold">Regular note</emphasis> (or just
+                <emphasis role="bold">note</emphasis>) can be created using
+                <emphasis>left-clicking</emphasis> or <keycap>Enter</keycap>.
+              </para>
+              <para>
+                Triggers playback of a whole sample of the associated instrument.
+              </para>
+              <note>
+                <para>
+                  The inner color of the circle represents the note's velocity.
+                  Black: <option>80%</option>, red: <option>100%</option>, blue:
+                  <option>50%</option>, white: <option>0%</option>. But in
+                  contrast to a stop-note these circles do always have a black
+                  outline.
+                </para>
+              </note>
+            </listitem>
+
+            <listitem id="chpt.pattern_editor.general.note_types.custom_length">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Solid black circle extended to the right by a rectangle of the same color.
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/NoteType_CustomLength.png" format="PNG"/>
+                  </imageobject>
+                </inlinemediaobject>
+                : <emphasis role="bold">Custom length note</emphasis> can be
+                set by <emphasis>right-click dragging</emphasis> a regular
+                note.
+              </para>
+              <para>
+                Similar to a regular note but only plays back the sample until
+                the specified point. Afterwards the <link
+                linkend="chpt.instrument_editor.envelope_parameters">Release</link>
+                of the instrument kicks in to cut off the sample gracefully
+                (small values) or to add a fade out (larger values).
+              </para>
+              <note>
+                <para>
+                  The length of the note is specified in ticks and changes along
+                  with the tempo. The sample, however, consists of a certain
+                  amount of audio frames and will <emphasis>not</emphasis>
+                  change with tempo (unless you activated <link
+                  linkend="sect.main_toolbar.bpm_control_and_metronome">Rubberband</link>).
+                </para>
+              </note>
+            </listitem>
+
+            <listitem id="chpt.pattern_editor.general.note_types.inaccessible">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Semi-transparent black circle.
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/NoteType_Inaccessible.png" format="PNG"/>
+                  </imageobject>
+                </inlinemediaobject>
+                : <emphasis role="bold">Inaccessible note</emphasis>
+              </para>
+              <para>
+                A regular note which is <emphasis>not</emphasis> part of the
+                pattern you are currently editing. Instead, it belongs to a
+                different one currently played as well. This could be within the
+                same column in <link
+                linkend="chpt.song_editor.editor_modes.song_mode">Song
+                Mode</link> while the Pattern Editor is <link
+                linkend="chpt.song_editor.main_controls.pattern_editor_lock">locked</link>,
+                activated in <link
+                linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern
+                Mode</link>, or as part of a <link
+                linkend="chpt.song_editor.sidebar.virtual_pattern">Virtual
+                Pattern</link>.
+              </para>
+            </listitem>
+
+            <listitem id="chpt.pattern_editor.general.note_types.stop_note">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Solid blue circle.
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/NoteType_StopNote.png" format="PNG"/>
+                  </imageobject>
+                </inlinemediaobject>
+                : <emphasis role="bold">Stop-note</emphasis> can be created
+                using <keycap>Shift</keycap> +
+                <emphasis>left-clicking</emphasis>
+              </para>
+              <para>
+                Stops rendering of all notes associated to the corresponding
+                instrument. Afterwards the <link
+                linkend="chpt.instrument_editor.envelope_parameters">Release</link>
+                of the instrument kicks in to cut off the samples gracefully
+                (small values) or to add fade outs (larger values).
+              </para>
+            </listitem>
+
+          </itemizedlist>
+        </sect2>
+
+        <sect2 id="chpt.pattern_editor.controls">
           <title>Controls</title>
-          
+
           <figure id="fig.PatternEditorControls">
             <title>Pattern Editor Controls</title>
             <mediaobject>
@@ -3393,7 +3542,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </figure>
 
           <para>The top part of the Pattern Editor contains a number of controls applying to both the <link linkend="chpt.pattern_editor.drumkit">Drumkit Editor</link> and the <link linkend="chpt.pattern_editor.piano_mode">Piano Roll Editor</link>:</para>
-          
+
           <itemizedlist mark="opencircle">
             <listitem id="chpt.pattern_editor.controls.size">
               <para>
@@ -3407,27 +3556,27 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                     <imagedata fileref="generated_en/lcd_size.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
-                
+
                : lets you choose the length of the pattern (in note values).
               </para>
               <para>
                 The left combo box represents the numerator of your current measure. You can enter a decimal numerator, like <option>4.5/4</option>, but since resolution in Hydrogen is limited,
                 some values are not supported and can not be entered.
               </para>
-              
+
               <note>
                 <para>
                   Hydrogen supports (only) the following denominators (right combo box): <option>1</option>, <option>2</option>, <option>3</option>, <option>4</option>, <option>6</option>, <option>8</option>, <option>12</option>, <option>16</option>, <option>24</option>, <option>32</option>, <option>48</option>, <option>64</option>, <option>96</option>, and <option>192</option>
-                  because these are the factors of the maximum resolution (192 ticks per whole note).        
+                  because these are the factors of the maximum resolution (192 ticks per whole note).
                 </para>
               </note>
-              
+
               <tip>
                 <para>
                   Typing <keycap>/</keycap> within the numerator (first combo box) also you to quickly jump to the denominator.
                 </para>
               </tip>
-              
+
             </listitem>
 
             <listitem id="chpt.pattern_editor.controls.res">
@@ -3447,17 +3596,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
               <note>
                 <para>
-                  If you are working
-                  with a resolution of <option>1/16</option> you can't go back to <option>1/8</option> and remove an upbeat 16th note. On
-                  the other hand, if you are working with a resolution of <option>1/8</option> and you try to
-                  insert a note in the middle of two bars (looking for a <option>1/16</option> bars precision),
-                  notes will be placed in the previous or in the following 8th bar.  This
-                  constraint can be removed if you disable the whole grid resolution (choose
-                  <option>off</option> from the grid resolution combo box). Now you'll be able to place
-                notes wherever you prefer.</para>
+                  If you are working with a resolution of <option>1/16</option>
+                  you can't go back to <option>1/8</option> and remove an upbeat
+                  16th note by clicking it. But you can still select and remove
+                  it via dragging or keyboard.</para>
               </note>
             </listitem>
-            
+
             <listitem>
               <para>
                 <inlinemediaobject>
@@ -3470,15 +3615,21 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                     <imagedata fileref="generated_en/btn_hear.png" format="PNG" />
                   </imageobject>
                 </inlinemediaobject>
-                : when checked Hydrogen 
-                will play back samples as they are being added to the pattern (even if transport is not rolling).
+                : when checked Hydrogen will play back notes as they are being
+                added to the pattern (even if transport is not rolling).
               </para>
               <note>
 	            <para>
-	              When disabled you will still hear the preview sound when clicking on the instrument name in the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to click at the left-most position - where the preview is silent - in case you don't want to get disturbed.
+	              When disabled you will still hear the preview sound when
+	              clicking on the instrument name in the <link
+	              linkend="chpt.pattern_editor.sidebar">Sidebar</link>. Be sure to
+	              click at the left-most position - where the preview is silent -
+	              in case you don't want to get disturbed. Or switch the currently
+	              selected instrument using <keycap>↑</keycap> and
+	              <keycap>↓</keycap>.
                 </para>
               </note>
-          
+
             </listitem>
 
             <listitem>
@@ -3498,7 +3649,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             linkend="chpt.overview.virtual_keyboard">Virtual Keyboard</link>
             will automatically respect the grid resolution currently applied,
             just like notes inserted by clicking. </para>
-            
+
             </listitem>
 
             <listitem id="chpt.pattern_editor.controls.input">
@@ -3529,7 +3680,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </itemizedlist>
 
         </sect2>
-        
+
         <sect2 id="chpt.pattern_editor.sidebar">
 	      <title>Sidebar</title>
 
@@ -3542,13 +3693,23 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </mediaobject>
           </figure>
 
-        <para>The section on the left shows you what drumkit is currently selected (GMRockKit by default) and below that you can see
-        the instruments that are part of this kit.</para>
-     
-        <para><emphasis>Left-clicking</emphasis> the box containing the instrument name will play back a sample of the instrument. Which layer will be select depends on the horizontal position of the mouse click representing zero <link linkend="def.velocity">velocity</link> to the left and maximum velocity to the right. In addition, each instrument has its own set of features that are accessible by 
+        <para>
+          The section on the left shows you which drumkit was loaded last
+        and below that you can see the instruments that are part of the current
+        song.
+        </para>
+        <note>
+          <para>
+            Keep in mind that these are not necessarily the instruments of the
+            kit associated with the displayed name! Each song has its own set of
+            instruments.
+          </para>
+        </note>
+
+        <para><emphasis>Left-clicking</emphasis> the box containing the instrument name will play back a sample of the instrument. Which layer will be select depends on the horizontal position of the mouse click representing zero <link linkend="def.velocity">velocity</link> to the left and maximum velocity to the right. In addition, each instrument has its own set of features that are accessible by
         <emphasis>right-clicking</emphasis> the instrument.  From the context menu that pops up you can select.</para>
 
-        <itemizedlist mark="opencircle"> 
+        <itemizedlist mark="opencircle">
           <listitem><para><emphasis role="bold">Delete notes</emphasis>:
           removes all notes for this instrument in this pattern.  </para></listitem>
           <listitem id="chpt.pattern_editor.sidebar.fill_notes">
@@ -3557,7 +3718,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <note>
 	          <para>
 	            Depending on the choice you make (<option>fill all</option>, <option>fill 1/2</option>, <option>fill 1/4</option> ...)
-                notes will be placed at all, 1/2, 1/4, etc of the note positions <emphasis role="bold">that are allowed by 
+                notes will be placed at all, 1/2, 1/4, etc of the note positions <emphasis role="bold">that are allowed by
                 the grid setting</emphasis>.  So be careful not to mix up the 'musical' 1/2-note and the 'fill 1/2' note.
               </para>
             </note>
@@ -3589,10 +3750,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             notes played by the instrument in <emphasis>all</emphasis>
             the patterns of the song.
             </para>
-            
+
             <itemizedlist>
               <listitem>
-                <para><emphasis role="bold">Cut notes</emphasis>: 
+                <para><emphasis role="bold">Cut notes</emphasis>:
                 remove <emphasis>all</emphasis> notes played on
                 this instrument, in all patterns, and keep them in the
                 clipboard.
@@ -3612,14 +3773,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 this instrument.
                 </para>
               </listitem>
-              
+
               <listitem>
                 <para><emphasis role="bold">Delete notes</emphasis>:
                 delete all the notes associated with this instrument,
                 without affecting the clipboard.
                 </para>
               </listitem>
-              
+
             </itemizedlist>
 
             <tip>
@@ -3645,7 +3806,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 change the name of the instrument.
                 </para>
               </listitem>
-              
+
               <listitem>
                 <para><emphasis role="bold">Delete
                 Instrument</emphasis>: well, deletes the instrument ;-)</para>
@@ -3654,7 +3815,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </itemizedlist>
           </listitem>
         </itemizedlist>
-        
+
         <para>The
         <inlinemediaobject>
           <textobject>
@@ -3666,7 +3827,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             <imagedata fileref="generated_en/btn_instrument_line_mute_off.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>
-        button <link linkend="def.mute">mutes</link> the instrument and 
+        button <link linkend="def.mute">mutes</link> the instrument and
         <inlinemediaobject>
           <textobject>
             <phrase>
@@ -3679,17 +3840,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </inlinemediaobject>
         solos it.
         </para>
-        
-        <para>The order of the instruments can be rearranged by simply <emphasis>dragging</emphasis> an instrument 
-        up/down in the list and <emphasis>dropping</emphasis> it on a new position within the drumkit.  Doing so 
+
+        <para>The order of the instruments can be rearranged by simply <emphasis>dragging</emphasis> an instrument
+        up/down in the list and <emphasis>dropping</emphasis> it on a new position within the drumkit.  Doing so
         will not change the sequence of notes you have created for that instrument, nor will
         it change anything about the song or pattern you are working on.</para>
 
         <warning>
 	      <para>
-	        It <emphasis role="bold">
-        will</emphasis> however, have an <emphasis role="bold">impact</emphasis> on the <link linkend="chpt.midi.note.mapping"><abbrev>MIDI</abbrev> note 
-        mapping</link>.
+	        It <emphasis role="bold"> will</emphasis>, however, have an <emphasis
+	        role="bold">impact</emphasis> on the <link
+	        linkend="chpt.midi.note.mapping"><abbrev>MIDI</abbrev> note
+	        mapping</link>.
           </para>
         </warning>
 
@@ -3715,61 +3877,34 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </figure>
 
 
-        <para>Right of the <link linkend="chpt.pattern_editor.sidebar">Sidebar</link> area you can see your selected pattern and add notes for any instrument. 
-        The simplest way to create a pattern is by adding notes using <link linkend="chpt.pattern_editor.sidebar.fill_notes">Fill notes</link>. Where you can add notes
-        depends on the used pattern <link linkend="chpt.pattern_editor.controls.size">size</link> and <link linkend="chpt.pattern_editor.controls.res">resolution</link>.</para>
-        <para>If you are using Hydrogen as a pure 'drum' you just want Hydrogen to 'hit' 
-        the instrument wherever there's a 'dot' in the pattern. If you are using Hydrogen as an 'instrument', the 
-        length of the note becomes very important. There are 2 ways to define the length of
-        a note :
-      </para>
-        <itemizedlist>
-          <listitem>
-            <para>
-              you can add a note by <emphasis>left-clicking</emphasis>, and then can 'stretch' that note by <emphasis>right-click-dragging</emphasis> it.
-              This will change the dot into a rectangle that represents the
-              duration of that note.
-            </para>
-          </listitem>
-          <listitem>
-            <para>
-              alternatively, you can add a stop-note by
-              <keycap>Shift</keycap> + <emphasis>left-clicking</emphasis>. This adds a blue dot which
-              represents the end of the note.
-            </para>
-          </listitem>
-        </itemizedlist>
         <para>
-          <informalfigure id="fig.NoteOff_NoteLength">
-            <mediaobject>
-          <textobject>
-            <phrase>
-              Three notes are displayed in one line of the Pattern Editor. The
-              one to the left is marked with a black circle. The one in the middle
-              by a black circle from which a black triangle expands over two grid
-              cells, and the left one is represented by a blue circle.
-            </phrase>
-          </textobject>
-              <imageobject>
-                <imagedata fileref="generated_en/NoteOff_NoteLength.png" format="PNG" />
-              </imageobject>
-            </mediaobject>
-          </informalfigure>
-          (Figure above, from left>right : a 'normal' note, a note in 'note length' mode, a note in 'note off' mode)
+          Right of the <link
+          linkend="chpt.pattern_editor.sidebar">Sidebar</link> area you can see
+          your selected pattern. This is where you can add notes depending on
+          the used pattern <link
+          linkend="chpt.pattern_editor.controls.size">size</link> and <link
+          linkend="chpt.pattern_editor.controls.res">resolution</link>.
+        </para>
+        <para>
+          As in the Song Editor, the arrow keys can also be used to move around
+          individual or group of notes, and notes can be placed or removed with
+          <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse"
+          />).
         </para>
 
         <para>
-          As in the Song Editor, the arrow keys can also be used to
-          move around the pattern, and notes can be placed or removed
-          with <keycap>Return</keycap> (see <xref linkend="chpt.keyboard_and_mouse" />).
-        </para>
-
-        <para>
-          Notes can be selected by <emphasis>dragging</emphasis> over them with the mouse (or <keycap>Shift</keycap> + <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>), and can be deleted with <keycap>Delete</keycap>, or moved by
-          <emphasis>dragging</emphasis> (or <keycap>Return</keycap> followed by <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap> movements) the notes to a new location. This
-          allows notes to be moved between different instruments, or to adjust their
-          timing. Movement in the horizontal direction is constrained by the currently selected grid
-          <link linkend="chpt.pattern_editor.controls.res">resolution</link>, however this can be overridden by holding down <keycap>Alt</keycap> while moving notes.
+          Notes can be selected by <emphasis>dragging</emphasis> over them with
+          the mouse (or <keycap>Shift</keycap> +
+          <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>)
+          and subsequently be deleted with <keycap>Delete</keycap> as well as be moved by
+          <emphasis>dragging</emphasis> (or <keycap>Return</keycap> followed by
+          <keycap>↑</keycap>|<keycap>↓</keycap>|<keycap>←</keycap>|<keycap>→</keycap>
+          movements) them to a new location. This allows notes to be moved
+          between different instruments or to adjust their timing. Movement in
+          the horizontal direction is constrained by the currently selected grid
+          <link linkend="chpt.pattern_editor.controls.res">resolution</link>.
+          However, this can be overridden by holding down <keycap>Alt</keycap>
+          while moving notes.
         </para>
           
         <para>
@@ -3782,16 +3917,18 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           the time of the Copy and Paste operation will set the new position of pasted notes.
         </para>
 
-          <para>So far we have only used the mouse or keyboard editing to create a pattern, but you can also <link linkend="chpt.overview.recording">record</link> your beats. This is probably 
+        <tip>
+          <para>So far we have only used the mouse or keyboard editing to create a pattern. But you can also <emphasis role="bold"><link linkend="chpt.overview.recording">record</link></emphasis> your beats. This is probably
           a more musical way of creating a pattern, but it's up to you to decide what works best for you.
+          </para>
+        </tip>
 
-          <tip>
+        <tip>
 	        <para>
 	          Also see <xref linkend="chpt.create_song"/> for a basic
               walk-through of how the Pattern Editor works.
-            </para>
-          </tip>
-        </para>
+          </para>
+        </tip>
       </sect1>
       
       <sect1 id="chpt.pattern_editor.note_properties">
