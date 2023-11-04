@@ -8,6 +8,8 @@
 ### xmllint  (Debian package: libxml2-utils)
 ###
 
+.NOTPARALLEL:
+
 MANUAL_MASTER = manual.docbook
 TUTORIAL_MASTER = tutorial.docbook
 
