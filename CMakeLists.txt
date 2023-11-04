@@ -5,7 +5,9 @@ endif()
 
 add_custom_command(OUTPUT
     "${CMAKE_SOURCE_DIR}/data/doc/manual_en.html"
-  COMMAND "make" "manual_en.html" "tutorial_en.html"
+    "${CMAKE_SOURCE_DIR}/data/doc/tutorial_en.html"
+    "${CMAKE_SOURCE_DIR}/data/doc/tutorial_fr.html"
+    "${CMAKE_SOURCE_DIR}/data/doc/tutorial_it.html"
   COMMAND "${MAKE}" "manual_en.html" "tutorial_en.html"
           "tutorial_fr.html" "tutorial_it.html" "clean_auxiliaries"
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/data/doc"
