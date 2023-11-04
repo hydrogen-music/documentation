@@ -13,7 +13,7 @@ add_custom_command(OUTPUT
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/data/doc"
 )
 
-add_custom_target(generate_doc ALL
+add_custom_target(generate_documentation ALL
   DEPENDS
     "${CMAKE_SOURCE_DIR}/data/doc/manual_en.html"
     "${CMAKE_SOURCE_DIR}/data/doc/tutorial_en.html"
