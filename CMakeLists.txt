@@ -42,4 +42,4 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/data/doc/img DESTINATION "${INSTALL_DIR}"
 install(FILES ${CMAKE_SOURCE_DIR}/data/doc/res/docbook.css
   ${CMAKE_SOURCE_DIR}/data/doc/res/docbook.js
   ${CMAKE_SOURCE_DIR}/data/doc/res/LICENSE
-  DESTINATION "${INSTALL_DIR}")
+  DESTINATION "${INSTALL_DIR}/res")
