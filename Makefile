@@ -27,13 +27,10 @@ MSGFMT = msgfmt
 XMLTO = xmlto
 XMLLINT = xmllint
 
-all: manual.pot manual_en.html tutorial.pot tutorial_en.html tutorial_fr.html tutorial_it.html clean_auxiliaries
+all: manual.pot manual_en.html tutorial.pot tutorial_en.html tutorial_fr.html tutorial_it.html clean
 
-clean_auxiliaries:
+clean:
 	-rm -f *.mo *_validated *.dbk *.bak
-
-clean: clean_auxiliaries
-	-rm -rf *.html manual_*_chunked/ tutorial_*_chunked/
 
 # Derive language from filename (and extension)
 define LANGUAGE =
