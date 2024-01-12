@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.2.3] - XXXX-XX-XX
+## [1.2.3] - 2024-01-12
 
 ### Added
 
