@@ -5599,7 +5599,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </phrase>
           </textobject>
           <imageobject>
-            <imagedata fileref="generated_en/mixerShowPeakButton.png" format="PNG" />
+            <imagedata fileref="generated_en/mixerShowPeaksButton.png" format="PNG" />
           </imageobject>
         </inlinemediaobject>       
         button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend="chpt.mixer.channel_strips">Instrument Channel Strips</link> and <link linkend="chpt.mixer.component_strips">Component Channel Strips</link>.

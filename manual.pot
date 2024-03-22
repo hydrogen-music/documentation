@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-10-27 10:21+0200\n"
+"POT-Creation-Date: 2024-03-22 21:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #. (itstool) path: bookinfo/title
 #: manual.docbook:7
-msgid "Hydrogen v1.2.2 Manual"
+msgid "Hydrogen v1.2.3 Manual"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
@@ -51,7 +51,7 @@ msgstr ""
 
 #. (itstool) path: bookinfo/subtitle
 #: manual.docbook:35
-msgid "2023-09-09"
+msgid "2024-01-12"
 msgstr ""
 
 #. (itstool) path: abstract/para
@@ -5030,12 +5030,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: manual.docbook:5602
 msgctxt "_"
-msgid "external ref='generated_en/mixerShowPeakButton.png' md5='__failed__'"
+msgid "external ref='generated_en/mixerShowPeaksButton.png' md5='__failed__'"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: manual.docbook:5582
-msgid "On the bottom-right of the Master section the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/mixerShowFXButton.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will show or hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Rack</link>, and the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"PEAK\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/mixerShowPeakButton.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link> and <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link>."
+msgid "On the bottom-right of the Master section the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"FX\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/mixerShowFXButton.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will show or hide the <link linkend=\"sect.fx_rack_LADSPA\">FX Rack</link>, and the <inlinemediaobject> <textobject> <phrase> Blue button containing the black characters \"PEAK\". </phrase> </textobject> <imageobject> <imagedata fileref=\"generated_en/mixerShowPeaksButton.png\" format=\"PNG\"/> </imageobject> </inlinemediaobject> button will enable or disable the VU meters in both the Master Fader Strip and all the individual <link linkend=\"chpt.mixer.channel_strips\">Instrument Channel Strips</link> and <link linkend=\"chpt.mixer.component_strips\">Component Channel Strips</link>."
 msgstr ""
 
 #. (itstool) path: sect2/title

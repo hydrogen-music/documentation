@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.4] - XXXX-XX-XX
+
+### Fixed
+
+- Fixed dangling image URL
+
 ## [1.2.3] - 2024-01-12
 
 ### Added
