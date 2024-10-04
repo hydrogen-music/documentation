@@ -6464,6 +6464,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            tab of the Preferences.
          </para>
 
+         <note>
+           <para>
+             Only actions performed in the GUI can be undone.
+             <abbrev>MIDI</abbrev>, on the other hand, can not!
+           </para>
+         </note>
+
          <figure id="midi_actions">
            <title>Actions are set in MIDI System tab of the Preferences Dialog</title>
            <mediaobject>
@@ -6744,7 +6751,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            <listitem>
              <para>
 	           <emphasis role="bold">REDO_ACTION</emphasis>:
-               redoes the previous undone action.
+               redoes the previously undone GUI action (not <abbrev>MIDI</abbrev> action!).
              </para>
            </listitem>
 
@@ -6846,7 +6853,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem><para>
              <emphasis role="bold">UNDO_ACTION</emphasis>:
-             undoes the previous action.
+             undoes the previous GUI action (not <abbrev>MIDI</abbrev> action!).
            </para></listitem>
 
            <listitem><para>
@@ -6932,6 +6939,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      providing an URL-style naming scheme in combination with a pattern
      matching language, and allowing to bundle messages for a better handling
      of timing and simultaneous processing.</para>
+
+     <note>
+       <para>
+         Only actions performed in the GUI can be undone.
+         <abbrev>OSC</abbrev> commands, on the other hand, can not!
+       </para>
+     </note>
 
      <sect1 id="chpt.osc.basics">
        <title>Basics</title>
@@ -7349,13 +7363,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">UNDO_ACTION</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Undoes the previous action.</entry>
+                 <entry>Undoes the previous GUI action (not <abbrev>OSC</abbrev> command!).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">REDO_ACTION</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Redoes the previous undone action.</entry>
+                 <entry>Redoes the previously undone GUI action (not <abbrev>OSC</abbrev> command!).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TRANSPORT_ACTIVATION</emphasis>/</entry>
