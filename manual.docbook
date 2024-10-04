@@ -550,14 +550,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <screen>
 <command>-h, --help                  Displays this help.</command>
 <command>-v, --version               Displays version information.</command>
-<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, pulseaudio, auto)</command>
-<command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
-<command>-n, --nosplash              Hide splash screen</command>
+<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (auto, jack, pulseaudio, ...)</command>
 <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
-<command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
 <command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
 <command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
-<command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
+<command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
+<command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug</command>
+<command>-L, --log-file &#60;Path&#62;       Alternative log file path</command>
+<command>-T, --log-timestamps        Add timestamps to all log messages</command>
+<command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
+<command>    --config &#60;Path&#62;         Use an alternate config file</command>
+<command>    --layout &#60;Layout&#62;       UI layout ('tabbed' or 'single')</command>
+<command>-O, --osc-port &#60;int&#62;        Custom port for OSC connections</command>
+<command>-n, --nosplash              Hide splash screen</command>
       </screen>
 
       <note>
