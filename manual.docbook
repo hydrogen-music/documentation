@@ -1791,8 +1791,28 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </informalfigure>
     
        Once the kit has been downloaded it will be available in the <link linkend="chpt.sound_library.drumkits">Sound Library</link> under <emphasis>User drumkits</emphasis>.
-     
+
        </para>
+       <note>
+         <para>
+           In the rare case a drumkit or one of its contained sample files
+           features <emphasis role="bold">UTF-8</emphasis> encoded characters
+           but your system's locale is not properly set up to handle these,
+           those characters will be omitted. For the kit itself it just means it
+           will carry a slightly different name. But renamed sample files can't
+           be found by Hydrogen anymore when loading the kit. In case you see a
+           popup dialog during installation complaining about encoding, be sure
+           to check the instruments of the imported kit and reassign missing
+           samples using the <link
+           linkend="chpt.instrument_editor.layers.layers">Instrument
+           Editor</link>.
+         </para>
+         <para>
+           A description of <emphasis
+           role="bold">how to fix encoding issues on Windows</emphasis> can be found in our <ulink
+           url="https://github.com/hydrogen-music/hydrogen/wiki/Fix-encoding-issues-on-Windows">Wiki</ulink>.
+         </para>
+       </note>
 
         
           </listitem>
