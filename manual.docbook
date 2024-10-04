@@ -816,13 +816,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 with other audio software. The <abbrev>JACK</abbrev>
                 server will start automatically if not already running.
                 </para>
-
-                <tip>
-	              <para>
-	                We strongly recommend using
-                    this driver to have the best out of Hydrogen.
-                  </para>
-                </tip>
               </listitem>
               <listitem>
                 <para><option>ALSA</option>: The widely adopted
