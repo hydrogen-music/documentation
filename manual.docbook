@@ -956,60 +956,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               </para>
             </note>
           </listitem>
-          <listitem id="sect.preferences.jack.bbt">
-            <para><emphasis role="bold">BBT sync method</emphasis>: if
-            Hydrogen uses <abbrev>JACK</abbrev> transport in the presence of an external <abbrev>JACK</abbrev>
-            Timebase master (TBM), it will use the provided measure and
-            tempo information instead of the local one of either the <link linkend="sect.main_toolbar.bpm_control_and_metronome">song's
-            tempo</link> or the Tempo Markers
-            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>. But due to
-            fundamental design choices within Hydrogen, it can not set
-            both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
-            combinations. You have two options here. Either drop all measure
-            changes in the TBM and work with tempo changes only to support
-            arbitrary patterns (using option <option>constant
-            measure</option>) or to keep the length of each pattern
-            consistent with the corresponding measure in the TBM and to use
-            both tempo and measure provided by <abbrev>JACK</abbrev> (option
-            <option>matching bars</option>).</para>
-
-            <note>
-              <para>
-                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected.
-              </para>
-              <para>
-                For this option to take effect the
-                <inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing the text "J.TRANS".
-            </phrase>
-          </textobject>
-                  <imageobject>
-                    <imagedata fileref="generated_en/playerControlJackTransportButton.png" format="PNG" />
-                  </imageobject>
-                </inlinemediaobject>
-                button has to be activated and the
-                <inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing the text "J.MASTER".
-            </phrase>
-          </textobject>
-                  <imageobject>
-                    <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
-                  </imageobject>
-                </inlinemediaobject>                
-                button deactivated in the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link> (next to
-                having a <abbrev>JACK</abbrev> TBM application).</para>
-            </note>
-
-            <tip>
-	          <para>
-	            Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master via the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link>.
-              </para>
-            </tip>
-          </listitem>
           <listitem>
             <para><emphasis role="bold">Connect to default <abbrev>JACK</abbrev> output
             ports</emphasis>: connects the main stereo <abbrev>JACK</abbrev> output ports of the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> to
@@ -1053,8 +999,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </listitem>
           <listitem>
 	        <para>
-	          <emphasis role="bold">Enable <abbrev>JACK</abbrev> timebase master support</emphasis>:
-              whether Hydrogen will respond to or ignore the incoming BBT (tempo and measure) information sent by the <abbrev>JACK</abbrev> server.
+	          <emphasis role="bold">Enable <abbrev>JACK</abbrev> Timebase
+	          support</emphasis>: whether Hydrogen will respond to or ignore the
+	          incoming tempo and bar, beat, tick (BBT) position information sent
+	          by the <abbrev>JACK</abbrev> server.
 
               <tip>
 	            <para>
@@ -2245,8 +2193,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <note>
           <para>
-            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and both Tap Tempo and Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
-            Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
+            If you are using <abbrev>JACK</abbrev> transport in the presence of
+            an external <abbrev>JACK</abbrev> Timebase controller, Hydrogen will
+            use the provided tempo and both Tap Tempo and Beat Counter will be
+            disabled. If Hydrogen itself is in control of <abbrev>JACK</abbrev>
+            Timebase, tempo changes from Hydrogen will be broadcasted to other
+            <abbrev>JACK</abbrev> clients.
           </para>
         </note>
       </sect2>
@@ -7382,7 +7334,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Unregisters Hydrogen as <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>
+                 <entry>Unregisters Hydrogen as <abbrev>JACK</abbrev> Timebase controller
                  for a value of <option>0</option> and registers it for all others.</entry>
                </row>
                <row>
