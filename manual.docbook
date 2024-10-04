@@ -866,6 +866,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	          <emphasis role="bold">Device</emphasis>:
               specifies the particular sound card the audio driver will use.
             </para>
+            <note>
+              <para>
+                The Preferences dialog does not support hot plugging. In case
+                you connected your device while the dialog was already opened,
+                be sure to close and reopen it again.
+              </para>
+            </note>
           </listitem>
           <listitem>
 	        <para>
@@ -1124,8 +1131,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 role="bold">Input</emphasis> and <emphasis
                 role="bold">Output</emphasis> MIDI devices/ports is compiled for
                 the current MIDI driver when opening the Preferences dialog. If
-                you switch to another driver, be sure to click the Ok button and
-                reopen the Preferences dialog in order to have an updated list.
+                you switch to another driver or connect a device while the
+                dialog is already open, be sure to close and reopen it again in
+                order to have an updated list.
               </para>
             </note>
           </listitem>
