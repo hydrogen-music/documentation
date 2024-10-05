@@ -2331,27 +2331,118 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the <abbrev>JACK</abbrev> server and will not be in sync with other clients anymore.
         </para>
         <para>
-          Using
-          
+          The
           <inlinemediaobject>
           <textobject>
             <phrase>
-              Grey button containing the text "J.MASTER".
+              Grey button containing the text "Timebase".
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
+              <imagedata fileref="generated_en/JackTimebaseOff.png"
+                         format="PNG" />
             </imageobject>
           </inlinemediaobject>
-          Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
-          clients. If it's registered as <abbrev>master</abbrev>, the button will appear checked (blue by default). If, however, another application, like <command>Ardour</command>, is registered as Timebase Master and Hydrogen acts as <emphasis>slave</emphasis>, the button appears checked too but is colored red. As soon as it gets unchecked (which can happen without explicit user interaction) Hydrogen works as a stand-alone <abbrev>JACK</abbrev> client.
+          button indicates the current state of <abbrev>JACK</abbrev> Timebase
+          support. Via this protocol one JACK cilent - registered as Timebase
+          <emphasis>controller</emphasis> - can share its tempo and position
+          information as beat, bar, and tick with other JACK clients supporting
+          this protocol - Timebase <emphasis>listeners</emphasis>. When pressing
+          the button Hydrogen will attempt to take control of Timebase.
           </para>
-
           <note>
-	        <para>
-	          The support of <abbrev>JACK</abbrev> Timebase can disabled in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences. This can be useful in the presence of a fault Master broadcasting nuisance information.
+            <para>
+          The JACK Timebase API uses other terms for these two classes of
+          clients we do not repeat in here.
             </para>
           </note>
+          <itemizedlist>
+            <listitem>
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Grey button containing the text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseOff.png"
+                               format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - Timebase support itself is activated but neither
+              Hydrogen nor an external application is currently in control.
+              Hydrogen will use its internal tempo.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Blue button containing the text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseBlue.png"
+                               format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - Hydrogen is in control of <abbrev>JACK</abbrev> Timebase, uses
+                its internal tempo, and boardcasts it to other
+                <abbrev>JACK</abbrev> clients.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Red button containing the text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseRed.png"
+                               format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - An external application is registered as Timebase controller.
+                Hydrogen will disregard its local tempo - <link
+                linkend="sect.main_toolbar.bpm_control_and_metronome">BPM
+                widget</link>, <link
+                linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap
+                Tempo</link>, <link
+                linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat
+                Counter</link>, <link
+                linkend="chpt.song_editor.timeline">Timeline</link> - and,
+                instead, adopts tempo and position provided by the controller.
+              </para>
+            </listitem>
+            <listitem>
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Grey button containing the greyed-out text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseDisabled.png" format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - <abbrev>JACK</abbrev> Timebase support was
+              disabled in the <link linkend="chpt.preferences.audio_tab">Audio
+              tab</link> of the Preferences.
+              </para>
+              <tip>
+	              <para>
+                  This can be useful in the presence of a controller with a
+                  faulty Timebase implementation or in case of a bug in
+                  Hydrogen's own implementation.
+                </para>
+              </tip>
+            </listitem>
+          </itemizedlist>
       </sect1>
       
         <sect1 id="sect.main_toolbar.gui_state">
