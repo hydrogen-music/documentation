@@ -2306,12 +2306,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           <textobject>
             <phrase>
               Part of the Main Toolbar responsible for the <abbrev>JACK</abbrev>
-              configuration. The left button is titled "J.TRANS" and the right
-              one "J.MASTER".
+              configuration. The left button is titled "J.Trans" and the right
+              one "Timebase".
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="generated_en/JackTrans_Master.png" format="PNG"/>
+              <imagedata fileref="generated_en/JackTrans_Timebase.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </informalfigure>
@@ -2321,7 +2321,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <inlinemediaobject>
           <textobject>
             <phrase>
-              Grey button containing the text "J.TRANS".
+              Grey button containing the text "J.Trans".
             </phrase>
           </textobject>
           <imageobject>

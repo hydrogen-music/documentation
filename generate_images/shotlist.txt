@@ -75,7 +75,7 @@ grab BeatCounterSetPlayButton as btn_bc_set_play_off.png
 slot PlayerControl bcSetPlayBtnClicked
 grab BeatCounterSetPlayButton as btn_bc_set_play_on.png
 grab BPM as background_BPM.png
-grab JackPanel as JackTrans_Master.png offset 0 23 size -1 18
+grab JackPanel as JackTrans_Timebase.png offset 0 23 size -1 18
 grab MetronomeButton as btn_metronome_off.png
 grab PlayerControlRewindButton as playerControlRewindButton.png
 grab PlayerControlRecordButton as playerControlRecordButton.png	
