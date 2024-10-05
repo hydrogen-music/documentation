@@ -87,7 +87,6 @@ grab PlayerControlPatternModeButton as playerControlPatternModeButton.png
 grab PlayerControlSongModeButton as playerControlSongModeButton.png
 grab PlayerControlRubberbandButton as playerControlRubberbandButton.png
 grab PlayerControlJackTransportButton as playerControlJackTransportButton.png
-grab PlayerControlJackMasterButton as playerControlJackMasterButton.png
 
 # Song Editor
 grab SongEditorPanel as songEditorBackground.png size 512 0
