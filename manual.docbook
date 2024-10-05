@@ -999,10 +999,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </listitem>
           <listitem>
 	        <para>
-	          <emphasis role="bold">Enable <abbrev>JACK</abbrev> Timebase
-	          support</emphasis>: whether Hydrogen will respond to or ignore the
-	          incoming tempo and bar, beat, tick (BBT) position information sent
-	          by the <abbrev>JACK</abbrev> server.
+	          <emphasis role="bold">Enable <link
+	          linkend="sect.main_toolbar.jack_control"><abbrev>JACK</abbrev>
+	          Timebase support</link></emphasis>: whether Hydrogen will respond to
+	          or ignore the incoming tempo and bar, beat, tick (BBT) position
+	          information sent by the <abbrev>JACK</abbrev> server.
 
               <tip>
 	            <para>
@@ -2194,10 +2195,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <note>
           <para>
             If you are using <abbrev>JACK</abbrev> transport in the presence of
-            an external <abbrev>JACK</abbrev> Timebase controller, Hydrogen will
-            use the provided tempo and both Tap Tempo and Beat Counter will be
-            disabled. If Hydrogen itself is in control of <abbrev>JACK</abbrev>
-            Timebase, tempo changes from Hydrogen will be broadcasted to other
+            an <link
+            linkend="sect.main_toolbar.jack_control.timebase_red">external
+            <abbrev>JACK</abbrev> Timebase controller</link>, Hydrogen will use
+            the provided tempo and both Tap Tempo and Beat Counter will be
+            disabled. If Hydrogen itself is <link
+            linkend="sect.main_toolbar.jack_control.timebase_blue">in control of <abbrev>JACK</abbrev>
+            Timebase</link>, tempo changes from Hydrogen will be broadcasted to other
             <abbrev>JACK</abbrev> clients.
           </para>
         </note>
@@ -2301,7 +2305,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="sect.main_toolbar.jack_control">
         <title>JACK Control</title>
         
-        <informalfigure id="fig..main_toolbar.jack_control">
+        <informalfigure id="fig.main_toolbar.jack_control">
           <mediaobject>
           <textobject>
             <phrase>
@@ -2357,7 +2361,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
             </para>
           </note>
           <itemizedlist>
-            <listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_off">
               <para>
                 <inlinemediaobject>
                   <textobject>
@@ -2375,7 +2379,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               Hydrogen will use its internal tempo.
               </para>
             </listitem>
-            <listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_blue">
               <para>
                 <inlinemediaobject>
                   <textobject>
@@ -2393,7 +2397,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 <abbrev>JACK</abbrev> clients.
               </para>
             </listitem>
-            <listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_red">
               <para>
                 <inlinemediaobject>
                   <textobject>
@@ -2418,7 +2422,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 instead, adopts tempo and position provided by the controller.
               </para>
             </listitem>
-            <listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_disabled">
               <para>
                 <inlinemediaobject>
                   <textobject>
@@ -3181,7 +3185,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        
        <note>
          <para>
-         Please note that the Timeline is neither available in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> nor in the presence of a <link linkend="sect.main_toolbar.jack_control"><abbrev>JACK</abbrev> Timebase Master</link>.
+         Please note that the Timeline is neither available in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> nor in the presence of a <link linkend="sect.main_toolbar.jack_control.timebase_red"><abbrev>JACK</abbrev> Timebase controller</link>.
          </para>
        </note>
        
