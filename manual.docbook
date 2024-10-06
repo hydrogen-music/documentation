@@ -2354,6 +2354,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           this protocol - Timebase <emphasis>listeners</emphasis>. When pressing
           the button Hydrogen will attempt to take control of Timebase.
           </para>
+          <tip>
+            <para>
+              When using <abbrev>JACK</abbrev> Timebase transport relocations
+              should always be done within the Timebase controller application.
+              Otherwise, you could end up at unexpected positions due to the
+              limitations of that protocol.
+            </para>
+          </tip>
           <note>
             <para>
           The JACK Timebase API uses other terms for these two classes of
