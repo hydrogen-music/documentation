@@ -7510,6 +7510,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <emphasis>X</emphasis>. Optional input argument will be
                  ignored.</entry>
                </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">INSTRUMENT_PITCH</emphasis>/</entry>
+                 <entry>ff</entry>
+                 <entry>[0,] [-24.5,24.5]</entry>
+                 <entry>Sets the <link
+                 linkend="chpt.instrument_editor.pitch_shift_parameters">Pitch</link>
+                 of the instrument specified using the first parameter
+                 <emphasis>f</emphasis> to the second parameter
+                 <emphasis>f</emphasis>.</entry>
+               </row>
                <row id="chpt.osc.command.playlist_song">
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_SONG</emphasis>/</entry>
                  <entry>f</entry>
@@ -7636,6 +7646,47 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>f</entry>
                  <entry></entry>
                  <entry>Removes pattern number <emphasis>f</emphasis>. </entry>
+               </row>
+               <row id="chpt.osc.command.clear_pattern" xreflabel="/Hydrogen/CLEAR_PATTERN/">
+                 <entry>/Hydrogen/<emphasis role="bold">CLEAR_PATTERN</emphasis>/</entry>
+                 <entry>' ',[f]</entry>
+                 <entry></entry>
+                 <entry>Removes all notes of the selected pattern.</entry>
+               </row>
+               <row id="chpt.osc.command.clear_selected_instrument" xreflabel="/Hydrogen/CLEAR_SELECTED_INSTRUMENT/">
+                 <entry>/Hydrogen/<emphasis role="bold">CLEAR_SELECTED_INSTRUMENT</emphasis>/</entry>
+                 <entry>' ',[f]</entry>
+                 <entry></entry>
+                 <entry>Removes all notes of the selected pattern associated with
+                 the currently selected instrument.</entry>
+               </row>
+               <row id="chpt.osc.command.clear_instrument" xreflabel="/Hydrogen/CLEAR_INSTRUMENT/">
+                 <entry>/Hydrogen/<emphasis role="bold">CLEAR_INSTRUMENT</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry>[0,]</entry>
+                 <entry>Works as <xref linkend="chpt.osc.command.clear_selected_instrument"/>
+                 but on instrument <emphasis>f</emphasis> instead.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">NOTE_ON</emphasis>/</entry>
+                 <entry>ff</entry>
+                 <entry>[36,127] [0.0,1.0]</entry>
+                 <entry>Handled like a <link
+                 linkend="chpt.midi.note"><abbrev>MIDI</abbrev> NOTE-ON</link>
+                 event without triggering <link
+                 linkend="chpt.midi.controlling"><abbrev>Actions</abbrev></link>.
+                 The first parameter <emphasis>f</emphasis> determines the pitch
+                 of the note and the second <emphasis>f</emphasis> its
+                 velocity.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">NOTE_OFF</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry>[36,127]</entry>
+                 <entry>Handled like a <link
+                 linkend="chpt.midi.note"><abbrev>MIDI</abbrev> NOTE-OFF</link>
+                 event. The provided parameter <emphasis>f</emphasis> determines
+                 the pitch of the note.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">SONG_EDITOR_TOGGLE_GRID_CELL</emphasis>/</entry>
