@@ -317,15 +317,12 @@
 	      <abbrev>MIDI</abbrev> device at hand), you can also use Hydrogen's
 	      Virtual Keyboard. It emulates note triggering via
 	      <abbrev>MIDI</abbrev> <emphasis>NOTE_ON</emphasis> events (see <xref
-	      linkend="chpt.midi.note"/>) but currently only supports <link
-	      linkend="chpt.midi.note.mapping">order-based</link> mapping in <link
-	      linkend="chpt.midi.note.input_mode">Input Mode</link>
-	      <option>Drumkit</option>.
+	      linkend="chpt.midi.note"/>).
         </para>
 
         <note>
           <para>
-            Key strokes in the Virtual Keyboard do also not trigger <link
+            Key strokes of the Virtual Keyboard don't trigger <link
             linkend="chpt.midi.controlling">Actions</link> associated with
             <emphasis>NOTE_ON</emphasis> events.
           </para>
