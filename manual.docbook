@@ -8007,10 +8007,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </menuchoice>.  This will give you a blank
        instrument to start from.</para>
 
-       <para>Now, you need two samples.  Any .WAV or .FLAC file will do.
+       <para>Now, you need two samples (see <link
+       linkend="def.sample">Sample</link> for a list of supported formats).
        Hydrogen provides several in the <filename
        class="directory">data/drumkits</filename> folder in the Hydrogen data
-       directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).</para>
+       directory (usually <filename
+       role="directory">$HOME/.hydrogen/data/</filename>).</para>
 
        <para>In the Instrument Editor, click on <link linkend="chpt.instrument_editor.layers">Layers</link>.
        You can layer several samples into the instrument.  Which one is played
@@ -9036,6 +9038,85 @@ does.  See also <link linkend="def.adsr">ADSR</link></para>
   <glossdef>
     <para>A short recording of a sound, typically between .1 and 3.0 seconds
     long. Each time a note is triggered within Hydrogen the corresponding sample will be played back (after applying all customization and effects).</para>
+    <para>
+      Hydrogen supports the following audio formats:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+		      Waveform Audio File (*.wav)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Free Lossless Audio Codec (*.flac)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.0.18</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Compressed Ogg/Opus (*.opus)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.0.29</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Compressed Ogg/Vorbis (*.ogg)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.0.18</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Compressed MPEG Layer 3 (*.mp3)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.1.0</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Apple AIFF (*.aiff, *.aif, *.aifc)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Sun/NeXT AU (*.au)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Core Audio Format (*.caf)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Creative Voice File (*.voc)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Sonic Foundrys' 64 bit RIFF/WAV (*.w64)
+        </para>
+      </listitem>
+    </itemizedlist>
   </glossdef>
 </glossentry>
 
