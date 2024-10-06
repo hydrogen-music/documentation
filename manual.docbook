@@ -1592,6 +1592,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               instrument/track. <option>Both</option> will create a stereo downmix as well as audio files for all individual
               instruments.
               </para>
+              <para>
+                For audio formats <emphasis>FLAC</emphasis>,
+                <emphasis>Ogg/Vorbis</emphasis>, <emphasis>Ogg/Opus</emphasis>,
+                and <emphasis>MP3</emphasis> the option <option>Compression
+                Level</option> instead of <option>Samplerate</option> and
+                <option>SampleDepth</option> is available. For
+                <emphasis>FLAC</emphasis> it trades off export time against
+                resulting file size. For all other formats (all lossy
+                compression ones) it trades off audio quality against resulting
+                file size.
+              </para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export LilyPond File</emphasis>: exports the current song to LilyPond.</para>
