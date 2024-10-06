@@ -6660,6 +6660,20 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </note>
            </listitem>
 
+           <listitem>
+             <para>
+               <emphasis role="bold">CLEAR_PATTERN</emphasis>: removes all notes of the selected
+               pattern.
+             </para>
+           </listitem>
+
+           <listitem>
+             <para>
+               <emphasis role="bold">CLEAR_SELECTED_INSTRUMENT</emphasis>: removes all notes of the selected
+               pattern associated with the currently selected instrument.
+             </para>
+           </listitem>
+
            <listitem id="chpt.midi.controlling.actions.effect_level_absolute" xreflabel="EFFECT_LEVEL_ABSOLUTE">
              <para>
                <emphasis role="bold">EFFECT_LEVEL_ABSOLUTE</emphasis>:
@@ -6685,6 +6699,14 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
              <emphasis role="bold">GAIN_LEVEL_ABSOLUTE</emphasis>:
              sets the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">Layer Gain</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
            </para></listitem>
+
+           <listitem>
+             <para>
+               <emphasis role="bold">INSTRUMENT_PITCH</emphasis>:
+               sets the <link linkend="chpt.instrument_editor.pitch_shift_parameters">Pitch</link>
+               of the instrument specified by <emphasis role="bold">Action Param. 1</emphasis>.
+             </para>
+           </listitem>
 
            <listitem id="chpt.midi.controlling.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
              <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>: sets the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link> to the value provided by the <abbrev>MIDI</abbrev> event times 1.5 and divided by 127.
