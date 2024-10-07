@@ -2,6 +2,19 @@
 
 ## [1.2.4] - XXXX-XX-XX
 
+### Added
+
+- Listing of supported audio formats
+- Description of Compression Level in song export
+- New CLI options
+- New OSC and MIDI commands
+- A couple of small notes and tips
+
+### Changed
+
+- JACK sections and JACK Timebase handling in particular have been updated
+- A couple of images have been updated
+
 ### Fixed
 
 - Fixed dangling image URL
