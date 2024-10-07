@@ -5,4 +5,11 @@ grab PatternEditor as NoteType_CustomLength.png offset 58 0 size 64 22
 grab PatternEditor as NoteType_Inaccessible.png offset 129 0 size 22 22
 grab PatternEditor as NoteType_StopNote.png offset 152 0 size 22 22
 
+slot PlayerControl jackTimebaseStateChangedEvent -1
+grab PlayerControlJackTimebaseButton as JackTimebaseOff.png
+slot PlayerControl jackTimebaseStateChangedEvent 1
+grab PlayerControlJackTimebaseButton as JackTimebaseBlue.png
+slot PlayerControl jackTimebaseStateChangedEvent 0
+grab PlayerControlJackTimebaseButton as JackTimebaseRed.png
+
 FIN

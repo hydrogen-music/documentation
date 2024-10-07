@@ -317,15 +317,12 @@
 	      <abbrev>MIDI</abbrev> device at hand), you can also use Hydrogen's
 	      Virtual Keyboard. It emulates note triggering via
 	      <abbrev>MIDI</abbrev> <emphasis>NOTE_ON</emphasis> events (see <xref
-	      linkend="chpt.midi.note"/>) but currently only supports <link
-	      linkend="chpt.midi.note.mapping">order-based</link> mapping in <link
-	      linkend="chpt.midi.note.input_mode">Input Mode</link>
-	      <option>Drumkit</option>.
+	      linkend="chpt.midi.note"/>).
         </para>
 
         <note>
           <para>
-            Key strokes in the Virtual Keyboard do also not trigger <link
+            Key strokes of the Virtual Keyboard don't trigger <link
             linkend="chpt.midi.controlling">Actions</link> associated with
             <emphasis>NOTE_ON</emphasis> events.
           </para>
@@ -550,14 +547,19 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <screen>
 <command>-h, --help                  Displays this help.</command>
 <command>-v, --version               Displays version information.</command>
-<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (jack, alsa, pulseaudio, auto)</command>
-<command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
-<command>-n, --nosplash              Hide splash screen</command>
+<command>-d, --driver &#60;Audiodriver&#62;  Use the selected audio driver (auto, jack, pulseaudio, ...)</command>
 <command>-p, --playlist &#60;File&#62;       Load a playlist (*.h2playlist) at startup</command>
-<command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
 <command>-s, --song &#60;File&#62;           Load a song (*.h2song) at startup</command>
 <command>-k, --kit &#60;DrumkitName&#62;     Load a drumkit at startup</command>
-<command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug or 0xHHHH</command>
+<command>-i, --install &#60;File&#62;        Install a drumkit (*.h2drumkit)</command>
+<command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug</command>
+<command>-L, --log-file &#60;Path&#62;       Alternative log file path</command>
+<command>-T, --log-timestamps        Add timestamps to all log messages</command>
+<command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
+<command>    --config &#60;Path&#62;         Use an alternate config file</command>
+<command>    --layout &#60;Layout&#62;       UI layout ('tabbed' or 'single')</command>
+<command>-O, --osc-port &#60;int&#62;        Custom port for OSC connections</command>
+<command>-n, --nosplash              Hide splash screen</command>
       </screen>
 
       <note>
@@ -816,13 +818,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 with other audio software. The <abbrev>JACK</abbrev>
                 server will start automatically if not already running.
                 </para>
-
-                <tip>
-	              <para>
-	                We strongly recommend using
-                    this driver to have the best out of Hydrogen.
-                  </para>
-                </tip>
               </listitem>
               <listitem>
                 <para><option>ALSA</option>: The widely adopted
@@ -873,6 +868,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 	          <emphasis role="bold">Device</emphasis>:
               specifies the particular sound card the audio driver will use.
             </para>
+            <note>
+              <para>
+                The Preferences dialog does not support hot plugging. In case
+                you connected your device while the dialog was already opened,
+                be sure to close and reopen it again.
+              </para>
+            </note>
           </listitem>
           <listitem>
 	        <para>
@@ -951,60 +953,6 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               </para>
             </note>
           </listitem>
-          <listitem id="sect.preferences.jack.bbt">
-            <para><emphasis role="bold">BBT sync method</emphasis>: if
-            Hydrogen uses <abbrev>JACK</abbrev> transport in the presence of an external <abbrev>JACK</abbrev>
-            Timebase master (TBM), it will use the provided measure and
-            tempo information instead of the local one of either the <link linkend="sect.main_toolbar.bpm_control_and_metronome">song's
-            tempo</link> or the Tempo Markers
-            added to the <link linkend="chpt.song_editor.timeline">Timeline</link>. But due to
-            fundamental design choices within Hydrogen, it can not set
-            both measure and speed provided by <abbrev>JACK</abbrev> for arbitrary pattern
-            combinations. You have two options here. Either drop all measure
-            changes in the TBM and work with tempo changes only to support
-            arbitrary patterns (using option <option>constant
-            measure</option>) or to keep the length of each pattern
-            consistent with the corresponding measure in the TBM and to use
-            both tempo and measure provided by <abbrev>JACK</abbrev> (option
-            <option>matching bars</option>).</para>
-
-            <note>
-              <para>
-                This option is only available if the <abbrev>JACK</abbrev> audio driver was selected.
-              </para>
-              <para>
-                For this option to take effect the
-                <inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing the text "J.TRANS".
-            </phrase>
-          </textobject>
-                  <imageobject>
-                    <imagedata fileref="generated_en/playerControlJackTransportButton.png" format="PNG" />
-                  </imageobject>
-                </inlinemediaobject>
-                button has to be activated and the
-                <inlinemediaobject>
-          <textobject>
-            <phrase>
-              Grey button containing the text "J.MASTER".
-            </phrase>
-          </textobject>
-                  <imageobject>
-                    <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
-                  </imageobject>
-                </inlinemediaobject>                
-                button deactivated in the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link> (next to
-                having a <abbrev>JACK</abbrev> TBM application).</para>
-            </note>
-
-            <tip>
-	          <para>
-	            Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master via the <link linkend="sect.main_toolbar.jack_control">Main Toolbar</link>.
-              </para>
-            </tip>
-          </listitem>
           <listitem>
             <para><emphasis role="bold">Connect to default <abbrev>JACK</abbrev> output
             ports</emphasis>: connects the main stereo <abbrev>JACK</abbrev> output ports of the <link linkend="chpt.mixer.master_fader_strip">Master Fader Strip</link> to
@@ -1048,8 +996,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
           </listitem>
           <listitem>
 	        <para>
-	          <emphasis role="bold">Enable <abbrev>JACK</abbrev> timebase master support</emphasis>:
-              whether Hydrogen will respond to or ignore the incoming BBT (tempo and measure) information sent by the <abbrev>JACK</abbrev> server.
+	          <emphasis role="bold">Enable <link
+	          linkend="sect.main_toolbar.jack_control"><abbrev>JACK</abbrev>
+	          Timebase support</link></emphasis>: whether Hydrogen will respond to
+	          or ignore the incoming tempo and bar, beat, tick (BBT) position
+	          information sent by the <abbrev>JACK</abbrev> server.
 
               <tip>
 	            <para>
@@ -1131,8 +1082,9 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 role="bold">Input</emphasis> and <emphasis
                 role="bold">Output</emphasis> MIDI devices/ports is compiled for
                 the current MIDI driver when opening the Preferences dialog. If
-                you switch to another driver, be sure to click the Ok button and
-                reopen the Preferences dialog in order to have an updated list.
+                you switch to another driver or connect a device while the
+                dialog is already open, be sure to close and reopen it again in
+                order to have an updated list.
               </para>
             </note>
           </listitem>
@@ -1640,6 +1592,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
               instrument/track. <option>Both</option> will create a stereo downmix as well as audio files for all individual
               instruments.
               </para>
+              <para>
+                For audio formats <emphasis>FLAC</emphasis>,
+                <emphasis>Ogg/Vorbis</emphasis>, <emphasis>Ogg/Opus</emphasis>,
+                and <emphasis>MP3</emphasis> the option <option>Compression
+                Level</option> instead of <option>Samplerate</option> and
+                <option>SampleDepth</option> is available. For
+                <emphasis>FLAC</emphasis> it trades off export time against
+                resulting file size. For all other formats (all lossy
+                compression ones) it trades off audio quality against resulting
+                file size.
+              </para>
           </listitem>
           <listitem>
             <para><emphasis role="bold">Export LilyPond File</emphasis>: exports the current song to LilyPond.</para>
@@ -1785,8 +1748,28 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         </informalfigure>
     
        Once the kit has been downloaded it will be available in the <link linkend="chpt.sound_library.drumkits">Sound Library</link> under <emphasis>User drumkits</emphasis>.
-     
+
        </para>
+       <note>
+         <para>
+           In the rare case a drumkit or one of its contained sample files
+           features <emphasis role="bold">UTF-8</emphasis> encoded characters
+           but your system's locale is not properly set up to handle these,
+           those characters will be omitted. For the kit itself it just means it
+           will carry a slightly different name. But renamed sample files can't
+           be found by Hydrogen anymore when loading the kit. In case you see a
+           popup dialog during installation complaining about encoding, be sure
+           to check the instruments of the imported kit and reassign missing
+           samples using the <link
+           linkend="chpt.instrument_editor.layers.layers">Instrument
+           Editor</link>.
+         </para>
+         <para>
+           A description of <emphasis
+           role="bold">how to fix encoding issues on Windows</emphasis> can be found in our <ulink
+           url="https://github.com/hydrogen-music/hydrogen/wiki/Fix-encoding-issues-on-Windows">Wiki</ulink>.
+         </para>
+       </note>
 
         
           </listitem>
@@ -2219,8 +2202,15 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
         <note>
           <para>
-            If you are using <abbrev>JACK</abbrev> transport in the presence of an external <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>, Hydrogen is supposed to be a <emphasis>slave</emphasis> and both Tap Tempo and Beat Counter will be disabled. If Hydrogen itself is the <abbrev>JACK</abbrev> Transport Master, tempo changes from
-            Hydrogen will be broadcasted to other <abbrev>JACK</abbrev> clients.
+            If you are using <abbrev>JACK</abbrev> transport in the presence of
+            an <link
+            linkend="sect.main_toolbar.jack_control.timebase_red">external
+            <abbrev>JACK</abbrev> Timebase controller</link>, Hydrogen will use
+            the provided tempo and both Tap Tempo and Beat Counter will be
+            disabled. If Hydrogen itself is <link
+            linkend="sect.main_toolbar.jack_control.timebase_blue">in control of <abbrev>JACK</abbrev>
+            Timebase</link>, tempo changes from Hydrogen will be broadcasted to other
+            <abbrev>JACK</abbrev> clients.
           </para>
         </note>
       </sect2>
@@ -2323,17 +2313,17 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
       <sect1 id="sect.main_toolbar.jack_control">
         <title>JACK Control</title>
         
-        <informalfigure id="fig..main_toolbar.jack_control">
+        <informalfigure id="fig.main_toolbar.jack_control">
           <mediaobject>
           <textobject>
             <phrase>
               Part of the Main Toolbar responsible for the <abbrev>JACK</abbrev>
-              configuration. The left button is titled "J.TRANS" and the right
-              one "J.MASTER".
+              configuration. The left button is titled "J.Trans" and the right
+              one "Timebase".
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="generated_en/JackTrans_Master.png" format="PNG"/>
+              <imagedata fileref="generated_en/JackTrans_Timebase.png" format="PNG"/>
             </imageobject>
           </mediaobject>
         </informalfigure>
@@ -2343,7 +2333,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         <inlinemediaobject>
           <textobject>
             <phrase>
-              Grey button containing the text "J.TRANS".
+              Grey button containing the text "J.Trans".
             </phrase>
           </textobject>
           <imageobject>
@@ -2353,27 +2343,126 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
         will enable <abbrev>JACK</abbrev> transport. If disabled, Hydrogen will still use the <abbrev>JACK</abbrev> driver and registered audio ports. But it decouples its own transport state from the one of the <abbrev>JACK</abbrev> server and will not be in sync with other clients anymore.
         </para>
         <para>
-          Using
-          
+          The
           <inlinemediaobject>
           <textobject>
             <phrase>
-              Grey button containing the text "J.MASTER".
+              Grey button containing the text "Timebase".
             </phrase>
           </textobject>
             <imageobject>
-              <imagedata fileref="generated_en/playerControlJackMasterButton.png" format="PNG" />
+              <imagedata fileref="generated_en/JackTimebaseOff.png"
+                         format="PNG" />
             </imageobject>
           </inlinemediaobject>
-          Hydrogen can be registered as <abbrev>JACK</abbrev> Timebase Master and will send additional information, like the current speed, to other <abbrev>JACK</abbrev>
-          clients. If it's registered as <abbrev>master</abbrev>, the button will appear checked (blue by default). If, however, another application, like <command>Ardour</command>, is registered as Timebase Master and Hydrogen acts as <emphasis>slave</emphasis>, the button appears checked too but is colored red. As soon as it gets unchecked (which can happen without explicit user interaction) Hydrogen works as a stand-alone <abbrev>JACK</abbrev> client.
+          button indicates the current state of <abbrev>JACK</abbrev> Timebase
+          support. Via this protocol one JACK cilent - registered as Timebase
+          <emphasis>controller</emphasis> - can share its tempo and position
+          information as beat, bar, and tick with other JACK clients supporting
+          this protocol - Timebase <emphasis>listeners</emphasis>. When pressing
+          the button Hydrogen will attempt to take control of Timebase.
           </para>
-
+          <tip>
+            <para>
+              When using <abbrev>JACK</abbrev> Timebase transport relocations
+              should always be done within the Timebase controller application.
+              Otherwise, you could end up at unexpected positions due to the
+              limitations of that protocol.
+            </para>
+          </tip>
           <note>
-	        <para>
-	          The support of <abbrev>JACK</abbrev> Timebase can disabled in the <link linkend="chpt.preferences.audio_tab">Audio tab</link> of the Preferences. This can be useful in the presence of a fault Master broadcasting nuisance information.
+            <para>
+          The JACK Timebase API uses other terms for these two classes of
+          clients we do not repeat in here.
             </para>
           </note>
+          <itemizedlist>
+            <listitem id="sect.main_toolbar.jack_control.timebase_off">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Grey button containing the text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseOff.png"
+                               format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - Timebase support itself is activated but neither
+              Hydrogen nor an external application is currently in control.
+              Hydrogen will use its internal tempo.
+              </para>
+            </listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_blue">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Blue button containing the text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseBlue.png"
+                               format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - Hydrogen is in control of <abbrev>JACK</abbrev> Timebase, uses
+                its internal tempo, and boardcasts it to other
+                <abbrev>JACK</abbrev> clients.
+              </para>
+            </listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_red">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Red button containing the text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseRed.png"
+                               format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - An external application is registered as Timebase controller.
+                Hydrogen will disregard its local tempo - <link
+                linkend="sect.main_toolbar.bpm_control_and_metronome">BPM
+                widget</link>, <link
+                linkend="sect.main_toolbar.tap_tempo_beat_counter.tap_tempo">Tap
+                Tempo</link>, <link
+                linkend="sect.main_toolbar.tap_tempo_beat_counter.beat_counter">Beat
+                Counter</link>, <link
+                linkend="chpt.song_editor.timeline">Timeline</link> - and,
+                instead, adopts tempo and position provided by the controller.
+              </para>
+            </listitem>
+            <listitem id="sect.main_toolbar.jack_control.timebase_disabled">
+              <para>
+                <inlinemediaobject>
+                  <textobject>
+                    <phrase>
+                      Grey button containing the greyed-out text "Timebase".
+                    </phrase>
+                  </textobject>
+                  <imageobject>
+                    <imagedata fileref="generated_en/JackTimebaseDisabled.png" format="PNG" />
+                  </imageobject>
+                </inlinemediaobject>
+                - <abbrev>JACK</abbrev> Timebase support was
+              disabled in the <link linkend="chpt.preferences.audio_tab">Audio
+              tab</link> of the Preferences.
+              </para>
+              <tip>
+	              <para>
+                  This can be useful in the presence of a controller with a
+                  faulty Timebase implementation or in case of a bug in
+                  Hydrogen's own implementation.
+                </para>
+              </tip>
+            </listitem>
+          </itemizedlist>
       </sect1>
       
         <sect1 id="sect.main_toolbar.gui_state">
@@ -3112,7 +3201,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
        
        <note>
          <para>
-         Please note that the Timeline is neither available in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> nor in the presence of a <link linkend="sect.main_toolbar.jack_control"><abbrev>JACK</abbrev> Timebase Master</link>.
+         Please note that the Timeline is neither available in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Pattern Mode</link> nor in the presence of a <link linkend="sect.main_toolbar.jack_control.timebase_red"><abbrev>JACK</abbrev> Timebase controller</link>.
          </para>
        </note>
        
@@ -6438,6 +6527,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            tab of the Preferences.
          </para>
 
+         <note>
+           <para>
+             Only actions performed in the GUI can be undone.
+             <abbrev>MIDI</abbrev>, on the other hand, can not!
+           </para>
+         </note>
+
          <figure id="midi_actions">
            <title>Actions are set in MIDI System tab of the Preferences Dialog</title>
            <mediaobject>
@@ -6527,7 +6623,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem id="chpt.midi.controlling.actions.bpm_cc_relative" xreflabel="BPM_CC_RELATIVE">
              <para>
-	           <emphasis role="bold">BPM_CC_RELATIVE</emphasis>: changes the tempo relative to the current tempo, using a controller. Using the <emphasis role="bold">Action Param</emphasis> you can specify by how much the current tempo will change. If the incoming Event is <option>-1</option> (negative), the tempo will be increased and if it's <option>1</option> (positive), it will be increased.
+	           <emphasis role="bold">BPM_CC_RELATIVE</emphasis>: changes the tempo
+	           relative to the current tempo, using a controller. Using
+	           <emphasis>Action Param. <emphasis
+	           role="bold">1</emphasis></emphasis> you can specify by how much the current
+	           tempo will change. If the incoming Event is <option>-1</option>
+	           (negative), the tempo will be increased and if it's
+	           <option>1</option> (positive), it will be increased.
                <note>
                  <para>
                    This Action will have no effect if Hydrogen is both in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
@@ -6552,8 +6654,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem>
              <para>
-	           <emphasis role="bold">BPM_FINE_CC_RELATIVE</emphasis>:
-               as <xref linkend="chpt.midi.controlling.actions.bpm_cc_relative" /> but with changes 100 times smaller than the value specified in <emphasis role="bold">Action Param</emphasis>.
+	           <emphasis role="bold">BPM_FINE_CC_RELATIVE</emphasis>: as <xref
+	           linkend="chpt.midi.controlling.actions.bpm_cc_relative" /> but with
+	           changes 100 times smaller than the value specified in
+	           <emphasis>Action Param. <emphasis
+	           role="bold">1</emphasis></emphasis>.
                <note>
                  <para>
                    This Action will have no effect if Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>
@@ -6575,11 +6680,30 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            </note>
            </listitem>
 
+           <listitem>
+             <para>
+               <emphasis role="bold">CLEAR_PATTERN</emphasis>: removes all notes of the selected
+               pattern.
+             </para>
+           </listitem>
+
+           <listitem>
+             <para>
+               <emphasis role="bold">CLEAR_SELECTED_INSTRUMENT</emphasis>: removes all notes of the selected
+               pattern associated with the currently selected instrument.
+             </para>
+           </listitem>
+
            <listitem id="chpt.midi.controlling.actions.effect_level_absolute" xreflabel="EFFECT_LEVEL_ABSOLUTE">
              <para>
-               <emphasis role="bold">EFFECT_LEVEL_ABSOLUTE</emphasis>:
-               changes the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume level of an FX</link>. Parameter 1 determines the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> and Parameter 2 specifies the FX the Action will be applied to.
-           </para></listitem>
+               <emphasis role="bold">EFFECT_LEVEL_ABSOLUTE</emphasis>: changes
+               the <link linkend="chpt.mixer.channel_strips.fx_volume" >volume
+               level of an FX</link>. <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis> determines the <link
+               linkend="chpt.mixer.channel_strips">Instrument Channel
+               Strip</link> and <emphasis>Action Param. <emphasis
+               role="bold">2</emphasis></emphasis> specifies the FX the Action
+               will be applied to. </para></listitem>
 
            <listitem><para>
              <emphasis role="bold">EFFECT_LEVEL_RELATIVE</emphasis>:
@@ -6588,18 +6712,38 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem>
              <para>
-	           <emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE</emphasis>:
-               for a value of <option>0</option> it sets the <link linkend="chpt.instrument_editor.filter">Filter Cutoff</link> of the
-               instrument strip specified using the <emphasis role="bold">Action Param</emphasis> to <option>0</option>. For all other
-               values it sets the cutoff to the provided number divided by
-               127.0.
+	           <emphasis role="bold">FILTER_CUTOFF_LEVEL_ABSOLUTE</emphasis>: for
+	           a value of <option>0</option> it sets the <link
+	           linkend="chpt.instrument_editor.filter">Filter Cutoff</link> of the
+	           instrument strip specified using the <emphasis>Action Param.
+	           <emphasis role="bold">1</emphasis></emphasis> to
+	           <option>0</option>. For all other values it sets the cutoff to the
+	           provided number divided by 127.0.
              </para>
            </listitem>
 
-           <listitem><para>
-             <emphasis role="bold">GAIN_LEVEL_ABSOLUTE</emphasis>:
-             sets the <link linkend="chpt.instrument_editor.layers.controls.layer_gain">Layer Gain</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">GAIN_LEVEL_ABSOLUTE</emphasis>: sets the
+               <link
+               linkend="chpt.instrument_editor.layers.controls.layer_gain">Layer
+               Gain</link>. <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis> specifies the instrument,
+               <emphasis>Action Param. <emphasis
+               role="bold">2</emphasis></emphasis> the component, and
+               <emphasis>Action Param. <emphasis
+               role="bold">3</emphasis></emphasis> the layer.
+             </para>
+           </listitem>
+
+           <listitem>
+             <para>
+               <emphasis role="bold">INSTRUMENT_PITCH</emphasis>: sets the <link
+               linkend="chpt.instrument_editor.pitch_shift_parameters">Pitch</link>
+               of the instrument specified by <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
+             </para>
+           </listitem>
 
            <listitem id="chpt.midi.controlling.actions.master_volume_absolute" xreflabel="MASTER_VOLUME_ABSOLUTE"><para>
              <emphasis role="bold">MASTER_VOLUME_ABSOLUTE</emphasis>: sets the <link linkend="chpt.mixer.master_fader_strip">Master output volume</link> to the value provided by the <abbrev>MIDI</abbrev> event times 1.5 and divided by 127.
@@ -6622,29 +6766,53 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
              <link linkend="chpt.mixer.master_fader_strip">Master output</link> (sequencer keeps running).
            </para></listitem>
 
-           <listitem id="chpt.midi.controlling.actions.pan_absolute" xreflabel="PAN_ABSOLUTE"><para>
-             <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> to the absolute value that the linked controller sends to Hydrogen. Incoming values from <option>0</option> to <option>127</option> will be mapped to pan values between -1 and 1.
-           </para></listitem>
+           <listitem id="chpt.midi.controlling.actions.pan_absolute" xreflabel="PAN_ABSOLUTE">
+             <para>
+               <emphasis role="bold">PAN_ABSOLUTE</emphasis>: changes the <link
+               linkend="def.pan">pan</link> of an <link
+               linkend="chpt.mixer.channel_strips.pan">instrument</link>
+               determined by the <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis> to the absolute value that
+               the linked controller sends to Hydrogen. Incoming values from
+               <option>0</option> to <option>127</option> will be mapped to pan
+               values between -1 and 1.
+             </para>
+           </listitem>
 
            <listitem><para>
              <emphasis role="bold">PAN_ABSOLUTE_SYM</emphasis>: same as <xref linkend="chpt.midi.controlling.actions.pan_absolute"/> but supports incoming values from <option>-127</option> to <option>127</option> will be mapped.
            </para></listitem>
 
-           <listitem><para>
-             <emphasis role="bold">PAN_RELATIVE</emphasis>: changes the <link linkend="def.pan">pan</link> of an <link linkend="chpt.mixer.channel_strips.pan">instrument</link> determined by the <emphasis role="bold">Action Param</emphasis> relative to the current value. For a
-             value of <option>1</option> it increase the pan by 0.05. For all other values
-             it decreases it by 0.05. (<option>-1</option>: -0.05 , <option>1</option>: +0.05).
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">PAN_RELATIVE</emphasis>: changes the <link
+               linkend="def.pan">pan</link> of an <link
+               linkend="chpt.mixer.channel_strips.pan">instrument</link>
+               determined by <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis> relative to the current
+               value. For a value of <option>1</option> it increase the pan by
+               0.05. For all other values it decreases it by 0.05.
+               (<option>-1</option>: -0.05 , <option>1</option>: +0.05).
+             </para>
+           </listitem>
 
            <listitem id="chpt.midi.controlling.actions.pause" xreflabel="PAUSE"><para>
              <emphasis role="bold">PAUSE</emphasis>: pauses playback.
            </para></listitem>
 
-           <listitem id="chpt.midi.controlling.actions.pitch_level_absolute" xreflabel="PITCH_LEVEL_ABSOLUTE"><para>
-             <emphasis role="bold">PITCH_LEVEL_ABSOLUTE</emphasis>:
-             sets the <link linkend="chpt.instrument_editor.layers.controls.pitch">Layer Pitch</link>. Parameter 1 specifies the instrument, parameter 2 the component, and parameter 3 the layer.
-             <emphasis role="bold">PAUSE</emphasis>: pauses playback.
-           </para></listitem>
+           <listitem id="chpt.midi.controlling.actions.pitch_level_absolute" xreflabel="PITCH_LEVEL_ABSOLUTE">
+             <para>
+               <emphasis role="bold">PITCH_LEVEL_ABSOLUTE</emphasis>: sets the
+               <link
+               linkend="chpt.instrument_editor.layers.controls.pitch">Layer
+               Pitch</link>. <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis> specifies the instrument,
+               <emphasis>Action Param. <emphasis
+               role="bold">2</emphasis></emphasis> the component, and
+               <emphasis>Action Param. <emphasis
+               role="bold">3</emphasis></emphasis> the layer.
+             </para>
+           </listitem>
 
            <listitem id="chpt.midi.controlling.actions.play" xreflabel="PLAY"><para>
              <emphasis role="bold">PLAY</emphasis>: starts playback.
@@ -6666,8 +6834,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem>
              <para>
-	           <emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>:
-               opens the song in the current <link linkend="chpt.playlist_editor">playlist</link> corresponding to the song number specified in <emphasis role="bold">Action Param</emphasis>.
+	             <emphasis role="bold">PLAYLIST_NEXT_SONG</emphasis>: opens the
+	             song in the current <link
+	             linkend="chpt.playlist_editor">playlist</link> corresponding to
+	             the song number specified in <emphasis>Action Param. <emphasis
+	             role="bold">1</emphasis></emphasis>.
              </para>
            </listitem>
 
@@ -6718,7 +6889,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
            <listitem>
              <para>
 	           <emphasis role="bold">REDO_ACTION</emphasis>:
-               redoes the previous undone action.
+               redoes the previously undone GUI action (not <abbrev>MIDI</abbrev> action!).
              </para>
            </listitem>
 
@@ -6734,33 +6905,55 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                selects the instrument in the drumkit corresponding to the number supplied in the incoming <abbrev>MIDI</abbrev> Event.
            </para></listitem>
 
-           <listitem id="chpt.midi.controlling.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN"><para>
-             <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>:
-             selects the pattern specified in <emphasis role="bold">Action Param</emphasis>.
+           <listitem id="chpt.midi.controlling.actions.select_next_pattern" xreflabel="SELECT_NEXT_PATTERN">
+             <para>
+               <emphasis role="bold">SELECT_NEXT_PATTERN</emphasis>: selects the
+               pattern specified in <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
 
-             <note>
-               <para>
-                 If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.pattern_mode">Selected Pattern Mode</link>, playback will be switched to the selected pattern immediately. If it is, instead, in <link linkend="chpt.song_editor.editor_modes.stacked">Stacked Pattern Mode</link>, playback of the selected pattern will be toggled next time transport is loop again. In case the pattern was already playing, it will be stopped. If not, it will be started.
-               </para>
-	           <para>
-	             If Hydrogen is in <link linkend="chpt.song_editor.editor_modes.song_mode">Song Mode</link>, the command will have no effect.
-               </para>
-             </note>
-           </para></listitem>
+               <note>
+                 <para>
+                   If Hydrogen is in <link
+                   linkend="chpt.song_editor.editor_modes.pattern_mode">Selected
+                   Pattern Mode</link>, playback will be switched to the
+                   selected pattern immediately. If it is, instead, in <link
+                   linkend="chpt.song_editor.editor_modes.stacked">Stacked
+                   Pattern Mode</link>, playback of the selected pattern will be
+                   toggled next time transport is loop again. In case the
+                   pattern was already playing, it will be stopped. If not, it
+                   will be started.
+                 </para>
+	               <para>
+	                 If Hydrogen is in <link
+	                 linkend="chpt.song_editor.editor_modes.song_mode">Song
+	                 Mode</link>, the command will have no effect.
+                 </para>
+               </note>
+             </para>
+           </listitem>
 
            <listitem><para>
              <emphasis role="bold">SELECT_NEXT_PATTERN_CC_ABSOLUTE</emphasis>:
              like <xref linkend="chpt.midi.controlling.actions.select_next_pattern" /> but the pattern to be selected is determined by the value of the <abbrev>MIDI</abbrev> message.
            </para></listitem>
 
-           <listitem><para>
-             <emphasis role="bold">SELECT_NEXT_PATTERN_RELATIVE</emphasis>:
-             like <xref linkend="chpt.midi.controlling.actions.select_next_pattern" /> but the pattern to be selected is determined by the pattern number of the currently selected one plus the value specified in <emphasis role="bold">Action Param</emphasis>.
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">SELECT_NEXT_PATTERN_RELATIVE</emphasis>:
+               like <xref
+               linkend="chpt.midi.controlling.actions.select_next_pattern" />
+               but the pattern to be selected is determined by the pattern
+               number of the currently selected one plus the value specified in
+               <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
+             </para>
+           </listitem>
 
-           <listitem id="chpt.midi.controlling.actions.select_only_next_pattern" xreflabel="SELECT_ONLY_NEXT_PATTERN"><para>
-             <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis>:
-             selects the pattern specified in <emphasis role="bold">Action Param</emphasis>.
+           <listitem id="chpt.midi.controlling.actions.select_only_next_pattern" xreflabel="SELECT_ONLY_NEXT_PATTERN">
+             <para>
+               <emphasis role="bold">SELECT_ONLY_NEXT_PATTERN</emphasis>:
+               selects the pattern specified in <emphasis>Action Param.
+               <emphasis role="bold">1</emphasis></emphasis>.
 
              <note>
                <para>
@@ -6787,25 +6980,45 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
              playhead to the beginning of the song.
            </para></listitem>
 
-           <listitem><para>
-             <emphasis role="bold">STRIP_MUTE_TOGGLE</emphasis>:
-             <link linkend="def.mute">mutes</link> the instrument specified in <emphasis role="bold">Action Param</emphasis>.
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">STRIP_MUTE_TOGGLE</emphasis>: <link
+               linkend="def.mute">mutes</link> the instrument specified in
+               <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
+             </para>
+           </listitem>
 
-           <listitem><para>
-             <emphasis role="bold">STRIP_SOLO_TOGGLE</emphasis>:
-             <link linkend="def.mute">mutes</link> the instrument specified in <emphasis role="bold">Action Param</emphasis>.
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">STRIP_SOLO_TOGGLE</emphasis>: <link
+               linkend="def.mute">mutes</link> the instrument specified in
+               <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
+             </para>
+           </listitem>
 
-           <listitem><para>
-             <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis>: see  <xref linkend="chpt.midi.controlling.actions.master_volume_absolute"/>, but applies to
-             the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> specified in <emphasis role="bold">Action Param</emphasis>.
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">STRIP_VOLUME_ABSOLUTE</emphasis>: see <xref
+               linkend="chpt.midi.controlling.actions.master_volume_absolute"/>,
+               but applies to the <link
+               linkend="chpt.mixer.channel_strips">Instrument Channel
+               Strip</link> specified in <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
+             </para>
+           </listitem>
 
-           <listitem><para>
-             <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis>: see <xref linkend="chpt.midi.controlling.actions.master_volume_relative"/>, but applies to
-             the <link linkend="chpt.mixer.channel_strips">Instrument Channel Strip</link> specified in <emphasis role="bold">Action Param</emphasis>.
-           </para></listitem>
+           <listitem>
+             <para>
+               <emphasis role="bold">STRIP_VOLUME_RELATIVE</emphasis>: see <xref
+               linkend="chpt.midi.controlling.actions.master_volume_relative"/>,
+               but applies to the <link
+               linkend="chpt.mixer.channel_strips">Instrument Channel
+               Strip</link> specified in <emphasis>Action Param. <emphasis
+               role="bold">1</emphasis></emphasis>.
+             </para>
+           </listitem>
 
            <listitem><para>
              <emphasis role="bold">TAP_TEMPO</emphasis>: another command
@@ -6820,7 +7033,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 
            <listitem><para>
              <emphasis role="bold">UNDO_ACTION</emphasis>:
-             undoes the previous action.
+             undoes the previous GUI action (not <abbrev>MIDI</abbrev> action!).
            </para></listitem>
 
            <listitem><para>
@@ -6906,6 +7119,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
      providing an URL-style naming scheme in combination with a pattern
      matching language, and allowing to bundle messages for a better handling
      of timing and simultaneous processing.</para>
+
+     <note>
+       <para>
+         Only actions performed in the GUI can be undone.
+         <abbrev>OSC</abbrev> commands, on the other hand, can not!
+       </para>
+     </note>
 
      <sect1 id="chpt.osc.basics">
        <title>Basics</title>
@@ -7301,6 +7521,16 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <emphasis>X</emphasis>. Optional input argument will be
                  ignored.</entry>
                </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">INSTRUMENT_PITCH</emphasis>/</entry>
+                 <entry>ff</entry>
+                 <entry>[0,] [-24.5,24.5]</entry>
+                 <entry>Sets the <link
+                 linkend="chpt.instrument_editor.pitch_shift_parameters">Pitch</link>
+                 of the instrument specified using the first parameter
+                 <emphasis>f</emphasis> to the second parameter
+                 <emphasis>f</emphasis>.</entry>
+               </row>
                <row id="chpt.osc.command.playlist_song">
                  <entry>/Hydrogen/<emphasis role="bold">PLAYLIST_SONG</emphasis>/</entry>
                  <entry>f</entry>
@@ -7323,13 +7553,13 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">UNDO_ACTION</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Undoes the previous action.</entry>
+                 <entry>Undoes the previous GUI action (not <abbrev>OSC</abbrev> command!).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">REDO_ACTION</emphasis>/</entry>
                  <entry>' ',[f]</entry>
                  <entry></entry>
-                 <entry>Redoes the previous undone action.</entry>
+                 <entry>Redoes the previously undone GUI action (not <abbrev>OSC</abbrev> command!).</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TRANSPORT_ACTIVATION</emphasis>/</entry>
@@ -7342,7 +7572,7 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>/Hydrogen/<emphasis role="bold">JACK_TIMEBASE_MASTER_ACTIVATION</emphasis>/</entry>
                  <entry>f</entry>
                  <entry>{0;1}</entry>
-                 <entry>Unregisters Hydrogen as <link linkend="sect.preferences.jack.bbt"><abbrev>JACK</abbrev> Timebase Master</link>
+                 <entry>Unregisters Hydrogen as <abbrev>JACK</abbrev> Timebase controller
                  for a value of <option>0</option> and registers it for all others.</entry>
                </row>
                <row>
@@ -7427,6 +7657,47 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                  <entry>f</entry>
                  <entry></entry>
                  <entry>Removes pattern number <emphasis>f</emphasis>. </entry>
+               </row>
+               <row id="chpt.osc.command.clear_pattern" xreflabel="/Hydrogen/CLEAR_PATTERN/">
+                 <entry>/Hydrogen/<emphasis role="bold">CLEAR_PATTERN</emphasis>/</entry>
+                 <entry>' ',[f]</entry>
+                 <entry></entry>
+                 <entry>Removes all notes of the selected pattern.</entry>
+               </row>
+               <row id="chpt.osc.command.clear_selected_instrument" xreflabel="/Hydrogen/CLEAR_SELECTED_INSTRUMENT/">
+                 <entry>/Hydrogen/<emphasis role="bold">CLEAR_SELECTED_INSTRUMENT</emphasis>/</entry>
+                 <entry>' ',[f]</entry>
+                 <entry></entry>
+                 <entry>Removes all notes of the selected pattern associated with
+                 the currently selected instrument.</entry>
+               </row>
+               <row id="chpt.osc.command.clear_instrument" xreflabel="/Hydrogen/CLEAR_INSTRUMENT/">
+                 <entry>/Hydrogen/<emphasis role="bold">CLEAR_INSTRUMENT</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry>[0,]</entry>
+                 <entry>Works as <xref linkend="chpt.osc.command.clear_selected_instrument"/>
+                 but on instrument <emphasis>f</emphasis> instead.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">NOTE_ON</emphasis>/</entry>
+                 <entry>ff</entry>
+                 <entry>[36,127] [0.0,1.0]</entry>
+                 <entry>Handled like a <link
+                 linkend="chpt.midi.note"><abbrev>MIDI</abbrev> NOTE-ON</link>
+                 event without triggering <link
+                 linkend="chpt.midi.controlling"><abbrev>Actions</abbrev></link>.
+                 The first parameter <emphasis>f</emphasis> determines the pitch
+                 of the note and the second <emphasis>f</emphasis> its
+                 velocity.</entry>
+               </row>
+               <row>
+                 <entry>/Hydrogen/<emphasis role="bold">NOTE_OFF</emphasis>/</entry>
+                 <entry>f</entry>
+                 <entry>[36,127]</entry>
+                 <entry>Handled like a <link
+                 linkend="chpt.midi.note"><abbrev>MIDI</abbrev> NOTE-OFF</link>
+                 event. The provided parameter <emphasis>f</emphasis> determines
+                 the pitch of the note.</entry>
                </row>
                <row>
                  <entry>/Hydrogen/<emphasis role="bold">SONG_EDITOR_TOGGLE_GRID_CELL</emphasis>/</entry>
@@ -7747,10 +8018,12 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
          </menuchoice>.  This will give you a blank
        instrument to start from.</para>
 
-       <para>Now, you need two samples.  Any .WAV or .FLAC file will do.
+       <para>Now, you need two samples (see <link
+       linkend="def.sample">Sample</link> for a list of supported formats).
        Hydrogen provides several in the <filename
        class="directory">data/drumkits</filename> folder in the Hydrogen data
-       directory (usually <filename role="directory">$HOME/.hydrogen/data/</filename>).</para>
+       directory (usually <filename
+       role="directory">$HOME/.hydrogen/data/</filename>).</para>
 
        <para>In the Instrument Editor, click on <link linkend="chpt.instrument_editor.layers">Layers</link>.
        You can layer several samples into the instrument.  Which one is played
@@ -8776,6 +9049,85 @@ does.  See also <link linkend="def.adsr">ADSR</link></para>
   <glossdef>
     <para>A short recording of a sound, typically between .1 and 3.0 seconds
     long. Each time a note is triggered within Hydrogen the corresponding sample will be played back (after applying all customization and effects).</para>
+    <para>
+      Hydrogen supports the following audio formats:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+		      Waveform Audio File (*.wav)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Free Lossless Audio Codec (*.flac)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.0.18</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Compressed Ogg/Opus (*.opus)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.0.29</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Compressed Ogg/Vorbis (*.ogg)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.0.18</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Compressed MPEG Layer 3 (*.mp3)
+        </para>
+        <note>
+          <para>
+            Your system is required to have <command>libsndfile</command> of at
+            least version <emphasis role="bold">1.1.0</emphasis>.
+          </para>
+        </note>
+      </listitem>
+      <listitem>
+        <para>
+		      Apple AIFF (*.aiff, *.aif, *.aifc)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Sun/NeXT AU (*.au)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Core Audio Format (*.caf)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Creative Voice File (*.voc)
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+		      Sonic Foundrys' 64 bit RIFF/WAV (*.w64)
+        </para>
+      </listitem>
+    </itemizedlist>
   </glossdef>
 </glossentry>
 
