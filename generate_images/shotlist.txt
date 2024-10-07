@@ -14,8 +14,6 @@ grab MainMenu as MainMenu.png size 600 44
 slot PatternEditorPanel showDrumEditor
 slot MainForm action_window_showTimeline
 slot PropertiesCombo setCurrentIndex 0
-grab MainForm as GUI_Sections_Background.png
-
 
 # Grab the Song Editor
 grab SongEditorPanel
@@ -231,7 +229,7 @@ slot InstrumentEditor showLayers true
 grab LayerProperties as Instrument_Layers.png
 grab LayerProperties as instrumentEditorComponentName.png size 289 34
 grab InstrumentEditorComponentNameDropDown as instrumentEditorComponentDropDown.png
-grab LayerProperties as instrumentEditorLayers.png offset 0 39 size 289 265
+grab LayerProperties as instrumentEditorLayers.png offset 0 39 size 289 287
 grab LayerProperties as instrumentEditorSampleSelection.png offset 0 426 size 289 29
 grab LayerProperties as instrumentEditorControls.png offset 0 326 size 289 107
 
