@@ -1,0 +1,9 @@
+# Shot list: big screenshots of Hydrogen UI
+
+# Set up default view: timeline, drum pattern editor and velocity editor
+slot PatternEditorPanel showDrumEditor
+slot MainForm action_window_showTimeline
+slot PropertiesCombo setCurrentIndex 0
+grab MainForm as GUI_Sections_Background.png
+
+FIN

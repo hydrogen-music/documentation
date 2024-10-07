@@ -13,18 +13,23 @@ H2="$1"
 DEMO=GM_kit_Diddley_example.h2song
 
 CONF="default_hydrogen.conf"
+BIG_CONF="big_hydrogen.conf"
 ALT_CONF="alternative_hydrogen.conf"
+
+
+echo "Big shot of the overal UI"
+QT_SCALE_FACTOR=1.2 "$H2" -n --layout single --config ${BIG_CONF} -t shotlist-big.txt \
+    "$DEMO" 2>&1 | out
+echo "Generating tabbed layout images"
+QT_SCALE_FACTOR=1.2 "$H2" -n --layout tabbed --config ${BIG_CONF} -t shotlist-tabbed.txt \
+    "$DEMO" 2>&1 | out
 
 # Use a High-DPI scaling for docs
 QT_SCALE_FACTOR=2
 export QT_SCALE_FACTOR
 
-echo "Generating tabbed layout images"
-"$H2" -n --layout tabbed --config ${CONF} -t shotlist-tabbed.txt \
-    "$DEMO" 2>&1 | out
-
 echo "Generating single pane layout images"
-"$H2" -n --layout single --config ${CONF} -d jack -t shotlist.txt \
+QT_SCALE_FACTOR=2 "$H2" -n --layout single --config ${CONF} -d jack -t shotlist.txt \
     "$DEMO" 2>&1 | out
 
 # Specific song stuff
