@@ -5,7 +5,10 @@ Hydrogen Documentation
 
 **!!! Deprecation warning !!!**
 
-The `Docbook`-based toolchain will be used for the 1.2.X releases of Hydrogen and will be ported to a `Markdown`-based one starting with 1.3.0. In addition, the manual won't be bundled and shipped with Hydrogen anymore starting from version 1.3.0.
+The `Docbook`-based toolchain will be used for the 1.2.X releases of Hydrogen
+and will be ported to a `Markdown`-based one starting with 2.0.0. In addition,
+the manual won't be bundled and shipped with Hydrogen anymore starting from
+version 2.0.0.
 
 ---
 
