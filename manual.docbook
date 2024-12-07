@@ -4,7 +4,7 @@
 <book id="Hydrogen-manual" lang="en">
 
   <bookinfo>
-    <title>Hydrogen v1.2.3 Manual</title>
+    <title>Hydrogen v1.2.4 Manual</title>
     <authorgroup>
       <author>
         <firstname>Antonio</firstname>
@@ -32,7 +32,7 @@
       </author>
     </authorgroup>
 
-    <subtitle>2024-01-12</subtitle>
+    <subtitle>2024-12-07</subtitle>
 
     <abstract>
       <para>Hydrogen is a software synthesizer which can be used alone,

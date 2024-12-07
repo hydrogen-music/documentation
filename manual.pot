@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-07 18:35+0200\n"
+"POT-Creation-Date: 2024-12-07 12:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #. (itstool) path: bookinfo/title
 #: manual.docbook:7
-msgid "Hydrogen v1.2.3 Manual"
+msgid "Hydrogen v1.2.4 Manual"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
@@ -51,7 +51,7 @@ msgstr ""
 
 #. (itstool) path: bookinfo/subtitle
 #: manual.docbook:35
-msgid "2024-01-12"
+msgid "2024-12-07"
 msgstr ""
 
 #. (itstool) path: abstract/para
