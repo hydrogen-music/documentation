@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5] - XXXX-XX-XX
+
+### Changed
+
+- Updated links to `hydrogen-music/hydrogen` git repo to include `main` branch
+  instead of former default branch `master`.
+
 ## [1.2.4] - 2024-12-07
 
 ### Added

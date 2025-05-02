@@ -77,7 +77,7 @@
         <listitem>
           <para>
             <emphasis role="bold">
-              <ulink url="https://github.com/hydrogen-music/hydrogen/blob/master/INSTALL.md">
+              <ulink url="https://github.com/hydrogen-music/hydrogen/blob/main/INSTALL.md">
                 Linux
               </ulink>
             </emphasis>
@@ -112,7 +112,7 @@
         </para>
         <para>
           The <ulink
-          url="https://github.com/hydrogen-music/hydrogen/blob/master/.appveyor.yml">
+          url="https://github.com/hydrogen-music/hydrogen/blob/main/.appveyor.yml">
           AppVeyor build pipelines</ulink> used to create the Hydrogen releases
           might get you back on track. But you can always use the issues or
           discussions on Github or our mailing list to ask questions.
