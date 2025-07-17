@@ -478,6 +478,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 </para>
               </note>
             </para>
+            <warning>
+              <para>
+                <abbrev>LASH</abbrev> support was deprecated in Hydrogen version 1.2.5 and will be removed in version 2.0!
+              </para>
+            </warning>
           </listitem>
         </itemizedlist>
 
@@ -659,6 +664,11 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
                 </para>
               </tip>
             </para>
+            <warning>
+              <para>
+                <abbrev>LASH</abbrev> support was deprecated in Hydrogen version 1.2.5 and will be removed in version 2.0!
+              </para>
+            </warning>
           </listitem>
 	      <listitem>
 	        <para>

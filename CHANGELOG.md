@@ -2,6 +2,10 @@
 
 ## [1.2.5] - XXXX-XX-XX
 
+### Added
+
+- LASH deprecation notice.
+
 ### Changed
 
 - Updated links to `hydrogen-music/hydrogen` git repo to include `main` branch
