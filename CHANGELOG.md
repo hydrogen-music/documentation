@@ -6,6 +6,7 @@
 
 - Updated links to `hydrogen-music/hydrogen` git repo to include `main` branch
   instead of former default branch `master`.
+- Update CLI options.
 
 ## [1.2.4] - 2024-12-07
 

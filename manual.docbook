@@ -555,7 +555,10 @@ in the <link linkend="sect.main_toolbar.transport_control">Main Toolbar</link> a
 <command>-V, --verbose &#60;Level&#62;       Level, if present, may be None, Error, Warning, Info, Debug</command>
 <command>-L, --log-file &#60;Path&#62;       Alternative log file path</command>
 <command>-T, --log-timestamps        Add timestamps to all log messages</command>
+<command>    --log-colors            Use ANSI colors in log messages</command>
+<command>    --no-log-colors         Suppress ANSI colors in log messages</command>
 <command>-P, --data &#60;Path&#62;           Use an alternate system data path</command>
+<command>    --user-data &#60;Path&#62;      Use an alternate user data path</command>
 <command>    --config &#60;Path&#62;         Use an alternate config file</command>
 <command>    --layout &#60;Layout&#62;       UI layout ('tabbed' or 'single')</command>
 <command>-O, --osc-port &#60;int&#62;        Custom port for OSC connections</command>
