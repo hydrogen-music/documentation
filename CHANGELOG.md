@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.2.5] - XXXX-XX-XX
+## [1.2.5] - 2025-07-17
 
 ### Added
 
